@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>K-AML NEWS v2.6</title>
+<title>K-AML NEWS v2.7</title>
 <style>
 :root{--bg:#07101e;--panel:#0d192b;--panel2:#11223a;--text:#edf4ff;--muted:#8fa3bd;--line:#1d3351;--accent:#74a8ff;--hot:#ffb55f}
 *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#07101e,#091426);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}
@@ -24,7 +24,7 @@
 <body>
 <div class="wrap">
 <section class="hero">
-  <div class="eyebrow">K-AML NEWS · v2.6</div>
+  <div class="eyebrow">K-AML NEWS · v2.7</div>
   <h1>🇰🇷 국내 AML 뉴스 모니터링</h1>
   <p>자금세탁·범죄수익·가상자산·보이스피싱·환치기·마약·도박·탈세·FIU 관련 뉴스를 모읍니다. 사건·수사·적발·제재·범죄수법·자금흐름·제도변경 중심으로 수집하며, 예방 캠페인·교육·보험지원·사회공헌·MOU·수상·행사성 기사는 자동 제외합니다.</p>
   <div class="status"><span id="dot" class="dot"></span><span id="status">news.json 확인 중</span></div><div id="lastCollected" style="margin-top:7px;color:#7f96b2;font-size:12px"></div>
@@ -42,12 +42,6 @@ function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt
 function isToday(d){let x=new Date(d),n=new Date();return x.getFullYear()===n.getFullYear()&&x.getMonth()===n.getMonth()&&x.getDate()===n.getDate()}
 function isNew(d){let x=new Date(d),n=new Date();return isFinite(x)&&((n-x)/3600000)<=24}
 function ago(d){let x=new Date(d), n=new Date(), m=Math.floor((n-x)/60000); if(!isFinite(m)) return ''; if(m<60)return m+'분 전'; let h=Math.floor(m/60); if(h<24)return h+'시간 전'; return Math.floor(h/24)+'일 전'}
-function norm(s=''){return s.toLowerCase().replace(/\[[^\]]*\]|\([^\)]*\)/g,' ').replace(/[^0-9a-z가-힣 ]/g,' ').replace(/\s+/g,' ').trim()}
-function toks(s=''){return norm(s).split(' ').filter(x=>x.length>1)}
-function sim(a,b){let A=new Set(toks(a)),B=new Set(toks(b));if(!A.size||!B.size)return 0;let i=0;A.forEach(x=>B.has(x)&&i++);return i/new Set([...A,...B]).size}
-function nums(s=''){return (s.match(/\d+(?:[.,]\d+)?/g)||[]).map(x=>x.replace(/,/g,''))}
-function same(a,b){if(a.link===b.link)return true;let s=sim(a.title,b.title);if(s>=.72)return true;let na=nums(a.title),nb=nums(b.title);return s>=.56&&na.some(x=>nb.includes(x))}
-
 function normEventTitle(s){
   return (s||'').toLowerCase()
     .replace(/[“”"'‘’·….,!?()[\]{}<>:;\/\\|~`@#$%^&*_+=-]/g,' ')
@@ -102,7 +96,7 @@ function sameEvent(a,b){
   return false;
 }
 
-function cluster(items){let cs=[];for(const x of items){let c=cs.find(c=>same(c.main,x));if(c)c.rel.push(x);else cs.push({main:x,rel:[]})}return cs}
+function cluster(items){let cs=[];for(const x of items){let c=cs.find(c=>sameEvent(c.main,x));if(c)c.rel.push(x);else cs.push({main:x,rel:[]})}return cs}
 
 function drawCats(){ $('#cats').innerHTML=CATS.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join(''); document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{CAT=b.dataset.c;drawCats();render()})}
 function render(){
@@ -121,7 +115,7 @@ async function load(){
   const d=await r.json(); NEWS=d.items||[];
   let ok=(d.feed_status||[]).filter(x=>x.ok).length;
   $('#dot').className='dot '+(NEWS.length?'live':'');
-  $('#status').textContent=NEWS.length?`LIVE · ${DATA.items.length}건`:'아직 수집된 뉴스가 없습니다. GitHub Actions를 한 번 실행해 주세요.';
+  $('#status').textContent=NEWS.length?`LIVE · ${NEWS.length}건`:'아직 수집된 뉴스가 없습니다. GitHub Actions를 한 번 실행해 주세요.';
   $('#lastCollected').textContent=d.updated_at?`마지막 뉴스 수집: ${new Date(d.updated_at).toLocaleString('ko-KR')} · 최근 ${d.retention_days||90}일 보관`:'마지막 뉴스 수집 기록 없음';
  }catch(e){NEWS=[];$('#status').textContent='news.json을 읽지 못했습니다 · '+e.message}
  render()
