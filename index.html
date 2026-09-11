@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>K-AML NEWS v4.3</title>
+<title>K-AML NEWS v4.4</title>
 <style>
 :root{--bg:#07101e;--panel:#0d192b;--panel2:#11223a;--text:#edf4ff;--muted:#8fa3bd;--line:#1d3351;--accent:#74a8ff;--hot:#ffb55f}
 *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#07101e,#091426);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}
@@ -24,7 +24,7 @@
 <body>
 <div class="wrap">
 <section class="hero">
-  <div class="eyebrow">K-AML NEWS · v4.3</div>
+  <div class="eyebrow">K-AML NEWS · v4.4</div>
   <h1>🇰🇷 국내 AML 뉴스 모니터링</h1>
   <p>자금세탁·범죄수익·가상자산·보이스피싱·환치기·마약·도박·탈세·FIU 관련 뉴스를 모읍니다. 사건·수사·적발·제재·범죄수법·자금흐름·제도변경 중심으로 수집하며, 예방 캠페인·교육·보험지원·사회공헌·MOU·수상·행사성 기사는 자동 제외합니다.</p>
   <div class="status"><span id="dot" class="dot"></span><span id="status">news.json 확인 중</span></div><div id="lastCollected" style="margin-top:7px;color:#7f96b2;font-size:12px"></div>
@@ -32,7 +32,7 @@
     <button id="tabNews" class="tab active">📰 국내 AML 뉴스</button>
     <button id="tabOfficial" class="tab">🏛️ 공식자료</button>
   </div>
-  <div id="officialNote" class="official-note" style="display:none">금융위·FIU 공식자료는 처음 한 번 최근 90일치를 재구축하고, 이후에는 최근 7일만 증분 확인합니다. 실제 금융위 보도자료 상세페이지를 열어 제목·본문 존재 여부까지 확인한 자료만 표시합니다.</div>
+  <div id="officialNote" class="official-note" style="display:none">금융위·FIU 공식자료는 최근 90일을 기준으로 수집하며, FIU·자금세탁·가상자산·불법사금융·보이스피싱 등 AML/금융범죄 관련 보도자료를 포함합니다. 실제 상세페이지의 제목·본문 존재 여부까지 확인한 자료만 표시합니다.</div>
   <div class="toolbar"><input id="search" class="search" placeholder="기사 제목·언론사 검색"><button id="refresh" class="btn">새로고침</button></div>
 </section>
 <div class="section"><div class="label">보기</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div class="section"><div class="label">분류</div><div id="cats" class="chips"></div></div>

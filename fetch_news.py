@@ -34,6 +34,7 @@ FSC_SEARCH_KEYWORDS = [
     "금융정보분석원",
     "자금세탁",
     "가상자산사업자",
+    "가상자산",
     "특정금융정보법",
     "의심거래",
     "FATF",
@@ -41,6 +42,8 @@ FSC_SEARCH_KEYWORDS = [
     "테러자금",
     "보이스피싱",
     "트래블룰",
+    "불법사금융",
+    "불법금융",
 ]
 
 # 검색 결과를 다시 거르는 AML 관련어. 제목에 하나 이상 있어야 공식자료로 채택.
@@ -49,7 +52,7 @@ OFFICIAL_KEEP = [
     "의심거래","str","고액현금거래","ctr","특정금융정보법","특금법",
     "가상자산사업자","vasp","가상자산","트래블룰","고객확인","kyc",
     "제도이행평가","위험평가","범죄수익","테러자금","제재","보이스피싱",
-    "대포통장","불법금융","환치기"
+    "대포통장","불법금융","불법사금융","사금융","환치기","불공정거래","시세조종","미등록 영업"
 ]
 
 PROMO = [
@@ -72,7 +75,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.3'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.4'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -150,6 +153,69 @@ def official_relevant(title):
     t = (title or '').lower()
     return any(k.lower() in t for k in OFFICIAL_KEEP)
 
+
+# 국내 뉴스 품질 필터
+# 사건·수사 기사에 필요한 일반 언론은 폭넓게 남기되,
+# 도박/카지노 운영사이트·리퍼럴/코인 홍보성 사이트 같은 "뉴스가 아닌 출처"를 제거한다.
+BLOCKED_DOMAIN_TOKENS = [
+    'casino','slot','slots','spin','spinkr','bet','betting','toto','sportsbook',
+    'poker','gamble','gamingbonus','jackpot','roulette','baccarat',
+    'coinreferral','referral','airdrop','bonus','promo'
+]
+BLOCKED_SOURCE_TOKENS = [
+    '카지노','슬롯','토토','베팅','도박사이트','온라인카지노','바카라',
+    '보너스','에어드롭','리퍼럴','추천인','프로모션'
+]
+ADLIKE_TITLE_TOKENS = [
+    '가입 이벤트','충전 이벤트','입금 이벤트','보너스 지급','롤링','페이백',
+    '추천인 코드','가입 코드','무료머니','첫충전','재충전','가입 혜택',
+    '무기명 회원','무제한 지원','카지노 이벤트','슬롯 이벤트','토너먼트 이벤트'
+]
+NEWS_SIGNAL_TOKENS = [
+    '경찰','검찰','법원','금감원','금융위','금융정보분석원','국세청','관세청',
+    '적발','검거','구속','기소','송치','수사','압수','추징','징역','벌금',
+    '피해','피의자','범죄','사기','자금세탁','범죄수익','환치기','불법',
+    '제재','위반','수사기관','재판','선고','영장'
+]
+
+def get_source_meta(item, raw_title):
+    source_el = item.find('source')
+    source_name = (source_el.text or '').strip() if source_el is not None and source_el.text else ''
+    source_url = (source_el.attrib.get('url') or '').strip() if source_el is not None else ''
+    if not source_name:
+        source_name = source_from(item, raw_title)
+    domain = ''
+    if source_url:
+        try:
+            domain = urllib.parse.urlparse(source_url).netloc.lower().split(':')[0]
+        except Exception:
+            domain = ''
+    return source_name, source_url, domain
+
+def low_quality_news_source(title, source_name, domain):
+    t = (title or '').lower()
+    s = (source_name or '').lower()
+    d = (domain or '').lower()
+
+    # 명백한 도박/카지노/리퍼럴 사이트 출처
+    if any(tok in d for tok in BLOCKED_DOMAIN_TOKENS):
+        return True
+    if any(tok in s for tok in BLOCKED_SOURCE_TOKENS):
+        return True
+
+    # 도메인/출처가 수상하지 않더라도 제목 자체가 이벤트·가입 유도형이면 제거.
+    if any(tok in t for tok in ADLIKE_TITLE_TOKENS):
+        # 다만 해당 홍보/이벤트가 수사·적발된 사건을 다루는 기사면 유지.
+        if not any(sig in t for sig in NEWS_SIGNAL_TOKENS):
+            return True
+
+    # 카지노/토토/슬롯이 제목 핵심인데 실제 사건·수사 신호가 하나도 없으면 제외.
+    gambling_terms = ['카지노','토토','슬롯','바카라','베팅','도박사이트']
+    if any(g in t for g in gambling_terms) and not any(sig in t for sig in NEWS_SIGNAL_TOKENS):
+        return True
+
+    return False
+
 def fetch_query(name, query):
     # 최신 발견용: 최근 24시간만 재검색
     params = urllib.parse.urlencode({
@@ -165,11 +231,16 @@ def fetch_query(name, query):
         title = clean_title(raw_title)
         if not title or is_promo(title):
             continue
+        source_name, source_url, source_domain = get_source_meta(it, raw_title)
+        if low_quality_news_source(title, source_name, source_domain):
+            continue
         out.append({
             'region': '국내',
             'query': name,
             'title': title,
-            'source': source_from(it, raw_title),
+            'source': source_name,
+            'source_url': source_url,
+            'source_domain': source_domain,
             'date': it.findtext('pubDate') or '',
             'link': it.findtext('link') or '',
             'tags': classify(title),
@@ -389,7 +460,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.3'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.4'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -420,7 +491,7 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '4.3',
+        'official_backfill_version': '4.4',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'count': len(news),
         'official_count': len(official),
