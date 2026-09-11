@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>K-AML NEWS v3.2</title>
+<title>K-AML NEWS v3.3</title>
 <style>
 :root{--bg:#07101e;--panel:#0d192b;--panel2:#11223a;--text:#edf4ff;--muted:#8fa3bd;--line:#1d3351;--accent:#74a8ff;--hot:#ffb55f}
 *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#07101e,#091426);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}
@@ -24,7 +24,7 @@
 <body>
 <div class="wrap">
 <section class="hero">
-  <div class="eyebrow">K-AML NEWS · v3.2</div>
+  <div class="eyebrow">K-AML NEWS · v3.3</div>
   <h1>🇰🇷 국내 AML 뉴스 모니터링</h1>
   <p>자금세탁·범죄수익·가상자산·보이스피싱·환치기·마약·도박·탈세·FIU 관련 뉴스를 모읍니다. 사건·수사·적발·제재·범죄수법·자금흐름·제도변경 중심으로 수집하며, 예방 캠페인·교육·보험지원·사회공헌·MOU·수상·행사성 기사는 자동 제외합니다.</p>
   <div class="status"><span id="dot" class="dot"></span><span id="status">news.json 확인 중</span></div><div id="lastCollected" style="margin-top:7px;color:#7f96b2;font-size:12px"></div>
@@ -32,7 +32,7 @@
     <button id="tabNews" class="tab active">📰 국내 AML 뉴스</button>
     <button id="tabOfficial" class="tab">🏛️ 공식자료</button>
   </div>
-  <div id="officialNote" class="official-note" style="display:none">공식자료 제목은 PDF/HWP 다운로드 주소를 사용하지 않습니다. 확인된 상세페이지가 없으면 해당 기관의 보도자료 목록으로 이동합니다.</div>
+  <div id="officialNote" class="official-note" style="display:none">공식자료 제목은 해당 보도자료의 정확한 웹 상세페이지가 확인된 경우에만 열립니다. 첨부파일·목록페이지로는 연결하지 않습니다.</div>
   <div class="toolbar"><input id="search" class="search" placeholder="기사 제목·언론사 검색"><button id="refresh" class="btn">새로고침</button></div>
 </section>
 <div class="section"><div class="label">보기</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div class="section"><div class="label">분류</div><div id="cats" class="chips"></div></div>
@@ -109,24 +109,22 @@ function drawCats(){
   document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{CAT=b.dataset.c;drawCats();render()})
 }
 function safeOfficialHref(x){
- let u=(x.link||'').trim(), s=x.official_source||x.source||'';
- let low=u.toLowerCase();
+ let u=(x.link||'').trim(), s=x.official_source||x.source||'', low=u.toLowerCase();
  let bad=/\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx|zip)([?#].*)?$/.test(low) ||
          /(download|filedownload|downloadfile|atchfile|attachment|bbsfile)/.test(low);
+ if(!u || bad) return '';
  if(s==='FIU'){
-   if(!bad && /kofiu\.go\.kr\/kor\/notification\/report_view\.do\?/.test(low)) return u;
-   return 'https://www.kofiu.go.kr/kor/notification/report.do';
+   if(/kofiu\.go\.kr\/kor\/notification\/report_view\.do\?/.test(low)) return u;
+   if(/fsc\.go\.kr\/no010101\/\d+/.test(low)) return u;
  }
- if(s==='금융위원회'){
-   if(!bad && /fsc\.go\.kr\/no010101\/\d+/.test(low)) return u;
-   return 'https://www.fsc.go.kr/no010101';
- }
+ if(s==='금융위원회' && /fsc\.go\.kr\/no010101\/\d+/.test(low)) return u;
  if(s==='금융감독원'){
-   if(!bad && /fss\.or\.kr/.test(low) && /(view\.do|bbs.*view)/.test(low)) return u;
-   return 'https://www.fss.or.kr/fss/bbs/B0000188/list.do?menuNo=200218';
+   if(/fss\.or\.kr/.test(low) && /(view\.do|\/view\/)/.test(low)) return u;
+   if(/dart\.fss\.or\.kr\/dsaa003\/selectbodomain\.ax\?seqno=\d+/.test(low)) return u;
  }
- return '#';
+ return '';
 }
+
 function render(){
  let q=$('#search').value.trim().toLowerCase();
  let base=MODE==='official'?OFFICIAL:NEWS;
@@ -144,7 +142,9 @@ function render(){
    $('#grid').innerHTML=list.map(x=>{
      let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
      let src=x.official_source||x.source||'공식자료'; let method=x.collection_method==='direct_rss'?'직접 RSS':(x.collection_method==='direct_page'?'직접 수집':'보조검색');
-     return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(safeOfficialHref(x))}">${esc(x.title)}</a><div class="tags">${tags}</div></article>`
+     let href=safeOfficialHref(x);
+     let titleHtml=href?`<a class="title" target="_blank" rel="noopener" href="${esc(href)}">${esc(x.title)}</a>`:`<div class="title">${esc(x.title)}</div><div class="official-note">원문 상세주소를 확인하지 못해 링크를 제공하지 않습니다.</div>`;
+     return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div>${titleHtml}<div class="tags">${tags}</div></article>`
    }).join('');
    return;
  }
