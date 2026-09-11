@@ -134,7 +134,7 @@ def fetch_query(name, query):
     req = urllib.request.Request(url, headers={
         'User-Agent': 'Mozilla/5.0 K-AML-News/2.1'
     })
-    with urllib.request.urlopen(req, timeout=25) as resp:
+    with urllib.request.urlopen(req, timeout=12) as resp:
         data = resp.read()
     root = ET.fromstring(data)
     out = []
@@ -167,9 +167,9 @@ def html_unescape(s):
     import html as _html
     return _html.unescape(s or '')
 
-def fetch_url(url, timeout=25):
+def fetch_url(url, timeout=12):
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/3.0'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/3.1'
     })
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
@@ -324,9 +324,9 @@ def fetch_official_source(source_name, query):
     })
     url = 'https://news.google.com/rss/search?' + params
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/3.0'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/3.1'
     })
-    with urllib.request.urlopen(req, timeout=25) as resp:
+    with urllib.request.urlopen(req, timeout=12) as resp:
         data = resp.read()
     root = ET.fromstring(data)
     out = []
@@ -378,17 +378,10 @@ def main():
         official_status.append({'feed': '금융위원회 공식 RSS', 'ok': False, 'count': 0, 'error': str(e)[:180], 'method': 'direct_rss'})
         print('OFFICIAL DIRECT FSC ERROR', e)
 
-    # 2) FIU 공식 보도자료 상세 페이지 직접 수집
-    try:
-        items = fetch_fiu_direct()
-        official_new.extend(items)
-        official_status.append({'feed': 'FIU 공식 페이지', 'ok': True, 'count': len(items), 'method': 'direct_page'})
-        print('OFFICIAL DIRECT FIU', len(items))
-    except Exception as e:
-        official_status.append({'feed': 'FIU 공식 페이지', 'ok': False, 'count': 0, 'error': str(e)[:180], 'method': 'direct_page'})
-        print('OFFICIAL DIRECT FIU ERROR', e)
+    # 2) FIU는 금융위 공식 RSS + FIU 공식도메인 보조검색으로 수집합니다.
+    #    예전처럼 FIU 게시물 번호를 수십 개씩 직접 조회하지 않아 실행시간을 크게 줄였습니다.
 
-    # 3) 금감원 및 직접수집 누락 보완용 Google News 공식도메인 검색
+    # 3) FIU·금감원 및 직접수집 누락 보완용 Google News 공식도메인 검색
     #    직접수집 결과와 제목 기준으로 중복제거되므로 보조 경로로만 사용됩니다.
     for source_name, query in OFFICIAL_QUERIES:
         try:
