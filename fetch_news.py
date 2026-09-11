@@ -169,7 +169,7 @@ def html_unescape(s):
 
 def fetch_url(url, timeout=12):
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/3.1'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/3.2'
     })
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
@@ -283,35 +283,34 @@ def google_news_real_url(url):
 
 def safe_official_link(source_name, title, candidate, item_id=None):
     """
-    공식자료 제목은 반드시 기관의 '상세 본문 페이지'로 연결한다.
-    첨부파일/다운로드 URL은 버리고, 상세주소를 만들 수 없으면 기관 보도자료 목록으로 보낸다.
+    Never use attachment/download URLs as the clickable title.
+    Only known web detail-page URL patterns are accepted.
+    Otherwise route to the institution's HTML press-release listing page.
     """
     candidate = (candidate or '').strip()
 
     if source_name == 'FIU':
         if item_id:
             return FIU_VIEW_URL.format(num=item_id)
-        if 'report_view.do' in candidate and not is_file_link(candidate):
+        if re.search(r'kofiu\.go\.kr/kor/notification/report_view\.do\?', candidate, re.I):
             return candidate
         return 'https://www.kofiu.go.kr/kor/notification/report.do'
 
     if source_name == '금융위원회':
-        # 금융위 상세 보도자료 페이지 형식이면 유지.
-        if candidate and 'fsc.go.kr' in candidate and not is_file_link(candidate):
-            # RSS에서 첨부파일 링크가 오는 경우 제외
-            if any(x in candidate.lower() for x in ['download', 'file', 'atch']):
-                return 'https://www.fsc.go.kr/no010101'
+        # FSC press release detail pages have /no010101/<numeric id>
+        if re.search(r'fsc\.go\.kr/no010101/\d+', candidate, re.I) and not is_file_link(candidate):
             return candidate
         return 'https://www.fsc.go.kr/no010101'
 
     if source_name == '금융감독원':
-        if candidate and 'fss.or.kr' in candidate and not is_file_link(candidate):
-            if any(x in candidate.lower() for x in ['download', 'file', 'atch']):
-                return 'https://www.fss.or.kr/fss/bbs/B0000188/list.do?menuNo=200218'
+        # Accept only an HTML board-view page, never generic/download URLs.
+        if ('fss.or.kr' in candidate.lower()
+            and re.search(r'(view\.do|bbs.*view)', candidate, re.I)
+            and not is_file_link(candidate)):
             return candidate
         return 'https://www.fss.or.kr/fss/bbs/B0000188/list.do?menuNo=200218'
 
-    return candidate or '#'
+    return '#'
 
 def official_relevant(title):
     t = (title or '').lower()
@@ -324,7 +323,7 @@ def fetch_official_source(source_name, query):
     })
     url = 'https://news.google.com/rss/search?' + params
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/3.1'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/3.2'
     })
     with urllib.request.urlopen(req, timeout=12) as resp:
         data = resp.read()
@@ -459,7 +458,7 @@ def main():
         return deduped[:limit]
 
     deduped = clean_collection(all_items + existing, 1200)
-    official_deduped = clean_collection([sanitize_official_row(x) for x in (official_new + existing_official)], 400)
+    official_deduped = clean_collection([sanitize_official_row(x) for x in official_new] + [sanitize_official_row(x) for x in existing_official], 400)
 
     payload = {
         'updated_at': datetime.now(timezone.utc).isoformat(),
