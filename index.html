@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>K-AML NEWS v2.2</title>
+<style>
+:root{--bg:#07101e;--panel:#0d192b;--panel2:#11223a;--text:#edf4ff;--muted:#8fa3bd;--line:#1d3351;--accent:#74a8ff;--hot:#ffb55f}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#07101e,#091426);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:30px 18px 70px}.hero{padding:24px;border:1px solid var(--line);border-radius:22px;background:rgba(13,25,43,.92)}
+.eyebrow{color:#8eb8ff;font-weight:800;font-size:13px}.hero h1{font-size:34px;margin:8px 0}.hero p{color:var(--muted);margin:0;line-height:1.6}
+.status{margin-top:16px;display:flex;gap:8px;align-items:center;color:#b9cae0;font-size:13px}.dot{width:9px;height:9px;border-radius:50%;background:#f7b955}.dot.live{background:#64e69a}
+.toolbar{margin-top:18px;display:grid;grid-template-columns:1fr auto;gap:10px}.search{width:100%;background:#091628;border:1px solid var(--line);color:white;border-radius:13px;padding:13px 15px}
+.btn{border:1px solid #31527d;background:#10243e;color:#dceaff;border-radius:13px;padding:0 15px;cursor:pointer}
+.section{margin-top:18px}.label{font-size:12px;color:#7f96b2;margin-bottom:8px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);background:#0c1a2e;color:#b9cbe1;padding:8px 10px;border-radius:999px;font-size:12px;cursor:pointer}.chip.active{background:#174579;border-color:#4487cb;color:white}
+.summary{margin:22px 2px 10px;color:#91a8c3;font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:rgba(13,25,43,.94);border:1px solid var(--line);border-radius:17px;padding:17px}.meta{display:flex;justify-content:space-between;gap:12px;color:#7890ac;font-size:11px}
+.title{display:block;color:#f3f7ff;text-decoration:none;font-weight:800;font-size:17px;line-height:1.45;margin-top:8px}.tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:12px}.tag{font-size:10px;border:1px solid #2c4b72;color:#a8c9f4;border-radius:999px;padding:4px 7px}.newbadge{display:inline-block;margin-left:6px;font-size:10px;font-weight:800;padding:3px 6px;border-radius:999px;background:#1f6feb;color:white}
+.point{color:#9fb3cc;font-size:12px;line-height:1.55;margin-top:12px}.point b{color:#d9e7fa}.related-toggle{margin-top:11px;border:0;background:transparent;color:#8fb7ff;padding:0;cursor:pointer;font-weight:700}.related-list{display:none;border-top:1px solid var(--line);margin-top:10px;padding-top:8px}.related-list.open{display:block}.related-item{padding:7px 0;font-size:12px}.related-item a{color:#bed6fa;text-decoration:none}
+.empty{grid-column:1/-1;text-align:center;padding:55px;color:#849ab6;border:1px dashed var(--line);border-radius:16px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero h1{font-size:28px}.toolbar{grid-template-columns:1fr}.btn{height:43px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="eyebrow">K-AML NEWS · v2.2</div>
+  <h1>🇰🇷 국내 AML 뉴스 모니터링</h1>
+  <p>자금세탁·범죄수익·가상자산·보이스피싱·환치기·마약·도박·탈세·FIU 관련 뉴스를 모읍니다. GitHub Actions가 서버에서 수집하므로 브라우저 RSS 프록시에 의존하지 않습니다.</p>
+  <div class="status"><span id="dot" class="dot"></span><span id="status">news.json 확인 중</span></div><div id="lastCollected" style="margin-top:7px;color:#7f96b2;font-size:12px"></div>
+  <div class="toolbar"><input id="search" class="search" placeholder="기사 제목·언론사 검색"><button id="refresh" class="btn">새로고침</button></div>
+</section>
+<div class="section"><div class="label">보기</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div class="section"><div class="label">분류</div><div id="cats" class="chips"></div></div>
+<div class="summary" id="summary"></div>
+<div class="grid" id="grid"><div class="empty">뉴스를 불러오는 중…</div></div>
+</div>
+<script>
+let NEWS=[], CAT='전체', TODAY=false;
+const CATS=['전체','자금세탁','가상자산','사기','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','제재·테러자금'];
+const $=s=>document.querySelector(s);
+function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function isToday(d){let x=new Date(d),n=new Date();return x.getFullYear()===n.getFullYear()&&x.getMonth()===n.getMonth()&&x.getDate()===n.getDate()}
+function isNew(d){let x=new Date(d),n=new Date();return isFinite(x)&&((n-x)/3600000)<=24}
+function ago(d){let x=new Date(d), n=new Date(), m=Math.floor((n-x)/60000); if(!isFinite(m)) return ''; if(m<60)return m+'분 전'; let h=Math.floor(m/60); if(h<24)return h+'시간 전'; return Math.floor(h/24)+'일 전'}
+function norm(s=''){return s.toLowerCase().replace(/\[[^\]]*\]|\([^\)]*\)/g,' ').replace(/[^0-9a-z가-힣 ]/g,' ').replace(/\s+/g,' ').trim()}
+function toks(s=''){return norm(s).split(' ').filter(x=>x.length>1)}
+function sim(a,b){let A=new Set(toks(a)),B=new Set(toks(b));if(!A.size||!B.size)return 0;let i=0;A.forEach(x=>B.has(x)&&i++);return i/new Set([...A,...B]).size}
+function nums(s=''){return (s.match(/\d+(?:[.,]\d+)?/g)||[]).map(x=>x.replace(/,/g,''))}
+function same(a,b){if(a.link===b.link)return true;let s=sim(a.title,b.title);if(s>=.72)return true;let na=nums(a.title),nb=nums(b.title);return s>=.56&&na.some(x=>nb.includes(x))}
+function cluster(items){let cs=[];for(const x of items){let c=cs.find(c=>same(c.main,x));if(c)c.rel.push(x);else cs.push({main:x,rel:[]})}return cs}
+function point(x){let t=x.tags||[];if(t.includes('가상자산'))return '가상자산 이동 경로, 거래소·개인지갑 사용, 자금 원천과 회수 경로를 함께 볼 만합니다.';if(t.includes('사기'))return '피해자 자금의 집금·분산·환전·가상자산 전환 패턴을 참고할 만합니다.';if(t.includes('환치기·외환'))return '국경간 송금, 제3자 계좌, 외국환 신고 여부와 자금 이동 구조를 볼 만합니다.';if(t.includes('FIU·규제'))return 'AML/CFT 제도·감독방향과 STR 실무 영향 여부를 확인할 만합니다.';return '전제범죄와 자금의 유입·분산·회수 구조를 STR 관점에서 참고할 만합니다.'}
+function drawCats(){ $('#cats').innerHTML=CATS.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join(''); document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{CAT=b.dataset.c;drawCats();render()})}
+function render(){
+ let q=$('#search').value.trim().toLowerCase();
+ let list=NEWS.filter(x=>!TODAY||isToday(x.date)).filter(x=>CAT==='전체'||(x.tags||[]).includes(CAT)).filter(x=>!q||(x.title+' '+x.source).toLowerCase().includes(q));
+ let cs=cluster(list);
+ $('#summary').textContent=`${cs.length}개 사건 · ${list.length}건 기사`;
+ if(!cs.length){$('#grid').innerHTML='<div class="empty">조건에 맞는 뉴스가 없습니다.</div>';return}
+ $('#grid').innerHTML=cs.map((c,i)=>{let x=c.main,id='r'+i;let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+ let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">같은 사건 보도 ${c.rel.length+1}건 ▾</button><div id="${id}" class="related-list">${c.rel.map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)}</div>`).join('')}</div>`:'';
+ return `<article class="card"><div class="meta"><span>${esc(x.source||'뉴스')} · ${esc(x.query||'')}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(x.link)}">${esc(x.title)}</a><div class="tags">${tags}</div><div class="point"><b>AML 관점</b> · ${esc(point(x))}</div>${rel}</article>`}).join('')
+}
+async function load(){
+ try{
+  const r=await fetch('news.json?ts='+Date.now(),{cache:'no-store'}); if(!r.ok)throw new Error('HTTP '+r.status);
+  const d=await r.json(); NEWS=d.items||[];
+  let ok=(d.feed_status||[]).filter(x=>x.ok).length;
+  $('#dot').className='dot '+(NEWS.length?'live':'');
+  $('#status').textContent=NEWS.length?`LIVE · ${NEWS.length}건 · ${ok}/${(d.feed_status||[]).length}개 검색피드`:'아직 수집된 뉴스가 없습니다. GitHub Actions를 한 번 실행해 주세요.';
+  $('#lastCollected').textContent=d.updated_at?`마지막 뉴스 수집: ${new Date(d.updated_at).toLocaleString('ko-KR')} · 최근 ${d.retention_days||90}일 보관`:'마지막 뉴스 수집 기록 없음';
+ }catch(e){NEWS=[];$('#status').textContent='news.json을 읽지 못했습니다 · '+e.message}
+ render()
+}
+drawCats(); $('#search').oninput=render; $('#refresh').onclick=load; $('#todayOnly').onclick=()=>{TODAY=!TODAY;$('#todayOnly').classList.toggle('active',TODAY);render()}; load();
+</script>
+</body></html>
