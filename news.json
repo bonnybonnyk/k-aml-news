@@ -1,31 +1,31 @@
 {
-  "updated_at": "2026-09-11T23:23:01.371473+00:00",
+  "updated_at": "2026-09-11T23:35:43.937060+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 24
+      "count": 20
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 10
+      "count": 8
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 16
+      "count": 12
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 37
+      "count": 36
     },
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "트래블룰",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 34
+      "count": 29
     },
     {
       "feed": "투자사기",
@@ -50,12 +50,12 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 31
+      "count": 15
     },
     {
       "feed": "탈세",
@@ -65,12 +65,12 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 37
+      "count": 30
     },
     {
       "feed": "차명계좌",
       "ok": true,
-      "count": 7
+      "count": 5
     },
     {
       "feed": "제재·테러자금",
@@ -95,6 +95,12 @@
       "feed": "금융위/FIU:가상자산사업자",
       "ok": true,
       "count": 2,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융위/FIU:가상자산",
+      "ok": true,
+      "count": 6,
       "method": "official_board"
     },
     {
@@ -140,6 +146,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융위/FIU:불법사금융",
+      "ok": true,
+      "count": 1,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융위/FIU:불법금융",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 0,
@@ -147,16 +165,32 @@
     }
   ],
   "official_backfill_complete": true,
-  "official_backfill_version": "4.3",
+  "official_backfill_version": "4.4",
   "official_collection_mode": "90d_backfill",
-  "count": 1049,
-  "official_count": 12,
+  "count": 1063,
+  "official_count": 14,
   "items": [
+    {
+      "region": "국내",
+      "query": "지갑·해외거래소",
+      "title": "담보·대출로 뻗는 해외 토큰증권…한국은 '갈라파고스'[토큰증권 대해부]⑨",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Fri, 11 Sep 2026 22:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5PaUZSbzZHQVdGTTlMWl95T0J1QmFiTzJyTXNhb0k2cXBmV0g4THoyM1V4Szc2TVRUNnpnTGZ2d2N4MkJGajlFVFhaQ0xwb1g1LVFWTDBXaUJicS1IdG5XVnk4anVwVUVBY1Aw0gFrQVVfeXFMTk9pRlJvNkdBV0ZNOUxaX3lPQnVCYWJPMnJNc2FvSTZxcGZXSDhMejIzVXhLNzZNVFQ2emdMZnZ3Y3gyQkZqOUVUWFpDTHBvWDUtUVZMMFdpQmJxLUh0bldWeThqdXBVRUFjUDA?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "[르포]보이스피싱 잡는 80대 '영크크'…우덕마을의 유쾌한 반란",
       "source": "노컷뉴스",
+      "source_url": "https://www.nocutnews.co.kr",
+      "source_domain": "www.nocutnews.co.kr",
       "date": "Fri, 11 Sep 2026 22:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA0WXcySUl1RVQ3WW10b2JOTVVRT2RpWVRZV002Q3o4alE1Z2d3Y3RNdU1ybGp1WlFscWZXdXlwSV9GUVFWQjhFNEtOeVhXS1pmeUE?oc=5",
       "tags": [
@@ -166,9 +200,25 @@
     },
     {
       "region": "국내",
+      "query": "마약자금",
+      "title": "당국은 양배추로 위장한 약 1톤의 메스암페타민을 압수했습니다.",
+      "source": "Vietnam.vn",
+      "source_url": "https://www.vietnam.vn",
+      "source_domain": "www.vietnam.vn",
+      "date": "Fri, 11 Sep 2026 21:26:44 GMT",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQX0VwVDdFTXoyZFR1c3V6YjlyOHE3SDlRempIbzNTcjZkYkNNVmZVc2dZc0o0aF9jTG5ESWIxbXplSG9SUUF4NWxJb0ctSENUdHNidnJHRWF0M041Wmp0UUNhSmlFNUI1clJkOHVVTV9XTGVVbU5JZzlrc2NmVUZGbE5tb3A?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "[월드 프리즘] \"위험해서 안 받는다?\"…신탁 거절당하는 크립토 자산가들",
       "source": "위키리크스한국",
+      "source_url": "https://www.wikileaks-kr.org",
+      "source_domain": "www.wikileaks-kr.org",
       "date": "Fri, 11 Sep 2026 21:02:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFByV3lhQWRWcU0yMHQ0UDBxQUhFQjZMWDhQWUlGUTRHS21VdG85d3NqZDFPMHRHRlN5MmprVzlPb1BWd25wcE5NRWUzdEdkVGI3UGg1QTk0N3JHMmxyemFqUHljcUp6ekI5UGFSQzVoeTk?oc=5",
       "tags": [
@@ -181,6 +231,8 @@
       "query": "FIU·STR",
       "title": "다음주 금융당국 일정",
       "source": "마켓인",
+      "source_url": "https://marketin.edaily.co.kr",
+      "source_domain": "marketin.edaily.co.kr",
       "date": "Fri, 11 Sep 2026 21:00:06 GMT",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBESlBJQUE4b2dHQ043MGZibWVsalZaQ0JKLXNUVXRZNDZUTGcxZ2p1VVl4NlJjNmgzNFd5cGs0RF9SM0d0QWM0eTZMX1NQcVBJLWVNSllsWno0WmVfNmRESU5ScUJiMDJkcFQ0OUVQWlRvZmM?oc=5",
       "tags": [
@@ -193,6 +245,8 @@
       "query": "가상자산 AML",
       "title": "[단독] 올해 불법 외환거래 적발 4.9조…7개월 만에 작년 규모 추월",
       "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Fri, 11 Sep 2026 21:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0tYkV5TFpvQllHOWxPdlJtSTM0bHhnV21HVTBwcEFfYm16X3pJRmdkbVVFM0Y1aDRwbEpfVzZ6VklXV0VUOEZNVjNmeERMc2pQZUhiMzdxemJDcVYwMmtsdtIBeEFVX3lxTFAtb2ZMd05Ja0pBU3VNRTJhY3NiNTNxcTloUE9rcXN0bnVuMzRxdHQ4b2VzRTVnNnNTUzFIVHViejRCRGo2YzdmOTdXLW44aG95dVI4ZVpZdHpLNXQ0Z1Z3bkNIZWIxcHA1YnZvU1BZWFdOdmZtdVdyMQ?oc=5",
       "tags": [
@@ -204,7 +258,9 @@
       "region": "국내",
       "query": "투자사기",
       "title": "“리딩방 손실 만회해준다”더니 ‘휴지조각 코인’…913억 끌어모은 일당 중형 [사건플러스]",
-      "source": "서울경제",
+      "source": "sedaily.com",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
       "date": "Fri, 11 Sep 2026 21:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1YeGVMYUluNW5velVRZHZvdFNuWFRwdGZaam1UdElSREU5ODN3UHN1REJmMDd2UmQwdlpQNWM3T01RX0JsWkE1N0p1dFpEMTduMEHSAVNBVV95cUxPTnBpekVFeG5KX2ZjdVM3QUlNanBNaFhTaENjMUtxWDBpQTFHZXRrZndzVmdlRk1RcmVORGJaekl0Wm1zQVg0M0pyNnk0eWVBN3dXYw?oc=5",
       "tags": [
@@ -218,6 +274,8 @@
       "query": "자금세탁",
       "title": "테더, DOJ 요청에 스캠마켓 신비개런티 자금 5200만달러 동결…USDT 통제력 과시",
       "source": "위키트리",
+      "source_url": "https://www.wikitree.co.kr",
+      "source_domain": "www.wikitree.co.kr",
       "date": "Fri, 11 Sep 2026 20:01:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZNmUtcGlSaGkxRUlQNUdaVXdUeVFFYXQ3cFpnQ1pPN0pQc3dWMHpkWFVsekJXYzF4MGNFSVNIRkM3U3dRX1dTdWdlQVBaaHNqakxtSHpR?oc=5",
       "tags": [
@@ -230,6 +288,8 @@
       "query": "가상자산 AML",
       "title": "[이승환 경감의 사기(詐欺) 심리학] 과도한 이익에 '혹'하는 마음",
       "source": "포인트데일리",
+      "source_url": "https://www.pointdaily.co.kr",
+      "source_domain": "www.pointdaily.co.kr",
       "date": "Fri, 11 Sep 2026 20:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE94VEZBZVNrZURlMzd5REpXLWhzRC1waWZKMkZfZnc4ZHVQR3I4QjhseTdvMEE3eFpOR29EU0VfZ2hNNktPMnFBakYtSUt1RmpjZTRTNFRuQ1d3ZzhacUItV0JUcmZreXB3Ynd1VERaMHHSAXRBVV95cUxPZ3FuR25MVDhUeVlvUHY0aEdPdGV4LTduc0NlblNtZmtPZ1dpMmZTWGRvSUJlWWpTQnFPZVh1Q3NTUTVydjZTVTI4SExqczQxX3k1ZjV2YklYSnBlZzJpSmdhc0VZeno5WDJibDY1N3dqVUxGUQ?oc=5",
       "tags": [
@@ -239,9 +299,25 @@
     },
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "화면보다 먼저 확인할 내용, 베트남 카지노 불법",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 17:30:58 GMT",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPWUlYN2tQdzJLejBsU3JsbVNrT2NHYjY0SzlzeXdMU0M1b09tRTZXbkpvWjNHQnljd2lqWlRVbkZEMnhmYzV6aTRVY3RjQWxZbUNUY0FGVVJjV214c0ZOMXR5ZTZEcVRQYmpoRHE0a3F5ajNFOWd6VzgyaGZKQk5EdzZDS1I1Q1BHMnZwNi01LWZxVEFVTmhOSFFGSzByaWZ0eFlRVnA4am9fcTY5MXpTLQ?oc=5",
+      "tags": [
+        "도박"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "상승세 보우소나루 경찰수사 '암초'…브라질 대선판도 '요동'",
       "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
       "date": "Fri, 11 Sep 2026 17:07:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9iWmJ5Q2dzaTZrZW0xVFpIVWJjNEpMd19jN2ZldlA0RVMwNUJWV0RZY1IyTmRWQ0JlS1lFakIxRnFGWkI5RFlKam9BMVROSEhPcGV5OFRxc29VcUZPWlozLdIBYEFVX3lxTE9iWmJ5Q2dzaTZrZW0xVFpIVWJjNEpMd19jN2ZldlA0RVMwNUJWV0RZY1IyTmRWQ0JlS1lFakIxRnFGWkI5RFlKam9BMVROSEhPcGV5OFRxc29VcUZPWlozLQ?oc=5",
       "tags": [
@@ -254,22 +330,12 @@
       "query": "가상자산 AML",
       "title": "비트겟, 유니세프 금융 교육 프로그램에 블록체인 강의 추가…누적 64만2천 명 이상 참여",
       "source": "Yellow.com",
+      "source_url": "https://yellow.com",
+      "source_domain": "yellow.com",
       "date": "Fri, 11 Sep 2026 16:33:22 GMT",
       "link": "https://news.google.com/rss/articles/CBMi6wNBVV95cUxOQlpJX280ZUI4R0UxaG5NMGZyUURLNGtuY1VaY3FQV01MZVZPMEwxdkxYam1iOVVNSEFxeW5yWmxMNHgyNFRlOEpMVHZ4ZGFRdk95bExnOE5VMDZUcE1LX3dZNzFwc3dRTWpULS1FcTJQMklwS1lGV3RDSU1PaE03cDdtRGhxQmw3ZVdsQlVuVGFqWUQ3b3JFdHVLSDllMGxKTlZ1U1R5VzBIRktIbG05ZDlMZEIzUVVuc2pGRTA0VmV2SUVURnJRNmgtdGR6UldMcVhJcFFBVEdKUmVXQk82aW1tRUJwZUg1MnpINUFGM2Njc0NDSVlsZ1dyV2V1RzdyZnc5X1otcFRxVG9rWnlmVU9NX0kxcjVEMDF6bW12c05kWXdtR194NlJuc2U0eFhMd3MxaXFZZVVaZWJyQzR2SzhUMDltdXJnRmNYbWxiQmhRaHdWdloydWp5YktyWjdHb3Q3YkFONXZzX2o2aVkwQmhxYUdtMF9MczVXaU92aGdLcVV0d3NYOWM2eVhTVGNNVEdqeEhYWHBOQjdReE9aMm1aNkhtb0JZRi1DMlh1clBnT19LUmo5LTRrNEN6OFB4eXYtZ3F1UGM2SURkbHFVUk5HWV9yeXBSSU0tbk9vcm9NNHpiMEpGREIyRQ?oc=5",
       "tags": [
         "AML"
-      ],
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법도박",
-      "title": "용어보다 화면 예시가 편한 분을 위한 토토 사기",
-      "source": "Histoire pour tous",
-      "date": "Fri, 11 Sep 2026 16:33:17 GMT",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSWhKRC1taElGcnY5ZWZuQmtqR0NKQjMzODluNlR6VmtvSFRiV0JSdFJiZWdoY3c5X2twTGVmQk90N1lZN0VxMmQ3dTYtSkJmZWJKT0tUZTFCUi1DNjQyejk0VjB2YUl6bV9BLUdHbHg0bEZJU3VTNjhBcHpDak1vYTF6TG5aZnVxQjlfT0FyV2JaWjRRbVc3UHRvQXVkNUJLZmd2ZktzTU4xcVBPemQzLW9VZi1XWHpOMkxQdjZOdw?oc=5",
-      "tags": [
-        "사기"
       ],
       "collection_method": "google_news_24h"
     },
@@ -290,6 +356,8 @@
       "query": "가상자산 AML",
       "title": "테더, 미 법무부 5200만달러 사기자금 동결 지원",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 15:41:45 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9FZ3djQ084Yy1HczNidXhVRXNKdTFLSk9DTmpXaUhsdFl5TkU2cV9VYnFwRC1DMVRIQXV1akh5MWFoeTVub0pMbE5aT0FqamVpS2hmekh1NjLSAV5BVV95cUxNRWNJU0JqU3ZvQjJYZk92TmY5Z1UteHRKcHZkZzVxUFBpaTc4WjFMVGRCeTFpMnZwRDlBemtIck1PQ3FxTkMwN2hFNlQxWlREN1VNcmFkN21LQ0R3RnVn?oc=5",
       "tags": [
@@ -302,7 +370,9 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "檢 \"김병기 영장 보완수사 필요\"",
-      "source": "chosun.com",
+      "source": "조선일보",
+      "source_url": "https://www.chosun.com",
+      "source_domain": "www.chosun.com",
       "date": "Fri, 11 Sep 2026 15:35:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOOVZ2Vl9Gem1SS2xEbWFUajJtM1V2RGpYdmlHeDdTTUtVeVNIY1E4c3Z2UUgwbWJqSkhnTmNTLTBialMxekstS0tfQmx5Rkg1VjFrZnBXWTNHSmZVbnkxVXp5THZWZlB1MU9MVzBWQ19FZ3FNbzhXSUNzdjJxamtxSVdVaXV2WXM?oc=5",
       "tags": [
@@ -315,6 +385,8 @@
       "query": "가상자산 AML",
       "title": "가상자산 허위 백서 사기 주범 2명, 징역 14년",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 15:22:16 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE40aS0talEyaXlDZEJWVEpkbzBGTUsyWG9TNHNMMG81TkVqYTA1cVhPOGt2MTk2dUxrNGFmRHcyWFJSbkZxRFJCcFM3eFZyanZ4NmZJTFd6a3XSAV5BVV95cUxOR0ZmMWZlZzl3OE5jd1M5d29DVmtxM1dBck1RVXphVW9rQllKNWN1cHFkQW9PNjFobDdSVVBuUE9TUjNLUGdKdXozM2FoUE8xVk9GTG43REsyY0FReE9R?oc=5",
       "tags": [
@@ -328,6 +400,8 @@
       "query": "보이스피싱",
       "title": "택시기사 눈썰미로 골드바 보이스피싱 수거책 체포",
       "source": "supple.kr",
+      "source_url": "https://supple.kr",
+      "source_domain": "supple.kr",
       "date": "Fri, 11 Sep 2026 14:59:49 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE81LVFPQU9ZemxDa0g1ZXdLOXlreUxrRjVRWllGeDVmQ0JrNWM0U2w1a2JydVBNRnp3TXdWcmt2X3l2UDhYcDc0b1dvY0dzd1EyN0pzbklSQ2E?oc=5",
       "tags": [
@@ -340,6 +414,8 @@
       "query": "제재·테러자금",
       "title": "북한, ‘180여명’ 대규모 선수단 파견…日 대북 제재 예외 적용 [아시안게임]",
       "source": "쿠키뉴스",
+      "source_url": "https://www.kukinews.com",
+      "source_domain": "www.kukinews.com",
       "date": "Fri, 11 Sep 2026 14:52:24 GMT",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1venRLYkpfUFVMM0xHbDBVeFpwbGtYRVpQcWo0M25HNjZET2tyRVJ1YlhsUl85dGVsSG5tSmkxX2I5eDBVTWlha1lrMlNzZGR4a2JIUllPN3owWGFDSWVaSzk4dw?oc=5",
       "tags": [
@@ -351,7 +427,9 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "[단독] 法 \"이더리움 네트워크, 현행법상 정보통신망\"",
-      "source": "digitalasset.works",
+      "source": "디지털애셋",
+      "source_url": "https://www.digitalasset.works",
+      "source_domain": "www.digitalasset.works",
       "date": "Fri, 11 Sep 2026 14:46:05 GMT",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ORWlxaDRoYThqMXZFUE12YzF6TWVCMlY3QklYa3J6VHIxcEZITG4xa3RES29fS0VRTWQtMTdENnhUOFR4M3I4ajVYb3pmREhSMElqWEJLVFpBcWdPVXBybUVyY0VzVXZraUhmaDVKaDJyQQ?oc=5",
       "tags": [
@@ -364,6 +442,8 @@
       "query": "지갑·해외거래소",
       "title": "\"코인 과세 인프라 없는데 세금내라?\"…가상자산업계, 내년 가상자산 과세 유예 공식 건의",
       "source": "금융계",
+      "source_url": "https://www.fn1966.com",
+      "source_domain": "www.fn1966.com",
       "date": "Fri, 11 Sep 2026 14:23:11 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA1WXpvcEdBN2J3MURlUFc1Qll4TkRteFp0NjZ2RFdodExSSWJ0aXgxX29WX3lWOWJjNUV5OWxyT201VmtlWm9MemVhMGlfbDVTSVdMcXFvbFhtSnowSUUxcU01cXFhTk0?oc=5",
       "tags": [
@@ -376,6 +456,8 @@
       "query": "자금세탁",
       "title": "美, 중국어 기반 사기플랫폼 제재…가상화폐 700억원 동결",
       "source": "금융계",
+      "source_url": "https://www.fn1966.com",
+      "source_domain": "www.fn1966.com",
       "date": "Fri, 11 Sep 2026 14:17:22 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBiN21zcTFOTEFJcXRlYzNGZG1sMWZWdkFpV2l5WFpIa01SU1pJQkVKMi15RjFYcFh1aTlxSWctUzUxT295N1o2LUxzS3JueGxNUVFKSTVURXhtSEdwNG90ZjBXcnJDNE3SAWtBVV95cUxQemVPNXRHYkk5Q1kzalM5YVVHOTBhaHNkQzZGR09vUjRhdlJhdHBwcExZMV9JekJNWWhaU1MxenFraExNMGk2dXlucXZhOTV3eG5kaTFwdHBkWlV4STNfNmxoNF8yN0g5c1otOA?oc=5",
       "tags": [
@@ -413,6 +495,8 @@
       "query": "마약자금",
       "title": "美국무부, 에콰도르 '로스 티게로네스' 국제테러집단 신규 지정",
       "source": "truthdaily.co.kr",
+      "source_url": "https://www.truthdaily.co.kr",
+      "source_domain": "www.truthdaily.co.kr",
       "date": "Fri, 11 Sep 2026 14:03:02 GMT",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBENWRlR0FrY3ZKMTRkb3N0ZVhkMl80aDFYWWZQTS1BQi1ENU1sWVlHUjQ2djVSYjlNUE1Weno0YTdWTm5SN0k1bjdnRmpKdlhnSVdWNVh2UWJxQjJvWmZ0dzQ3TEY0WmVTX09UQmVR?oc=5",
       "tags": [
@@ -437,6 +521,8 @@
       "query": "횡령·배임",
       "title": "법령 178호에 따른 자금 횡령: 시정하고 예산을 회수해야 합니다.",
       "source": "Vietnam.vn",
+      "source_url": "https://www.vietnam.vn",
+      "source_domain": "www.vietnam.vn",
       "date": "Fri, 11 Sep 2026 13:50:27 GMT",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcjVLYVJhcnRJQjhHSXFvbkl0c1lZYkxvX0FyOUp0QklHb0tob1pHTWxVSGdkNnQtcDl6TE5GdmZYcjRBeVZXREtUWm14RmNKbDRyTFJBenpQUk8ycDF4bVdKVXdIdHlYcmxZOTJDeXhxT0VnanBzYl9ZQWVuUkFPYlAxM3dwcnVjRHhjbEJkbDNCcHdXQ0Vj?oc=5",
       "tags": [
@@ -449,6 +535,8 @@
       "query": "보이스피싱",
       "title": "\"승객이 이상해요\"…택시기사 눈썰미로 6900만원 골드바 수거책 체포 - 머니투데이",
       "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
       "date": "Fri, 11 Sep 2026 13:49:27 GMT",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE95N0M4WmowaXhRWDlvTGx6eWlGdHowT1Z6QlNLTEZSd1RWeG9MNkp5dk5CRExlTkoyVnlUSFVUaGdqYkZGdURVZzFzczV5aHp3aVRKM2RDT1dJTl93RDBJdlRVRU9jb3RiNl9RX3NQeXbSAXBBVV95cUxPeTdDOFpqMGl4UVg5b0xsenlpRnR6ME9WekJTS0xGUndUVnhvTDZKeXZOQkRMZU5KMlZ5VEhVVGhnamJGRnVEVWcxc3M1eWh6d2lUSjNkQ09XSU5fd0QwSXZUVUVPY290YjZfUV9zUHl2?oc=5",
       "tags": [
@@ -461,6 +549,8 @@
       "query": "가상자산 AML",
       "title": "엔비디아 CEO 젠슨 황, AI 보안 공포 ‘판매 전략’ 주장",
       "source": "BeInCrypto",
+      "source_url": "https://kr.beincrypto.com",
+      "source_domain": "kr.beincrypto.com",
       "date": "Fri, 11 Sep 2026 13:45:46 GMT",
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9sclhtZkJvU29jbzdmOVUyYXVGbGtzcHRlR19MSEN6akRWMFBvaVZZb1BMQ2g4cWZ1aWEzdmtRUDRRN3c5V05JQWhUbl9sVnBfd2VaU3Vpb0ZpZ3pPT0syM1FDam5mTmc1TktLV3JfWGJzMWhlUkp5SXZ1SEY?oc=5",
       "tags": [
@@ -473,6 +563,8 @@
       "query": "횡령·배임",
       "title": "[2보] 영암군 직원 ‘1억대’ 공금횡령…감사원 감사 착수",
       "source": "영암열린신문",
+      "source_url": "https://www.openmedia.co.kr",
+      "source_domain": "www.openmedia.co.kr",
       "date": "Fri, 11 Sep 2026 13:20:41 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KbGd5VVZrWjRoT05GNXd2MkpGc3RhaUZjNUdybTdtZi1PdU45Z0dDYWFrem5MUEVRUGxaUkUtTG5HcE9XOVVVdGpTbUduZjA?oc=5",
       "tags": [
@@ -482,9 +574,25 @@
     },
     {
       "region": "국내",
+      "query": "불법도박",
+      "title": "용어보다 화면 예시가 편한 분을 위한 토토 사기",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 13:16:13 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOeW5YdTBFM3N3TDdsYzJiM3ZJNTROT0s1RjhPMjJkY3BmMTJtUndYcXVPMGFXOWd1R2pDUzhvMVNZakwyTy1xVjV1X2F6b1NhcUJDTjNUWjhxUW5TSV95YjZKNlBUM0NWMHV2aHhoYnRnX2lUVU1vcXV6Z0VQenAtbVMyc3Q5N2UzdEhhY1AtaVItUHZtMVZLcUxzcVNUUFdDQ28xR2dtR1gwejRjZC0wV1N3YndNcFpHbVhQUmNral8?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱과의 전쟁 선포 中, 46개국과도 공조",
       "source": "아시아투데이",
+      "source_url": "http://www.asiatoday.co.kr",
+      "source_domain": "www.asiatoday.co.kr",
       "date": "Fri, 11 Sep 2026 13:10:31 GMT",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Ec0RHVVdnV1psejZ2QWozemZTTFpMREVCdEh5ZERSTGUtMF94UmJpWVRZMGY4TzVCOXlnenp2TnhZWkduOFZMYUxqV1NkTG9meGZ6azA3R19mcmJPMVY5Y0hiTnlLUzBYMnZLeg?oc=5",
       "tags": [
@@ -499,6 +607,20 @@
       "source": "Histoire pour tous",
       "date": "Fri, 11 Sep 2026 13:05:10 GMT",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOalhQa2t3NmNKY213eWRzSjd3X2phZS1ZcFo5dHlUMUx1NjFORGtaREFOSHZDTnFuak11YWxOeTNyc1VYWlZFc3dvbG14d0EzMFRESXZqcE1weU9PT2xHT3A1Q04yZU9FNnI4NHFaa05zWGhieTVnNnREdGRmOXZJdnJOSHdoV3NkVU9sdEFRNzZQdGxBdlJkTl94RXk3MFpTaC1TdHRiemd0UnlmUkxqbWJZbjVIVlllc3Z6ZEVB?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "PC 확대 비율을 바꿀 때 확인할 출장안마사이트 화면",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 13:02:35 GMT",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdG9Bc29uNDVjVGhZQmxyLVZBZGVSdS1mNUJFRHhCeDZVdkZOanB6c2wzMWpXOVJyWDJaLS1zLUZHYWRSd0t6aG1nZmpxUGE4NHJJazBjVzlxbVVNQlNQOFBpSERZdmdQVGhNdW5zejVZbEQ0eGlVTnQ5MlVPdHJuTjhfMVR1U0tVTG5RNExIM01IOVlwVmU4ZG9mWjVxXzdrX3VyT2oyYw?oc=5",
       "tags": [
         "AML"
       ],
@@ -545,6 +667,8 @@
       "query": "FIU·STR",
       "title": "강원랜드 고객 확인 강화에 지역 단체 반발",
       "source": "sigma.world",
+      "source_url": "https://sigma.world",
+      "source_domain": "sigma.world",
       "date": "Fri, 11 Sep 2026 12:37:09 GMT",
       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBJRXBHak1YWmk5WnFpRzBaWklRa3N4VFJyOHZzNEVzWTZac25QT1k1b1BOX3NfaWF6bFRLQW00ZXo0WUNtS1k3OG9VeHV6eUw0Yzc2X19lSmRGTVRINFR6X1ZYVFMwWjAyRVdsNGYxd2JTQy1nclZWN2VB?oc=5",
       "tags": [
@@ -557,6 +681,8 @@
       "query": "자금세탁",
       "title": "은행 계좌 매매를 '방조'하는 행위의 예측 불가능한 결과.",
       "source": "Vietnam.vn",
+      "source_url": "https://www.vietnam.vn",
+      "source_domain": "www.vietnam.vn",
       "date": "Fri, 11 Sep 2026 12:34:08 GMT",
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUV9SYXNzZWt4bVUyTjhYbmljVHIwRzRCem9IRUwzRnpEQUl4cms2aER1LUNPcGxOWjU5REdxSTNUaWNadHdURmU5UjRKdlJKYkdMWDdkV2JQdnJVakJLNXJ3RldYa1VoQXlGM1VVUEM4YnUwMUFBWEhKd3dJS3JvSi1PVXRqMTh0dllMR1NuM1AtQQ?oc=5",
       "tags": [
@@ -581,6 +707,8 @@
       "query": "가상자산 AML",
       "title": "블록스트림, 화이트햇 해커 기대 10% 거부",
       "source": "BeInCrypto",
+      "source_url": "https://kr.beincrypto.com",
+      "source_domain": "kr.beincrypto.com",
       "date": "Fri, 11 Sep 2026 12:30:22 GMT",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE00QWstamRkbUtOR3AtbUVKdTVISE5NWVFFYU9ES0JRLTdUVnNTNnl4ZVNCNUVSY25ON2tZY2VaZGVYNXFMTXJyTXk5anVxTjEzczktVExWWGpKNWNNdFNVVm1CRldJdHhjX3JKNnA1SEg?oc=5",
       "tags": [
@@ -593,6 +721,8 @@
       "query": "가상자산 AML",
       "title": "XRP 사칭 계정, 개인 키·시드 문구 요구 주의",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 12:30:15 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAtUjRDWnE1aW9DLWt0MWRkSlkzQmJ5LVJqLXdpemVNYkpnNGFZWFYydWtuUFhDZlV4Q3N2NjJxRVdETWE2R3ozZmZxSHJIVTBzYk1OMjNNSldVVU5jTUFBUNIBZkFVX3lxTE1OY2QwN1RiN2poR08wNVo0dFMzNkZwZ0JwVmtiUXo1dHg5aU9tSEZlRzltR1FCZGdrOG9EQVE2X1NFc0hHaFlaT0FXRmlIdndBVnRtbnUwMFNRQm9CSGhTc1otbm84UQ?oc=5",
       "tags": [
@@ -605,6 +735,8 @@
       "query": "가상자산 AML",
       "title": "에이전틱 암호화폐 결제, 3개월간 500% 급증… 암호화폐 컴플라이언스도 에이전틱해져야",
       "source": "글로벌 비즈 뉴스",
+      "source_url": "http://www.gbnews.kr",
+      "source_domain": "www.gbnews.kr",
       "date": "Fri, 11 Sep 2026 12:28:43 GMT",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA0ZHhqaTE2dmFVZXBfaTY2R1I1Um5LVkZkeU1nQmlTRUl2WHBtRUxkZmdLR1dtSTNvNmR6b24xa1RYdVFPUjdEOWNhWjcwN2RVcmJSQlhOUGYzLURCRGVvNGRJdHdnbFlp0gFoQVVfeXFMUDRkeGppMTZ2YVVlcF9pNjZHUjVSbktWRmR5TWdCaVNFSXZYcG1FTGRmZ0tHV21JM282ZHpvbjFrVFh1UU9SN0Q5Y2FaNzA3ZFVyYlJCWE5QZjMtREJEZW80ZEl0d2dsWWk?oc=5",
       "tags": [
@@ -629,6 +761,8 @@
       "query": "범죄수익",
       "title": "검찰, 노소영 소환 일정 조율…‘선경 300억’ 노태우 비자금 실체 캔다",
       "source": "포쓰저널",
+      "source_url": "http://www.4th.kr",
+      "source_domain": "www.4th.kr",
       "date": "Fri, 11 Sep 2026 11:53:43 GMT",
       "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBtbHFmeEpodTltRWFneVBkaFk4NGtpUkliRktVcnpaeU9HTE0xd25kRUtxWVk0U1VRbmE3YWJEUjR1RWprWmR6TFREaENKenBwcnBiRkI3QmNvMzFFMGpSVWFRdw?oc=5",
       "tags": [
@@ -638,13 +772,43 @@
     },
     {
       "region": "국내",
+      "query": "지갑·해외거래소",
+      "title": "비트 체인 거래소 시스템 아키텍처의 입문 가이드: 사상, 행동 및 결과",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 11:50:33 GMT",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPU2JISGhEM29GNGhJWGQ2cENkWEVfZXpudkhhNXFtd3d0Yzl3elEwZG82Yk5qQzhBQjhfN0VDNURjU3hSODE1WTZyY3JDNjhwSFFLWTZiTFhNMHNsOHN4ajFWWkNkMU51ei1IMWpmR1ZDZE1WOXVPbzZ6M1NiUEk1bzlVajBidXpkOW1iQXBJWjdjaXVVQ2U0THE3Vnp6c0l1RWJMcXVtMWZmS3FLdG84MDhLT1pLalE?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "불법도박",
       "title": "한 번의 입력이 적용되는 범위, 사행성 게임 신고 조작 해설",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Fri, 11 Sep 2026 11:43:42 GMT",
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNTdtSDNuQlpqZ3R5alZBNkh3S0RrNVFwdDg1UG9zRlNLSzl3Y1lYZ2NCUTVoN1ZpcFU1LVZwSU16Q2ZwbWN0bVlYQlZCb2oyX291OS1SbHFrM0l0M0xQMFVySmN0Zy1nTGpnTlJYdHhfTlNsTjNDMlVReU1ZWDJCNml5SzhvenUxRlhCLVpWZjV1RHhWa1d2MzQ0aWRWWjJLdl9uQw?oc=5",
       "tags": [
         "AML"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법도박",
+      "title": "테마만 보고 선택하기 전에 읽는 인터넷 도박 사이트 신고",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 11:43:09 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQLXV6V0xJcE9zZURhQ2psUkdGMGw5LVUxOHJVbjNabTN1U0oxdTZTaHlHaW9ZZDFxZEVYbGZCdUQtY2swU2EtV0tjN0p4U0s0ZExEcXpiOWhreS1kTFBhdm5sbWZzb3c4NVJaWjlFbURQaEc4dW5yczdER1FFWnhnU3dNdlB4U2V4UUJIMUtueE9EOGwzeFI0MFRUZnRKRDRkQVhUMUx1Wl9ITEpJN1ozd0JlRjZZTG9VbDh3S2gya21jZmlkYWNWOXp1MWo3RF9LNFNCYjFn?oc=5",
+      "tags": [
+        "도박"
       ],
       "collection_method": "google_news_24h"
     },
@@ -665,6 +829,8 @@
       "query": "횡령·배임",
       "title": "법령 178호에 따른 자금 횡령 사건: 자금 회수 후, 퇴직자들은 복직해야 하는가?",
       "source": "Vietnam.vn",
+      "source_url": "https://www.vietnam.vn",
+      "source_domain": "www.vietnam.vn",
       "date": "Fri, 11 Sep 2026 11:18:35 GMT",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdncwY2o4bEgzaU9KbTlZVlhQSWktam4ySEFWNXhQY2F4dXRzLVBzeW94b2tSdTZlbnFPcW5lQzVaU25Nc1g4WkpoNWFwalFhQ3hlTDJPR0FQREdYZUJCVFNLYjQzLWFBOG8ySnBCSFRKSVp6UmZXQzhDTDhDUzRwemxqakdQM0J1Zk0xaXZ3VWlUTm5uNjdfR0h6VFlBYl84VkxwWnY2d0VJalk?oc=5",
       "tags": [
@@ -725,6 +891,8 @@
       "query": "제재·테러자금",
       "title": "[평양돋보기] 요즘 평양엔 도요타 '캠리'가 인기?…일본차는 어떻게 들어왔나",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 10:53:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9XeHE4SmE4UVJsRTcwdTYtWlBDT3dEZVNvOHBHemtmU3RKYzJxZ21YaW5WUXZlekcxd1Zmb0dLdzlFSDE5dDl2VlZ1MW4tWmM?oc=5",
       "tags": [
@@ -737,6 +905,8 @@
       "query": "불법도박",
       "title": "강원랜드, 불법도박 근절 위해 유관기관과 대응 해법 모색",
       "source": "BBS불교방송",
+      "source_url": "https://news.bbsi.co.kr",
+      "source_domain": "news.bbsi.co.kr",
       "date": "Fri, 11 Sep 2026 10:50:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1mTmluYkRFdDc3WV9EN2VGRVViT29xeFVvc3dzdllSaDFRX3pKNW9kLWluc3FWME9QRDJ1R2t4OEJnNExHcGFKSHU0aFVtTVJYRk15S0I1b1p4eHM0eWNkX3VwN1VTNzdFQ3BZ?oc=5",
       "tags": [
@@ -749,6 +919,8 @@
       "query": "범죄수익",
       "title": "‘300억 비자금’ 국고 환수되나…검찰, 노소영 참고인 소환 통보",
       "source": "조세일보",
+      "source_url": "https://m.joseilbo.com",
+      "source_domain": "m.joseilbo.com",
       "date": "Fri, 11 Sep 2026 10:38:11 GMT",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9kbFcyRnhPbS10bGNWLTZGUmk0TmRzMmh5YUJfRFJWcVI4eDVQZnVDWE1BSTY1alZ1NUdyZmNPX3BKR2x1dnZMVmk3U0dQT2Z6SE5JMF9zeTdmTTNxcGoxbXhucTRrdWtUbnlQV2NicXFucFJK?oc=5",
       "tags": [
@@ -758,9 +930,26 @@
     },
     {
       "region": "국내",
+      "query": "자금세탁",
+      "title": "도박 돈세탁 의 비밀을 풀다 - 2025년 최신판",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 10:37:10 GMT",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORXdIMDdvZ3NTamhMU3RERGFXVDFRS1NwUktIMm9ydUZHaGFUV19FeTNLd0hQaTNtVUNQbW1vVks3OU53eDVveXI4UGk2WldFU1F1NHJHcC1wdXJ4Y25jV3o0NFBtOXFfcVBMZk94NlBGVjZPOG5INXhMV3Rua1VpNjQtczhJTS1mLVpQNEtNVXdqV2xobzdQME9CdTdMY3pw?oc=5",
+      "tags": [
+        "도박",
+        "자금세탁"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "영암군 지출 담당 직원 공금 횡령 자진신고…27건 혐의 확인",
       "source": "열린뉴스통신",
+      "source_url": "https://www.onews.tv",
+      "source_domain": "www.onews.tv",
       "date": "Fri, 11 Sep 2026 10:29:45 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1xN1VrdG42TUlyNkVaNkZBR2N2N1JYQV9EaTlFUWNUdi1uaWlRWXFLTGdBdV9HSEp4MlpkaFItQnZKY1ZNQm15aXdibHZTRnV3QnBZMVp5SVBORFd3RXZuRjU5cy1pdw?oc=5",
       "tags": [
@@ -783,8 +972,38 @@
     {
       "region": "국내",
       "query": "가상자산 AML",
+      "title": "한게임 포커 코인 얻는법 포스트 코로나 시대 디자인 패턴: 핵심 개념과 실제 응용",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 10:26:39 GMT",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWmEtVm5yUE5HZnRHZmFWN2UtQjQ2NjBtVkt0dHdNN2xJWmFFY2hFancxeThWaUs5MDZOT081V3JHamtFZ2RnMzJBSC1FZ0prR2NWXzhkTlRteGhfaUg2MDdybUtQRGhGWXhYbFFGQVBUMURQSTh2WTFLb3JxZC10T0NEZ2ZGdlZwYk94RnJBUWNqY19TSElFd3E5ckZDTGRhRktNLQ?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "홀덤 팟커밋 보너스 선택 화면의 구성",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 10:26:28 GMT",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRFp1a29CZ0FKTlRVeVhDd3BoSHljZ1gxRE5YaGVtRFJ2S1FBaVZQYTBkRVRod3FiZkRjbWZZeU9KSDhzaGVVZkdjbDg1RWFwMm9jYlZJWm5TR1NxQUVQM1dpbnhiMVJaejNhQkM3Vk9uakZreVhkTEdMTkNUd2pHeE9qQlA1RVhLZ3RDbl9ma2VURHZDSm1LY2hrZVVlaU9ITHRmUDRGSQ?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
       "title": "앨버커키, 비트코인 ATM 금지 조례 추진…45일 철거안",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 10:17:19 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB0OUxmTWh6Z1hXWkNsQzExaTBIcUtSLWRQNXhhalBvLU5HendRSnRRd1JwdkNTeEp3YWFUOW1fWjB4NnpPVDVZYy00ZURrcS1qQ0RfLVpB0gFbQVVfeXFMTkd2YTRnbmhnRW1EcnJLYUhfTzA1bXgzMzlacGJZYVVtWDJmcklUTWwyOUw3a3NXYXVIaVhRQTlUZFIyV09sVWV2ZFVfc1NYT3hDUWdMQk1xV0FXaw?oc=5",
       "tags": [
@@ -809,6 +1028,8 @@
       "query": "보이스피싱",
       "title": "알림음과 배경 음악을 구분하는 도박 보이스피싱 신고 사운드 안내",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Fri, 11 Sep 2026 10:12:24 GMT",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbVZoamhyN0E5RFJiZHdTVUkxNDcxc3RacVJOMDJYaUdXYmkwc3VSQUlpdHI5WlY0UXlNWGRvbGJmQU5VbUJ3MVllaW45U0VLYnZELVZqU2VVQ0taTTlXSWVIQ3VQMy1pczRSUEJCWU94czV5eEEyUXNITnR5ckRBNlAyY0dtMXFCTW0zY3o3b25XaU1LWnNsTW91ZjBXRkV1OXlPeC1vYXg?oc=5",
       "tags": [
@@ -834,6 +1055,8 @@
       "query": "보이스피싱",
       "title": "“군대에서 애써 모은 천만 원”…하마터면 보이스피싱 피해 당할 뻔했다",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 09:55:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBGMmhyUzBuN3hkWUZsTTBwcTh1cjlfYzBIRkJnNEdDcndnSnNxYjlXSlRfUFRnRG9mR0h0cWNxWDFrdHQ5LTdTVTBOMHBqRzA?oc=5",
       "tags": [
@@ -846,6 +1069,8 @@
       "query": "불법도박",
       "title": "친구가 '먹튀'한 토토 수익금 1200만원, 불법 토토인데 고소하면 나도 처벌?",
       "source": "로톡뉴스",
+      "source_url": "https://lawtalknews.co.kr",
+      "source_domain": "lawtalknews.co.kr",
       "date": "Fri, 11 Sep 2026 09:51:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5zOEVjVjh4cVdVQjk5c0ZSZFdLTkEwSV92MWJ2THVJUVpWcjZXYmR1T1FRYzNhWl83Vkl5ZzMzblJKUUU1ejVUVm1YVVlYSVV3TFlfUi00UzluZw?oc=5",
       "tags": [
@@ -858,8 +1083,10 @@
       "query": "횡령·배임",
       "title": "2500만원 횡령 혐의 대구 동구체육회장 불구속 송치",
       "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
       "date": "Fri, 11 Sep 2026 09:45:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBTcUhrQnI3LXBxUTRRSUpSQjctMExrQmJ0cWZQRFlHckxZcUR6YTY3YW41cXlQQjlhQzE0Q0VicjgzMU12QjhGQjNFZGc4b0FSNmZvYmQwTlZmVXZfeDJHaUZFOGPSAWRBVV95cUxQU3FIa0JyNy1wcVE0UUlKUkI3LTBMa0JidHFmUERZR3JMWXFEemE2N2FuNXF5UEI5YUMxNENFYnI4MzFNdkI4RkIzRWRnOG9BUjZmb2JkME5WZlV2X3gyR2lGRThj?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0xcVZqSThGbi1MVDVHdnFpZ3FzM2JwbEJvMm5ULVFMVU53R192bVhpanZ4d2M0b1RjNXFJNF8xOTFHWHkzbTh6UXFSNkNSX1FLM1Q4OW11R0ZQMktSTjNR0gFkQVVfeXFMUFNxSGtCcjctcHFRNFFJSlJCNy0wTGtCYnRxZlBEWUdyTFlxRHphNjdhbjVxeVBCOWFDMTRDRWJyODMxTXZCOEZCM0VkZzhvQVI2Zm9iZDBOVmZVdl94MkdpRkU4Yw?oc=5",
       "tags": [
         "횡령·배임"
       ],
@@ -870,6 +1097,8 @@
       "query": "불법도박",
       "title": "강원랜드, ‘AI 시대 불법도박 근절’ 유관기관 세미나 개최",
       "source": "주간한국",
+      "source_url": "https://weekly.hankooki.com",
+      "source_domain": "weekly.hankooki.com",
       "date": "Fri, 11 Sep 2026 09:37:46 GMT",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SZ0l1bjVaT1BaeVRfYkJnSkxoM200aUMtM3QyMkNmWlRpXzdRNkFieTJucGd5cWhDbkljcTIwMGdPVzcwZ0JHVTBWWlZOSkVlVDdhTzVaSVR1cUQ4OWFvaWEwVUJETkFCSHF5LVRxZXdNdmxW0gF0QVVfeXFMTVJnSXVuNVpPUFp5VF9iQmdKTGgzbTRpQy0zdDIyQ2ZaVGlfN1E2QWJ5Mm5wZ3lxaENuSWNxMjAwZ09XNzBnQkdVMFZaVk5KRWVUN2FPNVpJVHVxRDg5YW9pYTBVQkROQUJIcXktVHFld012bFY?oc=5",
       "tags": [
@@ -906,6 +1135,8 @@
       "query": "보이스피싱",
       "title": "군산경찰서-수협, 추석 맞아 보이스피싱 공동 예방 활동 ‘맞손’",
       "source": "전북중앙",
+      "source_url": "http://www.jjn.co.kr",
+      "source_domain": "www.jjn.co.kr",
       "date": "Fri, 11 Sep 2026 09:11:40 GMT",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE93TUpKdDZXendQdU04Mmczendka1RkcTc5VFdSSjkyXzlVWG9raFpvT3VqWHpULXRIaExmYjVBTjlQVUdPTUxvcTlXVmVUdEZqWlYxOXBvSENpSTNwMXJPbjYyUTUxMS1obmtF0gFrQVVfeXFMT3dNSkp0Nld6d1B1TTgyZzN6d2RrVGRxNzlUV1JKOTJfOVVYb2toWm9PdWpYelQtdEhoTGZiNUFOOVBVR09NTG9xOVdWZVR0RmpaVjE5cG9IQ2lJM3Axck9uNjJRNTExLWhua0U?oc=5",
       "tags": [
@@ -918,7 +1149,9 @@
       "query": "보이스피싱",
       "title": "'보이스피싱범' 잡은 며느리, 시어머니의 시선이 돌변했다",
       "source": "v.daum.net",
-      "date": "Fri, 11 Sep 2026 09:07:00 GMT",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Fri, 11 Sep 2026 09:07:51 GMT",
       "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBWb29WVGxEVnoyMFh4bmVNd2ZhaGdxckk2QkNHLWpKalpucFlSNVhvelpVOHJmTHQza3pMNmVZMzlkOFpoY0E?oc=5",
       "tags": [
         "사기"
@@ -930,6 +1163,8 @@
       "query": "자금세탁",
       "title": "624점 명품·보석 경매…싱가포르 30억S$ 세탁 사건",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 09:05:08 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1VYkJ2cDhLNmdlWkZyQTFKT0pSanZlQTBQTXJVSEFKZC1GY0drOFFJdGdMSVZSRDZ1Um9kaWt6aHIxZHNjQ3M5SVMxUTFLQUgtWUI2aWtGdlFyWWY5eF9HNFdTSUxsd9IBZkFVX3lxTE1VYkJ2cDhLNmdlWkZyQTFKT0pSanZlQTBQTXJVSEFKZC1GY0drOFFJdGdMSVZSRDZ1Um9kaWt6aHIxZHNjQ3M5SVMxUTFLQUgtWUI2aWtGdlFyWWY5eF9HNFdTSUxsdw?oc=5",
       "tags": [
@@ -942,6 +1177,8 @@
       "query": "범죄수익",
       "title": "검찰, '노태우 비자금 의혹' 관련 노소영 소환 통보",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 09:04:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1na1VvQW5WTUx5THUwUWhrdUpUZ1JUYmd0LXoyb3lXblB3LWh2bnJiYlkyamx5WDdWNFBCWG5qOGJuR3FMRnlIRUdvRHhQRlJPY3dSdk5yWGJIbENzUlkzMA?oc=5",
       "tags": [
@@ -954,6 +1191,8 @@
       "query": "탈세",
       "title": "검찰, ‘노태우 비자금 의혹’ 관련 노소영 소환 통보 - 조선비즈",
       "source": "Chosunbiz",
+      "source_url": "https://biz.chosun.com",
+      "source_domain": "biz.chosun.com",
       "date": "Fri, 11 Sep 2026 09:02:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORFFyYV9vNF91Uk5jc3FmdXVnMkM4OWVWVnByZ1JFYWp1ZS1KSGd5dzdwTzI0VXZSaXRlN0NNR28yTkRiMGhtNF95Z19tTVhvZm52am5IZG84UjFGYUY1UWNQZUpramVfOUVxaVdEOWtnUmRCZ3BBWHBMODZMOHllVy1BQdIBlwFBVV95cUxPRHNvMUtUa0lkNUJxRVR6TnBUdENfMVFTSms5S1cxVHcwajhsWGhWUDdGWVJZR0IxSnJ0OE1nbldwenZDaU9POWFhNG9LMWhlX1lxaV9RbkJUdG5ONjY4ZjJpUlFYdGxzOGtpSGg2djBvT21qUjd5SlZqVndnQmJSQXZlS2MySUtHRmdId2lBOHZsQWNDa0Z3?oc=5",
       "tags": [
@@ -963,9 +1202,25 @@
     },
     {
       "region": "국내",
+      "query": "불법도박",
+      "title": "“MC몽, ‘9억 도박’ 이진호에 5억 빌려줘”…‘이진호 도박’ 제보자는 이 사람?",
+      "source": "biz.heraldcorp.com",
+      "source_url": "https://biz.heraldcorp.com",
+      "source_domain": "biz.heraldcorp.com",
+      "date": "Fri, 11 Sep 2026 09:01:38 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5GRjlhQ3BFUkMxeUpDd3NfcTR0UkZkaW91SERwVGJocmR1YW5RcGcwNVRaNENPcDRvd3VlQ2dPRG5Xd1h0ekhyMVdULTd6eFMxbWh0T3V3?oc=5",
+      "tags": [
+        "도박"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "범죄수익",
       "title": "제주 카지노서 '마킹 카드' 사기도박…딜러 등 6명 검찰 송치",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 09:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1iVlRwcGpfUUN1RTdsM1pGWTVtZkF1X191N01ON0plcjVEdkhNSDlqR3o1amJBZF96VnRPam02VTVESlNQTlJWS0dEbzlMTDNFY3ln?oc=5",
       "tags": [
@@ -979,6 +1234,8 @@
       "query": "자금세탁",
       "title": "테더 \"美 법무부 국제 사기조직 단속 지원…법무부가 공식 확인\"",
       "source": "블루밍비트",
+      "source_url": "https://bloomingbit.io",
+      "source_domain": "bloomingbit.io",
       "date": "Fri, 11 Sep 2026 08:58:42 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBlMG5YZThlNGVCWHlaUmFDWC1fWEp0eXVqcWVXcnhaWVdtNF9CT0hNNjA5bVRJM1F3aFZKZU9TZFRKSlhvS2VYdjg5d2xONy1q?oc=5",
       "tags": [
@@ -992,6 +1249,8 @@
       "query": "횡령·배임",
       "title": "체육회 자금 2500만원 빼낸 혐의…대구 동구체육회장 검찰로",
       "source": "뉴시스",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Fri, 11 Sep 2026 08:58:24 GMT",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9ncVAzUjI2ZTF3aVVDcmlfMDk3U1ZRd3NiVEhkU0JubmNvQkZkUC1HNWIzRTNHbGNOVVhjTlVhTHJwT1BVUkd2NWxvNWZTaGtIVDh0MGxQTHNkeHBaR1NoSnBKd01KN3dOZlE5T1UxTFZHQjltSUhJONIBeEFVX3lxTE9ncVAzUjI2ZTF3aVVDcmlfMDk3U1ZRd3NiVEhkU0JubmNvQkZkUC1HNWIzRTNHbGNOVVhjTlVhTHJwT1BVUkd2NWxvNWZTaGtIVDh0MGxQTHNkeHBaR1NoSnBKd01KN3dOZlE5T1UxTFZHQjltSUhJOA?oc=5",
       "tags": [
@@ -1004,6 +1263,8 @@
       "query": "보이스피싱",
       "title": "뮤팟 개인정보 유출 사태, 95만 회원 보이스피싱 주의보",
       "source": "공감신문",
+      "source_url": "https://www.gokorea.kr",
+      "source_domain": "www.gokorea.kr",
       "date": "Fri, 11 Sep 2026 08:56:24 GMT",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ZeVE0LURMdmNvcUt3VDcwN2d2N3pqenBuTUFDYTBqeWI5WkFveEctMHh3RlN5eE51N21jQ3hILTdFOHo1WlRUcHphMmZUMk5wM2tpaXZEbmNGdVJ2ME9OZ001LVQtZmZn?oc=5",
       "tags": [
@@ -1028,6 +1289,8 @@
       "query": "가상자산 AML",
       "title": "테더, 불법자산 50억달러 이상 동결 지원",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 08:49:06 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE53UzEzSUNBQ2prNFRvdlAyUFpsT1FBTjhzaFZ4UUNFSHNKMDZwM2FoSVdXd09OLXRpSlNyVVRJU3c2VG1iaUl2NFBUWTZuU0Q2SkVkVUJ4bjfSAV5BVV95cUxNYVdaN3otekRTNWVCQU9DTGU3bUc1R0x4dXZmTFZ6Qy1Ydkl4dkJ6b0haWXM2RzBQb1JydmNxa3NzdlItWW94Q28xNEpmRTBzZkVzTFNudDJuOF81MGp3?oc=5",
       "tags": [
@@ -1040,6 +1303,8 @@
       "query": "가상자산 AML",
       "title": "프랑스 검찰, 암호화폐 가족 감금 사건 남성 4명 정식 수사 대상 지정",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 08:48:32 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0zRF9EWnBwaW1xeWhFTHhlRm9JOWpBOVFmMlJ3ZVlqZ1lFSzBOczRqdVhNY0o2TGhrcGdSUHhPMjRKMmNrU2hhR29vSG5lTFVZSUF6dDVGOTI?oc=5",
       "tags": [
@@ -1052,6 +1317,8 @@
       "query": "탈세",
       "title": "검찰, '노태우 비자금 메모 공개' 노소영 참고인 조사 조율",
       "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
       "date": "Fri, 11 Sep 2026 08:45:05 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBwQnlGU0loc2ZqNTZoWlFVNnIyLW9rZHZvempULTF2VV85VHctYzVWRm5pYzdCTVRqZUtMMmNfRGJXRy1XaXR5RGdOOVNabktEQmN3N2xoYmpVb2haWV9FZdIBYEFVX3lxTFBwQnlGU0loc2ZqNTZoWlFVNnIyLW9rZHZvempULTF2VV85VHctYzVWRm5pYzdCTVRqZUtMMmNfRGJXRy1XaXR5RGdOOVNabktEQmN3N2xoYmpVb2haWV9FZQ?oc=5",
       "tags": [
@@ -1064,6 +1331,8 @@
       "query": "가상자산 AML",
       "title": "[영상] 명품·슈퍼카 과시하던 20대…3천억원 비트코인 절도 인정",
       "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
       "date": "Fri, 11 Sep 2026 08:44:40 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBCY1o0d29oaXZLTzdlVFU1R2hkWHNZZkxOZlFBd2lZQVZyei1vV0p2R0p6OS1Kc05zWU9vOUMtQWc5RDBQdXhfUGZoTWFiVGVzWXg1MEhsdkJUZmw0YlRDMtIBYEFVX3lxTFBCY1o0d29oaXZLTzdlVFU1R2hkWHNZZkxOZlFBd2lZQVZyei1vV0p2R0p6OS1Kc05zWU9vOUMtQWc5RDBQdXhfUGZoTWFiVGVzWXg1MEhsdkJUZmw0YlRDMg?oc=5",
       "tags": [
@@ -1076,6 +1345,8 @@
       "query": "범죄수익",
       "title": "檢, '김옥숙 메모' 노소영 참고인 소환 통보…일정 조율 중",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 08:44:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xVGRLbHg5SkVwTGZ6TzFyQTBqa0Fad3NxMGFqdnFjelhncFlZR1AxRmJWTlZIb2g3bTU1ckZVeWVBakhua2hLMUlnYWJCQ1dPVzdr?oc=5",
       "tags": [
@@ -1100,6 +1371,8 @@
       "query": "횡령·배임",
       "title": "영암군, 공무원 공금 횡령 적발...사과문 발표",
       "source": "더팩트",
+      "source_url": "https://m.tf.co.kr",
+      "source_domain": "m.tf.co.kr",
       "date": "Fri, 11 Sep 2026 08:42:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9INkw0dFpiQ0V4LUFHS0pvMHM5UERzUzJ2ZDJaN0I5TmlmZ3pXcm1hUG5UU09HS1UwOE9fdlJvbkhRV3d0NE04c2g2bnRNTU1KM3lHUnZR0gFWQVVfeXFMT0g2TDR0WmJDRXgtQUdLSm8wczlQRHNTMnZkMlo3QjlOaWZneldybWFQblRTT0dLVTA4T192Um9uSFFXd3Q0TThzaDZudE1NTUozeUdSdlE?oc=5",
       "tags": [
@@ -1112,6 +1385,8 @@
       "query": "횡령·배임",
       "title": "영암군 공금 횡령 27건 혐의 확인…지출 담당 직원 자진신고",
       "source": "서울경제TV",
+      "source_url": "https://www.sentv.co.kr",
+      "source_domain": "www.sentv.co.kr",
       "date": "Fri, 11 Sep 2026 08:35:47 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFByYW91cU01amxrWmEwV0xUVHgtSjhxVVVoaWpTMWxYcUl0MG9iSkJSWW5ZQVNoZGprcmJ1c0FhaXhyVGd3Z2pDclFaU014M1kzWS1VMlZmMlZ0a0VfU1czVGtDRTU?oc=5",
       "tags": [
@@ -1124,6 +1399,8 @@
       "query": "불법도박",
       "title": "화면 중앙에 집중해서 보는 불법토토사이트 신고 릴 영역",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Fri, 11 Sep 2026 08:27:14 GMT",
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPeGs1UXFJMG9JU1QwWTZnUFRUUXlydFdCeXczZFcwVnU3N3U0TjAwd3hoeUlOQ09jdDZtSm9iUW41ZVlRellEQV9aMl8tOVlNdXYwTUFhdkZJTGdqSzJMNEU0RjA0RldRZFdIRHlKWWZKcmJRZXhOX1d5TU04S3lXQkRYYWNFbXFmektwdEhIdjhfZjl1S0ZHaDlGUkhHT1IzQ3FZT1hxNzlqNXBhTEFYdUwzalQtbkE?oc=5",
       "tags": [
@@ -1133,9 +1410,25 @@
     },
     {
       "region": "국내",
+      "query": "불법도박",
+      "title": "도박 환전 포스트 코로나 시대 브랜드 구축: 기초, 심화 및 마스터",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 08:24:20 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTWRIekpaQkdlemxjeVFuMHgteDJ3VnhDS3pXeWFXaDl3U2FNclplSnRrbzNjM1J6ZTFISFhDcW40WlFRa1otdHFTWHBMY3F6XzJGVXVuVDhtYmRrSS1ST2N5WVZsNmFOdDZERHZkYmt2bE0tbVF1b1MydnU0M2VUNHlCcXJtNXVISGpqNFNtSm5JbzFkRE9nclo3QmxtRVRZUk5zcC1HWFU?oc=5",
+      "tags": [
+        "도박"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "공기업 돈 3천억 안 갚는 '비리왕' 이영복, '부산 엘시티 지분'도 차명 보유 정황",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 08:16:37 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE92cFlxUXJSdGhCbHNBelFVekNITzdaYkdqZjZwS1RQQ3pncGVfS3NJaVBjUXE2ald5b1M1bjJ4Z3JOZnhiMngzdVBET25QR3NvZmUxZQ?oc=5",
       "tags": [
@@ -1148,6 +1441,8 @@
       "query": "횡령·배임",
       "title": "영암군 지출 담당 공무원 1억5000만원 공금횡령…27건 혐의 확인",
       "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
       "date": "Fri, 11 Sep 2026 08:14:08 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9xMXFXTU41bERGVFJrdUxYNUZwSnRiNmh1N1lfejRONW5QQnhUZXh6QW9tNnZWWEZfamRpemFMQ0syU1VMQm1VSy10MXhVekNNc3cwN2ZQVmtDRzRZanpvcW1MRDTSAWRBVV95cUxPcTFxV01ONWxERlRSa3VMWDVGcEp0YjZodTdZX3o0TjVuUEJ4VGV4ekFvbTZ2VlhGX2pkaXphTENLMlNVTEJtVUstdDF4VXpDTXN3MDdmUFZrQ0c0WWp6b3FtTEQ0?oc=5",
       "tags": [
@@ -1173,6 +1468,8 @@
       "query": "FIU·STR",
       "title": "빗썸 이어 코인원도 FIU 재판 연기",
       "source": "비즈워치",
+      "source_url": "https://news.bizwatch.co.kr",
+      "source_domain": "news.bizwatch.co.kr",
       "date": "Fri, 11 Sep 2026 08:12:02 GMT",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9OZFRoRVJZSjB1cDRLSmVUaXY0OFFWZWptaEtUQThvYldiWXpvekhUbnJoZ2xHa3pNcUcydldvWlpFc0o3QW56OTI3LXU1U0VyYTRHR2pZSk1KX00yMkFZY0M3UEhuRlVCd1E?oc=5",
       "tags": [
@@ -1186,6 +1483,8 @@
       "query": "자금세탁",
       "title": "견해: 퍼미션리스 네트워크는 컴플라이언스 금지 구역이 아니며, 금융 기관은 스스로를 제한할 필요가 없다.",
       "source": "深潮TechFlow",
+      "source_url": "https://www.techflowpost.com",
+      "source_domain": "www.techflowpost.com",
       "date": "Fri, 11 Sep 2026 08:08:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAzNXBDT0YyWUptVi1VQnZ6bEc1M2UxVjdQaER4OTJBRXJ4VGw1QmZ3ZFZXLThuRXNXXzhDY3pzYWJWdTVmYUZ2d3lKSEpfeUhubkZOZlpBVlRfdU0w?oc=5",
       "tags": [
@@ -1198,6 +1497,8 @@
       "query": "FIU·STR",
       "title": "수협은행 차기 행장 인선 본격화… 내부·외부 맞대결",
       "source": "이코리아",
+      "source_url": "https://www.ekoreanews.co.kr",
+      "source_domain": "www.ekoreanews.co.kr",
       "date": "Fri, 11 Sep 2026 07:59:34 GMT",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5aUUlOVzQzeG9qNTdGYS15dW0yVWRJQ3ZoZGVjRFVJam5ONHYzcGVIUVBrd1cyRUc3eTVPODVCMDlYbG1HSkl6Rm0zUGRIdFU0aXJEQnFwZFlBZWc3UHkydzRLeFlQZThRTGNxbVdLNA?oc=5",
       "tags": [
@@ -1223,6 +1524,8 @@
       "query": "제재·테러자금",
       "title": "북한 축구 선수단 180명 일본 도착…대북제재 속 ‘예외 입국’ - 조선비즈",
       "source": "Chosunbiz",
+      "source_url": "https://biz.chosun.com",
+      "source_domain": "biz.chosun.com",
       "date": "Fri, 11 Sep 2026 07:54:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMUhnN0xyQllPd1pQVDJCbmhpc1UtQWp2Vlk0V3J1ekN4N3pEQl8xNUxvaVdBRk9KT3JlY0lNQkg5QXBtVDJRV1VPVUtSOUJWZ3Awa3M4VDRSU0N5Zk5UOHRTTThsU0lpOXJWVkJmbTB5dHpwQllENVhrQXNsWmY5bkpaaGtzQ0lmVmVF0gGfAUFVX3lxTE5wTUlYaFJtN2Zac1U1U3Q3MEUtcHZ6TEVrMzQxY04zZWsybWgzclFiVkdTWUNsVUVWaGlNV055MWU3SmhaWFhwaGs5Z2NkMnpXNzNNZkY1SF9XNU9hOUtHOVFqdFNtUnV5R0RPTDg2Q0hCR0RlbVlwMVJJcEpDLXN6UzJ0ald4MmhSV2dlQWU3QUlveThMWmxJb1lsQndKOA?oc=5",
       "tags": [
@@ -1235,6 +1538,8 @@
       "query": "지갑·해외거래소",
       "title": "내년부터 가상자산 소득에 22% 과세 강행하나… 세 차례 유예에도 논란 여전",
       "source": "비즈한국",
+      "source_url": "https://bizhankook.com",
+      "source_domain": "bizhankook.com",
       "date": "Fri, 11 Sep 2026 07:53:53 GMT",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1fQm1JUFJnMmF6X2V3T0pTM1pOY2FDUEphS2daQ01zZERpMU5LMTJ0T1FRVTktMlVCckpCT3h4NmpSZlNiUUs3YWVtdHVpdkE3THYxUTBoaERYZnlvMzNPQUhrdml1cURTVjMyTGZYRXF6YV9KME8ydg?oc=5",
       "tags": [
@@ -1244,9 +1549,25 @@
     },
     {
       "region": "국내",
+      "query": "차명계좌",
+      "title": "설명서의 예시가 실제 규칙과 어떻게 연결될까? 홀덤 사이트 인포",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 07:53:45 GMT",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQX2FOZlpvSkFLeDRTREFwbi1GOHVGSmJLWHpxajhjckZXOW5KdldTbnAtcWlaRWN6VXNxcFVTcEJMVkdzb2h3TElyZHdjcnMtQW5ZbG55YW81VWxnNzdXck1UT1FyMnhGOVV5Y0hLNTBHdGItNlZUU2REYWlnT3pJRTNIc3JrQWI5RVZlbzBHNWN0RkRIc1ZNMUhOelFQcHdV?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "비트코인 4100개 훔친 싱가포르 남성, 람보르기니·에르메스 등 플렉스...美서 체포 : 국제",
       "source": "재경일보",
+      "source_url": "https://news.jkn.co.kr",
+      "source_domain": "news.jkn.co.kr",
       "date": "Fri, 11 Sep 2026 07:52:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1wYld0bEZCOFEwNEtSbmgwZU9lY3d0VnhoMTFzNDlkeG5oZFQ2OGhQck93ZGZ1MFk0TW9xc1R3M0g0Tjh5OXN3TG9n?oc=5",
       "tags": [
@@ -1259,8 +1580,10 @@
       "query": "횡령·배임",
       "title": "동업 관계 틀어지자 쏟아진 고발, 전부 불송치로 끝난 인천 횡령·배임 사건",
       "source": "thepowernews.co.kr",
+      "source_url": "https://m.thepowernews.co.kr",
+      "source_domain": "m.thepowernews.co.kr",
       "date": "Fri, 11 Sep 2026 07:51:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE42Rk8zVU5Zb1RrcFJ5cE5ISS12TUJ4dHI5VGZ0c2gyNWlEWjZMM1lBMHhaLWJiRFhHNHFIb2t2cC0tajlaOXFWdWQtV1B1VDk2c2h4ZHJHX3JJWlo3VVA5blNNQk1vM1E0X3poZjEyVE1DMGJfZ2dFdDhRZ2dsUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONlNNYkN0UjQ4REhoa3dDNm5KOXFMMkh6TzNyc1Blb1ZTREQ0Z2Y0R1hFejA0b2R0OHo4YXFmMjZWM0JxMWpPOG5Da3RTeGIyUmxnT09TQ0xLMlhnMjcyLXdsZE9QS3ktY0dYMU9qTHpSekE5M1kyMmRJN1FvU3dMRWgzbEFXXzVZ?oc=5",
       "tags": [
         "횡령·배임"
       ],
@@ -1271,6 +1594,8 @@
       "query": "불법도박",
       "title": "금액 단위를 바꿀 수 있나요? 여성이 맞고 설정 문답",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Fri, 11 Sep 2026 07:50:51 GMT",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOS21ZR0R1cVF3cV91bWtjdE80VUd4M1drbF9sRERnUkgxdTd2NTVydi0xVFNydXZ4MW10WkVhZnJBTmhwWDVNenV6UU5zRTJSVzRGZWtEYVZBNVZTNzlYWVhpQVVKZnpkejJCR3Voa0x5bUJzdGZWc3NRMUQzZ2NZZmtkWXZtYzE4Z0pGN0Y1VUlNS0tfWDY4RGpkUzk3dw?oc=5",
       "tags": [
@@ -1283,6 +1608,8 @@
       "query": "자금세탁",
       "title": "엘립틱 정보, 300억달러 규모의 범죄 시장 및 자금 세탁 조직 ‘신비’에 대한 미국 비밀경호국의 조치에 사용",
       "source": "글로벌 비즈 뉴스",
+      "source_url": "http://www.gbnews.kr",
+      "source_domain": "www.gbnews.kr",
       "date": "Fri, 11 Sep 2026 07:45:21 GMT",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tZ2dsYWVaaFdjcldBVUxKRE1RTjZUTVlHTE85SXp6N3A1YUtjd3N0SF8xT0k5Z2dtUk9KSEt6Qll1NExxcFh3eUg1d2Q4Y0VZaVdJWjRqdTZiZTJLNHN2LTlTRHJmTzBV0gFoQVVfeXFMTW1nZ2xhZVpoV2NyV0FVTEpETVFONlRNWUdMTzlJeno3cDVhS2N3c3RIXzFPSTlnZ21ST0pIS3pCWXU0THFwWHd5SDV3ZDhjRVlpV0laNGp1NmJlMks0c3YtOVNEcmZPMFU?oc=5",
       "tags": [
@@ -1295,6 +1622,8 @@
       "query": "제재·테러자금",
       "title": "제재 문턱 넘은 北 ‘역대 최대’ 선수단…180명 일본행, 스포츠가 연 북일 접촉면",
       "source": "The Korea Post",
+      "source_url": "http://www.koreapost.com",
+      "source_domain": "www.koreapost.com",
       "date": "Fri, 11 Sep 2026 07:44:55 GMT",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4waGNqOV9OZlRyeWJJQ01SVVNvT1RiSTNRX2hTUXJJcWFYYTBqa05pd21zYU5VcDhTV2k2dzVFTU1EWlhLSEplRHNaaDNjZVNoTGFDcUxrWUtoWEJoR2Y3TkEwVjhmMHVLZXdFd01n0gFuQVVfeXFMTjBoY2o5X05mVHJ5YklDTVJVU29PVGJJM1FfaFNRcklxYVhhMGprTml3bXNhTlVwOFNXaTZ3NUVNTURaWEtISmVEc1poM2NlU2hMYUNxTGtZS2hYQmhHZjdOQTBWOGYwdUtld0V3TWc?oc=5",
       "tags": [
@@ -1307,6 +1636,8 @@
       "query": "횡령·배임",
       "title": "대구 동구 체육회장, 횡령 혐의 검찰 송치돼",
       "source": "매일신문",
+      "source_url": "https://www.imaeil.com",
+      "source_domain": "www.imaeil.com",
       "date": "Fri, 11 Sep 2026 07:37:51 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xZGsxNWN6U0JBcEExVEJrWFVsdW93ZDBQWGNrR3lUeFJPUl9wYkR6NnNnaEZLWmlJdUo2MGJJQXhXOFdWNmxyR09aMGtiYm9yTDVDSmRzZ0lJZGNfT0V2Q0FB?oc=5",
       "tags": [
@@ -1319,6 +1650,8 @@
       "query": "자금세탁",
       "title": "퍼블릭 블록체인도 AML 준수 가능성…허가형 필수론 흔들",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 07:34:23 GMT",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0wTDcyU0ZHSmpnQnduUVlVY2FkcU5UVW16SzVLWjk3QlJ6M3UtUUFwRmkzLS1RdGNxcENwMDM5dW9xUWVEYVNyVTdpYm54TXJuNUUzVWxFWVBZbUnSAVtBVV95cUxNMEw3MlNGR0pqZ0J3blFZVWNhZHFOVFVteks1S1o5N0JSejN1LVFBcEZpMy0tUXRjcXBDcDAzOXVvcVFlRGFTclU3aWJueE1ybjVFM1VsRVlQWW1J?oc=5",
       "tags": [
@@ -1331,6 +1664,8 @@
       "query": "불법도박",
       "title": "현재 단계가 헷갈릴 때 보는 온라인 도박 게임 상태 안내",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Fri, 11 Sep 2026 07:20:39 GMT",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaUV5V045VFZhOTU5Sk9fWS1vOWpGYngxMHZacUFlNjNYUDFZVFVwc3RFSXFOQ1ZfSzNsWkl4Q0NzNnlEWHdaNmllelpxMXd3WV9VRDhZcVV1WE5nOW1jMWw3WXBrNnB2WFVNT2VLdy1YZHlMVkVudzBPLW84WkR2cktKTTlrMXZSalFHRWRDRWdYcjVtLXZyTVdNWURZYkhjVE1oUGxObW0wQQ?oc=5",
       "tags": [
@@ -1343,6 +1678,8 @@
       "query": "보이스피싱",
       "title": "\"보이스피싱 피해 막는다\"…NH농협은행 전북본부, 고령층 무료 보험 지원",
       "source": "프레시안",
+      "source_url": "https://www.pressian.com",
+      "source_domain": "www.pressian.com",
       "date": "Fri, 11 Sep 2026 07:20:10 GMT",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1uUFh3ZzI4QUhvNFVhZC1FbWUzZTdnbXl3ODBsRHdzTDBFWmlncGctMjZESHp6b1MyelBRV3g5OGdTR0I5Q2tGZVRVZ3RGYW9iaWJRM1RDaTllUWVQS3dhSXlHVTZnVFBCYU0yb0RSZjVRQ0g3Unc?oc=5",
       "tags": [
@@ -1355,6 +1692,8 @@
       "query": "트래블룰",
       "title": "디지털자산기본법 이달 말 분수령…지연되면 내년 상반기까지 밀린다[엠블록레터]",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 07:19:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1mMlJ1a2lGdml5ZUJsTjJ4MzB0OGN5LVVoNVJ4ZC1XM0lPYTE0N1NmemlDYjZISW84dlkxU3FFRTJlYmlpbnh5R0tiWlgyaGxvWEc0?oc=5",
       "tags": [
@@ -1367,6 +1706,8 @@
       "query": "가상자산 AML",
       "title": "블록스트림 \"탈취된 비트코인 몸값 안 준다…명백한 범죄\"",
       "source": "블루밍비트",
+      "source_url": "https://bloomingbit.io",
+      "source_domain": "bloomingbit.io",
       "date": "Fri, 11 Sep 2026 07:07:54 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93cGdzV2phZGZOeFM5VVpBTV9UaG1DUVBtTHdZTFR5LWJCeGJrYUhsVENab1lSWVBMVGZ1MXlDcE9fOGkyd05QbU1GcDUxUW51?oc=5",
       "tags": [
@@ -1379,8 +1720,10 @@
       "query": "보이스피싱",
       "title": "中 주도 '국제 보이스피싱 퇴치 연맹' 출범",
       "source": "v.daum.net",
-      "date": "Fri, 11 Sep 2026 07:06:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9FT0RXWHBxYjhkNWJVVnBXYkNCQ3JBRDB6aE9WOXNBdkxCM0owODBFcEhpVUhJclV0dkRfcFl5aWF1ZXJ1TXN4TVk5QXE4bWhxVndvMA?oc=5",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Fri, 11 Sep 2026 07:06:45 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1Zd0o5Z3JmU2U5ek9rRHpYRVZ3RUR0WXJwUTU4ZFlHbUVoLWRIeUVRNXBVdndraHUxMlFOWVotMGZodmV6cTM2cDdSX09KOW8?oc=5",
       "tags": [
         "사기"
       ],
@@ -1391,6 +1734,8 @@
       "query": "자금세탁",
       "title": "a16z Crypto: 금융기관의 블록체인 도입을 위한 새로운 접근법",
       "source": "PANews",
+      "source_url": "https://www.panewslab.com",
+      "source_domain": "www.panewslab.com",
       "date": "Fri, 11 Sep 2026 07:02:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0zSVJFc1diTENsVVFvcVhRclBVQ0VCUWpBeXQ2Vi01aW5OTE0wbEltV3d0a09tbkctbkxIUVR5VkdkVXBfWkpJUHRYNjB4b3Yxc0kzdVp3cGRBVGlnRjgzcFUydTBwbXBYLXpzMWFoUFZKdk8wRmJfNFdXV0d1dHc?oc=5",
       "tags": [
@@ -1403,6 +1748,8 @@
       "query": "차명계좌",
       "title": "[내 이름은 내 인생이다] (2) 첫 통장을 지켜라",
       "source": "이택스뉴스",
+      "source_url": "https://www.etaxnews.com",
+      "source_domain": "www.etaxnews.com",
       "date": "Fri, 11 Sep 2026 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SR1A4c0FNRklORzlVYnRPeVJkeWhfb1NMdmF5MTU1WU5UN2hyTnlsSXd5c2lfLURsTUJxTnpQelJDOHgySmE1NVAyX2h4UE1NSGdlUkxPN1Q4MWhYbTBVdWpfNDVYQzk1WXc?oc=5",
       "tags": [
@@ -1414,7 +1761,9 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "검찰, 96억원 가상화폐 비자금 조성 한컴 회장에 징역 9년 구형",
-      "source": "itbiznews.com",
+      "source": "IT비즈뉴스",
+      "source_url": "https://www.itbiznews.com",
+      "source_domain": "www.itbiznews.com",
       "date": "Fri, 11 Sep 2026 06:55:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1XbkM3cFIxbDdDMnNmNS1vVWxkRDdXUl83TzJDUVhvQnlGLXo1aGZqT0YwWW1pQWJadEtKaVNNdmlxdURaMEl1TktVZm0tckJ3amhfbXY2YUl6UzlVX0htV25kTVFfcTFVYTltSQ?oc=5",
       "tags": [
@@ -1427,6 +1776,8 @@
       "query": "제재·테러자금",
       "title": "쿠키뉴스",
       "source": "쿠키뉴스",
+      "source_url": "https://www.kukinews.com",
+      "source_domain": "www.kukinews.com",
       "date": "Fri, 11 Sep 2026 06:51:38 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0wMFlKSTdOMEE2OUNqbmFtcExVVkNCOEJHTXlVcE95eElVbVpydGdZS3dGV3E0c2U2eEVSQ1JnYVpGU2lYV0VzRjZpTXQxc3hPS0o3VXpqUzFtOHpJOGhmYWVrTXk?oc=5",
       "tags": [
@@ -1439,6 +1790,8 @@
       "query": "환치기·외환",
       "title": "관세청, 할당관세 악용업체 단속 특별 성과자 포상",
       "source": "한국관세신문",
+      "source_url": "https://www.kcnews.org",
+      "source_domain": "www.kcnews.org",
       "date": "Fri, 11 Sep 2026 06:50:21 GMT",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCSzdNaktLX0UtdnprSmtvNE10UG1NeFJDQU91WWFvckozSHc5bm5EMEd0dmFRUnVmX3M4ZC1DS2FVM1pGejl5Zk5tc2FsaG5SbE1KTnBTbU04WXN3LTBGa2w1MnZnUkk3TkZj0gFrQVVfeXFMUEJLN01qS0tfRS12emtKa280TXRQbU14UkNBT3VZYW9ySjNIdzlubkQwR3R2YVFSdWZfczhkLUNLYVUzWkZ6OXlmTm1zYWxoblJsTUpOcFNtTThZc3ctMEZrbDUydmdSSTdORmM?oc=5",
       "tags": [
@@ -1451,6 +1804,8 @@
       "query": "가상자산 AML",
       "title": "가짜 백서에 '유령 코인'까지…`913억 사기` 주범 징역 14년",
       "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
       "date": "Fri, 11 Sep 2026 06:46:10 GMT",
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUmdjejdoWWZWWTdWVEVOZ2NsTGZnaFp5bHA0TzE0UjFfUHNrRmxaQUxpNkJXWEFzZlFiU2ZsZHR4eWZaSzh4NXd2el9aZmhLb2VfNXp0RU1qdDBhWWJpWmkwTUtSMUNvd3FRdTZESjBZYl8tenpJdGZUb3Vrb3hZOQ?oc=5",
       "tags": [
@@ -1464,6 +1819,8 @@
       "query": "FIU·STR",
       "title": "차기 수협은행장, 신학기 vs 이형주 ‘2파전’…노조 검증 요구 변수",
       "source": "데일리한국",
+      "source_url": "https://daily.hankooki.com",
+      "source_domain": "daily.hankooki.com",
       "date": "Fri, 11 Sep 2026 06:43:59 GMT",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCV01fMHR4RjBad0pIQjJhZTd0TUM5SkJhNEN5WkgyS2NvTG5yRk95UmsySTFReko5QVFvV2JuU1dCTUZEZXhFTGFLdUVWV0oybHkwUEFuTlJTWFhHcFlEeUVkeklqRGZHdXNXTUQ5RdIBc0FVX3lxTE5BVVBJdzJlMlpDU1k5Qnp6bk1IekNUNk9DV0FyTnVUZFJnNkF6NXdFN0pTbzZfX0R3VUdfbkdyZ1hHWGlPY2g2QkhVdnozcXRnNnotR1pEUjVvaHhtdUYyaGN0SWxweDM4ekNDMHh6YTVFeEU?oc=5",
       "tags": [
@@ -1488,6 +1845,8 @@
       "query": "횡령·배임",
       "title": "경북 영천시 공무원 25억원대 공금 횡령 사건…경찰 수사서 대부분 확인",
       "source": "매일신문",
+      "source_url": "https://www.imaeil.com",
+      "source_domain": "www.imaeil.com",
       "date": "Fri, 11 Sep 2026 06:39:59 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBQbDRuOHV1RTFVcm1haE5fNDN5VHo2RzBZWG9WRDFNYy1xdENpTDMxbEZVVTJKSVRVSGVBQkQwbng1OGNwRFQ3U1FfVW9kLUtZbklwazVPQlhSSXJxUHpwM0J3?oc=5",
       "tags": [
@@ -1512,6 +1871,8 @@
       "query": "보이스피싱",
       "title": "사이버 사기 조직에 대포통장·대포폰 제공 30대 실형",
       "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Fri, 11 Sep 2026 06:33:50 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBsVndRM2d5ejJIODVObEdDckZLVnpDZlM0Q2Fsdy1ZOEloRF9Fc1FHWmdBSUVkZERyeUxzZWR5WW1MUk1Zakl4YXFIRVhWeHN2QUNFMUlTaVFRX2ViRzBrWtIBeEFVX3lxTE03YUM4ZHI0dDVoaUdURVczQUJicktocFlQbzg1QnpuUXlwSXNGcVZudDJjaGpRUWR2OE52cDE3M1VyNGo2SDJjbzRDUURGNENGUS0zMkhzUmJPeWY0MjRlSHFhaXFxZTZOVDAwd1FobXh1d3ZhSDAtVw?oc=5",
       "tags": [
@@ -1524,6 +1885,8 @@
       "query": "자금세탁",
       "title": "‘투자 리딩방’ 피해금액 자금 세탁 가담한 형제, 징역 4년",
       "source": "경인일보",
+      "source_url": "https://www.kyeongin.com",
+      "source_domain": "www.kyeongin.com",
       "date": "Fri, 11 Sep 2026 06:19:09 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE92bUpDQWpvZ29ad1FCQXlwTEd0c1U0VVE2N0xKYk1qeENoaFVqcUYyaXhBQWg5d1dTdk56RllYblNfRllfUjFJaFlqSFVKeVZmaFE?oc=5",
       "tags": [
@@ -1536,6 +1899,8 @@
       "query": "투자사기",
       "title": "유령업체로 70억 사기 세탁 20대 형제 징역 4년 : 사회",
       "source": "재경일보",
+      "source_url": "https://news.jkn.co.kr",
+      "source_domain": "news.jkn.co.kr",
       "date": "Fri, 11 Sep 2026 06:16:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE51RGNpbWpsNDgyaWxpZTZ0TXNwVnV2UGQ4QXhCbWUxMEZjNWJBOGV4VXpxalhjZ3I2RjlmX25XNGhTZE5xeTRQbFZB?oc=5",
       "tags": [
@@ -1548,6 +1913,8 @@
       "query": "자금세탁",
       "title": "제16대 국회에서 최근 통과된 15개 법률 발표.",
       "source": "Vietnam.vn",
+      "source_url": "https://www.vietnam.vn",
+      "source_domain": "www.vietnam.vn",
       "date": "Fri, 11 Sep 2026 06:07:31 GMT",
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMlhiLXhWTUZqNEZyOTliaFZYeEx4ZFJPNnppQ2pZeHNkeEFFYXppd0plbXkxcTBIcnhBcENLUW53RWtKZm1ycEVUVHNUaTgtd0ZEdnhQU3pYd3dQVUxXUUMwbS1aYnMydjRtb0lHNzQ0OUdXckNrYmZvOXYyWXRtRG50VWg?oc=5",
       "tags": [
@@ -1560,6 +1927,8 @@
       "query": "투자사기",
       "title": "유령업체 계좌로 리딩방 사기금 세탁한 20대 형제 징역 4년",
       "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
       "date": "Fri, 11 Sep 2026 06:00:01 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FM1pMaUkzd1hfc21wZmNoQjJHNnFZZVA4QkJwSW94aGo3dC10M3NGVTAxcjVWV0ZiZVpMQWlEZUJaRmxqbDltVGxYRjh6cHNlS3JRcUpaYU0xRDRKN2R4RdIBYEFVX3lxTE5FM1pMaUkzd1hfc21wZmNoQjJHNnFZZVA4QkJwSW94aGo3dC10M3NGVTAxcjVWV0ZiZVpMQWlEZUJaRmxqbDltVGxYRjh6cHNlS3JRcUpaYU0xRDRKN2R4RQ?oc=5",
       "tags": [
@@ -1572,6 +1941,8 @@
       "query": "자금세탁",
       "title": "'수십억 사기' 리딩방 조직 자금세탁해준 20대 2명 실형",
       "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Fri, 11 Sep 2026 06:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE14MTlRc3FiZDktX2lMVEF5M0JUN2xmNzhnTXk2MmYxNVFhOXNqMTB6NHk4S01CcVhERUhjQ0hwU3o1ZUxMd04ycXI1MkNpU2ZkT2pmbWZoUnVyejFGcUcwUtIBeEFVX3lxTE1td1hJQzhjNFV4SUd6UTBURVRkYmhUeVdxalZFZ3U2VWFHUUNsbzEyZTU2d1FKaDBZXzlWclEtMUtRRjc4LS1za1I5NVhkUWZvSWxrUHZkdnpvWm5lTFZyQ2ZBaGstY1FETzkzV2NYOXBQQ3V1M0JQMA?oc=5",
       "tags": [
@@ -1585,6 +1956,8 @@
       "query": "보이스피싱",
       "title": "'보이스피싱 대응' 국제기구 출범…또 중국이 주도",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 05:57:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4yZ2JaRGdDTm9Ud0RqZFdhTGhFSmtLQXVXN1dMRFFObmVnUnU4TTRSZk41Q2JkWWZXUTdscEwwSkNtUTNrYXh1OTRuMTNkcFU?oc=5",
       "tags": [
@@ -1597,6 +1970,8 @@
       "query": "횡령·배임",
       "title": "‘아로와나토큰 비자금 의혹’ 법원, 한컴 김상철 회장에 징역 9년 구형",
       "source": "뉴스피릿",
+      "source_url": "https://www.newsspirit.kr",
+      "source_domain": "www.newsspirit.kr",
       "date": "Fri, 11 Sep 2026 05:42:04 GMT",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBrUHNYeHU1eEY3N2lCTmFUNFFTMk8ycER6bW1IRnBTXzJFcDR1Q3VsZUdtS3VMYjNHVmQtQy1LZDBpVy0xclRsMTlnY1poTjNiN0FYcl9iTG1UVktuaGF2Z0I5NS1rZldNeWhZ?oc=5",
       "tags": [
@@ -1621,6 +1996,8 @@
       "query": "불법도박",
       "title": "도박 계좌 : 고급 전략과 기술 - 최신 트렌드",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Fri, 11 Sep 2026 05:20:52 GMT",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYUtJRXNVOS13SExHMWJQZkVEeFVfbi0yNU01S0pRdUphd3owcmg5Q3VZU2tqbWk4d0YwRjVGVDg0b2dDMzhQU1RDR0dRRHJYdVlZLXc4N1ZoVmZQZFJtcy1rNl9IVlpjN2NQcm14S3ZyWERoU1c5amtuNm9PV2dWUjBURlpRN3ZFMU1RY3dXdmFLa055dkdMMkJaT0lHX1BZa3c?oc=5",
       "tags": [
@@ -1656,7 +2033,9 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“보이스피싱인 줄 몰랐다”는 현금수거책, 사기죄 공범으로 처벌되는 기준은 [정규영 변호사 칼럼]",
-      "source": "미디어파인",
+      "source": "mediafine.co.kr",
+      "source_url": "https://www.mediafine.co.kr",
+      "source_domain": "www.mediafine.co.kr",
       "date": "Fri, 11 Sep 2026 05:13:53 GMT",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBYZngwSzlhS0Ytby1qVUJ4aHlOVjB6TDY3TlpmYUpfd2xEQk5tem1GT2VUNGVHYnQ2RE1nTHdadFdkOUdEUV81Z1g0VW5Xck50cjVzcG9OdUtrbTNQTkVMUmEyNklxZVRvM3dMN1hR?oc=5",
       "tags": [
@@ -1669,6 +2048,8 @@
       "query": "횡령·배임",
       "title": "‘90억원대 코인 비자금’ 김상철 한컴 회장, 징역 9년 구형",
       "source": "시사저널",
+      "source_url": "https://www.sisajournal.com",
+      "source_domain": "www.sisajournal.com",
       "date": "Fri, 11 Sep 2026 05:13:24 GMT",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9oc3ZSWjNHSlM0TURYQldBR0hSbGFUeHp4NVN0dzQ0QUJ0ZW10N09hYWoxazhwSE53SUJ2N1dJNmI2UllXRks1bTByeTh3Q1NDaVJzWFBmUTZsQ1V0bmJDcjdwY0Iza01ORHRrcXZsWdIBc0FVX3lxTE9fSkVMc1hIa2hoUFAtTnpHbnNTdWJDbFBrRHdfcGFnckZqZEtyWTJFUVhTX3F3RTRvVnpuRnJBLUdDa3pra1ZpbUpWd0FqNXNkWERxRU5MblFsVmZaYzNhbmROVXhGZHJuUDhBcTg2YzJIZU0?oc=5",
       "tags": [
@@ -1681,6 +2062,8 @@
       "query": "마약자금",
       "title": "마약 사건, 가볍게 생각할수록 대응은 늦어진다",
       "source": "비욘드포스트",
+      "source_url": "https://www.beyondpost.co.kr",
+      "source_domain": "www.beyondpost.co.kr",
       "date": "Fri, 11 Sep 2026 05:10:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBQTS13YVYxcjI2dVB4X0dwVVBqdXBCT1ZDRW03OTlyWHAyckRCVE9LMkJLelhxeTBscWQwMVk1dUtyaUhBeklCb0pNQTRLdE96eXVfYVV5Q0dFZk15RktUWHBVVTNnb1B0Y3BjMEVLb0FXbUotQWQ4OTFOZTc?oc=5",
       "tags": [
@@ -1693,6 +2076,8 @@
       "query": "환치기·외환",
       "title": "\"수사 축소해줄게\"… 로펌 선임 유도한 전직 총경 집유",
       "source": "뉴시스",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Fri, 11 Sep 2026 05:08:38 GMT",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1zNzBhdDVxNF9vZlJRRjM2RXRuUDc4d3BhV3BITllmM05LZUtFdlp1Mm1DM0NiNGtmbGxTc0NwajBiei01SElXNXBma2lDaTliTnlBeVY5NEJrX3dhY1h2Sy1KU0RrMk9wSEprM3E0UGpCOFNCeDBsUdIBeEFVX3lxTE1zNzBhdDVxNF9vZlJRRjM2RXRuUDc4d3BhV3BITllmM05LZUtFdlp1Mm1DM0NiNGtmbGxTc0NwajBiei01SElXNXBma2lDaTliTnlBeVY5NEJrX3dhY1h2Sy1KU0RrMk9wSEprM3E0UGpCOFNCeDBsUQ?oc=5",
       "tags": [
@@ -1705,6 +2090,8 @@
       "query": "보이스피싱",
       "title": "금융보안원, 보이스피싱 피해 예방 ‘ASAP 활용 설명회’ 개최",
       "source": "intn.co.kr",
+      "source_url": "https://www.intn.co.kr",
+      "source_domain": "www.intn.co.kr",
       "date": "Fri, 11 Sep 2026 05:07:20 GMT",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1zV1ZhRWZKS055bW8xaHViT1ZKQUdEeG8yd3FyeTF0a1pHalc5NUlYeWpteldPMUgteHhWS3VENVU5Z3VsZXhINTZuYnMxNlBaX0dyV2pfcGpJOC1ITWlyNEp4bVBRZ1pYMnc?oc=5",
       "tags": [
@@ -1717,6 +2104,8 @@
       "query": "자금세탁",
       "title": "'진짜 디파이'만 살아남는다…미국 상원, 가상자산 CLARITY Act 수정안 공개",
       "source": "비온미디어",
+      "source_url": "https://www.bonmedia.kr",
+      "source_domain": "www.bonmedia.kr",
       "date": "Fri, 11 Sep 2026 05:06:40 GMT",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1BaHpKSHg0b1FOYjdWRkV1MUxUZU5aeGktM3lBcHlROHRka05CZnRKWGhCMmZucU1hV2I3Vm5iOGRCZ0lIWWJxSWo5ZllFdjVfWTVJVFpreGo0WHZGUWZSYlRtX2Z3YWZpZXp30gFrQVVfeXFMTUFoekpIeDRvUU5iN1ZGRXUxTFRlTlp4aS0zeUFweVE4dGRrTkJmdEpYaEIyZm5xTWFXYjdWbmI4ZEJnSUhZYnFJajlmWUV2NV9ZNUlUWmt4ajRYdkZRZlJiVG1fZndhZmllenc?oc=5",
       "tags": [
@@ -1729,6 +2118,8 @@
       "query": "마약자금",
       "title": "대마 추출물 선점한 엔에프씨… 화장품·의료용 싹쓸이",
       "source": "핀포인트뉴스",
+      "source_url": "https://www.pinpointnews.co.kr",
+      "source_domain": "www.pinpointnews.co.kr",
       "date": "Fri, 11 Sep 2026 05:01:22 GMT",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBiMk1lZ20zMVd2U1ZnV05zYUhuNVc3eS1IN2dvREVWSkJZbzBtN1BXQk44TXJCV1hkdVRnUkNsdnJKMWlKMk1MbDUyaEswLUpQZWRpcVBuWUJqREVLTDFYWUE4dkJ0cVQtYlZMVTA0WkwycWfSAXdBVV95cUxQeGpvenQ2ZTlvYTdZRXBCWXl5T1lEalc1TWRyNkt0aFAtZktQV0lYMUJzclR2ZDBselVyMUxGaGhMR0wzOGY0VndCOWNpeXVkTENIWXh0emtpYmQwYWZwS2RUdGtrclVVZE1VMEFxOHNnRFpnamJQNA?oc=5",
       "tags": [
@@ -1753,6 +2144,8 @@
       "query": "횡령·배임",
       "title": "형기는 끝났다, 책임은 끝났나…조현범 한국앤컴퍼니 회장의 은밀한 복귀",
       "source": "더 이코노미",
+      "source_url": "https://www.the-economy.co.kr",
+      "source_domain": "www.the-economy.co.kr",
       "date": "Fri, 11 Sep 2026 04:31:01 GMT",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yNnRDZU1ua2F1T0RycVRmNXNCU05IcTJKbWp3YXBDRDhlR1Y2NEt4OTZBeElYZ2djUHdVRnNjNjRsOXRXTFhNZ25OazJTOTUyYzI3dGhtakswTzlQY0pkLW1BOG5nUjRnempMbGNiQS13WDTSAXNBVV95cUxNMjZ0Q2VNbmthdU9EcnFUZjVzQlNOSHEySm1qd2FwQ0Q4ZUdWNjRLeDk2QXhJWGdnY1B3VUZzYzY0bDl0V0xYTWduTmsyUzk1MmMyN3RobWpLME85UGNKZC1tQThuZ1I0Z3pqTGxjYkEtd1g0?oc=5",
       "tags": [
@@ -1777,6 +2170,8 @@
       "query": "탈세",
       "title": "‘1천억원대 탈세’ 이상운 효성 부회장, 기소 13년만에 집유 확정",
       "source": "세무사신문",
+      "source_url": "https://webzine.kacta.or.kr",
+      "source_domain": "webzine.kacta.or.kr",
       "date": "Fri, 11 Sep 2026 04:23:16 GMT",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBYcDNkZXFoSkdrdy04MHFzR3RET0wyLXFoYkNoR1E4cmZ2N2VjcmNiS3lJZHBDQy1lakd6LU1vQnNqUlQ1dmhQWlRqVFExNDBTclBYRmN1VEp0dE5WaU5HRkFwV25OVEwyX2psazVn?oc=5",
       "tags": [
@@ -1789,6 +2184,8 @@
       "query": "환치기·외환",
       "title": "‘수사 축소 청탁’ 대가로 로펌 선임 유도한 전직 경찰 간부 집유",
       "source": "부산일보",
+      "source_url": "https://www.busan.com",
+      "source_domain": "www.busan.com",
       "date": "Fri, 11 Sep 2026 04:14:50 GMT",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5najF3N0pmSHJTd3lYaUxLc0lpMjQwajlkUFZhcDFTZGxxLW5tR2RSR0JqWjlKby1aZHFkSTM1bmZsbUpLZ3J4SE5HN3NpWWdnZkxaLWlSUG9YMnJOYWNqYUl3TXNia3hWTUc2Mm1hOUdaRjB6?oc=5",
       "tags": [
@@ -1837,6 +2234,8 @@
       "query": "지갑·해외거래소",
       "title": "암호 화폐 지갑 안내 창의 확인 버튼 역할",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Fri, 11 Sep 2026 03:39:52 GMT",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeE5XS3FRM2c5Tkh0YmtPMTEwcnd6QW9kTGttOE5keFd5ZHZiYWdtLWl5eFJYVkxyS2Q4a3R1TUtPRExYODY4VFUtbXVQM0RtSFR0VXUwcGd5V3FKZVdhT1BxSlE0WEpIWktreUlqX1FiR1RPYnhaMEtDWVB1RV9vZnV2UU1KZVhWaVJCZXVMWjZPTEQwaVpwZ0pMZHpRdw?oc=5",
       "tags": [
@@ -1846,11 +2245,13 @@
     },
     {
       "region": "국내",
-      "query": "불법도박",
+      "query": "범죄수익",
       "title": "경기남부경찰청, 불법 성착취물 유통·도박 광고 수익 노린 일당 2명 구속 송치",
       "source": "경인종합일보",
-      "date": "Fri, 11 Sep 2026 03:39:12 GMT",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9BRG9Gbm5CcmxkZXJzUUg4Sm5uaWowNkJBYVljTGEzNFJnbGZ3alNCQnRFZnRrakRmNzEwTkVhUXlpZ1dPaFM4SjhZSDJsR3luQVB3QU9faWJTU3U4V1RBZTFBNUx5WGh5akx3bzdKYXRFQdIBckFVX3lxTE9BRG9Gbm5CcmxkZXJzUUg4Sm5uaWowNkJBYVljTGEzNFJnbGZ3alNCQnRFZnRrakRmNzEwTkVhUXlpZ1dPaFM4SjhZSDJsR3luQVB3QU9faWJTU3U4V1RBZTFBNUx5WGh5akx3bzdKYXRFQQ?oc=5",
+      "source_url": "http://www.jonghapnews.com",
+      "source_domain": "www.jonghapnews.com",
+      "date": "Fri, 11 Sep 2026 03:32:40 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tMDNqWXhINzJvVXEyOGJMTGQ0RTRUaDB5ZkJFTG5Pa2c1MzlkMUU2eWh0UHEzUXhQaGZCNmZ2SXhTeTlCUVNZRF9wanhWS3A3bVVXdWotc3AxMTJjVDFBRFQxYTZwTm5MdncyTHFn0gFyQVVfeXFMT0FEb0ZubkJybGRlcnNRSDhKbm5pajA2QkFhWWNMYTM0UmdsZndqU0JCdEVmdGtqRGY3MTBORWFReWlnV09oUzhKOFlIMmxHeW5BUHdBT19pYlNTdThXVEFlMUE1THlYaHlqTHdvN0phdEVB?oc=5",
       "tags": [
         "도박"
       ],
@@ -1861,6 +2262,8 @@
       "query": "환치기·외환",
       "title": "승리 또 사회면 떴다…성매매알선·횡령·도박 이어 '특수폭행' 추가요 [엑's 이슈]",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 03:31:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE10ZDNtYkNuU3JyNlhvQW9SZ1R4SG9iblFQSXlmOXlIV1VhWUlsdDZVbkVoVl91RHRuSkFycS13aFB1ZmF1VThENE4yNmI2TjQ?oc=5",
       "tags": [
@@ -1886,6 +2289,8 @@
       "query": "제재·테러자금",
       "title": "김밥 잘 싸면 시급 2,000배? 러시아 구직 시장에 등장한 北 여성들 정체는 (이만갑)",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 03:19:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5kWGI4WEY5VWJQNWFfY0JxSG9YMlRhd083WjZZdGpNSjB5eUdYeWNTTDh3V1ZxcjBUTXExT1ZqRnZtWlZrWWsyZlY1T0FkN2EwaW44?oc=5",
       "tags": [
@@ -1923,6 +2328,8 @@
       "query": "탈세",
       "title": "국세청, 아태 세무당국과 ‘K-세정’ 공유…징수·조세범죄 국제공조 강화",
       "source": "필드뉴스",
+      "source_url": "http://www.fieldnews.kr",
+      "source_domain": "www.fieldnews.kr",
       "date": "Fri, 11 Sep 2026 03:14:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1HeDJ4THBBbEM0WVRIbFlWT0huVG1WY091alc5MmotallLclZPYVBsNXJFSnhlQlptRFVJSGd0MkIwZ1l5WnVRY1JoSkcwZ2EzMl9NdktZbFhZRlpQVmU2QWxxZW9WMzJCOW5GdNIBbEFVX3lxTE1HeDJ4THBBbEM0WVRIbFlWT0huVG1WY091alc5MmotallLclZPYVBsNXJFSnhlQlptRFVJSGd0MkIwZ1l5WnVRY1JoSkcwZ2EzMl9NdktZbFhZRlpQVmU2QWxxZW9WMzJCOW5GdA?oc=5",
       "tags": [
@@ -1947,6 +2354,8 @@
       "query": "가상자산 AML",
       "title": "중학교 중퇴생이 3300억원 털었다…미 역사상 최대 비트코인 절도",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 03:12:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9kak1JTmY4MDJ0X0JXMVFONUFPUTZfODFaemswYVBDa0FUcWdoRXE4em4yb2JHVVdsXzVKcXZIcFVfX2NkV1E?oc=5",
       "tags": [
@@ -1971,6 +2380,8 @@
       "query": "지갑·해외거래소",
       "title": "닥사 “스테이블코인까지 기타소득 과세는 무리”… 과세 인프라 부재 속 시행 유예 공식 건의",
       "source": "블록체인투데이",
+      "source_url": "https://blockchaintoday.co.kr",
+      "source_domain": "blockchaintoday.co.kr",
       "date": "Fri, 11 Sep 2026 03:08:55 GMT",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Od0RLRGo0NndodUhRcGdseVd0NnNtMkhVTXhtNEY4S2lrS0NlaEZsdWZfV1Z4c3c1Ml9DQS1GdF9haU83cTlPTVY4SFBVVm5Qc1NzLWU0MXJEWmNJcVlFOXF2dndvT0JBbmR1NWZFRDM?oc=5",
       "tags": [
@@ -1983,6 +2394,8 @@
       "query": "트래블룰",
       "title": "이탈리아 중앙은행, 암호화폐 제재 심사 최소금액 폐지",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 03:06:42 GMT",
       "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9fQkk0Z25abzd2M3NmX3FDUTlsSkZRNm04WVZFdFJ0Y3plMThNUDhHMURTNGs3Wml0c1FlLWpVM1ZPeDhMLVlZY01BaHRHbk56bHdjMWFIR1d5UFdSYVHSAV5BVV95cUxPX0JJNGduWm83djNzZl9xQ1E5bEpGUTZtOFlWRXRSdGN6ZTE4TVA4RzFEUzRrN1ppdHNRZS1qVTNWT3g4TC1ZWWNNQWh0R25Oemx3YzFhSEdXeVBXUmFR?oc=5",
       "tags": [
@@ -2008,6 +2421,8 @@
       "query": "횡령·배임",
       "title": "서귀포시, 추석 명절 대비 하도급 대금 및 임금 체불 예방 점검:경찰연합신문",
       "source": "경찰연합신문",
+      "source_url": "https://www.koreapolicenews.com",
+      "source_domain": "www.koreapolicenews.com",
       "date": "Fri, 11 Sep 2026 02:46:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBHOUZQaFl2dXJxMHpSSFY5ek0yZnA2djJxalNXeTIxaHJOQUZJZk8yNlhnbnlJWDJhYWhXem16SWdQSzEteWVJSldPdWZ2eTRO0gFsQVVfeXFMT1hHdS00amRKdk1hTGRndEhaMDAwTVF1NFVDblc4LVdURjFYbGxTTG1MSDhHNHlKNE5IRnJ3SklzTWpaYWtGeTZPa3F6VzV0R0ZLVHpWd1Vhd3hwSElOWW04S21NZ2VzN1U1Wm9X?oc=5",
       "tags": [
@@ -2020,6 +2435,8 @@
       "query": "보이스피싱",
       "title": "중국 주도 '국제 보이스피싱 퇴치 연맹' 출범…46개국 참여",
       "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
       "date": "Fri, 11 Sep 2026 02:40:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE45VXN1aFRDVEprUFd5NTlUWVVNS1ZFTGtoU1hYdG5ISGUwY2x0aFV5Um5GM0V6OFVUSy1RNndZVHJCU3U3d01xUzNodEo1SDllTzNTWWF2dXdRSU41c2Jxa9IBYEFVX3lxTE45VXN1aFRDVEprUFd5NTlUWVVNS1ZFTGtoU1hYdG5ISGUwY2x0aFV5Um5GM0V6OFVUSy1RNndZVHJCU3U3d01xUzNodEo1SDllTzNTWWF2dXdRSU41c2Jxaw?oc=5",
       "tags": [
@@ -2044,6 +2461,8 @@
       "query": "횡령·배임",
       "title": "산업현장 웰니스 솔루션 'MIRE' 상용화 앞둔 더블엠소셜컴퍼니, 5억 투자 유치:경찰연합신문",
       "source": "경찰연합신문",
+      "source_url": "https://www.koreapolicenews.com",
+      "source_domain": "www.koreapolicenews.com",
       "date": "Fri, 11 Sep 2026 02:38:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE93RERRQktBMzJLbEFWMFBscjdibms2eHk0ZThjaXRheWZ3clJOZmlsSU5hTTVzdGplb1ppVkc5dkNTbWhuT2dkejRuVmpXQ01p0gFsQVVfeXFMTmN5NXpFVWw5MnJnR25ka3RuMXEtbkJ5ZGs3bjVJZko3VUNFNUQ0RVpkVkpLZHpZRUt2T0pRSHhCR2RmNkt6NFJXbWNNZEpGVURNZDNUdE5qLVptakFQbkJiNUJwcU1xemxULWhi?oc=5",
       "tags": [
@@ -2056,6 +2475,8 @@
       "query": "보이스피싱",
       "title": "다시 도마 위 오른 보이스피싱 '무과실 배상'…은행권 \"우리만 독박 쓰나\" 반발",
       "source": "와이드경제",
+      "source_url": "https://www.widedaily.com",
+      "source_domain": "www.widedaily.com",
       "date": "Fri, 11 Sep 2026 02:36:13 GMT",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBiTFFlV3h6Wkt0S3dJdHd4c2d3cjJiOHhYdE9rXzEyVnF3UlQ5ZEZwRzJPMENhQmk3emJ2OFpPb2c3LWpackhFM2ttaVVTM0Q5YXEta0doX3VnY1ZYWFF0SWpxblFCNHMxWnJXUA?oc=5",
       "tags": [
@@ -2068,6 +2489,8 @@
       "query": "보이스피싱",
       "title": "‘후배 캄보디아행’ 대포통장 모집책, 1년 감형",
       "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
       "date": "Fri, 11 Sep 2026 02:34:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9CbV9Rc0Y3cC16NW5RNEFpS0dLNzIwV0RiZFE2LUltNUhKSzRhRDJSWHlWREhCNWhseXdMY1J1cXJvNUctMUdhQ1M1OEF3M0wwN2U2My03bkcyemM?oc=5",
       "tags": [
@@ -2080,6 +2503,8 @@
       "query": "자금세탁",
       "title": "클럽서 8억 쓰고 에르메스백 뿌리더니…20대 비트코인 도둑 결국[이런일이]",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 02:22:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBnY0V3a0p1bkphbkMtWm55M1lNODZ1SzduOTlHX3RLV3BBR0NoODZnYnlSRHA2Z3JyYVBuSjlVYlZfTGc0djVrdkVNbHUxWHpZUmtJ?oc=5",
       "tags": [
@@ -2092,6 +2517,8 @@
       "query": "불법도박",
       "title": "'1000여 차례 40억원 어치' 한우 빼돌린 30대 직원, 중형 선고",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 02:22:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5GcVltN3BybmJUMk0tOG1oX3p0bjZ4NVY5akU2UjFZdzktc01QamNZTXBSdUdOdWhLblNlclR1b0xvcTRFQWk4RGpaSGlqd1ZJc1Jn?oc=5",
       "tags": [
@@ -2104,6 +2531,8 @@
       "query": "FIU·STR",
       "title": "수협은행장 ‘내부 vs 관료’ 2파전…노조 검증 변수 되나",
       "source": "sisaon.co.kr",
+      "source_url": "https://www.sisaon.co.kr",
+      "source_domain": "www.sisaon.co.kr",
       "date": "Fri, 11 Sep 2026 02:20:26 GMT",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1KQUl3Q2htUEhmLV8xSmxVcVRVV25MbjhtS19CWlk5MDJNRW9LdVRqdEw0eV9Ic3F6OTVTNmtBNmdpMnFFcHFsMkpHMU1JZHpHMmtxT21nM0xpcG42WE1xMGpxUFdvbVF5SU93?oc=5",
       "tags": [
@@ -2116,6 +2545,8 @@
       "query": "횡령·배임",
       "title": "경찰 용혜인 배우자 '특별당비 급여' 의혹 수사착수...龍 \"억측과 악선동\" |",
       "source": "폴리뉴스 Polinews",
+      "source_url": "https://www.polinews.co.kr",
+      "source_domain": "www.polinews.co.kr",
       "date": "Fri, 11 Sep 2026 02:18:13 GMT",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1mYzN6RUxqRExWazBVemg0WFRyT0h0NzBmb3NDZjhRNGZpWDZXcThuU0hqQTk0dVJ5UzR6aXF6N3lkSVFNVXRkUHBWX3lQZm9VQkQySXd1M0JpUndHRXFLMFNLQ052NFVfZ2xKR1J1U2ZPdw?oc=5",
       "tags": [
@@ -2128,6 +2559,8 @@
       "query": "제재·테러자금",
       "title": "美, 친이란 세력 추가 제재…“경제적 추방 작전으로 지원망 해체”",
       "source": "이투데이",
+      "source_url": "https://www.etoday.co.kr",
+      "source_domain": "www.etoday.co.kr",
       "date": "Fri, 11 Sep 2026 02:18:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1vYnFaY01BWnlKRjRseWNLd3o3NHloU3NQYTBNYVM5aTh0VGQ5T081ajJkX3ViX1pnWmZRMl9RczF1c3c2UVFTR18zZndoZldMOFZBag?oc=5",
       "tags": [
@@ -2140,8 +2573,10 @@
       "query": "가상자산 AML",
       "title": "미 비밀경호국, 3026억원대 가상자산 압류 보도",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 02:15:23 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JNW5ZZ295VVRRYWY5NFlLQUJZTWxNYXlMMTRleDlNbTRpVF9ScjhuMXo2UWJSWm9lNjJfQnY0UEl6dVIzY09LNUw0cHdhUlJwMVBUeF9RWDPSAV5BVV95cUxOZlZzcU5ZQjNzb09BdXE0VzN5NXVYcmxaWlBISkgzQjNJYXhzVlVYYmllZjdWY3RQdnBlemR2Y2psTU5td1pKdkhJZHcxNC1qVDFjMnFuNDRpTnRJWWdn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5mVnNxTllCM3NvT0F1cTRXM3k1dVhybFpaUEhKSDNCM0lheHNWVVhiaWVmN1ZjdFB2cGV6ZHZjamxNTm13Wkp2SElkdzE0LWpUMWMycW40NGlOdElZZ2fSAV5BVV95cUxOZlZzcU5ZQjNzb09BdXE0VzN5NXVYcmxaWlBISkgzQjNJYXhzVlVYYmllZjdWY3RQdnBlemR2Y2psTU5td1pKdkhJZHcxNC1qVDFjMnFuNDRpTnRJWWdn?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -2152,6 +2587,8 @@
       "query": "가상자산 AML",
       "title": "\"비트코인 4100개 훔쳐 초호화 탕진 20대…클럽서 하룻밤 8억\" > 시애틀 뉴스/핫이슈",
       "source": "SeattleN",
+      "source_url": "https://www.seattlen.com",
+      "source_domain": "www.seattlen.com",
       "date": "Fri, 11 Sep 2026 02:13:12 GMT",
       "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9Hc0I3TXppVS02LUtNcVlseHdmWmFfR1dUSXhrVDBZUGphbmFFR3RVTVVZeUhfTTNRb3FraFRQYlNicGpXcXFXMm1n?oc=5",
       "tags": [
@@ -2164,6 +2601,8 @@
       "query": "제재·테러자금",
       "title": "北 아시안게임 선수단 180명 오늘 일본 입국…역대 최대 규모 > 시애틀 뉴스/핫이슈",
       "source": "SeattleN",
+      "source_url": "https://www.seattlen.com",
+      "source_domain": "www.seattlen.com",
       "date": "Fri, 11 Sep 2026 02:13:12 GMT",
       "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE4xel9kZlFZVkRXTl95X25DZ3A1WXJZcExCelgzUmFrOUNyZW43WUlfelVnNHJ6d3d6OXBZbDNMSmpEcjExbW5rOE9B?oc=5",
       "tags": [
@@ -2188,6 +2627,8 @@
       "query": "FIU·STR",
       "title": "서프(Surf AI), 17일 서울서 ‘2026 디지털 자산 AI 써밋’ 개최 - 조선비즈",
       "source": "Chosunbiz",
+      "source_url": "https://biz.chosun.com",
+      "source_domain": "biz.chosun.com",
       "date": "Fri, 11 Sep 2026 02:07:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQclRrTGEyM1Ryemx5UTZmdnUzVVZjQk9yTU50Z2dLYTBIZW5BeVRONVpnOXF1OGZLUDhVd3ptb09wV1Q2eWlsYlB5blY2dnZYbE5WUzN2ZFoyRTl4ZXltQ1gzOG40T25FejF0eDZYNm4weW5tZUFKZXphZjZyUXpKbHlKVmUxQndyaDRsdtIBoAFBVV95cUxQTW9KTWp1QUVDbl9xZlA5dzFRV0N5ZTd1SWI0RzJCeGh0eUxOQ04zODRoQzh5SG9lekFjLXd0NUktTnlCS2lkOU10eEdzX0JtTEExdjlVX01LeXdqNEhGTjVGLVZZN1B2aE1iMG91aUtvSEtzTWNrZHRzejVlWDgwNnZWYVNEZlNKVFd3MFZmSDlDRTh5MGtOaENKMTJ1UVNw?oc=5",
       "tags": [
@@ -2200,6 +2641,8 @@
       "query": "트래블룰",
       "title": "비트코인 ETF 도입된다는데 … 사들인 코인은 누가 보관하나",
       "source": "뉴데일리",
+      "source_url": "https://biz.newdaily.co.kr",
+      "source_domain": "biz.newdaily.co.kr",
       "date": "Fri, 11 Sep 2026 02:05:17 GMT",
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNSVM1T1JjNnB5S1RjbGptMTd2QTJaamdGWG1oU1l4VXpKblhnTjZLSVo5NU4yQm05UHNoNlVOVHlPYllrX3o4aU5NMnlfVU9GRnljSndrNnhOZmRjUWJMeTMzaFVLdW80ZkxvSzd5UUhBZ3NJZzVCVUx5eEF0N0JYbdIBgAFBVV95cUxNSVM1T1JjNnB5S1RjbGptMTd2QTJaamdGWG1oU1l4VXpKblhnTjZLSVo5NU4yQm05UHNoNlVOVHlPYllrX3o4aU5NMnlfVU9GRnljSndrNnhOZmRjUWJMeTMzaFVLdW80ZkxvSzd5UUhBZ3NJZzVCVUx5eEF0N0JYbQ?oc=5",
       "tags": [
@@ -2212,6 +2655,8 @@
       "query": "마약자금",
       "title": "국민대, '2026 치안 AI·데이터 분석 전문가 양성 과정' 수료식",
       "source": "뉴시스",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Fri, 11 Sep 2026 02:03:19 GMT",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5oUWMtU1JUalFFeGhZS2J0OUZtelI3TC1rV05zSGtIUmhiLV93S0RNVWFjZm52YU1SZnpTbWtvNXo5clJHOXNLT29tLUE4alVoRFd6UGRMUFZKNHBLdFpVSEl1TS13TWhhb0lFRXJSYklYaWZTanV3etIBeEFVX3lxTE5oUWMtU1JUalFFeGhZS2J0OUZtelI3TC1rV05zSGtIUmhiLV93S0RNVWFjZm52YU1SZnpTbWtvNXo5clJHOXNLT29tLUE4alVoRFd6UGRMUFZKNHBLdFpVSEl1TS13TWhhb0lFRXJSYklYaWZTanV3eg?oc=5",
       "tags": [
@@ -2224,6 +2669,8 @@
       "query": "제재·테러자금",
       "title": "北 선박, 中·홍콩·마셜제도 등 '외국 회사' 명의로 운항",
       "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
       "date": "Fri, 11 Sep 2026 02:00:27 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9NaFNVR09YYWMwZFdYMVRQMUJhM3Z0TW44TnhyYWNMWWJlWC1sc1VLSFNvenlHZENZUmpIbm1Vc1hHb05JUGlIVlBhQUp5R0lmOVl2bHVfN3MySHFnNFMyakd1c1HSAWRBVV95cUxPTWhTVUdPWGFjMGRXWDFUUDFCYTN2dE1uOE54cmFjTFliZVgtbHNVS0hTb3p5R2RDWVJqSG5tVXNYR29OSVBpSFZQYUFKeUdJZjlZdmx1XzdzMkhxZzRTMmpHdXNR?oc=5",
       "tags": [
@@ -2236,6 +2683,8 @@
       "query": "가상자산 AML",
       "title": "페라리 타고 에르메스 뿌린 20대…알고보니 비트코인 도둑 - 머니투데이",
       "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
       "date": "Fri, 11 Sep 2026 01:58:16 GMT",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE51XzRHQnBJSE9tX1VwNXN4a08zYlAxbGZJWTRCT0RzSURvUTM3VkJhYS01Y0J1QWd4LURNQURncl83aW1iOTI3dFRxX1JjMU42NVQ1d2gtSC1KX1Z2RG1VTk5YVUFNVmt4YmlPNVZnbjfSAXBBVV95cUxOdV80R0JwSUhPbV9VcDVzeGtPM2JQMWxmSVk0Qk9Ec0lEb1EzN1ZCYWEtNWNCdUFneC1ETUFEZ3JfN2ltYjkyN3RUcV9SYzFONjVUNXdoLUgtSl9WdkRtVU5OWFVBTVZreGJpTzVWZ243?oc=5",
       "tags": [
@@ -2260,6 +2709,8 @@
       "query": "가상자산 AML",
       "title": "[자막뉴스] 클럽서 '에르메스 백' 뿌리던 20대…\"그 돈 어디서 났나?\" 봤더니 '경악'",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 01:48:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5XdExDbm1aVTF6eGN0bWNGUWMxUWgwRjd0UTEtYk5CZ2NDM0hUSlNRZG01Z2lwVWZXNUxWbTVxQmFrVDNYV3l4VkszZzhLLXNEUXRpSQ?oc=5",
       "tags": [
@@ -2272,6 +2723,8 @@
       "query": "가상자산 AML",
       "title": "인류의 영향권, 1억 5100만 건의 클로드 질의, 알리바바 증류 의혹과 관련",
       "source": "Cryptopolitan",
+      "source_url": "https://www.cryptopolitan.com",
+      "source_domain": "www.cryptopolitan.com",
       "date": "Fri, 11 Sep 2026 01:45:33 GMT",
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xcWJ6aFRHbC1waHV6SXNCVFhVUGVYNEVmQk1qZ09oMXhGeWpiWEtIXzVUZGMwdk93TV81bWhIRlZWLXhVNXFGWFJxSWxaQWZER1BsR04tNVI2S1RwZUtLeTBzZzg3dU00Q1ByUjhheW1RV2VwVkdVNjc5NA?oc=5",
       "tags": [
@@ -2284,6 +2737,8 @@
       "query": "보이스피싱",
       "title": "보이스피싱 '무과실 배상' 다시 수면 위…은행 책임범위 쟁점",
       "source": "뉴시스",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Fri, 11 Sep 2026 01:43:28 GMT",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5GSnh6V29pTF9XeloydFVjZlZfTmxpQVZkS2FZSXd2MmY2cW5hUzhzWVNISG0tRG14RDk4bVRnYVNLZXBlSVphM1lYSlJFTGY3X1lOQi1PSlhnVnA5NXdKUTRqOGxub1ZKbk10enUxVXdOMXAxQ1paatIBeEFVX3lxTE5GSnh6V29pTF9XeloydFVjZlZfTmxpQVZkS2FZSXd2MmY2cW5hUzhzWVNISG0tRG14RDk4bVRnYVNLZXBlSVphM1lYSlJFTGY3X1lOQi1PSlhnVnA5NXdKUTRqOGxub1ZKbk10enUxVXdOMXAxQ1paag?oc=5",
       "tags": [
@@ -2295,7 +2750,9 @@
       "region": "국내",
       "query": "차명계좌",
       "title": "관세 낮춰줬더니 가격조작·매점매석…5468억원 적발",
-      "source": "데일리팝",
+      "source": "dailypop.kr",
+      "source_url": "http://www.dailypop.kr",
+      "source_domain": "www.dailypop.kr",
       "date": "Fri, 11 Sep 2026 01:39:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBfaEwxMUVrVnVZNEd2UGNaUFpoTmVjcHo2S0thNmFNbDI4dW5VXzNuVG54ZDlvdkFnaGozd1BrOFRIQkRTU05HQW50REVCcUxRWXRja3F4R2lpMTA0NGZPdEZOUmlzUllW?oc=5",
       "tags": [
@@ -2308,6 +2765,8 @@
       "query": "횡령·배임",
       "title": "홍원식 지우고 새 판 짠 남양유업···'오너 없는 경영' 시험대",
       "source": "스마트비즈",
+      "source_url": "https://www.smartbizn.com",
+      "source_domain": "www.smartbizn.com",
       "date": "Fri, 11 Sep 2026 01:38:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9FTUpwc0J3cW5NQngyQldyZGxnNG94VUQ3eUp6VlIxcEVldklJM2ZISUlmeXZlTWJPd3R6SW8wN3hyYzFQNFRZanZ4MVZsTGpmRUFjTUl5dmhGRi0tZHZEbTNPM1pGdjl1SFlPaQ?oc=5",
       "tags": [
@@ -2320,6 +2779,8 @@
       "query": "FIU·STR",
       "title": "서프(Surf AI), 9월 17일 2026 디지털 자산 AI 써밋 개최",
       "source": "서울신문",
+      "source_url": "https://amp.seoul.co.kr",
+      "source_domain": "amp.seoul.co.kr",
       "date": "Fri, 11 Sep 2026 01:38:13 GMT",
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5Cbkt0NDF1QXppRGoyMndVeXZxMk9rS3VvRGtJS21BMG90Vk84ZmtjNXlvQmNldnAxTE9DX210YWRJV21zQktOamdyajJKeE9DSVZmWnRocw?oc=5",
       "tags": [
@@ -2332,6 +2793,8 @@
       "query": "제재·테러자금",
       "title": "문이 열려도 건너갈 사람이 없다",
       "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
       "date": "Fri, 11 Sep 2026 01:37:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1OdkxNZzNLT3Y5V21JRXZ6cGJ0Q1lIbFkxQktQZkI2YVJQVGZPXzd1NTh0aTdEaUxSejBIc0pRdS03bHV6MV9jNTZyV2NpOW5yWUJ6ag?oc=5",
       "tags": [
@@ -2343,7 +2806,9 @@
       "region": "국내",
       "query": "지갑·해외거래소",
       "title": "디지털자산업계 “스테이블코인 과세 대상에서 제외해야” [크립토360]",
-      "source": "헤럴드경제",
+      "source": "biz.heraldcorp.com",
+      "source_url": "https://biz.heraldcorp.com",
+      "source_domain": "biz.heraldcorp.com",
       "date": "Fri, 11 Sep 2026 01:35:37 GMT",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHdlFSNW5hYndiYXNTVy0yUzZVcnlkbTBPTF8xU2pKV3VhelU0NFpuTEp1eFJPUVA3TXdFcnpoV2lsUjJJUElKaUh2eS1td0wxTXFBd0ZR?oc=5",
       "tags": [
@@ -2368,6 +2833,8 @@
       "query": "보이스피싱",
       "title": "\"보이스피싱 뿌리 뽑자\" 중국 주도 대응 연맹 출범…46개국 참여",
       "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
       "date": "Fri, 11 Sep 2026 01:33:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1ISXhvZURtc0YxU01OSHB4WFktRzNqQ3h3c2xOaF9ZUTdZZHpJTVJpTlcxTzNQeVNEc2dOTXpFNEgyNWdFZ3NCdXphdkhVTFVXZklN?oc=5",
       "tags": [
@@ -2377,9 +2844,11 @@
     },
     {
       "region": "국내",
-      "query": "자금세탁",
+      "query": "가상자산 AML",
       "title": "암호화폐·스테이블코인·토큰화 한데 묶는다…英 상원 수정안 통과",
       "source": "디지털투데이",
+      "source_url": "https://www.digitaltoday.co.kr",
+      "source_domain": "www.digitaltoday.co.kr",
       "date": "Fri, 11 Sep 2026 01:30:12 GMT",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBPSVR3Y21RX1Q1a2pxMlBPdGZia1NVajN0Z3RiQmkwU1gxUk9iaDZFQ2RlcUZvSXRJby1EaWd1OFdBNllrMTdLdU9yOXJIWVNTWnhFajVaalFHbmNQeTdYQWt6YjQ5VEUyd2kxSEw2b2d6Sk0?oc=5",
       "tags": [
@@ -2392,6 +2861,8 @@
       "query": "자금세탁",
       "title": "인도, 해외 암호화폐 플랫폼 대대적 단속…15곳 차단 대상",
       "source": "디지털투데이",
+      "source_url": "https://www.digitaltoday.co.kr",
+      "source_domain": "www.digitaltoday.co.kr",
       "date": "Fri, 11 Sep 2026 01:29:28 GMT",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JMUZPYzRzdnRUb0t5NERFZ0hFUWxoc0cwUHMya2FpcDhBYWt4X2dycXdTbFRxNjYzbjlwMmVJMWVkWjhFNmFldkh3REluLU9kMGJobjNqeGhZY3R0M2hOTHRFV1VUZVVNMDBnZ0pSRERaMFU?oc=5",
       "tags": [
@@ -2404,6 +2875,8 @@
       "query": "불법도박",
       "title": "[자막뉴스] 등심·안심 몰래 포장해 반출…'도박·코인'에 40억 태웠다",
       "source": "news.sbs.co.kr",
+      "source_url": "https://news.sbs.co.kr",
+      "source_domain": "news.sbs.co.kr",
       "date": "Fri, 11 Sep 2026 01:26:53 GMT",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9YbEhJcUtWZXpGcUlRYVQ5SzZTZ3l4N2Z2TUNJeWRYb0sxa0JubEhUc1RjbDhoQmI2dTMxTE8zNnV6THo3WEFIU0FMN3VPSUZybU1acnR5X1o1YkZ6N2VCeDVGY3R2MW9XMXfSAWZBVV95cUxPdGI0dUd5SEpVNkEzYjZDMXhnSmhUTWRSN0wzbU92eGtqdElaRWNSX0l1TUV4YzkzM2tHY1NiSVFLRUsxV3A4ZkU3bnZBcE9WSWdJQS1JbWdHZTJ0eFJGcTZwcmc2OWc?oc=5",
       "tags": [
@@ -2417,6 +2890,8 @@
       "query": "보이스피싱",
       "title": "NH농협은행 전북본부, 고령층 보이스피싱 피해 예방 앞장",
       "source": "투데이안",
+      "source_url": "https://www.todayan.com",
+      "source_domain": "www.todayan.com",
       "date": "Fri, 11 Sep 2026 01:26:01 GMT",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9mMDRtMVlBY0NscmNJbWNpUVkwQkdFTXJmaXhFYmJPeXprZkh0SGcxOGN3RkJ6Zkl1ZWI2YU90dTdjVXc0M3E3QmtXZEJNLXFYSzB0WENGOG1ub0FwaUh6VjZKTFpTWmhNSFE?oc=5",
       "tags": [
@@ -2429,6 +2904,8 @@
       "query": "탈세",
       "title": "임광현 국세청장, 아태 세정외교…해외 은닉재산 징수공조 강화",
       "source": "아주경제",
+      "source_url": "https://www.ajunews.com",
+      "source_domain": "www.ajunews.com",
       "date": "Fri, 11 Sep 2026 01:25:02 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5BQzB6Zmh4bEdQQjFHS29xSzBSeFljcjBpcXBEMGVvXzNYc29pWlBSaFdYcWhvSmtoODY2Rklud0FtQm9GM1NfSVRTRE95WENHTldrc1ZFTlHSAVhBVV95cUxOQUMwemZoeGxHUEIxR0tvcUswUnhZY3IwaXFwRDBlb18zWHNvaVpQUmhXWHFob0praDg2NkZJbndBbUJvRjNTX0lUU0RPeVhDR05Xa3NWRU5R?oc=5",
       "tags": [
@@ -2441,6 +2918,8 @@
       "query": "제재·테러자금",
       "title": "이장희 교수,˝북미 정상화 통해서 한반도 평화 복원되는 계기 만들어야˝:내외신문",
       "source": "naewaynews.com",
+      "source_url": "http://www.naewaynews.com",
+      "source_domain": "www.naewaynews.com",
       "date": "Fri, 11 Sep 2026 01:22:59 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9veHhlbGhBMmhIYVZyWmZpMFFhTGtfaV9QT2ZTaWFaTXNJMFFBN0FvcDVXRVBaZjZCMFVnd1E5VTh6WHpwOXJVTW5aSUlCTVFfZkNxTFQzYThfa3lpZUh3bUg5U1HSAWRBVV95cUxPb3h4ZWxoQTJoSGFWclpmaTBRYUxrX2lfUE9mU2lhWk1zSTBRQTdBb3A1V0VQWmY2QjBVZ3dROVU4elh6cDlyVU1uWklJQk1RX2ZDcUxUM2E4X2t5aWVId21IOVNR?oc=5",
       "tags": [
@@ -2453,6 +2932,8 @@
       "query": "보이스피싱",
       "title": "통영시, 보이스피싱부터 재난정보까지 ‘스마트 대응력’ 높인다",
       "source": "한려투데이",
+      "source_url": "https://www.hanryeotoday.com",
+      "source_domain": "www.hanryeotoday.com",
       "date": "Fri, 11 Sep 2026 01:09:37 GMT",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1xQkNMLU1ZaVU5VjBOUkhVQzFNczRuYjNtbTBQOGw3LUxVendzX3lBZDRkbmxzRVZlS2ZkZHNZS2Yzc1pkT3NXTVMtWE1aRjFJbzNoNEljUmliZjVsTGI1TWVqb0NDUzdrakhyZXZPQQ?oc=5",
       "tags": [
@@ -2462,9 +2943,25 @@
     },
     {
       "region": "국내",
+      "query": "범죄수익",
+      "title": "기본 기능부터 차근차근, 알리바바 블록 체인 첫 이용 안내",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Fri, 11 Sep 2026 01:08:48 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPY05FV3p4eEVmLXVJa2ppVHdvbTVJU2xLdDBMWjFzaU1vcGxPbElKUkdKREh6TWY2cGR6bWFVNDdVM1kwQVlnQ3JWUjVnMFJ4T3A0RFRlM0ltRURHRlVZYjdOVko1a19vX1VpbXVDUWdDaFpoNm9kRlRmY2l1QkZreWZVV1lhRWM5TGVVT0kwWEZiTzNSSnpadFkxMTA4cWo1UFZqZzJkNEw?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "[2026 충북 보이스피싱 예방 포럼]진화하는 금융범죄, ‘기관 사칭’ 피해액만 9800억 상회",
       "source": "충북뉴스",
+      "source_url": "https://www.cbnews.kr",
+      "source_domain": "www.cbnews.kr",
       "date": "Fri, 11 Sep 2026 01:08:21 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1jSmFMWjNZNHhNS2NjTjdZREFuOHFraXdKMVZhRV9NeVdvRURndjJnb2pnOEg5UW42Q21BNHhPTnZYNjlQMEVlUWZHcS01bHRiOVJCZlBWUjR3bFBZTHBad3hEN2dQbjA?oc=5",
       "tags": [
@@ -2477,6 +2974,8 @@
       "query": "자금세탁",
       "title": "미, 이란 대리세력 지원 중동 기업·개인에 2차 제재",
       "source": "YTN",
+      "source_url": "https://m.ytn.co.kr",
+      "source_domain": "m.ytn.co.kr",
       "date": "Fri, 11 Sep 2026 01:03:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0tbF8zTzlUMERpX3llcTJYTEdTbXR1ZzVnSkk2Z0ZZNUJ4Z2VVdWNsT2R3UTdKTzc5ZWR5eGdrOFpXNFBOTkRHME5zcVEwMHJfRnREZnIxTXJ0SHVKU3FEcXBfV2N0d0RwcDdyd1E4a215ZkZaOVE?oc=5",
       "tags": [
@@ -2489,6 +2988,8 @@
       "query": "횡령·배임",
       "title": "한컴 회장 '가상자산 96억 유용 혐의' 징역 9년 구형",
       "source": "세이프타임즈",
+      "source_url": "https://www.safetimes.co.kr",
+      "source_domain": "www.safetimes.co.kr",
       "date": "Fri, 11 Sep 2026 00:52:40 GMT",
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5NV0NIU0k5MDZjWW10SU9MQm9yczVEMmc0dHhPa2pjc2M5QkNBSFlpSjNqeWE0X1hjaThidmg2UVZZcl9xR1h2OVdFTTFibjRId1p2QllubUZ5Z1NmVTI5cTBjS2k1cjlyZVc3NDVKdU9HUUnSAXNBVV95cUxOTVdDSFNJOTA2Y1ltdElPTEJvcnM1RDJnNHR4T2tqY3NjOUJDQUhZaUozanlhNF9YY2k4YnZoNlFWWXJfcUdYdjlXRU0xYm40SHdadkJZbm1GeWdTZlUyOXEwY0tpNXI5cmVXNzQ1SnVPR1FJ?oc=5",
       "tags": [
@@ -2512,7 +3013,9 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "미국, 이란 대리세력 지원 중동 기업·개인에 2차 제재",
-      "source": "imnews.imbc.com",
+      "source": "MBC 뉴스",
+      "source_url": "https://imnews.imbc.com",
+      "source_domain": "imnews.imbc.com",
       "date": "Fri, 11 Sep 2026 00:46:54 GMT",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1QMTh3N19Ndm1BNWRTRHV3RHZ3cWVHTHR0Rkk4MDdLUDB4S0YzMkF2SWRFZTI4OEMtYjVHamxWZHdabWRvSmxLSVlHVUpfczAxRnFadnI0T0phanJZZmlkb1lYZ29jM2tjOWJZZjJwUHNGcFYt0gF0QVVfeXFMTVAxOHc3X012bUE1ZFNEdXdEdndxZUdMdHRGSTgwN0tQMHhLRjMyQXZJZEVlMjg4Qy1iNUdqbFZkd1ptZG9KbEtJWUdVSl9zMDFGcVp2cjRPSmFqcllmaWRvWVhnb2Mza2M5YllmMnBQc0ZwVi0?oc=5",
       "tags": [
@@ -2537,6 +3040,8 @@
       "query": "탈세",
       "title": "‘조세포탈 등 혐의’ 이상운 효성 부회장 유죄...징역형 집행유예 확정",
       "source": "매일안전신문",
+      "source_url": "https://idsn.co.kr",
+      "source_domain": "idsn.co.kr",
       "date": "Fri, 11 Sep 2026 00:40:38 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zdHRSY2lzbVFqYkZFTDZCemkyMlUxMTNOdXZJRnRiS3hodkpiRElOVEhNYUI1LWMyd0ZfZEczTjNrWnpaZjlsMEpBWjBJZHRrTXgzWXRLclrSAWhBVV95cUxQSUZISF9LNFh5ZXRYTDV2d1pqNVRVWTAwd2JrNFJPWkNfYmRwOXNrV0ZkUVl3MUFkVEpHb21wMG5RcExuUTc0MVotcHJWMUU1aHlqRjg0YWhNWkktUUdlQ19wSW4wMjhlSw?oc=5",
       "tags": [
@@ -2546,9 +3051,25 @@
     },
     {
       "region": "국내",
+      "query": "제재·테러자금",
+      "title": "美 정부, 헤즈볼라 지원망 겨냥 추가 제재…이란 자금줄 차단",
+      "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
+      "date": "Fri, 11 Sep 2026 00:40:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9rbFFNTzdqMGQzX0FyQTJuTG1ySUxTazlDQkFWVmwwenVhRDdwcGVyU1VLSlpKTjBOU2l4cHNIRzhSZXY3amtCTmNHcjc5WlE5MUN3?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "검찰, '90억대 가상화폐 비자금' 한컴 회장에 징역 9년 구형",
       "source": "중앙신문",
+      "source_url": "https://www.jasm.co.kr",
+      "source_domain": "www.jasm.co.kr",
       "date": "Fri, 11 Sep 2026 00:36:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8yZExRdzJPU2hDc1otZUs1cHhFdGxFQlpOVjc2WVJFUlNEOG9MakxCV1Z4TTJJSGdZaEJZSWdpRnh4bkltUlZqZkwtcldZcy1tQUNFNFlxUElsTlJZdnhkTDNQMllPZHZa?oc=5",
       "tags": [
@@ -2561,6 +3082,8 @@
       "query": "가상자산 AML",
       "title": "美 상원, 클래리티법 15일 절차표결…윤리조항 놓고 통과 불투명",
       "source": "블루밍비트",
+      "source_url": "https://bloomingbit.io",
+      "source_domain": "bloomingbit.io",
       "date": "Fri, 11 Sep 2026 00:33:46 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB5cjNaSHlXUUtMRklUTW93Z2s0VDExQklEMmdIeFNydkJ3MDF0aTg5eXR1QXJ2b1E2VTJ2NEIyandwQnVESTlqZUhEU0JWWWZ3?oc=5",
       "tags": [
@@ -2584,9 +3107,11 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "그냥 속는 요즘 보이스피싱 - 영상",
-      "source": "korea.kr",
+      "source": "대한민국 정책브리핑",
+      "source_url": "https://www.korea.kr",
+      "source_domain": "www.korea.kr",
       "date": "Fri, 11 Sep 2026 00:14:29 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNERzTjMxY1h5dlVOSGxnVWhXLUpVVjlHOWJ4TDdrbWxxaHNteGRiMTF0SGNBdUhhMklHcHFjc1p2VVFNdUw1bGlQWU1ZZ1BQNWNXTm9wNUozdjhBTXVsc1NOQU5va3ZncHhZYTgtTzZuR0xyTWkydVRHYURWbkpLVmtwOTB4MzFqVlE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOekJMUXFSUUhpdTNGcDZUYlY2MkdZVHdVX1lxYXQwLXYtZXloZ2ZYMmc5Y1IwRVZqckNfX0RDcnJnOER6VmN2UVhEemQyVW1aa0Z3YnAteDN0N2FkVHBiTTlPZU9qRkY0TmxvYU5aSlFFaFdBcmtNMU52TU1ERUdwTzc4TUFlWkNtZFE?oc=5",
       "tags": [
         "사기"
       ],
@@ -2597,6 +3122,8 @@
       "query": "가상자산 AML",
       "title": "SBF, 미 연방대법원에 사기 유죄 판결 취소 신청",
       "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
       "date": "Fri, 11 Sep 2026 00:09:09 GMT",
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FUzZsd05SMF9vTkhzOHlEbkctQURNSEhrRXlTcjFhblNQZUZhZ2xGUEc3QnhPVDl6T1l2MklzYUhaeTdoRkJyZktmbUhLc2ZRQTJZeDBvZUM?oc=5",
       "tags": [
@@ -2609,6 +3136,8 @@
       "query": "트래블룰",
       "title": "英 상원, 디지털자산 전략 의무화 수정안 가결…노동당 반대에도 통과",
       "source": "블루밍비트",
+      "source_url": "https://bloomingbit.io",
+      "source_domain": "bloomingbit.io",
       "date": "Thu, 10 Sep 2026 23:57:16 GMT",
       "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0xclZIZy12RlJTeU1WR1kzSnhqQ185OGw0WC1ZZHVoVVM1NUJ1clptalJIOXVtellmM2NGbDNiNm5mV21WZ0Y1LWdHZkJzdEU3?oc=5",
       "tags": [
@@ -2633,6 +3162,8 @@
       "query": "제재·테러자금",
       "title": "美, 이란 대리세력 지원 중동 기업·개인에 2차 제재",
       "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
       "date": "Thu, 10 Sep 2026 23:53:25 GMT",
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9CTV9IbHpmR1Fxekc2V05nMWRwNnBoZUFEWUtjeFZ3dFkyNTljSjRJLUNxZEFkVDNiVVpPRUtHOW1DanczSkZZVUJTMHVZNTBfMUVCSDlkdmtFanPSAWBBVV95cUxPbnJ2b280emJtWE85ZjJmYXVqY2xSQ05PLWJzVkRUaGFtMXpXd3J6cUNNVVhVY1Ryd2FmLU5mM1NONS1RTVRMcVBiQWo5d19tUVdPSUFSMmJ3OUxPMGZJNjg?oc=5",
       "tags": [
@@ -2645,6 +3176,8 @@
       "query": "환치기·외환",
       "title": "현재 단계가 헷갈릴 때 보는 빙고게임방법 상태 안내",
       "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
       "date": "Thu, 10 Sep 2026 23:51:53 GMT",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOeGJWaW9VZ0NGdlh5LVlJYjlVUjFLY09mOGU4cmNDVEFTUnRPOFh4X3dtaWx3d19TYkJBaTRKMDJ3bVJ4RVRpTmtDeFFxUjBDRm9HX0gxOFM5X2hOLXRoLTRVd2ROZnhJM2JsWXF5Z0YwMTlOSnZZRnZORGZXLV9vbnZ3ZG04OVJTUXhwUG1rV0pKLUtB?oc=5",
       "tags": [
@@ -2681,6 +3214,8 @@
       "query": "제재·테러자금",
       "title": "분식회계 저지르고 다른 회사 임원으로?…최대 5년 취업 막는다",
       "source": "더퍼블릭",
+      "source_url": "https://www.thepublic.kr",
+      "source_domain": "www.thepublic.kr",
       "date": "Thu, 10 Sep 2026 23:41:27 GMT",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9SUm9JVnBCTUZENzFXQjR0X3RzcFNuT2xSdG1LRUhPbzBWWEZQUHFqNnpXbmwyNGFJci03d2ZVaS1yQ2EwcDRtZGVuZzlCYkNlc2pwZ2gtTlJGN1M4UkMyUHdnc1ZKSVhRc2tmYnFwY9IBb0FVX3lxTE9SUm9JVnBCTUZENzFXQjR0X3RzcFNuT2xSdG1LRUhPbzBWWEZQUHFqNnpXbmwyNGFJci03d2ZVaS1yQ2EwcDRtZGVuZzlCYkNlc2pwZ2gtTlJGN1M4UkMyUHdnc1ZKSVhRc2tmYnFwYw?oc=5",
       "tags": [
@@ -2693,6 +3228,8 @@
       "query": "횡령·배임",
       "title": "김상철 한컴 회장, 90억원대 비자금 혐의로 징역 9년 구형",
       "source": "데일리한국",
+      "source_url": "https://daily.hankooki.com",
+      "source_domain": "daily.hankooki.com",
       "date": "Thu, 10 Sep 2026 23:40:30 GMT",
       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1wanhSSnFmTGtfY21ZVlVXWGNIX2xUaVd1d0xSRDhMSVJZZGVHanVpTjRlZ1YtbzJJUkZNNk5DM1daeVVCSHVGQ2VnbzVLbDBIOGc4SWJQdHo3Z25vcS1LN0Y4ZGlkSU4xempQb0YtUdIBc0FVX3lxTE85UVF5MWp4MnpRM1hYWWtFdjhpVmtTR0t1Zm50N2hVVVdaUms5X1RVXzhWU3N6X3oyVjVkeGdnd3cxMUwwRnRFSjFTUTFzZlRKQzc4eDVaUWdVUFFBcEpVYTJkOVAtNUZXRXB6S1Y0YVdmSUk?oc=5",
       "tags": [
@@ -12194,6 +12731,19 @@
   "official_items": [
     {
       "region": "공식자료",
+      "query": "불법사금융",
+      "official_source": "금융위원회",
+      "title": "“당일 대출·무서류” 추석 급전을 노린 불법사금융입니다 - 명절 급전 수요를 노린 불법사금융 주의 -",
+      "source": "금융위원회",
+      "date": "2026-09-11T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87702?srchCtgry=&curPage=1&srchKey=sj&srchText=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
+      "tags": [
+        "AML"
+      ],
+      "collection_method": "verified_fsc_board"
+    },
+    {
+      "region": "공식자료",
       "query": "보이스피싱",
       "official_source": "금융위원회",
       "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%·피해액 43% 감소 성과",
@@ -12202,20 +12752,6 @@
       "link": "https://www.fsc.go.kr/no010101/87637?srchCtgry=&curPage=1&srchKey=sj&srchText=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
       "tags": [
         "사기"
-      ],
-      "collection_method": "verified_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "자금세탁",
-      "official_source": "FIU",
-      "title": "FIU, 자금세탁방지 유관기관 협의회 개최",
-      "source": "FIU",
-      "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87604?srchCtgry=&curPage=1&srchKey=sj&srchText=%EC%9E%90%EA%B8%88%EC%84%B8%ED%83%81&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
       ],
       "collection_method": "verified_fsc_board"
     },
@@ -12261,12 +12797,12 @@
     },
     {
       "region": "공식자료",
-      "query": "특정금융정보법",
+      "query": "가상자산",
       "official_source": "금융위원회",
       "title": "가상자산시장의 투명성 강화를 위한 「특정금융정보법 시행령」 개정안 국무회의 의결",
       "source": "금융위원회",
       "date": "2026-08-11T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87499?srchCtgry=&curPage=1&srchKey=sj&srchText=%ED%8A%B9%EC%A0%95%EA%B8%88%EC%9C%B5%EC%A0%95%EB%B3%B4%EB%B2%95&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
+      "link": "https://www.fsc.go.kr/no010101/87499?srchCtgry=&curPage=1&srchKey=sj&srchText=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
       "tags": [
         "가상자산"
       ],
@@ -12301,12 +12837,25 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
+      "query": "가상자산",
+      "official_source": "금융위원회",
+      "title": "「가상자산이용자보호법」 시행 (’24.7.19.) 2년간의 가상자산 불공정거래 조사 주요성과 및 향후 계획",
+      "source": "금융위원회",
+      "date": "2026-07-20T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87357?srchCtgry=&curPage=1&srchKey=sj&srchText=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
+      "tags": [
+        "가상자산"
+      ],
+      "collection_method": "verified_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "가상자산",
       "official_source": "금융위원회",
       "title": "가상자산으로 당한 보이스피싱 피해금도 이제는 돌려받을 수 있습니다 - ｢전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 시행령｣ 개정안 입법예고(’26.7.15.~8.24.(40일))",
       "source": "금융위원회",
       "date": "2026-07-15T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87333?srchCtgry=&curPage=1&srchKey=sj&srchText=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
+      "link": "https://www.fsc.go.kr/no010101/87333?srchCtgry=&curPage=1&srchKey=sj&srchText=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
       "tags": [
         "가상자산",
         "사기"
@@ -12323,6 +12872,20 @@
       "link": "https://www.fsc.go.kr/no010101/87313?srchCtgry=&curPage=1&srchKey=sj&srchText=%EA%B8%88%EC%9C%B5%EC%A0%95%EB%B3%B4%EB%B6%84%EC%84%9D%EC%9B%90&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
       "tags": [
         "FIU·규제"
+      ],
+      "collection_method": "verified_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "가상자산",
+      "official_source": "금융위원회",
+      "title": "가상자산시장 시세조종 혐의자 수사기관 고발",
+      "source": "금융위원회",
+      "date": "2026-07-01T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87235?srchCtgry=&curPage=1&srchKey=sj&srchText=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&srchBeginDt=2026-06-14&srchEndDt=2026-09-12",
+      "tags": [
+        "가상자산",
+        "사기"
       ],
       "collection_method": "verified_fsc_board"
     },
