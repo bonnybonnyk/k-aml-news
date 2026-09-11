@@ -149,8 +149,9 @@ def fetch_query(name, query):
             'title': title,
             'source': source_from(it, raw_title),
             'date': it.findtext('pubDate') or '',
-            'link': it.findtext('link') or '#',
+            'link': safe_official_link(source_name, title, it.findtext('link') or ''),
             'tags': classify(title),
+            'collection_method': 'domain_search',
         })
     return out
 
@@ -168,7 +169,7 @@ def html_unescape(s):
 
 def fetch_url(url, timeout=25):
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/2.9'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/3.0'
     })
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
@@ -192,7 +193,7 @@ def parse_fsc_rss():
             'title': title,
             'source': source_name,
             'date': date,
-            'link': link or '#',
+            'link': safe_official_link(source_name, title, link),
             'tags': classify(title),
             'collection_method': 'direct_rss',
         })
@@ -249,7 +250,7 @@ def parse_fiu_page(num):
         'title': clean_title(title),
         'source': 'FIU',
         'date': date,
-        'link': url,
+        'link': safe_official_link('FIU', title, url, item_id=num),
         'tags': classify(title),
         'collection_method': 'direct_page',
     }
@@ -265,6 +266,53 @@ def fetch_fiu_direct():
         time.sleep(0.10)
     return out
 
+
+FILE_EXT_RE = re.compile(r'\.(?:pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx|zip)(?:[?#].*)?$', re.I)
+
+def is_file_link(url):
+    if not url:
+        return False
+    u = url.strip().lower()
+    return bool(FILE_EXT_RE.search(u)) or any(x in u for x in [
+        'filedownload', 'downloadfile', 'atchfile', 'attachment', 'bbsfile'
+    ])
+
+def google_news_real_url(url):
+    """Google News redirect URL은 그대로 두되 다운로드 링크면 사용하지 않는다."""
+    return url if url and not is_file_link(url) else ''
+
+def safe_official_link(source_name, title, candidate, item_id=None):
+    """
+    공식자료 제목은 반드시 기관의 '상세 본문 페이지'로 연결한다.
+    첨부파일/다운로드 URL은 버리고, 상세주소를 만들 수 없으면 기관 보도자료 목록으로 보낸다.
+    """
+    candidate = (candidate or '').strip()
+
+    if source_name == 'FIU':
+        if item_id:
+            return FIU_VIEW_URL.format(num=item_id)
+        if 'report_view.do' in candidate and not is_file_link(candidate):
+            return candidate
+        return 'https://www.kofiu.go.kr/kor/notification/report.do'
+
+    if source_name == '금융위원회':
+        # 금융위 상세 보도자료 페이지 형식이면 유지.
+        if candidate and 'fsc.go.kr' in candidate and not is_file_link(candidate):
+            # RSS에서 첨부파일 링크가 오는 경우 제외
+            if any(x in candidate.lower() for x in ['download', 'file', 'atch']):
+                return 'https://www.fsc.go.kr/no010101'
+            return candidate
+        return 'https://www.fsc.go.kr/no010101'
+
+    if source_name == '금융감독원':
+        if candidate and 'fss.or.kr' in candidate and not is_file_link(candidate):
+            if any(x in candidate.lower() for x in ['download', 'file', 'atch']):
+                return 'https://www.fss.or.kr/fss/bbs/B0000188/list.do?menuNo=200218'
+            return candidate
+        return 'https://www.fss.or.kr/fss/bbs/B0000188/list.do?menuNo=200218'
+
+    return candidate or '#'
+
 def official_relevant(title):
     t = (title or '').lower()
     return any(k.lower() in t for k in OFFICIAL_KEEP)
@@ -276,7 +324,7 @@ def fetch_official_source(source_name, query):
     })
     url = 'https://news.google.com/rss/search?' + params
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/2.9'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/3.0'
     })
     with urllib.request.urlopen(req, timeout=25) as resp:
         data = resp.read()
@@ -294,8 +342,9 @@ def fetch_official_source(source_name, query):
             'title': title,
             'source': source_name,
             'date': it.findtext('pubDate') or '',
-            'link': it.findtext('link') or '#',
+            'link': safe_official_link(source_name, title, it.findtext('link') or ''),
             'tags': classify(title),
+            'collection_method': 'domain_search',
         })
     return out
 
@@ -385,6 +434,13 @@ def main():
             except Exception:
                 return None
 
+    def sanitize_official_row(x):
+        x = dict(x)
+        src = x.get('official_source') or x.get('source') or ''
+        if x.get('region') == '공식자료' or src in ('FIU','금융위원회','금융감독원'):
+            x['link'] = safe_official_link(src, x.get('title',''), x.get('link',''))
+        return x
+
     def clean_collection(rows, limit):
         seen = set()
         deduped = []
@@ -410,7 +466,7 @@ def main():
         return deduped[:limit]
 
     deduped = clean_collection(all_items + existing, 1200)
-    official_deduped = clean_collection(official_new + existing_official, 400)
+    official_deduped = clean_collection([sanitize_official_row(x) for x in (official_new + existing_official)], 400)
 
     payload = {
         'updated_at': datetime.now(timezone.utc).isoformat(),
