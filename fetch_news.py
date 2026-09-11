@@ -75,7 +75,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.4'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.5'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -157,6 +157,38 @@ def official_relevant(title):
 # 국내 뉴스 품질 필터
 # 사건·수사 기사에 필요한 일반 언론은 폭넓게 남기되,
 # 도박/카지노 운영사이트·리퍼럴/코인 홍보성 사이트 같은 "뉴스가 아닌 출처"를 제거한다.
+TRUSTED_NEWS_DOMAINS = [
+    # 통신/방송
+    'yna.co.kr','newsis.com','news1.kr','kbs.co.kr','imbc.com','sbs.co.kr','ytn.co.kr',
+    'jtbc.co.kr','mbn.co.kr','tvchosun.com','ichannela.com','obsnews.co.kr',
+    # 종합지/경제지
+    'chosun.com','joongang.co.kr','donga.com','hani.co.kr','khan.co.kr','hankookilbo.com',
+    'mk.co.kr','hankyung.com','sedaily.com','fnnews.com','mt.co.kr','edaily.co.kr',
+    'asiae.co.kr','heraldcorp.com','bizwatch.co.kr','etoday.co.kr','ajunews.com',
+    'newsway.co.kr','thebell.co.kr','dealsite.co.kr',
+    # IT/가상자산 전문 매체 중 기사형 출처
+    'zdnet.co.kr','etnews.com','digitaltoday.co.kr','ddaily.co.kr','bloter.net',
+    'tokenpost.kr','blockmedia.co.kr','decenter.kr',
+    # 지역/기타 주요 언론
+    'busan.com','imaeil.com','kwnews.co.kr','kado.net','jnilbo.com','jjan.kr','jejunews.com'
+]
+
+TRUSTED_SOURCE_NAMES = [
+    '연합뉴스','뉴시스','뉴스1','kbs','mbc','sbs','ytn','jtbc','mbn','tv조선','채널a',
+    '조선일보','중앙일보','동아일보','한겨레','경향신문','한국일보','매일경제','한국경제',
+    '서울경제','파이낸셜뉴스','머니투데이','이데일리','아시아경제','헤럴드경제',
+    '비즈워치','이투데이','아주경제','뉴스웨이','더벨','딜사이트',
+    '전자신문','지디넷코리아','디지털데일리','디지털투데이','블로터',
+    '토큰포스트','블록미디어','디센터'
+]
+
+def trusted_news_source(source_name, domain):
+    s = (source_name or '').lower().replace(' ', '')
+    d = (domain or '').lower()
+    if any(d == x or d.endswith('.' + x) for x in TRUSTED_NEWS_DOMAINS):
+        return True
+    return any(x.lower().replace(' ', '') in s for x in TRUSTED_SOURCE_NAMES)
+
 BLOCKED_DOMAIN_TOKENS = [
     'casino','slot','slots','spin','spinkr','bet','betting','toto','sportsbook',
     'poker','gamble','gamingbonus','jackpot','roulette','baccarat',
@@ -232,6 +264,10 @@ def fetch_query(name, query):
         if not title or is_promo(title):
             continue
         source_name, source_url, source_domain = get_source_meta(it, raw_title)
+        # v4.5: Google News에 잡혔다는 이유만으로 채택하지 않는다.
+        # 국내뉴스는 신뢰 출처 목록을 먼저 통과해야 하고, 그 뒤 광고/SEO 필터를 적용한다.
+        if not trusted_news_source(source_name, source_domain):
+            continue
         if low_quality_news_source(title, source_name, source_domain):
             continue
         out.append({
@@ -455,12 +491,19 @@ def main():
         d = parse_dt(x.get('date'))
         if d and d < cutoff:
             continue
+        # 과거 버전에서 저장된 스팸/SEO 출처도 다시 정리한다.
+        src_name = x.get('source','')
+        src_domain = x.get('source_domain','')
+        if not trusted_news_source(src_name, src_domain):
+            continue
+        if low_quality_news_source(x.get('title',''), src_name, src_domain):
+            continue
         merged_news.append(x)
     news = dedupe(merged_news, 1200)
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.4'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.5'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -491,7 +534,7 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '4.4',
+        'official_backfill_version': '4.5',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'count': len(news),
         'official_count': len(official),
