@@ -125,7 +125,7 @@ def classify(title):
 
 def fetch_query(name, query):
     params = urllib.parse.urlencode({
-        'q': query, 'hl': 'ko', 'gl': 'KR', 'ceid': 'KR:ko'
+        'q': query + ' when:1d', 'hl': 'ko', 'gl': 'KR', 'ceid': 'KR:ko'
     })
     url = 'https://news.google.com/rss/search?' + params
     req = urllib.request.Request(url, headers={
@@ -166,10 +166,82 @@ def html_unescape(s):
 
 def fetch_url(url, timeout=10):
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/4.1'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/4.2'
     })
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
+
+
+FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
+FSC_AML_KEYWORDS = [
+    "FIU", "자금세탁", "가상자산", "특정금융정보법", "보이스피싱", "범죄수익"
+]
+
+def fetch_fsc_board_keyword(keyword):
+    """
+    금융위원회 보도자료 '검색 결과 페이지'를 직접 읽는다.
+    이 페이지는 제목 링크 자체가 /no010101/<게시글번호> 상세페이지이므로
+    첨부파일 링크를 추측하거나 별도 상세검색을 할 필요가 없다.
+    """
+    params = urllib.parse.urlencode({
+        'curPage': '1',
+        'srchKey': 'sj',
+        'srchText': keyword,
+    })
+    url = FSC_BOARD_URL + '?' + params
+    raw = fetch_url(url, timeout=10).decode('utf-8', errors='ignore')
+
+    rows = []
+    # 제목 링크: /no010101/<게시글번호> 형태만 수집
+    pat = re.compile(
+        r'<a\b[^>]*href=["\']([^"\']*/no010101/\d+[^"\']*)["\'][^>]*>(.*?)</a>',
+        re.I | re.S
+    )
+    matches = list(pat.finditer(raw))
+    for i, m in enumerate(matches):
+        href = html_unescape(m.group(1))
+        title = clean_title(strip_html(m.group(2)))
+        if not title:
+            continue
+
+        # 다음 제목 전까지의 영역에서 날짜를 찾음
+        next_pos = matches[i+1].start() if i+1 < len(matches) else min(len(raw), m.end()+2500)
+        chunk = strip_html(raw[m.end():next_pos])
+        dm = re.search(r'(20\d{2})-(\d{2})-(\d{2})', chunk)
+        date = ''
+        if dm:
+            date = f"{dm.group(1)}-{dm.group(2)}-{dm.group(3)}T00:00:00+09:00"
+
+        # 정확한 상세 본문 URL
+        detail = urllib.parse.urljoin("https://www.fsc.go.kr", href)
+        detail = detail.replace('&amp;', '&')
+
+        # 검색 페이지 특성상 같은 제목이 여러 키워드에 걸릴 수 있으므로 추후 제목/링크로 중복제거
+        src = 'FIU' if ('FIU' in title.upper() or '금융정보분석원' in title) else '금융위원회'
+        rows.append({
+            'region': '공식자료',
+            'query': keyword,
+            'official_source': src,
+            'title': title,
+            'source': src,
+            'date': date,
+            'link': detail,
+            'tags': classify(title),
+            'collection_method': 'direct_board',
+        })
+    return rows
+
+def fetch_fsc_official_direct():
+    all_rows = []
+    for kw in FSC_AML_KEYWORDS:
+        try:
+            rows = fetch_fsc_board_keyword(kw)
+            all_rows.extend(rows)
+            print('FSC BOARD', kw, len(rows))
+        except Exception as e:
+            print('FSC BOARD ERROR', kw, e)
+        time.sleep(0.15)
+    return all_rows
 
 def parse_fsc_rss():
     """금융위원회 공식 RSS 1회 호출. RSS 안에서 상세페이지 URL이 확인되는 항목만 저장."""
@@ -270,7 +342,7 @@ def fetch_official_source(source_name, query):
         'q': query, 'hl': 'ko', 'gl': 'KR', 'ceid': 'KR:ko'
     })
     url = 'https://news.google.com/rss/search?' + params
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.1'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.2'})
     with urllib.request.urlopen(req, timeout=10) as resp:
         data = resp.read()
     root = ET.fromstring(data)
@@ -315,31 +387,69 @@ def main():
     official_new = []
     official_status = []
 
-    # 1) 금융위원회 공식 RSS 직접 수집
+    # 1) 금융위 보도자료 검색결과 페이지 직접 수집
+    #    FIU 보도자료도 금융위 보도자료 게시판에 같이 올라오므로
+    #    실제 상세페이지 주소(/no010101/게시글번호)를 바로 확보할 수 있습니다.
+    try:
+        items = fetch_fsc_official_direct()
+        official_new.extend(items)
+        official_status.append({
+            'feed': '금융위/FIU 공식 보도자료',
+            'ok': True,
+            'count': len(items),
+            'method': 'direct_board'
+        })
+        print('OFFICIAL DIRECT BOARD', len(items))
+    except Exception as e:
+        official_status.append({
+            'feed': '금융위/FIU 공식 보도자료',
+            'ok': False,
+            'count': 0,
+            'error': str(e)[:180],
+            'method': 'direct_board'
+        })
+        print('OFFICIAL DIRECT BOARD ERROR', e)
+
+    # 2) 금융위 공식 RSS도 가볍게 보완
     try:
         items = parse_fsc_rss()
         official_new.extend(items)
-        official_status.append({'feed': '금융위원회 공식 RSS', 'ok': True, 'count': len(items), 'method': 'direct_rss'})
-        print('OFFICIAL DIRECT FSC', len(items))
+        official_status.append({
+            'feed': '금융위원회 공식 RSS',
+            'ok': True,
+            'count': len(items),
+            'method': 'direct_rss'
+        })
     except Exception as e:
-        official_status.append({'feed': '금융위원회 공식 RSS', 'ok': False, 'count': 0, 'error': str(e)[:180], 'method': 'direct_rss'})
-        print('OFFICIAL DIRECT FSC ERROR', e)
+        official_status.append({
+            'feed': '금융위원회 공식 RSS',
+            'ok': False,
+            'count': 0,
+            'error': str(e)[:180],
+            'method': 'direct_rss'
+        })
 
-    # 2) FIU는 금융위 공식 RSS에 포함된 FIU 자료 + 공식도메인 RSS 보조검색으로 수집합니다.
-    #    게시글별 추가 조회/기관 사이트 재검색은 전혀 하지 않습니다.
-
-    # 3) FIU·금감원 누락 보완용 Google News 공식도메인 RSS 검색
-    #    직접수집 결과와 제목 기준으로 중복제거되므로 보조 경로로만 사용됩니다.
+    # 3) 금감원은 공식도메인 보조검색 결과 중 정확한 상세 URL이 확인되는 것만 추가
     for source_name, query in OFFICIAL_QUERIES:
+        if source_name != '금융감독원':
+            continue
         try:
             items = fetch_official_source(source_name, query)
             official_new.extend(items)
-            official_status.append({'feed': source_name + ' 보조검색', 'ok': True, 'count': len(items), 'method': 'domain_search'})
-            print('OFFICIAL FALLBACK', source_name, len(items))
+            official_status.append({
+                'feed': '금융감독원 보조검색',
+                'ok': True,
+                'count': len(items),
+                'method': 'domain_search'
+            })
         except Exception as e:
-            official_status.append({'feed': source_name + ' 보조검색', 'ok': False, 'count': 0, 'error': str(e)[:180], 'method': 'domain_search'})
-            print('OFFICIAL FALLBACK ERROR', source_name, e)
-        time.sleep(0.25)
+            official_status.append({
+                'feed': '금융감독원 보조검색',
+                'ok': False,
+                'count': 0,
+                'error': str(e)[:180],
+                'method': 'domain_search'
+            })
 
     # 기존 저장 데이터를 합쳐 최근 90일치를 유지
     existing = []
