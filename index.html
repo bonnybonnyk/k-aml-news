@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>K-AML NEWS v2.2</title>
+<title>K-AML NEWS v2.4</title>
 <style>
 :root{--bg:#07101e;--panel:#0d192b;--panel2:#11223a;--text:#edf4ff;--muted:#8fa3bd;--line:#1d3351;--accent:#74a8ff;--hot:#ffb55f}
 *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#07101e,#091426);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}
@@ -24,9 +24,9 @@
 <body>
 <div class="wrap">
 <section class="hero">
-  <div class="eyebrow">K-AML NEWS · v2.2</div>
+  <div class="eyebrow">K-AML NEWS · v2.4</div>
   <h1>🇰🇷 국내 AML 뉴스 모니터링</h1>
-  <p>자금세탁·범죄수익·가상자산·보이스피싱·환치기·마약·도박·탈세·FIU 관련 뉴스를 모읍니다. GitHub Actions가 서버에서 수집하므로 브라우저 RSS 프록시에 의존하지 않습니다.</p>
+  <p>자금세탁·범죄수익·가상자산·보이스피싱·환치기·마약·도박·탈세·FIU 관련 뉴스를 모읍니다. 사건·수사·적발·제재·범죄수법·자금흐름·제도변경 중심으로 수집하며, 예방 캠페인·교육·보험지원·사회공헌·MOU·수상·행사성 기사는 자동 제외합니다.</p>
   <div class="status"><span id="dot" class="dot"></span><span id="status">news.json 확인 중</span></div><div id="lastCollected" style="margin-top:7px;color:#7f96b2;font-size:12px"></div>
   <div class="toolbar"><input id="search" class="search" placeholder="기사 제목·언론사 검색"><button id="refresh" class="btn">새로고침</button></div>
 </section>
@@ -48,7 +48,18 @@ function sim(a,b){let A=new Set(toks(a)),B=new Set(toks(b));if(!A.size||!B.size)
 function nums(s=''){return (s.match(/\d+(?:[.,]\d+)?/g)||[]).map(x=>x.replace(/,/g,''))}
 function same(a,b){if(a.link===b.link)return true;let s=sim(a.title,b.title);if(s>=.72)return true;let na=nums(a.title),nb=nums(b.title);return s>=.56&&na.some(x=>nb.includes(x))}
 function cluster(items){let cs=[];for(const x of items){let c=cs.find(c=>same(c.main,x));if(c)c.rel.push(x);else cs.push({main:x,rel:[]})}return cs}
-function point(x){let t=x.tags||[];if(t.includes('가상자산'))return '가상자산 이동 경로, 거래소·개인지갑 사용, 자금 원천과 회수 경로를 함께 볼 만합니다.';if(t.includes('사기'))return '피해자 자금의 집금·분산·환전·가상자산 전환 패턴을 참고할 만합니다.';if(t.includes('환치기·외환'))return '국경간 송금, 제3자 계좌, 외국환 신고 여부와 자금 이동 구조를 볼 만합니다.';if(t.includes('FIU·규제'))return 'AML/CFT 제도·감독방향과 STR 실무 영향 여부를 확인할 만합니다.';return '전제범죄와 자금의 유입·분산·회수 구조를 STR 관점에서 참고할 만합니다.'}
+function point(x){
+ let t=x.tags||[];
+ if(t.includes('FIU·규제'))return '제도·감독·STR 의무 변경 여부와 금융회사 실무 영향 확인';
+ if(t.includes('가상자산'))return '거래소·개인지갑·해외이전 여부, 자금원천 및 입출고 흐름 확인';
+ if(t.includes('사기'))return '피해금 유입 후 집금·분산·현금화·가상자산 전환 여부 확인';
+ if(t.includes('환치기·외환'))return '제3자 계좌, 반복 송금, 국경간 자금이동 및 외국환 관련 정황 확인';
+ if(t.includes('마약'))return '범죄수익 유입·분산·회수 및 가상자산·차명계좌 이용 여부 확인';
+ if(t.includes('도박'))return '다수인 입금, 집금계좌, 반복 분산·환전 및 가상자산 이용 여부 확인';
+ if(t.includes('탈세'))return '차명계좌·우회거래·자금출처 및 신고소득과 거래규모 간 정합성 확인';
+ if(t.includes('횡령·배임'))return '법인·개인 간 자금이동, 제3자 이전 및 범죄수익 은닉·회수 정황 확인';
+ return '기사 제목만으로 혐의를 단정하지 않고 전제범죄와 자금 흐름 관련성을 확인';
+}
 function drawCats(){ $('#cats').innerHTML=CATS.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join(''); document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{CAT=b.dataset.c;drawCats();render()})}
 function render(){
  let q=$('#search').value.trim().toLowerCase();
@@ -58,7 +69,7 @@ function render(){
  if(!cs.length){$('#grid').innerHTML='<div class="empty">조건에 맞는 뉴스가 없습니다.</div>';return}
  $('#grid').innerHTML=cs.map((c,i)=>{let x=c.main,id='r'+i;let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
  let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">같은 사건 보도 ${c.rel.length+1}건 ▾</button><div id="${id}" class="related-list">${c.rel.map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)}</div>`).join('')}</div>`:'';
- return `<article class="card"><div class="meta"><span>${esc(x.source||'뉴스')} · ${esc(x.query||'')}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(x.link)}">${esc(x.title)}</a><div class="tags">${tags}</div><div class="point"><b>AML 관점</b> · ${esc(point(x))}</div>${rel}</article>`}).join('')
+ return `<article class="card"><div class="meta"><span>${esc(x.source||'뉴스')} · ${esc(x.query||'')}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(x.link)}">${esc(x.title)}</a><div class="tags">${tags}</div><div class="point"><b>AML 체크포인트</b> · ${esc(point(x))}</div>${rel}</article>`}).join('')
 }
 async function load(){
  try{
