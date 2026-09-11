@@ -1,0 +1,34 @@
+name: Update K-AML News
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0,30 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch Korean AML news
+        run: python fetch_news.py
+
+      - name: Commit updated news
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update AML news"
+          git push
