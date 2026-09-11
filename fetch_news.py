@@ -22,6 +22,33 @@ QUERIES = [
     ("제재·테러자금", '"테러자금" OR "제재 회피" OR "대북제재" OR "북한 가상자산"'),
 ]
 
+# 공식기관 보도자료/공지. Google News RSS에서 기관 공식 도메인으로만 제한해 수집합니다.
+# (기관 사이트의 HTML 구조 변경에 덜 취약하고, 결과 링크는 공식 원문으로 연결됩니다.)
+OFFICIAL_QUERIES = [
+    ("FIU", '("자금세탁" OR AML OR CFT OR "의심거래" OR STR OR "특정금융정보법" OR "가상자산사업자" OR "트래블룰" OR "제재") site:kofiu.go.kr'),
+    ("금융위원회", '("자금세탁" OR AML OR CFT OR FIU OR "금융정보분석원" OR "의심거래" OR STR OR "특정금융정보법" OR "가상자산사업자" OR "트래블룰") site:fsc.go.kr'),
+    ("금융감독원", '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'),
+]
+
+
+# 공식기관 직접 수집 경로
+# 금융위원회는 공식 RSS를 제공하므로 Google News를 거치지 않고 직접 수집합니다.
+FSC_RSS_URL = "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111"
+
+# FIU는 공식 보도자료 원문 페이지를 직접 확인합니다.
+# 목록 페이지가 동적 렌더링되는 경우가 있어 최근 번호 구간을 가볍게 순회하고,
+# 실패 시 기존 Google News 공식도메인 검색을 보조 경로로 사용합니다.
+FIU_VIEW_URL = "https://www.kofiu.go.kr/kor/notification/report_view.do?ntcnYardOrdrNo={num}&seCd=0001"
+FIU_SCAN_MIN = 360
+FIU_SCAN_MAX = 430
+
+OFFICIAL_KEEP = [
+    '자금세탁','돈세탁','aml','cft','fiu','금융정보분석원','의심거래','str',
+    '특정금융정보법','가상자산','가상자산사업자','vasp','트래블룰','고객확인',
+    '범죄수익','테러자금','제재','보이스피싱','대포통장','불법금융','환치기',
+    '검사','감독','제도이행평가','위험평가','고위험','제재공시'
+]
+
 HARD_NEWS = [
     '자금세탁','돈세탁','범죄수익','범죄수익은닉','의심거래','str','적발','검거','기소','수사',
     '제재','압수','구속','송치','불법','사기','보이스피싱','마약','도박','환치기','탈세','횡령',
@@ -127,6 +154,151 @@ def fetch_query(name, query):
         })
     return out
 
+
+
+def strip_html(s):
+    s = re.sub(r'(?is)<script.*?</script>|<style.*?</style>', ' ', s or '')
+    s = re.sub(r'(?s)<[^>]+>', ' ', s)
+    s = html_unescape(s)
+    return re.sub(r'\s+', ' ', s).strip()
+
+def html_unescape(s):
+    import html as _html
+    return _html.unescape(s or '')
+
+def fetch_url(url, timeout=25):
+    req = urllib.request.Request(url, headers={
+        'User-Agent': 'Mozilla/5.0 K-AML-News/2.9'
+    })
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read()
+
+def parse_fsc_rss():
+    """금융위원회 공식 RSS 직접 수집"""
+    data = fetch_url(FSC_RSS_URL)
+    root = ET.fromstring(data)
+    out = []
+    for it in root.findall('.//item')[:150]:
+        title = clean_title(it.findtext('title') or '')
+        link = (it.findtext('link') or '').strip()
+        date = (it.findtext('pubDate') or '').strip()
+        if not title or not official_relevant(title):
+            continue
+        source_name = 'FIU' if ('FIU' in title.upper() or '금융정보분석원' in title) else '금융위원회'
+        out.append({
+            'region': '공식자료',
+            'query': source_name,
+            'official_source': source_name,
+            'title': title,
+            'source': source_name,
+            'date': date,
+            'link': link or '#',
+            'tags': classify(title),
+            'collection_method': 'direct_rss',
+        })
+    return out
+
+def parse_fiu_page(num):
+    """FIU 보도자료 상세 페이지를 직접 읽어 제목/게시일을 추출"""
+    url = FIU_VIEW_URL.format(num=num)
+    try:
+        raw = fetch_url(url, timeout=12).decode('utf-8', errors='ignore')
+    except Exception:
+        return None
+
+    # 존재하지 않는 글/안내 팝업 계열은 제외
+    if '보도자료' not in raw:
+        return None
+
+    # og:title 우선, 없으면 h태그/문서 제목 계열을 보조로 사용
+    title = ''
+    pats = [
+        r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:title["\']',
+        r'<h[1-3][^>]*>(.*?)</h[1-3]>',
+        r'<title[^>]*>(.*?)</title>',
+    ]
+    for pat in pats:
+        m = re.search(pat, raw, re.I | re.S)
+        if m:
+            cand = strip_html(m.group(1))
+            if cand and cand not in ('금융정보분석원', '보도자료'):
+                title = cand
+                break
+
+    # 본문에서 "[보도자료]" 제목이 더 잘 잡히는 경우 보정
+    text = strip_html(raw)
+    m2 = re.search(r'(\[보도자료\][^.]{8,180})', text)
+    if m2:
+        cand = m2.group(1).strip()
+        if len(cand) > len(title):
+            title = cand
+
+    if not title or not official_relevant(title):
+        return None
+
+    date = ''
+    dm = re.search(r'(20\d{2})[.\-/년]\s*(\d{1,2})[.\-/월]\s*(\d{1,2})', text)
+    if dm:
+        date = f"{dm.group(1)}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}T00:00:00+09:00"
+
+    return {
+        'region': '공식자료',
+        'query': 'FIU',
+        'official_source': 'FIU',
+        'title': clean_title(title),
+        'source': 'FIU',
+        'date': date,
+        'link': url,
+        'tags': classify(title),
+        'collection_method': 'direct_page',
+    }
+
+def fetch_fiu_direct():
+    out = []
+    # 최근 구간 우선. 90일 보관이므로 과도한 전체 스캔은 하지 않음.
+    for num in range(FIU_SCAN_MAX, FIU_SCAN_MIN - 1, -1):
+        item = parse_fiu_page(num)
+        if item:
+            out.append(item)
+        # 기관 사이트 부하를 줄이기 위해 간격을 둠
+        time.sleep(0.10)
+    return out
+
+def official_relevant(title):
+    t = (title or '').lower()
+    return any(k.lower() in t for k in OFFICIAL_KEEP)
+
+def fetch_official_source(source_name, query):
+    """Collect official institution materials via Google News RSS domain-restricted search."""
+    params = urllib.parse.urlencode({
+        'q': query, 'hl': 'ko', 'gl': 'KR', 'ceid': 'KR:ko'
+    })
+    url = 'https://news.google.com/rss/search?' + params
+    req = urllib.request.Request(url, headers={
+        'User-Agent': 'Mozilla/5.0 K-AML-News/2.9'
+    })
+    with urllib.request.urlopen(req, timeout=25) as resp:
+        data = resp.read()
+    root = ET.fromstring(data)
+    out = []
+    for it in root.findall('.//item')[:100]:
+        raw_title = it.findtext('title') or ''
+        title = clean_title(raw_title)
+        if not title or not official_relevant(title):
+            continue
+        out.append({
+            'region': '공식자료',
+            'query': source_name,
+            'official_source': source_name,
+            'title': title,
+            'source': source_name,
+            'date': it.findtext('pubDate') or '',
+            'link': it.findtext('link') or '#',
+            'tags': classify(title),
+        })
+    return out
+
 def key_title(s):
     return re.sub(r'[^0-9a-z가-힣]+','', (s or '').lower())
 
@@ -144,16 +316,55 @@ def main():
             print('ERROR', name, e)
         time.sleep(0.4)
 
-    # 기존 저장 뉴스도 합쳐 최근 90일치를 유지
+    official_new = []
+    official_status = []
+
+    # 1) 금융위원회 공식 RSS 직접 수집
+    try:
+        items = parse_fsc_rss()
+        official_new.extend(items)
+        official_status.append({'feed': '금융위원회 공식 RSS', 'ok': True, 'count': len(items), 'method': 'direct_rss'})
+        print('OFFICIAL DIRECT FSC', len(items))
+    except Exception as e:
+        official_status.append({'feed': '금융위원회 공식 RSS', 'ok': False, 'count': 0, 'error': str(e)[:180], 'method': 'direct_rss'})
+        print('OFFICIAL DIRECT FSC ERROR', e)
+
+    # 2) FIU 공식 보도자료 상세 페이지 직접 수집
+    try:
+        items = fetch_fiu_direct()
+        official_new.extend(items)
+        official_status.append({'feed': 'FIU 공식 페이지', 'ok': True, 'count': len(items), 'method': 'direct_page'})
+        print('OFFICIAL DIRECT FIU', len(items))
+    except Exception as e:
+        official_status.append({'feed': 'FIU 공식 페이지', 'ok': False, 'count': 0, 'error': str(e)[:180], 'method': 'direct_page'})
+        print('OFFICIAL DIRECT FIU ERROR', e)
+
+    # 3) 금감원 및 직접수집 누락 보완용 Google News 공식도메인 검색
+    #    직접수집 결과와 제목 기준으로 중복제거되므로 보조 경로로만 사용됩니다.
+    for source_name, query in OFFICIAL_QUERIES:
+        try:
+            items = fetch_official_source(source_name, query)
+            official_new.extend(items)
+            official_status.append({'feed': source_name + ' 보조검색', 'ok': True, 'count': len(items), 'method': 'domain_search'})
+            print('OFFICIAL FALLBACK', source_name, len(items))
+        except Exception as e:
+            official_status.append({'feed': source_name + ' 보조검색', 'ok': False, 'count': 0, 'error': str(e)[:180], 'method': 'domain_search'})
+            print('OFFICIAL FALLBACK ERROR', source_name, e)
+        time.sleep(0.25)
+
+    # 기존 저장 데이터를 합쳐 최근 90일치를 유지
     existing = []
+    existing_official = []
     p = Path('news.json')
     if p.exists():
         try:
-            existing = json.loads(p.read_text(encoding='utf-8')).get('items', [])
+            old = json.loads(p.read_text(encoding='utf-8'))
+            existing = old.get('items', [])
+            existing_official = old.get('official_items', [])
         except Exception:
             existing = []
+            existing_official = []
 
-    merged = all_items + existing
     cutoff = datetime.now(timezone.utc) - timedelta(days=90)
 
     def parse_dt(s):
@@ -174,33 +385,47 @@ def main():
             except Exception:
                 return None
 
-    # 90일보다 오래된 뉴스 제거 + 정확 중복 제거
-    seen = set()
-    deduped = []
-    for x in merged:
-        d = parse_dt(x.get('date'))
-        if d and d < cutoff:
-            continue
-        k2 = key_title(x.get('title',''))
-        lk = x.get('link','')
-        if lk and ('LINK', lk) in seen:
-            continue
-        if k2 and ('TITLE', k2) in seen:
-            continue
-        if lk: seen.add(('LINK', lk))
-        if k2: seen.add(('TITLE', k2))
-        deduped.append(x)
+    def clean_collection(rows, limit):
+        seen = set()
+        deduped = []
+        for x in rows:
+            d = parse_dt(x.get('date'))
+            if d and d < cutoff:
+                continue
+            k2 = key_title(x.get('title',''))
+            lk = x.get('link','')
+            # Google News redirect links can differ for the same official title,
+            # so title is the primary dedupe key here.
+            if k2 and ('TITLE', k2) in seen:
+                continue
+            if lk and ('LINK', lk) in seen:
+                continue
+            if k2: seen.add(('TITLE', k2))
+            if lk: seen.add(('LINK', lk))
+            deduped.append(x)
+        deduped.sort(
+            key=lambda x: parse_dt(x.get('date')) or datetime(1970,1,1,tzinfo=timezone.utc),
+            reverse=True
+        )
+        return deduped[:limit]
 
-    deduped.sort(key=lambda x: parse_dt(x.get('date')) or datetime(1970,1,1,tzinfo=timezone.utc), reverse=True)
+    deduped = clean_collection(all_items + existing, 1200)
+    official_deduped = clean_collection(official_new + existing_official, 400)
 
     payload = {
         'updated_at': datetime.now(timezone.utc).isoformat(),
         'retention_days': 90,
         'feed_status': status,
+        'official_status': official_status,
         'count': len(deduped),
-        'items': deduped[:1200]
+        'official_count': len(official_deduped),
+        'items': deduped,
+        'official_items': official_deduped
     }
-    Path('news.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    Path('news.json').write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        encoding='utf-8'
+    )
 
 if __name__ == '__main__':
     main()
