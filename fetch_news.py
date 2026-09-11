@@ -166,7 +166,7 @@ def html_unescape(s):
 
 def fetch_url(url, timeout=10):
     req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 K-AML-News/4.0'
+        'User-Agent': 'Mozilla/5.0 K-AML-News/4.1'
     })
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
@@ -199,6 +199,8 @@ def parse_fsc_rss():
     return out
 
 
+
+FILE_EXT_RE = re.compile(r'\.(?:pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx|zip)(?:[?#].*)?$', re.I)
 
 def is_file_link(url):
     if not url:
@@ -268,7 +270,7 @@ def fetch_official_source(source_name, query):
         'q': query, 'hl': 'ko', 'gl': 'KR', 'ceid': 'KR:ko'
     })
     url = 'https://news.google.com/rss/search?' + params
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.0'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.1'})
     with urllib.request.urlopen(req, timeout=10) as resp:
         data = resp.read()
     root = ET.fromstring(data)
