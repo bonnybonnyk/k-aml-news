@@ -195,14 +195,15 @@ function sameEvent(a,b){
   // 제목 자체가 꽤 비슷한 경우
   if(jac>=0.42) return true;
 
-  // 핵심 범죄 + 행위가 같고, 금액/연령/관계 같은 구체 단서가 하나 더 겹치는 경우
-  if(crime>=1 && action>=1 && (nums>=1 || ages>=1 || roles>=1) && jac>=0.16) return true;
+  // 5.8.1: 서로 다른 언론사가 제목을 크게 바꿔 쓴 동일사건 회수.
+  // 범죄유형+행위가 같고 구체 단서가 겹칠 때만 완화한다. 숫자 충돌은 위에서 이미 차단한다.
+  if(crime>=1 && action>=1 && (nums>=1 || ages>=1 || roles>=1) && jac>=0.13) return true;
 
-  // 리딩방·보이스피싱 등 동일 범죄에서 구체 단서가 2개 이상 겹치면 제목 표현이 달라도 같은 사건
-  if(crime>=1 && (nums+ages+roles)>=2 && jac>=0.12) return true;
+  // 같은 범죄에서 금액/연령/관계 단서가 2개 이상 같으면 표현 차이가 커도 묶는다.
+  if(crime>=1 && (nums+ages+roles)>=2 && jac>=0.09) return true;
 
-  // 핵심 범죄 키워드가 2개 이상 겹치고 인물/형량/금액 단서가 있는 경우
-  if(crime>=2 && (nums+ages+roles)>=1 && jac>=0.12) return true;
+  // 핵심 범죄 키워드가 2개 이상 겹치고 구체 단서가 있으면 같은 사건으로 본다.
+  if(crime>=2 && (nums+ages+roles)>=1 && jac>=0.09) return true;
 
   return false;
 }

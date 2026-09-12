@@ -478,6 +478,26 @@ def v49_practical_aml(title):
 
     return False
 
+
+# ---------- 5.8.1 precision guard ----------
+# 발견 범위를 넓힌 5.8의 장점은 유지하되, 제목만 보고도 명백한 오탐인 경우만 좁게 제거한다.
+def v581_obvious_noise(title):
+    t = title or ''
+    low = t.lower()
+    # 상품권이 등장해도 살인/강력범죄의 동기·은폐 수단일 뿐 AML/금융범죄 흐름이 아니면 제외.
+    if re.search(r'살인|살해|시신|흉기|납치|강도살인', t) and re.search(r'상품권', t):
+        if not re.search(r'자금세탁|돈세탁|범죄수익|현금화|계좌|송금|이체|지급정지|보이스피싱|금융사기', t):
+            return True
+    # 포상/캠페인/예방주간 자체가 중심인 홍보성 기사. 단, 실제 통제·시스템 변화가 제목에 있으면 유지.
+    if re.search(r'포상|예방\s*주간|예방\s*캠페인|홍보대사|예방\s*교육', t):
+        if not re.search(r'지급정지|거래정지|정보공유|시스템|플랫폼|가이드라인|지침|제도|개정|의무|차단|동결|신속대응|AI|인공지능', t, re.I):
+            return True
+    # 단순 개인 피해담/주의 환기형 보이스피싱 기사. 수법·자금흐름·통제 변화가 있으면 유지.
+    if re.search(r'하마터면|당할\s*뻔|피해\s*예방|주의하세요|조심하세요', t) and re.search(r'보이스피싱|피싱', t):
+        if not re.search(r'대포통장|외화계좌|상품권|가상자산|코인|계좌|송금|현금화|지급정지|수법|조직|검거|적발|차단|시스템', t):
+            return True
+    return False
+
 # ---------- 5.5 AML 실무정보 통과 경로 ----------
 # 범죄 사건만 찾는 기존 v4.9 게이트는 그대로 유지하고,
 # 금융회사 AML 운영·제도변화·신종수법·차단체계 같은 업무 참고정보를 별도로 살린다.
@@ -1060,6 +1080,8 @@ def main():
         if not category and practical_ok:
             category = v56_practical_category(context0)
         if not category:
+            continue
+        if v581_obvious_noise(title0):
             continue
         if not (v49_practical_aml(title0) or v49_practical_aml(context0) or practical_ok):
             continue
