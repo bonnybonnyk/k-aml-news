@@ -75,7 +75,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.5'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.7'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -248,6 +248,39 @@ def low_quality_news_source(title, source_name, domain):
 
     return False
 
+
+# v4.7 기사성 필터: AML 소재 자체(상품권 현금화/불법도박/USDT 등)는 차단하지 않는다.
+# 대신 모집·판매·가입유도 문구와 비기사성 영역을 차단한다.
+V47_NONARTICLE_HOST_PREFIXES=['stock.','search.','m.stock.','finance.']
+V47_NONARTICLE_PATH_TOKENS=['/search','/board','/bbs','/community','/user','/profile']
+V47_SOLICITATION_TERMS=[
+    '팝니다','삽니다','판매합니다','구매합니다','가입문의','가입 문의','문의주세요',
+    '추천인 코드','추천코드','가입 코드','첫충전','재충전','롤링','페이백',
+    '무료머니','보너스 지급','충전 이벤트','가입 이벤트'
+]
+V47_CONTACT_TERMS=['텔레그램','오픈채팅','카톡 문의','카카오톡 문의']
+
+def v47_is_nonarticle(title, source_url, source_domain):
+    t=title or ''
+    d=(source_domain or '').lower()
+    u=(source_url or '').lower()
+    if any(d.startswith(p) for p in V47_NONARTICLE_HOST_PREFIXES):
+        return True
+    try:
+        path=urllib.parse.urlparse(u).path.lower()
+    except Exception:
+        path=''
+    if any(tok in path for tok in V47_NONARTICLE_PATH_TOKENS):
+        return True
+    if re.search(r'@[A-Za-z0-9_]{4,}',t):
+        return True
+    if any(tok in t for tok in V47_SOLICITATION_TERMS):
+        return True
+    # 연락수단은 단독 언급이 기사에 나올 수도 있으므로 판매/문의 문맥과 결합할 때 차단
+    if any(c in t for c in V47_CONTACT_TERMS) and re.search(r'(문의|판매|구매|가입|코드|연락)',t):
+        return True
+    return False
+
 def fetch_query(name, query):
     # 최신 발견용: 최근 24시간만 재검색
     params = urllib.parse.urlencode({
@@ -267,6 +300,8 @@ def fetch_query(name, query):
         # v4.5: Google News에 잡혔다는 이유만으로 채택하지 않는다.
         # 국내뉴스는 신뢰 출처 목록을 먼저 통과해야 하고, 그 뒤 광고/SEO 필터를 적용한다.
         if not trusted_news_source(source_name, source_domain):
+            continue
+        if v47_is_nonarticle(title, source_url, source_domain):
             continue
         if low_quality_news_source(title, source_name, source_domain):
             continue
@@ -496,6 +531,8 @@ def main():
         src_domain = x.get('source_domain','')
         if not trusted_news_source(src_name, src_domain):
             continue
+        if v47_is_nonarticle(x.get('title',''), x.get('source_url',''), src_domain):
+            continue
         if low_quality_news_source(x.get('title',''), src_name, src_domain):
             continue
         merged_news.append(x)
@@ -503,7 +540,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.5'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.3'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -534,7 +571,7 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '4.5',
+        'official_backfill_version': '4.3',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'count': len(news),
         'official_count': len(official),

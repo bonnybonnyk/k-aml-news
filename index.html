@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>K-AML NEWS v4.5</title>
+<title>K-AML NEWS v4.7</title>
 <style>
 :root{--bg:#07101e;--panel:#0d192b;--panel2:#11223a;--text:#edf4ff;--muted:#8fa3bd;--line:#1d3351;--accent:#74a8ff;--hot:#ffb55f}
 *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#07101e,#091426);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif}
@@ -19,12 +19,14 @@
 .point{color:#9fb3cc;font-size:12px;line-height:1.55;margin-top:12px}.point b{color:#d9e7fa}.related-toggle{margin-top:11px;border:0;background:transparent;color:#8fb7ff;padding:0;cursor:pointer;font-weight:700}.related-list{display:none;border-top:1px solid var(--line);margin-top:10px;padding-top:8px}.related-list.open{display:block}.related-item{padding:7px 0;font-size:12px}.related-item a{color:#bed6fa;text-decoration:none}
 .empty{grid-column:1/-1;text-align:center;padding:55px;color:#849ab6;border:1px dashed var(--line);border-radius:16px}
 @media(max-width:760px){.grid{grid-template-columns:1fr}.hero h1{font-size:28px}.toolbar{grid-template-columns:1fr}.btn{height:43px}}
+
+.searchWrap{position:relative;width:100%}.searchWrap .search{width:100%;padding-right:54px}.searchBtn{position:absolute;right:5px;top:5px;width:40px;height:40px;border:0;background:transparent;color:#dbeafe;font-size:18px;cursor:pointer;border-radius:10px}.searchBtn:active{background:#132844}
 </style>
 </head>
 <body>
 <div class="wrap">
 <section class="hero">
-  <div class="eyebrow">K-AML NEWS · v4.5</div>
+  <div class="eyebrow">K-AML NEWS · v4.7</div>
   <h1>🇰🇷 국내 AML 뉴스 모니터링</h1>
   <p>자금세탁·범죄수익·가상자산·보이스피싱·환치기·마약·도박·탈세·FIU 관련 뉴스를 모읍니다. 사건·수사·적발·제재·범죄수법·자금흐름·제도변경 중심으로 수집하며, 예방 캠페인·교육·보험지원·사회공헌·MOU·수상·행사성 기사는 자동 제외합니다.</p>
   <div class="status"><span id="dot" class="dot"></span><span id="status">news.json 확인 중</span></div><div id="lastCollected" style="margin-top:7px;color:#7f96b2;font-size:12px"></div>
@@ -33,7 +35,7 @@
     <button id="tabOfficial" class="tab">🏛️ 공식자료</button>
   </div>
   <div id="officialNote" class="official-note" style="display:none">금융위·FIU 공식자료는 최근 90일 기준입니다. 국내뉴스는 신뢰 가능한 국내 언론·전문매체 출처를 우선 허용한 뒤 광고·카지노·SEO성 콘텐츠를 추가로 제외합니다.</div>
-  <div class="toolbar"><input id="search" class="search" placeholder="기사 제목·언론사 검색"><button id="refresh" class="btn">새로고침</button></div>
+  <div class="toolbar"><div class="searchWrap"><input id="search" class="search" placeholder="기사 제목·언론사 검색"><button id="searchBtn" class="searchBtn" type="button" aria-label="검색">🔍</button></div></div>
 </section>
 <div class="section"><div class="label">보기</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div class="section"><div class="label">분류</div><div id="cats" class="chips"></div></div>
 <div class="summary" id="summary"></div>
@@ -175,8 +177,9 @@ function setMode(mode){
  drawCats(); render();
 }
 drawCats();
-$('#search').oninput=render;
-$('#refresh').onclick=load;
+$('#searchBtn').onclick=render;
+$('#search').onkeydown=(e)=>{if(e.key==='Enter'){e.preventDefault();e.target.blur();render();}};
+
 $('#todayOnly').onclick=()=>{TODAY=!TODAY;$('#todayOnly').classList.toggle('active',TODAY);render()};
 $('#tabNews').onclick=()=>setMode('news');
 $('#tabOfficial').onclick=()=>setMode('official');
