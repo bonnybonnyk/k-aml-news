@@ -102,8 +102,8 @@ button,input{font:inherit}
   .title{font-size:16px}
 }
 </style>
-  <meta name="app-version" content="5.5">
-  <!-- K-AML NEWS build 5.5 -->
+  <meta name="app-version" content="5.6">
+  <!-- K-AML NEWS build 5.6 -->
 </head>
 <body>
 <div class="wrap">
@@ -143,7 +143,7 @@ button,input{font:inherit}
 let NEWS=[], OFFICIAL=[], MODE='news', CAT='전체', TODAY=false;
 let LAST_CHECKED_AT=null, LAST_DATA_UPDATED=null;
 const AUTO_CHECK_MS=30*60*1000;
-const CATS=['전체','자금세탁','가상자산','사기','불법사금융','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','AML 실무·제도','제재·테러자금'];
+const CATS=['전체','자금세탁','가상자산','사기','불법사금융','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','제재·테러자금'];
 const $=s=>document.querySelector(s);
 function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function isToday(d){let x=new Date(d),n=new Date();return x.getFullYear()===n.getFullYear()&&x.getMonth()===n.getMonth()&&x.getDate()===n.getDate()}

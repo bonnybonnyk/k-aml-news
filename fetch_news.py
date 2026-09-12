@@ -365,14 +365,6 @@ def infer_news_category(title):
     if wallet and wallet_context:
         return '지갑·해외거래소'
 
-    # AML 사건 자체는 아니더라도 실무 운영/통제 변화로 가치가 큰 정보
-    if re.search(r'사망자\s*명의|금융사기.{0,20}(차단|대응)|지급정지|거래정지|신속차단|정보공유', t):
-        return 'AML 실무·제도'
-    if re.search(r'fds|aml\s*시스템|자금세탁.{0,20}(시스템|ai|자동화|연계|모니터링)|str.{0,20}(자동|시스템|보고서)', t):
-        return 'AML 실무·제도'
-    if re.search(r'가상계좌|pg사|전자금융', t) and re.search(r'재판매|보이스피싱|도박|자금세탁|범죄|통제|기준', t):
-        return 'AML 실무·제도'
-
     return None
 
 
@@ -500,6 +492,40 @@ def v55_practical_info(text):
         return True
     return False
 
+def v56_practical_category(text):
+    """5.6: 'AML 실무·제도'라는 별도 카테고리 없이 기존 업무 카테고리에 배치한다."""
+    t = text or ''
+    low = t.lower()
+    # 특정 범죄/수법이 명확하면 그 카테고리를 우선한다.
+    if re.search(r'보이스피싱|신종피싱|전화금융사기|대포통장|사기이용계좌', t):
+        return '보이스피싱'
+    if re.search(r'불법사금융|불법사채|고리사채|불법대부', t):
+        return '불법사금융'
+    if re.search(r'환치기|불법\s*외환|외국환|재산도피|불법송금', t):
+        return '환치기·외환'
+    if re.search(r'불법도박|도박사이트|온라인도박', t):
+        return '불법도박'
+    if re.search(r'마약|필로폰|코카인|대마', t):
+        return '마약자금'
+    if re.search(r'횡령|배임|회삿돈|회사자금|법인자금|공금', t):
+        return '횡령·배임'
+    if re.search(r'탈세|조세포탈|역외탈세|탈루', t):
+        return '탈세'
+    if re.search(r'테러자금|제재\s*회피|대북제재|제재위반', t):
+        return '제재·테러자금'
+    # 가상자산 제도/사업자/해외거래소 실무정보는 가상자산 쪽으로.
+    if V55_CRYPTO_CONTROL.search(low):
+        if re.search(r'트래블룰|vasp|가상자산사업자|미신고|신고|특금법|특정금융정보법', low):
+            return '트래블룰'
+        return '가상자산 AML'
+    # STR/FIU/AML 시스템, 정보공유, 지급정지·거래차단 등은 FIU·STR로 묶는다.
+    if V55_AML_OPS.search(low) or re.search(r'사망자\s*명의|지급정지|거래정지|신속차단|정보공유|fds', low):
+        return 'FIU·STR'
+    # PG/가상계좌 등 통제정보는 범죄 맥락이 없으면 FIU·STR이 가장 가까운 업무 분류.
+    if re.search(r'pg사|가상계좌|전자금융', low):
+        return 'FIU·STR'
+    return 'FIU·STR'
+
 def fetch_query(name, query, window_days=1):
     # 기본 뉴스는 최근 24시간, 5.5 실무정보는 최초 1회 90일 백필 가능
     params = urllib.parse.urlencode({
@@ -530,7 +556,7 @@ def fetch_query(name, query, window_days=1):
         if not category:
             category = infer_news_category(context)
         if not category and (v55_practical_info(title) or v55_practical_info(context)):
-            category = 'AML 실무·제도'
+            category = v56_practical_category(context)
         if not category:
             continue
         # 제목만으로 충분하면 그대로 통과. 제목이 짧거나 맥락이 부족한 경우
@@ -943,17 +969,14 @@ def main():
         category = infer_news_category(title0) or infer_news_category(context0)
         practical_ok = v55_practical_info(title0) or v55_practical_info(context0)
         if not category and practical_ok:
-            category = 'AML 실무·제도'
+            category = v56_practical_category(context0)
         if not category:
             continue
         if not (v49_practical_aml(title0) or v49_practical_aml(context0) or practical_ok):
             continue
         x = dict(x)
         x['query'] = category
-        tags = classify(x.get('title',''))
-        if category == 'AML 실무·제도' and 'AML 실무·제도' not in tags:
-            tags.append('AML 실무·제도')
-        x['tags'] = tags
+        x['tags'] = classify(x.get('title',''))
         merged_news.append(x)
     news = dedupe(merged_news, 1200)
 
