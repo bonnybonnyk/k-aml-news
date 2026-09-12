@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T20:17:46.035002+00:00",
+  "updated_at": "2026-09-12T20:34:44.094479+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -181,7 +181,7 @@
     {
       "feed": "실무:PG·결제대행 AML",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,14 +242,26 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 27,
       "method": "body_relevance"
     },
     {
@@ -265,6 +277,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -277,7 +301,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -286,18 +310,6 @@
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
       "method": "official_board"
     },
     {
@@ -313,15 +325,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -343,7 +355,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 538,
+  "count": 518,
   "official_count": 31,
   "items": [
     {
@@ -682,21 +694,6 @@
     },
     {
       "region": "국내",
-      "query": "FIU·STR",
-      "title": "빚 10억에 500억 가짜 상품권…파주 냉동창고 사건 계획범죄 정황",
-      "source": "네이트",
-      "source_url": "https://news.nate.com",
-      "source_domain": "news.nate.com",
-      "date": "Thu, 10 Sep 2026 11:27:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0wZFZGQmh4MV9KdUxxNWFrdkIzcTJPaGlCN3RZZ0FiOVM0MTR4c3V0bHljeUFHWXBtNklVZDNHeWp1UWpDbTdRdXlVV3NodHM4dUZJ?oc=5",
-      "tags": [
-        "AML"
-      ],
-      "description": "빚 10억에 500억 가짜 상품권…파주 냉동창고 사건 계획범죄 정황 네이트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "자금세탁",
       "title": "\"신한은행 자금세탁방지 노하우 배우러 왔다\"",
       "source": "v.daum.net",
@@ -739,21 +736,6 @@
         "AML"
       ],
       "description": "반복되는 고객확인의무 위반...강태영 농협은행 '내부통제' 실효성 도마 newsroad.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "\"상품권 확인해달라\" 60대 유인해 냉동창고 가둔 사장…경찰, '상품권 사기' 연관성 수사",
-      "source": "lawtalknews.co.kr",
-      "source_url": "https://lawtalknews.co.kr",
-      "source_domain": "lawtalknews.co.kr",
-      "date": "Thu, 10 Sep 2026 05:43:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBFeWZIMXo5WVJITy12UWVHSkNtQTVELTBmZVlhalJOZFlRRngzYzEyT2xtcUV1ZjFFelBYbXNmcm9Db3dtRWhxY00tcnA2SXZ4cnhqUjZZalpNdw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "\"상품권 확인해달라\" 60대 유인해 냉동창고 가둔 사장…경찰, '상품권 사기' 연관성 수사 lawtalknews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -961,36 +943,6 @@
     },
     {
       "region": "국내",
-      "query": "FIU·STR",
-      "title": "피살 여성 왜 낯선 파주 카페로 갔나…경찰, 상품권 사기 수사도",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Tue, 08 Sep 2026 08:55:50 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9wNzZvcmNfTUgtTEliVWlFSnBFUTZOSXNTT2Q2MHE1NkliYkF5eVZuOVNveWlSbnVRcGs1aGJabUwxdWhQbXJST3lXQnhxakk?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "피살 여성 왜 낯선 파주 카페로 갔나…경찰, 상품권 사기 수사도 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "도천동 통우회, 추석맞이 상품권 기탁",
-      "source": "hansannews.com",
-      "source_url": "https://www.hansannews.com",
-      "source_domain": "www.hansannews.com",
-      "date": "Tue, 08 Sep 2026 08:00:51 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sRHQ5R0JMMTF3UFZXa1ByUHlwQVdPbFNSeTVCdV9VLVl3c2RoOEc2eUdXUUxBQno0NVNtR3hISkJxUFNRMW1RaXNHb1BhRTVRbl9sb0kyUWd3anRoLVdJNGxyb20ydHhrQmctVTVn?oc=5",
-      "tags": [
-        "AML"
-      ],
-      "description": "도천동 통우회, 추석맞이 상품권 기탁 hansannews.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "자금세탁",
       "title": "\"북한 '자금세탁 목적' 코인 몰수\"…'현상금 700만 달러' 심현섭 정체",
       "source": "news.sbs.co.kr",
@@ -1001,21 +953,6 @@
         "제재·테러자금",
         "자금세탁"
       ]
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "파주 카페 냉동 컨테이너서 60대 여성 숨진 채 발견...경찰, 위조 상품권 사기까지 수사 확대",
-      "source": "메트로신문",
-      "source_url": "https://www.metroseoul.co.kr",
-      "source_domain": "www.metroseoul.co.kr",
-      "date": "Tue, 08 Sep 2026 04:42:07 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9nUlZ4ZmNRU2NUWnNTd1FLclZsNnFXX0VRbUVsNXRhZVNRVEFlTHJLdHVBQ2tZckxXRjJYRWJPbkFNQkV0WlJJYTBBSDVsQ00wTFZidTR4aFVPci1Sb1Jldg?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "파주 카페 냉동 컨테이너서 60대 여성 숨진 채 발견...경찰, 위조 상품권 사기까지 수사 확대 메트로신문",
-      "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
@@ -1069,21 +1006,6 @@
         "자금세탁"
       ],
       "description": "금융위, 가상자산 자금세탁 추적 강화…분석 솔루션에 19억원 증액 블루밍비트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "파주 카페 사망 사건, 상품권 사기로 수사 확대…운영자 구속",
-      "source": "콜뉴스24",
-      "source_url": "https://www.callnews.co.kr",
-      "source_domain": "www.callnews.co.kr",
-      "date": "Mon, 07 Sep 2026 23:56:46 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE10THJyXzJUSXl0amhrTVNtWTdrOFJWSnIzX2Vhd0lHeHdxZGV4Vm1IeWFlcWVEeUlGVFYxUHYtZmRHejhFcUQzUWw5ZE9HNnN5R2V0RGZyRjY0MnR2UTRfV2ZHWG1ielBaRlp0OQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "파주 카페 사망 사건, 상품권 사기로 수사 확대…운영자 구속 콜뉴스24",
       "collection_method": "google_news_24h"
     },
     {
@@ -4182,21 +4104,6 @@
     },
     {
       "region": "국내",
-      "query": "FIU·STR",
-      "title": "“상품권 구매실적 쌓으면 대출”…사기 주의보",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Sun, 09 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE44emtiQmJPS25iX0hyTEpHUU8tQjdKRFlqbURCR2VmY3lSeG1aX1hlOHNaMkViYU9MZVh2S1J5TzZYTlVfdUxaYXQ5RV96ME16OFpxN2g3eU15dEk?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“상품권 구매실적 쌓으면 대출”…사기 주의보 KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "보이스피싱",
       "title": "상품권 사면 대출?...“100% 보이스피싱입니다”",
       "source": "hidomin.com",
@@ -4853,21 +4760,6 @@
     },
     {
       "region": "국내",
-      "query": "불법사금융",
-      "title": "서울시, 상품권 거래 빙자한 변종 불법사금융 집중 기획수사·단속 실시",
-      "source": "환경포커스",
-      "source_url": "https://ecofocus.co.kr",
-      "source_domain": "ecofocus.co.kr",
-      "date": "Fri, 31 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mYjJMcW1GZGlYZW12VEZ4dldPakFybTFPdy1lZzVkQ3lvbDFIam9HQmY4RTIyNW1fb1hDajVINXkwUVpFa0gxS3FNY09lUW5KVTZEMU5HQVVRUEpYay1IVw?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "서울시, 상품권 거래 빙자한 변종 불법사금융 집중 기획수사·단속 실시 환경포커스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "가상자산 AML",
       "title": "[단독]드디어 불법 코인거래소 차단된다…방미심위 \"사기사이트처럼 심의 지정\"",
       "source": "아시아경제",
@@ -4880,21 +4772,6 @@
         "사기"
       ],
       "description": "[단독]드디어 불법 코인거래소 차단된다…방미심위 \"사기사이트처럼 심의 지정\" 아시아경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "상품권 거래로 위장한 불법사채…서울시 집중단속 나서",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Thu, 30 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00M3FTcjdYbUpGXzhhMlFobWlIQ012VlhCQjMtaFh2VFlXY1AtbHRmZFpIMFA0TTMtbHk0dFA1NFJ4MTlfZjRjSFhMNnFRODV0elV2SEZmSm1BbGPSAWBBVV95cUxPR01QMDBtdDRTSGNtd1JTU0pNcllyajUtMEdudjZaTTQzZE9xR0xMTlNGNE14TV9Bd2piN3FOT3p5NzFpdjRDYVZRT29sUGRkVjEyR0dRQTRnZWZFamNnSlc?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "상품권 거래로 위장한 불법사채…서울시 집중단속 나서 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -5490,51 +5367,6 @@
         "사기"
       ],
       "description": "‘eSIM 투자사기’ 전국 확산…강원서도 수천만원대 피해 잇따라 강원일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "상품권 거래 가장한 불법사금융업자 101명 검거",
-      "source": "knn.co.kr",
-      "source_url": "https://news.knn.co.kr",
-      "source_domain": "news.knn.co.kr",
-      "date": "Tue, 21 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5vb29aZGoyc2VrNV9XVlBYZEVQR1ZVSUR4UXRMNXo5cmRnM1FDUy1Sc0dGbHFLc2s5X01IbGIxem9lTUpSSjdJM0hlNktCbGZ5NnYzeA?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "상품권 거래 가장한 불법사금융업자 101명 검거 knn.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "부산경찰, ‘상품권 예약 불법사금융’ 적발… 전국 첫 처벌기준 마련",
-      "source": "국민일보",
-      "source_url": "https://www.kmib.co.kr",
-      "source_domain": "www.kmib.co.kr",
-      "date": "Tue, 21 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9TSnZIbkh3cHZsOU1tOWgxcWpDRm1fN0NKdE1lTU1DOWEyNV95R3VldVpkbU1Ta1l1dUpsSWM0bEZuTTZZWmpuaG84dmdDZUY3c1Q2dnUwUXltaWJkblZ3cHNZcllYOTDSAWxBVV95cUxOZjZoaXFudHFzdGdTWVl3elJ0SzBXdF9rTlVKWjRJVVJ6ZE1XaWItT1FMVVlSanFFdEJtY0VUaHhYQVVlS0VaMExid2xHZWx2Z2NUWjdvb0RoM1UtMVNWNWtDc1NKUndDcnlrOXc?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "부산경찰, ‘상품권 예약 불법사금융’ 적발… 전국 첫 처벌기준 마련 국민일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "상품권 예약판매 가장한 불법사금융 일당 무더기 적발… 5명 구속",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Tue, 21 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFByMk52OGxkMGZOTUNsRnAzZEVhZld0OEhLTm54V1VGSTBDZ2dSaHNiTm53aUpxai1rcmlPMjBXWjdzWkNiQ3c?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "상품권 예약판매 가장한 불법사금융 일당 무더기 적발… 5명 구속 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -6324,21 +6156,6 @@
     },
     {
       "region": "국내",
-      "query": "투자사기",
-      "title": "“AI로 인건비 줄여 고수익”이라더니…또 터진 ‘상품권 투자 사기’",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Sat, 04 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE54ZGRPQ1RNS1NZZlJ6YlNPeVh0bXMxdTg1WllKLWlJanl6V1lOUmRBbkVYQmt4bS1ZZkZCNnZNWG1iNTg0OTdXTkZGWUFtWjJqR05LUGtsc3loRTA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“AI로 인건비 줄여 고수익”이라더니…또 터진 ‘상품권 투자 사기’ KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "범죄수익",
       "title": "이준석 \"사이버렉카 범죄수익 몰수\" 개정안 발의",
       "source": "연합뉴스TV",
@@ -6658,37 +6475,6 @@
     },
     {
       "region": "국내",
-      "query": "FIU·STR",
-      "title": "상품권 사기로 구속된 30대男…연 3200% 이자 사채 피해자였다",
-      "source": "서울신문",
-      "source_url": "https://www.seoul.co.kr",
-      "source_domain": "www.seoul.co.kr",
-      "date": "Wed, 01 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBKZjJLYk9pVnNFT3U5VzlnLU1RbXo3T1ktMFR5S0NhQzhiN0Z0clJiTHU5RVJMSGFNUXg0X2VEWElCUUpqYVdjMjBoTjRPMVpvcDV4LTl2RjVqOEJQcWN2OF9OaDBHVk1GaG11X3dUNng2bkR5ellUaFlJdw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "상품권 사기로 구속된 30대男…연 3200% 이자 사채 피해자였다 서울신문",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "연 3200% ‘상품권 사채’ 피해자 구속 취소…검찰 “사기 아닌 불법사금융”",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Wed, 01 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9tMnltb21tSm04ZFFZMFR3NEFxOHItNjlMdDQtVU9pZVYtS2dqZVZMTllobXdQQjVvQjJfU3FSYVlRbndJV0xyeU14aEJaY2c?oc=5",
-      "tags": [
-        "불법사금융",
-        "사기"
-      ],
-      "description": "연 3200% ‘상품권 사채’ 피해자 구속 취소…검찰 “사기 아닌 불법사금융” v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "자금세탁",
       "title": "금감원 \"자유적금·외화 계좌로 자금세탁 가능성 차단\"",
       "source": "v.daum.net",
@@ -6716,21 +6502,6 @@
         "자금세탁"
       ],
       "description": "8억대 보이스피싱 피해금, '대형마트 상품권' 거쳐 해외로…자금세탁책 등 49명 무더기 검거 경기신문",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "[자막뉴스] \"돈 안 갚았다 고소\"…'상품권 사기' 구속됐다 풀려난 이유",
-      "source": "news.sbs.co.kr",
-      "source_url": "https://news.sbs.co.kr",
-      "source_domain": "news.sbs.co.kr",
-      "date": "Wed, 01 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1IaFJ6a1lGMXd5cVZqaEdxaDE1UEZUQnFYZDVTQ1Bwd09vVGlIOS1oeDExcVZQSU9vMlBmT1c1QzdILWxwcHVNMUhfaUh4WHl1Zmp6TG5PeUxmTDFfVGhzZURDdzRCVG0xQVHSAWZBVV95cUxOVWtySm5aTkFLblliRUlrSnN1ZXp1dVZDR3Z5ZGFhWnRicXpNa0p6ajNjSE1IYWlYNlZ6VWxtS0ZQanVPbzBTaGNpUXNMMWF4Ym1WRTJaN1VCa3hxTnVKY2pSeVRIU3c?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "[자막뉴스] \"돈 안 갚았다 고소\"…'상품권 사기' 구속됐다 풀려난 이유 news.sbs.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -7340,36 +7111,6 @@
     },
     {
       "region": "국내",
-      "query": "불법사금융",
-      "title": "'상품권 사채'로 수천만원 뜯은 불법사금융업자 송치",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4weVpJYlU5QXJMZDJYWVU2d3k0akVYTjlVYzZEMnZpNHlBYWo3QTIyeXlvVThxbWlNVWtaVmd3WEFwWFBDS1BQU1JuSDJNaWFxdVNIRVhVcTBnSnPSAWBBVV95cUxPaERkbThJVnd5dzlTZjZfaENCd0I1MTR4Yk1nMTZYaklHeUhoMEFWdUVkTE80RFdmRGNjXzhNdFdJejhlNjRXNmhDYmM2TjZHUUtzbkhfcTdHQUZRSDZWQTU?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "'상품권 사채'로 수천만원 뜯은 불법사금융업자 송치 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "‘상품권 사채’로 수천만 원 뜯은 불법사금융업자 검찰행",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBzZ241M2lQdE5EbDYwYVlqY3FPbDB0ZW00UzZVb2RJN1E0RThNbFNORDhoQWdTSDlyMWt5TTNjbnBBREJrSHZtWTN3ZEd0dDE3SHF1SVY3RkFUamc?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "‘상품권 사채’로 수천만 원 뜯은 불법사금융업자 검찰행 KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "트래블룰",
       "title": "수수료 62배 떼고 개인정보까지…미신고 코인거래소 '주의보'",
       "source": "리드경제",
@@ -7765,21 +7506,6 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "상품권 업체 가장해 35억원 세탁한 범죄조직원 11명 검거",
-      "source": "매일경제",
-      "source_url": "https://www.mk.co.kr",
-      "source_domain": "www.mk.co.kr",
-      "date": "Thu, 18 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5VdWdDTURGWm5CVFplRXZQdkVTTjFmajlBZ0dpT1lYMmpFRmFWQUZ0Q0ljLWxmMmVlNHo5OEs3VWs5Uy1BSU1YcXRnMjhwbklJOGozcA?oc=5",
-      "tags": [
-        "AML"
-      ],
-      "description": "상품권 업체 가장해 35억원 세탁한 범죄조직원 11명 검거 매일경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
       "title": "범죄수익→상품권→가상자산…경찰, 피싱조직 돈 ‘35억’ 세탁한 일당 검거",
       "source": "시사저널",
       "source_url": "https://www.sisajournal.com",
@@ -7871,21 +7597,6 @@
         "자금세탁"
       ],
       "description": "급변하는 결제 인프라…자금세탁방지는 어떻게? [태평양의 미래금융] 한국경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "상품권 사채로 연이자 1만8천% 폭리…30대 불법사금융업자 구속",
-      "source": "경기일보",
-      "source_url": "https://www.kyeonggi.com",
-      "source_domain": "www.kyeonggi.com",
-      "date": "Wed, 17 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5FUlhTZlpELXdVMjBEVjRYN01GZWcxbFpXaWZ1d0FPQUFNTmdGR0hNeFRlLU1FX3RRbnk2dHJWeFJ1bVdqdWFoWUFaUmJfUW5YQ1Z0NDZfeHRobmc?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "상품권 사채로 연이자 1만8천% 폭리…30대 불법사금융업자 구속 경기일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -8039,19 +7750,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "FIU",
       "title": "사망자 명의의 불법 금융거래, 사망신고 ‘다음 날’부터 즉시 막는다.",
@@ -8069,6 +7767,19 @@
       "region": "공식자료",
       "query": "보이스피싱",
       "official_source": "금융감독원",
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "title": "2026 범금융권 보이스피싱 예방 주간 개최",
       "source": "금융감독원",
       "date": "2026-09-06T00:00:00+09:00",
@@ -8080,16 +7791,20 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%,피해액 43% 감소 성과",
-      "source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "FIU",
+      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%·피해액 43% 감소 성과",
+      "source": "FIU",
       "date": "2026-09-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226356&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87637?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금",
+        "자금세탁"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
@@ -8123,17 +7838,20 @@
     },
     {
       "region": "공식자료",
-      "query": "자금세탁",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "FIU",
       "title": "FIU, 자금세탁방지 유관기관 협의회 개최",
-      "source": "금융감독원",
+      "source": "FIU",
       "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=225288&menuNo=200218&searchCnd=1&searchWrd=%EC%9E%90%EA%B8%88%EC%84%B8%ED%83%81&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87604?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
+        "가상자산",
+        "도박",
         "FIU·규제",
+        "제재·테러자금",
         "자금세탁"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
@@ -8314,12 +8032,12 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
+      "query": "가상자산",
       "official_source": "금융감독원",
       "title": "가상자산으로 당한 보이스피싱 피해금도 이제는 돌려받을 수 있습니다",
       "source": "금융감독원",
       "date": "2026-07-15T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219215&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219215&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
         "사기"
@@ -8403,19 +8121,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
-      "source": "금융감독원",
-      "date": "2026-07-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "가상자산",
       "official_source": "금융감독원",
       "title": "가상자산시장 시세조종 혐의자 수사기관 고발",
@@ -8424,6 +8129,19 @@
       "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
+      "source": "금융감독원",
+      "date": "2026-07-01T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
         "사기"
       ],
       "collection_method": "verified_fss_board"
