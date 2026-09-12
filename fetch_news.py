@@ -643,6 +643,24 @@ def verify_fsc_detail(item):
     except Exception:
         return None
 
+def dedupe(rows, limit=1000):
+    seen_t, seen_l = set(), set()
+    out = []
+    for x in rows:
+        kt = key_title(x.get('title',''))
+        lk = x.get('link','')
+        if kt and kt in seen_t:
+            continue
+        if lk and lk in seen_l:
+            continue
+        if kt:
+            seen_t.add(kt)
+        if lk:
+            seen_l.add(lk)
+        out.append(x)
+    out.sort(key=lambda x: parse_dt(x.get('date')) or datetime(1970,1,1,tzinfo=timezone.utc), reverse=True)
+    return out[:limit]
+
 def collect_fsc_official(backfill, cutoff, now_utc):
     """5.7: 키워드 검색 대신 금융위 보도자료 목록을 날짜순으로 직접 순회한다."""
     max_pages = 14 if backfill else 3
