@@ -75,7 +75,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.7'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.9'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -249,36 +249,176 @@ def low_quality_news_source(title, source_name, domain):
     return False
 
 
-# v4.7 기사성 필터: AML 소재 자체(상품권 현금화/불법도박/USDT 등)는 차단하지 않는다.
-# 대신 모집·판매·가입유도 문구와 비기사성 영역을 차단한다.
-V47_NONARTICLE_HOST_PREFIXES=['stock.','search.','m.stock.','finance.']
-V47_NONARTICLE_PATH_TOKENS=['/search','/board','/bbs','/community','/user','/profile']
-V47_SOLICITATION_TERMS=[
+# ---------- v4.8 국내뉴스 기사성/카테고리 판정 ----------
+# Google 검색피드는 후보 발견에만 사용한다.
+# 실제 게재 여부와 표시 카테고리는 기사 제목에서 다시 판정한다.
+
+V48_NONARTICLE_HOST_PREFIXES = ['stock.','search.','m.stock.','finance.']
+V48_NONARTICLE_PATH_TOKENS = ['/search','/board','/bbs','/community','/user','/profile']
+V48_SOLICITATION_TERMS = [
     '팝니다','삽니다','판매합니다','구매합니다','가입문의','가입 문의','문의주세요',
     '추천인 코드','추천코드','가입 코드','첫충전','재충전','롤링','페이백',
     '무료머니','보너스 지급','충전 이벤트','가입 이벤트'
 ]
-V47_CONTACT_TERMS=['텔레그램','오픈채팅','카톡 문의','카카오톡 문의']
+V48_CONTACT_TERMS = ['텔레그램','오픈채팅','카톡 문의','카카오톡 문의']
 
-def v47_is_nonarticle(title, source_url, source_domain):
-    t=title or ''
-    d=(source_domain or '').lower()
-    u=(source_url or '').lower()
-    if any(d.startswith(p) for p in V47_NONARTICLE_HOST_PREFIXES):
+def v48_nonarticle(title, source_url, source_domain):
+    t = title or ''
+    d = (source_domain or '').lower()
+    u = (source_url or '').lower()
+    if any(d.startswith(p) for p in V48_NONARTICLE_HOST_PREFIXES):
         return True
     try:
-        path=urllib.parse.urlparse(u).path.lower()
+        path = urllib.parse.urlparse(u).path.lower()
     except Exception:
-        path=''
-    if any(tok in path for tok in V47_NONARTICLE_PATH_TOKENS):
+        path = ''
+    if any(tok in path for tok in V48_NONARTICLE_PATH_TOKENS):
         return True
-    if re.search(r'@[A-Za-z0-9_]{4,}',t):
+    if re.search(r'@[A-Za-z0-9_]{4,}', t):
         return True
-    if any(tok in t for tok in V47_SOLICITATION_TERMS):
+    if any(tok in t for tok in V48_SOLICITATION_TERMS):
         return True
-    # 연락수단은 단독 언급이 기사에 나올 수도 있으므로 판매/문의 문맥과 결합할 때 차단
-    if any(c in t for c in V47_CONTACT_TERMS) and re.search(r'(문의|판매|구매|가입|코드|연락)',t):
+    if any(c in t for c in V48_CONTACT_TERMS) and re.search(r'(문의|판매|구매|가입|코드|연락)', t):
         return True
+    return False
+
+def infer_news_category(title):
+    t = (title or '').lower()
+
+    # 직접 AML / 범죄수익
+    if re.search(r'자금세탁|돈세탁|세탁한|세탁해|세탁 혐의|money laundering', t):
+        return '자금세탁'
+    if re.search(r'범죄수익|범죄 수익|범죄수익은닉|범죄수익 환수|범죄수익환수|몰수|추징', t):
+        return '범죄수익'
+
+    # FIU / STR / AML 제도
+    if re.search(r'금융정보분석원|\bfiu\b|의심거래보고|의심거래|고액현금거래|\bstr\b|\bctr\b|자금세탁방지|\baml\b|\bcft\b|\bfatf\b|고객확인|\bkyc\b|제도이행평가', t):
+        return 'FIU·STR'
+
+    # 가상자산 규제 / 트래블룰
+    if '트래블룰' in t:
+        return '트래블룰'
+    if re.search(r'가상자산사업자|\bvasp\b', t) and re.search(r'신고|미등록|등록|특금법|특정금융정보법|규제|제재|검사|점검|위반|의무|매뉴얼', t):
+        return '트래블룰'
+
+    # 주요 전제범죄 / 사기
+    if re.search(r'보이스피싱|대포통장|사기이용계좌|전화금융사기', t):
+        return '보이스피싱'
+    if re.search(r'투자사기|투자 사기|리딩방|로맨스스캠|로맨스 스캠|코인사기|코인 사기|유사수신', t):
+        return '투자사기'
+    if re.search(r'환치기|불법\s*외환|불법\s*외화|외국환거래법\s*위반|불법\s*송금|무등록\s*외환|외환거래\s*적발', t):
+        return '환치기·외환'
+
+    drug = re.search(r'마약|필로폰|대마|코카인|마약류', t)
+    drug_money = re.search(r'자금|대금|계좌|가상자산|코인|범죄수익|송금|입금|출금|세탁|추징|몰수|수익', t)
+    if drug and drug_money:
+        return '마약자금'
+
+    gamble = re.search(r'불법도박|온라인도박|도박사이트|도박 사이트|불법\s*카지노|사설토토|사설\s*토토', t)
+    gamble_case = re.search(r'검거|적발|구속|기소|송치|수사|운영|조직|일당|범죄|자금|계좌|수익|세탁|추징|압수|피해', t)
+    if gamble and gamble_case:
+        return '불법도박'
+
+    if re.search(r'탈세|조세포탈|역외탈세|세금\s*포탈|세금\s*탈루', t):
+        return '탈세'
+
+    if re.search(r'횡령|배임|업무상횡령|업무상배임|회삿돈.{0,8}(빼돌|유용)|회사자금.{0,8}(빼돌|유용)|법인자금.{0,8}(빼돌|유용)', t):
+        return '횡령·배임'
+
+    if re.search(r'차명계좌|차명\s*계좌|차명\s*거래|명의대여|명의\s*대여', t):
+        return '차명계좌'
+
+    if re.search(r'테러자금|테러\s*자금|제재\s*회피|대북제재|대북\s*제재|북한.{0,15}(가상자산|암호화폐|코인|해킹|자금)|제재위반|제재\s*위반', t):
+        return '제재·테러자금'
+
+    # 가상자산 일반 시장/투자/기술 뉴스는 제외하고 범죄·불법·AML 맥락이 있어야 함.
+    crypto = re.search(r'가상자산|암호화폐|비트코인|이더리움|\busdt\b|테더|코인|가상화폐', t)
+    risk = re.search(r'자금세탁|범죄|불법|사기|피싱|환치기|탈취|해킹|랜섬웨어|제재|수사|검거|적발|구속|기소|송치|피해|미등록|특금법|특정금융정보법', t)
+    if crypto and risk:
+        return '가상자산 AML'
+
+    # 개인지갑/해외거래소는 실제 자금이동·규제·범죄 맥락이 제목에 있어야 함.
+    wallet = re.search(r'개인지갑|개인\s*지갑|해외거래소|해외\s*거래소|외부지갑|외부\s*지갑|가상자산\s*지갑|암호화폐\s*지갑', t)
+    wallet_context = re.search(r'송금|이체|입금|출금|이동|전송|자금|거래|추적|동결|압수|제재|수사|범죄|불법|신고|규제|차단', t)
+    if wallet and wallet_context:
+        return '지갑·해외거래소'
+
+    return None
+
+
+# ---------- v4.9 AML 실무가치 최종 게이트 ----------
+# 제목에서 "금융범죄/AML 주제"뿐 아니라 실제 자금흐름·수법·집행·제도 변화가 보여야 한다.
+# 애매하면 제외하는 정밀도 우선(precision-first) 방식.
+
+V49_DIRECT_AML = re.compile(
+    r'자금세탁|돈세탁|범죄수익|금융정보분석원|\bfiu\b|의심거래|의심거래보고|\bstr\b|'
+    r'고액현금거래|\bctr\b|자금세탁방지|\baml\b|\bcft\b|\bfatf\b|특정금융정보법|특금법|'
+    r'트래블룰|가상자산사업자|\bvasp\b|고객확인|\bkyc\b|테러자금|제재\s*회피'
+)
+V49_MONEY_FLOW = re.compile(
+    r'계좌|대포통장|차명|송금|이체|입금|출금|현금|환치기|외환|외화|자금|대금|수익|'
+    r'범죄수익|가상자산|암호화폐|코인|\busdt\b|테더|지갑|거래소|ATM|현금화|상품권|'
+    r'몰수|추징|압수|동결|환수|빼돌|유용|은닉|세탁'
+)
+V49_CASE_ACTION = re.compile(
+    r'적발|검거|구속|기소|송치|수사|압수|추징|몰수|동결|환수|징역|실형|벌금|'
+    r'유죄|선고|피해|조직|일당|주범|총책|범행|사기|불법|위반|탈취|해킹'
+)
+V49_PREDICATE = re.compile(
+    r'보이스피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|로맨스\s*스캠|'
+    r'불법도박|온라인도박|도박사이트|사설토토|마약|필로폰|대마|코카인|'
+    r'탈세|조세포탈|횡령|배임|불법\s*외환|외국환거래법|환치기|대포통장|차명계좌'
+)
+V49_POLICY_ACTION = re.compile(
+    r'개정|시행|의결|입법|법안|규정|가이드|매뉴얼|지침|제재|검사|점검|평가|'
+    r'신고제|등록|미등록|의무|금지|강화|개선|대책|조치'
+)
+V49_LOW_VALUE = re.compile(
+    r'금융당국\s*일정|주간\s*일정|다음주.*일정|증시|주가|시황|전망|목표주가|'
+    r'토큰증권|STO|ETF|상장\s*예정|신제품|출시|파트너십|협약|MOU|교육\s*프로그램|'
+    r'세미나|컨퍼런스|포럼|캠페인|홍보|무료\s*보험|감사장|수상|이벤트'
+)
+V49_FOREIGN_POLITICS = re.compile(
+    r'대선|총선|지지율|대통령|총리|의회|정권|후보|선거'
+)
+
+def v49_practical_aml(title):
+    t = title or ''
+
+    # 직접 AML/규제 제목은 집행 또는 제도변화가 있으면 유지.
+    direct = bool(V49_DIRECT_AML.search(t))
+    flow = bool(V49_MONEY_FLOW.search(t))
+    action = bool(V49_CASE_ACTION.search(t))
+    predicate = bool(V49_PREDICATE.search(t))
+    policy = bool(V49_POLICY_ACTION.search(t))
+
+    # 일반 일정/시장/산업/홍보 기사는 직접 AML 사건·제도 신호가 없는 한 제외.
+    if V49_LOW_VALUE.search(t) and not (direct and (action or policy)):
+        return False
+
+    # 해외 일반 정치/선거 비리: 직접 AML 또는 명확한 자금흐름+금융범죄가 아니면 제외.
+    if V49_FOREIGN_POLITICS.search(t) and not direct and not (predicate and flow):
+        return False
+
+    # 직접 AML: 제목 자체로 충분히 유의미하거나, 제도/집행 변화가 확인되면 유지.
+    if direct and (action or policy or flow):
+        return True
+
+    # 전제범죄는 "범죄명만"으로 부족. 자금흐름/금융거래 또는 강한 사건 집행 맥락 필요.
+    if predicate and flow:
+        return True
+
+    # 보이스피싱/투자사기/불법도박은 새로운 사건·수법을 놓치지 않도록
+    # 구체적인 수사/피해/조직/형사처분 신호가 있으면 유지.
+    if predicate and action and re.search(r'보이스피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|불법도박|온라인도박|도박사이트|사설토토', t):
+        return True
+
+    # 가상자산은 단순 시장/기술이 아니라 범죄·불법·집행이 결합되어야 함.
+    crypto = re.search(r'가상자산|암호화폐|비트코인|이더리움|\busdt\b|테더|코인|가상화폐', t)
+    crypto_risk = re.search(r'자금세탁|범죄|불법|사기|피싱|환치기|탈취|해킹|랜섬웨어|제재|미등록|위반', t)
+    if crypto and crypto_risk and (action or flow):
+        return True
+
     return False
 
 def fetch_query(name, query):
@@ -301,13 +441,18 @@ def fetch_query(name, query):
         # 국내뉴스는 신뢰 출처 목록을 먼저 통과해야 하고, 그 뒤 광고/SEO 필터를 적용한다.
         if not trusted_news_source(source_name, source_domain):
             continue
-        if v47_is_nonarticle(title, source_url, source_domain):
+        if v48_nonarticle(title, source_url, source_domain):
             continue
         if low_quality_news_source(title, source_name, source_domain):
             continue
+        category = infer_news_category(title)
+        if not category:
+            continue
+        if not v49_practical_aml(title):
+            continue
         out.append({
             'region': '국내',
-            'query': name,
+            'query': category,
             'title': title,
             'source': source_name,
             'source_url': source_url,
@@ -531,16 +676,24 @@ def main():
         src_domain = x.get('source_domain','')
         if not trusted_news_source(src_name, src_domain):
             continue
-        if v47_is_nonarticle(x.get('title',''), x.get('source_url',''), src_domain):
+        if v48_nonarticle(x.get('title',''), x.get('source_url',''), src_domain):
             continue
         if low_quality_news_source(x.get('title',''), src_name, src_domain):
             continue
+        category = infer_news_category(x.get('title',''))
+        if not category:
+            continue
+        if not v49_practical_aml(x.get('title','')):
+            continue
+        x = dict(x)
+        x['query'] = category
+        x['tags'] = classify(x.get('title',''))
         merged_news.append(x)
     news = dedupe(merged_news, 1200)
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.3'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.5'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -571,7 +724,7 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '4.3',
+        'official_backfill_version': '4.5',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'count': len(news),
         'official_count': len(official),
