@@ -159,6 +159,8 @@ function eventFeatures(title){
   const crimes=['리딩방','보이스피싱','투자사기','전세사기','가상자산','코인','마약','도박','환치기','탈세','횡령','배임','자금세탁','돈세탁','범죄수익','대포통장','유령업체','랜섬웨어'];
   const actions=['세탁','송치','기소','구속','검거','적발','압수','추징','징역','실형','벌금','제재','수사','탈취','해킹'];
   const nums=[...t.matchAll(/(?:약\s*)?\d+(?:\.\d+)?\s*(?:억|만|천)?\s*(?:원|달러|명|년|개월|대|건)/g)].map(m=>m[0].replace(/\s/g,''));
+  // 금액은 '30억'처럼 '원'이 생략된 제목도 별도로 잡는다.
+  const money=[...t.matchAll(/(?:약\s*)?\d+(?:\.\d+)?\s*(?:조|억|만|천)\s*(?:원|달러)?/g)].map(m=>m[0].replace(/\s/g,''));
   const ages=[...t.matchAll(/\d{2}대|20대|30대|40대|50대|60대/g)].map(m=>m[0]);
   const roles=['형제','부부','모녀','모자','부자','일당','조직','총책','20대 2명','2명','3명'];
   return {
@@ -166,6 +168,7 @@ function eventFeatures(title){
     crimes:crimes.filter(x=>t.includes(x)),
     actions:actions.filter(x=>t.includes(x)),
     nums:[...new Set(nums)],
+    money:[...new Set(money)],
     ages:[...new Set(ages)],
     roles:roles.filter(x=>t.includes(x))
   };
@@ -184,13 +187,17 @@ function sameEvent(a,b){
   const crime=overlap(A.crimes,B.crimes);
   const action=overlap(A.actions,B.actions);
   const nums=overlap(A.nums,B.nums);
+  const money=overlap(A.money,B.money);
   const ages=overlap(A.ages,B.ages);
   const roles=overlap(A.roles,B.roles);
   const jac=tokenJaccard(A.t,B.t);
 
   // 5.7: 서로 다른 금액이 명시된 사건은 '총책·검거·범죄수익' 같은 일반 단어만으로 묶지 않는다.
   // (예: 30억 위조상품 사건 vs 415억원 범죄수익 세탁 사건)
-  if(A.nums.length && B.nums.length && nums===0) return false;
+  // 서로 다른 금액이 각각 명시되면 같은 사건으로 묶지 않는다.
+  // '30억'처럼 원 단위가 생략된 제목도 포함한다.
+  if(A.money.length && B.money.length && money===0) return false;
+  if(A.nums.length && B.nums.length && nums===0 && money===0) return false;
 
   // 제목 자체가 꽤 비슷한 경우
   if(jac>=0.42) return true;
