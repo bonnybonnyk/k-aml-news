@@ -484,9 +484,33 @@ def v49_practical_aml(title):
 def v581_obvious_noise(title):
     t = title or ''
     low = t.lower()
+
+    # 5.8.3: '상품권'이라는 단어 자체는 AML 신호가 아니다.
+    # 기탁·증정·행사·일반 위조/사기 사건 등은 제외하고, 실제 자금세탁/현금화/우회
+    # 또는 금융통제 취약점과 연결된 경우에만 상품권 기사를 유지한다.
+    if re.search(r'상품권', t):
+        giftcard_aml_risk = re.search(
+            r'자금세탁|돈세탁|세탁\s*통로|세탁\s*경로|범죄수익|보이스피싱|신종피싱|'
+            r'대포통장|외화계좌|현금화|상품권\s*깡|\bDEX\b|\bUSDT\b|JPYC|KRWQ|'
+            r'환전|(?<!통)우회|지급정지|거래정지|계좌|송금|자금\s*흐름|가상자산|스테이블코인|'
+            r'미신고|무등록|\bVASP\b|FIU|의심거래|\bSTR\b',
+            t, re.I
+        )
+        if not giftcard_aml_risk:
+            return True
     # 상품권이 등장해도 살인/강력범죄의 동기·은폐 수단일 뿐 AML/금융범죄 흐름이 아니면 제외.
-    if re.search(r'살인|살해|시신|흉기|납치|강도살인', t) and re.search(r'상품권', t):
-        if not re.search(r'자금세탁|돈세탁|범죄수익|현금화|계좌|송금|이체|지급정지|보이스피싱|금융사기', t):
+    # 상품권이 살인·사망 사건의 동기/수사 단서로 등장한 일반 형사사건은 제외.
+    # '현금화/사기'라는 단어만 있어도 살려버리던 5.8.1의 빈틈을 막되,
+    # 자금세탁·범죄수익·보이스피싱·계좌흐름처럼 AML 연결이 명시된 경우는 유지한다.
+    violent_giftcard = (
+        re.search(r'상품권', t)
+        and (
+            re.search(r'살인|살해|피살|사망|숨진|숨져|시신|변사|흉기|납치|강도살인|냉동창고|냉동\s*컨테이너', t)
+            or (re.search(r'파주', t) and re.search(r'카페|냉동|상품권\s*사기|위조\s*상품권|계획범죄', t))
+        )
+    )
+    if violent_giftcard:
+        if not re.search(r'자금세탁|돈세탁|범죄수익|보이스피싱|신종피싱|대포통장|외화계좌|FIU|의심거래|\bSTR\b', t, re.I):
             return True
     # 포상/캠페인/예방주간 자체가 중심인 홍보성 기사. 단, 실제 통제·시스템 변화가 제목에 있으면 유지.
     if re.search(r'포상|예방\s*주간|예방\s*캠페인|홍보대사|예방\s*교육', t):
@@ -988,6 +1012,16 @@ def run_regression_selfcheck():
         trust = bool(trusted_news_source(src, dom) or strong_unlisted_source_ok(title, context, src, dom))
         if not (category and gate and trust):
             failed.append(title)
+    # 5.8.3 상품권 단독 오탐 방지: 상품권 자체는 AML 신호가 아니다.
+    reject_news = [
+        '도천동 통우회, 추석맞이 상품권 기탁',
+        '파주 카페 사망 사건, 상품권 사기로 수사 확대…운영자 구속',
+        '파주 카페 냉동 컨테이너서 60대 여성 숨진 채 발견…경찰, 위조 상품권 사기까지 수사 확대',
+    ]
+    for title in reject_news:
+        if not v581_obvious_noise(title):
+            failed.append('뉴스 오탐:'+title)
+
     # 공식자료 과수집 방지 대표 샘플
     reject_official = [
         'PF보증의 주택공급으로 이연한 금융위원장, 김포 PF사업장 점검 방문',
