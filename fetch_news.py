@@ -45,6 +45,11 @@ PRACTICAL_QUERIES = [
     ("FIU·STR 정보공유", '(FIU OR "금융정보분석원" OR "의심거래") ("정보 공유" OR 정보공유 OR 은행 OR 금융회사) (특금법 OR 개정 OR 자금세탁 OR 추적 OR 제도)'),
     ("상품권·DEX 현금화", '(상품권 OR "상품권 깡") (스테이블코인 OR USDT OR JPYC OR DEX OR 현금화 OR 자금세탁 OR 사기)'),
     ("외화계좌·피싱 우회", '(외화계좌 OR "외화 계좌") (보이스피싱 OR 피싱 OR 자금세탁 OR 지급정지 OR 우회)'),
+    # 5.7.2 회귀검증용: 이전에 실제로 놓친 대표 기사 제목/핵심구문을 90일 백필에서 직접 재탐색.
+    ("회귀검증·미신고거래소", '"미신고 불법 코인거래소"'),
+    ("회귀검증·FIU정보공유", 'FIU "자금세탁 의심거래" "은행"'),
+    ("회귀검증·상품권깡", '스테이블코인 "상품권 깡"'),
+    ("회귀검증·외화계좌", '보이스피싱 "외화계좌" 자금세탁'),
 ]
 
 # 금융위/FIU 공식 보도자료 직접검색용 키워드.
@@ -70,13 +75,14 @@ FSC_SEARCH_KEYWORDS = [
 
 # 검색 결과를 다시 거르는 AML 관련어. 제목에 하나 이상 있어야 공식자료로 채택.
 OFFICIAL_KEEP = [
+    # 공식자료는 "일반 금융정책"이 아니라 AML/금융범죄 실무에 직접 연결되는 표현만 유지한다.
     "금융정보분석원","fiu","자금세탁","자금세탁방지","aml","cft","fatf",
     "의심거래","str","고액현금거래","ctr","특정금융정보법","특금법",
-    "가상자산사업자","vasp","가상자산","트래블룰","고객확인","kyc",
-    "제도이행평가","위험평가","범죄수익","테러자금","제재","보이스피싱",
-    "대포통장","불법금융","불법사금융","사금융","환치기","불공정거래","시세조종","미등록 영업",
-    "신종피싱","금융사기","지급정지","거래정지","신속차단","정보공유","가상계좌","전자금융",
-    "fds","사망자 명의","실태조사","재산도피","불법외환"
+    "가상자산사업자","vasp","트래블룰","고객확인","kyc","제도이행평가",
+    "테러자금","보이스피싱","신종피싱","대포통장","불법사금융","불법금융",
+    "환치기","미신고 해외","미신고 가상자산","미등록 가상자산","미신고 거래소",
+    "금융사기","지급정지","거래정지","신속차단","정보공유","사기이용계좌",
+    "fds","사망자 명의","불법외환","재산도피"
 ]
 
 PROMO = [
@@ -99,7 +105,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.7'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.7.3'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -189,7 +195,7 @@ TRUSTED_NEWS_DOMAINS = [
     # 종합지/경제지
     'chosun.com','joongang.co.kr','donga.com','hani.co.kr','khan.co.kr','hankookilbo.com',
     'mk.co.kr','hankyung.com','sedaily.com','fnnews.com','mt.co.kr','edaily.co.kr',
-    'asiae.co.kr','heraldcorp.com','bizwatch.co.kr','etoday.co.kr','ajunews.com',
+    'asiae.co.kr','segye.com','segye.co.kr','heraldcorp.com','bizwatch.co.kr','etoday.co.kr','ajunews.com',
     'newsway.co.kr','thebell.co.kr','dealsite.co.kr',
     # IT/가상자산 전문 매체 중 기사형 출처
     'zdnet.co.kr','etnews.com','digitaltoday.co.kr','ddaily.co.kr','bloter.net',
@@ -201,7 +207,7 @@ TRUSTED_NEWS_DOMAINS = [
 TRUSTED_SOURCE_NAMES = [
     '연합뉴스','뉴시스','뉴스1','kbs','mbc','sbs','ytn','jtbc','mbn','tv조선','채널a',
     '조선일보','중앙일보','동아일보','한겨레','경향신문','한국일보','매일경제','한국경제',
-    '서울경제','파이낸셜뉴스','머니투데이','이데일리','아시아경제','헤럴드경제',
+    '서울경제','세계일보','파이낸셜뉴스','머니투데이','이데일리','아시아경제','헤럴드경제',
     '비즈워치','이투데이','아주경제','뉴스웨이','더벨','딜사이트',
     '전자신문','지디넷코리아','디지털데일리','디지털투데이','블로터',
     '토큰포스트','블록미디어','디센터'
@@ -472,6 +478,8 @@ V55_CRYPTO_CONTROL = re.compile(r'가상자산|암호화폐|코인|usdt|테더|�
 V55_CRYPTO_PRACTICE = re.compile(r'미신고|무등록|불법\s*영업|국내\s*영업|수사의뢰|적발|외부이전|외부\s*이전|실태조사|제도이행평가|신고|영업정지|제재|외환\s*전산망|유출입|현금화|차단')
 V55_NEW_TYPOLOGY = re.compile(r'상품권|외화계좌|스테이블코인|dex|eSIM|휴대폰\s*렌탈|가상계좌|재판매')
 V55_TYPOLOGY_RISK = re.compile(r'자금세탁|보이스피싱|신종피싱|사기|불법사금융|불법도박|범죄|사각지대|우회|악용')
+V573_CRYPTO_GIFTCARD = re.compile(r'(상품권|상품권\s*깡).{0,60}(스테이블코인|usdt|jpyc|krwq|dex)|(스테이블코인|usdt|jpyc|krwq|dex).{0,60}(상품권|상품권\s*깡)', re.I)
+V573_GIFTCARD_RISK = re.compile(r'깡|현금화|규제|미신고|무등록|vasp|불법|사각지대|우회|자금세탁', re.I)
 V55_FX = re.compile(r'관세청|불법외환|불법\s*외환|외국환|재산도피|불법송금|환치기')
 
 def v55_practical_info(text):
@@ -491,6 +499,10 @@ def v55_practical_info(text):
         return True
     # 상품권·외화계좌·DEX·eSIM·가상계좌 등 신종 수법/사각지대
     if V55_NEW_TYPOLOGY.search(low) and V55_TYPOLOGY_RISK.search(low):
+        return True
+    # 5.7.3 회귀검증: '스테이블코인/DEX + 상품권 깡'처럼 제목에
+    # 자금세탁이라는 단어가 없어도 현금화·규제회피 위험이 명확한 조합은 유지한다.
+    if V573_CRYPTO_GIFTCARD.search(low) and V573_GIFTCARD_RISK.search(low):
         return True
     # 관세청/외국환 영역의 자금흐름·범죄 통제
     if V55_FX.search(low) and (V49_MONEY_FLOW.search(low) or V49_CASE_ACTION.search(low) or V55_POLICY.search(low)):
@@ -518,6 +530,9 @@ def v56_practical_category(text):
         return '탈세'
     if re.search(r'테러자금|제재\s*회피|대북제재|제재위반', t):
         return '제재·테러자금'
+    # 스테이블코인/DEX를 이용한 상품권 현금화·규제회피는 가상자산 AML로 분류.
+    if V573_CRYPTO_GIFTCARD.search(low) and V573_GIFTCARD_RISK.search(low):
+        return '가상자산 AML'
     # 가상자산 제도/사업자/해외거래소 실무정보는 가상자산 쪽으로.
     if V55_CRYPTO_CONTROL.search(low):
         if re.search(r'트래블룰|vasp|가상자산사업자|미신고|신고|특금법|특정금융정보법', low):
@@ -631,9 +646,16 @@ def verify_fsc_detail(item):
         text_key = key_title(text)
         if not title_key or title_key not in text_key or len(text) < 350:
             return None
-        context = (item.get('title','') + ' ' + text[:12000]).strip()
-        # 제목이 직접 AML 용어를 담지 않아도 본문에 FIU/신종피싱/거래정지 등 실무 맥락이 있으면 살린다.
-        if not (official_relevant(context) or v55_practical_info(context) or v49_practical_aml(context)):
+        title = item.get('title','')
+        context = (title + ' ' + text[:12000]).strip()
+        # 5.7.2: 본문 어딘가의 '제재/점검/가상자산' 같은 일반어 하나 때문에
+        # 금융위 전체 보도자료가 들어오지 않도록 제목을 우선 판정한다.
+        title_hit = official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title)
+        body_narrow = bool(re.search(
+            r'(금융정보분석원|\bFIU\b|자금세탁방지|의심거래|\bSTR\b|특정금융정보법|특금법|'
+            r'보이스피싱|신종피싱|사기이용계좌|지급정지|사망자\s*명의|트래블룰|가상자산사업자|\bVASP\b)',
+            context, re.I))
+        if not (title_hit or body_narrow):
             return None
         x = dict(item)
         x['official_source'] = 'FIU' if re.search(r'금융정보분석원|\bFIU\b', context, re.I) else '금융위원회'
@@ -742,9 +764,10 @@ def verify_fss_detail(item):
         # 정확한 제목이 실제 상세페이지에 존재해야 한다.
         if key_title(item.get('title','')) not in key_title(text):
             return None
-        # 제목 또는 본문 앞부분이 AML/금융범죄 실무 범위에 있어야 한다.
-        context = item.get('title','') + ' ' + text[:6000]
-        if not official_relevant(context):
+        # 5.7.2: 금감원 일반 보도자료가 본문의 공통 문구 때문에 섞이지 않도록
+        # 제목 자체가 AML/금융범죄 실무 범위일 때만 채택한다.
+        title = item.get('title','')
+        if not (official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title)):
             return None
         return item
     except Exception:
@@ -904,7 +927,7 @@ def main():
 
     # ---------- 국내 뉴스 ----------
     all_items, status = [], []
-    practical_backfill = old.get('practical_backfill_version') != '5.7'
+    practical_backfill = old.get('practical_backfill_version') != '5.7.3'
     for name, query in QUERIES:
         try:
             items = fetch_query(name, query, 1)
@@ -960,7 +983,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.7'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.7.3'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -994,6 +1017,10 @@ def main():
         d = parse_dt(x.get('date'))
         if not d or d < cutoff:
             continue
+        # 이전 실행에서 과수집된 공식자료도 다음 실행 때 즉시 청소한다.
+        title = x.get('title','')
+        if not (official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title) or x.get('official_source') == 'DAXA'):
+            continue
         official_merged.append(x)
     official = dedupe(official_merged, 500)
 
@@ -1003,10 +1030,10 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '5.7',
+        'official_backfill_version': '5.7.3',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'practical_backfill_complete': True,
-        'practical_backfill_version': '5.7',
+        'practical_backfill_version': '5.7.3',
         'practical_collection_mode': '90d_backfill' if practical_backfill else '1d_incremental',
         'count': len(news),
         'official_count': len(official),
