@@ -50,10 +50,22 @@ PRACTICAL_QUERIES = [
     ("회귀검증·FIU정보공유", 'FIU "자금세탁 의심거래" "은행"'),
     ("회귀검증·상품권깡", '스테이블코인 "상품권 깡"'),
     ("회귀검증·외화계좌", '보이스피싱 "외화계좌" 자금세탁'),
+    # 5.8: PG/해외결제/계정도용 등 "자금세탁" 단어가 제목에 없거나 표현이 다른 실무형 기사 보강
+    ("PG·결제대행 AML", '(PG OR "PG사" OR 결제대행 OR "결제 대행") (자금세탁 OR 자금세탁방지 OR AML OR CDD OR KYC OR 고객확인 OR 현금화 OR "세탁 통로" OR 보이스피싱 OR 사기)'),
+    ("해외결제 AML", '(해외결제 OR "해외 결제") (자금세탁 OR AML OR CDD OR KYC OR 고객확인 OR "경영 유의" OR 관리부실 OR 검사 OR 제재)'),
+    ("계정도용·현금화", '(계정도용 OR "계정 도용" OR 쇼핑몰) (결제 OR 현금화 OR 자금세탁 OR "세탁 통로" OR 범죄자금)'),
+    ("외화·상품권 우회", '(외화계좌 OR "외화 계좌" OR 상품권) (보이스피싱 OR 신종피싱 OR 자금세탁 OR 현금화 OR 지급정지 OR 우회)'),
 ]
 
 # 금융위/FIU 공식 보도자료 직접검색용 키워드.
 # 너무 잘게 쪼개면 요청 수가 폭증하므로, 실무적으로 빠짐을 줄이면서도 10개로 제한.
+# 5.8: 일반 검색에서 상위 100건 밖으로 밀리거나 색인이 늦는 경우를 보완하기 위한
+# 출처 집중 검색. 별도 API를 쓰지 않고 Google News RSS를 좁은 site: 질의로 한 번 더 확인한다.
+SOURCE_FOCUSED_DOMAINS = [
+    'asiae.co.kr','edaily.co.kr','segye.com','heraldcorp.com','newspim.com','raonnews.com'
+]
+SOURCE_FOCUSED_QUERY = '(자금세탁 OR 자금세탁방지 OR AML OR FIU OR 특금법 OR 보이스피싱 OR 외화계좌 OR 상품권 OR CDD OR KYC OR 고객확인 OR PG OR 결제대행 OR 미신고 OR VASP)'
+
 FSC_SEARCH_KEYWORDS = [
     "금융정보분석원",
     "자금세탁",
@@ -105,7 +117,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.7.3'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.8.0'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -196,7 +208,7 @@ TRUSTED_NEWS_DOMAINS = [
     'chosun.com','joongang.co.kr','donga.com','hani.co.kr','khan.co.kr','hankookilbo.com',
     'mk.co.kr','hankyung.com','sedaily.com','fnnews.com','mt.co.kr','edaily.co.kr',
     'asiae.co.kr','segye.com','segye.co.kr','heraldcorp.com','bizwatch.co.kr','etoday.co.kr','ajunews.com',
-    'newsway.co.kr','thebell.co.kr','dealsite.co.kr',
+    'newsway.co.kr','thebell.co.kr','dealsite.co.kr','newspim.com','raonnews.com',
     # IT/가상자산 전문 매체 중 기사형 출처
     'zdnet.co.kr','etnews.com','digitaltoday.co.kr','ddaily.co.kr','bloter.net',
     'tokenpost.kr','blockmedia.co.kr','decenter.kr',
@@ -208,7 +220,7 @@ TRUSTED_SOURCE_NAMES = [
     '연합뉴스','뉴시스','뉴스1','kbs','mbc','sbs','ytn','jtbc','mbn','tv조선','채널a',
     '조선일보','중앙일보','동아일보','한겨레','경향신문','한국일보','매일경제','한국경제',
     '서울경제','세계일보','파이낸셜뉴스','머니투데이','이데일리','아시아경제','헤럴드경제',
-    '비즈워치','이투데이','아주경제','뉴스웨이','더벨','딜사이트',
+    '비즈워치','이투데이','아주경제','뉴스웨이','더벨','딜사이트','뉴스핌','라온신문',
     '전자신문','지디넷코리아','디지털데일리','디지털투데이','블로터',
     '토큰포스트','블록미디어','디센터'
 ]
@@ -317,7 +329,7 @@ def infer_news_category(title):
     t = (title or '').lower()
 
     # 직접 AML / 범죄수익
-    if re.search(r'자금세탁|돈세탁|세탁한|세탁해|세탁 혐의|money laundering', t):
+    if re.search(r'자금세탁|돈세탁|세탁한|세탁해|세탁\s*혐의|세탁\s*통로|세탁\s*경로|세탁\s*창구|money laundering', t):
         return '자금세탁'
     if re.search(r'범죄수익|범죄 수익|범죄수익은닉|범죄수익 환수|범죄수익환수|몰수|추징', t):
         return '범죄수익'
@@ -469,15 +481,15 @@ def v49_practical_aml(title):
 # ---------- 5.5 AML 실무정보 통과 경로 ----------
 # 범죄 사건만 찾는 기존 v4.9 게이트는 그대로 유지하고,
 # 금융회사 AML 운영·제도변화·신종수법·차단체계 같은 업무 참고정보를 별도로 살린다.
-V55_AML_OPS = re.compile(r'aml|자금세탁방지|자금세탁|의심거래|\bstr\b|\bfds\b|금융정보분석원|\bfiu\b')
-V55_OPS_CHANGE = re.compile(r'시스템|ai|인공지능|자동화|연계|모니터링|위험평가|보고서|정보공유|공유|지급정지|거래정지|신속차단|차단|동결|통합|플랫폼')
+V55_AML_OPS = re.compile(r'aml|자금세탁방지|자금세탁|의심거래|\bstr\b|\bfds\b|금융정보분석원|\bfiu\b|\bcdd\b|\bkyc\b|고객확인')
+V55_OPS_CHANGE = re.compile(r'시스템|ai|인공지능|자동화|연계|모니터링|위험평가|보고서|정보공유|공유|지급정지|거래정지|신속차단|차단|동결|통합|플랫폼|가이드라인|내부통제|관리\s*부실|경영\s*유의|개선')
 V55_POLICY = re.compile(r'개정|시행|법안|규정|기준|지침|제도|의결|신고|미신고|검사|점검|평가|제재|과태료|영업정지|실태조사')
-V55_FINANCIAL_ORG = re.compile(r'은행|금융회사|금융권|금융당국|금융위|금감원|금융감독원|fiu|금융정보분석원|거래소|가상자산사업자|vasp|pg사|전자금융')
+V55_FINANCIAL_ORG = re.compile(r'은행|금융회사|금융권|금융당국|금융위|금감원|금융감독원|fiu|금융정보분석원|거래소|가상자산사업자|vasp|pg사|pg\b|결제대행|전자금융|간편결제|해외결제')
 V55_CONTROL_RISK = re.compile(r'보이스피싱|신종피싱|금융사기|불법사금융|불법도박|마약|범죄자금|불법재산|사망자\s*명의|명의도용|가상계좌')
 V55_CRYPTO_CONTROL = re.compile(r'가상자산|암호화폐|코인|usdt|테더|해외\s*거래소|해외거래소|지갑|트래블룰|vasp|가상자산사업자')
 V55_CRYPTO_PRACTICE = re.compile(r'미신고|무등록|불법\s*영업|국내\s*영업|수사의뢰|적발|외부이전|외부\s*이전|실태조사|제도이행평가|신고|영업정지|제재|외환\s*전산망|유출입|현금화|차단')
-V55_NEW_TYPOLOGY = re.compile(r'상품권|외화계좌|스테이블코인|dex|eSIM|휴대폰\s*렌탈|가상계좌|재판매')
-V55_TYPOLOGY_RISK = re.compile(r'자금세탁|보이스피싱|신종피싱|사기|불법사금융|불법도박|범죄|사각지대|우회|악용')
+V55_NEW_TYPOLOGY = re.compile(r'상품권|외화계좌|스테이블코인|dex|eSIM|휴대폰\s*렌탈|가상계좌|재판매|결제대행|pg사|pg\b|해외결제|계정\s*도용|계정도용|쇼핑몰')
+V55_TYPOLOGY_RISK = re.compile(r'자금세탁|돈세탁|세탁\s*통로|세탁\s*경로|보이스피싱|신종피싱|사기|불법사금융|불법도박|범죄|사각지대|우회|악용|현금화|지급정지|관리\s*부실|경영\s*유의|\bcdd\b|\bkyc\b|고객확인')
 V573_CRYPTO_GIFTCARD = re.compile(r'(상품권|상품권\s*깡).{0,60}(스테이블코인|usdt|jpyc|krwq|dex)|(스테이블코인|usdt|jpyc|krwq|dex).{0,60}(상품권|상품권\s*깡)', re.I)
 V573_GIFTCARD_RISK = re.compile(r'깡|현금화|규제|미신고|무등록|vasp|불법|사각지대|우회|자금세탁', re.I)
 V55_FX = re.compile(r'관세청|불법외환|불법\s*외환|외국환|재산도피|불법송금|환치기')
@@ -546,6 +558,31 @@ def v56_practical_category(text):
         return 'FIU·STR'
     return 'FIU·STR'
 
+def strong_unlisted_source_ok(title, context, source_name, domain):
+    """5.8: 화이트리스트에 아직 없는 언론도 강한 AML/금융범죄 신호가 있으면 제한적으로 허용.
+    광고·카지노·리퍼럴 출처는 기존 차단 토큰으로 먼저 제외한다.
+    """
+    t = title or ''
+    c = context or t
+    d = (domain or '').lower()
+    sname = (source_name or '').lower()
+    if not d and not sname:
+        return False
+    if any(tok in d for tok in BLOCKED_DOMAIN_TOKENS) or any(tok in sname for tok in BLOCKED_SOURCE_TOKENS):
+        return False
+    if len(t.strip()) < 10:
+        return False
+    # 제목 자체가 직접 AML/FIU/특금법/자금세탁을 말하면 가장 강하게 허용.
+    if V49_DIRECT_AML.search(t) and (V49_CASE_ACTION.search(t) or V49_POLICY_ACTION.search(t) or V49_MONEY_FLOW.search(t) or V55_OPS_CHANGE.search(t)):
+        return True
+    # 새로운 수법·통제 취약점은 제목+설명 맥락까지 보되, 실무가치 판정까지 통과해야 한다.
+    if v55_practical_info(c) and re.search(
+        r'보이스피싱|신종피싱|외화계좌|상품권|결제대행|pg사|\bpg\b|해외결제|계정\s*도용|'
+        r'자금세탁|세탁\s*통로|\bcdd\b|\bkyc\b|고객확인|특금법|금융정보분석원|\bfiu\b|'
+        r'미신고|무등록|\bvasp\b', c, re.I):
+        return True
+    return False
+
 def fetch_query(name, query, window_days=1):
     # 기본 뉴스는 최근 24시간, 5.5 실무정보는 최초 1회 90일 백필 가능
     params = urllib.parse.urlencode({
@@ -562,16 +599,16 @@ def fetch_query(name, query, window_days=1):
         if not title or is_promo(title):
             continue
         source_name, source_url, source_domain = get_source_meta(it, raw_title)
-        # v4.5: Google News에 잡혔다는 이유만으로 채택하지 않는다.
-        # 국내뉴스는 신뢰 출처 목록을 먼저 통과해야 하고, 그 뒤 광고/SEO 필터를 적용한다.
-        if not trusted_news_source(source_name, source_domain):
+        description = strip_html(it.findtext('description') or '')
+        context = (title + ' ' + description).strip()
+        # 5.8: 고정 화이트리스트만으로는 뉴스핌·라온신문처럼 유효한 매체가 빠질 수 있다.
+        # 알려진 신뢰매체는 그대로 통과시키고, 미등록 매체는 "강한 AML 실무 신호"가 있을 때만 예외 허용한다.
+        if not (trusted_news_source(source_name, source_domain) or strong_unlisted_source_ok(title, context, source_name, source_domain)):
             continue
         if v48_nonarticle(title, source_url, source_domain):
             continue
         if low_quality_news_source(title, source_name, source_domain):
             continue
-        description = strip_html(it.findtext('description') or '')
-        context = (title + ' ' + description).strip()
         category = infer_news_category(title)
         if not category:
             category = infer_news_category(context)
@@ -910,7 +947,42 @@ def collect_daxa_official(cutoff):
                 pass
     return dedupe(verified,100), status
 
+def run_regression_selfcheck():
+    """네트워크 없이 핵심 누락/과수집 사례를 코드 수준에서 회귀검증한다."""
+    keep_cases = [
+        ('미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중', '세계일보', 'segye.com'),
+        ('스테이블코인으로 올영·다이소 상품권 깡…금융위 규제 검토', '이데일리', 'edaily.co.kr'),
+        ('FIU, 자금세탁 의심거래 정보 은행에 공유한다…특금법 개정 추진', '아시아경제', 'asiae.co.kr'),
+        ('보이스피싱범들, 상품권이 막히자 출금 못 막는 외화계좌로 튀었다…자금세탁 새 먹잇감', '헤럴드경제', 'heraldcorp.com'),
+        ('네이버·토스·카카오페이, 해외결제 자금세탁 관리 부실…경영 유의', '뉴스핌', 'newspim.com'),
+        ('쇼핑몰 계정 도용해 결제하고 현금화…결제대행사 세탁 통로 차단', '라온신문', 'raonnews.com'),
+    ]
+    failed = []
+    for title, src, dom in keep_cases:
+        context = title
+        category = infer_news_category(title)
+        practical = v55_practical_info(context)
+        if not category and practical:
+            category = v56_practical_category(context)
+        gate = bool(v49_practical_aml(title) or practical)
+        trust = bool(trusted_news_source(src, dom) or strong_unlisted_source_ok(title, context, src, dom))
+        if not (category and gate and trust):
+            failed.append(title)
+    # 공식자료 과수집 방지 대표 샘플
+    reject_official = [
+        'PF보증의 주택공급으로 이연한 금융위원장, 김포 PF사업장 점검 방문',
+        '2026년 8월 가계대출 동향 점검회의 개최',
+        'IFRS17 체계 구비가 보험산업에 미치는 영향 점검'
+    ]
+    for title in reject_official:
+        if official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title):
+            failed.append('공식자료 과수집:'+title)
+    if failed:
+        raise RuntimeError('5.8 regression self-check failed: ' + ' | '.join(failed))
+    print('SELF_CHECK OK', len(keep_cases), 'keep cases +', len(reject_official), 'official reject cases')
+
 def main():
+    run_regression_selfcheck()
     now_utc = datetime.now(timezone.utc)
     cutoff = now_utc - timedelta(days=RETENTION_DAYS)
 
@@ -927,7 +999,7 @@ def main():
 
     # ---------- 국내 뉴스 ----------
     all_items, status = [], []
-    practical_backfill = old.get('practical_backfill_version') != '5.7.3'
+    practical_backfill = old.get('practical_backfill_version') != '5.8.0'
     for name, query in QUERIES:
         try:
             items = fetch_query(name, query, 1)
@@ -939,7 +1011,8 @@ def main():
             print('NEWS ERROR', name, e)
         time.sleep(0.10)
 
-    practical_window = RETENTION_DAYS if practical_backfill else 1
+    # 색인이 조금 늦게 잡히는 기사까지 회수하도록 평상시에도 3일을 겹쳐 확인한다.
+    practical_window = RETENTION_DAYS if practical_backfill else 3
     for name, query in PRACTICAL_QUERIES:
         try:
             items = fetch_query(name, query, practical_window)
@@ -951,6 +1024,21 @@ def main():
             print('PRACTICAL ERROR', name, e)
         time.sleep(0.10)
 
+    # 5.8 보조 발견경로: 누락 사례가 실제로 발생했던 주요 매체를 좁은 site: 검색으로 재확인.
+    # 첫 실행은 90일, 이후에는 3일만 겹쳐 검색해 요청량을 제한한다.
+    focused_window = RETENTION_DAYS if practical_backfill else 3
+    for domain in SOURCE_FOCUSED_DOMAINS:
+        try:
+            q = f'site:{domain} ' + SOURCE_FOCUSED_QUERY
+            items = fetch_query('출처집중:'+domain, q, focused_window)
+            all_items.extend(items)
+            status.append({'feed':'출처집중:'+domain,'ok':True,'count':len(items),'window_days':focused_window})
+            print('SOURCE_FOCUSED', domain, len(items), 'window', focused_window)
+        except Exception as e:
+            status.append({'feed':'출처집중:'+domain,'ok':False,'count':0,'error':str(e)[:180]})
+            print('SOURCE_FOCUSED ERROR', domain, e)
+        time.sleep(0.08)
+
     merged_news = []
     for x in all_items + existing:
         d = parse_dt(x.get('date'))
@@ -959,14 +1047,14 @@ def main():
         # 과거 버전에서 저장된 스팸/SEO 출처도 다시 정리한다.
         src_name = x.get('source','')
         src_domain = x.get('source_domain','')
-        if not trusted_news_source(src_name, src_domain):
-            continue
-        if v48_nonarticle(x.get('title',''), x.get('source_url',''), src_domain):
-            continue
-        if low_quality_news_source(x.get('title',''), src_name, src_domain):
-            continue
         title0 = x.get('title','')
         context0 = (title0 + ' ' + x.get('description','')).strip()
+        if not (trusted_news_source(src_name, src_domain) or strong_unlisted_source_ok(title0, context0, src_name, src_domain)):
+            continue
+        if v48_nonarticle(title0, x.get('source_url',''), src_domain):
+            continue
+        if low_quality_news_source(title0, src_name, src_domain):
+            continue
         category = infer_news_category(title0) or infer_news_category(context0)
         practical_ok = v55_practical_info(title0) or v55_practical_info(context0)
         if not category and practical_ok:
@@ -983,7 +1071,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.7.3'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.8.0'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -1030,11 +1118,11 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '5.7.3',
+        'official_backfill_version': '5.8.0',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'practical_backfill_complete': True,
-        'practical_backfill_version': '5.7.3',
-        'practical_collection_mode': '90d_backfill' if practical_backfill else '1d_incremental',
+        'practical_backfill_version': '5.8.0',
+        'practical_collection_mode': '90d_backfill' if practical_backfill else '3d_overlap_incremental',
         'count': len(news),
         'official_count': len(official),
         'items': news,
