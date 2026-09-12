@@ -40,6 +40,11 @@ PRACTICAL_QUERIES = [
     ("불법외환·관세", '(관세청 OR 외국환 OR 불법외환 OR 재산도피) (가상자산 OR 환치기 OR 불법송금 OR 범죄자금 OR 자금세탁)'),
     ("신종수법·취약점", '(상품권 OR 외화계좌 OR 스테이블코인 OR DEX OR eSIM OR "휴대폰 렌탈") (자금세탁 OR 보이스피싱 OR 신종피싱 OR 불법사금융 OR 사기)'),
     ("명의도용·차단", '("사망자 명의" OR 명의도용) (금융거래 OR 계좌 OR 지급정지 OR 거래정지 OR 불법)'),
+    # 5.7: 실제 직원 공유 샘플에서 확인된 누락 유형을 좁은 조합으로 보강
+    ("미신고 VASP·불법영업", '("미신고" OR "무등록") (VASP OR "가상자산사업자" OR "코인거래소" OR "가상자산 거래소" OR "해외거래소") (적발 OR 수사 OR "국내 영업" OR 제재 OR 차단)'),
+    ("FIU·STR 정보공유", '(FIU OR "금융정보분석원" OR "의심거래") ("정보 공유" OR 정보공유 OR 은행 OR 금융회사) (특금법 OR 개정 OR 자금세탁 OR 추적 OR 제도)'),
+    ("상품권·DEX 현금화", '(상품권 OR "상품권 깡") (스테이블코인 OR USDT OR JPYC OR DEX OR 현금화 OR 자금세탁 OR 사기)'),
+    ("외화계좌·피싱 우회", '(외화계좌 OR "외화 계좌") (보이스피싱 OR 피싱 OR 자금세탁 OR 지급정지 OR 우회)'),
 ]
 
 # 금융위/FIU 공식 보도자료 직접검색용 키워드.
@@ -94,7 +99,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.5'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.7'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -464,7 +469,7 @@ V55_POLICY = re.compile(r'개정|시행|법안|규정|기준|지침|제도|의�
 V55_FINANCIAL_ORG = re.compile(r'은행|금융회사|금융권|금융당국|금융위|금감원|금융감독원|fiu|금융정보분석원|거래소|가상자산사업자|vasp|pg사|전자금융')
 V55_CONTROL_RISK = re.compile(r'보이스피싱|신종피싱|금융사기|불법사금융|불법도박|마약|범죄자금|불법재산|사망자\s*명의|명의도용|가상계좌')
 V55_CRYPTO_CONTROL = re.compile(r'가상자산|암호화폐|코인|usdt|테더|해외\s*거래소|해외거래소|지갑|트래블룰|vasp|가상자산사업자')
-V55_CRYPTO_PRACTICE = re.compile(r'미신고|외부이전|외부\s*이전|실태조사|제도이행평가|신고|영업정지|제재|외환\s*전산망|유출입|현금화|차단')
+V55_CRYPTO_PRACTICE = re.compile(r'미신고|무등록|불법\s*영업|국내\s*영업|수사의뢰|적발|외부이전|외부\s*이전|실태조사|제도이행평가|신고|영업정지|제재|외환\s*전산망|유출입|현금화|차단')
 V55_NEW_TYPOLOGY = re.compile(r'상품권|외화계좌|스테이블코인|dex|eSIM|휴대폰\s*렌탈|가상계좌|재판매')
 V55_TYPOLOGY_RISK = re.compile(r'자금세탁|보이스피싱|신종피싱|사기|불법사금융|불법도박|범죄|사각지대|우회|악용')
 V55_FX = re.compile(r'관세청|불법외환|불법\s*외환|외국환|재산도피|불법송금|환치기')
@@ -588,131 +593,86 @@ def fsc_search_url(keyword, page, begin_ymd, end_ymd):
     })
     return FSC_BOARD_URL + '?' + params
 
-def parse_fsc_search_page(raw_html, keyword):
-    """
-    금융위원회 보도자료 검색결과에서 실제 /no010101/<번호> 제목 링크와 날짜를 추출.
-    날짜가 확인되지 않는 행은 버려 잘못된 카드 생성을 막는다.
+def parse_fsc_board_page(raw_html):
+    """금융위 보도자료 목록에서 상세페이지 링크/제목/날짜를 직접 추출한다.
+    검색 키워드에 의존하지 않아 제목이 평범해도 본문이 FIU/AML이면 놓치지 않는다.
     """
     rows = []
-    pat = re.compile(
-        r'<a\b[^>]*href=["\']([^"\']*/no010101/\d+[^"\']*)["\'][^>]*>(.*?)</a>',
-        re.I | re.S
-    )
+    pat = re.compile(r'<a\b[^>]*href=["\']([^"\']*/no010101/\d+[^"\']*)["\'][^>]*>(.*?)</a>', re.I | re.S)
     matches = list(pat.finditer(raw_html))
+    seen = set()
     for i, m in enumerate(matches):
         href = html_unescape(m.group(1))
         title = clean_title(strip_html(m.group(2)))
-        if not title or not official_relevant(title):
+        if not title or len(title) < 4:
             continue
-        next_pos = matches[i+1].start() if i+1 < len(matches) else min(len(raw_html), m.end()+3000)
+        detail = urllib.parse.urljoin("https://www.fsc.go.kr", href).replace('&amp;', '&')
+        detail = detail.split('#')[0]
+        if detail in seen:
+            continue
+        seen.add(detail)
+        next_pos = matches[i+1].start() if i+1 < len(matches) else min(len(raw_html), m.end()+3500)
         chunk = strip_html(raw_html[m.end():next_pos])
         dm = re.search(r'(20\d{2})[.\-/](\d{2})[.\-/](\d{2})', chunk)
         if not dm:
             continue
         date = f"{dm.group(1)}-{dm.group(2)}-{dm.group(3)}T00:00:00+09:00"
-        detail = urllib.parse.urljoin("https://www.fsc.go.kr", href).replace('&amp;', '&')
-        src = 'FIU' if ('FIU' in title.upper() or '금융정보분석원' in title) else '금융위원회'
-        rows.append({
-            'region': '공식자료',
-            'query': keyword,
-            'official_source': src,
-            'title': title,
-            'source': src,
-            'date': date,
-            'link': detail,
-            'tags': classify(title),
-            'collection_method': 'verified_fsc_board',
-        })
+        rows.append({'region':'공식자료','query':'금융위/FIU','official_source':'금융위원회',
+                     'title':title,'source':'금융위원회','date':date,'link':detail,
+                     'tags':classify(title),'collection_method':'direct_fsc_board'})
     return rows
 
-def fetch_fsc_keyword_page(keyword, page, begin_ymd, end_ymd):
-    raw = fetch_url(fsc_search_url(keyword, page, begin_ymd, end_ymd), timeout=10).decode('utf-8', errors='ignore')
-    return parse_fsc_search_page(raw, keyword)
-
 def verify_fsc_detail(item):
-    """
-    실제 상세페이지를 1회 확인:
-    - HTTP 응답 성공
-    - 보도자료 제목이 페이지에 존재
-    - 제목 외 본문 텍스트가 충분히 존재
-    빈 FIU 페이지/엉뚱한 링크를 제거한다.
-    """
+    """상세페이지 본문까지 확인해 AML/FIU/금융범죄 실무 관련 자료만 채택한다."""
     try:
         raw = fetch_url(item['link'], timeout=8).decode('utf-8', errors='ignore')
         text = strip_html(raw)
         title_key = key_title(item.get('title', ''))
         text_key = key_title(text)
-        if not title_key or title_key not in text_key:
+        if not title_key or title_key not in text_key or len(text) < 350:
             return None
-        # 제목만 있는 빈 페이지를 거르기 위한 최소 텍스트 길이
-        if len(text) < 350:
+        context = (item.get('title','') + ' ' + text[:12000]).strip()
+        # 제목이 직접 AML 용어를 담지 않아도 본문에 FIU/신종피싱/거래정지 등 실무 맥락이 있으면 살린다.
+        if not (official_relevant(context) or v55_practical_info(context) or v49_practical_aml(context)):
             return None
-        return item
+        x = dict(item)
+        x['official_source'] = 'FIU' if re.search(r'금융정보분석원|\bFIU\b', context, re.I) else '금융위원회'
+        x['source'] = x['official_source']
+        x['tags'] = classify(context)
+        return x
     except Exception:
         return None
 
-def dedupe(rows, limit=1000):
-    seen_t, seen_l = set(), set()
-    out = []
-    for x in rows:
-        kt = key_title(x.get('title',''))
-        lk = x.get('link','')
-        if kt and kt in seen_t:
-            continue
-        if lk and lk in seen_l:
-            continue
-        if kt: seen_t.add(kt)
-        if lk: seen_l.add(lk)
-        out.append(x)
-    out.sort(key=lambda x: parse_dt(x.get('date')) or datetime(1970,1,1,tzinfo=timezone.utc), reverse=True)
-    return out[:limit]
-
 def collect_fsc_official(backfill, cutoff, now_utc):
-    """
-    첫 성공 실행: 최근 90일 백필.
-    이후: 최근 7일만 다시 훑어 신규/수정 자료 증분수집.
-    """
-    begin = (cutoff if backfill else now_utc - timedelta(days=7)).astimezone(KST).strftime('%Y-%m-%d')
-    end = now_utc.astimezone(KST).strftime('%Y-%m-%d')
-    max_pages = 6 if backfill else 1
-
-    candidates = []
-    status = []
-    for kw in FSC_SEARCH_KEYWORDS:
-        kw_rows = []
-        for page in range(1, max_pages + 1):
-            try:
-                rows = fetch_fsc_keyword_page(kw, page, begin, end)
-                kw_rows.extend(rows)
-                # 검색결과가 없으면 뒤 페이지도 없음
-                if not rows:
-                    break
-            except Exception as e:
-                status.append({'feed': f'금융위/FIU:{kw}:p{page}', 'ok': False, 'count': 0, 'error': str(e)[:160]})
+    """5.7: 키워드 검색 대신 금융위 보도자료 목록을 날짜순으로 직접 순회한다."""
+    max_pages = 14 if backfill else 3
+    candidates, status = [], []
+    for page in range(1, max_pages + 1):
+        try:
+            url = FSC_BOARD_URL + '?' + urllib.parse.urlencode({'curPage': str(page)})
+            raw = fetch_url(url, timeout=10).decode('utf-8', errors='ignore')
+            rows = parse_fsc_board_page(raw)
+            candidates.extend(rows)
+            status.append({'feed':f'금융위/FIU:목록:p{page}','ok':True,'count':len(rows),'method':'direct_official_board'})
+            dated=[parse_dt(x.get('date')) for x in rows if parse_dt(x.get('date'))]
+            if dated and min(dated) < cutoff:
                 break
-        candidates.extend(kw_rows)
-        status.append({'feed': f'금융위/FIU:{kw}', 'ok': True, 'count': len(kw_rows), 'method': 'official_board'})
+        except Exception as e:
+            status.append({'feed':f'금융위/FIU:목록:p{page}','ok':False,'count':0,'error':str(e)[:160]})
+            break
         time.sleep(0.05)
-
-    # 90일 밖 제거 + 중복 후 상세페이지 병렬 검증
-    candidates = [
-        x for x in dedupe(candidates, 500)
-        if (parse_dt(x.get('date')) and parse_dt(x.get('date')) >= cutoff)
-    ]
-
-    verified = []
-    # 상세 검증은 URL별 1회, 병렬로 실행해 첫 백필도 오래 걸리지 않도록 함.
+    candidates=[x for x in dedupe(candidates,700) if parse_dt(x.get('date')) and parse_dt(x.get('date'))>=cutoff]
+    verified=[]
     with ThreadPoolExecutor(max_workers=8) as ex:
-        futs = {ex.submit(verify_fsc_detail, x): x for x in candidates}
+        futs={ex.submit(verify_fsc_detail,x):x for x in candidates}
         for fut in as_completed(futs):
             try:
-                x = fut.result()
-                if x:
-                    verified.append(x)
+                x=fut.result()
+                if x: verified.append(x)
             except Exception:
                 pass
-
-    return dedupe(verified, 400), status
+    status.append({'feed':'금융위/FIU:본문검증','ok':True,'count':len(verified),'method':'body_relevance'})
+    return dedupe(verified,400), status
 
 
 FSS_BOARD_URL = "https://www.fss.or.kr/fss/bbs/B0000188/list.do"
@@ -926,7 +886,7 @@ def main():
 
     # ---------- 국내 뉴스 ----------
     all_items, status = [], []
-    practical_backfill = old.get('practical_backfill_version') != '5.5'
+    practical_backfill = old.get('practical_backfill_version') != '5.7'
     for name, query in QUERIES:
         try:
             items = fetch_query(name, query, 1)
@@ -982,7 +942,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.5'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.7'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -1025,10 +985,10 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '5.5',
+        'official_backfill_version': '5.7',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'practical_backfill_complete': True,
-        'practical_backfill_version': '5.5',
+        'practical_backfill_version': '5.7',
         'practical_collection_mode': '90d_backfill' if practical_backfill else '1d_incremental',
         'count': len(news),
         'official_count': len(official),

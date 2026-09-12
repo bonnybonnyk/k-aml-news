@@ -103,7 +103,7 @@ button,input{font:inherit}
 }
 </style>
   <meta name="app-version" content="5.6">
-  <!-- K-AML NEWS build 5.6 -->
+  <!-- K-AML NEWS build 5.7 -->
 </head>
 <body>
 <div class="wrap">
@@ -188,6 +188,10 @@ function sameEvent(a,b){
   const roles=overlap(A.roles,B.roles);
   const jac=tokenJaccard(A.t,B.t);
 
+  // 5.7: 서로 다른 금액이 명시된 사건은 '총책·검거·범죄수익' 같은 일반 단어만으로 묶지 않는다.
+  // (예: 30억 위조상품 사건 vs 415억원 범죄수익 세탁 사건)
+  if(A.nums.length && B.nums.length && nums===0) return false;
+
   // 제목 자체가 꽤 비슷한 경우
   if(jac>=0.42) return true;
 
@@ -256,7 +260,7 @@ function render(){
  $('#summary').textContent=`${cs.length}개 사건 · ${list.length}건 기사`;
  if(!cs.length){$('#grid').innerHTML='<div class="empty">조건에 맞는 뉴스가 없습니다.</div>';return}
  $('#grid').innerHTML=cs.map((c,i)=>{let x=c.main,id='r'+i;let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
- let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">같은 사건 보도 ${c.rel.length+1}건 ▾</button><div id="${id}" class="related-list">${c.rel.map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)}</div>`).join('')}</div>`:'';
+ let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">같은 사건 보도 +${c.rel.length}건 ▾</button><div id="${id}" class="related-list">${c.rel.map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)}</div>`).join('')}</div>`:'';
  return `<article class="card"><div class="meta"><span>${esc(x.source||'뉴스')} · ${esc(x.query||'')}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(x.link)}">${esc(x.title)}</a><div class="tags">${tags}</div>${rel}</article>`}).join('')
 }
 
