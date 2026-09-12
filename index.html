@@ -102,8 +102,8 @@ button,input{font:inherit}
   .title{font-size:16px}
 }
 </style>
-  <meta name="app-version" content="5.4">
-  <!-- K-AML NEWS build 5.4 -->
+  <meta name="app-version" content="5.5">
+  <!-- K-AML NEWS build 5.5 -->
 </head>
 <body>
 <div class="wrap">
@@ -113,7 +113,7 @@ button,input{font:inherit}
     <div class="livePill"><span id="dot" class="dot"></span><span id="status">데이터 확인 중</span></div>
   </div>
   <h1>AML·금융범죄 뉴스 모니터링</h1>
-  <p>자금세탁·범죄수익·가상자산 범죄·보이스피싱·환치기·전제범죄와 FIU 규제 변화 중, 실제 STR 모니터링에 참고할 만한 기사만 선별합니다.</p>
+  <p>자금세탁·금융범죄 사례뿐 아니라 신종수법, AML·STR 제도 변화, 금융회사 운영 사례까지 실제 업무에 참고할 만한 정보만 선별합니다.</p>
 
   <div class="stats">
     <div class="stat"><b id="newsStat">-</b><span>선별 뉴스</span></div>
@@ -126,7 +126,7 @@ button,input{font:inherit}
     <button id="tabNews" class="tab active">AML·금융범죄 뉴스</button>
     <button id="tabOfficial" class="tab">공식자료</button>
   </div>
-  <div id="officialNote" class="official-note" style="display:none">금융위·FIU 공식자료는 최근 90일 기준으로 유지하며, 공식 상세페이지가 확인된 자료만 연결합니다.</div>
+  <div id="officialNote" class="official-note" style="display:none">금융위·FIU·금감원·DAXA 공식자료는 최근 90일 기준으로 유지하며, 확인된 공식 상세페이지로 연결합니다.</div>
 
   <div class="toolbar">
     <div class="searchWrap">
@@ -143,7 +143,7 @@ button,input{font:inherit}
 let NEWS=[], OFFICIAL=[], MODE='news', CAT='전체', TODAY=false;
 let LAST_CHECKED_AT=null, LAST_DATA_UPDATED=null;
 const AUTO_CHECK_MS=30*60*1000;
-const CATS=['전체','자금세탁','가상자산','사기','불법사금융','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','제재·테러자금'];
+const CATS=['전체','자금세탁','가상자산','사기','불법사금융','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','AML 실무·제도','제재·테러자금'];
 const $=s=>document.querySelector(s);
 function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function isToday(d){let x=new Date(d),n=new Date();return x.getFullYear()===n.getFullYear()&&x.getMonth()===n.getMonth()&&x.getDate()===n.getDate()}
@@ -206,7 +206,7 @@ function sameEvent(a,b){
 function cluster(items){let cs=[];for(const x of items){let c=cs.find(c=>sameEvent(c.main,x));if(c)c.rel.push(x);else cs.push({main:x,rel:[]})}return cs}
 
 function drawCats(){
-  const cats = MODE==='official' ? ['전체','FIU','금융위원회','금융감독원'] : CATS;
+  const cats = MODE==='official' ? ['전체','FIU','금융위원회','금융감독원','DAXA'] : CATS;
   $('#cats').innerHTML=cats.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join('');
   document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{CAT=b.dataset.c;drawCats();render()})
 }
@@ -224,6 +224,7 @@ function safeOfficialHref(x){
    if(/fss\.or\.kr/.test(low) && /(view\.do|\/view\/)/.test(low)) return u;
    if(/dart\.fss\.or\.kr\/dsaa003\/selectbodomain\.ax\?seqno=\d+/.test(low)) return u;
  }
+ if(s==='DAXA' && /kdaxa\.org\/support\/press\.php\?/.test(low) && /mode=view/.test(low) && /idx=\d+/.test(low)) return u;
  return '';
 }
 
@@ -243,7 +244,7 @@ function render(){
    if(!list.length){$('#grid').innerHTML='<div class="empty">조건에 맞는 공식자료가 없습니다.</div>';return}
    $('#grid').innerHTML=list.map(x=>{
      let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
-     let src=x.official_source||x.source||'공식자료'; let method=x.collection_method==='verified_fsc_board'?'공식 게시판·본문확인':(x.collection_method==='fss_exact_search'?'공식링크 확인':'공식자료');
+     let src=x.official_source||x.source||'공식자료'; let method=x.collection_method==='verified_fsc_board'?'공식 게시판·본문확인':(x.collection_method==='verified_fss_board'?'공식 게시판·본문확인':(x.collection_method==='verified_daxa_board'?'공식 게시판·본문확인':(x.collection_method==='fss_exact_fallback'?'공식링크 확인':'공식자료')));
      let href=safeOfficialHref(x);
      let titleHtml=href?`<a class="title" target="_blank" rel="noopener" href="${esc(href)}">${esc(x.title)}</a>`:`<div class="title">${esc(x.title)}</div><div class="official-note">원문 상세주소를 확인하지 못해 링크를 제공하지 않습니다.</div>`;
      return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div>${titleHtml}<div class="tags">${tags}</div></article>`

@@ -29,6 +29,19 @@ QUERIES = [
     ("제재·테러자금", '"테러자금" OR "제재 회피" OR "대북제재" OR "북한 가상자산"'),
 ]
 
+# 5.5: 직원들이 실제로 공유하는 'AML 실무정보'를 놓치지 않기 위한 별도 발견 경로.
+# 사건 기사와 달리 금융회사 운영·신종수법·차단체계·제도 변화도 후보로 수집한다.
+PRACTICAL_QUERIES = [
+    ("AML 운영·시스템", '(AML OR "자금세탁방지" OR STR OR "의심거래") (FDS OR AI OR 시스템 OR 자동화 OR 연계 OR 모니터링 OR "위험평가" OR 보고서)'),
+    ("정보공유·자금차단", '(보이스피싱 OR 신종피싱 OR 범죄자금 OR 금융사기) ("정보공유" OR "지급정지" OR "거래정지" OR "신속차단" OR "의심계좌")'),
+    ("AML 제도변화", '(FIU OR "금융정보분석원" OR 특금법 OR "자금세탁방지") (개정 OR 시행 OR 공유 OR 제재 OR 검사 OR 평가 OR 지침 OR 제도)'),
+    ("가상자산 AML 실무", '(가상자산 OR VASP OR "해외거래소" OR "해외 거래소") (미신고 OR 트래블룰 OR 외부이전 OR 실태조사 OR 제도이행평가 OR 자금세탁 OR "불법 영업")'),
+    ("PG·가상계좌", '(PG OR "가상계좌" OR 전자금융) (보이스피싱 OR 불법도박 OR 자금세탁 OR 재판매 OR 사기 OR 범죄자금)'),
+    ("불법외환·관세", '(관세청 OR 외국환 OR 불법외환 OR 재산도피) (가상자산 OR 환치기 OR 불법송금 OR 범죄자금 OR 자금세탁)'),
+    ("신종수법·취약점", '(상품권 OR 외화계좌 OR 스테이블코인 OR DEX OR eSIM OR "휴대폰 렌탈") (자금세탁 OR 보이스피싱 OR 신종피싱 OR 불법사금융 OR 사기)'),
+    ("명의도용·차단", '("사망자 명의" OR 명의도용) (금융거래 OR 계좌 OR 지급정지 OR 거래정지 OR 불법)'),
+]
+
 # 금융위/FIU 공식 보도자료 직접검색용 키워드.
 # 너무 잘게 쪼개면 요청 수가 폭증하므로, 실무적으로 빠짐을 줄이면서도 10개로 제한.
 FSC_SEARCH_KEYWORDS = [
@@ -45,6 +58,9 @@ FSC_SEARCH_KEYWORDS = [
     "트래블룰",
     "불법사금융",
     "불법금융",
+    "신종피싱",
+    "가상계좌",
+    "사망자 명의",
 ]
 
 # 검색 결과를 다시 거르는 AML 관련어. 제목에 하나 이상 있어야 공식자료로 채택.
@@ -53,7 +69,9 @@ OFFICIAL_KEEP = [
     "의심거래","str","고액현금거래","ctr","특정금융정보법","특금법",
     "가상자산사업자","vasp","가상자산","트래블룰","고객확인","kyc",
     "제도이행평가","위험평가","범죄수익","테러자금","제재","보이스피싱",
-    "대포통장","불법금융","불법사금융","사금융","환치기","불공정거래","시세조종","미등록 영업"
+    "대포통장","불법금융","불법사금융","사금융","환치기","불공정거래","시세조종","미등록 영업",
+    "신종피싱","금융사기","지급정지","거래정지","신속차단","정보공유","가상계좌","전자금융",
+    "fds","사망자 명의","실태조사","재산도피","불법외환"
 ]
 
 PROMO = [
@@ -76,7 +94,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.3'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.5'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -104,13 +122,13 @@ def classify(title):
     tags = []
     if re.search(r'가상자산|암호화폐|코인|비트코인|이더리움|usdt|테더|지갑|거래소|트래블룰|vasp', t): tags.append('가상자산')
     if re.search(r'불법사금융|불법사채|고리사채|불법대부|불법추심', t): tags.append('불법사금융')
-    if re.search(r'보이스피싱|사기|리딩방|로맨스스캠|대포통장', t): tags.append('사기')
+    if re.search(r'보이스피싱|신종피싱|금융사기|사기|리딩방|로맨스스캠|대포통장', t): tags.append('사기')
     if re.search(r'마약|필로폰|대마', t): tags.append('마약')
     if re.search(r'도박|카지노|베팅', t): tags.append('도박')
     if re.search(r'탈세|조세포탈|역외탈세', t): tags.append('탈세')
     if re.search(r'횡령|배임', t): tags.append('횡령·배임')
     if re.search(r'환치기|불법외환|외국환', t): tags.append('환치기·외환')
-    if re.search(r'fiu|금융정보분석원|str|의심거래|자금세탁방지|규제|제도|fatf', t): tags.append('FIU·규제')
+    if re.search(r'fiu|금융정보분석원|str|의심거래|자금세탁방지|규제|제도|fatf|fds|지급정지|거래정지|신속차단|정보공유|가상계좌|실태조사', t): tags.append('FIU·규제')
     if re.search(r'테러자금|제재|대북|북한', t): tags.append('제재·테러자금')
     if re.search(r'자금세탁|돈세탁|범죄수익', t): tags.append('자금세탁')
     return tags or ['AML']
@@ -304,7 +322,7 @@ def infer_news_category(title):
         return '트래블룰'
 
     # 주요 전제범죄 / 사기
-    if re.search(r'보이스피싱|대포통장|사기이용계좌|전화금융사기', t):
+    if re.search(r'보이스피싱|신종피싱|대포통장|사기이용계좌|전화금융사기', t):
         return '보이스피싱'
     if re.search(r'불법사금융|불법사채|고리사채|불법대부|초고금리\s*대출|불법추심', t):
         return '불법사금융'
@@ -347,6 +365,14 @@ def infer_news_category(title):
     if wallet and wallet_context:
         return '지갑·해외거래소'
 
+    # AML 사건 자체는 아니더라도 실무 운영/통제 변화로 가치가 큰 정보
+    if re.search(r'사망자\s*명의|금융사기.{0,20}(차단|대응)|지급정지|거래정지|신속차단|정보공유', t):
+        return 'AML 실무·제도'
+    if re.search(r'fds|aml\s*시스템|자금세탁.{0,20}(시스템|ai|자동화|연계|모니터링)|str.{0,20}(자동|시스템|보고서)', t):
+        return 'AML 실무·제도'
+    if re.search(r'가상계좌|pg사|전자금융', t) and re.search(r'재판매|보이스피싱|도박|자금세탁|범죄|통제|기준', t):
+        return 'AML 실무·제도'
+
     return None
 
 
@@ -369,7 +395,7 @@ V49_CASE_ACTION = re.compile(
     r'유죄|선고|피해|조직|일당|주범|총책|범행|사기|불법|위반|탈취|해킹|체포|고발|입건|혐의\s*확인'
 )
 V49_PREDICATE = re.compile(
-    r'보이스피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|로맨스\s*스캠|'
+    r'보이스피싱|신종피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|로맨스\s*스캠|'
     r'불법도박|온라인도박|도박사이트|사설토토|마약|필로폰|대마|코카인|'
     r'탈세|조세포탈|횡령|배임|불법\s*외환|외국환거래법|환치기|대포통장|차명계좌|불법사금융|불법사채|고리사채|불법대부'
 )
@@ -423,7 +449,7 @@ def v49_practical_aml(title):
 
     # 보이스피싱/투자사기/불법도박은 새로운 사건·수법을 놓치지 않도록
     # 구체적인 수사/피해/조직/형사처분 신호가 있으면 유지.
-    if predicate and action and re.search(r'보이스피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|불법도박|온라인도박|도박사이트|사설토토', t):
+    if predicate and action and re.search(r'보이스피싱|신종피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|불법도박|온라인도박|도박사이트|사설토토', t):
         return True
 
     # 가상자산은 단순 시장/기술이 아니라 범죄·불법·집행이 결합되어야 함.
@@ -437,10 +463,47 @@ def v49_practical_aml(title):
 
     return False
 
-def fetch_query(name, query):
-    # 최신 발견용: 최근 24시간만 재검색
+# ---------- 5.5 AML 실무정보 통과 경로 ----------
+# 범죄 사건만 찾는 기존 v4.9 게이트는 그대로 유지하고,
+# 금융회사 AML 운영·제도변화·신종수법·차단체계 같은 업무 참고정보를 별도로 살린다.
+V55_AML_OPS = re.compile(r'aml|자금세탁방지|자금세탁|의심거래|\bstr\b|\bfds\b|금융정보분석원|\bfiu\b')
+V55_OPS_CHANGE = re.compile(r'시스템|ai|인공지능|자동화|연계|모니터링|위험평가|보고서|정보공유|공유|지급정지|거래정지|신속차단|차단|동결|통합|플랫폼')
+V55_POLICY = re.compile(r'개정|시행|법안|규정|기준|지침|제도|의결|신고|미신고|검사|점검|평가|제재|과태료|영업정지|실태조사')
+V55_FINANCIAL_ORG = re.compile(r'은행|금융회사|금융권|금융당국|금융위|금감원|금융감독원|fiu|금융정보분석원|거래소|가상자산사업자|vasp|pg사|전자금융')
+V55_CONTROL_RISK = re.compile(r'보이스피싱|신종피싱|금융사기|불법사금융|불법도박|마약|범죄자금|불법재산|사망자\s*명의|명의도용|가상계좌')
+V55_CRYPTO_CONTROL = re.compile(r'가상자산|암호화폐|코인|usdt|테더|해외\s*거래소|해외거래소|지갑|트래블룰|vasp|가상자산사업자')
+V55_CRYPTO_PRACTICE = re.compile(r'미신고|외부이전|외부\s*이전|실태조사|제도이행평가|신고|영업정지|제재|외환\s*전산망|유출입|현금화|차단')
+V55_NEW_TYPOLOGY = re.compile(r'상품권|외화계좌|스테이블코인|dex|eSIM|휴대폰\s*렌탈|가상계좌|재판매')
+V55_TYPOLOGY_RISK = re.compile(r'자금세탁|보이스피싱|신종피싱|사기|불법사금융|불법도박|범죄|사각지대|우회|악용')
+V55_FX = re.compile(r'관세청|불법외환|불법\s*외환|외국환|재산도피|불법송금|환치기')
+
+def v55_practical_info(text):
+    t = text or ''
+    low = t.lower()
+    # 일반 산업/시장/행사성 글은 여전히 제외
+    if V49_LOW_VALUE.search(t) and not (V55_AML_OPS.search(low) and (V55_OPS_CHANGE.search(low) or V55_POLICY.search(low))):
+        return False
+    # 금융회사/당국의 AML·FDS·STR 운영 변화
+    if V55_FINANCIAL_ORG.search(low) and V55_AML_OPS.search(low) and (V55_OPS_CHANGE.search(low) or V55_POLICY.search(low)):
+        return True
+    # 범죄자금/사기 계좌의 정보공유·지급정지·신속차단 체계
+    if V55_CONTROL_RISK.search(low) and (V55_OPS_CHANGE.search(low) or V55_POLICY.search(low)):
+        return True
+    # 가상자산사업자·해외거래소의 AML 통제/취약점/외부이전 변화
+    if V55_CRYPTO_CONTROL.search(low) and V55_CRYPTO_PRACTICE.search(low):
+        return True
+    # 상품권·외화계좌·DEX·eSIM·가상계좌 등 신종 수법/사각지대
+    if V55_NEW_TYPOLOGY.search(low) and V55_TYPOLOGY_RISK.search(low):
+        return True
+    # 관세청/외국환 영역의 자금흐름·범죄 통제
+    if V55_FX.search(low) and (V49_MONEY_FLOW.search(low) or V49_CASE_ACTION.search(low) or V55_POLICY.search(low)):
+        return True
+    return False
+
+def fetch_query(name, query, window_days=1):
+    # 기본 뉴스는 최근 24시간, 5.5 실무정보는 최초 1회 90일 백필 가능
     params = urllib.parse.urlencode({
-        'q': query + ' when:1d',
+        'q': query + f' when:{int(window_days)}d',
         'hl': 'ko', 'gl': 'KR', 'ceid': 'KR:ko'
     })
     url = 'https://news.google.com/rss/search?' + params
@@ -466,11 +529,13 @@ def fetch_query(name, query):
         category = infer_news_category(title)
         if not category:
             category = infer_news_category(context)
+        if not category and (v55_practical_info(title) or v55_practical_info(context)):
+            category = 'AML 실무·제도'
         if not category:
             continue
         # 제목만으로 충분하면 그대로 통과. 제목이 짧거나 맥락이 부족한 경우
         # Google News 설명문까지 보조적으로 보되, 실무가치 게이트는 동일하게 적용한다.
-        if not (v49_practical_aml(title) or v49_practical_aml(context)):
+        if not (v49_practical_aml(title) or v49_practical_aml(context) or v55_practical_info(title) or v55_practical_info(context)):
             continue
         out.append({
             'region': '국내',
@@ -753,6 +818,71 @@ def collect_fss_fallback():
         })
     return out
 
+# ---------- 5.5 DAXA 공식 보도자료 ----------
+DAXA_LIST_URL = 'https://www.kdaxa.org/support/press.php?boardid=news&category=&offset={offset}&sk=&sw='
+
+def daxa_relevant(title):
+    t=(title or '').lower()
+    keep=re.search(r'미신고|불법|범죄|자금세탁|\baml\b|보이스피싱|통신사기|피해환급법|시세조종|이상거래|제도이행평가|트래블룰|\bvasp\b|가상자산사업자|해외\s*거래소|외환\s*전산망|api key', t)
+    low=re.search(r'세미나|자료집|정책\s*자료집|전망|포럼|컨퍼런스', t)
+    return bool(keep) and not bool(low)
+
+def parse_daxa_list(raw_html):
+    rows=[]
+    pat=re.compile(r'<a\b[^>]*href=["\']([^"\']*press\.php\?[^"\']*mode=view[^"\']*idx=\d+[^"\']*)["\'][^>]*>(.*?)</a>', re.I|re.S)
+    ms=list(pat.finditer(raw_html))
+    for i,m in enumerate(ms):
+        href=html_unescape(m.group(1)).replace('&amp;','&')
+        title=clean_title(strip_html(m.group(2)))
+        title=re.sub(r'^\[?\d{6}\]?\s*','',title).strip()
+        if not title or not daxa_relevant(title):
+            continue
+        nxt=ms[i+1].start() if i+1<len(ms) else min(len(raw_html),m.end()+1800)
+        chunk=strip_html(raw_html[m.end():nxt])
+        dm=re.search(r'(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})',chunk)
+        if not dm:
+            continue
+        date=f"{int(dm.group(1)):04d}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}T00:00:00+09:00"
+        rows.append({
+            'region':'공식자료','query':'DAXA','official_source':'DAXA','title':title,'source':'DAXA',
+            'date':date,'link':urllib.parse.urljoin('https://www.kdaxa.org/support/',href),
+            'tags':classify(title),'collection_method':'verified_daxa_board'
+        })
+    return rows
+
+def verify_daxa_detail(item):
+    try:
+        raw=fetch_url(item['link'],timeout=10).decode('utf-8',errors='ignore')
+        text=strip_html(raw)
+        if len(text)<180 or key_title(item.get('title','')) not in key_title(text):
+            return None
+        return item
+    except Exception:
+        return None
+
+def collect_daxa_official(cutoff):
+    candidates=[]; status=[]
+    # 현재 게시 빈도상 첫 20건이면 최근 90일을 충분히 덮는다.
+    for offset in (0,10):
+        try:
+            raw=fetch_url(DAXA_LIST_URL.format(offset=offset),timeout=10).decode('utf-8',errors='ignore')
+            rows=parse_daxa_list(raw)
+            candidates.extend(rows)
+            status.append({'feed':f'DAXA:offset{offset}','ok':True,'count':len(rows),'method':'official_board'})
+        except Exception as e:
+            status.append({'feed':f'DAXA:offset{offset}','ok':False,'count':0,'error':str(e)[:160]})
+    candidates=[x for x in dedupe(candidates,100) if parse_dt(x.get('date')) and parse_dt(x.get('date'))>=cutoff]
+    verified=[]
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        futs=[ex.submit(verify_daxa_detail,x) for x in candidates]
+        for fut in as_completed(futs):
+            try:
+                x=fut.result()
+                if x: verified.append(x)
+            except Exception:
+                pass
+    return dedupe(verified,100), status
+
 def main():
     now_utc = datetime.now(timezone.utc)
     cutoff = now_utc - timedelta(days=RETENTION_DAYS)
@@ -770,16 +900,29 @@ def main():
 
     # ---------- 국내 뉴스 ----------
     all_items, status = [], []
+    practical_backfill = old.get('practical_backfill_version') != '5.5'
     for name, query in QUERIES:
         try:
-            items = fetch_query(name, query)
+            items = fetch_query(name, query, 1)
             all_items.extend(items)
             status.append({'feed': name, 'ok': True, 'count': len(items)})
             print('NEWS', name, len(items))
         except Exception as e:
             status.append({'feed': name, 'ok': False, 'count': 0, 'error': str(e)[:180]})
             print('NEWS ERROR', name, e)
-        time.sleep(0.12)
+        time.sleep(0.10)
+
+    practical_window = RETENTION_DAYS if practical_backfill else 1
+    for name, query in PRACTICAL_QUERIES:
+        try:
+            items = fetch_query(name, query, practical_window)
+            all_items.extend(items)
+            status.append({'feed': '실무:'+name, 'ok': True, 'count': len(items), 'window_days': practical_window})
+            print('PRACTICAL', name, len(items), 'window', practical_window)
+        except Exception as e:
+            status.append({'feed': '실무:'+name, 'ok': False, 'count': 0, 'error': str(e)[:180]})
+            print('PRACTICAL ERROR', name, e)
+        time.sleep(0.10)
 
     merged_news = []
     for x in all_items + existing:
@@ -798,22 +941,30 @@ def main():
         title0 = x.get('title','')
         context0 = (title0 + ' ' + x.get('description','')).strip()
         category = infer_news_category(title0) or infer_news_category(context0)
+        practical_ok = v55_practical_info(title0) or v55_practical_info(context0)
+        if not category and practical_ok:
+            category = 'AML 실무·제도'
         if not category:
             continue
-        if not (v49_practical_aml(title0) or v49_practical_aml(context0)):
+        if not (v49_practical_aml(title0) or v49_practical_aml(context0) or practical_ok):
             continue
         x = dict(x)
         x['query'] = category
-        x['tags'] = classify(x.get('title',''))
+        tags = classify(x.get('title',''))
+        if category == 'AML 실무·제도' and 'AML 실무·제도' not in tags:
+            tags.append('AML 실무·제도')
+        x['tags'] = tags
         merged_news.append(x)
     news = dedupe(merged_news, 1200)
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.3'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.5'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
+    daxa_items, daxa_status = collect_daxa_official(cutoff)
+    official_status.extend(daxa_status)
     try:
         fss_items, fss_status = collect_fss_board(backfill, cutoff, now_utc)
         official_status.extend(fss_status)
@@ -838,7 +989,7 @@ def main():
         official_seed = existing_official
 
     official_merged = []
-    for x in fsc_items + fss_items + official_seed:
+    for x in fsc_items + fss_items + daxa_items + official_seed:
         d = parse_dt(x.get('date'))
         if not d or d < cutoff:
             continue
@@ -851,15 +1002,18 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '5.3',
+        'official_backfill_version': '5.5',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
+        'practical_backfill_complete': True,
+        'practical_backfill_version': '5.5',
+        'practical_collection_mode': '90d_backfill' if practical_backfill else '1d_incremental',
         'count': len(news),
         'official_count': len(official),
         'items': news,
         'official_items': official,
     }
     p.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
-    print('DONE news=', len(news), 'official=', len(official), 'mode=', payload['official_collection_mode'])
+    print('DONE news=', len(news), 'official=', len(official), 'official_mode=', payload['official_collection_mode'], 'practical_mode=', payload['practical_collection_mode'])
 
 if __name__ == '__main__':
     main()
