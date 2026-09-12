@@ -18,12 +18,13 @@ QUERIES = [
     ("지갑·해외거래소", '("개인지갑" OR "해외거래소" OR "해외 거래소") (가상자산 OR 코인 OR 범죄)'),
     ("트래블룰", '"트래블룰" OR VASP OR "가상자산사업자"'),
     ("보이스피싱", '"보이스피싱" OR "대포통장" OR "사기이용계좌"'),
+    ("불법사금융", '"불법사금융" OR "불법사채" OR "고리사채" OR "불법대부"'),
     ("투자사기", '("투자사기" OR "리딩방" OR "로맨스스캠" OR "코인사기") (자금 OR 계좌 OR 가상자산)'),
     ("환치기·외환", '"환치기" OR "불법외환" OR "외국환거래법 위반" OR "불법 송금"'),
     ("마약자금", '(마약 OR 필로폰 OR 대마) (자금 OR 계좌 OR 가상자산 OR 범죄수익)'),
     ("불법도박", '("불법도박" OR "온라인도박" OR "도박사이트") (자금 OR 계좌 OR 가상자산 OR 범죄수익)'),
     ("탈세", '(탈세 OR "조세포탈" OR "역외탈세") (차명 OR 계좌 OR 가상자산 OR 범죄수익)'),
-    ("횡령·배임", '(횡령 OR 배임) ("범죄수익" OR 자금 OR 계좌 OR 은닉)'),
+    ("횡령·배임", '(횡령 OR 배임) (공금 OR 회삿돈 OR 회사자금 OR 법인자금 OR 자금 OR 계좌 OR 은닉 OR 유용 OR 빼돌 OR 고발 OR 구속 OR 기소)'),
     ("차명계좌", '"차명계좌" OR "차명 거래" OR "명의대여"'),
     ("제재·테러자금", '"테러자금" OR "제재 회피" OR "대북제재" OR "북한 가상자산"'),
 ]
@@ -75,7 +76,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.2'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.3'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -102,6 +103,7 @@ def classify(title):
     t = (title or '').lower()
     tags = []
     if re.search(r'가상자산|암호화폐|코인|비트코인|이더리움|usdt|테더|지갑|거래소|트래블룰|vasp', t): tags.append('가상자산')
+    if re.search(r'불법사금융|불법사채|고리사채|불법대부|불법추심', t): tags.append('불법사금융')
     if re.search(r'보이스피싱|사기|리딩방|로맨스스캠|대포통장', t): tags.append('사기')
     if re.search(r'마약|필로폰|대마', t): tags.append('마약')
     if re.search(r'도박|카지노|베팅', t): tags.append('도박')
@@ -304,6 +306,8 @@ def infer_news_category(title):
     # 주요 전제범죄 / 사기
     if re.search(r'보이스피싱|대포통장|사기이용계좌|전화금융사기', t):
         return '보이스피싱'
+    if re.search(r'불법사금융|불법사채|고리사채|불법대부|초고금리\s*대출|불법추심', t):
+        return '불법사금융'
     if re.search(r'투자사기|투자 사기|리딩방|로맨스스캠|로맨스 스캠|코인사기|코인 사기|유사수신', t):
         return '투자사기'
     if re.search(r'환치기|불법\s*외환|불법\s*외화|외국환거래법\s*위반|불법\s*송금|무등록\s*외환|외환거래\s*적발', t):
@@ -338,8 +342,8 @@ def infer_news_category(title):
         return '가상자산 AML'
 
     # 개인지갑/해외거래소는 실제 자금이동·규제·범죄 맥락이 제목에 있어야 함.
-    wallet = re.search(r'개인지갑|개인\s*지갑|해외거래소|해외\s*거래소|외부지갑|외부\s*지갑|가상자산\s*지갑|암호화폐\s*지갑', t)
-    wallet_context = re.search(r'송금|이체|입금|출금|이동|전송|자금|거래|추적|동결|압수|제재|수사|범죄|불법|신고|규제|차단', t)
+    wallet = re.search(r'개인지갑|개인\s*지갑|해외거래소|해외\s*거래소|외부지갑|외부\s*지갑|가상자산\s*지갑|암호화폐\s*지갑|지갑', t)
+    wallet_context = re.search(r'송금|이체|입금|출금|이동|전송|자금|거래|거래소|추적|동결|압수|제재|수사|범죄|불법|신고|규제|차단|현금화', t)
     if wallet and wallet_context:
         return '지갑·해외거래소'
 
@@ -351,24 +355,29 @@ def infer_news_category(title):
 # 애매하면 제외하는 정밀도 우선(precision-first) 방식.
 
 V49_DIRECT_AML = re.compile(
-    r'자금세탁|돈세탁|범죄수익|금융정보분석원|\bfiu\b|의심거래|의심거래보고|\bstr\b|'
+    r'자금세탁|돈세탁|세탁\s*혐의|범죄수익|금융정보분석원|\bfiu\b|의심거래|의심거래보고|\bstr\b|'
     r'고액현금거래|\bctr\b|자금세탁방지|\baml\b|\bcft\b|\bfatf\b|특정금융정보법|특금법|'
     r'트래블룰|가상자산사업자|\bvasp\b|고객확인|\bkyc\b|테러자금|제재\s*회피'
 )
 V49_MONEY_FLOW = re.compile(
     r'계좌|대포통장|차명|송금|이체|입금|출금|현금|환치기|외환|외화|자금|대금|수익|'
     r'범죄수익|가상자산|암호화폐|코인|\busdt\b|테더|지갑|거래소|ATM|현금화|상품권|'
-    r'몰수|추징|압수|동결|환수|빼돌|유용|은닉|세탁'
+    r'몰수|추징|압수|동결|환수|빼돌|유용|은닉|세탁|공금|회삿돈|회사자금|법인자금|허위급여|비자금'
 )
 V49_CASE_ACTION = re.compile(
     r'적발|검거|구속|기소|송치|수사|압수|추징|몰수|동결|환수|징역|실형|벌금|'
-    r'유죄|선고|피해|조직|일당|주범|총책|범행|사기|불법|위반|탈취|해킹'
+    r'유죄|선고|피해|조직|일당|주범|총책|범행|사기|불법|위반|탈취|해킹|체포|고발|입건|혐의\s*확인'
 )
 V49_PREDICATE = re.compile(
     r'보이스피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|로맨스\s*스캠|'
     r'불법도박|온라인도박|도박사이트|사설토토|마약|필로폰|대마|코카인|'
-    r'탈세|조세포탈|횡령|배임|불법\s*외환|외국환거래법|환치기|대포통장|차명계좌'
+    r'탈세|조세포탈|횡령|배임|불법\s*외환|외국환거래법|환치기|대포통장|차명계좌|불법사금융|불법사채|고리사채|불법대부'
 )
+V53_CONCRETE_AMOUNT = re.compile(
+    r'(?:약\s*)?\d[\d,.]*(?:억|만|천)?\s*(?:원|달러|페소|유로)|'
+    r'\d[\d,.]*\s*(?:억원|만원|달러|페소|유로)'
+)
+
 V49_POLICY_ACTION = re.compile(
     r'개정|시행|의결|입법|법안|규정|가이드|매뉴얼|지침|제재|검사|점검|평가|'
     r'신고제|등록|미등록|의무|금지|강화|개선|대책|조치'
@@ -408,12 +417,19 @@ def v49_practical_aml(title):
     if predicate and flow:
         return True
 
+    # 횡령·배임·탈세 등도 구체적 금액 + 수사/고발/구속/기소 등 사건성이 있으면 실무 사례로 유지.
+    if predicate and action and V53_CONCRETE_AMOUNT.search(t):
+        return True
+
     # 보이스피싱/투자사기/불법도박은 새로운 사건·수법을 놓치지 않도록
     # 구체적인 수사/피해/조직/형사처분 신호가 있으면 유지.
     if predicate and action and re.search(r'보이스피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|불법도박|온라인도박|도박사이트|사설토토', t):
         return True
 
     # 가상자산은 단순 시장/기술이 아니라 범죄·불법·집행이 결합되어야 함.
+    if re.search(r'지갑', t) and re.search(r'거래소', t) and re.search(r'현금화|송금|이체|전송|동결|압수|추적', t):
+        return True
+
     crypto = re.search(r'가상자산|암호화폐|비트코인|이더리움|\busdt\b|테더|코인|가상화폐', t)
     crypto_risk = re.search(r'자금세탁|범죄|불법|사기|피싱|환치기|탈취|해킹|랜섬웨어|제재|미등록|위반', t)
     if crypto and crypto_risk and (action or flow):
@@ -445,10 +461,16 @@ def fetch_query(name, query):
             continue
         if low_quality_news_source(title, source_name, source_domain):
             continue
+        description = strip_html(it.findtext('description') or '')
+        context = (title + ' ' + description).strip()
         category = infer_news_category(title)
         if not category:
+            category = infer_news_category(context)
+        if not category:
             continue
-        if not v49_practical_aml(title):
+        # 제목만으로 충분하면 그대로 통과. 제목이 짧거나 맥락이 부족한 경우
+        # Google News 설명문까지 보조적으로 보되, 실무가치 게이트는 동일하게 적용한다.
+        if not (v49_practical_aml(title) or v49_practical_aml(context)):
             continue
         out.append({
             'region': '국내',
@@ -460,6 +482,7 @@ def fetch_query(name, query):
             'date': it.findtext('pubDate') or '',
             'link': it.findtext('link') or '',
             'tags': classify(title),
+            'description': description[:700],
             'collection_method': 'google_news_24h',
         })
     return out
@@ -600,100 +623,133 @@ def collect_fsc_official(backfill, cutoff, now_utc):
 
     return dedupe(verified, 400), status
 
+
+FSS_BOARD_URL = "https://www.fss.or.kr/fss/bbs/B0000188/list.do"
+FSS_DETAIL_BASE = "https://www.fss.or.kr/fss/bbs/B0000188/view.do"
+FSS_SEARCH_KEYWORDS = [
+    "자금세탁","AML","가상자산","불법사금융","보이스피싱",
+    "대포통장","불공정거래","시세조종","환치기","외국환","범죄수익"
+]
+
+def fss_list_url(keyword, page=1):
+    return FSS_BOARD_URL + '?' + urllib.parse.urlencode({
+        'menuNo':'200218','searchCnd':'1','searchWrd':keyword,'pageIndex':str(page)
+    })
+
+def parse_fss_board_page(raw_html, keyword):
+    rows = []
+    # 금융감독원 공식 보도자료 상세 형식:
+    # /fss/bbs/B0000188/view.do?nttId=<id>&menuNo=200218...
+    pat = re.compile(
+        r'<a\b[^>]*href=["\']([^"\']*B0000188/view\.do\?[^"\']*nttId=\d+[^"\']*)["\'][^>]*>(.*?)</a>',
+        re.I | re.S
+    )
+    matches = list(pat.finditer(raw_html))
+    for i, m in enumerate(matches):
+        href = html_unescape(m.group(1)).replace('&amp;','&')
+        title = clean_title(strip_html(m.group(2)))
+        if not title:
+            continue
+        next_pos = matches[i+1].start() if i+1 < len(matches) else min(len(raw_html), m.end()+2500)
+        chunk = strip_html(raw_html[m.end():next_pos])
+        dm = re.search(r'(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})', chunk)
+        if not dm:
+            continue
+        date = f"{int(dm.group(1)):04d}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}T00:00:00+09:00"
+        link = urllib.parse.urljoin("https://www.fss.or.kr", href)
+        rows.append({
+            'region':'공식자료','query':keyword,'official_source':'금융감독원',
+            'title':title,'source':'금융감독원','date':date,'link':link,
+            'tags':classify(title),'collection_method':'verified_fss_board'
+        })
+    return rows
+
+def verify_fss_detail(item):
+    try:
+        raw = fetch_url(item['link'], timeout=10).decode('utf-8', errors='ignore')
+        text = strip_html(raw)
+        if len(text) < 300:
+            return None
+        # 정확한 제목이 실제 상세페이지에 존재해야 한다.
+        if key_title(item.get('title','')) not in key_title(text):
+            return None
+        # 제목 또는 본문 앞부분이 AML/금융범죄 실무 범위에 있어야 한다.
+        context = item.get('title','') + ' ' + text[:6000]
+        if not official_relevant(context):
+            return None
+        return item
+    except Exception:
+        return None
+
+def collect_fss_board(backfill, cutoff, now_utc):
+    # 첫 실행은 각 키워드 2페이지, 이후에는 1페이지만 확인.
+    # 키워드 검색으로 범위를 좁혀 전체 게시판 수십 페이지를 훑지 않는다.
+    max_pages = 2 if backfill else 1
+    jobs = [(kw, p) for kw in FSS_SEARCH_KEYWORDS for p in range(1, max_pages+1)]
+    candidates, status = [], []
+
+    def fetch_one(job):
+        kw, page = job
+        raw = fetch_url(fss_list_url(kw, page), timeout=12).decode('utf-8', errors='ignore')
+        return kw, page, parse_fss_board_page(raw, kw)
+
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        futs = {ex.submit(fetch_one, j): j for j in jobs}
+        for fut in as_completed(futs):
+            kw, page = futs[fut]
+            try:
+                _, _, rows = fut.result()
+                candidates.extend(rows)
+                status.append({'feed':f'금융감독원:{kw}:p{page}','ok':True,'count':len(rows),'method':'official_board'})
+            except Exception as e:
+                status.append({'feed':f'금융감독원:{kw}:p{page}','ok':False,'count':0,'error':str(e)[:160]})
+
+    candidates = [
+        x for x in dedupe(candidates, 500)
+        if parse_dt(x.get('date')) and parse_dt(x.get('date')) >= cutoff
+    ]
+    verified = []
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs = [ex.submit(verify_fss_detail, x) for x in candidates]
+        for fut in as_completed(futs):
+            try:
+                x = fut.result()
+                if x:
+                    verified.append(x)
+            except Exception:
+                pass
+    return dedupe(verified, 300), status
+
 def exact_fss_detail_from_item(item):
     blob = html_unescape(ET.tostring(item, encoding='unicode'))
     try:
         blob += ' ' + urllib.parse.unquote(blob)
     except Exception:
         pass
-    pats = [
-        r'https?://(?:www\.)?fss\.or\.kr/[^"\'<>\s]*(?:view\.do|/view/)[^"\'<>\s]*',
-        r'https?://dart\.fss\.or\.kr/dsaa003/selectBodoMain\.ax\?[^"\'<>\s]*seqno=\d+[^"\'<>\s]*'
-    ]
-    for pat in pats:
-        m = re.search(pat, blob, re.I)
-        if m:
-            u = html_unescape(m.group(0)).replace('&amp;', '&')
-            if not re.search(r'\.(pdf|hwp|hwpx|docx?|xlsx?|pptx?|zip)(?:[?#]|$)', u, re.I):
-                return u
-    return ''
+    m = re.search(
+        r'https?://(?:www\.)?fss\.or\.kr/fss/bbs/B0000188/view\.do\?[^"\'<>\s]*nttId=\d+[^"\'<>\s]*',
+        blob, re.I
+    )
+    if not m:
+        return ''
+    return html_unescape(m.group(0)).replace('&amp;','&')
 
-
-# build 5.2: 금융감독원 공식 보도자료 직접 수집 보강
-FSS_BODO_SEARCH = "https://dart.fss.or.kr/dsaa003/searchBodo.do"
-FSS_DIRECT_KEEP = re.compile(
- r'자금세탁|자금세탁방지|범죄수익|FIU|AML|CFT|FATF|의심거래|STR|고액현금거래|CTR|'
- r'가상자산|가상화폐|암호화폐|가상자산사업자|VASP|트래블룰|특정금융정보법|특금법|'
- r'불법사금융|불법금융|보이스피싱|대포통장|불공정거래|시세조종|시장조종|환치기|외국환|테러자금|제재', re.I)
-FSS_DIRECT_LOW = re.compile(r'직접금융 조달실적|사업보고서|공시서식|XBRL|감사보고서|증권신고서|임원보수|자기주식',re.I)
-
-def collect_fss_direct():
-    try:
-        page=fetch_url(FSS_BODO_SEARCH).decode("utf-8","ignore")
-    except Exception as e:
-        print("FSS direct list failed:",e); return []
-    seqs=[]
-    for s in re.findall(r'(?:selectBodoMain\.ax\?seqno=|seqno[="\': ]+)(\d{4,8})',page,re.I):
-        if s not in seqs: seqs.append(s)
-    if not seqs:
-        print("FSS direct: no seqno exposed; fallback search remains active"); return []
-
-    def one(seq):
-        url=f"https://dart.fss.or.kr/dsaa003/selectBodoMain.ax?seqno={seq}"
-        try: text=fetch_url(url).decode("utf-8","ignore")
-        except Exception: return None
-        plain=re.sub(r'(?is)<script.*?</script>|<style.*?</style>',' ',text)
-        plain=re.sub(r'(?s)<[^>]+>',' ',plain)
-        plain=re.sub(r'&nbsp;|&#160;',' ',plain); plain=re.sub(r'&amp;','&',plain)
-        plain=re.sub(r'\s+',' ',plain).strip()
-        dm=re.search(r'등록일\s*[|:]?\s*(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})',plain)
-        if not dm: return None
-        y,mo,da=map(int,dm.groups()); dt=datetime(y,mo,da,12,0,tzinfo=KST)
-        if dt < datetime.now(KST)-timedelta(days=RETENTION_DAYS): return None
-        # DART 보도자료에서 첨부파일 목록 뒤 실제 보도자료 제목을 우선 추출
-        title=''
-        m=re.search(r'(?:pdf|hwp|hwpx)\s+(.{12,220}?)(?:□|ㅁ)',plain,re.I)
-        if m: title=re.sub(r'\s+',' ',m.group(1)).strip(' -|')
-        if not title:
-            hs=re.findall(r'(?is)<h[1-4][^>]*>(.*?)</h[1-4]>',text)
-            hs=[re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',x)).strip() for x in hs]
-            hs=[x for x in hs if len(x)>=8 and x not in ('보도자료','금융감독원')]
-            if hs: title=max(hs,key=len)
-        if not title or len(plain)<300: return None
-        searchable=title+' '+plain[:5000]
-        if not FSS_DIRECT_KEEP.search(searchable): return None
-        if FSS_DIRECT_LOW.search(title) and not re.search(r'가상자산|불법|사기|자금세탁|범죄수익|시세조종|불공정거래',title,re.I): return None
-        return {'title':title,'link':url,'date':dt.isoformat(),'source':'금융감독원',
-                'tags':classify(title),'collection_method':'fss_direct_verified'}
-
-    out=[]
-    with ThreadPoolExecutor(max_workers=6) as ex:
-        fs=[ex.submit(one,s) for s in seqs[:80]]
-        for f in as_completed(fs):
-            try:
-                x=f.result()
-                if x: out.append(x)
-            except Exception: pass
-    return out
-
-
-def collect_fss_incremental():
-    # 금감원은 정확한 상세 URL이 RSS item 안에 들어있는 것만 채택.
-    params = urllib.parse.urlencode({'q': FSS_QUERY + ' when:90d', 'hl':'ko','gl':'KR','ceid':'KR:ko'})
+def collect_fss_fallback():
+    # 공식 게시판이 일시적으로 timeout일 때만 보조적으로 활용할 정확한 FSS 상세링크 검색.
+    q = '("자금세탁" OR AML OR "가상자산" OR "불법사금융" OR "보이스피싱" OR "불공정거래" OR "환치기") site:fss.or.kr/fss/bbs/B0000188'
+    params = urllib.parse.urlencode({'q':q+' when:90d','hl':'ko','gl':'KR','ceid':'KR:ko'})
     data = fetch_url('https://news.google.com/rss/search?' + params, timeout=10)
     root = ET.fromstring(data)
     out = []
     for it in root.findall('.//item')[:100]:
         title = clean_title(it.findtext('title') or '')
-        if not title or not official_relevant(title):
-            continue
         link = exact_fss_detail_from_item(it)
-        if not link:
+        if not title or not link:
             continue
         out.append({
             'region':'공식자료','query':'금융감독원','official_source':'금융감독원',
             'title':title,'source':'금융감독원','date':it.findtext('pubDate') or '',
-            'link':link,'tags':classify(title),'collection_method':'fss_exact_search'
+            'link':link,'tags':classify(title),'collection_method':'fss_exact_fallback'
         })
     return out
 
@@ -739,10 +795,12 @@ def main():
             continue
         if low_quality_news_source(x.get('title',''), src_name, src_domain):
             continue
-        category = infer_news_category(x.get('title',''))
+        title0 = x.get('title','')
+        context0 = (title0 + ' ' + x.get('description','')).strip()
+        category = infer_news_category(title0) or infer_news_category(context0)
         if not category:
             continue
-        if not v49_practical_aml(x.get('title','')):
+        if not (v49_practical_aml(title0) or v49_practical_aml(context0)):
             continue
         x = dict(x)
         x['query'] = category
@@ -752,16 +810,26 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '4.5'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.3'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
     try:
-        fss_items = collect_fss_direct() + collect_fss_incremental()
-        official_status.append({'feed':'금융감독원', 'ok':True, 'count':len(fss_items), 'method':'exact_domain_search'})
+        fss_items, fss_status = collect_fss_board(backfill, cutoff, now_utc)
+        official_status.extend(fss_status)
+        # 게시판이 일시적으로 접근 불가하거나 결과가 0건이면 정확한 공식 상세링크 fallback.
+        if not fss_items:
+            fallback = collect_fss_fallback()
+            fss_items = dedupe(fallback, 300)
+            official_status.append({'feed':'금융감독원:fallback','ok':True,'count':len(fss_items),'method':'exact_official_fallback'})
+        official_status.append({'feed':'금융감독원','ok':True,'count':len(fss_items),'method':'official_board'})
     except Exception as e:
-        fss_items = []
-        official_status.append({'feed':'금융감독원', 'ok':False, 'count':0, 'error':str(e)[:160]})
+        try:
+            fss_items = collect_fss_fallback()
+            official_status.append({'feed':'금융감독원:fallback','ok':True,'count':len(fss_items),'method':'exact_official_fallback'})
+        except Exception as e2:
+            fss_items = []
+            official_status.append({'feed':'금융감독원','ok':False,'count':0,'error':(str(e)+' / '+str(e2))[:160]})
 
     if backfill:
         # 오래된/잘못된 v4.2 공식자료는 사용하지 않는다.
@@ -783,7 +851,7 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '4.5',
+        'official_backfill_version': '5.3',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'count': len(news),
         'official_count': len(official),

@@ -102,8 +102,8 @@ button,input{font:inherit}
   .title{font-size:16px}
 }
 </style>
-  <meta name="app-version" content="5.2">
-  <!-- K-AML NEWS build 5.2 -->
+  <meta name="app-version" content="5.3">
+  <!-- K-AML NEWS build 5.3 -->
 </head>
 <body>
 <div class="wrap">
@@ -143,7 +143,7 @@ button,input{font:inherit}
 let NEWS=[], OFFICIAL=[], MODE='news', CAT='전체', TODAY=false;
 let LAST_CHECKED_AT=null, LAST_DATA_UPDATED=null;
 const AUTO_CHECK_MS=30*60*1000;
-const CATS=['전체','자금세탁','가상자산','사기','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','제재·테러자금'];
+const CATS=['전체','자금세탁','가상자산','사기','불법사금융','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','제재·테러자금'];
 const $=s=>document.querySelector(s);
 function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function isToday(d){let x=new Date(d),n=new Date();return x.getFullYear()===n.getFullYear()&&x.getMonth()===n.getMonth()&&x.getDate()===n.getDate()}
@@ -243,7 +243,7 @@ function render(){
    if(!list.length){$('#grid').innerHTML='<div class="empty">조건에 맞는 공식자료가 없습니다.</div>';return}
    $('#grid').innerHTML=list.map(x=>{
      let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
-     let src=x.official_source||x.source||'공식자료'; let method=x.collection_method==='verified_fsc_board'?'공식 게시판·본문확인':(x.collection_method==='fss_direct_verified'?'금감원 공식·본문확인':x.collection_method==='fss_exact_search'?'공식링크 확인':'공식자료');
+     let src=x.official_source||x.source||'공식자료'; let method=x.collection_method==='verified_fsc_board'?'공식 게시판·본문확인':(x.collection_method==='fss_exact_search'?'공식링크 확인':'공식자료');
      let href=safeOfficialHref(x);
      let titleHtml=href?`<a class="title" target="_blank" rel="noopener" href="${esc(href)}">${esc(x.title)}</a>`:`<div class="title">${esc(x.title)}</div><div class="official-note">원문 상세주소를 확인하지 못해 링크를 제공하지 않습니다.</div>`;
      return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div>${titleHtml}<div class="tags">${tags}</div></article>`
