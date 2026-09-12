@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-12T10:09:34.290290+00:00",
+  "updated_at": "2026-09-12T10:37:42.592693+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -163,6 +163,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -175,9 +181,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -187,21 +193,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -217,13 +223,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -238,9 +238,25 @@
   "official_backfill_complete": true,
   "official_backfill_version": "5.3",
   "official_collection_mode": "7d_incremental",
-  "count": 203,
+  "count": 204,
   "official_count": 29,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화",
+      "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Sat, 12 Sep 2026 10:09:13 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0wenJOTGNMYW1UQVFaVzEtWjlDdGV6d1U0dkd3Mmg0REZqUThDLWNKdkR1M1pLcHlpdEw1aDdLanBMWkpqanZVV2l1eG02UEhCZzlNMjdyQklFd1p0S1ZFctIBZkFVX3lxTE1aRTRrbk5xcnRkYVJQMHdhN3kzN3NNU0l4T05US3o1M0xSTkF1eENMVkpwbDY2Q3R4VDlFczc3cmxyeEpLYXdfcVFXTFpBYnBhWWlXMUNSQk5fQjlPLXRhWnRzcnVMUQ?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화 tokenpost.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -2674,19 +2690,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%,피해액 43% 감소 성과",
-      "source": "금융감독원",
-      "date": "2026-09-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226356&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "불공정거래",
       "official_source": "금융감독원",
       "title": "상장사 IR 담당 임원의 불공정거래 혐의 적발,조치",
@@ -2695,6 +2698,19 @@
       "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226357&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EA%B3%B5%EC%A0%95%EA%B1%B0%EB%9E%98&pageIndex=1",
       "tags": [
         "AML"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%,피해액 43% 감소 성과",
+      "source": "금융감독원",
+      "date": "2026-09-02T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226356&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
       ],
       "collection_method": "verified_fss_board"
     },
