@@ -75,7 +75,7 @@ FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/4.9'})
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 K-AML-News/5.2'})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
 
@@ -618,6 +618,65 @@ def exact_fss_detail_from_item(item):
                 return u
     return ''
 
+
+# build 5.2: 금융감독원 공식 보도자료 직접 수집 보강
+FSS_BODO_SEARCH = "https://dart.fss.or.kr/dsaa003/searchBodo.do"
+FSS_DIRECT_KEEP = re.compile(
+ r'자금세탁|자금세탁방지|범죄수익|FIU|AML|CFT|FATF|의심거래|STR|고액현금거래|CTR|'
+ r'가상자산|가상화폐|암호화폐|가상자산사업자|VASP|트래블룰|특정금융정보법|특금법|'
+ r'불법사금융|불법금융|보이스피싱|대포통장|불공정거래|시세조종|시장조종|환치기|외국환|테러자금|제재', re.I)
+FSS_DIRECT_LOW = re.compile(r'직접금융 조달실적|사업보고서|공시서식|XBRL|감사보고서|증권신고서|임원보수|자기주식',re.I)
+
+def collect_fss_direct():
+    try:
+        page=fetch_url(FSS_BODO_SEARCH).decode("utf-8","ignore")
+    except Exception as e:
+        print("FSS direct list failed:",e); return []
+    seqs=[]
+    for s in re.findall(r'(?:selectBodoMain\.ax\?seqno=|seqno[="\': ]+)(\d{4,8})',page,re.I):
+        if s not in seqs: seqs.append(s)
+    if not seqs:
+        print("FSS direct: no seqno exposed; fallback search remains active"); return []
+
+    def one(seq):
+        url=f"https://dart.fss.or.kr/dsaa003/selectBodoMain.ax?seqno={seq}"
+        try: text=fetch_url(url).decode("utf-8","ignore")
+        except Exception: return None
+        plain=re.sub(r'(?is)<script.*?</script>|<style.*?</style>',' ',text)
+        plain=re.sub(r'(?s)<[^>]+>',' ',plain)
+        plain=re.sub(r'&nbsp;|&#160;',' ',plain); plain=re.sub(r'&amp;','&',plain)
+        plain=re.sub(r'\s+',' ',plain).strip()
+        dm=re.search(r'등록일\s*[|:]?\s*(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})',plain)
+        if not dm: return None
+        y,mo,da=map(int,dm.groups()); dt=datetime(y,mo,da,12,0,tzinfo=KST)
+        if dt < datetime.now(KST)-timedelta(days=RETENTION_DAYS): return None
+        # DART 보도자료에서 첨부파일 목록 뒤 실제 보도자료 제목을 우선 추출
+        title=''
+        m=re.search(r'(?:pdf|hwp|hwpx)\s+(.{12,220}?)(?:□|ㅁ)',plain,re.I)
+        if m: title=re.sub(r'\s+',' ',m.group(1)).strip(' -|')
+        if not title:
+            hs=re.findall(r'(?is)<h[1-4][^>]*>(.*?)</h[1-4]>',text)
+            hs=[re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',x)).strip() for x in hs]
+            hs=[x for x in hs if len(x)>=8 and x not in ('보도자료','금융감독원')]
+            if hs: title=max(hs,key=len)
+        if not title or len(plain)<300: return None
+        searchable=title+' '+plain[:5000]
+        if not FSS_DIRECT_KEEP.search(searchable): return None
+        if FSS_DIRECT_LOW.search(title) and not re.search(r'가상자산|불법|사기|자금세탁|범죄수익|시세조종|불공정거래',title,re.I): return None
+        return {'title':title,'link':url,'date':dt.isoformat(),'source':'금융감독원',
+                'tags':classify(title),'collection_method':'fss_direct_verified'}
+
+    out=[]
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        fs=[ex.submit(one,s) for s in seqs[:80]]
+        for f in as_completed(fs):
+            try:
+                x=f.result()
+                if x: out.append(x)
+            except Exception: pass
+    return out
+
+
 def collect_fss_incremental():
     # 금감원은 정확한 상세 URL이 RSS item 안에 들어있는 것만 채택.
     params = urllib.parse.urlencode({'q': FSS_QUERY + ' when:90d', 'hl':'ko','gl':'KR','ceid':'KR:ko'})
@@ -698,7 +757,7 @@ def main():
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
     try:
-        fss_items = collect_fss_incremental()
+        fss_items = collect_fss_direct() + collect_fss_incremental()
         official_status.append({'feed':'금융감독원', 'ok':True, 'count':len(fss_items), 'method':'exact_domain_search'})
     except Exception as e:
         fss_items = []
