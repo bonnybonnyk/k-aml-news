@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-13T10:38:44.666575+00:00",
+  "updated_at": "2026-09-13T11:09:20.867903+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "지갑·해외거래소",
@@ -30,7 +30,7 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "보이스피싱",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "불법도박",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -127,7 +127,7 @@
     {
       "feed": "실무:명의도용·차단",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -193,7 +193,7 @@
     {
       "feed": "실무:계정도용·현금화",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -307,7 +307,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -325,31 +337,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -379,7 +379,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 540,
+  "count": 541,
   "official_count": 30,
   "items": [
     {
@@ -538,6 +538,22 @@
     {
       "region": "국내",
       "query": "자금세탁",
+      "title": "역외 스테이블코인으로 상품권 구매 '자금세탁' 악용…KRWQ·JPYC 정조준",
+      "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
+      "date": "Sun, 13 Sep 2026 00:59:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE53c0g2X3RGSVEteExoZGpNX3Q2cHpRa1JHbURjZTFuaG55ZFlBZlprcG54NzFCUlJITGtmLVJxa2laTG83bDlDYnBzUlJXUWk1ejNV?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "역외 스테이블코인으로 상품권 구매 '자금세탁' 악용…KRWQ·JPYC 정조준 네이트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
       "title": "역외 스테이블코인으로 상품권 구매 ‘자금세탁’ 악용… KRWQ·JPYC 정조준 - 조선비즈",
       "source": "Chosunbiz",
       "source_url": "https://biz.chosun.com",
@@ -631,7 +647,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "LGU+, 추석 보이스피싱 24시간 대응…AI로 악성 앱 추적",
-      "source": "4th.kr",
+      "source": "포쓰저널",
       "source_url": "https://www.4th.kr",
       "source_domain": "www.4th.kr",
       "date": "Sun, 13 Sep 2026 00:00:00 GMT",
@@ -639,7 +655,7 @@
       "tags": [
         "사기"
       ],
-      "description": "LGU+, 추석 보이스피싱 24시간 대응…AI로 악성 앱 추적 4th.kr",
+      "description": "LGU+, 추석 보이스피싱 24시간 대응…AI로 악성 앱 추적 포쓰저널",
       "collection_method": "google_news_24h"
     },
     {
@@ -675,6 +691,21 @@
     },
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑]",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Sat, 12 Sep 2026 12:15:53 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UTEVKamVWWVdXUmZhQnFheUNUVjgtellObjdEeUxKMnJhMTcyb2tuMEp2dmtWOHJUYWNIRTZkcjduNlp6WUx1MXdzWDBKSzA?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑] v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화",
       "source": "tokenpost.kr",
@@ -687,21 +718,6 @@
         "자금세탁"
       ],
       "description": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화 tokenpost.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑]",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Sat, 12 Sep 2026 05:03:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9pTjdQdVJ3clhtNDRiVVBKeFdnTHJVVkVZN3BhNGNMNlpENzM4bEtGWG44b1BvbVdyWUhYQ19uRkZIay04eDJVenpCNWY2aGM?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑] v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
