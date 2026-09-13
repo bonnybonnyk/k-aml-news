@@ -128,7 +128,7 @@ button,input{font:inherit}
     <button id="tabNews" class="tab active">AML·금융범죄 뉴스</button>
     <button id="tabOfficial" class="tab">공식자료</button>
   </div>
-  <div id="officialNote" class="official-note" style="display:none">금융위·FIU·금감원·DAXA 공식자료는 최근 90일 기준으로 유지하며, 확인된 공식 상세페이지로 연결합니다.</div>
+  <div id="officialNote" class="official-note" style="display:none">FIU·금융위·금감원·DAXA의 AML 관련 공식자료를 최근 90일 기준으로 모아 보여줍니다. 같은 보도자료가 여러 기관에 게시된 경우 한 건으로 합쳐 표시합니다.</div>
 
   <div class="toolbar">
     <div class="searchWrap">
@@ -137,7 +137,7 @@ button,input{font:inherit}
     </div>
   </div>
 </section>
-<div class="section"><div class="label">빠른 필터</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div class="section"><div class="label">카테고리</div><div id="cats" class="chips"></div></div>
+<div class="section"><div class="label">빠른 필터</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div id="categorySection" class="section"><div class="label">카테고리</div><div id="cats" class="chips"></div></div>
 <div class="summary" id="summary"></div>
 <div class="grid" id="grid"><div class="empty">뉴스를 불러오는 중…</div></div>
 </div>
@@ -283,25 +283,27 @@ function cluster(items){
   return cs;
 }
 function drawCats(){
-  const cats = MODE==='official' ? ['전체','FIU','금융위원회','금융감독원','DAXA'] : CATS;
-  $('#cats').innerHTML=cats.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join('');
+  const section=$('#categorySection');
+  if(MODE==='official'){
+    CAT='전체';
+    if(section) section.style.display='none';
+    $('#cats').innerHTML='';
+    return;
+  }
+  if(section) section.style.display='';
+  $('#cats').innerHTML=CATS.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join('');
   document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{CAT=b.dataset.c;drawCats();render()})
 }
 function safeOfficialHref(x){
- let u=(x.link||'').trim(), s=x.official_source||x.source||'', low=u.toLowerCase();
+ let u=(x.link||'').trim(), low=u.toLowerCase();
  let bad=/\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx|zip)([?#].*)?$/.test(low) ||
          /(download|filedownload|downloadfile|atchfile|attachment|bbsfile)/.test(low);
  if(!u || bad) return '';
- if(s==='FIU'){
-   if(/kofiu\.go\.kr\/kor\/notification\/report_view\.do\?/.test(low)) return u;
-   if(/fsc\.go\.kr\/no010101\/\d+/.test(low)) return u;
- }
- if(s==='금융위원회' && /fsc\.go\.kr\/no010101\/\d+/.test(low)) return u;
- if(s==='금융감독원'){
-   if(/fss\.or\.kr/.test(low) && /(view\.do|\/view\/)/.test(low)) return u;
-   if(/dart\.fss\.or\.kr\/dsaa003\/selectbodomain\.ax\?seqno=\d+/.test(low)) return u;
- }
- if(s==='DAXA' && /kdaxa\.org\/support\/press\.php\?/.test(low) && /mode=view/.test(low) && /idx=\d+/.test(low)) return u;
+ if(/kofiu\.go\.kr\/kor\/notification\/report_view\.do\?/.test(low) && /ntcnyardordrno=\d+/.test(low)) return u;
+ if(/fsc\.go\.kr\/no010101\/\d+/.test(low)) return u;
+ if(/fss\.or\.kr/.test(low) && /(view\.do|\/view\/)/.test(low)) return u;
+ if(/dart\.fss\.or\.kr\/dsaa003\/selectbodomain\.ax\?seqno=\d+/.test(low)) return u;
+ if(/kdaxa\.org\/support\/press\.php\?/.test(low) && /mode=view/.test(low) && /idx=\d+/.test(low)) return u;
  return '';
 }
 
@@ -309,12 +311,10 @@ function render(){
  let q=$('#search').value.trim().toLowerCase();
  let base=MODE==='official'?OFFICIAL:NEWS;
  let list=base.filter(x=>!TODAY||isToday(x.date));
- if(MODE==='official'){
-   list=list.filter(x=>CAT==='전체'||(x.official_source||x.source)===CAT);
- }else{
+ if(MODE!=='official'){
    list=list.filter(x=>CAT==='전체'||(x.tags||[]).includes(CAT));
  }
- list=list.filter(x=>!q||(x.title+' '+x.source).toLowerCase().includes(q));
+ list=list.filter(x=>!q||(x.title+' '+(x.source||'')+' '+((x.official_sources||[]).join(' '))).toLowerCase().includes(q));
 
  const stateKey=[LAST_DATA_UPDATED||'none',MODE,CAT,TODAY?'1':'0',q].join('|');
  if(MODE==='official'){
@@ -334,7 +334,10 @@ function render(){
    }
    const html=list.map(x=>{
      let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
-     let src=x.official_source||x.source||'공식자료'; let method=x.collection_method==='verified_fsc_board'?'공식 게시판·본문확인':(x.collection_method==='verified_fss_board'?'공식 게시판·본문확인':(x.collection_method==='verified_daxa_board'?'공식 게시판·본문확인':(x.collection_method==='fss_exact_fallback'?'공식링크 확인':'공식자료')));
+     let src=x.official_source||x.source||'공식자료';
+     let method=(x.collection_method==='official_multi_source')?'공동 공식자료':
+       ((['verified_fsc_board','verified_fss_board','verified_daxa_board','verified_kofiu_board'].includes(x.collection_method))?'공식 게시판·본문확인':
+       ((['fss_exact_fallback','kofiu_exact_fallback'].includes(x.collection_method))?'공식링크 확인':'공식자료'));
      let href=safeOfficialHref(x);
      let titleHtml=href?`<a class="title" target="_blank" rel="noopener" href="${esc(href)}">${esc(x.title)}</a>`:`<div class="title">${esc(x.title)}</div><div class="official-note">원문 상세주소를 확인하지 못해 링크를 제공하지 않습니다.</div>`;
      return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div>${titleHtml}<div class="tags">${tags}</div></article>`

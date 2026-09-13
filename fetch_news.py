@@ -5,6 +5,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from difflib import SequenceMatcher
 
 RETENTION_DAYS = 90
 KST = timezone(timedelta(hours=9))
@@ -713,7 +714,7 @@ def parse_fsc_board_page(raw_html):
         if not dm:
             continue
         date = f"{dm.group(1)}-{dm.group(2)}-{dm.group(3)}T00:00:00+09:00"
-        rows.append({'region':'공식자료','query':'금융위/FIU','official_source':'금융위원회',
+        rows.append({'region':'공식자료','query':'금융위/FIU','official_source':'금융위원회','official_sources':['금융위원회'],
                      'title':title,'source':'금융위원회','date':date,'link':detail,
                      'tags':classify(title),'collection_method':'direct_fsc_board'})
     return rows
@@ -739,13 +740,11 @@ def verify_fsc_detail(item):
         if not (title_hit or body_narrow):
             return None
         x = dict(item)
-        # 5.8.8: 금융위 보도자료 본문에 FIU가 단순 언급됐다는 이유만으로
-        # 전체 자료를 FIU로 오분류하지 않는다.
-        # 금융위 게시판 자료는 기본적으로 '금융위원회'로 분류하고,
-        # 제목 자체가 금융정보분석원(FIU)을 명확히 주체로 표시할 때만 FIU로 분류한다.
-        title_is_fiu = bool(re.search(r'금융정보분석원|FIU', title, re.I))
-        x['official_source'] = 'FIU' if title_is_fiu else '금융위원회'
-        x['source'] = x['official_source']
+        # 5.8.9: 금융위 게시판 자료는 출처를 금융위원회로 유지한다.
+        # FIU 자료는 KoFIU 공식 게시판에서 별도로 수집한 뒤 같은 보도자료끼리 통합한다.
+        x['official_source'] = '금융위원회'
+        x['official_sources'] = ['금융위원회']
+        x['source'] = '금융위원회'
         x['tags'] = classify(context)
         return x
     except Exception:
@@ -801,6 +800,196 @@ def collect_fsc_official(backfill, cutoff, now_utc):
     return dedupe(verified,400), status
 
 
+
+# ---------- 5.8.9 금융정보분석원(KoFIU) 공식 보도자료 ----------
+KOFIU_BOARD_URL = "https://www.kofiu.go.kr/kor/notification/report.do"
+
+def kofiu_list_url(page=1):
+    return KOFIU_BOARD_URL + '?' + urllib.parse.urlencode({'pageIndex': str(page)})
+
+def parse_kofiu_board_page(raw_html):
+    rows = []
+    pat = re.compile(
+        r'<a\b[^>]*href=["\']([^"\']*report_view\.do\?[^"\']*ntcnYardOrdrNo=\d+[^"\']*)["\'][^>]*>(.*?)</a>',
+        re.I | re.S
+    )
+    matches = list(pat.finditer(raw_html))
+    seen = set()
+    for i, m in enumerate(matches):
+        href = html_unescape(m.group(1)).replace('&amp;','&')
+        title = clean_title(strip_html(m.group(2)))
+        title = re.sub(r'^\s*\[보도자료\]\s*', '', title).strip()
+        if not title or len(title) < 4:
+            continue
+        link = urllib.parse.urljoin("https://www.kofiu.go.kr", href)
+        if link in seen:
+            continue
+        seen.add(link)
+        next_pos = matches[i+1].start() if i+1 < len(matches) else min(len(raw_html), m.end()+3000)
+        chunk = strip_html(raw_html[m.end():next_pos])
+        dm = re.search(r'(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})', chunk)
+        if not dm:
+            continue
+        date = f"{int(dm.group(1)):04d}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}T00:00:00+09:00"
+        rows.append({
+            'region':'공식자료','query':'FIU','official_source':'FIU','official_sources':['FIU'],
+            'title':title,'source':'FIU','date':date,'link':link,
+            'tags':classify(title),'collection_method':'verified_kofiu_board'
+        })
+    return rows
+
+def verify_kofiu_detail(item):
+    try:
+        raw = fetch_url(item['link'], timeout=10).decode('utf-8', errors='ignore')
+        text = strip_html(raw)
+        if len(text) < 250:
+            return None
+        title = item.get('title','')
+        if key_title(title) and key_title(title) not in key_title(text):
+            return None
+        context = (title + ' ' + text[:12000]).strip()
+        if not (official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title)
+                or re.search(r'금융정보분석원|\bFIU\b|자금세탁|특금법|가상자산사업자|보이스피싱', context, re.I)):
+            return None
+        x = dict(item)
+        x['tags'] = classify(context)
+        return x
+    except Exception:
+        return None
+
+def exact_kofiu_detail_from_item(item):
+    blob = html_unescape(ET.tostring(item, encoding='unicode'))
+    try:
+        blob += ' ' + urllib.parse.unquote(blob)
+    except Exception:
+        pass
+    m = re.search(
+        r'https?://(?:www\.)?kofiu\.go\.kr/kor/notification/report_view\.do\?[^"\'<>\s]*ntcnYardOrdrNo=\d+[^"\'<>\s]*',
+        blob, re.I
+    )
+    return html_unescape(m.group(0)).replace('&amp;','&') if m else ''
+
+def collect_kofiu_fallback():
+    q = 'site:kofiu.go.kr/kor/notification/report_view.do (자금세탁 OR AML OR FIU OR 특금법 OR 가상자산사업자 OR 보이스피싱)'
+    params = urllib.parse.urlencode({'q':q+' when:90d','hl':'ko','gl':'KR','ceid':'KR:ko'})
+    data = fetch_url('https://news.google.com/rss/search?' + params, timeout=10)
+    root = ET.fromstring(data)
+    out = []
+    for it in root.findall('.//item')[:100]:
+        title = clean_title(it.findtext('title') or '')
+        title = re.sub(r'^\s*\[보도자료\]\s*', '', title).strip()
+        link = exact_kofiu_detail_from_item(it)
+        if not title or not link:
+            continue
+        out.append({
+            'region':'공식자료','query':'FIU','official_source':'FIU','official_sources':['FIU'],
+            'title':title,'source':'FIU','date':it.findtext('pubDate') or '',
+            'link':link,'tags':classify(title),'collection_method':'kofiu_exact_fallback'
+        })
+    return out
+
+def collect_kofiu_official(backfill, cutoff):
+    max_pages = 8 if backfill else 2
+    candidates, status = [], []
+    for page in range(1, max_pages + 1):
+        try:
+            raw = fetch_url(kofiu_list_url(page), timeout=10).decode('utf-8', errors='ignore')
+            rows = parse_kofiu_board_page(raw)
+            candidates.extend(rows)
+            status.append({'feed':f'FIU:목록:p{page}','ok':True,'count':len(rows),'method':'official_board'})
+            dated = [parse_dt(x.get('date')) for x in rows if parse_dt(x.get('date'))]
+            if dated and min(dated) < cutoff:
+                break
+        except Exception as e:
+            status.append({'feed':f'FIU:목록:p{page}','ok':False,'count':0,'error':str(e)[:160]})
+            break
+        time.sleep(0.05)
+
+    candidates = [x for x in dedupe(candidates, 400)
+                  if parse_dt(x.get('date')) and parse_dt(x.get('date')) >= cutoff]
+    verified = []
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs = [ex.submit(verify_kofiu_detail, x) for x in candidates]
+        for fut in as_completed(futs):
+            try:
+                x = fut.result()
+                if x:
+                    verified.append(x)
+            except Exception:
+                pass
+
+    if not verified:
+        try:
+            fallback = collect_kofiu_fallback()
+            verified = [x for x in fallback
+                        if parse_dt(x.get('date')) and parse_dt(x.get('date')) >= cutoff]
+            status.append({'feed':'FIU:fallback','ok':True,'count':len(verified),'method':'exact_official_fallback'})
+        except Exception as e:
+            status.append({'feed':'FIU:fallback','ok':False,'count':0,'error':str(e)[:160]})
+
+    status.append({'feed':'FIU','ok':True,'count':len(verified),'method':'official_board_or_exact_fallback'})
+    return dedupe(verified, 400), status
+
+def official_title_key(title):
+    t = html_unescape(title or '')
+    t = re.sub(r'^\s*\[보도자료\]\s*', '', t, flags=re.I)
+    t = re.sub(r'\b(FIU|KoFIU)\b', '금융정보분석원', t, flags=re.I)
+    t = re.sub(r'금융위원회|금융위|금융정보분석원|금융감독원|금감원|DAXA|닥사', ' ', t, flags=re.I)
+    t = re.sub(r'공동\s*보도자료|보도자료', ' ', t, flags=re.I)
+    return re.sub(r'[^0-9a-z가-힣]+', '', t.lower())
+
+def official_same_release(a, b):
+    da, db = parse_dt(a.get('date')), parse_dt(b.get('date'))
+    if da and db and abs((da-db).total_seconds()) > 2*86400:
+        return False
+    ka, kb = official_title_key(a.get('title','')), official_title_key(b.get('title',''))
+    if not ka or not kb:
+        return False
+    if ka == kb:
+        return True
+    if min(len(ka), len(kb)) >= 18 and (ka in kb or kb in ka):
+        return True
+    return SequenceMatcher(None, ka, kb).ratio() >= 0.90
+
+def official_source_list(x):
+    srcs = x.get('official_sources')
+    if isinstance(srcs, list) and srcs:
+        return [str(s) for s in srcs if s]
+    s = x.get('official_source') or x.get('source')
+    return [s] if s else []
+
+def merge_official_releases(rows):
+    groups = []
+    for x0 in sorted(rows, key=lambda x: parse_dt(x.get('date')) or datetime(1970,1,1,tzinfo=timezone.utc), reverse=True):
+        x = dict(x0)
+        x['official_sources'] = official_source_list(x)
+        g = next((g for g in groups if official_same_release(g['main'], x)), None)
+        if not g:
+            groups.append({'main':x, 'members':[x]})
+            continue
+        g['members'].append(x)
+
+        merged_sources = []
+        for m in g['members']:
+            for s in official_source_list(m):
+                if s not in merged_sources:
+                    merged_sources.append(s)
+
+        priority = {'FIU':0, '금융위원회':1, '금융감독원':2, 'DAXA':3}
+        best = min(g['members'], key=lambda m: min([priority.get(s, 9) for s in official_source_list(m)] or [9]))
+        main = dict(best)
+        ordered = sorted(merged_sources, key=lambda s: priority.get(s, 9))
+        main['official_sources'] = ordered
+        main['official_source'] = '·'.join(ordered)
+        main['source'] = main['official_source']
+        if len(ordered) > 1:
+            main['collection_method'] = 'official_multi_source'
+        g['main'] = main
+
+    out = [g['main'] for g in groups]
+    out.sort(key=lambda x: parse_dt(x.get('date')) or datetime(1970,1,1,tzinfo=timezone.utc), reverse=True)
+    return out
+
 FSS_BOARD_URL = "https://www.fss.or.kr/fss/bbs/B0000188/list.do"
 FSS_DETAIL_BASE = "https://www.fss.or.kr/fss/bbs/B0000188/view.do"
 FSS_SEARCH_KEYWORDS = [
@@ -835,7 +1024,7 @@ def parse_fss_board_page(raw_html, keyword):
         date = f"{int(dm.group(1)):04d}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}T00:00:00+09:00"
         link = urllib.parse.urljoin("https://www.fss.or.kr", href)
         rows.append({
-            'region':'공식자료','query':keyword,'official_source':'금융감독원',
+            'region':'공식자료','query':keyword,'official_source':'금융감독원','official_sources':['금융감독원'],
             'title':title,'source':'금융감독원','date':date,'link':link,
             'tags':classify(title),'collection_method':'verified_fss_board'
         })
@@ -925,7 +1114,7 @@ def collect_fss_fallback():
         if not title or not link:
             continue
         out.append({
-            'region':'공식자료','query':'금융감독원','official_source':'금융감독원',
+            'region':'공식자료','query':'금융감독원','official_source':'금융감독원','official_sources':['금융감독원'],
             'title':title,'source':'금융감독원','date':it.findtext('pubDate') or '',
             'link':link,'tags':classify(title),'collection_method':'fss_exact_fallback'
         })
@@ -957,7 +1146,7 @@ def parse_daxa_list(raw_html):
             continue
         date=f"{int(dm.group(1)):04d}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}T00:00:00+09:00"
         rows.append({
-            'region':'공식자료','query':'DAXA','official_source':'DAXA','title':title,'source':'DAXA',
+            'region':'공식자료','query':'DAXA','official_source':'DAXA','official_sources':['DAXA'],'title':title,'source':'DAXA',
             'date':date,'link':urllib.parse.urljoin('https://www.kdaxa.org/support/',href),
             'tags':classify(title),'collection_method':'verified_daxa_board'
         })
@@ -1132,10 +1321,14 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.8.0'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.8.9'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
+
+    kofiu_items, kofiu_status = collect_kofiu_official(backfill, cutoff)
+    official_status.extend(kofiu_status)
+
     daxa_items, daxa_status = collect_daxa_official(cutoff)
     official_status.extend(daxa_status)
     try:
@@ -1162,7 +1355,7 @@ def main():
         official_seed = existing_official
 
     official_merged = []
-    for x in fsc_items + fss_items + daxa_items + official_seed:
+    for x in kofiu_items + fsc_items + fss_items + daxa_items + official_seed:
         d = parse_dt(x.get('date'))
         if not d or d < cutoff:
             continue
@@ -1170,18 +1363,8 @@ def main():
         title = x.get('title','')
         if not (official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title) or x.get('official_source') == 'DAXA'):
             continue
-
-        # 5.8.8: 과거 실행에서 금융위 자료가 본문의 FIU 단순 언급 때문에
-        # FIU로 저장된 경우도 다음 실행 시 바로잡는다.
-        # direct_fsc_board 자료만 대상으로 하므로 금감원/DAXA에는 영향이 없다.
-        if x.get('collection_method') == 'direct_fsc_board':
-            x = dict(x)
-            title_is_fiu = bool(re.search(r'금융정보분석원|\bFIU\b', title, re.I))
-            x['official_source'] = 'FIU' if title_is_fiu else '금융위원회'
-            x['source'] = x['official_source']
-
         official_merged.append(x)
-    official = dedupe(official_merged, 500)
+    official = merge_official_releases(dedupe(official_merged, 800))[:500]
 
     payload = {
         'updated_at': now_utc.isoformat(),
@@ -1189,7 +1372,7 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '5.8.0',
+        'official_backfill_version': '5.8.9',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'practical_backfill_complete': True,
         'practical_backfill_version': '5.8.0',
