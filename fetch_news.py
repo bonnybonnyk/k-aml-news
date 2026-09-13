@@ -739,7 +739,12 @@ def verify_fsc_detail(item):
         if not (title_hit or body_narrow):
             return None
         x = dict(item)
-        x['official_source'] = 'FIU' if re.search(r'금융정보분석원|\bFIU\b', context, re.I) else '금융위원회'
+        # 5.8.8: 금융위 보도자료 본문에 FIU가 단순 언급됐다는 이유만으로
+        # 전체 자료를 FIU로 오분류하지 않는다.
+        # 금융위 게시판 자료는 기본적으로 '금융위원회'로 분류하고,
+        # 제목 자체가 금융정보분석원(FIU)을 명확히 주체로 표시할 때만 FIU로 분류한다.
+        title_is_fiu = bool(re.search(r'금융정보분석원|FIU', title, re.I))
+        x['official_source'] = 'FIU' if title_is_fiu else '금융위원회'
         x['source'] = x['official_source']
         x['tags'] = classify(context)
         return x
@@ -1165,6 +1170,16 @@ def main():
         title = x.get('title','')
         if not (official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title) or x.get('official_source') == 'DAXA'):
             continue
+
+        # 5.8.8: 과거 실행에서 금융위 자료가 본문의 FIU 단순 언급 때문에
+        # FIU로 저장된 경우도 다음 실행 시 바로잡는다.
+        # direct_fsc_board 자료만 대상으로 하므로 금감원/DAXA에는 영향이 없다.
+        if x.get('collection_method') == 'direct_fsc_board':
+            x = dict(x)
+            title_is_fiu = bool(re.search(r'금융정보분석원|\bFIU\b', title, re.I))
+            x['official_source'] = 'FIU' if title_is_fiu else '금융위원회'
+            x['source'] = x['official_source']
+
         official_merged.append(x)
     official = dedupe(official_merged, 500)
 
