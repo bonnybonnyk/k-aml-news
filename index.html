@@ -66,6 +66,14 @@ button,input{font:inherit}
 .chip{border:1px solid #203a5d;background:rgba(10,27,48,.84);color:#9fb3ca;padding:8px 11px;border-radius:999px;font-size:11px;cursor:pointer;transition:.15s}
 .chip.active{background:#174b82;border-color:#3f78bb;color:white;box-shadow:0 5px 14px rgba(11,43,78,.25)}
 .summary{margin:22px 3px 10px;color:#8299b5;font-size:12px;font-weight:700}
+.trends{display:none;margin:16px 0 6px;padding:14px;border:1px solid #e7eaf0;border-radius:16px;background:#fff}
+.trends.show{display:block}.trends-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.trends-title{font-weight:900;font-size:15px}.trends-sub{font-size:12px;color:#7a8190}.trend-list{display:grid;gap:8px}
+.trend-btn{width:100%;text-align:left;border:1px solid #edf0f4;background:#fafbfc;border-radius:12px;padding:10px 12px;cursor:pointer}
+.trend-name{font-weight:850;font-size:14px}.trend-count{font-size:12px;color:#6f7785;margin-left:6px}
+.trend-desc{display:block;font-size:12px;color:#7a8190;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.latest-related{font-size:12px;color:#6f7785;margin-left:6px;font-weight:700}
+@media(max-width:640px){.trends{padding:12px}.trend-desc{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .card{
   content-visibility:auto;
@@ -138,6 +146,7 @@ button,input{font:inherit}
   </div>
 </section>
 <div class="section"><div class="label">빠른 필터</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div id="categorySection" class="section"><div class="label">카테고리</div><div id="cats" class="chips"></div></div>
+<div id="trends" class="trends"><div class="trends-head"><div class="trends-title">🔥 오늘의 주요 트렌드</div><div class="trends-sub">오늘 새 보도가 있는 사건 기준</div></div><div id="trendList" class="trend-list"></div></div>
 <div class="summary" id="summary"></div>
 <div class="grid" id="grid"><div class="empty">뉴스를 불러오는 중…</div></div>
 </div>
@@ -282,6 +291,42 @@ function cluster(items){
   }
   return cs;
 }
+const TREND_RULES=[
+ {name:'보이스피싱',keys:['보이스피싱','악성앱','대포통장','지급정지']},
+ {name:'가상자산 자금세탁',keys:['가상자산','코인','자금세탁','돈세탁','특금법','가상자산사업자']},
+ {name:'불법사금융·투자사기',keys:['불법사금융','투자사기','리딩방','사기']},
+ {name:'불법 도박',keys:['도박']},{name:'마약 범죄자금',keys:['마약']},
+ {name:'환치기·외환',keys:['환치기','외환','자본도피']},{name:'탈세',keys:['탈세','조세포탈']},
+ {name:'횡령·배임',keys:['횡령','배임']},{name:'FIU·AML 제도',keys:['fiu','금융정보분석원','자금세탁방지','aml','특금법','의심거래','str']},
+ {name:'제재·테러자금',keys:['제재','테러자금','테러금융']}
+];
+function clusterLatestDate(c){
+ const ds=[c.main,...c.rel].map(x=>new Date(x.date||0)).filter(d=>isFinite(d));
+ return ds.length?new Date(Math.max(...ds.map(d=>d.getTime()))):new Date(c.main.date||0);
+}
+function trendForCluster(c){
+ const text=normEventTitle([c.main,...c.rel].map(x=>(x.title||'')+' '+((x.tags||[]).join(' '))).join(' '));
+ let best=null,score=0; for(const r of TREND_RULES){const s=r.keys.filter(k=>text.includes(k.toLowerCase())).length;if(s>score){best=r;score=s}}
+ return best;
+}
+function buildTodayTrends(cs){
+ const map=new Map();
+ for(const c of cs.filter(c=>isToday(clusterLatestDate(c)))){
+  const r=trendForCluster(c); if(!r)continue;
+  if(!map.has(r.name))map.set(r.name,{name:r.name,clusters:[]}); map.get(r.name).clusters.push(c);
+ }
+ return [...map.values()].map(g=>{g.clusters.sort((a,b)=>clusterLatestDate(b)-clusterLatestDate(a));g.desc=g.clusters.slice(0,2).map(c=>c.main.title).join(' · ');return g})
+ .sort((a,b)=>b.clusters.length-a.clusters.length||clusterLatestDate(b.clusters[0])-clusterLatestDate(a.clusters[0])).slice(0,3);
+}
+let TREND_QUERY='';
+function drawTrends(cs){
+ const box=$('#trends'),el=$('#trendList');
+ if(MODE!=='news'||TODAY||$('#search').value.trim()||CAT!=='전체'){box.classList.remove('show');el.innerHTML='';return}
+ const ts=buildTodayTrends(cs); if(!ts.length){box.classList.remove('show');el.innerHTML='';return}
+ el.innerHTML=ts.map(t=>`<button class="trend-btn" data-trend="${esc(t.name)}"><span class="trend-name">${esc(t.name)}</span><span class="trend-count">${t.clusters.length}개 사건</span><span class="trend-desc">${esc(t.desc)}</span></button>`).join('');
+ box.classList.add('show');
+ el.querySelectorAll('[data-trend]').forEach(b=>b.onclick=()=>{TREND_QUERY=b.dataset.trend;$('#search').value=b.dataset.trend;render()});
+}
 function drawCats(){
   const section=$('#categorySection');
   if(MODE==='official'){
@@ -309,15 +354,21 @@ function safeOfficialHref(x){
 
 function render(){
  let q=$('#search').value.trim().toLowerCase();
+ if(!q) TREND_QUERY='';
  let base=MODE==='official'?OFFICIAL:NEWS;
  let list=base.filter(x=>!TODAY||isToday(x.date));
  if(MODE!=='official'){
    list=list.filter(x=>CAT==='전체'||(x.tags||[]).includes(CAT));
  }
- list=list.filter(x=>!q||(x.title+' '+(x.source||'')+' '+((x.official_sources||[]).join(' '))).toLowerCase().includes(q));
+ if(!TREND_QUERY) list=list.filter(x=>!q||(x.title+' '+(x.source||'')+' '+((x.official_sources||[]).join(' '))).toLowerCase().includes(q));
+ if(MODE==='news'&&TREND_QUERY){
+  const rule=TREND_RULES.find(r=>r.name===TREND_QUERY);
+  if(rule) list=list.filter(x=>{const t=normEventTitle((x.title||'')+' '+((x.tags||[]).join(' ')));return rule.keys.some(k=>t.includes(k.toLowerCase()))});
+ }
 
  const stateKey=[LAST_DATA_UPDATED||'none',MODE,CAT,TODAY?'1':'0',q].join('|');
  if(MODE==='official'){
+   $('#trends').classList.remove('show'); $('#trendList').innerHTML='';
    const cached=OFFICIAL_HTML_CACHE.get(stateKey);
    if(cached){
      $('#summary').textContent=cached.summary;
@@ -349,8 +400,10 @@ function render(){
  let cs=CLUSTER_CACHE.get(stateKey);
  if(!cs){
    cs=cluster(list);
+   cs.sort((a,b)=>clusterLatestDate(b)-clusterLatestDate(a));
    CLUSTER_CACHE.set(stateKey,cs);
  }
+ drawTrends(cs);
  const summary=`${cs.length}개 사건 · ${list.length}건 기사`;
  $('#summary').textContent=summary;
  const cached=NEWS_HTML_CACHE.get(stateKey);
@@ -365,7 +418,8 @@ function render(){
    return;
  }
  const html=cs.map((c,i)=>{let x=c.main,id='r'+i;let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
- let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">유사 보도 +${c.rel.length}건 ▾</button><div id="${id}" class="related-list">${c.rel.map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)}</div>`).join('')}</div>`:'';
+ let latest=clusterLatestDate(c),mainDate=new Date(x.date||0),latestNote=(isFinite(latest)&&isFinite(mainDate)&&latest>mainDate)?`<span class="latest-related"> · 최근 보도 ${ago(latest)}</span>`:'';
+ let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">유사 보도 +${c.rel.length}건${latestNote} ▾</button><div id="${id}" class="related-list">${[...c.rel].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0)).map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)} · ${ago(r.date)}</div>`).join('')}</div>`:'';
  return `<article class="card"><div class="meta"><span>${esc(x.source||'뉴스')} · ${esc(x.query||'')}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(x.link)}">${esc(x.title)}</a><div class="tags">${tags}</div>${rel}</article>`}).join('');
  $('#grid').innerHTML=html;
  NEWS_HTML_CACHE.set(stateKey,{summary,html});
@@ -435,8 +489,8 @@ function setMode(mode){
  requestAnimationFrame(render);
 }
 drawCats();
-$('#searchBtn').onclick=render;
-$('#search').onkeydown=(e)=>{if(e.key==='Enter'){e.preventDefault();e.target.blur();render();}};
+$('#searchBtn').onclick=()=>{TREND_QUERY='';render()};
+$('#search').onkeydown=(e)=>{if(e.key==='Enter'){e.preventDefault();e.target.blur();TREND_QUERY='';render();}};
 
 $('#todayOnly').onclick=()=>{TODAY=!TODAY;$('#todayOnly').classList.toggle('active',TODAY);render()};
 $('#tabNews').onclick=()=>setMode('news');
