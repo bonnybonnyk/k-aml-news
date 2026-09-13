@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-13T08:40:02.219186+00:00",
+  "updated_at": "2026-09-13T09:32:53.374380+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 8
     },
     {
       "feed": "지갑·해외거래소",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "불법도박",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -97,13 +97,13 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 4,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 9,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -139,13 +139,13 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 8,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 7,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -242,21 +242,39 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 27,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -283,18 +301,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -307,7 +313,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -319,7 +331,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -337,15 +349,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -387,7 +405,7 @@
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 13 Sep 2026 06:58:27 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5pRVd6MTFoOU1jX3RCbHNHUmxUd3pHZjRVQzFtUmROdFM3MmdiR2phN21YUUJtQnFJUFlXcGlSa2hWY19NZnJGcGZDR1Y0Rm8ya09sNXZHV2zSAV5BVV95cUxQdEpMWHNMY0JiNklyUnl3NW9lc0lDU2NqQzZrWFY0dVZGSGZiU0pxeXBrWlFfZXdwekhsdFhubWVZaTc3ampZUmVpWVphd2JHczA5MEpocVdHUWR6Q0JB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB0SkxYc0xjQmI2SXJSeXc1b2VzSUNTY2pDNmtYVjR1VkZIZmJTSnF5cGtaUV9ld3B6SGx0WG5tZVlpNzdqallSZWlZWmF3YkdzMDkwSmhxV0dRZHpDQkHSAV5BVV95cUxQdEpMWHNMY0JiNklyUnl3NW9lc0lDU2NqQzZrWFY0dVZGSGZiU0pxeXBrWlFfZXdwekhsdFhubWVZaTc3ampZUmVpWVphd2JHczA5MEpocVdHUWR6Q0JB?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -403,7 +421,7 @@
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 13 Sep 2026 06:50:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBsYmc5R0JETnhzdkJYVWFFVEJmYUdKQmJRVWI3Z0pxbVV0dWNtTkotU0NBZmhWczFmQmt1X042eG4tZ09qYWNLNW5RbWJuU0JqeEYxeVNDMkIxXzVyQ0pFetIBZkFVX3lxTE9ELV9lZFRMa2lNMjVwbFRUd3NIRE5YeXZ3TzBONk1CSmZpSTljSTkydFBLVTg5SlVja3VFbXlRbjd1UEtQS2NKMUJLM2ZZeXdwemRSWTllSmZnNVR2dnhfbVhQODVCdw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9ELV9lZFRMa2lNMjVwbFRUd3NIRE5YeXZ3TzBONk1CSmZpSTljSTkydFBLVTg5SlVja3VFbXlRbjd1UEtQS2NKMUJLM2ZZeXdwemRSWTllSmZnNVR2dnhfbVhQODVCd9IBZkFVX3lxTE9ELV9lZFRMa2lNMjVwbFRUd3NIRE5YeXZ3TzBONk1CSmZpSTljSTkydFBLVTg5SlVja3VFbXlRbjd1UEtQS2NKMUJLM2ZZeXdwemRSWTllSmZnNVR2dnhfbVhQODVCdw?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -434,7 +452,7 @@
       "source": "v.daum.net",
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
-      "date": "Sun, 13 Sep 2026 02:26:43 GMT",
+      "date": "Sun, 13 Sep 2026 02:26:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1DR0lVNlBnNEtsODFqS2pUT3NmNFRxUldSOVFqdXFhekdQazczaWVQRV94NWtyMWxQVlU0N3ZnTmdxSVZuTTljSURMZ3BsNFU?oc=5",
       "tags": [
         "사기"
@@ -583,7 +601,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "LG유플러스, 추석 앞두고 보이스피싱 24시간 특별 대응…악성 앱 제어 서버 추적·차단",
-      "source": "나눔경제뉴스",
+      "source": "nanumy.co.kr",
       "source_url": "https://www.nanumy.co.kr",
       "source_domain": "www.nanumy.co.kr",
       "date": "Sun, 13 Sep 2026 00:00:00 GMT",
@@ -591,7 +609,7 @@
       "tags": [
         "사기"
       ],
-      "description": "LG유플러스, 추석 앞두고 보이스피싱 24시간 특별 대응…악성 앱 제어 서버 추적·차단 나눔경제뉴스",
+      "description": "LG유플러스, 추석 앞두고 보이스피싱 24시간 특별 대응…악성 앱 제어 서버 추적·차단 nanumy.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -657,6 +675,21 @@
     },
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑]",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Sat, 12 Sep 2026 12:15:53 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UTEVKamVWWVdXUmZhQnFheUNUVjgtellObjdEeUxKMnJhMTcyb2tuMEp2dmtWOHJUYWNIRTZkcjduNlp6WUx1MXdzWDBKSzA?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑] v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화",
       "source": "tokenpost.kr",
@@ -669,21 +702,6 @@
         "자금세탁"
       ],
       "description": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화 tokenpost.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑]",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Sat, 12 Sep 2026 05:03:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9pTjdQdVJ3clhtNDRiVVBKeFdnTHJVVkVZN3BhNGNMNlpENzM4bEtGWG44b1BvbVdyWUhYQ19uRkZIay04eDJVenpCNWY2aGM?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑] v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -845,10 +863,10 @@
       "query": "마약자금",
       "title": "\"마약류 오남용 모니터링\"…식약처장, 현장점검",
       "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Fri, 11 Sep 2026 07:12:11 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1aTmZjV2NZQ3ZzSFRhcG5oOWVqWno1YkJXbUtCZTRYdkZrb2tyN2NuNF8zei1YNVZQUkpvTVRsR2FJYlRyNFB3WkwwLXdZWjFFNmV0SmdKS1lYZTlBTHBHaEtlVlBuUUc5WmF2ZUFhSVd2dHc1UmlLQdIBeEFVX3lxTE1aTmZjV2NZQ3ZzSFRhcG5oOWVqWno1YkJXbUtCZTRYdkZrb2tyN2NuNF8zei1YNVZQUkpvTVRsR2FJYlRyNFB3WkwwLXdZWjFFNmV0SmdKS1lYZTlBTHBHaEtlVlBuUUc5WmF2ZUFhSVd2dHc1UmlLQQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBTVGtQTHVYbVREcTFFXy1pdHY4OGZWQ3kzd1RrTDAxc3J3dTNSWHdiNnFRcklYTTdLX2t0b29pWjhmWGhBZUVvTGp4OTYyV1ZsR3RHLUw0djhKNGJDTXhFdtIBeEFVX3lxTE1aTmZjV2NZQ3ZzSFRhcG5oOWVqWno1YkJXbUtCZTRYdkZrb2tyN2NuNF8zei1YNVZQUkpvTVRsR2FJYlRyNFB3WkwwLXdZWjFFNmV0SmdKS1lYZTlBTHBHaEtlVlBuUUc5WmF2ZUFhSVd2dHc1UmlLQQ?oc=5",
       "tags": [
         "마약"
       ],
@@ -8095,22 +8113,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -8134,10 +8136,10 @@
       "official_sources": [
         "금융감독원"
       ],
-      "title": "2026 범금융권 보이스피싱 예방 주간 개최",
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
       "source": "금융감독원",
-      "date": "2026-09-06T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226951&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
         "사기"
       ],
@@ -8150,14 +8152,34 @@
       "official_sources": [
         "금융감독원"
       ],
-      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%,피해액 43% 감소 성과",
+      "title": "2026 범금융권 보이스피싱 예방 주간 개최",
       "source": "금융감독원",
-      "date": "2026-09-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226356&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "date": "2026-09-06T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226951&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
         "사기"
       ],
       "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%·피해액 43% 감소 성과",
+      "source": "금융위원회",
+      "date": "2026-09-02T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87637?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금",
+        "자금세탁"
+      ],
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
@@ -8197,20 +8219,23 @@
     },
     {
       "region": "공식자료",
-      "query": "자금세탁",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "FIU, 자금세탁방지 유관기관 협의회 개최",
-      "source": "금융감독원",
+      "source": "금융위원회",
       "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=225288&menuNo=200218&searchCnd=1&searchWrd=%EC%9E%90%EA%B8%88%EC%84%B8%ED%83%81&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87604?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
+        "가상자산",
+        "도박",
         "FIU·규제",
+        "제재·테러자금",
         "자금세탁"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
