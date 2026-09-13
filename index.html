@@ -221,7 +221,7 @@ function sameEvent(a,b){
   const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
   const crime=overlap(A.crimes,B.crimes), action=overlap(A.actions,B.actions), nums=overlap(A.nums,B.nums), money=overlap(A.money,B.money), ages=overlap(A.ages,B.ages), roles=overlap(A.roles,B.roles), jac=tokenJaccard(A.t,B.t);
 
-  // 5.8.5: 기업·기관의 동일 발표는 별도 경로로 판정한다.
+  // 5.8.6: 기업·기관의 동일 발표는 별도 경로로 판정한다.
   // 663억↔664억 같은 반올림 차이는 허용하지만, 30억↔415억처럼 큰 금액 충돌은 허용하지 않는다.
   if(sameAnnouncement(a,b) && moneyCompatible(A.money,B.money)) return true;
 
@@ -251,11 +251,24 @@ function representativeScore(x){
 function chooseRepresentative(items){
   return [...items].sort((a,b)=>representativeScore(b)-representativeScore(a) || sourceScore(b.source)-sourceScore(a.source) || new Date(b.date||0)-new Date(a.date||0))[0];
 }
+function hardCaseConflict(a,b){
+  const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
+  // 범죄사건의 핵심 금액이 크게 다르면, 중간 기사를 통한 연쇄 유사도가 있어도 같은 묶음에 넣지 않는다.
+  if(A.money.length && B.money.length && !moneyCompatible(A.money,B.money)) return true;
+  return false;
+}
 function cluster(items){
   let cs=[];
   for(const x of items){
-    // main 하나만 보지 않고 이미 묶인 관련기사 어느 하나와도 같은 사건이면 같은 그룹으로 넣는다.
-    let c=cs.find(c=>[c.main,...c.rel].some(y=>sameEvent(y,x)));
+    let c=cs.find(c=>{
+      const members=[c.main,...c.rel];
+      // 발표·제도형은 제목 표현 차이가 커서 기존처럼 구성원 중 하나와 강하게 맞으면 연결을 허용한다.
+      if(members.some(y=>sameAnnouncement(y,x) && moneyCompatible(eventFeatures(y.title||y).money,eventFeatures(x.title||x).money))) return true;
+      // 일반 범죄사건은 그룹 내 어느 기사와도 핵심 금액이 충돌하면 연쇄 결합을 금지한다.
+      if(members.some(y=>hardCaseConflict(y,x))) return false;
+      // 사건형은 대표기사와 직접 같은 사건으로 판정될 때만 합친다.
+      return sameEvent(c.main,x);
+    });
     if(c){
       c.rel.push(x);
       const all=[c.main,...c.rel], best=chooseRepresentative(all);
@@ -315,7 +328,7 @@ function render(){
  $('#summary').textContent=`${cs.length}개 사건 · ${list.length}건 기사`;
  if(!cs.length){$('#grid').innerHTML='<div class="empty">조건에 맞는 뉴스가 없습니다.</div>';return}
  $('#grid').innerHTML=cs.map((c,i)=>{let x=c.main,id='r'+i;let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
- let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">같은 사건 보도 +${c.rel.length}건 ▾</button><div id="${id}" class="related-list">${c.rel.map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)}</div>`).join('')}</div>`:'';
+ let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">유사 보도 +${c.rel.length}건 ▾</button><div id="${id}" class="related-list">${c.rel.map(r=>`<div class="related-item"><a target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)}</div>`).join('')}</div>`:'';
  return `<article class="card"><div class="meta"><span>${esc(x.source||'뉴스')} · ${esc(x.query||'')}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(x.link)}">${esc(x.title)}</a><div class="tags">${tags}</div>${rel}</article>`}).join('')
 }
 
