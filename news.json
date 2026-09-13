@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-13T00:43:30.688986+00:00",
+  "updated_at": "2026-09-13T01:08:52.925623+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 2
+      "count": 4
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 3
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -97,13 +97,13 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 2,
+      "count": 5,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 6,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 6,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 5,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -265,12 +265,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -283,7 +277,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -301,7 +295,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -314,6 +308,12 @@
     },
     {
       "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -343,9 +343,56 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 526,
+  "count": 529,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "역외 스테이블코인으로 상품권 구매 ‘자금세탁’ 악용… KRWQ·JPYC 정조준 - 조선비즈",
+      "source": "Chosunbiz",
+      "source_url": "https://biz.chosun.com",
+      "source_domain": "biz.chosun.com",
+      "date": "Sun, 13 Sep 2026 00:58:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcmlfaTJoUFYxeFNHQkp2MUU5ZTZoNGJ6OXVySVhSdEdkcDg3R1dBNGdKYmhUMGxZclNFTGxoeDR5MFlxcXRuQUFHdzVzS0pZTUh5RmE0SHpESUF4OFFnRzJEX1NkemFyMmpJbGNKdWhZSGtkaXo2VnZuM01RT1ZBTdIBlAFBVV95cUxObWgxempwakVSUmNQNnl3Njcwek5jTlp5a1JfWE05bHNyWUlnMlk2Mnh3Zk9mUmh3QkRqdXB6SW5vZjA1Y0lGM0h3dzV1TWZMaGY4ZExmaV9DSXpIdHFET3JGYkwwekpURlh3QUZfU0ozLUR1dnA4RVI1b29CS0dqeWNpdTJvSFZ4VlY1SEoxQkxoS0F3?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "역외 스테이블코인으로 상품권 구매 ‘자금세탁’ 악용… KRWQ·JPYC 정조준 - 조선비즈 Chosunbiz",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "금융당국, 역외 스테이블코인 국내 상품권 결제 정조준...“자금세탁 우려”",
+      "source": "youthdaily.co.kr",
+      "source_url": "https://www.youthdaily.co.kr",
+      "source_domain": "www.youthdaily.co.kr",
+      "date": "Sun, 13 Sep 2026 00:51:05 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9NZ3dSWUhiWXZuR1JaSnNFRlI3MmJWV2M0RDI4Mi02SGxUeVZrc2p4Sk9GNTl5czNKYkpyMU5QSUlWdHBNeHdJQ2xuVHBDRFlKeUdITldoejlRZ2tkOXA2MWZqQVRVZVE?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "금융당국, 역외 스테이블코인 국내 상품권 결제 정조준...“자금세탁 우려” youthdaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "[심층 분석]①보이스피싱의 전장이 스마트폰 안으로…통신사 AI 보안, ‘번호 차단’ 넘어 악성 서버 추적한다 -1부",
+      "source": "뉴스밸류",
+      "source_url": "https://www.newsvalue.kr",
+      "source_domain": "www.newsvalue.kr",
+      "date": "Sun, 13 Sep 2026 00:05:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5KMUNDTVZiLVBQaE1EcDNUV1JZX2taaVJkYzY4ZzhfNEhteUdOdURUZlhtd2l6ekhLZ1NOLWd1cE4wZFNoYjJraE8zdkE2LWZyYmxYZURWWDBFNVVoSm43TzF0TjlfaFhpTlE?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[심층 분석]①보이스피싱의 전장이 스마트폰 안으로…통신사 AI 보안, ‘번호 차단’ 넘어 악성 서버 추적한다 -1부 뉴스밸류",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -365,7 +412,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "LG유플러스, 추석 앞두고 보이스피싱 24시간 특별 대응…악성 앱 제어 서버 추적·차단",
-      "source": "nanumy.co.kr",
+      "source": "나눔경제뉴스",
       "source_url": "https://www.nanumy.co.kr",
       "source_domain": "www.nanumy.co.kr",
       "date": "Sun, 13 Sep 2026 00:00:00 GMT",
@@ -373,14 +420,14 @@
       "tags": [
         "사기"
       ],
-      "description": "LG유플러스, 추석 앞두고 보이스피싱 24시간 특별 대응…악성 앱 제어 서버 추적·차단 nanumy.co.kr",
+      "description": "LG유플러스, 추석 앞두고 보이스피싱 24시간 특별 대응…악성 앱 제어 서버 추적·차단 나눔경제뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "LG유플러스, 추석 연휴 앞두고 AI 보안시스템 가동 … 보이스피싱 24시간 방어",
-      "source": "worktoday.co.kr",
+      "source": "워크투데이",
       "source_url": "http://www.worktoday.co.kr",
       "source_domain": "www.worktoday.co.kr",
       "date": "Sun, 13 Sep 2026 00:00:00 GMT",
@@ -388,14 +435,14 @@
       "tags": [
         "사기"
       ],
-      "description": "LG유플러스, 추석 연휴 앞두고 AI 보안시스템 가동 … 보이스피싱 24시간 방어 worktoday.co.kr",
+      "description": "LG유플러스, 추석 연휴 앞두고 AI 보안시스템 가동 … 보이스피싱 24시간 방어 워크투데이",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "LGU+, 추석 보이스피싱 24시간 대응…AI로 악성 앱 추적",
-      "source": "4th.kr",
+      "source": "포쓰저널",
       "source_url": "https://www.4th.kr",
       "source_domain": "www.4th.kr",
       "date": "Sun, 13 Sep 2026 00:00:00 GMT",
@@ -403,7 +450,7 @@
       "tags": [
         "사기"
       ],
-      "description": "LGU+, 추석 보이스피싱 24시간 대응…AI로 악성 앱 추적 4th.kr",
+      "description": "LGU+, 추석 보이스피싱 24시간 대응…AI로 악성 앱 추적 포쓰저널",
       "collection_method": "google_news_24h"
     },
     {
@@ -439,21 +486,6 @@
     },
     {
       "region": "국내",
-      "query": "가상자산 AML",
-      "title": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑]",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Sat, 12 Sep 2026 12:15:53 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5UTEVKamVWWVdXUmZhQnFheUNUVjgtellObjdEeUxKMnJhMTcyb2tuMEp2dmtWOHJUYWNIRTZkcjduNlp6WUx1MXdzWDBKSzA?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑] v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "자금세탁",
       "title": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화",
       "source": "tokenpost.kr",
@@ -466,6 +498,21 @@
         "자금세탁"
       ],
       "description": "30억 싱가포르달러 돈세탁 자산 경매…USDT 현금화 tokenpost.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑]",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Sat, 12 Sep 2026 05:03:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9pTjdQdVJ3clhtNDRiVVBKeFdnTHJVVkVZN3BhNGNMNlpENzM4bEtGWG44b1BvbVdyWUhYQ19uRkZIay04eDJVenpCNWY2aGM?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "미신고 불법 코인거래소 82% 적발 후 국내서 버젓이 영업 중 [코인 브리핑] v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -671,7 +718,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "유령업체 계좌로 리딩방 사기금 세탁한 20대 형제 징역 4년",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Fri, 11 Sep 2026 06:00:01 GMT",
@@ -679,7 +726,7 @@
       "tags": [
         "사기"
       ],
-      "description": "유령업체 계좌로 리딩방 사기금 세탁한 20대 형제 징역 4년 yna.co.kr",
+      "description": "유령업체 계좌로 리딩방 사기금 세탁한 20대 형제 징역 4년 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -866,7 +913,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "美, 캄보디아 '후이원' 대체재 '신비' 차단…코인 등 48조 거래",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 10 Sep 2026 04:59:53 GMT",
@@ -874,7 +921,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "美, 캄보디아 '후이원' 대체재 '신비' 차단…코인 등 48조 거래 yna.co.kr",
+      "description": "美, 캄보디아 '후이원' 대체재 '신비' 차단…코인 등 48조 거래 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
