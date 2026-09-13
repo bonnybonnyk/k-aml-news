@@ -159,64 +159,111 @@ function eventFeatures(title){
   const crimes=['리딩방','보이스피싱','투자사기','전세사기','가상자산','코인','마약','도박','환치기','탈세','횡령','배임','자금세탁','돈세탁','범죄수익','대포통장','유령업체','랜섬웨어'];
   const actions=['세탁','송치','기소','구속','검거','적발','압수','추징','징역','실형','벌금','제재','수사','탈취','해킹'];
   const nums=[...t.matchAll(/(?:약\s*)?\d+(?:\.\d+)?\s*(?:억|만|천)?\s*(?:원|달러|명|년|개월|대|건)/g)].map(m=>m[0].replace(/\s/g,''));
-  // 금액은 '30억'처럼 '원'이 생략된 제목도 별도로 잡는다.
   const money=[...t.matchAll(/(?:약\s*)?\d+(?:\.\d+)?\s*(?:조|억|만|천)\s*(?:원|달러)?/g)].map(m=>m[0].replace(/\s/g,''));
   const ages=[...t.matchAll(/\d{2}대|20대|30대|40대|50대|60대/g)].map(m=>m[0]);
   const roles=['형제','부부','모녀','모자','부자','일당','조직','총책','20대 2명','2명','3명'];
-  return {
-    t,
-    crimes:crimes.filter(x=>t.includes(x)),
-    actions:actions.filter(x=>t.includes(x)),
-    nums:[...new Set(nums)],
-    money:[...new Set(money)],
-    ages:[...new Set(ages)],
-    roles:roles.filter(x=>t.includes(x))
-  };
+  return {t,crimes:crimes.filter(x=>t.includes(x)),actions:actions.filter(x=>t.includes(x)),nums:[...new Set(nums)],money:[...new Set(money)],ages:[...new Set(ages)],roles:roles.filter(x=>t.includes(x))};
 }
 function overlap(a,b){ return a.filter(x=>b.includes(x)).length; }
 function tokenJaccard(a,b){
-  const stop=new Set(['관련','대한','따른','통해','혐의','사건','경찰','검찰','법원','징역','실형','자금','피해','조직']);
+  const stop=new Set(['관련','대한','따른','통해','혐의','사건','경찰','검찰','법원','징역','실형','자금','피해','조직','정부','금융위']);
   const A=new Set(normEventTitle(a).split(' ').filter(x=>x.length>=2&&!stop.has(x)));
   const B=new Set(normEventTitle(b).split(' ').filter(x=>x.length>=2&&!stop.has(x)));
   const inter=[...A].filter(x=>B.has(x)).length;
   const union=new Set([...A,...B]).size||1;
   return inter/union;
 }
-function sameEvent(a,b){
-  const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
-  const crime=overlap(A.crimes,B.crimes);
-  const action=overlap(A.actions,B.actions);
-  const nums=overlap(A.nums,B.nums);
-  const money=overlap(A.money,B.money);
-  const ages=overlap(A.ages,B.ages);
-  const roles=overlap(A.roles,B.roles);
-  const jac=tokenJaccard(A.t,B.t);
-
-  // 5.7: 서로 다른 금액이 명시된 사건은 '총책·검거·범죄수익' 같은 일반 단어만으로 묶지 않는다.
-  // (예: 30억 위조상품 사건 vs 415억원 범죄수익 세탁 사건)
-  // 서로 다른 금액이 각각 명시되면 같은 사건으로 묶지 않는다.
-  // '30억'처럼 원 단위가 생략된 제목도 포함한다.
-  if(A.money.length && B.money.length && money===0) return false;
-  if(A.nums.length && B.nums.length && nums===0 && money===0) return false;
-
-  // 제목 자체가 꽤 비슷한 경우
-  if(jac>=0.42) return true;
-
-  // 5.8.1: 서로 다른 언론사가 제목을 크게 바꿔 쓴 동일사건 회수.
-  // 범죄유형+행위가 같고 구체 단서가 겹칠 때만 완화한다. 숫자 충돌은 위에서 이미 차단한다.
-  if(crime>=1 && action>=1 && (nums>=1 || ages>=1 || roles>=1) && jac>=0.13) return true;
-
-  // 같은 범죄에서 금액/연령/관계 단서가 2개 이상 같으면 표현 차이가 커도 묶는다.
-  if(crime>=1 && (nums+ages+roles)>=2 && jac>=0.09) return true;
-
-  // 핵심 범죄 키워드가 2개 이상 겹치고 구체 단서가 있으면 같은 사건으로 본다.
-  if(crime>=2 && (nums+ages+roles)>=1 && jac>=0.09) return true;
-
+function normalizeEntityText(s){
+  return normEventTitle(s)
+    .replace(/lg\s*u|lgu|lg유플러스|lg유플/g,'lg유플러스')
+    .replace(/금융위원회|금융위/g,'금융위')
+    .replace(/금융감독원|금감원/g,'금감원')
+    .replace(/과학기술정보통신부|과기정통부/g,'과기정통부')
+    .replace(/방송통신위원회|방통위/g,'방통위');
+}
+function announcementFeatures(title){
+  const t=normalizeEntityText(title).replace(/정보\s+공유/g,'정보공유').replace(/지급\s+정지/g,'지급정지').replace(/악성\s+앱/g,'악성앱').replace(/특별\s+대응/g,'특별대응');
+  const entities=['lg유플러스','금융위','금감원','과기정통부','방통위','경찰청','검찰','관세청','국세청','FIU','금융정보분석원','DAXA','은행연합회'];
+  const topics=['보이스피싱','자금세탁','가상자산','코인','투자사기','불법사금융','환치기','외환','탈세','횡령','배임','마약','도박','범죄수익'];
+  const ops=['정보공유','공유','특별대응','24시간','모니터링','악성앱','서버','추적','차단','지급정지','신고 전','신고전','플랫폼','asap','시스템','시행','개정','확대','긴급차단','ai','의심정보','대응'];
+  return {t,entities:entities.filter(x=>t.includes(x.toLowerCase())),topics:topics.filter(x=>t.includes(x)),ops:ops.filter(x=>t.includes(x))};
+}
+function daysApart(a,b){
+  const A=new Date(a.date||0), B=new Date(b.date||0);
+  if(!isFinite(A)||!isFinite(B)) return 999;
+  return Math.abs(A-B)/86400000;
+}
+function moneyValue(s){
+  const m=String(s).match(/([\d.]+)(조|억|만|천)/); if(!m)return null;
+  const mult={조:1e12,억:1e8,만:1e4,천:1e3}[m[2]]; return Number(m[1])*mult;
+}
+function moneyCompatible(A,B){
+  if(!A.length||!B.length) return true;
+  for(const a of A)for(const b of B){const x=moneyValue(a),y=moneyValue(b);if(x&&y&&Math.abs(x-y)/Math.max(x,y)<=0.02)return true;}
   return false;
 }
+function sameAnnouncement(a,b){
+  if(daysApart(a,b)>3) return false;
+  const A=announcementFeatures(a.title||a), B=announcementFeatures(b.title||b);
+  const entity=overlap(A.entities,B.entities), topic=overlap(A.topics,B.topics), ops=overlap(A.ops,B.ops);
+  const jac=tokenJaccard(A.t,B.t);
+  if(topic<1) return false;
+  // 양쪽에 기관명이 잡혔는데 서로 다르면 같은 발표로 보지 않는다.
+  if(A.entities.length && B.entities.length && entity<1) return false;
+  if(entity>=1 && ops>=2 && jac>=0.06) return true;      // 같은 주체 + 같은 주제 + 복수 조치
+  if(entity>=1 && ops>=1 && jac>=0.18) return true;
+  // 한쪽 제목이 기관명을 생략한 경우: 같은 날, 조치가 매우 구체적으로 겹치고 제목 유사도도 있어야 허용.
+  if((!A.entities.length || !B.entities.length) && daysApart(a,b)<=1 && ops>=3 && jac>=0.10) return true;
+  if((!A.entities.length || !B.entities.length) && daysApart(a,b)<=1 && ops>=2 && jac>=0.08) return true;
+  return false;
+}
+function sameEvent(a,b){
+  const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
+  const crime=overlap(A.crimes,B.crimes), action=overlap(A.actions,B.actions), nums=overlap(A.nums,B.nums), money=overlap(A.money,B.money), ages=overlap(A.ages,B.ages), roles=overlap(A.roles,B.roles), jac=tokenJaccard(A.t,B.t);
 
-function cluster(items){let cs=[];for(const x of items){let c=cs.find(c=>sameEvent(c.main,x));if(c)c.rel.push(x);else cs.push({main:x,rel:[]})}return cs}
+  // 5.8.5: 기업·기관의 동일 발표는 별도 경로로 판정한다.
+  // 663억↔664억 같은 반올림 차이는 허용하지만, 30억↔415억처럼 큰 금액 충돌은 허용하지 않는다.
+  if(sameAnnouncement(a,b) && moneyCompatible(A.money,B.money)) return true;
 
+  // 일반 범죄사건은 기존의 보수적인 숫자 충돌 안전장치를 유지한다.
+  if(A.money.length && B.money.length && money===0 && !moneyCompatible(A.money,B.money)) return false;
+  if(A.nums.length && B.nums.length && nums===0 && money===0) return false;
+  if(jac>=0.42) return true;
+  if(crime>=1 && action>=1 && (nums>=1 || ages>=1 || roles>=1) && jac>=0.13) return true;
+  if(crime>=1 && (nums+ages+roles)>=2 && jac>=0.09) return true;
+  if(crime>=2 && (nums+ages+roles)>=1 && jac>=0.09) return true;
+  return false;
+}
+function sourceScore(s=''){
+  const x=String(s).toLowerCase();
+  const tier1=['연합뉴스','yna','kbs','mbc','sbs','jtbc','조선일보','중앙일보','동아일보','한겨레','경향신문','한국일보','매일경제','한국경제','이데일리','뉴스1','뉴시스'];
+  const tier2=['아시아경제','헤럴드','파이낸셜뉴스','서울경제','머니투데이','전자신문','디지털타임스','조선비즈'];
+  if(tier1.some(v=>x.includes(v.toLowerCase()))) return 3;
+  if(tier2.some(v=>x.includes(v.toLowerCase()))) return 2;
+  return 1;
+}
+function representativeScore(x){
+  const f=eventFeatures(x.title||''), a=announcementFeatures(x.title||'');
+  const detail=f.crimes.length*3+f.actions.length*2+f.money.length*3+f.nums.length*2+f.ages.length+f.roles.length+a.entities.length*2+a.topics.length*2+a.ops.length;
+  const len=Math.min(normEventTitle(x.title||'').length,90)/30;
+  return detail*10 + sourceScore(x.source)*4 + len;
+}
+function chooseRepresentative(items){
+  return [...items].sort((a,b)=>representativeScore(b)-representativeScore(a) || sourceScore(b.source)-sourceScore(a.source) || new Date(b.date||0)-new Date(a.date||0))[0];
+}
+function cluster(items){
+  let cs=[];
+  for(const x of items){
+    // main 하나만 보지 않고 이미 묶인 관련기사 어느 하나와도 같은 사건이면 같은 그룹으로 넣는다.
+    let c=cs.find(c=>[c.main,...c.rel].some(y=>sameEvent(y,x)));
+    if(c){
+      c.rel.push(x);
+      const all=[c.main,...c.rel], best=chooseRepresentative(all);
+      c.main=best; c.rel=all.filter(y=>y!==best);
+    }else cs.push({main:x,rel:[]});
+  }
+  return cs;
+}
 function drawCats(){
   const cats = MODE==='official' ? ['전체','FIU','금융위원회','금융감독원','DAXA'] : CATS;
   $('#cats').innerHTML=cats.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join('');
@@ -342,5 +389,8 @@ $('#tabOfficial').onclick=()=>setMode('official');
 load({initial:true});
 setInterval(()=>load(),AUTO_CHECK_MS);
 setInterval(updateLiveStatus,60*1000);
+// 모바일 브라우저가 타이머를 멈췄다가 다시 활성화될 때 즉시 최신 데이터를 확인한다.
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible') load();});
+window.addEventListener('pageshow',()=>{if(LAST_CHECKED_AT && Date.now()-LAST_CHECKED_AT>60*1000) load();});
 </script>
 </body></html>
