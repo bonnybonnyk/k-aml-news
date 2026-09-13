@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
+<!-- K-AML NEWS build 5.8.9.4.2 READ STATUS HOTFIX -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>K-AML NEWS</title>
@@ -321,6 +322,11 @@ function markReadByKey(k){
 function readAttrs(x){return `data-read-key="${esc(articleKey(x))}" onclick="markReadByKey(this.dataset.readKey);this.classList.add('read-link');const m=this.parentElement&&this.parentElement.querySelector('.read-mark');if(m)m.style.display='inline'"`}
 function readClass(x){return isRead(x)?' read-link':''}
 function readMark(x){return `<span class="read-mark" style="${isRead(x)?'':'display:none'}">✓ 읽음</span>`}
+function clusterLatestDate(c){
+ const ds=[c&&c.main&&c.main.date,...((c&&c.rel)||[]).map(x=>x&&x.date)].filter(Boolean);
+ const ts=ds.map(d=>new Date(d).getTime()).filter(Number.isFinite);
+ return ts.length?Math.max(...ts):0;
+}
 function render(){
  let q=$('#search').value.trim().toLowerCase();
  let base=MODE==='official'?OFFICIAL:NEWS;
