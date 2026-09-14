@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-14T00:15:04.391951+00:00",
+  "updated_at": "2026-09-14T00:44:49.856143+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "FIU·STR",
@@ -30,7 +30,7 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "보이스피싱",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -242,21 +242,39 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 18,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -283,18 +301,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -308,6 +314,18 @@
     },
     {
       "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -331,12 +349,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
@@ -346,6 +358,12 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -361,9 +379,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 547,
+  "count": 549,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "대전서 보이스피싱 번호 차단까지 '7일'…4400만 원 추가 피해",
+      "source": "대전일보",
+      "source_url": "https://www.daejonilbo.com",
+      "source_domain": "www.daejonilbo.com",
+      "date": "Mon, 14 Sep 2026 00:15:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fcTVfV2VvMHg1WmdCUDdnU3AySjliOGFtLU1fY0RaR2hwTmhCaWxaQzNtS2Z1Z0ZvWktZTWFFRm01clJvOXk5TXRuUVp0c0JoZ1NPZlFQdUJsTXJXVEJaNGJfVGhuRWFWeXZTSm1iRdIBc0FVX3lxTFBncWgxNzZwYmNuZF9rd05vNUFKQ0FyNjJiYVo4MVRJV1FicjlOZEJ2OHlVM1lITjFPV0t4bDB1QXBJREhyWlpoRmFPOWI5eWZrVmxHeDk0cDNyVGdVa1JuN2Y3QVRNVW05WHJHWmxPQm9VNE0?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "대전서 보이스피싱 번호 차단까지 '7일'…4400만 원 추가 피해 대전일보",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -407,6 +440,21 @@
         "사기"
       ],
       "description": "[심층 분석]②보이스피싱의 전장이 스마트폰 안으로… ‘AI 보안’의 경쟁력은 탐지보다 공동 대응 속도에 달렸다 -2부 뉴스밸류",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "금융당국, KRWQ 상품권 서비스 자금세탁 위험 점검 착수",
+      "source": "Traders Union",
+      "source_url": "https://tradersunion.com",
+      "source_domain": "tradersunion.com",
+      "date": "Sun, 13 Sep 2026 07:01:18 GMT",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUVB4VG5WNkgxUUxoYjVMeTY1SF9SZjdnOHJteW5wbkhPVTN3aUZ2WmZlQnM3YjZ4QWs0SjhOSWozUXRFVk4wQllDR3hpLVZQeWRWcnRJYjV6RjFLV2xQMUhjTFhuM3FGb3FQMXVMbUk2cEM5VTJnSTQwdlRKRk5sdjJsbDBfMlRPQXpVTVZERFNuOWNvcXhob2g5UVBBUQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "금융당국, KRWQ 상품권 서비스 자금세탁 위험 점검 착수 Traders Union",
       "collection_method": "google_news_24h"
     },
     {
@@ -460,7 +508,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "LGU+, 추석 AI로 보이스피싱 24시간 차단",
-      "source": "데일리바이트(DAILY BYTE)",
+      "source": "mydailybyte.com",
       "source_url": "https://www.mydailybyte.com",
       "source_domain": "www.mydailybyte.com",
       "date": "Sun, 13 Sep 2026 06:11:00 GMT",
@@ -468,7 +516,7 @@
       "tags": [
         "사기"
       ],
-      "description": "LGU+, 추석 AI로 보이스피싱 24시간 차단 데일리바이트(DAILY BYTE)",
+      "description": "LGU+, 추석 AI로 보이스피싱 24시간 차단 mydailybyte.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -8201,6 +8249,24 @@
     },
     {
       "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "사망자 명의의 불법 금융거래, 사망신고 ‘다음 날’부터 즉시 막는다.",
+      "source": "금융위원회",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87657?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
       "query": "보이스피싱",
       "official_source": "금융감독원",
       "official_sources": [
@@ -8214,24 +8280,6 @@
         "사기"
       ],
       "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
-      "official_sources": [
-        "금융위원회"
-      ],
-      "title": "사망자 명의의 불법 금융거래, 사망신고 ‘다음 날’부터 즉시 막는다.",
-      "source": "금융위원회",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87657?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
-      "tags": [
-        "가상자산",
-        "FIU·규제",
-        "제재·테러자금"
-      ],
-      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
@@ -8251,19 +8299,23 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%,피해액 43% 감소 성과",
-      "source": "금융감독원",
+      "title": "‘보이스피싱 근절 종합대책’ 1년, 발생건수 40%·피해액 43% 감소 성과",
+      "source": "금융위원회",
       "date": "2026-09-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=226356&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87637?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금",
+        "자금세탁"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
@@ -8303,20 +8355,23 @@
     },
     {
       "region": "공식자료",
-      "query": "자금세탁",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "FIU, 자금세탁방지 유관기관 협의회 개최",
-      "source": "금융감독원",
+      "source": "금융위원회",
       "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=225288&menuNo=200218&searchCnd=1&searchWrd=%EC%9E%90%EA%B8%88%EC%84%B8%ED%83%81&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87604?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
+        "가상자산",
+        "도박",
         "FIU·규제",
+        "제재·테러자금",
         "자금세탁"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
