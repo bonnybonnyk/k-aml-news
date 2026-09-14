@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T15:12:11.015108+00:00",
+  "updated_at": "2026-09-14T15:42:10.439337+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 44
+      "count": 45
     },
     {
       "feed": "불법사금융",
@@ -103,13 +103,13 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 12,
+      "count": 13,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 27,
+      "count": 28,
       "window_days": 3
     },
     {
@@ -283,6 +283,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -301,31 +307,31 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -343,12 +349,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원",
       "ok": true,
       "count": 15,
@@ -361,7 +361,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 610,
+  "count": 611,
   "official_count": 30,
   "items": [
     {
@@ -407,6 +407,21 @@
         "자금세탁"
       ],
       "description": "상품권 거래 위장 범죄수익 200억 세탁… 전직 경찰관에 징역 10년 구형 한국일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"신고했는데 왜 안 막았나\"..7일간 보이스피싱 피해 4천4백만 원",
+      "source": "티제이비",
+      "source_url": "https://www.tjb.co.kr",
+      "source_domain": "www.tjb.co.kr",
+      "date": "Mon, 14 Sep 2026 10:13:16 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1OWEpaN28tOU1mZDhVZDZRZlhKc3E5eW4xTnBLRHlPdWdUcmdPcERtQ0Y4WnVlTjNZVHJNa1Q0eFlhN3FyZkVZVkxwMW43dVlvdjJjLU1CMHV5VWNnZzluMUxR?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"신고했는데 왜 안 막았나\"..7일간 보이스피싱 피해 4천4백만 원 티제이비",
       "collection_method": "google_news_24h"
     },
     {
@@ -581,7 +596,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "번호 중지 기다리다 또… 보이스피싱 구제 절차 개선 시급",
-      "source": "금강일보",
+      "source": "ggilbo.com",
       "source_url": "https://www.ggilbo.com",
       "source_domain": "www.ggilbo.com",
       "date": "Mon, 14 Sep 2026 07:38:11 GMT",
@@ -589,7 +604,7 @@
       "tags": [
         "사기"
       ],
-      "description": "번호 중지 기다리다 또… 보이스피싱 구제 절차 개선 시급 금강일보",
+      "description": "번호 중지 기다리다 또… 보이스피싱 구제 절차 개선 시급 ggilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -854,7 +869,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "유령 업체 앞세워 900억대 돈세탁 일당 검거",
-      "source": "yonhapnewstv.co.kr",
+      "source": "연합뉴스TV",
       "source_url": "https://www.yonhapnewstv.co.kr",
       "source_domain": "www.yonhapnewstv.co.kr",
       "date": "Mon, 14 Sep 2026 04:59:00 GMT",
@@ -862,7 +877,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 업체 앞세워 900억대 돈세탁 일당 검거 yonhapnewstv.co.kr",
+      "description": "유령 업체 앞세워 900억대 돈세탁 일당 검거 연합뉴스TV",
       "collection_method": "google_news_24h"
     },
     {
@@ -945,7 +960,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "해외서 ‘주식 리딩 사기’ 자금세탁 가담한 30대…징역 4년",
-      "source": "경기일보",
+      "source": "kyeonggi.com",
       "source_url": "https://www.kyeonggi.com",
       "source_domain": "www.kyeonggi.com",
       "date": "Mon, 14 Sep 2026 04:25:41 GMT",
@@ -954,7 +969,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "해외서 ‘주식 리딩 사기’ 자금세탁 가담한 30대…징역 4년 경기일보",
+      "description": "해외서 ‘주식 리딩 사기’ 자금세탁 가담한 30대…징역 4년 kyeonggi.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1216,7 +1231,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "유령 상품권 업체 운영하며 930억여원 자금세탁한 일당, 검찰행",
-      "source": "경기일보",
+      "source": "kyeonggi.com",
       "source_url": "https://www.kyeonggi.com",
       "source_domain": "www.kyeonggi.com",
       "date": "Mon, 14 Sep 2026 01:46:19 GMT",
@@ -1224,7 +1239,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 상품권 업체 운영하며 930억여원 자금세탁한 일당, 검찰행 경기일보",
+      "description": "유령 상품권 업체 운영하며 930억여원 자금세탁한 일당, 검찰행 kyeonggi.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1291,7 +1306,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 신고 후 이용중지까지 최대 일주일... 그 사이 추가 피해 1억 3,690만 원",
-      "source": "인디포커스",
+      "source": "indifocus.kr",
       "source_url": "http://www.indifocus.kr",
       "source_domain": "www.indifocus.kr",
       "date": "Mon, 14 Sep 2026 01:29:00 GMT",
@@ -1299,7 +1314,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 신고 후 이용중지까지 최대 일주일... 그 사이 추가 피해 1억 3,690만 원 인디포커스",
+      "description": "보이스피싱 신고 후 이용중지까지 최대 일주일... 그 사이 추가 피해 1억 3,690만 원 indifocus.kr",
       "collection_method": "google_news_24h"
     },
     {
