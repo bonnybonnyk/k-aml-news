@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T19:40:01.685502+00:00",
+  "updated_at": "2026-09-14T20:10:39.275435+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 13
+      "count": 12
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 8
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 48
+      "count": 47
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -301,6 +301,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
@@ -314,12 +320,6 @@
     },
     {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -343,6 +343,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
@@ -350,12 +356,6 @@
     },
     {
       "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -379,9 +379,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 612,
+  "count": 614,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "제도권 막히자 사채의 덫… 불법사금융 범죄 2년 새 2.6배[‘금융절벽’ 취약차주]",
+      "source": "이투데이",
+      "source_url": "https://www.etoday.co.kr",
+      "source_domain": "www.etoday.co.kr",
+      "date": "Mon, 14 Sep 2026 20:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBzR0wwX3Z6YmJaZFFmcllzdm1ESE1EWExfVU5qRnlSNFZRNHF2X1JQLTd2bm9odXcyYnZ0VkNpUlF6d1NBWjltTFJTYXdsMGpyQ1VxSg?oc=5",
+      "tags": [
+        "불법사금융",
+        "FIU·규제"
+      ],
+      "description": "제도권 막히자 사채의 덫… 불법사금융 범죄 2년 새 2.6배[‘금융절벽’ 취약차주] 이투데이",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "범죄수익",
@@ -675,7 +691,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "주식 리딩 사기 조직서 범죄수익금 20여억 세탁한 30대 외국인…징역 4년",
-      "source": "newspim.com",
+      "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Mon, 14 Sep 2026 06:56:00 GMT",
@@ -684,14 +700,14 @@
         "사기",
         "자금세탁"
       ],
-      "description": "주식 리딩 사기 조직서 범죄수익금 20여억 세탁한 30대 외국인…징역 4년 newspim.com",
+      "description": "주식 리딩 사기 조직서 범죄수익금 20여억 세탁한 30대 외국인…징역 4년 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "'피해자 1천900명' eSIM 업체에 대포통장 제공…2명 구속",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 14 Sep 2026 06:47:30 GMT",
@@ -699,7 +715,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'피해자 1천900명' eSIM 업체에 대포통장 제공…2명 구속 연합뉴스",
+      "description": "'피해자 1천900명' eSIM 업체에 대포통장 제공…2명 구속 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -751,7 +767,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“사투리까지 똑같네”…더 교묘해진 AI 보이스피싱",
-      "source": "한경매거진&북",
+      "source": "magazine.hankyung.com",
       "source_url": "https://magazine.hankyung.com",
       "source_domain": "magazine.hankyung.com",
       "date": "Mon, 14 Sep 2026 06:27:00 GMT",
@@ -759,7 +775,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“사투리까지 똑같네”…더 교묘해진 AI 보이스피싱 한경매거진&북",
+      "description": "“사투리까지 똑같네”…더 교묘해진 AI 보이스피싱 magazine.hankyung.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -871,7 +887,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "'20억원대 주식리딩방 자금세탁책' 30대 외국인 실형",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 14 Sep 2026 05:05:40 GMT",
@@ -880,7 +896,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "'20억원대 주식리딩방 자금세탁책' 30대 외국인 실형 연합뉴스",
+      "description": "'20억원대 주식리딩방 자금세탁책' 30대 외국인 실형 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1112,6 +1128,21 @@
     },
     {
       "region": "국내",
+      "query": "투자사기",
+      "title": "250만불 투자사기 한인 남성 유죄…퇴직금까지 빼돌려",
+      "source": "미주중앙일보",
+      "source_url": "https://www.koreadaily.com",
+      "source_domain": "www.koreadaily.com",
+      "date": "Mon, 14 Sep 2026 02:41:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9VWm5zWl9GR3RRcU9iY0hNVlFHaXJta1VZTWtEd2FaV1ZhWGFHeE9oZGhVS01ldXNwWV9pQzdhUGloQmpBMGNOREpDZjl4VDdWSUJHZGNRVXVfWGFxQjJRazJR?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "250만불 투자사기 한인 남성 유죄…퇴직금까지 빼돌려 미주중앙일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "돈세탁도 아웃소싱, 가짜 상품권업체 차린 일당 구속",
       "source": "edaily.co.kr",
@@ -1144,7 +1175,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "전남광주 보이스피싱 5년간 5085건…피해액 1699억원",
-      "source": "진일보",
+      "source": "jnilbo.com",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Mon, 14 Sep 2026 02:11:06 GMT",
@@ -1152,7 +1183,7 @@
       "tags": [
         "사기"
       ],
-      "description": "전남광주 보이스피싱 5년간 5085건…피해액 1699억원 진일보",
+      "description": "전남광주 보이스피싱 5년간 5085건…피해액 1699억원 jnilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1174,7 +1205,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "유령 상품권 업체 차려 934억 세탁…범죄수익 전문 세탁조직 적발",
-      "source": "경기신문",
+      "source": "kgnews.co.kr",
       "source_url": "https://www.kgnews.co.kr",
       "source_domain": "www.kgnews.co.kr",
       "date": "Mon, 14 Sep 2026 02:06:01 GMT",
@@ -1182,7 +1213,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 상품권 업체 차려 934억 세탁…범죄수익 전문 세탁조직 적발 경기신문",
+      "description": "유령 상품권 업체 차려 934억 세탁…범죄수익 전문 세탁조직 적발 kgnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1234,7 +1265,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "우편물 수량 조작, 요금 1억원 횡령 징역 1년형",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 14 Sep 2026 01:48:39 GMT",
@@ -1242,7 +1273,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "우편물 수량 조작, 요금 1억원 횡령 징역 1년형 연합뉴스",
+      "description": "우편물 수량 조작, 요금 1억원 횡령 징역 1년형 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1279,7 +1310,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "전남광주 5년간 보이스피싱 5천여건…피해액 1천700억원",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 14 Sep 2026 01:45:09 GMT",
@@ -1287,7 +1318,7 @@
       "tags": [
         "사기"
       ],
-      "description": "전남광주 5년간 보이스피싱 5천여건…피해액 1천700억원 연합뉴스",
+      "description": "전남광주 5년간 보이스피싱 5천여건…피해액 1천700억원 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
