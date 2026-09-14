@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T04:42:09.273523+00:00",
+  "updated_at": "2026-09-14T05:09:37.492126+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 17
+      "count": 21
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "환치기·외환",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 25,
+      "count": 26,
       "window_days": 3
     },
     {
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 24,
+      "count": 25,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 17,
+      "count": 19,
       "window_days": 3
     },
     {
@@ -307,19 +307,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -331,7 +325,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -343,7 +343,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -355,15 +361,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -379,9 +379,100 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 580,
+  "count": 585,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "제주은행, 통화 중 보이스피싱 의심 송금 선별 차단",
+      "source": "뉴스N제주",
+      "source_url": "https://www.newsnjeju.com",
+      "source_domain": "www.newsnjeju.com",
+      "date": "Mon, 14 Sep 2026 04:59:08 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1adHJ6UmJHejZnR0U1N0FNRUl4N1lHaC1LLUFXdE1hT05UMG9NeGt1d0RhWEUxUmlUUVlQcWVmdkxGM09lM2RTUFdYdnBWYUNOTnk0SGF4LUduT2VPN1RKTGxMVGNlamxWYVpCYw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "제주은행, 통화 중 보이스피싱 의심 송금 선별 차단 뉴스N제주",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "유령 업체 앞세워 900억대 돈세탁 일당 검거",
+      "source": "연합뉴스TV",
+      "source_url": "https://www.yonhapnewstv.co.kr",
+      "source_domain": "www.yonhapnewstv.co.kr",
+      "date": "Mon, 14 Sep 2026 04:59:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1HaEYtVFNfRmRkRm03aDRvQy1oS1hfZHA2d3lDeFhDdXNCa09GcDFoUmhCLTBzTHBQMDBtVEtOVUd2ZkVPSk1NbzV0VElCcmxOd3FBc0x1X2VjcWU5cXlEQlBsN1NOZkk?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "유령 업체 앞세워 900억대 돈세탁 일당 검거 연합뉴스TV",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 신고하고도 서류 절차 때문에 추가 피해 발생?",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Mon, 14 Sep 2026 04:52:45 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1QQ3owei1yOFlrSWx0WEFfMzZGN041ZkdoOVM3Q180YmFudmd3Y3M0eHVJTzIzemdFVmlRYW1mQTduZUkwM2lCSWRvUjNyYWM?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 신고하고도 서류 절차 때문에 추가 피해 발생? v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "유령 상품권 업체 설립 후 범죄수익 세탁해온 일당 검거",
+      "source": "기호일보",
+      "source_url": "https://www.kihoilbo.co.kr",
+      "source_domain": "www.kihoilbo.co.kr",
+      "date": "Mon, 14 Sep 2026 04:47:47 GMT",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5EY1AtNndabVVURUFVdWtoaE9VQW9LVTFadWlRYndjWWVtcHRCQ1NqQlhPYVZoNFZ3OWpER2xUSmdoS2VSQ2RJa2k0TnE5cUQ1cUJ1bUhLU1JKM3FnNWRKY3plZ01heVQzUVVOWHJsTQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "유령 상품권 업체 설립 후 범죄수익 세탁해온 일당 검거 기호일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "주식 리딩 사기 조직 ‘자금세탁책’ 30대 외국인…징역형 4년 실형 선고",
+      "source": "인천일보",
+      "source_url": "http://incheonilbo.com",
+      "source_domain": "incheonilbo.com",
+      "date": "Mon, 14 Sep 2026 04:46:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1nTHlVZHVKWG1YdEJrR05wMnpYNktxZUxQeGtzN2pJMmRqbFg4VkJ5NDJhb3JpRzYwUGhCcE9xTGF3b2NyNVN5bUF6aE9UTThKazhxS0ZEYUg3T0FaT3dRWTM4RnhVYUg3WXc?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "주식 리딩 사기 조직 ‘자금세탁책’ 30대 외국인…징역형 4년 실형 선고 인천일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 신고 후 전화 이용중지 지연…1억3690만원 추가 피해",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Mon, 14 Sep 2026 04:41:33 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBoMjFSak0wYVdKV3I4MVJRbU9LSHluTkZqUE5JbjRMeXl0cl93RFRfOWx4d1JkMXdZcDBMN211ZFNLa1c4NDFiTGI5ZnNVT1k1NXVIcjdWZWNiTjcyR0ZPb9IBZkFVX3lxTE10TUtUOXF6ZGdlUFA0NXp6S3dJUkxldThYdUpyUjJQUmJ1MWhqenV0SkFFVzNpNFViaXVvMWZoSjE4ckJ2Ul9SRkdSb0hveHVwdExsTnNCZUt5MkNvWGZ0enVzdkE3QQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 신고 후 전화 이용중지 지연…1억3690만원 추가 피해 뉴스1",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -417,7 +508,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "전남광주 최근 5년 보이스피싱 5085건…피해액 1699억원",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Mon, 14 Sep 2026 04:23:31 GMT",
@@ -425,7 +516,7 @@
       "tags": [
         "사기"
       ],
-      "description": "전남광주 최근 5년 보이스피싱 5085건…피해액 1699억원 뉴시스",
+      "description": "전남광주 최근 5년 보이스피싱 5085건…피해액 1699억원 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -478,10 +569,10 @@
       "query": "자금세탁",
       "title": "934억 원 세탁한 ‘유령 상품권업체’…돈세탁은 ‘외주’ 줬다",
       "source": "매일경제",
-      "source_url": "https://www.mk.co.kr",
-      "source_domain": "www.mk.co.kr",
+      "source_url": "https://m.mk.co.kr",
+      "source_domain": "m.mk.co.kr",
       "date": "Mon, 14 Sep 2026 02:09:47 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1vc1Z2YURlbDBGcUlMdGo1b1RqamxMYlhkTXlyRW9ENG9Nc21WMWZhcndhMUl4THNMWWdnQ2dkTHhOZFZITFdEb0NzejBSUmo1Z3JYbQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBIQlBWWmVBSVRpMXFDSUJNX2hNejdFRTFLZWFDYmMtWWVYMkppZk9rYkEyTHc1MHMxVFFEYXJNa1RkYngyOFE?oc=5",
       "tags": [
         "자금세탁"
       ],
@@ -571,7 +662,7 @@
       "source_url": "https://www.job-post.co.kr",
       "source_domain": "www.job-post.co.kr",
       "date": "Mon, 14 Sep 2026 01:46:40 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0wVnpPSTFpc1ZiN0RJcW9qdmRoeERCemZmSXg3OEM5VUFiNXhNM2hVZWpaVVpWdkFPSEM4TVZYVEpqaDRuTUxGYjVVcEpTZUR0NDYzalcwY1VGR1I0ZDFsMlFROFY0N0pYdnVneDRB0gFyQVVfeXFMTVBibmMyVUtXYUNZWnEwRWRZMUVZZWJDVm1qb1ZWcmFsY082Vm05NDZxR2p5T05jVHEyWUpYQVg4cktxYm1xU3JKX3VyWXpSOVVOdmc2UEx1TEhXYlNSb0lDdlJHVENjUDNQYm9xUGZVbllB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1QYm5jMlVLV2FDWVpxMEVkWTFFWWViQ1Ztam9WVnJhbGNPNlZtOTQ2cUdqeU9OY1RxMllKWEFYOHJLcWJtcVNySl91cll6UjlVTnZnNlBMdUxIV2JTUm9JQ3ZSR1RDY1AzUGJvcVBmVW5ZQdIBckFVX3lxTE1QYm5jMlVLV2FDWVpxMEVkWTFFWWViQ1Ztam9WVnJhbGNPNlZtOTQ2cUdqeU9OY1RxMllKWEFYOHJLcWJtcVNySl91cll6UjlVTnZnNlBMdUxIV2JTUm9JQ3ZSR1RDY1AzUGJvcVBmVW5ZQQ?oc=5",
       "tags": [
         "사기"
       ],
@@ -612,7 +703,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "유령 상품권 업체 세워 ‘범죄수익 900억 세탁’ 해줘…7명 송치",
-      "source": "hani.co.kr",
+      "source": "한겨레",
       "source_url": "https://www.hani.co.kr",
       "source_domain": "www.hani.co.kr",
       "date": "Mon, 14 Sep 2026 01:38:00 GMT",
@@ -620,14 +711,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 상품권 업체 세워 ‘범죄수익 900억 세탁’ 해줘…7명 송치 hani.co.kr",
+      "description": "유령 상품권 업체 세워 ‘범죄수익 900억 세탁’ 해줘…7명 송치 한겨레",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "전북 보이스피싱 피해액 최근 5년간 1200억 넘었다",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 14 Sep 2026 01:37:45 GMT",
@@ -635,7 +726,7 @@
       "tags": [
         "사기"
       ],
-      "description": "전북 보이스피싱 피해액 최근 5년간 1200억 넘었다 뉴시스",
+      "description": "전북 보이스피싱 피해액 최근 5년간 1200억 넘었다 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -719,7 +810,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "유령 상품권 업체 차려 9백억 원대 범죄수익 세탁한 일당 검거",
-      "source": "imnews.imbc.com",
+      "source": "MBC 뉴스",
       "source_url": "https://imnews.imbc.com",
       "source_domain": "imnews.imbc.com",
       "date": "Mon, 14 Sep 2026 01:01:16 GMT",
@@ -727,7 +818,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 상품권 업체 차려 9백억 원대 범죄수익 세탁한 일당 검거 imnews.imbc.com",
+      "description": "유령 상품권 업체 차려 9백억 원대 범죄수익 세탁한 일당 검거 MBC 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -749,7 +840,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "유령 상품권 업체 설립 934억 범죄수익 세탁한 일당 덜미",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 14 Sep 2026 01:00:00 GMT",
@@ -757,7 +848,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 상품권 업체 설립 934억 범죄수익 세탁한 일당 덜미 뉴시스",
+      "description": "유령 상품권 업체 설립 934억 범죄수익 세탁한 일당 덜미 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -778,26 +869,11 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "제주은행, 통화 중 보이스피싱 의심 송금 ‘선별 차단’",
-      "source": "뉴스제주",
-      "source_url": "https://www.newsjeju.net",
-      "source_domain": "www.newsjeju.net",
-      "date": "Mon, 14 Sep 2026 00:52:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ienM1ZDNSaDZxNXpFNzZfM3BFeUl4V0FCbnlHQ1RkU1h6bDA0WlBEMlIzNmVNYkoxQ1oxanVnWEJxRUtDb1NVWnJmREx3aUxMZDZNVEx5dEdEcnhSdUZ3N2FueG9PWDNhZGYw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "제주은행, 통화 중 보이스피싱 의심 송금 ‘선별 차단’ 뉴스제주",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "“보이스피싱 신고하면 뭐하나”…전화번호 차단에 7일, 그 새 1.3억 또 털렸다",
       "source": "v.daum.net",
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
-      "date": "Mon, 14 Sep 2026 00:51:00 GMT",
+      "date": "Mon, 14 Sep 2026 00:51:02 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5XZ1kwSllIcmJ4VDQ0b2hhZ3dGb0hnYXNKVGhhZDMya2tyRHdMMDZRZzQwT2Q3Rmlkc29vRGVfTmpaV29jLUZpeHF1bm9wT1E?oc=5",
       "tags": [
         "사기"
@@ -944,7 +1020,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금융위, “KRWQ 상품권 서비스는 자금세탁 소지”",
-      "source": "서울경제",
+      "source": "sedaily.com",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Sun, 13 Sep 2026 06:58:50 GMT",
@@ -952,7 +1028,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "금융위, “KRWQ 상품권 서비스는 자금세탁 소지” 서울경제",
+      "description": "금융위, “KRWQ 상품권 서비스는 자금세탁 소지” sedaily.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -991,7 +1067,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "LGU+, 추석 AI로 보이스피싱 24시간 차단",
-      "source": "mydailybyte.com",
+      "source": "데일리바이트(DAILY BYTE)",
       "source_url": "https://www.mydailybyte.com",
       "source_domain": "www.mydailybyte.com",
       "date": "Sun, 13 Sep 2026 06:11:00 GMT",
@@ -999,7 +1075,7 @@
       "tags": [
         "사기"
       ],
-      "description": "LGU+, 추석 AI로 보이스피싱 24시간 차단 mydailybyte.com",
+      "description": "LGU+, 추석 AI로 보이스피싱 24시간 차단 데일리바이트(DAILY BYTE)",
       "collection_method": "google_news_24h"
     },
     {
@@ -1327,7 +1403,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "[단독] 올해 불법 외환거래 적발 4.9조…7개월 만에 작년 규모 추월",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Fri, 11 Sep 2026 21:00:00 GMT",
@@ -1335,7 +1411,7 @@
       "tags": [
         "AML"
       ],
-      "description": "[단독] 올해 불법 외환거래 적발 4.9조…7개월 만에 작년 규모 추월 뉴시스",
+      "description": "[단독] 올해 불법 외환거래 적발 4.9조…7개월 만에 작년 규모 추월 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -9147,23 +9223,6 @@
     },
     {
       "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "가상자산시장 시세조종 혐의자 수사기관 고발",
-      "source": "금융감독원",
-      "date": "2026-07-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "보이스피싱",
       "official_source": "금융감독원",
       "official_sources": [
@@ -9174,6 +9233,23 @@
       "date": "2026-07-01T00:00:00+09:00",
       "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "시세조종",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "가상자산시장 시세조종 혐의자 수사기관 고발",
+      "source": "금융감독원",
+      "date": "2026-07-01T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EC%8B%9C%EC%84%B8%EC%A1%B0%EC%A2%85&pageIndex=1",
+      "tags": [
+        "가상자산",
         "사기"
       ],
       "collection_method": "verified_fss_board"
