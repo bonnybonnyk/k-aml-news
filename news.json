@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-15T17:09:19.199479+00:00",
+  "updated_at": "2026-09-15T17:38:42.272494+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 12
+      "count": 11
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 14
+      "count": 12
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 23
+      "count": 22
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "탈세",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -103,13 +103,13 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 14,
+      "count": 13,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 33,
+      "count": 31,
       "window_days": 3
     },
     {
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 40,
+      "count": 39,
       "window_days": 3
     },
     {
@@ -301,25 +301,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -334,6 +322,18 @@
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -355,13 +355,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -379,9 +379,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 683,
+  "count": 684,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "스콧 베선트 \"클래리티법 통과 필요…재무부 제재 회피 대응 권한 강화\"",
+      "source": "블루밍비트",
+      "source_url": "https://bloomingbit.io",
+      "source_domain": "bloomingbit.io",
+      "date": "Tue, 15 Sep 2026 17:31:35 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5VTXVXcGdTd3F5TGE3VV8tRlRvZmFpeDBzQV9WVklkU0VtQTY3XzRadUhGdXZLWC05Mkl1YXBoS2FhOWwyUlZZcHZmZ05IaGlr?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "스콧 베선트 \"클래리티법 통과 필요…재무부 제재 회피 대응 권한 강화\" 블루밍비트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "투자사기",
@@ -601,7 +616,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "상품권 결제 유도 신종 보이스피싱 확산…금감원 탐지 강화",
-      "source": "speconomy.com",
+      "source": "스페셜경제",
       "source_url": "https://www.speconomy.com",
       "source_domain": "www.speconomy.com",
       "date": "Tue, 15 Sep 2026 07:30:17 GMT",
@@ -609,7 +624,7 @@
       "tags": [
         "사기"
       ],
-      "description": "상품권 결제 유도 신종 보이스피싱 확산…금감원 탐지 강화 speconomy.com",
+      "description": "상품권 결제 유도 신종 보이스피싱 확산…금감원 탐지 강화 스페셜경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -951,7 +966,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "’범죄수익 3억원 코인 환전’…중국 보낸 일당 줄줄이 덜미",
-      "source": "연합뉴스TV",
+      "source": "yonhapnewstv.co.kr",
       "source_url": "https://www.yonhapnewstv.co.kr",
       "source_domain": "www.yonhapnewstv.co.kr",
       "date": "Tue, 15 Sep 2026 05:14:00 GMT",
@@ -960,7 +975,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "’범죄수익 3억원 코인 환전’…중국 보낸 일당 줄줄이 덜미 연합뉴스TV",
+      "description": "’범죄수익 3억원 코인 환전’…중국 보낸 일당 줄줄이 덜미 yonhapnewstv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1043,7 +1058,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "보이스피싱 피해금 3억, 가상자산으로 바꿔 中에 송금한 자금세탁 조직 검거 [사건수첩]",
-      "source": "segye.com",
+      "source": "세계일보",
       "source_url": "https://m.segye.com",
       "source_domain": "m.segye.com",
       "date": "Tue, 15 Sep 2026 04:24:56 GMT",
@@ -1053,7 +1068,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "보이스피싱 피해금 3억, 가상자산으로 바꿔 中에 송금한 자금세탁 조직 검거 [사건수첩] segye.com",
+      "description": "보이스피싱 피해금 3억, 가상자산으로 바꿔 中에 송금한 자금세탁 조직 검거 [사건수첩] 세계일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1079,7 +1094,7 @@
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 15 Sep 2026 04:04:19 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5lU0Zta2FLODllU0hwQ1F4MVM2Q3UwVVFvRzMwRFQ5MFpsb2JnWnRDNWlsckhiQkNxb0RVVUg0Uk9LN1RXcy00VjVybWlpdklTRFA0UFJtdUrSAV5BVV95cUxPbXJ3UXoyenA1SDhXYmRBaE1WU3BWenQxSTVBR2d0RjRzY1hwMVNWODF0TnA3OGhvS3NUc3RBUUgyV2VTTHloTGNFdVJIb21VU1NfT21ZckxPeEFiN0dB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9tcndRejJ6cDVIOFdiZEFoTVZTcFZ6dDFJNUFHZ3RGNHNjWHAxU1Y4MXROcDc4aG9Lc1RzdEFRSDJXZVNMeWhMY0V1UkhvbVVTU19PbVlyTE94QWI3R0HSAV5BVV95cUxPbXJ3UXoyenA1SDhXYmRBaE1WU3BWenQxSTVBR2d0RjRzY1hwMVNWODF0TnA3OGhvS3NUc3RBUUgyV2VTTHloTGNFdVJIb21VU1NfT21ZckxPeEFiN0dB?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -1275,10 +1290,10 @@
       "query": "불법도박",
       "title": "2700억 게임머니 유통하고 153개 도박사이트 제작…불법 공급망 적발",
       "source": "매일경제",
-      "source_url": "https://www.mk.co.kr",
-      "source_domain": "www.mk.co.kr",
+      "source_url": "https://m.mk.co.kr",
+      "source_domain": "m.mk.co.kr",
       "date": "Tue, 15 Sep 2026 01:42:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5mYk1vSlZBSHRDT2Z4bFFpMmxNUFpyU3JtUlYyM3BoT1lwSWg2d1NxdHM1N3VCdGRBMHFGTndiZHNWT2dzVDJfSzFNeDN5NXZLTTNzWA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE51aHBnemdoWG93dGxSVEFvTHdFcVhsbXNtTmhCOWdRenhWRmRDcE9kRV9VQUNQeXZKRWVHUXNNZjlYbDlVMUE?oc=5",
       "tags": [
         "도박"
       ],
@@ -1399,7 +1414,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Mon, 14 Sep 2026 22:45:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5JMUJ3aUdHTzAtTHhqU3E3MFU1TE50YjNQb1ljc2VDWm9ITkxYTlBhaU9Xcms2YS10WFl2TGJicTZsOU1BSWc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAzQmh1bl9IdWhVSXJ1RzluYm1wcC1uTExGeUZnZFo2eGVVUmNNaHJOeTVBRVpjWHR3aXBXdlpqN2tkWmhiOWVtR2t0dzJKVVE?oc=5",
       "tags": [
         "사기"
       ],
@@ -2760,16 +2775,16 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금융위 \"역외 스테이블코인으로 상품권 구매, 자금세탁 위험\"",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Sun, 13 Sep 2026 05:29:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBja0hqLUZ2TGdPSVgyRW5NQV9ycWp4aFBUcGJIM2tUY3ZQaGlIblZQN3h4UlhaZXZhSENUaU9HNmtXY1NxVnI1SlpCYTJaLWdGMlZEeQ?oc=5",
+      "source": "네이트",
+      "source_url": "https://news.nate.com",
+      "source_domain": "news.nate.com",
+      "date": "Sun, 13 Sep 2026 05:28:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4wSzA3YU5UMTdTbUVGWVB6R2lFUGY2Mktsb1BXUGlaNmtXLURaTWNqeXM4SThYNGFUVVF6U1IwUVNNT1RqWEo0ZF9oOXdBQnR1X3hN?oc=5",
       "tags": [
         "가상자산",
         "자금세탁"
       ],
-      "description": "금융위 \"역외 스테이블코인으로 상품권 구매, 자금세탁 위험\" v.daum.net",
+      "description": "금융위 \"역외 스테이블코인으로 상품권 구매, 자금세탁 위험\" 네이트",
       "collection_method": "google_news_24h"
     },
     {
@@ -10767,22 +10782,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
-      "source": "금융감독원",
-      "date": "2026-07-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "가상자산",
       "official_source": "금융감독원",
       "official_sources": [
@@ -10794,6 +10793,22 @@
       "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
+      "source": "금융감독원",
+      "date": "2026-07-01T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
         "사기"
       ],
       "collection_method": "verified_fss_board"
