@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<!-- K-AML NEWS TEST PAGE · based on build 5.8.9.5 NO READ STATUS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>K-AML NEWS</title>
+<style>
+:root{
+  --bg:#07101c;--bg2:#091426;--panel:#0d1a2b;--panel2:#102039;
+  --text:#f5f8ff;--muted:#8fa5bf;--muted2:#6f87a3;--line:#203755;
+  --accent:#5f9dff;--accent2:#8ab8ff;--good:#55d98f;--warn:#ffbd66;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);
+  background:
+    radial-gradient(circle at 15% -10%,rgba(61,121,214,.20),transparent 34%),
+    radial-gradient(circle at 85% 0%,rgba(52,95,170,.13),transparent 28%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+  font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;
+}
+button,input{font:inherit}
+.wrap{max-width:1120px;margin:auto;padding:18px 14px 72px}
+.hero{
+  position:relative;overflow:hidden;
+  padding:22px 20px 18px;border:1px solid rgba(99,146,211,.24);
+  border-radius:26px;
+  background:linear-gradient(145deg,rgba(17,34,58,.96),rgba(10,22,39,.96));
+  box-shadow:0 18px 55px rgba(0,0,0,.24);
+}
+.hero:after{
+  content:"";position:absolute;right:-70px;top:-90px;width:220px;height:220px;
+  border-radius:50%;background:radial-gradient(circle,rgba(83,143,238,.18),transparent 68%);
+  pointer-events:none;
+}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:900;letter-spacing:.08em;color:#a9c9ff}
+.livePill{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;background:rgba(9,22,38,.68);border:1px solid rgba(105,146,199,.20);font-size:11px;color:#b6c7dc}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--warn);box-shadow:0 0 0 4px rgba(255,189,102,.08)}
+.dot.live{background:var(--good);box-shadow:0 0 0 4px rgba(85,217,143,.08)}
+.hero h1{font-size:30px;line-height:1.18;margin:16px 0 8px;letter-spacing:-.035em}
+.hero p{color:#9eb0c7;margin:0;line-height:1.65;font-size:13px;max-width:850px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:17px}
+.stat{padding:12px 13px;border-radius:15px;background:rgba(6,17,31,.58);border:1px solid rgba(91,132,187,.15)}
+.stat b{display:block;font-size:17px;letter-spacing:-.03em}
+.stat span{display:block;margin-top:3px;color:#7890ad;font-size:10px}
+.lastCollected{margin-top:9px;color:#7188a5;font-size:11px}
+.tabs{margin-top:17px;display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:5px;background:rgba(5,16,30,.62);border:1px solid rgba(91,132,187,.14);border-radius:16px}
+.tab{border:0;background:transparent;color:#91a8c4;border-radius:12px;padding:10px 12px;font-weight:850;cursor:pointer}
+.tab.active{background:linear-gradient(180deg,#174b82,#123d6c);color:#fff;box-shadow:0 5px 18px rgba(5,20,40,.28)}
+.official-note{margin-top:10px;color:#8498b1;font-size:11px;line-height:1.55;padding:0 3px}
+.toolbar{margin-top:13px}
+.searchWrap{position:relative;width:100%}
+.search{
+  width:100%;height:48px;background:#08172a;border:1px solid #213b5e;color:#fff;
+  border-radius:15px;padding:0 54px 0 15px;outline:none;transition:.18s ease;
+}
+.search:focus{border-color:#4b83c9;box-shadow:0 0 0 3px rgba(78,139,220,.10)}
+.search::placeholder{color:#687e98}
+.searchBtn{position:absolute;right:5px;top:4px;width:40px;height:40px;border:0;background:transparent;color:#dceaff;font-size:17px;cursor:pointer;border-radius:11px}
+.searchBtn:active{background:#132844}
+.section{margin-top:18px}
+.label{font-size:10px;color:#6f88a6;margin:0 0 8px 3px;font-weight:800;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{border:1px solid #203a5d;background:rgba(10,27,48,.84);color:#9fb3ca;padding:8px 11px;border-radius:999px;font-size:11px;cursor:pointer;transition:.15s}
+.chip.active{background:#174b82;border-color:#3f78bb;color:white;box-shadow:0 5px 14px rgba(11,43,78,.25)}
+.summary{margin:22px 3px 10px;color:#8299b5;font-size:12px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{
+  content-visibility:auto;
+  contain-intrinsic-size:220px;
+  position:relative;padding:17px 17px 16px;border-radius:20px;
+  background:linear-gradient(145deg,rgba(15,30,51,.97),rgba(12,25,43,.97));
+  border:1px solid rgba(68,101,146,.35);
+  box-shadow:0 10px 28px rgba(0,0,0,.12);
+  transition:transform .15s ease,border-color .15s ease,background .15s ease;
+}
+.card:hover{transform:translateY(-1px);border-color:rgba(91,143,214,.48)}
+.meta{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#7e93ad;font-size:10px;line-height:1.4}
+.meta>span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.title{display:block;color:#f6f9ff;text-decoration:none;font-weight:850;font-size:17px;line-height:1.48;letter-spacing:-.022em;margin-top:10px}
+.title:hover{color:#d9e9ff}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:13px}
+.tag{font-size:9px;border:1px solid #2a4a73;color:#9ec7fb;border-radius:999px;padding:5px 8px;background:rgba(18,48,83,.30)}
+.newbadge{display:inline-flex;margin-left:6px;vertical-align:1px;font-size:9px;font-weight:900;padding:3px 6px;border-radius:999px;background:linear-gradient(180deg,#2d8cff,#1d6ce0);color:white;box-shadow:0 3px 10px rgba(40,122,235,.24)}
+.related-toggle{margin-top:13px;border:0;background:transparent;color:#8fb9f4;padding:0;cursor:pointer;font-weight:800;font-size:11px}
+.related-list{display:none;border-top:1px solid rgba(61,91,132,.38);margin-top:11px;padding-top:8px}
+.related-list.open{display:block}
+.related-item{padding:7px 0;font-size:11px;color:#8296af;line-height:1.45}
+.related-item a{color:#bed8fb;text-decoration:none}
+.empty{grid-column:1/-1;text-align:center;padding:55px 16px;color:#7f95af;border:1px dashed #284565;border-radius:18px;background:rgba(12,25,43,.45)}
+@media(max-width:760px){
+  .wrap{padding:12px 12px 64px}
+  .hero{padding:18px 16px 15px;border-radius:22px}
+  .hero h1{font-size:25px;margin-top:14px}
+  .hero p{font-size:12px}
+  .stats{gap:6px}
+  .stat{padding:10px 10px}
+  .stat b{font-size:15px}
+  .tab{font-size:12px}
+  .grid{grid-template-columns:1fr;gap:10px}
+  .card{padding:15px 15px 14px;border-radius:18px}
+  .title{font-size:16px}
+}
+
+</style>
+  <meta name="app-version" content="5.6">
+  <!-- K-AML NEWS build 5.8.7 PERFORMANCE -->
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="topline">
+    <div class="brand">K-AML NEWS</div>
+    <div class="livePill"><span id="dot" class="dot"></span><span id="status">데이터 확인 중</span></div>
+  </div>
+  <h1>AML·금융범죄 뉴스 모니터링</h1>
+  <p>자금세탁·금융범죄 사례뿐 아니라 신종수법, AML·STR 제도 변화, 금융회사 운영 사례까지 실제 업무에 참고할 만한 정보만 선별합니다.</p>
+
+  <div class="stats">
+    <div class="stat"><b id="newsStat">-</b><span>선별 뉴스</span></div>
+    <div class="stat"><b id="todayStat">-</b><span>오늘 기사</span></div>
+    <div class="stat"><b id="officialStat">-</b><span>공식자료</span></div>
+  </div>
+  <div id="lastCollected" class="lastCollected"></div>
+
+  <div class="tabs">
+    <button id="tabNews" class="tab active">AML·금융범죄 뉴스</button>
+    <button id="tabOfficial" class="tab">공식자료</button>
+  </div>
+  <div id="officialNote" class="official-note" style="display:none">FIU·금융위·금감원·DAXA의 AML 관련 공식자료를 최근 90일 기준으로 모아 보여줍니다. 같은 보도자료가 여러 기관에 게시된 경우 한 건으로 합쳐 표시합니다.</div>
+
+  <div class="toolbar">
+    <div class="searchWrap">
+      <input id="search" class="search" placeholder="기사 제목·언론사 검색">
+      <button id="searchBtn" class="searchBtn" type="button" aria-label="검색">🔍</button>
+    </div>
+  </div>
+</section>
+<div class="section"><div class="label">빠른 필터</div><div class="chips"><button id="todayOnly" class="chip">오늘 기사만</button></div></div><div id="categorySection" class="section"><div class="label">카테고리</div><div id="cats" class="chips"></div></div>
+<div class="summary" id="summary"></div>
+<div class="grid" id="grid"><div class="empty">뉴스를 불러오는 중…</div></div>
+</div>
+<script>
+let NEWS=[], OFFICIAL=[], MODE='news', CAT='전체', TODAY=false;
+let LAST_CHECKED_AT=null, LAST_DATA_UPDATED=null;
+const CLUSTER_CACHE=new Map();
+const NEWS_HTML_CACHE=new Map();
+const OFFICIAL_HTML_CACHE=new Map();
+const AUTO_CHECK_MS=30*60*1000;
+const CATS=['전체','자금세탁','가상자산','사기','불법사금융','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','제재·테러자금'];
+const $=s=>document.querySelector(s);
+function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function isToday(d){let x=new Date(d),n=new Date();return x.getFullYear()===n.getFullYear()&&x.getMonth()===n.getMonth()&&x.getDate()===n.getDate()}
+function isNew(d){let x=new Date(d),n=new Date();return isFinite(x)&&((n-x)/3600000)<=24}
+function ago(d){let x=new Date(d), n=new Date(), m=Math.floor((n-x)/60000); if(!isFinite(m)) return ''; if(m<60)return m+'분 전'; let h=Math.floor(m/60); if(h<24)return h+'시간 전'; return Math.floor(h/24)+'일 전'}
+function normEventTitle(s){
+  return (s||'').toLowerCase()
+    .replace(/[“”"'‘’·….,!?()[\]{}<>:;\/\\|~`@#$%^&*_+=-]/g,' ')
+    .replace(/\s+/g,' ').trim();
+}
+function eventFeatures(title){
+  const t=normEventTitle(title);
+  const crimes=['리딩방','보이스피싱','투자사기','전세사기','가상자산','코인','마약','도박','환치기','탈세','횡령','배임','자금세탁','돈세탁','범죄수익','대포통장','유령업체','랜섬웨어'];
+  const actions=['세탁','송치','기소','구속','검거','적발','압수','추징','징역','실형','벌금','제재','수사','탈취','해킹'];
+  const nums=[...t.matchAll(/(?:약\s*)?\d+(?:\.\d+)?\s*(?:억|만|천)?\s*(?:원|달러|명|년|개월|대|건)/g)].map(m=>m[0].replace(/\s/g,''));
+  const money=[...t.matchAll(/(?:약\s*)?\d+(?:\.\d+)?\s*(?:조|억|만|천)\s*(?:원|달러)?/g)].map(m=>m[0].replace(/\s/g,''));
+  const ages=[...t.matchAll(/\d{2}대|20대|30대|40대|50대|60대/g)].map(m=>m[0]);
+  const roles=['형제','부부','모녀','모자','부자','일당','조직','총책','20대 2명','2명','3명'];
+  return {t,crimes:crimes.filter(x=>t.includes(x)),actions:actions.filter(x=>t.includes(x)),nums:[...new Set(nums)],money:[...new Set(money)],ages:[...new Set(ages)],roles:roles.filter(x=>t.includes(x))};
+}
+function overlap(a,b){ return a.filter(x=>b.includes(x)).length; }
+function tokenJaccard(a,b){
+  const stop=new Set(['관련','대한','따른','통해','혐의','사건','경찰','검찰','법원','징역','실형','자금','피해','조직','정부','금융위']);
+  const A=new Set(normEventTitle(a).split(' ').filter(x=>x.length>=2&&!stop.has(x)));
+  const B=new Set(normEventTitle(b).split(' ').filter(x=>x.length>=2&&!stop.has(x)));
+  const inter=[...A].filter(x=>B.has(x)).length;
+  const union=new Set([...A,...B]).size||1;
+  return inter/union;
+}
+function normalizeEntityText(s){
+  return normEventTitle(s)
+    .replace(/lg\s*u|lgu|lg유플러스|lg유플/g,'lg유플러스')
+    .replace(/금융위원회|금융위/g,'금융위')
+    .replace(/금융감독원|금감원/g,'금감원')
+    .replace(/과학기술정보통신부|과기정통부/g,'과기정통부')
+    .replace(/방송통신위원회|방통위/g,'방통위');
+}
+function announcementFeatures(title){
+  const t=normalizeEntityText(title).replace(/정보\s+공유/g,'정보공유').replace(/지급\s+정지/g,'지급정지').replace(/악성\s+앱/g,'악성앱').replace(/특별\s+대응/g,'특별대응');
+  const entities=['lg유플러스','금융위','금감원','과기정통부','방통위','경찰청','검찰','관세청','국세청','FIU','금융정보분석원','DAXA','은행연합회'];
+  const topics=['보이스피싱','자금세탁','가상자산','코인','투자사기','불법사금융','환치기','외환','탈세','횡령','배임','마약','도박','범죄수익'];
+  const ops=['정보공유','공유','특별대응','24시간','모니터링','악성앱','서버','추적','차단','지급정지','신고 전','신고전','플랫폼','asap','시스템','시행','개정','확대','긴급차단','ai','의심정보','대응'];
+  return {t,entities:entities.filter(x=>t.includes(x.toLowerCase())),topics:topics.filter(x=>t.includes(x)),ops:ops.filter(x=>t.includes(x))};
+}
+function daysApart(a,b){
+  const A=new Date(a.date||0), B=new Date(b.date||0);
+  if(!isFinite(A)||!isFinite(B)) return 999;
+  return Math.abs(A-B)/86400000;
+}
+function moneyValue(s){
+  const m=String(s).match(/([\d.]+)(조|억|만|천)/); if(!m)return null;
+  const mult={조:1e12,억:1e8,만:1e4,천:1e3}[m[2]]; return Number(m[1])*mult;
+}
+function moneyCompatible(A,B){
+  if(!A.length||!B.length) return true;
+  for(const a of A)for(const b of B){const x=moneyValue(a),y=moneyValue(b);if(x&&y&&Math.abs(x-y)/Math.max(x,y)<=0.02)return true;}
+  return false;
+}
+function sameAnnouncement(a,b){
+  if(daysApart(a,b)>3) return false;
+  const A=announcementFeatures(a.title||a), B=announcementFeatures(b.title||b);
+  const entity=overlap(A.entities,B.entities), topic=overlap(A.topics,B.topics), ops=overlap(A.ops,B.ops);
+  const jac=tokenJaccard(A.t,B.t);
+  if(topic<1) return false;
+  // 양쪽에 기관명이 잡혔는데 서로 다르면 같은 발표로 보지 않는다.
+  if(A.entities.length && B.entities.length && entity<1) return false;
+  if(entity>=1 && ops>=2 && jac>=0.06) return true;      // 같은 주체 + 같은 주제 + 복수 조치
+  if(entity>=1 && ops>=1 && jac>=0.18) return true;
+  // 한쪽 제목이 기관명을 생략한 경우: 같은 날, 조치가 매우 구체적으로 겹치고 제목 유사도도 있어야 허용.
+  if((!A.entities.length || !B.entities.length) && daysApart(a,b)<=1 && ops>=3 && jac>=0.10) return true;
+  if((!A.entities.length || !B.entities.length) && daysApart(a,b)<=1 && ops>=2 && jac>=0.08) return true;
+  return false;
+}
+function sameEvent(a,b){
+  const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
+  const crime=overlap(A.crimes,B.crimes), action=overlap(A.actions,B.actions), nums=overlap(A.nums,B.nums), money=overlap(A.money,B.money), ages=overlap(A.ages,B.ages), roles=overlap(A.roles,B.roles), jac=tokenJaccard(A.t,B.t);
+
+  // 5.8.6: 기업·기관의 동일 발표는 별도 경로로 판정한다.
+  // 663억↔664억 같은 반올림 차이는 허용하지만, 30억↔415억처럼 큰 금액 충돌은 허용하지 않는다.
+  if(sameAnnouncement(a,b) && moneyCompatible(A.money,B.money)) return true;
+
+  // 일반 범죄사건은 기존의 보수적인 숫자 충돌 안전장치를 유지한다.
+  if(A.money.length && B.money.length && money===0 && !moneyCompatible(A.money,B.money)) return false;
+  if(A.nums.length && B.nums.length && nums===0 && money===0) return false;
+  if(jac>=0.42) return true;
+  if(crime>=1 && action>=1 && (nums>=1 || ages>=1 || roles>=1) && jac>=0.13) return true;
+  if(crime>=1 && (nums+ages+roles)>=2 && jac>=0.09) return true;
+  if(crime>=2 && (nums+ages+roles)>=1 && jac>=0.09) return true;
+  return false;
+}
+function sourceScore(s=''){
+  const x=String(s).toLowerCase();
+  const tier1=['연합뉴스','yna','kbs','mbc','sbs','jtbc','조선일보','중앙일보','동아일보','한겨레','경향신문','한국일보','매일경제','한국경제','이데일리','뉴스1','뉴시스'];
+  const tier2=['아시아경제','헤럴드','파이낸셜뉴스','서울경제','머니투데이','전자신문','디지털타임스','조선비즈'];
+  if(tier1.some(v=>x.includes(v.toLowerCase()))) return 3;
+  if(tier2.some(v=>x.includes(v.toLowerCase()))) return 2;
+  return 1;
+}
+function representativeScore(x){
+  const f=eventFeatures(x.title||''), a=announcementFeatures(x.title||'');
+  const detail=f.crimes.length*3+f.actions.length*2+f.money.length*3+f.nums.length*2+f.ages.length+f.roles.length+a.entities.length*2+a.topics.length*2+a.ops.length;
+  const len=Math.min(normEventTitle(x.title||'').length,90)/30;
+  return detail*10 + sourceScore(x.source)*4 + len;
+}
+function chooseRepresentative(items){
+  return [...items].sort((a,b)=>representativeScore(b)-representativeScore(a) || sourceScore(b.source)-sourceScore(a.source) || new Date(b.date||0)-new Date(a.date||0))[0];
+}
+function hardCaseConflict(a,b){
+  const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
+  // 범죄사건의 핵심 금액이 크게 다르면, 중간 기사를 통한 연쇄 유사도가 있어도 같은 묶음에 넣지 않는다.
+  if(A.money.length && B.money.length && !moneyCompatible(A.money,B.money)) return true;
+  return false;
+}
+function cluster(items){
+  let cs=[];
+  for(const x of items){
+    let c=cs.find(c=>{
+      const members=[c.main,...c.rel];
+      // 발표·제도형은 제목 표현 차이가 커서 기존처럼 구성원 중 하나와 강하게 맞으면 연결을 허용한다.
+      if(members.some(y=>sameAnnouncement(y,x) && moneyCompatible(eventFeatures(y.title||y).money,eventFeatures(x.title||x).money))) return true;
+      // 일반 범죄사건은 그룹 내 어느 기사와도 핵심 금액이 충돌하면 연쇄 결합을 금지한다.
+      if(members.some(y=>hardCaseConflict(y,x))) return false;
+      // 사건형은 대표기사와 직접 같은 사건으로 판정될 때만 합친다.
+      return sameEvent(c.main,x);
+    });
+    if(c){
+      c.rel.push(x);
+      const all=[c.main,...c.rel], best=chooseRepresentative(all);
+      c.main=best; c.rel=all.filter(y=>y!==best);
+    }else cs.push({main:x,rel:[]});
+  }
+  return cs;
+}
+function drawCats(){
+  const section=$('#categorySection');
+  if(MODE==='official'){
+    CAT='전체';
+    if(section) section.style.display='none';
+    $('#cats').innerHTML='';
+    return;
+  }
+  if(section) section.style.display='';
+  $('#cats').innerHTML=CATS.map(c=>`<button class="chip ${c===CAT?'active':''}" data-c="${c}">${c}</button>`).join('');
+  document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{CAT=b.dataset.c;drawCats();render()})
+}
+function safeOfficialHref(x){
+ let u=(x.link||'').trim(), low=u.toLowerCase();
+ let bad=/\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx|zip)([?#].*)?$/.test(low) ||
+         /(download|filedownload|downloadfile|atchfile|attachment|bbsfile)/.test(low);
+ if(!u || bad) return '';
+ if(/kofiu\.go\.kr\/kor\/notification\/report_view\.do\?/.test(low) && /ntcnyardordrno=\d+/.test(low)) return u;
+ if(/fsc\.go\.kr\/no010101\/\d+/.test(low)) return u;
+ if(/fss\.or\.kr/.test(low) && /(view\.do|\/view\/)/.test(low)) return u;
+ if(/dart\.fss\.or\.kr\/dsaa003\/selectbodomain\.ax\?seqno=\d+/.test(low)) return u;
+ if(/kdaxa\.org\/support\/press\.php\?/.test(low) && /mode=view/.test(low) && /idx=\d+/.test(low)) return u;
+ return '';
+}
+
+function clusterLatestDate(c){
+ const ds=[c&&c.main&&c.main.date,...((c&&c.rel)||[]).map(x=>x&&x.date)].filter(Boolean);
+ const ts=ds.map(d=>new Date(d).getTime()).filter(Number.isFinite);
+ return ts.length?Math.max(...ts):0;
+}
+function render(){
+ let q=$('#search').value.trim().toLowerCase();
+ let base=MODE==='official'?OFFICIAL:NEWS;
+ let list=base.filter(x=>!TODAY||isToday(x.date));
+ if(MODE!=='official'){
+   list=list.filter(x=>CAT==='전체'||(x.tags||[]).includes(CAT));
+ }
+ list=list.filter(x=>!q||(x.title+' '+(x.source||'')+' '+((x.official_sources||[]).join(' '))).toLowerCase().includes(q));
+
+ const stateKey=[LAST_DATA_UPDATED||'none',MODE,CAT,TODAY?'1':'0',q].join('|');
+ if(MODE==='official'){
+   const cached=OFFICIAL_HTML_CACHE.get(stateKey);
+   if(cached){
+     $('#summary').textContent=cached.summary;
+     $('#grid').innerHTML=cached.html;
+     return;
+   }
+   const summary=`${list.length}건 공식자료`;
+   $('#summary').textContent=summary;
+   if(!list.length){
+     const html='<div class="empty">조건에 맞는 공식자료가 없습니다.</div>';
+     $('#grid').innerHTML=html;
+     OFFICIAL_HTML_CACHE.set(stateKey,{summary,html});
+     return;
+   }
+   const html=list.map(x=>{
+     let src=x.official_source||x.source||'공식자료';
+     let method=(x.collection_method==='official_multi_source')?'공동 공식자료':
+       ((['verified_fsc_board','verified_fss_board','verified_daxa_board','verified_kofiu_board'].includes(x.collection_method))?'공식 게시판·본문확인':
+       ((['fss_exact_fallback','kofiu_exact_fallback'].includes(x.collection_method))?'공식링크 확인':'공식자료'));
+     let href=safeOfficialHref(x);
+     let titleHtml=href?`<a class="title" target="_blank" rel="noopener" href="${esc(href)}">${esc(x.title)}</a>`:`<div class="title">${esc(x.title)}</div><div class="official-note">원문 상세주소를 확인하지 못해 링크를 제공하지 않습니다.</div>`;
+     return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div>${titleHtml}</article>`
+   }).join('');
+   $('#grid').innerHTML=html;
+   OFFICIAL_HTML_CACHE.set(stateKey,{summary,html});
+   return;
+ }
+
+ let cs=CLUSTER_CACHE.get(stateKey);
+ if(!cs){
+   cs=cluster(list);
+   cs.sort((a,b)=>clusterLatestDate(b)-clusterLatestDate(a));
+   CLUSTER_CACHE.set(stateKey,cs);
+ }
+ const summary=`${cs.length}개 사건 · ${list.length}건 기사`;
+ $('#summary').textContent=summary;
+ const cached=NEWS_HTML_CACHE.get(stateKey);
+ if(cached){
+   $('#grid').innerHTML=cached.html;
+   return;
+ }
+ if(!cs.length){
+   const html='<div class="empty">조건에 맞는 뉴스가 없습니다.</div>';
+   $('#grid').innerHTML=html;
+   NEWS_HTML_CACHE.set(stateKey,{summary,html});
+   return;
+ }
+ const html=cs.map((c,i)=>{let x=c.main,id='r'+i;let tags=(x.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+ let latest=clusterLatestDate(c),mainDate=new Date(x.date||0),latestNote=(isFinite(latest)&&isFinite(mainDate)&&latest>mainDate)?`<span class="latest-related"> · 최근 보도 ${ago(latest)}</span>`:'';
+ let rel=c.rel.length?`<button class="related-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">유사 보도 +${c.rel.length}건${latestNote} ▾</button><div id="${id}" class="related-list">${[...c.rel].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0)).map(r=>`<div class="related-item"><a  target="_blank" rel="noopener" href="${esc(r.link)}">${esc(r.title)}</a> · ${esc(r.source)} · ${ago(r.date)}</div>`).join('')}</div>`:'';
+ return `<article class="card"><div class="meta"><span>${esc(x.source||'뉴스')} · ${esc(x.query||'')}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div><a class="title" target="_blank" rel="noopener" href="${esc(x.link)}">${esc(x.title)}</a><div class="tags">${tags}</div>${rel}</article>`}).join('');
+ $('#grid').innerHTML=html;
+ NEWS_HTML_CACHE.set(stateKey,{summary,html});
+}
+function updateLiveStatus(){
+  if(!LAST_CHECKED_AT) return;
+  const mins=Math.floor((Date.now()-LAST_CHECKED_AT)/60000);
+  const label=mins<1?'방금 확인':mins<60?`${mins}분 전 확인`:`${Math.floor(mins/60)}시간 전 확인`;
+  if(NEWS.length||OFFICIAL.length){
+    $('#status').textContent=`LIVE · ${label}`;
+  }
+}
+function dataSignature(d){
+  return String(d.updated_at||'')+'|'+String((d.items||[]).length)+'|'+String((d.official_items||[]).length);
+}
+
+async function load({initial=false}={}){
+ try{
+  const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});
+  if(!r.ok) throw new Error('HTTP '+r.status);
+  const d=await r.json();
+  const sig=dataSignature(d);
+  const changed=initial || sig!==LAST_DATA_UPDATED;
+
+  LAST_CHECKED_AT=Date.now();
+  $('#dot').className='dot '+(((d.items||[]).length||(d.official_items||[]).length)?'live':'');
+
+  if(changed){
+    NEWS=d.items||[];
+    OFFICIAL=d.official_items||[];
+    LAST_DATA_UPDATED=sig;
+    CLUSTER_CACHE.clear(); NEWS_HTML_CACHE.clear(); OFFICIAL_HTML_CACHE.clear();
+
+    $('#newsStat').textContent=NEWS.length.toLocaleString('ko-KR')+'건';
+    $('#todayStat').textContent=NEWS.filter(x=>isToday(x.date)).length.toLocaleString('ko-KR')+'건';
+    $('#officialStat').textContent=OFFICIAL.length.toLocaleString('ko-KR')+'건';
+    $('#lastCollected').textContent=d.updated_at
+      ?`마지막 수집 ${new Date(d.updated_at).toLocaleString('ko-KR')} · 최근 ${d.retention_days||90}일 보관`
+      :'마지막 수집 기록 없음';
+
+    render();
+  }
+  updateLiveStatus();
+ }catch(e){
+  LAST_CHECKED_AT=Date.now();
+  $('#dot').className='dot';
+  $('#status').textContent='데이터 확인 실패';
+  if(initial){
+    NEWS=[];OFFICIAL=[];
+    $('#newsStat').textContent='-';
+    $('#todayStat').textContent='-';
+    $('#officialStat').textContent='-';
+    $('#lastCollected').textContent='news.json을 읽지 못했습니다 · '+e.message;
+    render();
+  }
+ }
+}
+function setMode(mode){
+ if(MODE===mode) return;
+ MODE=mode; CAT='전체';
+ $('#tabNews').classList.toggle('active',mode==='news');
+ $('#tabOfficial').classList.toggle('active',mode==='official');
+ $('#officialNote').style.display=mode==='official'?'block':'none';
+ $('#search').placeholder=mode==='official'?'공식자료 제목·기관 검색':'기사 제목·언론사 검색';
+ drawCats();
+ // 탭 선택 UI를 먼저 반영한 뒤 목록을 그려 모바일에서 클릭 반응이 즉시 보이게 한다.
+ requestAnimationFrame(render);
+}
+drawCats();
+$('#searchBtn').onclick=render;
+$('#search').onkeydown=(e)=>{if(e.key==='Enter'){e.preventDefault();e.target.blur();render();}};
+
+$('#todayOnly').onclick=()=>{TODAY=!TODAY;$('#todayOnly').classList.toggle('active',TODAY);render()};
+$('#tabNews').onclick=()=>setMode('news');
+$('#tabOfficial').onclick=()=>setMode('official');
+load({initial:true});
+setInterval(()=>load(),AUTO_CHECK_MS);
+setInterval(updateLiveStatus,60*1000);
+// 모바일 브라우저가 타이머를 멈췄다가 다시 활성화될 때 즉시 최신 데이터를 확인한다.
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible') load();});
+window.addEventListener('pageshow',()=>{if(LAST_CHECKED_AT && Date.now()-LAST_CHECKED_AT>60*1000) load();});
+</script>
+</body></html>
