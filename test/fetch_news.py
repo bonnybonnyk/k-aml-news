@@ -702,6 +702,9 @@ def parse_fsc_board_page(raw_html):
     for i, m in enumerate(matches):
         href = html_unescape(m.group(1))
         title = clean_title(strip_html(m.group(2)))
+        # 금융위 목록의 접근성용 숨김 문구가 제목 안에 섞이는 경우 제거.
+        # 예: "... 발표. 금일 등록된 게시글" -> 실제 상세페이지 제목만 남김.
+        title = re.sub(r'[.\s]*(?:금일\s*등록된\s*게시글|새\s*글)\s*$', '', title, flags=re.I).strip()
         if not title or len(title) < 4:
             continue
         detail = urllib.parse.urljoin("https://www.fsc.go.kr", href).replace('&amp;', '&')
