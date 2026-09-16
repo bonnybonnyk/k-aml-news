@@ -156,6 +156,21 @@ function esc(s=''){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt
 function isToday(d){let x=new Date(d),n=new Date();return x.getFullYear()===n.getFullYear()&&x.getMonth()===n.getMonth()&&x.getDate()===n.getDate()}
 function isNew(d){let x=new Date(d),n=new Date();return isFinite(x)&&((n-x)/3600000)<=24}
 function ago(d){let x=new Date(d), n=new Date(), m=Math.floor((n-x)/60000); if(!isFinite(m)) return ''; if(m<60)return m+'분 전'; let h=Math.floor(m/60); if(h<24)return h+'시간 전'; return Math.floor(h/24)+'일 전'}
+function officialAgo(d){
+  // 공식자료가 날짜만 제공해 00:00:00으로 저장된 경우에는 가짜 'N시간 전'을 만들지 않는다.
+  const raw=String(d||'').trim();
+  const x=new Date(d), n=new Date();
+  if(!isFinite(x)) return '';
+  const dateOnly=/^\d{4}-\d{2}-\d{2}(?:[T ]00:00(?::00)?(?:\.0+)?(?:Z|[+-]\d{2}:?\d{2})?)?$/.test(raw);
+  if(!dateOnly) return ago(d);
+  const startN=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+  const startX=new Date(x.getFullYear(),x.getMonth(),x.getDate());
+  const days=Math.round((startN-startX)/86400000);
+  if(days===0) return '오늘';
+  if(days===1) return '어제';
+  if(days>1) return days+'일 전';
+  return ago(d);
+}
 function normEventTitle(s){
   return (s||'').toLowerCase()
     .replace(/[“”"'‘’·….,!?()[\]{}<>:;\/\\|~`@#$%^&*_+=-]/g,' ')
@@ -346,7 +361,7 @@ function render(){
        ((['fss_exact_fallback','kofiu_exact_fallback'].includes(x.collection_method))?'공식링크 확인':'공식자료'));
      let href=safeOfficialHref(x);
      let titleHtml=href?`<a class="title" target="_blank" rel="noopener" href="${esc(href)}">${esc(x.title)}</a>`:`<div class="title">${esc(x.title)}</div><div class="official-note">원문 상세주소를 확인하지 못해 링크를 제공하지 않습니다.</div>`;
-     return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${ago(x.date)}</span></div>${titleHtml}</article>`
+     return `<article class="card"><div class="meta"><span>🏛️ ${esc(src)} · ${method}${isNew(x.date)?'<span class="newbadge">NEW</span>':''}</span><span>${officialAgo(x.date)}</span></div>${titleHtml}</article>`
    }).join('');
    $('#grid').innerHTML=html;
    OFFICIAL_HTML_CACHE.set(stateKey,{summary,html});
