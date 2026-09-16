@@ -1,0 +1,37 @@
+name: K-AML NEWS Test Collection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect-test-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run test collector
+        working-directory: test
+        run: python fetch_news.py
+
+      - name: Commit test data only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add test/news.json
+          if git diff --cached --quiet; then
+            echo "No test data changes"
+          else
+            git commit -m "Update test news data"
+            git push
+          fi
