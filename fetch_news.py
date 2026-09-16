@@ -115,6 +115,7 @@ PRACTICAL_SIGNALS = [
 ]
 
 FSC_BOARD_URL = "https://www.fsc.go.kr/no010101"
+FSC_RSS_URL = "https://www.fsc.go.kr/about/fsc_bbs_rss/?fid=0111"
 FSS_QUERY = '("자금세탁" OR AML OR CFT OR FIU OR "보이스피싱" OR "대포통장" OR "가상자산" OR "불법금융" OR "자금세탁방지") site:fss.or.kr'
 
 def fetch_url(url, timeout=10):
@@ -701,6 +702,9 @@ def parse_fsc_board_page(raw_html):
     for i, m in enumerate(matches):
         href = html_unescape(m.group(1))
         title = clean_title(strip_html(m.group(2)))
+        # 금융위 목록의 접근성용 숨김 문구가 제목 안에 섞이는 경우 제거.
+        # 예: "... 발표. 금일 등록된 게시글" -> 실제 상세페이지 제목만 남김.
+        title = re.sub(r'[.\s]*(?:금일\s*등록된\s*게시글|새\s*글)\s*$', '', title, flags=re.I).strip()
         if not title or len(title) < 4:
             continue
         detail = urllib.parse.urljoin("https://www.fsc.go.kr", href).replace('&amp;', '&')
@@ -717,6 +721,48 @@ def parse_fsc_board_page(raw_html):
         rows.append({'region':'공식자료','query':'금융위/FIU','official_source':'금융위원회','official_sources':['금융위원회'],
                      'title':title,'source':'금융위원회','date':date,'link':detail,
                      'tags':classify(title),'collection_method':'direct_fsc_board'})
+    return rows
+
+def collect_fsc_rss_candidates():
+    """금융위원회 공식 보도자료 RSS를 목록 파싱의 보조 경로로 사용한다.
+    게시판 HTML 구조가 바뀌어 최신 페이지 링크 추출이 실패해도 최신 보도자료를 회수한다.
+    최종 채택 여부는 기존 verify_fsc_detail()에서 동일하게 검증한다.
+    """
+    data = fetch_url(FSC_RSS_URL, timeout=10)
+    root = ET.fromstring(data)
+    rows = []
+    seen = set()
+    for it in root.findall('.//item')[:100]:
+        title = clean_title(strip_html(it.findtext('title') or ''))
+        link = html_unescape((it.findtext('link') or it.findtext('guid') or '').strip()).replace('&amp;', '&')
+        if not title or not link:
+            continue
+        # RSS가 상대경로를 주는 경우도 안전하게 금융위 절대주소로 변환한다.
+        link = urllib.parse.urljoin('https://www.fsc.go.kr', link)
+        # 실제 보도자료 상세페이지(/no010101/<번호>)만 후보로 사용한다.
+        m = re.search(r'https?://(?:www\.)?fsc\.go\.kr/no010101/\d+(?:\?[^#\s]*)?', link, re.I)
+        if not m:
+            continue
+        link = m.group(0)
+        if link in seen:
+            continue
+        seen.add(link)
+        dt = parse_dt(it.findtext('pubDate') or '')
+        if not dt:
+            # 일부 RSS에서 pubDate가 없을 경우 설명문에서 날짜를 보조 추출한다.
+            blob = strip_html((it.findtext('description') or '') + ' ' + ET.tostring(it, encoding='unicode'))
+            dm = re.search(r'(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})', blob)
+            if dm:
+                date = f"{int(dm.group(1)):04d}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}T00:00:00+09:00"
+            else:
+                continue
+        else:
+            date = dt.isoformat()
+        rows.append({
+            'region':'공식자료','query':'금융위/FIU','official_source':'금융위원회','official_sources':['금융위원회'],
+            'title':title,'source':'금융위원회','date':date,'link':link,
+            'tags':classify(title),'collection_method':'fsc_official_rss'
+        })
     return rows
 
 def verify_fsc_detail(item):
@@ -786,6 +832,16 @@ def collect_fsc_official(backfill, cutoff, now_utc):
             status.append({'feed':f'금융위/FIU:목록:p{page}','ok':False,'count':0,'error':str(e)[:160]})
             break
         time.sleep(0.05)
+    # 5.8.9.1: 금융위가 공식 제공하는 보도자료 RSS를 항상 보조 경로로 확인한다.
+    # HTML 목록 파서가 최신 1페이지 구조 변경을 놓쳐도 RSS 후보를 합쳐 복구하며,
+    # 아래 상세페이지 검증은 기존과 동일하므로 일반 금융정책 자료가 과수집되지 않는다.
+    try:
+        rss_rows = collect_fsc_rss_candidates()
+        candidates.extend(rss_rows)
+        status.append({'feed':'금융위/FIU:RSS','ok':True,'count':len(rss_rows),'method':'official_rss_fallback'})
+    except Exception as e:
+        status.append({'feed':'금융위/FIU:RSS','ok':False,'count':0,'error':str(e)[:160]})
+
     candidates=[x for x in dedupe(candidates,700) if parse_dt(x.get('date')) and parse_dt(x.get('date'))>=cutoff]
     verified=[]
     with ThreadPoolExecutor(max_workers=8) as ex:
