@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-16T04:10:26.375780+00:00",
+  "updated_at": "2026-09-16T04:40:43.328639+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 12
+      "count": 11
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 9
+      "count": 8
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "차명계좌",
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 37,
+      "count": 40,
       "window_days": 3
     },
     {
@@ -193,13 +193,13 @@
     {
       "feed": "실무:계정도용·현금화",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 28,
+      "count": 29,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -291,17 +291,23 @@
     {
       "feed": "DAXA:offset0",
       "ok": true,
-      "count": 14,
+      "count": 12,
       "method": "official_board"
     },
     {
       "feed": "DAXA:offset10",
       "ok": true,
-      "count": 6,
+      "count": 8,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -313,19 +319,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -355,13 +349,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -379,9 +379,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 693,
+  "count": 695,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "한국TI인권시민연대, 불법사금융 근절 위한 ‘15대 정책 대안’ 발표",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Wed, 16 Sep 2026 04:38:10 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOckFOaTJXYVl0cmlfU09EYTlqVzlxcERmdXNMTWJ0ZWo0cG5Gai1rLTdvX2g3UThoU0tyMGtzZUFhMnhVMkdNVEp5UnA3Y3NxT29WX0NZc0VSVGx0ampnRTVuQzZlOFhjUklHcUlmajdxNklOem9GUXVVck5rLVJfTg?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "한국TI인권시민연대, 불법사금융 근절 위한 ‘15대 정책 대안’ 발표 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -415,6 +430,21 @@
     },
     {
       "region": "국내",
+      "query": "자금세탁",
+      "title": "싱가포르 최대 자금세탁 사건과 관련해 경매에 부쳐질 압수품. 사진=핫로츠",
+      "source": "etnews.com",
+      "source_url": "https://www.etnews.com",
+      "source_domain": "www.etnews.com",
+      "date": "Wed, 16 Sep 2026 01:14:35 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi-gZBVV95cUxNeWdsbzRLWFlLeXRheF9XS000cExXZWwwbkdUQlE1OC1oUk5VNGprcnQ3RlFpZW9Sbm1JQ25jR2MyTFM3N3dzbl93d0hDM3IycmpLVDRQeE40a2ZsYk5WNVM3NXNZVFZMNkpodTg2QVpBMDhvVUl4TjZjMEx1TDFadEgtVFdiNmJ6bEFCZDJpck9HOE9qcDlscmh5Z3FZRXFxYXROa2hkLXpWaVNNcEcwdTE0QWVkMVhmblVWTllUN1pBUTItaW9uY2sxU0E5MzFEY3Ruck1sUC1Hb0I3OVRNZENnYkpRS2tFRlBWWlhBa3RxMDVONnV6UFFiamZMTzA2d1Bocmo3WUtSelczV2pnS3dnU0FncE92N1ROS1NHOXlpVEo3dy1KdHN5YUNrWDJ6ZTRETUpzck1mclF1SnREWEVUWE1DNHh4TGhneFFBQzR2SDhZdU1FUmVGNFEyNFc2eS15NEpLYV96LU9YWWg2QkRoWjFhLXpMV1B5U1BKM0tzUFFXS1J5cjluYUJtS1hiR004c1VwbTBDV0JsUnpsSXlHWWVxTU01UnlaMTBENndSbWVnX1o4YmhKWERyQktKYUExclBUeElFRE1IUk5RaHROa25IUlhVM3hPdG9xVE9Zd3JkeEJ1UXJLb2tFQll6NjBoTFZRc2tNUV9nd2xtdU9MVlpsdHpfb3JwejRlV1I5SFdnSm1kTU5iUnkwYzM2NENoRk1LUFhOcmV4OF9OLXZPaVNkUXczRi1ncFhZekhvYm5BVmwtVUFQOE1TNHhYMkIxRjRxTlV4bGpaekpUaXlaRXhUdjQweXEtb095SzBVQnhRbldkcklUVXJhMlBBU1liajZyRFc0OFRqeW5naTVqS2ZzZWY1TWl1czVQdzBfSHJHQ1VIWWg1bkpLdTR1YUhwcHdzNGlMVzB3NE5VdGF6VWktUmxvaURKQmtNQ0lDLWdNT2ZwNGpnSlYtM3F5UVlyRkNwQmZFdnZxVjFUU05KT1ZBWHlBN3c0cVo3RVVHYXpPNGFzNkhVT2J5bHItMjBrZzZGYzRSaEltdlRFRl84Mkx0TWk3aXc1VENxS0FRcVRKSFFKRk5Jbk1DRzJQeThJUzFaYUpwcEtfdmJXM2tVUmExUmEzeTNEbjBfRTRkV25FYXlsbjdiblk3Q0ViU09aYU1lZUVjdw?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "싱가포르 최대 자금세탁 사건과 관련해 경매에 부쳐질 압수품. 사진=핫로츠 etnews.com",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "범죄수익",
       "title": "김수현 저격해서 1억7천만원 벌었다...김세의 '범죄수익' 환수 추진",
       "source": "스포츠조선",
@@ -432,7 +462,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱범과 통화하던 환자…간호사 신고로 노후자금 지켰다 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Wed, 16 Sep 2026 00:00:00 GMT",
@@ -440,7 +470,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱범과 통화하던 환자…간호사 신고로 노후자금 지켰다 - 머니투데이 mt.co.kr",
+      "description": "보이스피싱범과 통화하던 환자…간호사 신고로 노후자금 지켰다 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -451,7 +481,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Tue, 15 Sep 2026 21:07:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JMGpacEF6M04tZEtRdnNWOXU5S3hhSDFSR3Q3TWh4MERnS0ZYamhSQUhEb0ZGdkc2NU5wMC1pZnBfZXB4TXFDdTloZ2s5bkE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1LX3JOTWtLX0VDZWZvZXdHN2Uwd1dxTUpTMXlrOGg3cnkwdU9fOHMwUFNxNFoyZzMyOFBUQXdha2tVd1UxQUE?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -648,7 +678,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "김수현 명예훼손 혐의 김세의, 범죄수익 1억6940만원 ‘동결’",
-      "source": "jnilbo.com",
+      "source": "진일보",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Tue, 15 Sep 2026 08:39:07 GMT",
@@ -656,7 +686,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "김수현 명예훼손 혐의 김세의, 범죄수익 1억6940만원 ‘동결’ jnilbo.com",
+      "description": "김수현 명예훼손 혐의 김세의, 범죄수익 1억6940만원 ‘동결’ 진일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -768,24 +798,9 @@
     },
     {
       "region": "국내",
-      "query": "횡령·배임",
-      "title": "경산시, 공금관리 전수점검…횡령·중대 회계부정 없어",
-      "source": "kbsm.net",
-      "source_url": "https://www.kbsm.net",
-      "source_domain": "www.kbsm.net",
-      "date": "Tue, 15 Sep 2026 07:23:23 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1fX0JxeFlSOUt4VTRRVUExV05fUmd0TFJmcWs5QUVONURxTGVwempHY1lIOHB3UmFsSnhmQzk2ZDhUU2JsVUo3RnNCanFOTFZqNUM4VXFFbVg?oc=5",
-      "tags": [
-        "횡령·배임"
-      ],
-      "description": "경산시, 공금관리 전수점검…횡령·중대 회계부정 없어 kbsm.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "범죄수익",
       "title": "검찰, 가세연 김세의 땅 묶었다…범죄수익 1.7억 추징보전",
-      "source": "한국경제",
+      "source": "hankyung.com",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Tue, 15 Sep 2026 07:22:57 GMT",
@@ -793,7 +808,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "검찰, 가세연 김세의 땅 묶었다…범죄수익 1.7억 추징보전 한국경제",
+      "description": "검찰, 가세연 김세의 땅 묶었다…범죄수익 1.7억 추징보전 hankyung.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -830,7 +845,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 카드결제도 잡는다…이상거래 탐지 강화",
-      "source": "DFT 대한금융신문",
+      "source": "kbanker.co.kr",
       "source_url": "https://www.kbanker.co.kr",
       "source_domain": "www.kbanker.co.kr",
       "date": "Tue, 15 Sep 2026 07:12:53 GMT",
@@ -839,7 +854,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "보이스피싱 카드결제도 잡는다…이상거래 탐지 강화 DFT 대한금융신문",
+      "description": "보이스피싱 카드결제도 잡는다…이상거래 탐지 강화 kbanker.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -906,7 +921,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "검찰 ‘김수현 명예훼손’ 김세의 토지 추징보전…범죄수익 1억6940만원",
-      "source": "khan.co.kr",
+      "source": "경향신문",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Tue, 15 Sep 2026 06:41:00 GMT",
@@ -914,14 +929,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "검찰 ‘김수현 명예훼손’ 김세의 토지 추징보전…범죄수익 1억6940만원 khan.co.kr",
+      "description": "검찰 ‘김수현 명예훼손’ 김세의 토지 추징보전…범죄수익 1억6940만원 경향신문",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "에르메스백 발에 치인다…'3.2조' 싱가포르 최대 자금세탁 몰수품 경매로",
-      "source": "전자신문",
+      "source": "etnews.com",
       "source_url": "https://www.etnews.com",
       "source_domain": "www.etnews.com",
       "date": "Tue, 15 Sep 2026 06:40:00 GMT",
@@ -929,7 +944,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "에르메스백 발에 치인다…'3.2조' 싱가포르 최대 자금세탁 몰수품 경매로 전자신문",
+      "description": "에르메스백 발에 치인다…'3.2조' 싱가포르 최대 자금세탁 몰수품 경매로 etnews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -996,7 +1011,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "檢, 김세의 소유 토지 추징보전…\"범죄수익 1억6940만원 박탈\"",
-      "source": "한국경제",
+      "source": "hankyung.com",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Tue, 15 Sep 2026 06:21:48 GMT",
@@ -1004,7 +1019,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "檢, 김세의 소유 토지 추징보전…\"범죄수익 1억6940만원 박탈\" 한국경제",
+      "description": "檢, 김세의 소유 토지 추징보전…\"범죄수익 1억6940만원 박탈\" hankyung.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1066,6 +1081,21 @@
         "FIU·규제"
       ],
       "description": "카드사 이상거래탐지 강화…보이스피싱 피해 카드결제도 잡는다 미디어펜",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "경산시, 공금관리 전수점검…\"횡령·중대 회계부정 없어\"",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Tue, 15 Sep 2026 05:48:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWEx2REJpMWhib241RDdWdFUwM2JfTWJiS1o0d054NkZ6cGlyTlk1dlgzdjVLMjcyMzlBc1pBc09XTXFzc1dZRndPUG9WWDFEVkluWjBKX1hQMzB6M1piYlp2Mld2emIzeUJfUE9oaU1pMkVSNmhzYmxEVXF0cWN5bElR?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "경산시, 공금관리 전수점검…\"횡령·중대 회계부정 없어\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1135,15 +1165,15 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "'中 피싱' 자금세탁 조직, 무더기 검거…총책 등 4명 구속 송치",
-      "source": "노컷뉴스",
-      "source_url": "https://www.nocutnews.co.kr",
-      "source_domain": "www.nocutnews.co.kr",
-      "date": "Tue, 15 Sep 2026 04:45:08 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5oa0Z0dDVQUnR3OWJzdVRUd1FzSXozQ0FScGdPWGtuSUVCOGp2X2FCQXNHQ3hsM1BxQjJvX3h1bWY2RHR0TEpFSFhHb1dMcTE3LVE?oc=5",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Tue, 15 Sep 2026 04:48:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBzOU5lWDBSa1pOTW0zNUVZalJZdEVYNjM3VU16RHlkR3ZBY04wSVU1Qmc1OFF2M3h5ekFxaWNLQnJ5NUQ1Rnc?oc=5",
       "tags": [
         "자금세탁"
       ],
-      "description": "'中 피싱' 자금세탁 조직, 무더기 검거…총책 등 4명 구속 송치 노컷뉴스",
+      "description": "'中 피싱' 자금세탁 조직, 무더기 검거…총책 등 4명 구속 송치 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -1290,7 +1320,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"300만원 긁었더니 보이스피싱\"...70대 상품권 카드결제시 '심층상담' - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Tue, 15 Sep 2026 03:00:00 GMT",
@@ -1298,7 +1328,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"300만원 긁었더니 보이스피싱\"...70대 상품권 카드결제시 '심층상담' - 머니투데이 mt.co.kr",
+      "description": "\"300만원 긁었더니 보이스피싱\"...70대 상품권 카드결제시 '심층상담' - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1320,7 +1350,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱, 이젠 카드결제로…70대 상품권 결제시 심층상담 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Tue, 15 Sep 2026 03:00:00 GMT",
@@ -1328,7 +1358,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱, 이젠 카드결제로…70대 상품권 결제시 심층상담 - 머니투데이 mt.co.kr",
+      "description": "보이스피싱, 이젠 카드결제로…70대 상품권 결제시 심층상담 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -2460,7 +2490,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "유령 상품권업체 차려 934억 돈세탁..총책 등 7명 구속",
-      "source": "1gan.co.kr",
+      "source": "일간경기",
       "source_url": "https://www.1gan.co.kr",
       "source_domain": "www.1gan.co.kr",
       "date": "Mon, 14 Sep 2026 01:57:17 GMT",
@@ -2468,7 +2498,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 상품권업체 차려 934억 돈세탁..총책 등 7명 구속 1gan.co.kr",
+      "description": "유령 상품권업체 차려 934억 돈세탁..총책 등 7명 구속 일간경기",
       "collection_method": "google_news_24h"
     },
     {
