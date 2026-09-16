@@ -9,7 +9,6 @@ permissions:
 jobs:
   collect-test-news:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
@@ -20,11 +19,24 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 feedparser python-dateutil
+
+      # 테스트는 항상 "현재 운영 데이터"에서 출발합니다.
+      # 운영 news.json 자체는 수정하지 않고 test/news.json으로 복사만 합니다.
+      - name: Copy current production data to test
+        run: |
+          cp news.json test/news.json
+
+      # test/fetch_news.py가 기존 코드처럼 news.json을 읽고 쓰도록
+      # test 폴더 안에서 실행합니다. 따라서 결과는 test/news.json에만 반영됩니다.
       - name: Run test collector
         working-directory: test
         run: python fetch_news.py
 
-      - name: Commit test data only
+      - name: Commit test result only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
