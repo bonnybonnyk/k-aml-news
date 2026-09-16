@@ -1374,7 +1374,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.8.9.1'
+    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.8.9'
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -1425,7 +1425,7 @@ def main():
         'feed_status': status,
         'official_status': official_status,
         'official_backfill_complete': True,
-        'official_backfill_version': '5.8.9.1',
+        'official_backfill_version': '5.8.9',
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'practical_backfill_complete': True,
         'practical_backfill_version': '5.8.0',
