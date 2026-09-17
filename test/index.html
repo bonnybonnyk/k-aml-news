@@ -231,10 +231,15 @@ function sameSemanticStory(a,b){
   if(daysApart(a,b)>2) return false;
   const A=semanticStoryFeatures(a.title||a), B=semanticStoryFeatures(b.title||b);
   const topic=overlap(A.topics,B.topics), concept=overlap(A.concepts,B.concepts), anchor=overlap(A.anchors,B.anchors);
+  const sharedAnchors=A.anchors.filter(x=>B.anchors.includes(x));
+  const jac=tokenJaccard(A.t,B.t);
   if(topic<1 || anchor<1) return false;
   // 같은 분야라는 이유만으로 합치지 않는다. 고유한 주체/인물과 구체적인 사건 행위가 함께 맞아야 한다.
   if(anchor>=2 && concept>=1) return true;
   if(anchor>=1 && concept>=2) return true;
+  // 긴 고유명사가 같고 제목 유사도도 확인되는 경우에는 공통 행위 1개도 허용한다.
+  // 국가명·기관명·인명처럼 구별력 있는 주체를 살리되, 주제만 같은 기사끼리의 오결합은 막는다.
+  if(daysApart(a,b)<=1 && concept>=1 && jac>=0.08 && sharedAnchors.some(x=>x.length>=4)) return true;
   return false;
 }
 function announcementFeatures(title){
