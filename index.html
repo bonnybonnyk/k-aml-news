@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<!-- K-AML NEWS build 5.8.9.5 NO READ STATUS -->
+<!-- K-AML NEWS TEST PAGE · based on build 5.8.9.5 NO READ STATUS -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>K-AML NEWS</title>
@@ -408,7 +408,7 @@ function dataSignature(d){
 
 async function load({initial=false}={}){
  try{
-  const r=await fetch('news.json?ts='+Date.now(),{cache:'no-store'});
+  const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});
   if(!r.ok) throw new Error('HTTP '+r.status);
   const d=await r.json();
   const sig=dataSignature(d);
