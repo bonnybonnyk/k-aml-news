@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T13:11:47.849761+00:00",
+  "updated_at": "2026-09-17T13:40:09.956740+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 0
+      "count": 4
     },
     {
       "feed": "지갑·해외거래소",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "차명계좌",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 28,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -307,6 +289,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -320,12 +308,6 @@
     },
     {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -349,13 +331,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -385,7 +367,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 771,
+  "count": 772,
   "official_count": 32,
   "items": [
     {
@@ -435,6 +417,21 @@
     },
     {
       "region": "국내",
+      "query": "횡령·배임",
+      "title": "‘최소 58억원 횡령’ 김포FC 직원 구속",
+      "source": "조선일보",
+      "source_url": "https://www.chosun.com",
+      "source_domain": "www.chosun.com",
+      "date": "Thu, 17 Sep 2026 09:44:39 GMT",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOXNNczhEeEt4SGZDdFdHRjY4THd2bDZwVDFHb09rbWR1UVF2N3ItNGZsTTZvRUtCbnA0cm5WMUVmTml2S2Mtdm9yYjA3WUljMlV1RzBDQVZDekE0aVhndVNTV1dneGdIMkJJVkg2Z0lvV0RjN2lfSlJjb3JkWFdaNENwUDV1QQ?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "‘최소 58억원 횡령’ 김포FC 직원 구속 조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속",
       "source": "토큰포스트",
@@ -451,23 +448,8 @@
     {
       "region": "국내",
       "query": "횡령·배임",
-      "title": "‘최소 58억원 횡령’ 김포FC 직원 구속",
-      "source": "chosun.com",
-      "source_url": "https://www.chosun.com",
-      "source_domain": "www.chosun.com",
-      "date": "Thu, 17 Sep 2026 09:42:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOXNNczhEeEt4SGZDdFdHRjY4THd2bDZwVDFHb09rbWR1UVF2N3ItNGZsTTZvRUtCbnA0cm5WMUVmTml2S2Mtdm9yYjA3WUljMlV1RzBDQVZDekE0aVhndVNTV1dneGdIMkJJVkg2Z0lvV0RjN2lfSlJjb3JkWFdaNENwUDV1QQ?oc=5",
-      "tags": [
-        "횡령·배임"
-      ],
-      "description": "‘최소 58억원 횡령’ 김포FC 직원 구속 chosun.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "횡령·배임",
       "title": "김포FC 회계 직원, 50억대 자금 횡령 혐의 구속",
-      "source": "파이낸셜뉴스",
+      "source": "fnnews.com",
       "source_url": "https://www.fnnews.com",
       "source_domain": "www.fnnews.com",
       "date": "Thu, 17 Sep 2026 09:38:02 GMT",
@@ -475,14 +457,14 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "김포FC 회계 직원, 50억대 자금 횡령 혐의 구속 파이낸셜뉴스",
+      "description": "김포FC 회계 직원, 50억대 자금 횡령 혐의 구속 fnnews.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "범죄수익",
       "title": "대포 통장 72개 모아 범죄 조직에 넘겼더니 범죄수익금 19억 세탁",
-      "source": "chosun.com",
+      "source": "조선일보",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
       "date": "Thu, 17 Sep 2026 09:17:40 GMT",
@@ -490,7 +472,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "대포 통장 72개 모아 범죄 조직에 넘겼더니 범죄수익금 19억 세탁 chosun.com",
+      "description": "대포 통장 72개 모아 범죄 조직에 넘겼더니 범죄수익금 19억 세탁 조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -516,11 +498,26 @@
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 17 Sep 2026 08:29:28 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uX0JWdXVscjB2SHJXQW1yYW9CYm5LMGRUX0I4Qm16dy1DX3o2QTlURUhZdnR6Mi1EZTNidldoeUN1cXF2cW0xbVQtZXBiS2RPQTlRLU5jUG1VVFHSAWBBVV95cUxQamFsUDZ1dld4am44UHpaam5RaENCa25EaGNYS3R3TTZCSGpzQVlTME9CbWJLUGVUaDlEM1dqMW1DZG8wUlpKRlBTRVlmQXk2RHFyY0VjNDlmT0RRXzdmUm8?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBqYWxQNnV2V3hqbjhQelpqblFoQ0JrbkRoY1hLdHdNNkJIanNBWVMwT0JtYktQZVRoOUQzV2oxbUNkbzBSWkpGUFNFWWZBeTZEcXJjRWM0OWZPRFFfN2ZSb9IBYEFVX3lxTFBqYWxQNnV2V3hqbjhQelpqblFoQ0JrbkRoY1hLdHdNNkJIanNBWVMwT0JtYktQZVRoOUQzV2oxbUNkbzBSWkpGUFNFWWZBeTZEcXJjRWM0OWZPRFFfN2ZSbw?oc=5",
       "tags": [
         "마약"
       ],
       "description": "중수청에 마약수사 전담조직 둔다…공소청에도 전담검사 배치(종합) 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "'김민수 검사' 사칭 보이스피싱 총책 등 67명 적발",
+      "source": "LG헬로비전",
+      "source_url": "http://news.lghellovision.net",
+      "source_domain": "news.lghellovision.net",
+      "date": "Thu, 17 Sep 2026 08:22:19 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5hMUI2TklDaVMxSlJCSmswbEZGaFNaMUZ5Y0xmS0dVeUR5WjJ4cmo0WW1Odm83ZDVKdWM5WHdYQWx2d0l5c0k0bV9XSFBWUUJoZVlnVnZoeHZsbm9aRFd6R01hd3VNWU1Ec2JIcGpLdVFhaEg1QmfSAXZBVV95cUxOYTFCNk5JQ2lTMUpSQkprMGxGRmhTWjFGeWNMZktHVXlEeVoyeHJqNFltTnZvN2Q1SnVjOVh3WEFsdndJeXNJNG1fV0hQVlFCaGVZZ1Z2aHh2bG5vWkRXekdNYXd1TVlNRHNiSHBqS3VRYWhINUJn?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "'김민수 검사' 사칭 보이스피싱 총책 등 67명 적발 LG헬로비전",
       "collection_method": "google_news_24h"
     },
     {
@@ -557,7 +554,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농협은행, 보이스피싱 대응 인력·예산도 ‘유명무실’…피해액 2년 새 2.3배",
-      "source": "마이데일리",
+      "source": "mydaily.co.kr",
       "source_url": "https://mydaily.co.kr",
       "source_domain": "mydaily.co.kr",
       "date": "Thu, 17 Sep 2026 08:04:58 GMT",
@@ -565,7 +562,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농협은행, 보이스피싱 대응 인력·예산도 ‘유명무실’…피해액 2년 새 2.3배 마이데일리",
+      "description": "농협은행, 보이스피싱 대응 인력·예산도 ‘유명무실’…피해액 2년 새 2.3배 mydaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -603,7 +600,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "취준생 죽음 내몬 ‘김민수 검사’ 사칭 보이스피싱 총책 붙잡혔다",
-      "source": "chosun.com",
+      "source": "조선일보",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
       "date": "Thu, 17 Sep 2026 07:19:17 GMT",
@@ -611,7 +608,7 @@
       "tags": [
         "사기"
       ],
-      "description": "취준생 죽음 내몬 ‘김민수 검사’ 사칭 보이스피싱 총책 붙잡혔다 chosun.com",
+      "description": "취준생 죽음 내몬 ‘김민수 검사’ 사칭 보이스피싱 총책 붙잡혔다 조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -663,7 +660,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“서울중앙지검 김민수 검사입니다” 20대 자살 내몬 보이스피싱 조직 검거",
-      "source": "국제신문",
+      "source": "kookje.co.kr",
       "source_url": "https://www.kookje.co.kr",
       "source_domain": "www.kookje.co.kr",
       "date": "Thu, 17 Sep 2026 05:57:00 GMT",
@@ -671,7 +668,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“서울중앙지검 김민수 검사입니다” 20대 자살 내몬 보이스피싱 조직 검거 국제신문",
+      "description": "“서울중앙지검 김민수 검사입니다” 20대 자살 내몬 보이스피싱 조직 검거 kookje.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -740,7 +737,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "檢, ‘수백억 횡령 의혹’ 한국토지신탁 계열사 자금담당 임원 구속",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Thu, 17 Sep 2026 04:55:36 GMT",
@@ -748,7 +745,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "檢, ‘수백억 횡령 의혹’ 한국토지신탁 계열사 자금담당 임원 구속 asiae.co.kr",
+      "description": "檢, ‘수백억 횡령 의혹’ 한국토지신탁 계열사 자금담당 임원 구속 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -952,7 +949,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "취준생 죽음으로 몰고 간 ‘김민수 검사’…보이스피싱 총책은 중국인이었다",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "source_url": "https://m.mk.co.kr",
       "source_domain": "m.mk.co.kr",
       "date": "Thu, 17 Sep 2026 02:19:57 GMT",
@@ -960,7 +957,7 @@
       "tags": [
         "사기"
       ],
-      "description": "취준생 죽음으로 몰고 간 ‘김민수 검사’…보이스피싱 총책은 중국인이었다 mk.co.kr",
+      "description": "취준생 죽음으로 몰고 간 ‘김민수 검사’…보이스피싱 총책은 중국인이었다 매일경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1102,7 +1099,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "[포토] 관세청, 마운자로-위고비 등 위조 비만치료제 압수품 공개",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Thu, 17 Sep 2026 01:38:32 GMT",
@@ -1110,7 +1107,7 @@
       "tags": [
         "AML"
       ],
-      "description": "[포토] 관세청, 마운자로-위고비 등 위조 비만치료제 압수품 공개 asiae.co.kr",
+      "description": "[포토] 관세청, 마운자로-위고비 등 위조 비만치료제 압수품 공개 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1162,7 +1159,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Thu, 17 Sep 2026 01:10:17 GMT",
@@ -1170,7 +1167,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가 asiae.co.kr",
+      "description": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1178,10 +1175,10 @@
       "query": "보이스피싱",
       "title": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩]",
       "source": "세계일보",
-      "source_url": "https://m.segye.com",
-      "source_domain": "m.segye.com",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
       "date": "Thu, 17 Sep 2026 00:20:28 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBoaWM5eGFlRnRNLTJKYnJKNnEzMEtzN1BYWE5LdUc3VWZTWEN3OE5OTWxBRnRNWHV6a3dkSkJfT0x0ejA1QkNvekNUdWliNUVPVEpsQdIBVEFVX3lxTFBoaWM5eGFlRnRNLTJKYnJKNnEzMEtzN1BYWE5LdUc3VWZTWEN3OE5OTWxBRnRNWHV6a3dkSkJfT0x0ejA1QkNvekNUdWliNUVPVEpsQQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB3dlpQQnV6eUhLTG1EX1ZtazV6YUpfcGJOOWFJUzgxazM3R1ZYMWNkTnBtbXJCQjUtRldCMWU3a2Nmb3VGSnY0emJLaVJxVldqVnJJSUZDeXHSAVRBVV95cUxQaGljOXhhZUZ0TS0ySmJySjZxMzBLczdQWFhOS3VHN1VmU1hDdzhOTk1sQUZ0TVh1emt3ZEpCX09MdHowNUJDb3pDVHVpYjVFT1RKbEE?oc=5",
       "tags": [
         "사기"
       ],
@@ -1347,7 +1344,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱, 출금지연 예외계좌로 피해 75.5% 새나가…신고는 은행·거래소·경찰 동시에",
-      "source": "wikitree.co.kr",
+      "source": "위키트리",
       "source_url": "https://www.wikitree.co.kr",
       "source_domain": "www.wikitree.co.kr",
       "date": "Wed, 16 Sep 2026 13:02:00 GMT",
@@ -1356,7 +1353,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "보이스피싱, 출금지연 예외계좌로 피해 75.5% 새나가…신고는 은행·거래소·경찰 동시에 wikitree.co.kr",
+      "description": "보이스피싱, 출금지연 예외계좌로 피해 75.5% 새나가…신고는 은행·거래소·경찰 동시에 위키트리",
       "collection_method": "google_news_24h"
     },
     {
@@ -1650,7 +1647,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "마약·코인 ‘검은돈’ 숨을 곳 좁아진다 … 변호사·회계사도 자금세탁 감시 의무",
-      "source": "뉴데일리",
+      "source": "biz.newdaily.co.kr",
       "source_url": "https://biz.newdaily.co.kr",
       "source_domain": "biz.newdaily.co.kr",
       "date": "Wed, 16 Sep 2026 07:45:01 GMT",
@@ -1660,7 +1657,7 @@
         "마약",
         "자금세탁"
       ],
-      "description": "마약·코인 ‘검은돈’ 숨을 곳 좁아진다 … 변호사·회계사도 자금세탁 감시 의무 뉴데일리",
+      "description": "마약·코인 ‘검은돈’ 숨을 곳 좁아진다 … 변호사·회계사도 자금세탁 감시 의무 biz.newdaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1796,7 +1793,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "태국 파타야에서 대포통장 모집에 6억원대 노쇼 사기까지…사기 조직원 10명 검거",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "source_url": "https://m.mk.co.kr",
       "source_domain": "m.mk.co.kr",
       "date": "Wed, 16 Sep 2026 05:20:01 GMT",
@@ -1804,7 +1801,7 @@
       "tags": [
         "사기"
       ],
-      "description": "태국 파타야에서 대포통장 모집에 6억원대 노쇼 사기까지…사기 조직원 10명 검거 mk.co.kr",
+      "description": "태국 파타야에서 대포통장 모집에 6억원대 노쇼 사기까지…사기 조직원 10명 검거 매일경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -2666,7 +2663,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "카드결제 유도 보이스피싱 주의보…상품권·부업·대출 미끼",
-      "source": "뉴스에듀신문",
+      "source": "newsedu.co.kr",
       "source_url": "https://www.newsedu.co.kr",
       "source_domain": "www.newsedu.co.kr",
       "date": "Tue, 15 Sep 2026 04:32:09 GMT",
@@ -2674,7 +2671,7 @@
       "tags": [
         "사기"
       ],
-      "description": "카드결제 유도 보이스피싱 주의보…상품권·부업·대출 미끼 뉴스에듀신문",
+      "description": "카드결제 유도 보이스피싱 주의보…상품권·부업·대출 미끼 newsedu.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2805,7 +2802,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "카드로 상품권 구매 유도 보이스피싱…결제 단계서 먼저 막는다",
-      "source": "파이낸셜포스트",
+      "source": "financialpost.co.kr",
       "source_url": "https://www.financialpost.co.kr",
       "source_domain": "www.financialpost.co.kr",
       "date": "Tue, 15 Sep 2026 03:00:00 GMT",
@@ -2813,7 +2810,7 @@
       "tags": [
         "사기"
       ],
-      "description": "카드로 상품권 구매 유도 보이스피싱…결제 단계서 먼저 막는다 파이낸셜포스트",
+      "description": "카드로 상품권 구매 유도 보이스피싱…결제 단계서 먼저 막는다 financialpost.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -11740,6 +11737,22 @@
     },
     {
       "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -11755,22 +11768,6 @@
         "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
