@@ -203,6 +203,40 @@ function normalizeEntityText(s){
     .replace(/과학기술정보통신부|과기정통부/g,'과기정통부')
     .replace(/방송통신위원회|방통위/g,'방통위');
 }
+function semanticStoryFeatures(title){
+  const t=normalizeEntityText(title)
+    .replace(/금융정보분석원|\bfiu\b/g,'fiu')
+    .replace(/업무\s*협약|양해\s*각서|\bmou\b/g,'협약')
+    .replace(/정보\s*교환|정보\s*공유|의심거래정보\s*공유/g,'정보교환')
+    .replace(/협력\s*강화|공조\s*강화|공조/g,'협력')
+    .replace(/붙잡혔다|붙잡았다|잡았다|체포/g,'검거')
+    .replace(/전담\s*조직|전담\s*검사|합동\s*수사과|전담\s*수사|합동\s*수사/g,'전담수사')
+    .replace(/신설|배치|설치/g,'구성');
+  const topics=[];
+  if(/자금세탁|의심거래|불법자금/.test(t)) topics.push('자금세탁');
+  if(/보이스피싱/.test(t)) topics.push('보이스피싱');
+  if(/가상자산|암호화폐|코인/.test(t)) topics.push('가상자산');
+  ['투자사기','불법사금융','환치기','외환','탈세','횡령','배임','마약','도박','범죄수익'].forEach(x=>{if(t.includes(x))topics.push(x)});
+  const concepts=['협약','정보교환','협력','전담수사','구성','검거','총책','기소','송치','구속','압수','추징','차단','지급정지','개정','시행','제재','수사','대응'];
+  const stop=new Set([
+    '관련','대한','따른','통해','사건','혐의','정부','당국','경찰','검찰','법원','금융위','금감원','fiu',
+    '자금세탁','보이스피싱','가상자산','투자사기','불법사금융','환치기','외환','탈세','횡령','배임','마약','도박','범죄수익',
+    '협약','정보교환','협력','전담수사','구성','검거','총책','기소','송치','구속','압수','추징','차단','지급정지','개정','시행','제재','수사','대응',
+    '강화','대응','추적','공유','발표','추진','한다','까지','위해','두고','둔다','나선다'
+  ]);
+  const anchors=[...new Set(t.split(' ').map(x=>x.replace(/(은|는|이|가|을|를|과|와|의|에|서|도|만|까지)$/,'')).filter(x=>x.length>=2&&!stop.has(x)&&!/^[0-9]+$/.test(x)))];
+  return {t,topics:[...new Set(topics)],concepts:concepts.filter(x=>t.includes(x)),anchors};
+}
+function sameSemanticStory(a,b){
+  if(daysApart(a,b)>2) return false;
+  const A=semanticStoryFeatures(a.title||a), B=semanticStoryFeatures(b.title||b);
+  const topic=overlap(A.topics,B.topics), concept=overlap(A.concepts,B.concepts), anchor=overlap(A.anchors,B.anchors);
+  if(topic<1 || anchor<1) return false;
+  // 같은 분야라는 이유만으로 합치지 않는다. 고유한 주체/인물과 구체적인 사건 행위가 함께 맞아야 한다.
+  if(anchor>=2 && concept>=1) return true;
+  if(anchor>=1 && concept>=2) return true;
+  return false;
+}
 function announcementFeatures(title){
   const t=normalizeEntityText(title).replace(/정보\s+공유/g,'정보공유').replace(/지급\s+정지/g,'지급정지').replace(/악성\s+앱/g,'악성앱').replace(/특별\s+대응/g,'특별대응');
   const entities=['lg유플러스','금융위','금감원','과기정통부','방통위','경찰청','검찰','관세청','국세청','FIU','금융정보분석원','DAXA','은행연합회'];
@@ -247,6 +281,10 @@ function sameEvent(a,b){
   // 663억↔664억 같은 반올림 차이는 허용하지만, 30억↔415억처럼 큰 금액 충돌은 허용하지 않는다.
   if(sameAnnouncement(a,b) && moneyCompatible(A.money,B.money)) return true;
 
+  // 표현이 달라도 같은 주체·주제·행위가 겹치는 보도는 동일 사건으로 본다.
+  // 특정 사건명을 등록하지 않고, 일반화한 의미 특징을 사용한다.
+  if(sameSemanticStory(a,b) && moneyCompatible(A.money,B.money)) return true;
+
   // 일반 범죄사건은 기존의 보수적인 숫자 충돌 안전장치를 유지한다.
   if(A.money.length && B.money.length && money===0 && !moneyCompatible(A.money,B.money)) return false;
   if(A.nums.length && B.nums.length && nums===0 && money===0) return false;
@@ -286,6 +324,8 @@ function cluster(items){
       const members=[c.main,...c.rel];
       // 발표·제도형은 제목 표현 차이가 커서 기존처럼 구성원 중 하나와 강하게 맞으면 연결을 허용한다.
       if(members.some(y=>sameAnnouncement(y,x) && moneyCompatible(eventFeatures(y.title||y).money,eventFeatures(x.title||x).money))) return true;
+      // 의미 기반 연결도 구성원 중 하나와 직접 맞을 때만 허용한다.
+      if(members.some(y=>sameSemanticStory(y,x) && moneyCompatible(eventFeatures(y.title||y).money,eventFeatures(x.title||x).money))) return true;
       // 일반 범죄사건은 그룹 내 어느 기사와도 핵심 금액이 충돌하면 연쇄 결합을 금지한다.
       if(members.some(y=>hardCaseConflict(y,x))) return false;
       // 사건형은 대표기사와 직접 같은 사건으로 판정될 때만 합친다.
