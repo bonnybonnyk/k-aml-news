@@ -816,7 +816,7 @@ def dedupe(rows, limit=1000):
 
 def collect_fsc_official(backfill, cutoff, now_utc):
     """5.7: 키워드 검색 대신 금융위 보도자료 목록을 날짜순으로 직접 순회한다."""
-    max_pages = 14 if backfill else 3
+    max_pages = 30 if backfill else 3
     candidates, status = [], []
     for page in range(1, max_pages + 1):
         try:
@@ -945,7 +945,7 @@ def collect_kofiu_fallback():
     return out
 
 def collect_kofiu_official(backfill, cutoff):
-    max_pages = 8 if backfill else 2
+    max_pages = 20 if backfill else 2
     candidates, status = [], []
     for page in range(1, max_pages + 1):
         try:
@@ -1107,7 +1107,7 @@ def verify_fss_detail(item):
 def collect_fss_board(backfill, cutoff, now_utc):
     # 첫 실행은 각 키워드 2페이지, 이후에는 1페이지만 확인.
     # 키워드 검색으로 범위를 좁혀 전체 게시판 수십 페이지를 훑지 않는다.
-    max_pages = 2 if backfill else 1
+    max_pages = 12 if backfill else 1
     jobs = [(kw, p) for kw in FSS_SEARCH_KEYWORDS for p in range(1, max_pages+1)]
     candidates, status = [], []
 
@@ -1221,7 +1221,7 @@ def verify_daxa_detail(item):
 def collect_daxa_official(cutoff):
     candidates=[]; status=[]
     # 현재 게시 빈도상 첫 20건이면 최근 90일을 충분히 덮는다.
-    for offset in (0,10):
+    for offset in range(0,200,10):
         try:
             raw=fetch_url(DAXA_LIST_URL.format(offset=offset),timeout=10).decode('utf-8',errors='ignore')
             rows=parse_daxa_list(raw)
@@ -1377,7 +1377,8 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    prior_backfill_ok = bool(old.get('official_backfill_complete')) and old.get('official_backfill_version') == '5.8.9'
+    audit_version = '5.8.9-official-90d-audit-1'
+    prior_backfill_ok = bool(old.get('official_90d_audit_complete')) and old.get('official_90d_audit_version') == audit_version
     backfill = not prior_backfill_ok
 
     fsc_items, official_status = collect_fsc_official(backfill, cutoff, now_utc)
@@ -1429,6 +1430,8 @@ def main():
         'official_status': official_status,
         'official_backfill_complete': True,
         'official_backfill_version': '5.8.9',
+        'official_90d_audit_complete': True,
+        'official_90d_audit_version': audit_version,
         'official_collection_mode': '90d_backfill' if backfill else '7d_incremental',
         'practical_backfill_complete': True,
         'practical_backfill_version': '5.8.0',
