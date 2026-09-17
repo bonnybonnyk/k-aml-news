@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-09-17T08:11:18.417584+00:00",
+  "updated_at": "2026-09-17T08:39:47.313515+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 19
+      "count": 17
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 14
+      "count": 12
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 14
+      "count": 12
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 29
+      "count": 28
     },
     {
       "feed": "불법사금융",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 10
+      "count": 12
     },
     {
       "feed": "불법도박",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "차명계좌",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 9
+      "count": 8
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 17,
+      "count": 16,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 15,
+      "count": 13,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 17,
+      "count": 12,
       "window_days": 3
     },
     {
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 28,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -307,13 +289,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -325,7 +313,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -337,19 +325,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -361,7 +337,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -385,9 +367,39 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 758,
+  "count": 761,
   "official_count": 32,
   "items": [
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "중수청에 마약수사 전담조직 둔다…공소청에도 전담검사 배치(종합)",
+      "source": "연합뉴스 한민족센터",
+      "source_url": "https://www.koreancenter.or.kr",
+      "source_domain": "www.koreancenter.or.kr",
+      "date": "Thu, 17 Sep 2026 08:29:28 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9uUWluQUgxWkhhOUVyMkZYNjE2Q0lsbGFFWnd0b2hvS3FOUm45Qkl1dTFkWEU4clByOGdVczEwejNtZ29QemVjUU55WFgzdUd0Y2ZGazljZXR5YkZrYno5UnVCcTRnVTd4MGpBNHF4Q3M4c3Zv?oc=5",
+      "tags": [
+        "마약"
+      ],
+      "description": "중수청에 마약수사 전담조직 둔다…공소청에도 전담검사 배치(종합) 연합뉴스 한민족센터",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "중수청에 마약 수사 전담 조직 설치… 공소청엔 마약 전담 검사 둔다 - 조선비즈",
+      "source": "Chosunbiz",
+      "source_url": "https://biz.chosun.com",
+      "source_domain": "biz.chosun.com",
+      "date": "Thu, 17 Sep 2026 08:21:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNLVdZUGhyOEVmeGNwS0Fsc1lWb0lMSW5HUk1rWHhtZjVOalF4TFNEME5ScWNSRVY1akMzVEJHVjhkc2RXUE5wdHp0NmRLUWFkaGlXYlV6eXR4akJUS1NGR0owN3JqRGoxVUYxdFFOc3FONU9zRUFycEo2cDl1cXJsVUFVRdIBlwFBVV95cUxQYTl6OE9ERXJZLUNLcHJhZkZnc2c5ZVF5WkI0dXdYaEZtQnRYaGdFQndIc0cwYjdranF2Y2gwRXd2aFU2NXh4RHRmcnpOeXg0MFk4MVN1T21rV2NpWHF2MmFOYWVUS0dMX0I4ODM3QzVWTFpkNmxTSVd4c190TFROX3JoOGp0UzB2V3dJNU5qdXRDNlNOZ1dZ?oc=5",
+      "tags": [
+        "마약"
+      ],
+      "description": "중수청에 마약 수사 전담 조직 설치… 공소청엔 마약 전담 검사 둔다 - 조선비즈 Chosunbiz",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "마약자금",
@@ -407,7 +419,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농협은행, 보이스피싱 대응 인력·예산도 ‘유명무실’…피해액 2년 새 2.3배",
-      "source": "mydaily.co.kr",
+      "source": "마이데일리",
       "source_url": "https://mydaily.co.kr",
       "source_domain": "mydaily.co.kr",
       "date": "Thu, 17 Sep 2026 08:04:58 GMT",
@@ -415,7 +427,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농협은행, 보이스피싱 대응 인력·예산도 ‘유명무실’…피해액 2년 새 2.3배 mydaily.co.kr",
+      "description": "농협은행, 보이스피싱 대응 인력·예산도 ‘유명무실’…피해액 2년 새 2.3배 마이데일리",
       "collection_method": "google_news_24h"
     },
     {
@@ -456,7 +468,7 @@
       "source": "조선일보",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
-      "date": "Thu, 17 Sep 2026 07:14:00 GMT",
+      "date": "Thu, 17 Sep 2026 07:19:17 GMT",
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbERNNjc1a3VHSVBuaEx2dG1XQ0VvUWJVaElxajYzbkN4OGJRMXpXRU1SRnE5NnRyUTNGSnVCYmdISHE3ZDJ6WjZLa1BvZ0t3OENxeUw0QjdVYU03d2ctMmhacmNYSWpzRnF0YjJYa1BYc1Z0RUhoMmdYS0daaUk3UThRSjlWZw?oc=5",
       "tags": [
         "사기"
@@ -724,6 +736,21 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 ‘김민수 검사’ 잡았다....중국인 총책등 67명 검거",
+      "source": "헤럴드경제",
+      "source_url": "https://mbiz.heraldcorp.com",
+      "source_domain": "mbiz.heraldcorp.com",
+      "date": "Thu, 17 Sep 2026 02:30:57 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4yeW1LU2MtYzREdnhJQW9yWm9LZER6dXoyaVlpeDhxQ1hEYmpWWjhKaDJFMWR4NjNKUUMyWVAxWk1ZdzQwUXJfU2ExT0E5TXFVMjRhSGVYdw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 ‘김민수 검사’ 잡았다....중국인 총책등 67명 검거 헤럴드경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "한국토지신탁서 수백억원 횡령 의혹…계열사 자금총괄 임원 구속",
       "source": "연합뉴스",
@@ -846,7 +873,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 신고하고 기다렸는데 … 그새 추가 피해 1 억 3,690 만 원",
-      "source": "뉴스데일리",
+      "source": "newsdaily.kr",
       "source_url": "https://www.newsdaily.kr",
       "source_domain": "www.newsdaily.kr",
       "date": "Thu, 17 Sep 2026 01:43:25 GMT",
@@ -854,14 +881,14 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 신고하고 기다렸는데 … 그새 추가 피해 1 억 3,690 만 원 뉴스데일리",
+      "description": "보이스피싱 신고하고 기다렸는데 … 그새 추가 피해 1 억 3,690 만 원 newsdaily.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "횡령·배임",
       "title": "[단독]‘수백억 횡령’ 한국토지신탁 계열사 자금담당 임원 구속",
-      "source": "동아일보",
+      "source": "donga.com",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Thu, 17 Sep 2026 01:43:00 GMT",
@@ -869,7 +896,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "[단독]‘수백억 횡령’ 한국토지신탁 계열사 자금담당 임원 구속 동아일보",
+      "description": "[단독]‘수백억 횡령’ 한국토지신탁 계열사 자금담당 임원 구속 donga.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1103,7 +1130,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "테더매입판매 탈세자금돈세탁 비상장세탁, 가상화폐돈세탁, 해외자금, 외화밀반출, 핑오다 및 각종 오다 당일 정산",
-      "source": "hellodd.com",
+      "source": "헬로디디",
       "source_url": "https://www.hellodd.com",
       "source_domain": "www.hellodd.com",
       "date": "Wed, 16 Sep 2026 16:10:57 GMT",
@@ -1113,7 +1140,7 @@
         "탈세",
         "자금세탁"
       ],
-      "description": "테더매입판매 탈세자금돈세탁 비상장세탁, 가상화폐돈세탁, 해외자금, 외화밀반출, 핑오다 및 각종 오다 당일 정산 hellodd.com",
+      "description": "테더매입판매 탈세자금돈세탁 비상장세탁, 가상화폐돈세탁, 해외자금, 외화밀반출, 핑오다 및 각종 오다 당일 정산 헬로디디",
       "collection_method": "google_news_24h"
     },
     {
@@ -1135,7 +1162,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "영국 금융감독청(FCA)이 5억 파운드 규모의 자금세탁 단속에 나서면서 암호화폐 승인 규칙을 마련하고 있다",
-      "source": "cryptopolitan.com",
+      "source": "Cryptopolitan",
       "source_url": "https://www.cryptopolitan.com",
       "source_domain": "www.cryptopolitan.com",
       "date": "Wed, 16 Sep 2026 13:08:39 GMT",
@@ -1144,14 +1171,14 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "영국 금융감독청(FCA)이 5억 파운드 규모의 자금세탁 단속에 나서면서 암호화폐 승인 규칙을 마련하고 있다 cryptopolitan.com",
+      "description": "영국 금융감독청(FCA)이 5억 파운드 규모의 자금세탁 단속에 나서면서 암호화폐 승인 규칙을 마련하고 있다 Cryptopolitan",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱, 출금지연 예외계좌로 피해 75.5% 새나가…신고는 은행·거래소·경찰 동시에",
-      "source": "wikitree.co.kr",
+      "source": "위키트리",
       "source_url": "https://www.wikitree.co.kr",
       "source_domain": "www.wikitree.co.kr",
       "date": "Wed, 16 Sep 2026 13:02:00 GMT",
@@ -1160,7 +1187,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "보이스피싱, 출금지연 예외계좌로 피해 75.5% 새나가…신고는 은행·거래소·경찰 동시에 wikitree.co.kr",
+      "description": "보이스피싱, 출금지연 예외계좌로 피해 75.5% 새나가…신고는 은행·거래소·경찰 동시에 위키트리",
       "collection_method": "google_news_24h"
     },
     {
@@ -1198,7 +1225,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "FIU 가상자산 의심거래 4년 만에 ‘312배’ 폭증… AI·추적 솔루션에 100억 투입",
-      "source": "블록체인투데이",
+      "source": "blockchaintoday.co.kr",
       "source_url": "https://blockchaintoday.co.kr",
       "source_domain": "blockchaintoday.co.kr",
       "date": "Wed, 16 Sep 2026 10:32:36 GMT",
@@ -1207,7 +1234,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "FIU 가상자산 의심거래 4년 만에 ‘312배’ 폭증… AI·추적 솔루션에 100억 투입 블록체인투데이",
+      "description": "FIU 가상자산 의심거래 4년 만에 ‘312배’ 폭증… AI·추적 솔루션에 100억 투입 blockchaintoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1424,7 +1451,7 @@
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Wed, 16 Sep 2026 08:08:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUUhGN2c3RmFubWQwbklMZVNsZkdEZjhwMjVudVJucFpaUHFaVEV6LVFfVHpHMnRoNTZZWHhtc3VzQmp3YUFpUWNiaDFYM0NMaDFaRW9EcUZQUnp2ZWlYZGQ5eXNCcFM5eFBHM0lPenFIalJMWGhJZy1wSGhHRmRwTNIBlAFBVV95cUxQdDJ3VUJtU0htMnVMeUFRd2s4amZObHBJbC14bjJpYm9WNnFMUXl6UlhpdDBlaVFkSEZlS0NHZ1g4Ung0cVFCeDdRYUUybjlhTXYxQzEzbzFTeTc1dk9ELWtpSFplSmJ5TXl2cDQwMkZ4ZXo1QjVXYTY2ZGVlRHVKWm9DanZzRXlCSTY2ZEZXWFBzVmR1?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdDJ3VUJtU0htMnVMeUFRd2s4amZObHBJbC14bjJpYm9WNnFMUXl6UlhpdDBlaVFkSEZlS0NHZ1g4Ung0cVFCeDdRYUUybjlhTXYxQzEzbzFTeTc1dk9ELWtpSFplSmJ5TXl2cDQwMkZ4ZXo1QjVXYTY2ZGVlRHVKWm9DanZzRXlCSTY2ZEZXWFBzVmR10gGUAUFVX3lxTFB0MndVQm1TSG0ydUx5QVF3azhqZk5scElsLXhuMmlib1Y2cUxReXpSWGl0MGVpUWRIRmVLQ0dnWDhSeDRxUUJ4N1FhRTJuOWFNdjFDMTNvMVN5NzV2T0Qta2lIWmVKYnlNeXZwNDAyRnhlejVCNVdhNjZkZWVEdUpab0NqdnNFeUJJNjZkRldYUHNWZHU?oc=5",
       "tags": [
         "마약",
         "도박",
@@ -1755,7 +1782,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Tue, 15 Sep 2026 21:07:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1LX3JOTWtLX0VDZWZvZXdHN2Uwd1dxTUpTMXlrOGg3cnkwdU9fOHMwUFNxNFoyZzMyOFBUQXdha2tVd1UxQUE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA2UjJvOWU5T2RMOUVUY0ZmZEtaQVZWSVZTLWowaFdyQUJiX0I0UXBJeFlVdHVJaU5SNEVjQXhudXFmM3I1UlhEbGxaWQ?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -2027,7 +2054,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "시흥시의회, 전세사기 의심거래 모니터링 조례 추진",
-      "source": "newsfreezone.co.kr",
+      "source": "뉴스프리존",
       "source_url": "https://www.newsfreezone.co.kr",
       "source_domain": "www.newsfreezone.co.kr",
       "date": "Tue, 15 Sep 2026 07:52:20 GMT",
@@ -2036,7 +2063,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "시흥시의회, 전세사기 의심거래 모니터링 조례 추진 newsfreezone.co.kr",
+      "description": "시흥시의회, 전세사기 의심거래 모니터링 조례 추진 뉴스프리존",
       "collection_method": "google_news_24h"
     },
     {
@@ -2533,7 +2560,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "카드결제 보이스피싱 직접결제도 위험한 이유",
-      "source": "판다랭크",
+      "source": "pandarank.net",
       "source_url": "https://pandarank.net",
       "source_domain": "pandarank.net",
       "date": "Tue, 15 Sep 2026 04:01:00 GMT",
@@ -2542,7 +2569,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "카드결제 보이스피싱 직접결제도 위험한 이유 판다랭크",
+      "description": "카드결제 보이스피싱 직접결제도 위험한 이유 pandarank.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -11544,6 +11571,22 @@
     },
     {
       "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -11559,22 +11602,6 @@
         "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
@@ -11967,7 +11994,7 @@
     },
     {
       "region": "공식자료",
-      "query": "시세조종",
+      "query": "가상자산",
       "official_source": "금융감독원",
       "official_sources": [
         "금융감독원"
@@ -11975,7 +12002,7 @@
       "title": "가상자산시장 시세조종 혐의자 수사기관 고발",
       "source": "금융감독원",
       "date": "2026-07-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EC%8B%9C%EC%84%B8%EC%A1%B0%EC%A2%85&pageIndex=1",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
         "사기"
