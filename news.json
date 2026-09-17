@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-09-17T09:40:44.146943+00:00",
+  "updated_at": "2026-09-17T10:10:26.213516+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 13
+      "count": 10
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 8
+      "count": 6
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 10
+      "count": 7
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "환치기·외환",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "불법도박",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 5
+      "count": 7
     },
     {
       "feed": "차명계좌",
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 28,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -289,7 +307,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -301,13 +319,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -319,7 +337,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -337,6 +355,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
@@ -346,12 +370,6 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -367,9 +385,54 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 764,
+  "count": 768,
   "official_count": 32,
   "items": [
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "‘최소 58억원 횡령’ 김포FC 직원 구속",
+      "source": "조선일보",
+      "source_url": "https://www.chosun.com",
+      "source_domain": "www.chosun.com",
+      "date": "Thu, 17 Sep 2026 09:44:39 GMT",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOXNNczhEeEt4SGZDdFdHRjY4THd2bDZwVDFHb09rbWR1UVF2N3ItNGZsTTZvRUtCbnA0cm5WMUVmTml2S2Mtdm9yYjA3WUljMlV1RzBDQVZDekE0aVhndVNTV1dneGdIMkJJVkg2Z0lvV0RjN2lfSlJjb3JkWFdaNENwUDV1QQ?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "‘최소 58억원 횡령’ 김포FC 직원 구속 조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Thu, 17 Sep 2026 09:43:32 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CTDU5TTI4NGpBTHk1V3ZnRGVnSTg2aTNJMERpLWRSVnZiUVVmYTlOMEd2MVdIQmg4OTBnenN1M1VRX0R4QVdGMk1CcnJXUl93eEN5NE11Z0g?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "김포FC 회계 직원, 50억대 자금 횡령 혐의 구속",
+      "source": "파이낸셜뉴스",
+      "source_url": "https://www.fnnews.com",
+      "source_domain": "www.fnnews.com",
+      "date": "Thu, 17 Sep 2026 09:38:02 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ER0J4djUzUWxUa3h1VUZVaDdya3ZLakRVWFZvY0l2VTQ5NEgyTGhFanBybXJudXdxX2M0dXdBUnlNcUZnbXpYQjN6djZ6NWpXZ3drd3l5OWMtQQ?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "김포FC 회계 직원, 50억대 자금 횡령 혐의 구속 파이낸셜뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "범죄수익",
@@ -508,6 +571,21 @@
     },
     {
       "region": "국내",
+      "query": "범죄수익",
+      "title": "\"월급만 받았는데\" 홀덤펍 딜러 통장에 찍힌 1억원…전부 범죄수익 될까?",
+      "source": "로톡뉴스",
+      "source_url": "https://lawtalknews.co.kr",
+      "source_domain": "lawtalknews.co.kr",
+      "date": "Thu, 17 Sep 2026 07:07:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBxTFNqd25YY0lSR3JTZWFpdkNLMnZybGlSOG5UTEFLWDc0ZHZ0NUFDdTJ3a0FwTy1uNEt3bGgtdzkyb3paRDZpb1dLZ1RZUXZVWHVDOGVueG13UQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "\"월급만 받았는데\" 홀덤펍 딜러 통장에 찍힌 1억원…전부 범죄수익 될까? 로톡뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "’김민수 검사’ 사칭 보이스피싱 총책까지 잡았다",
       "source": "연합뉴스TV",
@@ -525,7 +603,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "차단 4.5배 늘었는데 피해도 2.3배…농협은행 보이스피싱 대응 '딜레마'",
-      "source": "4th.kr",
+      "source": "포쓰저널",
       "source_url": "https://www.4th.kr",
       "source_domain": "www.4th.kr",
       "date": "Thu, 17 Sep 2026 06:04:03 GMT",
@@ -533,7 +611,7 @@
       "tags": [
         "사기"
       ],
-      "description": "차단 4.5배 늘었는데 피해도 2.3배…농협은행 보이스피싱 대응 '딜레마' 4th.kr",
+      "description": "차단 4.5배 늘었는데 피해도 2.3배…농협은행 보이스피싱 대응 '딜레마' 포쓰저널",
       "collection_method": "google_news_24h"
     },
     {
@@ -585,7 +663,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘김민수 검사’ 사칭해 취준생 돈까지 뜯었다…50억 챙긴 해외 보이스피싱 조직 67명 검거",
-      "source": "문화일보",
+      "source": "munhwa.com",
       "source_url": "https://www.munhwa.com",
       "source_domain": "www.munhwa.com",
       "date": "Thu, 17 Sep 2026 05:39:20 GMT",
@@ -593,14 +671,14 @@
       "tags": [
         "사기"
       ],
-      "description": "‘김민수 검사’ 사칭해 취준생 돈까지 뜯었다…50억 챙긴 해외 보이스피싱 조직 67명 검거 문화일보",
+      "description": "‘김민수 검사’ 사칭해 취준생 돈까지 뜯었다…50억 챙긴 해외 보이스피싱 조직 67명 검거 munhwa.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "FIU·STR",
       "title": "암호화폐 사기 의심거래 127억달러…美 재무부, 금융권에 경고",
-      "source": "디지털투데이",
+      "source": "digitaltoday.co.kr",
       "source_url": "https://www.digitaltoday.co.kr",
       "source_domain": "www.digitaltoday.co.kr",
       "date": "Thu, 17 Sep 2026 05:36:00 GMT",
@@ -610,7 +688,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "암호화폐 사기 의심거래 127억달러…美 재무부, 금융권에 경고 디지털투데이",
+      "description": "암호화폐 사기 의심거래 127억달러…美 재무부, 금융권에 경고 digitaltoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -893,7 +971,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Thu, 17 Sep 2026 01:55:51 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1fOVc2SFhTT2tWajFHOU5EdUNrMXhaME5SU3F1VlhGcUpXdHFNa2t0cTJ4TS02VTZYbEg4OTgtQ0xyRkF5OWpzRkNLbHlGVE0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9rQVVlT25fNlQyMEt2MDhVTTZudUJ3bTdXTXF4SFBUM1lGLW1zQ2lZY1MtMGlIcXNFOTVoYWZJNzQ5OW9FOHc?oc=5",
       "tags": [
         "사기"
       ],
@@ -1054,7 +1132,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩]",
-      "source": "segye.com",
+      "source": "세계일보",
       "source_url": "https://m.segye.com",
       "source_domain": "m.segye.com",
       "date": "Thu, 17 Sep 2026 00:20:28 GMT",
@@ -1062,7 +1140,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩] segye.com",
+      "description": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩] 세계일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1193,7 +1271,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 16 Sep 2026 15:53:59 GMT",
@@ -1201,7 +1279,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다. vietnam.vn",
+      "description": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -1255,7 +1333,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁 및 테러자금 조달 방지 및 퇴치에 관한 규정을 배포합니다.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 16 Sep 2026 11:45:03 GMT",
@@ -1264,7 +1342,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "자금세탁 및 테러자금 조달 방지 및 퇴치에 관한 규정을 배포합니다. vietnam.vn",
+      "description": "자금세탁 및 테러자금 조달 방지 및 퇴치에 관한 규정을 배포합니다. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -1318,7 +1396,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "영국, 자금세탁 대응에 6억7600만달러(약 9194억원) 투입",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 16 Sep 2026 09:46:09 GMT",
@@ -1326,7 +1404,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "영국, 자금세탁 대응에 6억7600만달러(약 9194억원) 투입 tokenpost.kr",
+      "description": "영국, 자금세탁 대응에 6억7600만달러(약 9194억원) 투입 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1460,7 +1538,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금융위, 자금세탁방지 전략 수립으로 2028년 FATF 상호평가 대응 강화",
-      "source": "Traders Union",
+      "source": "tradersunion.com",
       "source_url": "https://tradersunion.com",
       "source_domain": "tradersunion.com",
       "date": "Wed, 16 Sep 2026 08:33:31 GMT",
@@ -1469,14 +1547,14 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "금융위, 자금세탁방지 전략 수립으로 2028년 FATF 상호평가 대응 강화 Traders Union",
+      "description": "금융위, 자금세탁방지 전략 수립으로 2028년 FATF 상호평가 대응 강화 tradersunion.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "베트남은 자금세탁방지기구(FATF)의 권고에 따라 암호화폐 거래를 감시하는 메커니즘을 개발하고 있습니다.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 16 Sep 2026 08:25:22 GMT",
@@ -1486,7 +1564,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "베트남은 자금세탁방지기구(FATF)의 권고에 따라 암호화폐 거래를 감시하는 메커니즘을 개발하고 있습니다. vietnam.vn",
+      "description": "베트남은 자금세탁방지기구(FATF)의 권고에 따라 암호화폐 거래를 감시하는 메커니즘을 개발하고 있습니다. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -11617,22 +11695,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -11648,6 +11710,22 @@
         "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
