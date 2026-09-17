@@ -280,7 +280,8 @@ def low_quality_news_source(title, source_name, domain):
     if any(tok in s for tok in BLOCKED_SOURCE_TOKENS):
         return True
 
-    # 프리스핀/가입혜택 등 카지노 SEO 문구는 '자금세탁' 같은 AML 단어를 끼워 넣어도 기사로 보지 않는다.
+    # 카지노 SEO/가입유도 문구는 AML 키워드를 섞어도 기사로 보지 않는다.
+    # 실제 수사·검거·기소 등 사건 보도는 아래 concrete_enforcement 신호가 있으면 유지한다.
     casino_seo_terms = [
         '프리스핀','무료스핀','가입보너스','가입 보너스','첫충전','첫 충전',
         '재충전','충전보너스','충전 보너스','가입코드','가입 코드','추천코드','추천 코드',
@@ -1390,7 +1391,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    audit_version = '5.8.9-official-90d-audit-1'
+    audit_version = '5.8.9-official-90d-audit-2'
     prior_backfill_ok = bool(old.get('official_90d_audit_complete')) and old.get('official_90d_audit_version') == audit_version
     backfill = not prior_backfill_ok
 
