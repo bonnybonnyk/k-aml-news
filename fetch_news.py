@@ -296,6 +296,20 @@ def low_quality_news_source(title, source_name, domain):
     if sum(1 for tok in trade_promo_terms if tok in t) >= 2:
         return True
 
+    # HelloDD는 정상 뉴스는 허용하되, 자유게시판의 테더/코인 거래 광고성 게시물만 제외.
+    # Google News 피드에서는 원문 게시판 URL 대신 출처 홈 주소만 보일 수 있어
+    # 출처 식별 + 게시판 광고형 제목 패턴을 함께 사용한다.
+    is_hellodd = ('hellodd' in d) or ('헬로디디' in s) or ('hellodd' in s)
+    if is_hellodd:
+        hellodd_board_terms = [
+            '테더매입','테더 매입','테더판매','테더 판매','테더환전','테더 환전',
+            '테더거래','테더 거래','손대손','개인거래','코인세탁','코인 세탁',
+            '최고가매입','최저가판매','당일정산','당일 정산','해외자금',
+            '외화밀반출','핑오다','각종 오다','각종오다'
+        ]
+        if sum(1 for tok in hellodd_board_terms if tok in t) >= 2:
+            return True
+
     # 도메인/출처가 수상하지 않더라도 제목 자체가 이벤트·가입 유도형이면 제거.
     if any(tok in t for tok in ADLIKE_TITLE_TOKENS):
         # 다만 해당 홍보/이벤트가 수사·적발된 사건을 다루는 기사면 유지.
