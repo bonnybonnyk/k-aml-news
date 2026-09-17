@@ -239,6 +239,34 @@ function sameAnnouncement(a,b){
   if((!A.entities.length || !B.entities.length) && daysApart(a,b)<=1 && ops>=2 && jac>=0.08) return true;
   return false;
 }
+function distinctiveEventAnchors(title){
+  const stop=new Set([
+    '경찰','검찰','법원','정부','금융위','금감원','은행','직원','조직','일당','총책',
+    '보이스피싱','투자사기','전세사기','가상자산','마약','도박','환치기','탈세',
+    '횡령','배임','자금세탁','돈세탁','범죄수익','검거','구속','기소','송치','수사',
+    '혐의','사건','피해','관련','대한','통해','종합','단독'
+  ]);
+  return [...new Set(normEventTitle(title).split(' ')
+    .map(x=>x.replace(/[^0-9a-z가-힣]/g,''))
+    .filter(x=>x.length>=3 && !stop.has(x) && !/^\d+$/.test(x)))];
+}
+function sameDistinctiveCrimeEvent(a,b){
+  if(daysApart(a,b)>1) return false;
+  const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
+  if(overlap(A.crimes,B.crimes)<1) return false;
+  if(A.money.length && B.money.length && !moneyCompatible(A.money,B.money)) return false;
+
+  const aa=distinctiveEventAnchors(a.title||a), bb=distinctiveEventAnchors(b.title||b);
+  const shared=aa.filter(x=>bb.includes(x));
+  if(!shared.length) return false;
+
+  // 짧고 흔한 단어 하나만 겹치는 경우는 제외.
+  const strong=shared.filter(x=>x.length>=4 || /[a-z]/i.test(x));
+  if(!strong.length) return false;
+
+  // 고유 단서가 있어도 제목 맥락이 완전히 다르면 합치지 않는다.
+  return tokenJaccard(a.title||a,b.title||b)>=0.08;
+}
 function sameEvent(a,b){
   const A=eventFeatures(a.title||a), B=eventFeatures(b.title||b);
   const crime=overlap(A.crimes,B.crimes), action=overlap(A.actions,B.actions), nums=overlap(A.nums,B.nums), money=overlap(A.money,B.money), ages=overlap(A.ages,B.ages), roles=overlap(A.roles,B.roles), jac=tokenJaccard(A.t,B.t);
@@ -254,10 +282,8 @@ function sameEvent(a,b){
   if(crime>=1 && action>=1 && (nums>=1 || ages>=1 || roles>=1) && jac>=0.13) return true;
   if(crime>=1 && (nums+ages+roles)>=2 && jac>=0.09) return true;
   if(crime>=2 && (nums+ages+roles)>=1 && jac>=0.09) return true;
-
-  // 같은 시점의 동일 범죄사건인데 매체마다 제목에서 숫자/행위어를 생략한 경우를 보완한다.
-  // 핵심 금액 충돌은 위에서 이미 차단되며, 24시간 이내 + 같은 범죄어 + 높은 제목 유사도일 때만 허용한다.
-  if(daysApart(a,b)<=1 && crime>=1 && jac>=0.28) return true;
+  // 보수적 보완: 같은 날·같은 범죄유형 + 제목에 동일한 고유 단서가 있을 때만 추가 결합.
+  if(sameDistinctiveCrimeEvent(a,b)) return true;
   return false;
 }
 function sourceScore(s=''){

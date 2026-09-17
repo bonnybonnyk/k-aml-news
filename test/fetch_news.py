@@ -280,6 +280,19 @@ def low_quality_news_source(title, source_name, domain):
     if any(tok in s for tok in BLOCKED_SOURCE_TOKENS):
         return True
 
+    # 프리스핀/가입혜택 등 카지노 SEO 문구는 '자금세탁' 같은 AML 단어를 끼워 넣어도 기사로 보지 않는다.
+    casino_seo_terms = [
+        '프리스핀','무료스핀','가입보너스','가입 보너스','첫충전','첫 충전',
+        '재충전','충전보너스','충전 보너스','가입코드','가입 코드','추천코드','추천 코드',
+        '카지노사이트','카지노 사이트','슬롯사이트','슬롯 사이트','바카라사이트','바카라 사이트'
+    ]
+    concrete_enforcement = [
+        '경찰','검찰','법원','금감원','금융위','국세청','관세청',
+        '검거','구속','기소','송치','적발','압수','추징','수사','선고','징역','벌금'
+    ]
+    if any(tok in t for tok in casino_seo_terms) and not any(sig in t for sig in concrete_enforcement):
+        return True
+
     # 도메인/출처가 수상하지 않더라도 제목 자체가 이벤트·가입 유도형이면 제거.
     if any(tok in t for tok in ADLIKE_TITLE_TOKENS):
         # 다만 해당 홍보/이벤트가 수사·적발된 사건을 다루는 기사면 유지.
@@ -603,18 +616,6 @@ def v56_practical_category(text):
     if re.search(r'pg사|가상계좌|전자금융', low):
         return 'FIU·STR'
     return 'FIU·STR'
-
-
-def is_casino_seo_noise(title, source=''):
-    """기사형 불법도박 보도는 살리고, 카지노/프리스핀 가입·보너스형 SEO 콘텐츠만 제외."""
-    text = clean_text(f"{title} {source}").lower()
-    promo = (
-        '프리스핀', '무료스핀', '가입코드', '추천코드', '가입 보너스', '가입보너스',
-        '첫충', '첫 충전', '충전 보너스', '충전보너스', '카지노사이트', '카지노 사이트',
-        '슬롯사이트', '슬롯 사이트', '바카라사이트', '바카라 사이트', '먹튀검증',
-        '카지노 추천', '온라인카지노 추천'
-    )
-    return any(x in text for x in promo)
 
 def strong_unlisted_source_ok(title, context, source_name, domain):
     """5.8: 화이트리스트에 아직 없는 언론도 강한 AML/금융범죄 신호가 있으면 제한적으로 허용.
