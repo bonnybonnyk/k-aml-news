@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T00:43:47.595175+00:00",
+  "updated_at": "2026-09-17T01:10:14.762980+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,12 +10,12 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 7
+      "count": 10
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 19
+      "count": 18
     },
     {
       "feed": "가상자산 AML",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "불법사금융",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 11
+      "count": 10
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 28,
+      "count": 33,
       "window_days": 3
     },
     {
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 35,
+      "count": 34,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 27,
+      "count": 26,
       "window_days": 3
     },
     {
@@ -217,7 +217,7 @@
     {
       "feed": "출처집중:segye.com",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -325,9 +325,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -337,9 +337,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -355,19 +361,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -385,14 +385,29 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 718,
+  "count": 720,
   "official_count": 32,
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩]",
+      "source": "세계일보",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
+      "date": "Thu, 17 Sep 2026 00:20:28 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB3dlpQQnV6eUhLTG1EX1ZtazV6YUpfcGJOOWFJUzgxazM3R1ZYMWNkTnBtbXJCQjUtRldCMWU3a2Nmb3VGSnY0emJLaVJxVldqVnJJSUZDeXHSAVRBVV95cUxQaGljOXhhZUZ0TS0ySmJySjZxMzBLczdQWFhOS3VHN1VmU1hDdzhOTk1sQUZ0TVh1emt3ZEpCX09MdHowNUJDb3pDVHVpYjVFT1RKbEE?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩] 세계일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼]",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Thu, 17 Sep 2026 00:16:09 GMT",
@@ -402,14 +417,14 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼] newsis.com",
+      "description": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼] 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Thu, 17 Sep 2026 00:10:07 GMT",
@@ -417,7 +432,7 @@
       "tags": [
         "사기"
       ],
-      "description": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치 newsis.com",
+      "description": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -428,11 +443,26 @@
       "source_url": "https://www.kado.net",
       "source_domain": "www.kado.net",
       "date": "Thu, 17 Sep 2026 00:08:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1cFU2MEFXWVM4eFJUNnpsbHhMX25mUFQ5TUVFRFJBandEWXpBNXcxOHl6eVk4REpaVjZXSFFJWlJ1d3dzRE85LVRuekxaVDRFbGVfcUFMaWcwVW9KMlhnYmFNTVZXRUow?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9tMDJSVVZSSkFYRDRXNDJ4OWFRa2VjdmpGYUhuNUpUMzdpTlNGbWZ5c2FFTFRJek1CLVdjOEhVdTJocjNXTVRWVUh1Rk55VTlKRk1LanFIb0dhYVMzN3RzUXFJRjFKbzg?oc=5",
       "tags": [
         "사기"
       ],
       "description": "NH농협은행 보이스피싱 피해 2년 새 2.3배…60대 이상 피해 6.5배 강원도민일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "울산경찰, 불법 성인PC방 집중단속… 72명 검거·범죄수익 12억 환수",
+      "source": "울산종합일보",
+      "source_url": "https://ujnews.co.kr",
+      "source_domain": "ujnews.co.kr",
+      "date": "Thu, 17 Sep 2026 00:05:43 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5pOUlIc2NraV9ZWHA4bklJVnlpZlBURkJhdlVkT0hWRjhkdk1HcUhnb1p6dXl6clg3WEozcDJWb3lfc2gzSHY1R1dtRjdxaGNRa0NOV055QnEyVDNrYWlvWkdPRUZjbjh1Nm1IZkpB?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "울산경찰, 불법 성인PC방 집중단속… 72명 검거·범죄수익 12억 환수 울산종합일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -722,7 +752,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "변호사·회계사도 자금세탁방지 의무…금융권 밖으로 AML 확대",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 16 Sep 2026 08:40:57 GMT",
@@ -731,7 +761,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "변호사·회계사도 자금세탁방지 의무…금융권 밖으로 AML 확대 newsis.com",
+      "description": "변호사·회계사도 자금세탁방지 의무…금융권 밖으로 AML 확대 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -822,7 +852,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "마약·도박 의심계좌, 법원 결정 전 막는다…FIU 거래정지권 추진",
-      "source": "연합인포맥스",
+      "source": "news.einfomax.co.kr",
       "source_url": "https://news.einfomax.co.kr",
       "source_domain": "news.einfomax.co.kr",
       "date": "Wed, 16 Sep 2026 07:38:57 GMT",
@@ -832,7 +862,7 @@
         "도박",
         "FIU·규제"
       ],
-      "description": "마약·도박 의심계좌, 법원 결정 전 막는다…FIU 거래정지권 추진 연합인포맥스",
+      "description": "마약·도박 의심계좌, 법원 결정 전 막는다…FIU 거래정지권 추진 news.einfomax.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -874,10 +904,10 @@
       "query": "자금세탁",
       "title": "FATF 낙제 땐 해외송금도 막힌다…정부, 자금세탁과 전면전",
       "source": "조세일보",
-      "source_url": "http://www.joseilbo.com",
-      "source_domain": "www.joseilbo.com",
+      "source_url": "https://m.joseilbo.com",
+      "source_domain": "m.joseilbo.com",
       "date": "Wed, 16 Sep 2026 07:14:47 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1MdEN2VWtTZHBPazlLOUFFTkhxRWlMUDFQR01CTlFlSkNpR3BXNHhENWFEa3ZOd2J1bUgzUzRFdTJTLW1DczlzRHMwRVNNN0VnMlpGRzlOelBWaWlwcU8wdDBWZkFjRVZ2YlFnNzk2MA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBpSFR5eWlhS3JTNS10bW1UdVBqS2ZUcWVyZ3hTcFBVVXlGLXphRktqa3JtRDFVVl84X3JfRzhSa0ZuTHJhVVNveFFzWVFVUkxHT2h6anNXLXowSXdMUFRz?oc=5",
       "tags": [
         "FIU·규제",
         "자금세탁"
@@ -951,7 +981,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "태국 파타야에서 대포통장 모집에 6억원대 노쇼 사기까지…사기 조직원 10명 검거",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "source_url": "https://www.mk.co.kr",
       "source_domain": "www.mk.co.kr",
       "date": "Wed, 16 Sep 2026 05:20:01 GMT",
@@ -959,7 +989,7 @@
       "tags": [
         "사기"
       ],
-      "description": "태국 파타야에서 대포통장 모집에 6억원대 노쇼 사기까지…사기 조직원 10명 검거 mk.co.kr",
+      "description": "태국 파타야에서 대포통장 모집에 6억원대 노쇼 사기까지…사기 조직원 10명 검거 매일경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1026,7 +1056,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁·골드바 사기·노쇼…'범죄 백화점' 조직 붙잡혀",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 16 Sep 2026 02:24:13 GMT",
@@ -1035,7 +1065,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "자금세탁·골드바 사기·노쇼…'범죄 백화점' 조직 붙잡혀 newsis.com",
+      "description": "자금세탁·골드바 사기·노쇼…'범죄 백화점' 조직 붙잡혀 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -2342,7 +2372,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "상품권 거래 위장 범죄수익 200억 세탁… 전직 경찰관에 징역 10년 구형",
-      "source": "한국일보",
+      "source": "hankookilbo.com",
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Mon, 14 Sep 2026 10:17:00 GMT",
@@ -2350,7 +2380,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "상품권 거래 위장 범죄수익 200억 세탁… 전직 경찰관에 징역 10년 구형 한국일보",
+      "description": "상품권 거래 위장 범죄수익 200억 세탁… 전직 경찰관에 징역 10년 구형 hankookilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -3043,7 +3073,7 @@
       "source": "v.daum.net",
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
-      "date": "Mon, 14 Sep 2026 02:12:00 GMT",
+      "date": "Mon, 14 Sep 2026 02:12:11 GMT",
       "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1ibDFOeHdYc3c0U01BOWtBN2k2NWRSR09pSlNqZUJ4dDhIX3hPNzFKa0czWm9LRk5XWEJVOU1peEx3c3BUbkNSZ3Q4UExnUkE?oc=5",
       "tags": [
         "자금세탁"
@@ -3115,7 +3145,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "유령 상품권업체 차려 934억 돈세탁..총책 등 7명 구속",
-      "source": "일간경기",
+      "source": "1gan.co.kr",
       "source_url": "https://www.1gan.co.kr",
       "source_domain": "www.1gan.co.kr",
       "date": "Mon, 14 Sep 2026 01:57:17 GMT",
@@ -3123,7 +3153,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "유령 상품권업체 차려 934억 돈세탁..총책 등 7명 구속 일간경기",
+      "description": "유령 상품권업체 차려 934억 돈세탁..총책 등 7명 구속 1gan.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -3295,6 +3325,22 @@
     {
       "region": "국내",
       "query": "자금세탁",
+      "title": "사기 조직도 돈세탁은 ‘외주’…934억 세탁한 유령 상품권업체",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Mon, 14 Sep 2026 01:16:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBhd2FNYnYzUGdmRC1Fc1NVaUFwZkNQY0RNQUxVb1RWVUdJV084cExjX016U3FyRDVQU01tWFdTOXcwcndwTERxR0NQa3BoSnJ6ckhzZzRpSHlUZ1U?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "사기 조직도 돈세탁은 ‘외주’…934억 세탁한 유령 상품권업체 KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
       "title": "유령 상품권 업체 차려 9백억 원대 범죄수익 세탁한 일당 검거",
       "source": "MBC 뉴스",
       "source_url": "https://imnews.imbc.com",
@@ -3305,22 +3351,6 @@
         "자금세탁"
       ],
       "description": "유령 상품권 업체 차려 9백억 원대 범죄수익 세탁한 일당 검거 MBC 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "사기조직도 돈세탁은 '외주'…934억 세탁한 유령 상품권업체",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Mon, 14 Sep 2026 01:00:03 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JVG1uWUh0cGhBMWxwdzdnMzdNcVVwREdEckptSU5oYmlGLXlTNFBVU19hem1QY1pQbkFOTXlQSUtneTlxMDB3Nk4xem9BYThsblpyTHEtYUpBZGfSAWBBVV95cUxNQWlSbndVR1VZLW5SOFA4UWZ4SmRLRWxTT1B6ZTgtRVI2TlRnWUUwQkwzM0k1dHpTb1MxdExJWDhjZ01jTEV0Tm5ObTl2bU1rV1NpLXFhNGhwdm9pSGE4SXI?oc=5",
-      "tags": [
-        "사기",
-        "자금세탁"
-      ],
-      "description": "사기조직도 돈세탁은 '외주'…934억 세탁한 유령 상품권업체 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
