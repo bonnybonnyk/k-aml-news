@@ -280,18 +280,21 @@ def low_quality_news_source(title, source_name, domain):
     if any(tok in s for tok in BLOCKED_SOURCE_TOKENS):
         return True
 
-    # 카지노 SEO/가입유도 문구는 AML 키워드를 섞어도 기사로 보지 않는다.
-    # 실제 수사·검거·기소 등 사건 보도는 아래 concrete_enforcement 신호가 있으면 유지한다.
+    # 기사처럼 보이게 AML 키워드를 섞은 도박/거래유도 SEO 문구를 구조적으로 제외한다.
+    # 언론사 자체를 차단하지 않고 제목 패턴만 본다.
     casino_seo_terms = [
-        '프리스핀','무료스핀','가입보너스','가입 보너스','첫충전','첫 충전',
-        '재충전','충전보너스','충전 보너스','가입코드','가입 코드','추천코드','추천 코드',
-        '카지노사이트','카지노 사이트','슬롯사이트','슬롯 사이트','바카라사이트','바카라 사이트'
+        '프리스핀','무료스핀','가입보너스','가입 보너스','가입코드','가입 코드',
+        '추천코드','추천 코드','첫충전','첫 충전','재충전','충전보너스','충전 보너스'
     ]
-    concrete_enforcement = [
-        '경찰','검찰','법원','금감원','금융위','국세청','관세청',
-        '검거','구속','기소','송치','적발','압수','추징','수사','선고','징역','벌금'
+    if any(tok in t for tok in casino_seo_terms) and not any(sig in t for sig in NEWS_SIGNAL_TOKENS):
+        return True
+
+    # '테더매입판매 ... 각종 오다 당일 정산'처럼 불법자금 키워드를 나열한 거래유도형 제목.
+    trade_promo_terms = [
+        '매입판매','매입 판매','당일정산','당일 정산','각종 오다','각종오다',
+        '핑오다','오다 당일','당일 오다'
     ]
-    if any(tok in t for tok in casino_seo_terms) and not any(sig in t for sig in concrete_enforcement):
+    if sum(1 for tok in trade_promo_terms if tok in t) >= 2:
         return True
 
     # 도메인/출처가 수상하지 않더라도 제목 자체가 이벤트·가입 유도형이면 제거.
@@ -1391,7 +1394,7 @@ def main():
 
     # ---------- 공식자료 ----------
     # v4.3 이전 공식자료는 잘못된 링크/날짜가 섞였으므로 처음 한 번은 폐기 후 90일 재구축.
-    audit_version = '5.8.9-official-90d-audit-2'
+    audit_version = '5.8.9-official-90d-audit-1'
     prior_backfill_ok = bool(old.get('official_90d_audit_complete')) and old.get('official_90d_audit_version') == audit_version
     backfill = not prior_backfill_ok
 
@@ -1419,11 +1422,10 @@ def main():
             fss_items = []
             official_status.append({'feed':'금융감독원','ok':False,'count':0,'error':(str(e)+' / '+str(e2))[:160]})
 
-    if backfill:
-        # 오래된/잘못된 v4.2 공식자료는 사용하지 않는다.
-        official_seed = []
-    else:
-        official_seed = existing_official
+    # 90일 재점검 때도 기존 공식자료를 버리지 않는다.
+    # 게시판/RSS가 일시적으로 일부만 응답해도 기존 정상 자료를 보존하고,
+    # 이번 재수집 결과에서 새로 발견된 자료만 합쳐 보완한다.
+    official_seed = existing_official
 
     official_merged = []
     for x in kofiu_items + fsc_items + fss_items + daxa_items + official_seed:
