@@ -254,6 +254,10 @@ function sameEvent(a,b){
   if(crime>=1 && action>=1 && (nums>=1 || ages>=1 || roles>=1) && jac>=0.13) return true;
   if(crime>=1 && (nums+ages+roles)>=2 && jac>=0.09) return true;
   if(crime>=2 && (nums+ages+roles)>=1 && jac>=0.09) return true;
+
+  // 같은 시점의 동일 범죄사건인데 매체마다 제목에서 숫자/행위어를 생략한 경우를 보완한다.
+  // 핵심 금액 충돌은 위에서 이미 차단되며, 24시간 이내 + 같은 범죄어 + 높은 제목 유사도일 때만 허용한다.
+  if(daysApart(a,b)<=1 && crime>=1 && jac>=0.28) return true;
   return false;
 }
 function sourceScore(s=''){

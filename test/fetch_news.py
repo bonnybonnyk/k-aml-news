@@ -604,6 +604,18 @@ def v56_practical_category(text):
         return 'FIU·STR'
     return 'FIU·STR'
 
+
+def is_casino_seo_noise(title, source=''):
+    """기사형 불법도박 보도는 살리고, 카지노/프리스핀 가입·보너스형 SEO 콘텐츠만 제외."""
+    text = clean_text(f"{title} {source}").lower()
+    promo = (
+        '프리스핀', '무료스핀', '가입코드', '추천코드', '가입 보너스', '가입보너스',
+        '첫충', '첫 충전', '충전 보너스', '충전보너스', '카지노사이트', '카지노 사이트',
+        '슬롯사이트', '슬롯 사이트', '바카라사이트', '바카라 사이트', '먹튀검증',
+        '카지노 추천', '온라인카지노 추천'
+    )
+    return any(x in text for x in promo)
+
 def strong_unlisted_source_ok(title, context, source_name, domain):
     """5.8: 화이트리스트에 아직 없는 언론도 강한 AML/금융범죄 신호가 있으면 제한적으로 허용.
     광고·카지노·리퍼럴 출처는 기존 차단 토큰으로 먼저 제외한다.
