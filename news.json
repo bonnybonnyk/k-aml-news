@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T14:39:57.028324+00:00",
+  "updated_at": "2026-09-18T15:09:59.311580+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "불법사금융",
@@ -242,39 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -409,24 +397,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -439,13 +409,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,13 +439,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -572,10 +560,10 @@
       "query": "보이스피싱",
       "title": "“보이스피싱 주의”…수학학원 ‘생각하는황소’ 해킹, 학생·학부모 정보 털렸나",
       "source": "매일경제",
-      "source_url": "https://m.mk.co.kr",
-      "source_domain": "m.mk.co.kr",
+      "source_url": "https://www.mk.co.kr",
+      "source_domain": "www.mk.co.kr",
       "date": "Fri, 18 Sep 2026 08:30:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE84clcwdmhWOU0tc2lOVllMRWtodnFEVi1wSEJmd0RCemxiem8zX0NYaEtPa3o5Wjk3ZncyRUdRVUxkNHBLcHc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCd1preS1zejNHdXprTzBPblZ1S2I1X1VzYWFwZHY1cU50RFEzUTZ2Zm0tU1MxeTVaYzA4eVJBZUVPaVRBcGdnU3I1WFNTTFR6QmQtaA?oc=5",
       "tags": [
         "사기"
       ],
@@ -714,7 +702,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Fri, 18 Sep 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4zLUVhM1I5OWpKa0tpOGNWak9zdDEwVTJIQUlTVGJwMkFPSjRaZG52dHo4cjJyTXVSMm1wWFNJVDJXVXZEOUVsTVllUHNkY3NxR25NNU9JbFFWeVXSAWBBVV95cUxQQ0h6blhmSkVmN0xndXZRUmtXeUJOWDlvRGpSZGl5bGtOLTJvdVZwbHlqWVVrTjlZc0pZbExYemtJZlJjN0JvSGtlZ2ZxRllYandzS0JvYUZRdzZFVnJhcnY?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBDSHpuWGZKRWY3TGd1dlFSa1d5Qk5YOW9EalJkaXlsa04tMm91VnBseWpZVWtOOVlzSllsTFh6a0lmUmM3Qm9Ia2VnZnFGWVhqd3NLQm9hRlF3NkVWcmFydtIBYEFVX3lxTFBDSHpuWGZKRWY3TGd1dlFSa1d5Qk5YOW9EalJkaXlsa04tMm91VnBseWpZVWtOOVlzSllsTFh6a0lmUmM3Qm9Ia2VnZnFGWVhqd3NLQm9hRlF3NkVWcmFydg?oc=5",
       "tags": [
         "FIU·규제"
       ],
@@ -725,7 +713,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "2천만원 인출 시도 70대…은행원·경찰관, 보이스피싱 피해 막아",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Fri, 18 Sep 2026 06:44:50 GMT",
@@ -733,7 +721,7 @@
       "tags": [
         "사기"
       ],
-      "description": "2천만원 인출 시도 70대…은행원·경찰관, 보이스피싱 피해 막아 연합뉴스",
+      "description": "2천만원 인출 시도 70대…은행원·경찰관, 보이스피싱 피해 막아 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -922,7 +910,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "FIU, 타지키스탄 국립은행과 자금세탁방지 대응 협력",
-      "source": "SBS Biz",
+      "source": "biz.sbs.co.kr",
       "source_url": "https://biz.sbs.co.kr",
       "source_domain": "biz.sbs.co.kr",
       "date": "Thu, 17 Sep 2026 23:19:00 GMT",
@@ -931,14 +919,14 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "FIU, 타지키스탄 국립은행과 자금세탁방지 대응 협력 SBS Biz",
+      "description": "FIU, 타지키스탄 국립은행과 자금세탁방지 대응 협력 biz.sbs.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "금융정보분석원, 타지키스탄 국립은행과 자금세탁방지 대응 협력",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 17 Sep 2026 21:00:07 GMT",
@@ -947,7 +935,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "금융정보분석원, 타지키스탄 국립은행과 자금세탁방지 대응 협력 연합뉴스",
+      "description": "금융정보분석원, 타지키스탄 국립은행과 자금세탁방지 대응 협력 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1864,7 +1852,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속",
-      "source": "뉴스핌",
+      "source": "newspim.com",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Thu, 17 Sep 2026 01:41:00 GMT",
@@ -1872,7 +1860,7 @@
       "tags": [
         "사기"
       ],
-      "description": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속 뉴스핌",
+      "description": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속 newspim.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2425,7 +2413,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁방지 제도 선진화…\"국제기준 못 따라가면 활동 제약\"",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Wed, 16 Sep 2026 07:59:50 GMT",
@@ -2434,7 +2422,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "자금세탁방지 제도 선진화…\"국제기준 못 따라가면 활동 제약\" 연합뉴스",
+      "description": "자금세탁방지 제도 선진화…\"국제기준 못 따라가면 활동 제약\" yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
