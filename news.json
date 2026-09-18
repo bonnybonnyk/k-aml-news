@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T13:39:39.869820+00:00",
+  "updated_at": "2026-09-18T14:10:05.338257+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "지갑·해외거래소",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "불법도박",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 7
+      "count": 5
     },
     {
       "feed": "차명계좌",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 15,
+      "count": 18,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 12,
+      "count": 13,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 9,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 28,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -409,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,13 +439,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -446,12 +470,6 @@
     },
     {
       "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -789,7 +807,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "IOG, 카르다노 관련 유튜브 라이브 가상자산 사기 가능성 경고",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Fri, 18 Sep 2026 04:34:45 GMT",
@@ -798,7 +816,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "IOG, 카르다노 관련 유튜브 라이브 가상자산 사기 가능성 경고 tokenpost.kr",
+      "description": "IOG, 카르다노 관련 유튜브 라이브 가상자산 사기 가능성 경고 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -910,7 +928,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "FIU, 타지키스탄 국립은행과 자금세탁방지 대응 협력",
-      "source": "SBS Biz",
+      "source": "biz.sbs.co.kr",
       "source_url": "https://biz.sbs.co.kr",
       "source_domain": "biz.sbs.co.kr",
       "date": "Thu, 17 Sep 2026 23:19:00 GMT",
@@ -919,7 +937,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "FIU, 타지키스탄 국립은행과 자금세탁방지 대응 협력 SBS Biz",
+      "description": "FIU, 타지키스탄 국립은행과 자금세탁방지 대응 협력 biz.sbs.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1052,7 +1070,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "노비텍스 등 이란 가상자산 거래소 4곳 美 제재",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 17 Sep 2026 17:46:00 GMT",
@@ -1061,7 +1079,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "노비텍스 등 이란 가상자산 거래소 4곳 美 제재 tokenpost.kr",
+      "description": "노비텍스 등 이란 가상자산 거래소 4곳 美 제재 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1188,7 +1206,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 17 Sep 2026 09:43:32 GMT",
@@ -1196,7 +1214,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속 tokenpost.kr",
+      "description": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -2109,7 +2127,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금융위, 2028년 FATF 상호평가 대비 자금세탁방지 전략 확정",
-      "source": "Traders Union",
+      "source": "tradersunion.com",
       "source_url": "https://tradersunion.com",
       "source_domain": "tradersunion.com",
       "date": "Wed, 16 Sep 2026 14:27:23 GMT",
@@ -2118,7 +2136,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "금융위, 2028년 FATF 상호평가 대비 자금세탁방지 전략 확정 Traders Union",
+      "description": "금융위, 2028년 FATF 상호평가 대비 자금세탁방지 전략 확정 tradersunion.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2235,7 +2253,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "영국, 자금세탁 대응에 6억7600만달러(약 9194억원) 투입",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 16 Sep 2026 09:46:09 GMT",
@@ -2243,7 +2261,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "영국, 자금세탁 대응에 6억7600만달러(약 9194억원) 투입 tokenpost.kr",
+      "description": "영국, 자금세탁 대응에 6억7600만달러(약 9194억원) 투입 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -2362,7 +2380,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금융위, 자금세탁방지 전략 수립으로 2028년 FATF 상호평가 대응 강화",
-      "source": "Traders Union",
+      "source": "tradersunion.com",
       "source_url": "https://tradersunion.com",
       "source_domain": "tradersunion.com",
       "date": "Wed, 16 Sep 2026 08:33:31 GMT",
@@ -2371,7 +2389,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "금융위, 자금세탁방지 전략 수립으로 2028년 FATF 상호평가 대응 강화 Traders Union",
+      "description": "금융위, 자금세탁방지 전략 수립으로 2028년 FATF 상호평가 대응 강화 tradersunion.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2726,16 +2744,16 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "[단독]FIU, '특금법 개정' 가상자산사업자 현장점검…코인마켓·커스터디 대표 간담회도 예정",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Tue, 15 Sep 2026 21:07:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1LX3JOTWtLX0VDZWZvZXdHN2Uwd1dxTUpTMXlrOGg3cnkwdU9fOHMwUFNxNFoyZzMyOFBUQXdha2tVd1UxQUE?oc=5",
+      "source": "MTN 머니투데이방송",
+      "source_url": "https://news.mtn.co.kr",
+      "source_domain": "news.mtn.co.kr",
+      "date": "Tue, 15 Sep 2026 21:08:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1aS0NzUzB0NGoybDUtZ19fLUVGak9aNy1yWU1kRzBkSldYQ1MyaDMwZjZsVjUybnJLZXZtMWlwVHgzTDJXd0VhNFZxTzdUOERtbkpXMG5vNWRFRGJoU2swcjE2eVI?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
       ],
-      "description": "[단독]FIU, '특금법 개정' 가상자산사업자 현장점검…코인마켓·커스터디 대표 간담회도 예정 v.daum.net",
+      "description": "[단독]FIU, '특금법 개정' 가상자산사업자 현장점검…코인마켓·커스터디 대표 간담회도 예정 MTN 머니투데이방송",
       "collection_method": "google_news_24h"
     },
     {
@@ -12555,22 +12573,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -12586,6 +12588,22 @@
         "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
