@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T11:09:42.568305+00:00",
+  "updated_at": "2026-09-18T11:39:00.974533+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "불법사금융",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법도박",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "차명계좌",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 14,
+      "count": 15,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 11,
+      "count": 12,
       "window_days": 3
     },
     {
@@ -248,20 +248,26 @@
     },
     {
       "feed": "금융위/FIU:목록:p2",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 9,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 10,
+      "count": 28,
       "method": "body_relevance"
     },
     {
@@ -415,6 +421,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
@@ -427,21 +445,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -454,24 +478,6 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -500,7 +506,7 @@
       "source_url": "https://imnews.imbc.com",
       "source_domain": "imnews.imbc.com",
       "date": "Fri, 18 Sep 2026 08:53:54 GMT",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE13dGYtYkZRaUxXNzFKSGlxLWNRb1hjbnBLMjd2SEs4YXc1clZVSWgtUzlrYi0wd09aaXRRUkEzMG80RUNYRC1NSGlhMlpUb0p1cWJrSkpBVGcyYld3R1cwYjZhQTRNZUt3V1Uzb1BTY1dRMVhnMEJN0gF3QVVfeXFMUFhwdFhUOFd5TlpTZVByNDBHUkhNanoyYWE1N1BhZ3ZzQm50TDAyX0dtQXB2Zk1OUXpIZ1FjRm9pN0pESERNY21pSWhZaGpQeW1PSnlpMlhEWVFKTGx6TW5xUFZaTkoyc3k0dEFBdDE2b1JEb01vTU0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBYcHRYVDhXeU5aU2VQcjQwR1JITWp6MmFhNTdQYWd2c0JudEwwMl9HbUFwdmZNTlF6SGdRY0ZvaTdKREhETWNtaUloWWhqUHltT0p5aTJYRFlRSkxsek1ucVBWWk5KMnN5NHRBQXQxNm9SRG9Nb01N0gF3QVVfeXFMUFhwdFhUOFd5TlpTZVByNDBHUkhNanoyYWE1N1BhZ3ZzQm50TDAyX0dtQXB2Zk1OUXpIZ1FjRm9pN0pESERNY21pSWhZaGpQeW1PSnlpMlhEWVFKTGx6TW5xUFZaTkoyc3k0dEFBdDE2b1JEb01vTU0?oc=5",
       "tags": [
         "마약"
       ],
@@ -542,10 +548,10 @@
       "query": "보이스피싱",
       "title": "“보이스피싱 주의”…수학학원 ‘생각하는황소’ 해킹, 학생·학부모 정보 털렸나",
       "source": "매일경제",
-      "source_url": "https://m.mk.co.kr",
-      "source_domain": "m.mk.co.kr",
+      "source_url": "https://www.mk.co.kr",
+      "source_domain": "www.mk.co.kr",
       "date": "Fri, 18 Sep 2026 08:30:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE84clcwdmhWOU0tc2lOVllMRWtodnFEVi1wSEJmd0RCemxiem8zX0NYaEtPa3o5Wjk3ZncyRUdRVUxkNHBLcHc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCd1preS1zejNHdXprTzBPblZ1S2I1X1VzYWFwZHY1cU50RFEzUTZ2Zm0tU1MxeTVaYzA4eVJBZUVPaVRBcGdnU3I1WFNTTFR6QmQtaA?oc=5",
       "tags": [
         "사기"
       ],
@@ -760,7 +766,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Fri, 18 Sep 2026 05:44:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1TbTdKOVcyblh0TnlubkNZRFJxZ0dGbUpXQXlXZnQzVnUyOUEwLTVUbTZBWmNvWjNwWk92aFZ3cEMzR2kzS1hFNHhTbGl4V1ZnazlVVkh0ZmZjUdIBX0FVX3lxTE5NUVZ5ckZ6Yk5jeHNFNEQ2WFQ1RThPbmROR1hJTGNSckxva19jV1lKYVY4OEtfM0xUV2tWTnJyVHVLZ3lrcXhPWFA2c0hwUnRsU3NiMXNXeXJlWjdCN1hZ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5NUVZ5ckZ6Yk5jeHNFNEQ2WFQ1RThPbmROR1hJTGNSckxva19jV1lKYVY4OEtfM0xUV2tWTnJyVHVLZ3lrcXhPWFA2c0hwUnRsU3NiMXNXeXJlWjdCN1hZ0gFfQVVfeXFMTk1RVnlyRnpiTmN4c0U0RDZYVDVFOE9uZE5HWElMY1JyTG9rX2NXWUphVjg4S18zTFRXa1ZOcnJUdUtneWtxeE9YUDZzSHBSdGxTc2Ixc1d5cmVaN0I3WFk?oc=5",
       "tags": [
         "사기"
       ],
@@ -832,7 +838,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[사건사고] ’김민수 검사’ 사칭 보이스피싱 총책까지 잡았다 外",
-      "source": "연합뉴스TV",
+      "source": "yonhapnewstv.co.kr",
       "source_url": "https://www.yonhapnewstv.co.kr",
       "source_domain": "www.yonhapnewstv.co.kr",
       "date": "Fri, 18 Sep 2026 00:14:00 GMT",
@@ -840,7 +846,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[사건사고] ’김민수 검사’ 사칭 보이스피싱 총책까지 잡았다 外 연합뉴스TV",
+      "description": "[사건사고] ’김민수 검사’ 사칭 보이스피싱 총책까지 잡았다 外 yonhapnewstv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1034,16 +1040,16 @@
     {
       "region": "국내",
       "query": "횡령·배임",
-      "title": "’58억원 횡령’ 김포FC 회계담당 직원 구속",
-      "source": "연합뉴스TV",
-      "source_url": "https://www.yonhapnewstv.co.kr",
-      "source_domain": "www.yonhapnewstv.co.kr",
-      "date": "Thu, 17 Sep 2026 13:50:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBYRER4Qk5aOXpfcjQtODktbmM2bDl3Ri15ZFdiTDl5czRpZzFFY3M4QkdCenl3OS1XTUxXdlRNN2lVTDYwUkJyend5aEs0Tm0zUDFEV2xnc3FpR091U083NTJWdFI1LTQ?oc=5",
+      "title": "'58억원 횡령' 김포FC 회계담당 직원 구속",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Thu, 17 Sep 2026 13:50:11 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwazBqei1yQ0xZVkdlSTMzTVRFUDJlUjhfX2tIcm80NDhXQlJfTXBmbVpVOEtBOHpodHVQMmszYU9XX2dNOE5zTFNYRmhYbXpkZlhtTTRVaEhVcE3SAWBBVV95cUxNRHJ5RlBkQ0dRbXphSFp0bDNSSW5hWmZtZGVBeldLcGYySVgwT1FTREdQTXZlQUtxaXlzY1RaR3FiNS1YNDF5eW0xdXpSQ0FWUjZwTndXZjRtTnhkaFFzS2s?oc=5",
       "tags": [
         "횡령·배임"
       ],
-      "description": "’58억원 횡령’ 김포FC 회계담당 직원 구속 연합뉴스TV",
+      "description": "'58억원 횡령' 김포FC 회계담당 직원 구속 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -2602,16 +2608,16 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁·골드바 사기·노쇼…'범죄 백화점' 조직 붙잡혀",
-      "source": "newsis.com",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Wed, 16 Sep 2026 02:24:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB6NUhhejNzeFpiNGhNdnVFUlBteE1yMnVZbS10QmUwdDduMjBOeEtva3V3cDRYVWE5TjNreS1HRDluVzFtY0lRdTRZMlc1Y2I1MWxCaHNRWTRDOVN6UktXQ0xrRnkxV0hCOUh2MWtDU21VX2NkX3hpYtIBeEFVX3lxTFB6NUhhejNzeFpiNGhNdnVFUlBteE1yMnVZbS10QmUwdDduMjBOeEtva3V3cDRYVWE5TjNreS1HRDluVzFtY0lRdTRZMlc1Y2I1MWxCaHNRWTRDOVN6UktXQ0xrRnkxV0hCOUh2MWtDU21VX2NkX3hpYg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1iNGFGS0ZFUlIzdDUxQXFhNlRDNWYtY1lZa2NLLWdpWnhiek81aXNfLVpLcDdMT1BGaVBnOWptWXlSQ0VISklyV3dZUTJ4MTRsZFA5Z2R0MWtMcVN6V1FiQw?oc=5",
       "tags": [
         "사기",
         "자금세탁"
       ],
-      "description": "자금세탁·골드바 사기·노쇼…'범죄 백화점' 조직 붙잡혀 newsis.com",
+      "description": "자금세탁·골드바 사기·노쇼…'범죄 백화점' 조직 붙잡혀 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -12507,22 +12513,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -12538,6 +12528,22 @@
         "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
@@ -12930,22 +12936,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
-      "source": "금융감독원",
-      "date": "2026-07-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "가상자산",
       "official_source": "금융감독원",
       "official_sources": [
@@ -12957,6 +12947,22 @@
       "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
+      "source": "금융감독원",
+      "date": "2026-07-01T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
         "사기"
       ],
       "collection_method": "verified_fss_board"
