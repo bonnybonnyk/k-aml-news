@@ -149,6 +149,14 @@ let LAST_CHECKED_AT=null, LAST_DATA_UPDATED=null;
 const CLUSTER_CACHE=new Map();
 const NEWS_HTML_CACHE=new Map();
 const OFFICIAL_HTML_CACHE=new Map();
+const NORMALIZED_TITLE_CACHE=new Map();
+const EVENT_FEATURE_CACHE=new Map();
+const TOKEN_SET_CACHE=new Map();
+const ENTITY_TEXT_CACHE=new Map();
+const ANNOUNCEMENT_FEATURE_CACHE=new Map();
+const SEMANTIC_FEATURE_CACHE=new Map();
+const DATE_VALUE_CACHE=new Map();
+const TOKEN_STOP=new Set(['관련','대한','따른','통해','혐의','사건','경찰','검찰','법원','징역','실형','자금','피해','조직','정부','금융위']);
 const AUTO_CHECK_MS=30*60*1000;
 const CATS=['전체','자금세탁','가상자산','사기','불법사금융','마약','도박','환치기·외환','탈세','횡령·배임','FIU·규제','제재·테러자금'];
 const $=s=>document.querySelector(s);
@@ -172,11 +180,17 @@ function officialAgo(d){
   return ago(d);
 }
 function normEventTitle(s){
-  return (s||'').toLowerCase()
+  const key=String(s||'');
+  if(NORMALIZED_TITLE_CACHE.has(key)) return NORMALIZED_TITLE_CACHE.get(key);
+  const value=key.toLowerCase()
     .replace(/[“”"'‘’·ㆍ…⋯.,!?()[\]{}<>:;\/\\|~`@#$%^&*_+=-]/g,' ')
     .replace(/\s+/g,' ').trim();
+  NORMALIZED_TITLE_CACHE.set(key,value);
+  return value;
 }
 function eventFeatures(title){
+  const key=String(title||'');
+  if(EVENT_FEATURE_CACHE.has(key)) return EVENT_FEATURE_CACHE.get(key);
   const t=normEventTitle(title);
   const crimes=['리딩방','보이스피싱','투자사기','전세사기','가상자산','코인','마약','도박','환치기','탈세','횡령','배임','자금세탁','돈세탁','범죄수익','대포통장','유령업체','랜섬웨어'];
   const actions=['세탁','송치','기소','구속','검거','적발','압수','추징','징역','실형','벌금','제재','수사','탈취','해킹'];
@@ -184,26 +198,39 @@ function eventFeatures(title){
   const money=[...t.matchAll(/(?:약\s*)?\d+(?:\.\d+)?\s*(?:조|억|만|천)\s*(?:원|달러)?/g)].map(m=>m[0].replace(/\s/g,''));
   const ages=[...t.matchAll(/\d{2}대|20대|30대|40대|50대|60대/g)].map(m=>m[0]);
   const roles=['형제','부부','모녀','모자','부자','일당','조직','총책','20대 2명','2명','3명'];
-  return {t,crimes:crimes.filter(x=>t.includes(x)),actions:actions.filter(x=>t.includes(x)),nums:[...new Set(nums)],money:[...new Set(money)],ages:[...new Set(ages)],roles:roles.filter(x=>t.includes(x))};
+  const value={t,crimes:crimes.filter(x=>t.includes(x)),actions:actions.filter(x=>t.includes(x)),nums:[...new Set(nums)],money:[...new Set(money)],ages:[...new Set(ages)],roles:roles.filter(x=>t.includes(x))};
+  EVENT_FEATURE_CACHE.set(key,value);
+  return value;
 }
 function overlap(a,b){ return a.filter(x=>b.includes(x)).length; }
 function tokenJaccard(a,b){
-  const stop=new Set(['관련','대한','따른','통해','혐의','사건','경찰','검찰','법원','징역','실형','자금','피해','조직','정부','금융위']);
-  const A=new Set(normEventTitle(a).split(' ').filter(x=>x.length>=2&&!stop.has(x)));
-  const B=new Set(normEventTitle(b).split(' ').filter(x=>x.length>=2&&!stop.has(x)));
+  const getTokens=s=>{
+    const key=String(s||'');
+    if(TOKEN_SET_CACHE.has(key)) return TOKEN_SET_CACHE.get(key);
+    const value=new Set(normEventTitle(key).split(' ').filter(x=>x.length>=2&&!TOKEN_STOP.has(x)));
+    TOKEN_SET_CACHE.set(key,value);
+    return value;
+  };
+  const A=getTokens(a), B=getTokens(b);
   const inter=[...A].filter(x=>B.has(x)).length;
   const union=new Set([...A,...B]).size||1;
   return inter/union;
 }
 function normalizeEntityText(s){
-  return normEventTitle(s)
+  const key=String(s||'');
+  if(ENTITY_TEXT_CACHE.has(key)) return ENTITY_TEXT_CACHE.get(key);
+  const value=normEventTitle(key)
     .replace(/lg\s*u|lgu|lg유플러스|lg유플/g,'lg유플러스')
     .replace(/금융위원회|금융위/g,'금융위')
     .replace(/금융감독원|금감원/g,'금감원')
     .replace(/과학기술정보통신부|과기정통부/g,'과기정통부')
     .replace(/방송통신위원회|방통위/g,'방통위');
+  ENTITY_TEXT_CACHE.set(key,value);
+  return value;
 }
 function semanticStoryFeatures(title){
+  const key=String(title||'');
+  if(SEMANTIC_FEATURE_CACHE.has(key)) return SEMANTIC_FEATURE_CACHE.get(key);
   const t=normalizeEntityText(title)
     .replace(/금융정보분석원|\bfiu\b/g,'fiu')
     .replace(/업무\s*협약|양해\s*각서|\bmou\b/g,'협약')
@@ -225,7 +252,9 @@ function semanticStoryFeatures(title){
     '강화','대응','추적','공유','발표','추진','한다','까지','위해','두고','둔다','나선다'
   ]);
   const anchors=[...new Set(t.split(' ').map(x=>x.replace(/(은|는|이|가|을|를|과|와|의|에|서|도|만|까지)$/,'')).filter(x=>x.length>=2&&!stop.has(x)&&!/^[0-9]+$/.test(x)))];
-  return {t,topics:[...new Set(topics)],concepts:concepts.filter(x=>t.includes(x)),anchors};
+  const value={t,topics:[...new Set(topics)],concepts:concepts.filter(x=>t.includes(x)),anchors};
+  SEMANTIC_FEATURE_CACHE.set(key,value);
+  return value;
 }
 function sameSemanticStory(a,b){
   if(daysApart(a,b)>2) return false;
@@ -243,14 +272,19 @@ function sameSemanticStory(a,b){
   return false;
 }
 function announcementFeatures(title){
+  const key=String(title||'');
+  if(ANNOUNCEMENT_FEATURE_CACHE.has(key)) return ANNOUNCEMENT_FEATURE_CACHE.get(key);
   const t=normalizeEntityText(title).replace(/정보\s+공유/g,'정보공유').replace(/지급\s+정지/g,'지급정지').replace(/악성\s+앱/g,'악성앱').replace(/특별\s+대응/g,'특별대응');
   const entities=['lg유플러스','금융위','금감원','과기정통부','방통위','경찰청','검찰','관세청','국세청','FIU','금융정보분석원','DAXA','은행연합회'];
   const topics=['보이스피싱','자금세탁','가상자산','코인','투자사기','불법사금융','환치기','외환','탈세','횡령','배임','마약','도박','범죄수익'];
   const ops=['정보공유','공유','특별대응','24시간','모니터링','악성앱','서버','추적','차단','지급정지','신고 전','신고전','플랫폼','asap','시스템','시행','개정','확대','긴급차단','ai','의심정보','대응'];
-  return {t,entities:entities.filter(x=>t.includes(x.toLowerCase())),topics:topics.filter(x=>t.includes(x)),ops:ops.filter(x=>t.includes(x))};
+  const value={t,entities:entities.filter(x=>t.includes(x.toLowerCase())),topics:topics.filter(x=>t.includes(x)),ops:ops.filter(x=>t.includes(x))};
+  ANNOUNCEMENT_FEATURE_CACHE.set(key,value);
+  return value;
 }
 function daysApart(a,b){
-  const A=new Date(a.date||0), B=new Date(b.date||0);
+  const dateValue=x=>{const key=String(x||0);if(DATE_VALUE_CACHE.has(key))return DATE_VALUE_CACHE.get(key);const value=new Date(key).getTime();DATE_VALUE_CACHE.set(key,value);return value;};
+  const A=dateValue(a.date), B=dateValue(b.date);
   if(!isFinite(A)||!isFinite(B)) return 999;
   return Math.abs(A-B)/86400000;
 }
@@ -327,6 +361,9 @@ function cluster(items){
   for(const x of items){
     let c=cs.find(c=>{
       const members=[c.main,...c.rel];
+      // 동일 사건 보도는 통상 짧은 기간에 집중된다. 7일 넘게 떨어진 묶음은
+      // 제목 분석 전에 제외해 90일 전체 기사와의 불필요한 비교를 줄인다.
+      if(!members.some(y=>daysApart(y,x)<=7)) return false;
       // 발표·제도형은 제목 표현 차이가 커서 기존처럼 구성원 중 하나와 강하게 맞으면 연결을 허용한다.
       if(members.some(y=>sameAnnouncement(y,x) && moneyCompatible(eventFeatures(y.title||y).money,eventFeatures(x.title||x).money))) return true;
       // 의미 기반 연결도 구성원 중 하나와 직접 맞을 때만 허용한다.
