@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T05:09:07.839562+00:00",
+  "updated_at": "2026-09-19T05:37:55.779665+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 12
+      "count": 11
     },
     {
       "feed": "불법사금융",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "차명계좌",
@@ -85,13 +85,13 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 25,
+      "count": 23,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -103,13 +103,13 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 16,
+      "count": 19,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 4,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 13,
+      "count": 12,
       "window_days": 3
     },
     {
@@ -397,6 +397,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -421,31 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,7 +451,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -477,9 +477,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 831,
+  "count": 832,
   "official_count": 35,
   "items": [
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Sat, 19 Sep 2026 05:03:46 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1iQ2VENk44YzJCcWdjX2FPU21kelRCUnhCM2tFZkszcGtvcFZpM2MxbDgyd0ptTldpUEhrcklSZzNqZFUyRXBDQk9BVUJacGZIbFV5bUpVYllyOVhmTnhTZNIBeEFVX3lxTE1QR3U2MC0wbkJIN1pFbUxyYzItRVZDV0dFMHZJUDIyS3dQdUtiZWhVTFptems5QlI4bTdKajhjX2JDWDk3a0lMSG5VMGttVHZPeFNFWHR3OVBDT283Vk8zZGJfU2J2NEh2dWNlYWFtbFI2ZHptdEtLZg?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년 뉴시스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -790,7 +805,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "'옵티머스 펀드 사기' 김재현, 범죄수익 은닉 항소심도 징역 8개월",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Fri, 18 Sep 2026 07:54:52 GMT",
@@ -799,7 +814,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "'옵티머스 펀드 사기' 김재현, 범죄수익 은닉 항소심도 징역 8개월 asiae.co.kr",
+      "description": "'옵티머스 펀드 사기' 김재현, 범죄수익 은닉 항소심도 징역 8개월 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -837,7 +852,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "美재무부, ‘호르무즈 통항료 징수 도운’ 이란 코인 거래소 제재",
-      "source": "마켓인",
+      "source": "marketin.edaily.co.kr",
       "source_url": "https://marketin.edaily.co.kr",
       "source_domain": "marketin.edaily.co.kr",
       "date": "Fri, 18 Sep 2026 07:07:03 GMT",
@@ -846,7 +861,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "美재무부, ‘호르무즈 통항료 징수 도운’ 이란 코인 거래소 제재 마켓인",
+      "description": "美재무부, ‘호르무즈 통항료 징수 도운’ 이란 코인 거래소 제재 marketin.edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -979,7 +994,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Fri, 18 Sep 2026 05:44:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5NUVZ5ckZ6Yk5jeHNFNEQ2WFQ1RThPbmROR1hJTGNSckxva19jV1lKYVY4OEtfM0xUV2tWTnJyVHVLZ3lrcXhPWFA2c0hwUnRsU3NiMXNXeXJlWjdCN1hZ0gFfQVVfeXFMTk1RVnlyRnpiTmN4c0U0RDZYVDVFOE9uZE5HWElMY1JyTG9rX2NXWUphVjg4S18zTFRXa1ZOcnJUdUtneWtxeE9YUDZzSHBSdGxTc2Ixc1d5cmVaN0I3WFk?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1TbTdKOVcyblh0TnlubkNZRFJxZ0dGbUpXQXlXZnQzVnUyOUEwLTVUbTZBWmNvWjNwWk92aFZ3cEMzR2kzS1hFNHhTbGl4V1ZnazlVVkh0ZmZjUdIBX0FVX3lxTE5NUVZ5ckZ6Yk5jeHNFNEQ2WFQ1RThPbmROR1hJTGNSckxva19jV1lKYVY4OEtfM0xUV2tWTnJyVHVLZ3lrcXhPWFA2c0hwUnRsU3NiMXNXeXJlWjdCN1hZ?oc=5",
       "tags": [
         "사기"
       ],
@@ -1159,7 +1174,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Thu, 17 Sep 2026 21:00:00 GMT",
@@ -1168,7 +1183,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU asiae.co.kr",
+      "description": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1465,15 +1480,15 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[단독] 외화계좌로 빼돌린 보이스피싱 피해금 반환 가능해진다",
-      "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
-      "date": "Thu, 17 Sep 2026 08:45:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Nb1QtMTl4MXoxYTA0WDRyMmhBOXNrazlVc0ZmTDFSTGZIaWZ4WUVFd0F6SUU3R19LYnZUeGVyZWhDb2EzOWJaaWxFU2dMT2RLanJDV1hn?oc=5",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Thu, 17 Sep 2026 08:46:41 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5UTzlOdnMtMkI3ei14SEZiOXdCX243LU9fbWtZNWhKVm1USVMzYzZoWXdKRkVWX3NLREE0Wi03RkFuRktKc3c?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "[단독] 외화계좌로 빼돌린 보이스피싱 피해금 반환 가능해진다 헤럴드경제",
+      "description": "[단독] 외화계좌로 빼돌린 보이스피싱 피해금 반환 가능해진다 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -1817,7 +1832,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Thu, 17 Sep 2026 03:49:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9wY3IwUFlqaUp3QkI2VFZ5VDhvbzBHSlpTU3ljTVBXTFJ4UVJZX1Vub2VZVVZnRlk2QzRoXzA2NERWRFdBQnc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5nMkItb2xkMmF4eWhCWGRFYlk5OXBUcTl1c1h4Snp5S0QtT0RHSXVCSFd6RGlpSzl3UWRxRTE1SXdOY1NDR1AwN1RGcXlTX2s?oc=5",
       "tags": [
         "사기"
       ],
@@ -2174,7 +2189,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Thu, 17 Sep 2026 01:10:17 GMT",
@@ -2182,14 +2197,14 @@
       "tags": [
         "사기"
       ],
-      "description": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가 asiae.co.kr",
+      "description": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩]",
-      "source": "segye.com",
+      "source": "세계일보",
       "source_url": "https://www.segye.com",
       "source_domain": "www.segye.com",
       "date": "Thu, 17 Sep 2026 00:20:28 GMT",
@@ -2197,7 +2212,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩] segye.com",
+      "description": "“계좌당 최고 500만원”…지인∙SNS 포섭해 대포통장 유통한 일당 적발 [사건수첩] 세계일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -2650,7 +2665,7 @@
       "source_url": "https://biz.newdaily.co.kr",
       "source_domain": "biz.newdaily.co.kr",
       "date": "Wed, 16 Sep 2026 07:45:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQb1ROVXhKT3RaSmhnWFdJcnJiMUlKd3pVMnRMNFN2dkxEWGJmaEVKbEE3Z3lMQS1OR3BBWG5WOHF1ZjFVQ01NVW41QnpGSUtfNVBmcFN3UTJuZm9JWVpTVVRSZERWLWk4VFhMMjlrakRzTUl6R2hiWm5JUnNkTHllNtIBgAFBVV95cUxQb1ROVXhKT3RaSmhnWFdJcnJiMUlKd3pVMnRMNFN2dkxEWGJmaEVKbEE3Z3lMQS1OR3BBWG5WOHF1ZjFVQ01NVW41QnpGSUtfNVBmcFN3UTJuZm9JWVpTVVRSZERWLWk4VFhMMjlrakRzTUl6R2hiWm5JUnNkTHllNg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBnNEVwcG9rZy1YSXhsT252OE42cnVXeG9NV0NXSGEwb2J0TWpVWTNFb1ZTVUd5Z24wUnh5dFZXUWRkcDJtMHFob3paVW5SWklWZHh4WGRGS2M4NGFyQTRrejFXOC1sY05BeXZRSVduOGpVaGxsV1U3WVFoTdIBgAFBVV95cUxQb1ROVXhKT3RaSmhnWFdJcnJiMUlKd3pVMnRMNFN2dkxEWGJmaEVKbEE3Z3lMQS1OR3BBWG5WOHF1ZjFVQ01NVW41QnpGSUtfNVBmcFN3UTJuZm9JWVpTVVRSZERWLWk4VFhMMjlrakRzTUl6R2hiWm5JUnNkTHllNg?oc=5",
       "tags": [
         "가상자산",
         "마약",
@@ -2749,7 +2764,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Wed, 16 Sep 2026 06:41:49 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE10Tm5fRjI1OXVWbm8zZGRtell5VWp1ZC1MX2twSl81SFc3RzN0bWRnVktaWGZGMjJJM09pM2hfckpXcV9TYlZMTXRFNA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9XQXhBbnpGU1dzUEUxLXBKZ3RUSVFuTm10UWdfbE9xV3pfOWZSOWtPYm5iS0s5ZHd0TVFub0MzcG9sd0dHOGFjeUM3bEltT3lUeXI4dA?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제",
