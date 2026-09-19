@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-19T13:09:49.973711+00:00",
+  "updated_at": "2026-09-19T13:37:48.531270+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "범죄수익",
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,19 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,13 +433,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,19 +457,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 836,
+  "count": 837,
   "official_count": 35,
   "items": [
     {
@@ -534,7 +534,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Sat, 19 Sep 2026 05:03:46 GMT",
@@ -542,7 +542,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년 뉴시스",
+      "description": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -627,7 +627,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "UAE·스웨덴, 700만달러 암호화폐 세탁조직 적발",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Fri, 18 Sep 2026 18:34:00 GMT",
@@ -635,7 +635,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "UAE·스웨덴, 700만달러 암호화폐 세탁조직 적발 토큰포스트",
+      "description": "UAE·스웨덴, 700만달러 암호화폐 세탁조직 적발 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -658,7 +658,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "UAE·스웨덴 공조, 710만달러 규모 자금세탁 조직 적발…7명 체포",
-      "source": "blockmedia.co.kr",
+      "source": "블록미디어",
       "source_url": "https://www.blockmedia.co.kr",
       "source_domain": "www.blockmedia.co.kr",
       "date": "Fri, 18 Sep 2026 15:20:00 GMT",
@@ -666,7 +666,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "UAE·스웨덴 공조, 710만달러 규모 자금세탁 조직 적발…7명 체포 blockmedia.co.kr",
+      "description": "UAE·스웨덴 공조, 710만달러 규모 자금세탁 조직 적발…7명 체포 블록미디어",
       "collection_method": "google_news_24h"
     },
     {
@@ -1240,22 +1240,6 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU",
-      "source": "asiae.co.kr",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Thu, 17 Sep 2026 21:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1UNmxTai1McEEtQzczZkxoQmZkYmMzUDZYUkYzYTBhWkN3RkxBOU53eEFsTjA4ZjA3eUVLeUJVS0xDeU9VRXN0TVNxOEZLZjBOTGdjWGNkcm9tYklaQjlEMA?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU asiae.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
       "title": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화",
       "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
@@ -1267,6 +1251,22 @@
         "자금세탁"
       ],
       "description": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화 이투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Thu, 17 Sep 2026 21:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1UNmxTai1McEEtQzczZkxoQmZkYmMzUDZYUkYzYTBhWkN3RkxBOU53eEFsTjA4ZjA3eUVLeUJVS0xDeU9VRXN0TVNxOEZLZjBOTGdjWGNkcm9tYklaQjlEMA?oc=5",
+      "tags": [
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1319,7 +1319,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "미 재무부, 이란 비트뱅크 제재… “혁명수비대에 비트코인 수억달러”",
-      "source": "blockmedia.co.kr",
+      "source": "블록미디어",
       "source_url": "https://www.blockmedia.co.kr",
       "source_domain": "www.blockmedia.co.kr",
       "date": "Thu, 17 Sep 2026 18:58:00 GMT",
@@ -1328,7 +1328,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "미 재무부, 이란 비트뱅크 제재… “혁명수비대에 비트코인 수억달러” blockmedia.co.kr",
+      "description": "미 재무부, 이란 비트뱅크 제재… “혁명수비대에 비트코인 수억달러” 블록미디어",
       "collection_method": "google_news_24h"
     },
     {
@@ -1442,7 +1442,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "귀금속 및 보석 거래에서의 자금세탁 방지 및 퇴치에 관한 규정을 보급한다.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Thu, 17 Sep 2026 10:31:31 GMT",
@@ -1450,7 +1450,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "귀금속 및 보석 거래에서의 자금세탁 방지 및 퇴치에 관한 규정을 보급한다. Vietnam.vn",
+      "description": "귀금속 및 보석 거래에서의 자금세탁 방지 및 퇴치에 관한 규정을 보급한다. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -1487,7 +1487,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 17 Sep 2026 09:43:32 GMT",
@@ -1495,7 +1495,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속 토큰포스트",
+      "description": "영국 FCA, 런던서 불법 암호화폐 P2P 의심 사업장 8곳 단속 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2166,7 +2166,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속",
-      "source": "뉴스핌",
+      "source": "newspim.com",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Thu, 17 Sep 2026 01:41:00 GMT",
@@ -2174,7 +2174,7 @@
       "tags": [
         "사기"
       ],
-      "description": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속 뉴스핌",
+      "description": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속 newspim.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2270,8 +2270,23 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "이성권, 인력·예산 늘렸는데 피해액 2.3배…NH농협은행 보이스피싱 대응 실효성 도마",
+      "source": "dailyt.co.kr",
+      "source_url": "https://www.dailyt.co.kr",
+      "source_domain": "www.dailyt.co.kr",
+      "date": "Thu, 17 Sep 2026 01:20:55 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ybFZIS25MN1FLVVNwRzdud0Z4RUE1UzZQRGJsZGNSNDRHVk5JTlVhRWRVZ1QyN0J4eGpQdVZZaU5yOE9zbF9qWnlLZUVTVk44R3JLZWtMX2pTcXpVdUE?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "이성권, 인력·예산 늘렸는데 피해액 2.3배…NH농협은행 보이스피싱 대응 실효성 도마 dailyt.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Thu, 17 Sep 2026 01:10:17 GMT",
@@ -2279,7 +2294,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가 asiae.co.kr",
+      "description": "농협은행, 인력·예산 늘었지만 '보이스피싱 피해' 2년 새 2.3배 증가 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -2301,7 +2316,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼]",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Thu, 17 Sep 2026 00:16:09 GMT",
@@ -2311,14 +2326,14 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼] 뉴시스",
+      "description": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼] newsis.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Thu, 17 Sep 2026 00:10:07 GMT",
@@ -2326,7 +2341,7 @@
       "tags": [
         "사기"
       ],
-      "description": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치 뉴시스",
+      "description": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2408,7 +2423,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 16 Sep 2026 15:53:59 GMT",
@@ -2416,7 +2431,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다. Vietnam.vn",
+      "description": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -13295,6 +13310,22 @@
     },
     {
       "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
+      "source": "금융감독원",
+      "date": "2026-07-01T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
       "query": "가상자산",
       "official_source": "금융감독원",
       "official_sources": [
@@ -13306,22 +13337,6 @@
       "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219001&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "보이스피싱 피해자의 불편 해소 및 보호 강화를 위해 금융권 업무 프로세스를 개선하였습니다",
-      "source": "금융감독원",
-      "date": "2026-07-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=218984&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
         "사기"
       ],
       "collection_method": "verified_fss_board"
