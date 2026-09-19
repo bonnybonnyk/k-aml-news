@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T13:37:48.531270+00:00",
+  "updated_at": "2026-09-19T14:09:38.091670+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 16,
+      "count": 15,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,30 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -451,9 +427,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -469,15 +463,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -534,7 +534,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Sat, 19 Sep 2026 05:03:46 GMT",
@@ -542,7 +542,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년 newsis.com",
+      "description": "해군 숙소 관리비 3억6500만원 횡령한 공무직 징역 1년 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -595,7 +595,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판]",
-      "source": "이투데이",
+      "source": "etoday.co.kr",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 18 Sep 2026 22:00:00 GMT",
@@ -604,7 +604,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] 이투데이",
+      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] etoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1240,22 +1240,6 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화",
-      "source": "이투데이",
-      "source_url": "https://www.etoday.co.kr",
-      "source_domain": "www.etoday.co.kr",
-      "date": "Thu, 17 Sep 2026 21:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaSFN6NjZQb2NjNVNIQUJEOFlyaVZBN2JMZDhKSkVTTXdXMl9oRFVTMzZnT3o2VndzOHdiSlFFSjFrS3RZZ05zZW9aU2NWSzFwMDJjRA?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화 이투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
       "title": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU",
       "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
@@ -1267,6 +1251,22 @@
         "자금세탁"
       ],
       "description": "한·타지키스탄, 자금세탁방지 공조 강화…금융정보 교환 MOU 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화",
+      "source": "etoday.co.kr",
+      "source_url": "https://www.etoday.co.kr",
+      "source_domain": "www.etoday.co.kr",
+      "date": "Thu, 17 Sep 2026 21:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBaSFN6NjZQb2NjNVNIQUJEOFlyaVZBN2JMZDhKSkVTTXdXMl9oRFVTMzZnT3o2VndzOHdiSlFFSjFrS3RZZ05zZW9aU2NWSzFwMDJjRA?oc=5",
+      "tags": [
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화 etoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1289,10 +1289,10 @@
       "query": "가상자산 AML",
       "title": "美, ‘호르무즈 통항료’ 암호화폐까지 막았다…이란 돈줄 차단",
       "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
+      "source_url": "https://mbiz.heraldcorp.com",
+      "source_domain": "mbiz.heraldcorp.com",
       "date": "Thu, 17 Sep 2026 20:44:35 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE00VWZtV0tSRE9zUmk0M0lYME8yZXViWjlRMkRubjVKQm95bHZCN3lQNU0tN0RLNUJSZkgtR3RIcEJKZXAtTkh6UzJ3T1NVM2poVExaYVN3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9JbFVUX2MweFBWQTNyNm5xb0NtQ0F3OFhNYzVmUTA1UEpuQVZXZnZxSkxDVDVmeXVnYWhVekttdU5fZ3NOV195OVRNQWRNVjI3SHZfRmQ0RQ?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -1442,7 +1442,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "귀금속 및 보석 거래에서의 자금세탁 방지 및 퇴치에 관한 규정을 보급한다.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Thu, 17 Sep 2026 10:31:31 GMT",
@@ -1450,7 +1450,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "귀금속 및 보석 거래에서의 자금세탁 방지 및 퇴치에 관한 규정을 보급한다. vietnam.vn",
+      "description": "귀금속 및 보석 거래에서의 자금세탁 방지 및 퇴치에 관한 규정을 보급한다. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -1547,15 +1547,15 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[단독] 외화계좌로 빼돌린 보이스피싱 피해금 반환 가능해진다",
-      "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
-      "date": "Thu, 17 Sep 2026 08:45:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Nb1QtMTl4MXoxYTA0WDRyMmhBOXNrazlVc0ZmTDFSTGZIaWZ4WUVFd0F6SUU3R19LYnZUeGVyZWhDb2EzOWJaaWxFU2dMT2RLanJDV1hn?oc=5",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Thu, 17 Sep 2026 08:46:41 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5UTzlOdnMtMkI3ei14SEZiOXdCX243LU9fbWtZNWhKVm1USVMzYzZoWXdKRkVWX3NLREE0Wi03RkFuRktKc3c?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "[단독] 외화계좌로 빼돌린 보이스피싱 피해금 반환 가능해진다 헤럴드경제",
+      "description": "[단독] 외화계좌로 빼돌린 보이스피싱 피해금 반환 가능해진다 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -2166,7 +2166,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속",
-      "source": "newspim.com",
+      "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Thu, 17 Sep 2026 01:41:00 GMT",
@@ -2174,7 +2174,7 @@
       "tags": [
         "사기"
       ],
-      "description": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속 newspim.com",
+      "description": "부산경찰, 중국 거점 보이스피싱 조직 67명 검거·17명 구속 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
@@ -2316,7 +2316,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼]",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Thu, 17 Sep 2026 00:16:09 GMT",
@@ -2326,22 +2326,22 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼] newsis.com",
+      "description": "FIU, 범죄 의심 계좌 선제적 거래정지 추진…스테이블코인도 자금세탁 규제[뉴시스 가상자산포럼] 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치",
-      "source": "newsis.com",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Thu, 17 Sep 2026 00:10:07 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9BQXFiZW04d2lMYVYyY2NkbTJnYnMxWU9nLXMtSEpoVzcwck1UQXRNSm1aUDVlSU1HVURwaXBVdEtubXJRNURhYnh1TGRIUWw2Rm1mUFpEYl9mWE51REozRUxBOURONk15WlpQUWJwaUR0X1J1QnFRS9IBeEFVX3lxTE9BQXFiZW04d2lMYVYyY2NkbTJnYnMxWU9nLXMtSEpoVzcwck1UQXRNSm1aUDVlSU1HVURwaXBVdEtubXJRNURhYnh1TGRIUWw2Rm1mUFpEYl9mWE51REozRUxBOURONk15WlpQUWJwaUR0X1J1QnFRSw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5XdUs3UVZoSVpTemhlQ2ZHakIzNmVXVTNERGZ4TFQ0aERZamlVaW1XTDZyVFl0S0VrMFlWYTdYbU1ZdTNwX3paeXJUWmVMTi1DaXR4bGw2WDVfemdZdTIxcNIBeEFVX3lxTE9BQXFiZW04d2lMYVYyY2NkbTJnYnMxWU9nLXMtSEpoVzcwck1UQXRNSm1aUDVlSU1HVURwaXBVdEtubXJRNURhYnh1TGRIUWw2Rm1mUFpEYl9mWE51REozRUxBOURONk15WlpQUWJwaUR0X1J1QnFRSw?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치 newsis.com",
+      "description": "대구경찰, SNS로 대포통장 모집·범죄조직 공급 17명 구속 송치 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -2423,7 +2423,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 16 Sep 2026 15:53:59 GMT",
@@ -2431,7 +2431,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다. vietnam.vn",
+      "description": "금·보석 사업 분야의 자금세탁 방지 및 근절 조치를 강화합니다. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
