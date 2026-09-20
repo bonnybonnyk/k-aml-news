@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-20T03:40:12.211745+00:00",
+  "updated_at": "2026-09-20T04:10:03.243784+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 14
+      "count": 16
     },
     {
       "feed": "불법사금융",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 10,
+      "count": 11,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -217,7 +217,7 @@
     {
       "feed": "출처집중:segye.com",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -415,13 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,12 +445,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
@@ -457,13 +457,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -495,9 +495,56 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 867,
+  "count": 870,
   "official_count": 35,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "“환율 더 쳐드릴게요” 믿었다가…남은 달러 팔고 보이스피싱 자금세탁 연루",
+      "source": "매일경제",
+      "source_url": "https://www.mk.co.kr",
+      "source_domain": "www.mk.co.kr",
+      "date": "Sun, 20 Sep 2026 04:06:16 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0ySTJnNXpvS2UxcWNaMmUzQWZMbnJ6b2pJUnlNT1V2dVBtTTVianh1cWpZYlJiRGJGN19Rb2h3V0wwTWJ0UjVNdTJGN3FlLXBsZV93UQ?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "“환율 더 쳐드릴게요” 믿었다가…남은 달러 팔고 보이스피싱 자금세탁 연루 매일경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "터키, 가상자산·외환 사기 용의자 201명 구금",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Sun, 20 Sep 2026 04:04:35 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE95ckRrOFZ1UE5rdUdaVGM0UEROZ0dFRkMwaXBnR3ZsZFVmYWdpbVVnUlQ5NjlnNnJ2QXB2RDdRMTY3bXNTRjJrNjhVMHB6M0ZNSFJmYXhoeVE?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "터키, 가상자산·외환 사기 용의자 201명 구금 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "추석 앞두고 택배 오배송·교통 과태료 문자? 금융당국 \"보이스피싱 주의\"",
+      "source": "한국일보",
+      "source_url": "https://www.hankookilbo.com",
+      "source_domain": "www.hankookilbo.com",
+      "date": "Sun, 20 Sep 2026 03:35:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9YTno0WWVYYVhZWkRYTVdDUjlmWTVLRFpQVDZhSnQ2Nld6UWk2UmdTNXlBUk1wMnpMb2NhN3kyNDFlelk5T1lWd2JNWVZUSUxiZHVBRUxjcXdnYTNQWHJCMFRqTGVtVFM3X2k1cWFB0gFzQVVfeXFMT3hOY2dnaFlJcXkwZjVMTWJ5TDNLTGQ0QmtKNHh0MnlyWVlLMGdyQjkwS05vREdpYXVKWDRCSkpueWRHQUctWkNYT3VCSnF3U1hxaEhJSHlNS2JFWFAzaE5iV1ZLRnA1aWNnbkJ6eTNCWkJDNA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "추석 앞두고 택배 오배송·교통 과태료 문자? 금융당국 \"보이스피싱 주의\" 한국일보",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -622,7 +669,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
-      "source": "이투데이",
+      "source": "etoday.co.kr",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -630,7 +677,7 @@
       "tags": [
         "사기"
       ],
-      "description": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승 이투데이",
+      "description": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승 etoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -641,7 +688,7 @@
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Sun, 20 Sep 2026 02:28:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUkxscFVCdUJGbEJCTi0tWm9hSHF2VTRkVW16UHloUUF3Y0l3V3BIOVlmT01uUE5ZZDdsTEFRd1pFOGNENTFBYmY4bU9QUy1DQnZ1azhLWnJubG1MWmhadnpUWTVZVGtvTHVzX1h1Y21nX1oyT09UVnFEWjBSVk5ydW0tMFFsczY2dzZEMHAzc3RRYWtvaUptcGM2VmUtSmV6ZGNiRFBNdHhFd9IBX0FVX3lxTFByVUNoR2Z4SUpzd1ZIaC1EZGJzMXdPcGQ0QWZyMDJCM1lROF9iQlI1SWY1akZuU3MtNXZfZk9KT3NGa0xJdkJNX1MyNXlpTjhUblotMWNrcHdxRUI1U3Fr?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Ub3dJeWRBdFZqSEpIOEdic2NyNnR1aTlFdU1qRHdDQmtZZmtqSHRxWWFqN1BXa0stZFBwVV92RW5QbThlYUpFYjAzdUxiaGN2bnhiWnpvcEpVQdIBX0FVX3lxTFByVUNoR2Z4SUpzd1ZIaC1EZGJzMXdPcGQ0QWZyMDJCM1lROF9iQlI1SWY1akZuU3MtNXZfZk9KT3NGa0xJdkJNX1MyNXlpTjhUblotMWNrcHdxRUI1U3Fr?oc=5",
       "tags": [
         "자금세탁"
       ],
@@ -946,8 +993,8 @@
       "source": "미주조선일보",
       "source_url": "https://chosundaily.com",
       "source_domain": "chosundaily.com",
-      "date": "Sat, 19 Sep 2026 09:23:51 GMT",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNc0NsckwxclVwYkVvZkFMWW0wNG5GMHUtRm9jWnBMWDd0RXhJQ2Frb3VjVmdSZWtzQ3ZzdEdlbVFQb3A1M1dUYl9Zb0x6dFpDLUdleHpvTW8zdmVTUzNkbkNlM0xPLUxfWFp1N2dCYzA2Q1dkbUNMd2tfVlRXUFhCRkF4QVdIZWpjMVVMNzVLU1RLU2I5a2JmRGswbURWcTBIUDNfanZUQkFKY0ZobVhhMF9EWEFab1ZmVkx3and2bw?oc=5",
+      "date": "Sat, 19 Sep 2026 10:33:20 GMT",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNaW01REJhTnduRXJNb0dIQVlhNGUtZ2ZsU2lBZlRKZXZCWElBV1ItQW9LV0NNNUhuN1h0Q1lQV1hNUDROY2htOGp3WnR6bUdJSjVGUEd4dVZxbkZxZGxHaUlZSWpTOFYtamRTcFpNMHlhdWhXMFAweXNXdEZiMG1MR3N1bS1NU0lFZlNqLUVXVFZKX1Rodjc3RnlpbXc1amFmWWF6R2Vtd2Zhd3lw?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -1052,7 +1099,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판]",
-      "source": "이투데이",
+      "source": "etoday.co.kr",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 18 Sep 2026 22:00:00 GMT",
@@ -1061,7 +1108,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] 이투데이",
+      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] etoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1728,7 +1775,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화",
-      "source": "이투데이",
+      "source": "etoday.co.kr",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Thu, 17 Sep 2026 21:00:00 GMT",
@@ -1737,7 +1784,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화 이투데이",
+      "description": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화 etoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1745,10 +1792,10 @@
       "query": "가상자산 AML",
       "title": "美, ‘호르무즈 통항료’ 암호화폐까지 막았다…이란 돈줄 차단",
       "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
+      "source_url": "https://mbiz.heraldcorp.com",
+      "source_domain": "mbiz.heraldcorp.com",
       "date": "Thu, 17 Sep 2026 20:44:35 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE00VWZtV0tSRE9zUmk0M0lYME8yZXViWjlRMkRubjVKQm95bHZCN3lQNU0tN0RLNUJSZkgtR3RIcEJKZXAtTkh6UzJ3T1NVM2poVExaYVN3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9JbFVUX2MweFBWQTNyNm5xb0NtQ0F3OFhNYzVmUTA1UEpuQVZXZnZxSkxDVDVmeXVnYWhVekttdU5fZ3NOV195OVRNQWRNVjI3SHZfRmQ0RQ?oc=5",
       "tags": [
         "가상자산"
       ],
