@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-20T04:10:03.243784+00:00",
+  "updated_at": "2026-09-20T04:39:45.409829+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 5
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 16
+      "count": 18
     },
     {
       "feed": "불법사금융",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "탈세",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 11,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -415,21 +415,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -445,13 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -481,6 +475,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 15,
@@ -495,23 +495,23 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 870,
+  "count": 871,
   "official_count": 35,
   "items": [
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "“환율 더 쳐드릴게요” 믿었다가…남은 달러 팔고 보이스피싱 자금세탁 연루",
-      "source": "매일경제",
-      "source_url": "https://www.mk.co.kr",
-      "source_domain": "www.mk.co.kr",
-      "date": "Sun, 20 Sep 2026 04:06:16 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0ySTJnNXpvS2UxcWNaMmUzQWZMbnJ6b2pJUnlNT1V2dVBtTTVianh1cWpZYlJiRGJGN19Rb2h3V0wwTWJ0UjVNdTJGN3FlLXBsZV93UQ?oc=5",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Sun, 20 Sep 2026 04:09:02 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9GWml3ajZoY24xUUs2UGZZMWhna2VJWk45V3V0dWlWMk5SV1FpSnR5MWY3blV5OW4wMG1tYVJyVnZDeEVrTG1zMm9LZmRXa2c?oc=5",
       "tags": [
         "사기",
         "자금세탁"
       ],
-      "description": "“환율 더 쳐드릴게요” 믿었다가…남은 달러 팔고 보이스피싱 자금세탁 연루 매일경제",
+      "description": "“환율 더 쳐드릴게요” 믿었다가…남은 달러 팔고 보이스피싱 자금세탁 연루 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -543,6 +543,21 @@
         "사기"
       ],
       "description": "추석 앞두고 택배 오배송·교통 과태료 문자? 금융당국 \"보이스피싱 주의\" 한국일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "SK텔레콤, AI로 보이스피싱부터 돌봄까지…‘사회적가치 페스타’서 11가지 혁신 사례 공개",
+      "source": "cwn.kr",
+      "source_url": "https://www.cwn.kr",
+      "source_domain": "www.cwn.kr",
+      "date": "Sun, 20 Sep 2026 03:32:27 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9nRDA3ZDlBdzdIdUFOX3NxRGtIR0lZM3VJdFBpYUQ1NG1rRk5TRWdoTXBsVVk0djE1Q3c0cWJtdTEzNG1TVHdFTEZTWWl5MnlobHRNX3JpRU12UU9NMUdGMW5n?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "SK텔레콤, AI로 보이스피싱부터 돌봄까지…‘사회적가치 페스타’서 11가지 혁신 사례 공개 cwn.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -655,10 +670,10 @@
       "query": "보이스피싱",
       "title": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\"",
       "source": "뉴시스",
-      "source_url": "https://www.newsis.com",
-      "source_domain": "www.newsis.com",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBxN2pUeXN5NnE0d1UwQm1UTm52ZThRdEtGUDBSM2JNVUNpOXRoVXl6c0pEOFpUeDhDaXNqT3RnbE9CdDZnMVVrOC1hcW1CNUtoM3VGY1F6X3dmbkJUaFU1T9IBeEFVX3lxTE1JQ1RZUVhpUDFJRTJLZThSVUFqY3JqbG85bmk0dkh2b0JCNDNKOGFTUW5EUURZbzNFS3VKcVYxcFhnRkM2SFp2Tm9DUm56X2NqLS00dmttNXU5N1R1ZFE0LXpsS0NwZTZ6ZE1OemxZT2dDdkxrVThJSw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JQ1RZUVhpUDFJRTJLZThSVUFqY3JqbG85bmk0dkh2b0JCNDNKOGFTUW5EUURZbzNFS3VKcVYxcFhnRkM2SFp2Tm9DUm56X2NqLS00dmttNXU5N1R1ZFE0LXpsS0NwZTZ6ZE1OemxZT2dDdkxrVThJS9IBeEFVX3lxTE1JQ1RZUVhpUDFJRTJLZThSVUFqY3JqbG85bmk0dkh2b0JCNDNKOGFTUW5EUURZbzNFS3VKcVYxcFhnRkM2SFp2Tm9DUm56X2NqLS00dmttNXU5N1R1ZFE0LXpsS0NwZTZ6ZE1OemxZT2dDdkxrVThJSw?oc=5",
       "tags": [
         "사기"
       ],
@@ -669,7 +684,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -677,7 +692,7 @@
       "tags": [
         "사기"
       ],
-      "description": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승 etoday.co.kr",
+      "description": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승 이투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -744,6 +759,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다",
+      "source": "유니콘팩토리",
+      "source_url": "https://www.unicornfactory.co.kr",
+      "source_domain": "www.unicornfactory.co.kr",
+      "date": "Sun, 20 Sep 2026 00:55:43 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aVjlaMVBUZm1YeXZPY3NTY3pXcGlQSU1Sd05iMElrSGJ0TFRVdmFXTktaSmZ4V200aVR4WmhQVjFMTDg5aTdES04wT3FHdDItMkNiclozd3d1SkxmcUNKQ1hGMTRWTS02NUxDRQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 유니콘팩토리",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이",
       "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
@@ -754,21 +784,6 @@
         "사기"
       ],
       "description": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이 머니투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다",
-      "source": "머니투데이",
-      "source_url": "https://www.mt.co.kr",
-      "source_domain": "www.mt.co.kr",
-      "date": "Sun, 20 Sep 2026 00:55:43 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAwaUR4dWM4SEpzQk9JM2lyMDB3ZU5GQWlicVlCVDJ1cy1tSVI2RlNrVk9WRnlKM2RHajRJMHB0amJSY3FrVXMyTjViOWxZZHVGdUlmNDA1czNuOTFRWk15bnlERWtjeG8?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -790,7 +805,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "'뇌물 마약사범에 수사 상황 알려' 관세청 특사경 징역 9년",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Sun, 20 Sep 2026 00:00:08 GMT",
@@ -798,7 +813,7 @@
       "tags": [
         "마약"
       ],
-      "description": "'뇌물 마약사범에 수사 상황 알려' 관세청 특사경 징역 9년 연합뉴스",
+      "description": "'뇌물 마약사범에 수사 상황 알려' 관세청 특사경 징역 9년 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -940,7 +955,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\"",
-      "source": "coinreaders.com",
+      "source": "코인리더스",
       "source_url": "https://www.coinreaders.com",
       "source_domain": "www.coinreaders.com",
       "date": "Sat, 19 Sep 2026 12:00:00 GMT",
@@ -949,14 +964,14 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\" coinreaders.com",
+      "description": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\" 코인리더스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "자금횡령, 테더장, 이더리움자금세탁, 통장후기, 테더통장, 피싱돈세탁, 테더장, 대포장판매",
-      "source": "헬로디디",
+      "source": "hellodd.com",
       "source_url": "https://www.hellodd.com",
       "source_domain": "www.hellodd.com",
       "date": "Sat, 19 Sep 2026 11:05:36 GMT",
@@ -966,14 +981,14 @@
         "횡령·배임",
         "자금세탁"
       ],
-      "description": "자금횡령, 테더장, 이더리움자금세탁, 통장후기, 테더통장, 피싱돈세탁, 테더장, 대포장판매 헬로디디",
+      "description": "자금횡령, 테더장, 이더리움자금세탁, 통장후기, 테더통장, 피싱돈세탁, 테더장, 대포장판매 hellodd.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "공금횡령, 피싱돈세탁, 자금횡령, 재정거래세탁대행, 테더장파는곳, 외화밀반출, 법인장, 대포장판매",
-      "source": "헬로디디",
+      "source": "hellodd.com",
       "source_url": "https://www.hellodd.com",
       "source_domain": "www.hellodd.com",
       "date": "Sat, 19 Sep 2026 11:05:01 GMT",
@@ -983,7 +998,7 @@
         "횡령·배임",
         "자금세탁"
       ],
-      "description": "공금횡령, 피싱돈세탁, 자금횡령, 재정거래세탁대행, 테더장파는곳, 외화밀반출, 법인장, 대포장판매 헬로디디",
+      "description": "공금횡령, 피싱돈세탁, 자금횡령, 재정거래세탁대행, 테더장파는곳, 외화밀반출, 법인장, 대포장판매 hellodd.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1099,7 +1114,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판]",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 18 Sep 2026 22:00:00 GMT",
@@ -1108,7 +1123,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] etoday.co.kr",
+      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] 이투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1484,7 +1499,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "인력·예산 늘렸는데... NH농협은행, 보이스피싱 피해 2배 [국회 방청석]",
-      "source": "매일경제",
+      "source": "mk.co.kr",
       "source_url": "https://www.mk.co.kr",
       "source_domain": "www.mk.co.kr",
       "date": "Fri, 18 Sep 2026 06:25:49 GMT",
@@ -1492,7 +1507,7 @@
       "tags": [
         "사기"
       ],
-      "description": "인력·예산 늘렸는데... NH농협은행, 보이스피싱 피해 2배 [국회 방청석] 매일경제",
+      "description": "인력·예산 늘렸는데... NH농협은행, 보이스피싱 피해 2배 [국회 방청석] mk.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1775,7 +1790,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Thu, 17 Sep 2026 21:00:00 GMT",
@@ -1784,7 +1799,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화 etoday.co.kr",
+      "description": "한ㆍ타지키스탄, 의심거래정보 공유한다⋯자금세탁 공조 강화 이투데이",
       "collection_method": "google_news_24h"
     },
     {
