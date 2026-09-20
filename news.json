@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-20T23:08:51.766373+00:00",
+  "updated_at": "2026-09-20T23:36:12.290223+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 32
+      "count": 30
     },
     {
       "feed": "불법사금융",
@@ -85,13 +85,13 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 1,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -103,13 +103,13 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 2,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,13 +415,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,18 +451,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
@@ -458,12 +458,6 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -478,6 +472,12 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -667,7 +667,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야”",
-      "source": "세계비즈",
+      "source": "segyebiz.com",
       "source_url": "http://www.segyebiz.com",
       "source_domain": "www.segyebiz.com",
       "date": "Sun, 20 Sep 2026 05:35:59 GMT",
@@ -675,7 +675,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야” 세계비즈",
+      "description": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야” segyebiz.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -909,21 +909,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
       "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
@@ -949,6 +934,21 @@
         "사기"
       ],
       "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
+      "source": "dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1106,7 +1106,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 불법 성인PC방 387건 적발…범죄수익 52억 몰수 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Sun, 20 Sep 2026 00:00:00 GMT",
@@ -1114,7 +1114,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 불법 성인PC방 387건 적발…범죄수익 52억 몰수 - 머니투데이 mt.co.kr",
+      "description": "경찰, 불법 성인PC방 387건 적발…범죄수익 52억 몰수 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
