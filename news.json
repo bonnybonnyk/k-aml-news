@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T22:09:09.772685+00:00",
+  "updated_at": "2026-09-20T22:38:12.290377+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 9,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 28,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,19 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,19 +427,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -446,6 +458,12 @@
     },
     {
       "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -771,7 +789,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야”",
-      "source": "donga.com",
+      "source": "동아일보",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Sun, 20 Sep 2026 03:12:12 GMT",
@@ -779,7 +797,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야” donga.com",
+      "description": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야” 동아일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -832,7 +850,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 후 남은 달러 팔려다가 ‘범죄 자금세탁’ 연루···“금융사 통해야 안전”",
-      "source": "경향신문",
+      "source": "khan.co.kr",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -840,7 +858,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 후 남은 달러 팔려다가 ‘범죄 자금세탁’ 연루···“금융사 통해야 안전” 경향신문",
+      "description": "여행 후 남은 달러 팔려다가 ‘범죄 자금세탁’ 연루···“금융사 통해야 안전” khan.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -877,7 +895,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 불법 성인PC방 ‘꼼수영업’ 387건 단속…범죄수익 52억 몰수",
-      "source": "경향신문",
+      "source": "khan.co.kr",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Sun, 20 Sep 2026 02:28:00 GMT",
@@ -885,14 +903,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 불법 성인PC방 ‘꼼수영업’ 387건 단속…범죄수익 52억 몰수 경향신문",
+      "description": "경찰, 불법 성인PC방 ‘꼼수영업’ 387건 단속…범죄수익 52억 몰수 khan.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표상 157명 검거…범죄수익 20억원 몰수·추징 보전 조치",
-      "source": "stvnews.kr",
+      "source": "서울STV뉴스",
       "source_url": "https://www.stvnews.kr",
       "source_domain": "www.stvnews.kr",
       "date": "Sun, 20 Sep 2026 02:26:52 GMT",
@@ -900,7 +918,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표상 157명 검거…범죄수익 20억원 몰수·추징 보전 조치 stvnews.kr",
+      "description": "경찰, 매크로 암표상 157명 검거…범죄수익 20억원 몰수·추징 보전 조치 서울STV뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1013,7 +1031,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"보이스피싱 잡고 취약계층 살피고\"...SKT가 선보이는 생활 속 AI",
-      "source": "지디넷코리아",
+      "source": "zdnet.co.kr",
       "source_url": "https://zdnet.co.kr",
       "source_domain": "zdnet.co.kr",
       "date": "Sun, 20 Sep 2026 00:00:02 GMT",
@@ -1021,7 +1039,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"보이스피싱 잡고 취약계층 살피고\"...SKT가 선보이는 생활 속 AI 지디넷코리아",
+      "description": "\"보이스피싱 잡고 취약계층 살피고\"...SKT가 선보이는 생활 속 AI zdnet.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1043,7 +1061,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "SKT ‘선한 AI’ 구체화…보이스피싱·돌봄 등 11개 사례 공개",
-      "source": "itdaily.kr",
+      "source": "아이티데일리",
       "source_url": "https://www.itdaily.kr",
       "source_domain": "www.itdaily.kr",
       "date": "Sun, 20 Sep 2026 00:00:00 GMT",
@@ -1051,7 +1069,7 @@
       "tags": [
         "사기"
       ],
-      "description": "SKT ‘선한 AI’ 구체화…보이스피싱·돌봄 등 11개 사례 공개 itdaily.kr",
+      "description": "SKT ‘선한 AI’ 구체화…보이스피싱·돌봄 등 11개 사례 공개 아이티데일리",
       "collection_method": "google_news_24h"
     },
     {
@@ -1163,7 +1181,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\"",
-      "source": "coinreaders.com",
+      "source": "코인리더스",
       "source_url": "https://www.coinreaders.com",
       "source_domain": "www.coinreaders.com",
       "date": "Sat, 19 Sep 2026 12:00:00 GMT",
@@ -1172,7 +1190,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\" coinreaders.com",
+      "description": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\" 코인리더스",
       "collection_method": "google_news_24h"
     },
     {
@@ -13523,22 +13541,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -13554,6 +13556,22 @@
         "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
