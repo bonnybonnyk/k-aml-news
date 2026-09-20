@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-20T22:38:12.290377+00:00",
+  "updated_at": "2026-09-20T23:08:51.766373+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 30
+      "count": 32
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "환치기·외환",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,12 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -428,6 +422,18 @@
     },
     {
       "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,18 +451,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
@@ -469,13 +463,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 879,
+  "count": 883,
   "official_count": 35,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영",
+      "source": "글로벌이코노믹",
+      "source_url": "https://www.g-enews.com",
+      "source_domain": "www.g-enews.com",
+      "date": "Sun, 20 Sep 2026 22:49:14 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbzUxUlZIMkMxU2htQUpuOGdnMVVpNDhhak1ERnI0VnJIaUpWUmlfNldQUTBNdy1NOU5QVm5Za0xRWGNtbVF1MFJfdW5NTHc4eWZRWXhMUERYWnFubkxGVDB6aDZQNUF0N2hyN3JpbFNPTnB2akdCNHhRcHZxT2ItQ0x4dGJKWUZf?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 글로벌이코노믹",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -511,6 +526,21 @@
         "사기"
       ],
       "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "VMS 투자사기 의혹 박가람씨 한국서 구속",
+      "source": "미주조선일보",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Sun, 20 Sep 2026 21:06:06 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9HRVIxSTFKajlnUTliNW5qc3M3SC1XZ0RsYS1JMFBmN1dVUzNnYXZsX3N2T0hHWjdzT1YwZmVuTnVlZnlwazNTZllMX1c3SFRoUHNoY2k4ajJIcW1qaFRRdG1HeDJhNEx2OFY3bDJ0M0pWakJKRnc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "VMS 투자사기 의혹 박가람씨 한국서 구속 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -646,6 +676,21 @@
         "사기"
       ],
       "description": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야” 세계비즈",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 피해 5870억인데 보험금 지급 9건…은행권 보상 ‘유명무실’",
+      "source": "dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
+      "date": "Sun, 20 Sep 2026 05:01:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPVDF6MzRORXZnUXFmalRLUmVXRWVxc0lYRjc3aUxWUzVPYm9aYkVsLUZIekpZRWVKdDJFMzJZdnlvTmsxOEVjaTY3WGw5X20yOTF6bUpWbWpZZlgtaU5QR3JVVy1KRWJMWkJKMUMxZEtJb1F5RkMtVzNYLVFxZjExN25SejA1eGhnOU9NY2tucmFOUHZ1UWlWdTNoZFBWVkxPbi1jU2trODNYbWQ2Umw3Z3dWazJYdXZCbTJlTXViMm83QkJEWmYxNXc2VWUzVU1qZEVGSGk3akJNU1FGaEdDcUdUdm1SMjgwMEhueEJjOTdRZEgzUEQ1dzV1bXMyTmY5cXFv?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 피해 5870억인데 보험금 지급 9건…은행권 보상 ‘유명무실’ dailian.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -864,6 +909,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
+      "source": "dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
       "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
@@ -956,7 +1016,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이",
-      "source": "머니투데이",
+      "source": "mt.co.kr",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Sun, 20 Sep 2026 00:55:43 GMT",
@@ -964,7 +1024,7 @@
       "tags": [
         "사기"
       ],
-      "description": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이 머니투데이",
+      "description": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이 mt.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -986,7 +1046,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "불법 성인 PC방 3주 단속에 387건 적발…범죄수익 52억원 보전 신청",
-      "source": "callnews.co.kr",
+      "source": "콜뉴스24",
       "source_url": "https://www.callnews.co.kr",
       "source_domain": "www.callnews.co.kr",
       "date": "Sun, 20 Sep 2026 00:03:57 GMT",
@@ -994,7 +1054,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "불법 성인 PC방 3주 단속에 387건 적발…범죄수익 52억원 보전 신청 callnews.co.kr",
+      "description": "불법 성인 PC방 3주 단속에 387건 적발…범죄수익 52억원 보전 신청 콜뉴스24",
       "collection_method": "google_news_24h"
     },
     {
@@ -1031,7 +1091,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"보이스피싱 잡고 취약계층 살피고\"...SKT가 선보이는 생활 속 AI",
-      "source": "zdnet.co.kr",
+      "source": "지디넷코리아",
       "source_url": "https://zdnet.co.kr",
       "source_domain": "zdnet.co.kr",
       "date": "Sun, 20 Sep 2026 00:00:02 GMT",
@@ -1039,14 +1099,14 @@
       "tags": [
         "사기"
       ],
-      "description": "\"보이스피싱 잡고 취약계층 살피고\"...SKT가 선보이는 생활 속 AI zdnet.co.kr",
+      "description": "\"보이스피싱 잡고 취약계층 살피고\"...SKT가 선보이는 생활 속 AI 지디넷코리아",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 불법 성인PC방 387건 적발…범죄수익 52억 몰수 - 머니투데이",
-      "source": "머니투데이",
+      "source": "mt.co.kr",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Sun, 20 Sep 2026 00:00:00 GMT",
@@ -1054,14 +1114,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 불법 성인PC방 387건 적발…범죄수익 52억 몰수 - 머니투데이 머니투데이",
+      "description": "경찰, 불법 성인PC방 387건 적발…범죄수익 52억 몰수 - 머니투데이 mt.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "SKT ‘선한 AI’ 구체화…보이스피싱·돌봄 등 11개 사례 공개",
-      "source": "아이티데일리",
+      "source": "itdaily.kr",
       "source_url": "https://www.itdaily.kr",
       "source_domain": "www.itdaily.kr",
       "date": "Sun, 20 Sep 2026 00:00:00 GMT",
@@ -1069,7 +1129,7 @@
       "tags": [
         "사기"
       ],
-      "description": "SKT ‘선한 AI’ 구체화…보이스피싱·돌봄 등 11개 사례 공개 아이티데일리",
+      "description": "SKT ‘선한 AI’ 구체화…보이스피싱·돌봄 등 11개 사례 공개 itdaily.kr",
       "collection_method": "google_news_24h"
     },
     {
