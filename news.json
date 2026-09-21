@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T14:10:17.163056+00:00",
+  "updated_at": "2026-09-21T14:40:36.442678+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 11
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "환치기·외환",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,18 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -427,6 +433,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
@@ -436,6 +454,12 @@
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -454,12 +478,6 @@
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -499,7 +517,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 21 Sep 2026 10:52:16 GMT",
@@ -508,7 +526,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금 tokenpost.kr",
+      "description": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -745,7 +763,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전",
-      "source": "policetv.co.kr",
+      "source": "폴리스TV",
       "source_url": "http://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Mon, 21 Sep 2026 03:25:36 GMT",
@@ -753,14 +771,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 policetv.co.kr",
+      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 폴리스TV",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
@@ -769,7 +787,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 연합뉴스",
+      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1142,7 +1160,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의",
-      "source": "라온신문",
+      "source": "raonnews.com",
       "source_url": "https://www.raonnews.com",
       "source_domain": "www.raonnews.com",
       "date": "Sun, 20 Sep 2026 04:10:47 GMT",
@@ -1150,7 +1168,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 라온신문",
+      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 raonnews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1339,21 +1357,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
-      "source": "아시아경제",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83TVJTUXVOMnl4OHozdnZPX3MtakpIU1hHUXdXRTlIRmxQUVkzcWhJMU50eGRwWEF3dGNuMkQ1N3BSRjFXUHJGeTlOSDRKaDd1OVlXLV9IZ1k0LURBaHlZWA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
       "source": "dailian.co.kr",
       "source_url": "https://www.dailian.co.kr",
@@ -1364,6 +1367,21 @@
         "사기"
       ],
       "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83TVJTUXVOMnl4OHozdnZPX3MtakpIU1hHUXdXRTlIRmxQUVkzcWhJMU50eGRwWEF3dGNuMkQ1N3BSRjFXUHJGeTlOSDRKaDd1OVlXLV9IZ1k0LURBaHlZWA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1813,7 +1831,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“코인으로 빼돌린 피해금 잡는다” 디지털자산거래소, 보이스피싱 핫라인 구축 [크립토360]",
-      "source": "헤럴드경제",
+      "source": "biz.heraldcorp.com",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sat, 19 Sep 2026 02:00:00 GMT",
@@ -1822,7 +1840,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "“코인으로 빼돌린 피해금 잡는다” 디지털자산거래소, 보이스피싱 핫라인 구축 [크립토360] 헤럴드경제",
+      "description": "“코인으로 빼돌린 피해금 잡는다” 디지털자산거래소, 보이스피싱 핫라인 구축 [크립토360] biz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
