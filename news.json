@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T13:09:29.740315+00:00",
+  "updated_at": "2026-09-21T13:39:53.240224+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -30,7 +30,7 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "보이스피싱",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "환치기·외환",
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,6 +415,24 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -427,37 +445,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,13 +469,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -517,7 +517,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 21 Sep 2026 10:52:16 GMT",
@@ -526,7 +526,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금 토큰포스트",
+      "description": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -579,7 +579,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져",
-      "source": "tradersunion.com",
+      "source": "Traders Union",
       "source_url": "https://tradersunion.com",
       "source_domain": "tradersunion.com",
       "date": "Mon, 21 Sep 2026 08:37:28 GMT",
@@ -587,14 +587,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져 tradersunion.com",
+      "description": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져 Traders Union",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도",
-      "source": "서울경제",
+      "source": "sedaily.com",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Mon, 21 Sep 2026 08:33:58 GMT",
@@ -602,7 +602,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도 서울경제",
+      "description": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도 sedaily.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -639,7 +639,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "허위 사실 유튜버 범죄수익 억대… 경찰 기소 전 추징 보전 인용",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "source_url": "https://m.mk.co.kr",
       "source_domain": "m.mk.co.kr",
       "date": "Mon, 21 Sep 2026 06:45:02 GMT",
@@ -647,7 +647,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "허위 사실 유튜버 범죄수익 억대… 경찰 기소 전 추징 보전 인용 mk.co.kr",
+      "description": "허위 사실 유튜버 범죄수익 억대… 경찰 기소 전 추징 보전 인용 매일경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -670,7 +670,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산",
-      "source": "tradersunion.com",
+      "source": "Traders Union",
       "source_url": "https://tradersunion.com",
       "source_domain": "tradersunion.com",
       "date": "Mon, 21 Sep 2026 06:15:19 GMT",
@@ -678,7 +678,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산 tradersunion.com",
+      "description": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산 Traders Union",
       "collection_method": "google_news_24h"
     },
     {
@@ -763,7 +763,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전",
-      "source": "policetv.co.kr",
+      "source": "폴리스TV",
       "source_url": "http://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Mon, 21 Sep 2026 03:25:36 GMT",
@@ -771,14 +771,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 policetv.co.kr",
+      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 폴리스TV",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
@@ -787,7 +787,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 yna.co.kr",
+      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -842,7 +842,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거",
-      "source": "서울경제",
+      "source": "sedaily.com",
       "source_url": "https://m.sedaily.com",
       "source_domain": "m.sedaily.com",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -851,7 +851,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거 서울경제",
+      "description": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거 sedaily.com",
       "collection_method": "google_news_24h"
     },
     {
