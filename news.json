@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T22:39:20.898753+00:00",
+  "updated_at": "2026-09-21T23:09:28.988290+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -40,12 +40,12 @@
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 8
+      "count": 7
     },
     {
       "feed": "환치기·외환",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -409,13 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,6 +451,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
@@ -442,12 +466,6 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -578,10 +596,10 @@
       "query": "보이스피싱",
       "title": "‘노인일자리 어르신’ 보이스피싱 신속 차단",
       "source": "전남타임스",
-      "source_url": "https://www.jntimes.kr",
+      "source_url": "http://www.jntimes.kr",
       "source_domain": "www.jntimes.kr",
       "date": "Mon, 21 Sep 2026 10:27:52 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4MGtMdmRlRGZHYk9JUldFUDRsd2xGZUc3VTJQdXNWbldqcnpsSGVuVUo1V1NIVDZ4NDgwcFN5YzEyY1VWdEdJUHpTSGZQN0dqZHNDZloxTWV1U05ldXI3SWNHRE00RE0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAwYU9yZHkySl96NktzWV9GeHF4YjB3d1l4NF9JeDFSSzktSmxWTHJCYmVfRm1iaXRXRjI5ME5vczQtOXdaSURBNDRZSUd2OENzMWRsZHVUVWdNeGlHS053TVBZTkU3dw?oc=5",
       "tags": [
         "사기"
       ],
@@ -869,7 +887,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "다단계 코인 사기 '기승'…고수익 보장한다며 투자자 '현혹'",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -878,7 +896,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "다단계 코인 사기 '기승'…고수익 보장한다며 투자자 '현혹' news1.kr",
+      "description": "다단계 코인 사기 '기승'…고수익 보장한다며 투자자 '현혹' 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -917,7 +935,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거",
-      "source": "fnnews.com",
+      "source": "파이낸셜뉴스",
       "source_url": "https://www.fnnews.com",
       "source_domain": "www.fnnews.com",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -926,7 +944,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 fnnews.com",
+      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 파이낸셜뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1417,7 +1435,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -1425,7 +1443,7 @@
       "tags": [
         "사기"
       ],
-      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" asiae.co.kr",
+      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1890,7 +1908,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“코인으로 빼돌린 피해금 잡는다” 디지털자산거래소, 보이스피싱 핫라인 구축 [크립토360]",
-      "source": "biz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sat, 19 Sep 2026 02:00:00 GMT",
@@ -1899,7 +1917,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "“코인으로 빼돌린 피해금 잡는다” 디지털자산거래소, 보이스피싱 핫라인 구축 [크립토360] biz.heraldcorp.com",
+      "description": "“코인으로 빼돌린 피해금 잡는다” 디지털자산거래소, 보이스피싱 핫라인 구축 [크립토360] 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
