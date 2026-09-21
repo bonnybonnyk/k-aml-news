@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T11:40:50.784349+00:00",
+  "updated_at": "2026-09-21T12:12:33.738587+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 11
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "마약자금",
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,18 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -421,13 +427,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,6 +463,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
@@ -454,12 +478,6 @@
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -477,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 909,
+  "count": 911,
   "official_count": 35,
   "items": [
     {
@@ -498,13 +516,29 @@
     },
     {
       "region": "국내",
+      "query": "투자사기",
+      "title": "11억 코인 사기 고소 석 달째 ‘감감무소식’",
+      "source": "세계일보",
+      "source_url": "https://m.segye.com",
+      "source_domain": "m.segye.com",
+      "date": "Mon, 21 Sep 2026 10:32:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1oNGRKWjNxWDZsTWNTMnJUZXltWWVyQmFwU1RvZUVfd2htTjc0TmNnNUFRNVNTNVVmWjhPcERCQjhlOC10U09sVzMxcGRqbnR5UXlvddIBVEFVX3lxTE1oNGRKWjNxWDZsTWNTMnJUZXltWWVyQmFwU1RvZUVfd2htTjc0TmNnNUFRNVNTNVVmWjhPcERCQjhlOC10U09sVzMxcGRqbnR5UXlvdQ?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "11억 코인 사기 고소 석 달째 ‘감감무소식’ 세계일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "‘노인일자리 어르신’ 보이스피싱 신속 차단",
       "source": "전남타임스",
-      "source_url": "http://www.jntimes.kr",
+      "source_url": "https://www.jntimes.kr",
       "source_domain": "www.jntimes.kr",
       "date": "Mon, 21 Sep 2026 10:27:52 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAwYU9yZHkySl96NktzWV9GeHF4YjB3d1l4NF9JeDFSSzktSmxWTHJCYmVfRm1iaXRXRjI5ME5vczQtOXdaSURBNDRZSUd2OENzMWRsZHVUVWdNeGlHS053TVBZTkU3dw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4MGtMdmRlRGZHYk9JUldFUDRsd2xGZUc3VTJQdXNWbldqcnpsSGVuVUo1V1NIVDZ4NDgwcFN5YzEyY1VWdEdJUHpTSGZQN0dqZHNDZloxTWV1U05ldXI3SWNHRE00RE0?oc=5",
       "tags": [
         "사기"
       ],
@@ -794,7 +828,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거",
-      "source": "파이낸셜뉴스",
+      "source": "fnnews.com",
       "source_url": "https://www.fnnews.com",
       "source_domain": "www.fnnews.com",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -803,7 +837,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 파이낸셜뉴스",
+      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 fnnews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -955,6 +989,21 @@
         "가상자산"
       ],
       "description": "수백 명 피해…악성코드, 48시간 새 암호화폐 3억2595만원 탈취 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "\"남친 범죄수익 260만 달러 숨겼다\"...어바인 여성 오늘 선고",
+      "source": "라디오코리아",
+      "source_url": "https://radiokorea.com",
+      "source_domain": "radiokorea.com",
+      "date": "Sun, 20 Sep 2026 20:03:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMZVpZSzVnQjl2WnFOdFg1dUE5N0dXVkRnb1VzTUlxbmpUZUtVMTFxbkI1UUFCQVhyWFlGLWZfRjVCRzY0bFo0ay1wSi1ndncyaXMzd05wTGhDeFZtazcw?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "\"남친 범죄수익 260만 달러 숨겼다\"...어바인 여성 오늘 선고 라디오코리아",
       "collection_method": "google_news_24h"
     },
     {
