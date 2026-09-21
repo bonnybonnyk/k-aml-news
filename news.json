@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T15:09:31.265644+00:00",
+  "updated_at": "2026-09-21T15:38:46.441254+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 12
+      "count": 13
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -427,6 +427,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -439,13 +445,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,21 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 913,
+  "count": 914,
   "official_count": 33,
   "items": [
     {
@@ -640,7 +640,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "불법 성인 PC방 387건 단속…범죄수익 52억 몰수·추징",
-      "source": "OBS경인TV",
+      "source": "obsnews.co.kr",
       "source_url": "https://www.obsnews.co.kr",
       "source_domain": "www.obsnews.co.kr",
       "date": "Mon, 21 Sep 2026 08:04:07 GMT",
@@ -648,7 +648,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "불법 성인 PC방 387건 단속…범죄수익 52억 몰수·추징 OBS경인TV",
+      "description": "불법 성인 PC방 387건 단속…범죄수익 52억 몰수·추징 obsnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -670,7 +670,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전",
-      "source": "복지TV부울경방송",
+      "source": "wbcb.co.kr",
       "source_url": "https://www.wbcb.co.kr",
       "source_domain": "www.wbcb.co.kr",
       "date": "Mon, 21 Sep 2026 06:21:33 GMT",
@@ -679,7 +679,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전 복지TV부울경방송",
+      "description": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전 wbcb.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -761,6 +761,22 @@
     },
     {
       "region": "국내",
+      "query": "투자사기",
+      "title": "코인사기부터 ‘쌍둥이 형 행세’까지…금융·사이버사기 2만6782명 검거",
+      "source": "미주중앙일보",
+      "source_url": "https://www.koreadaily.com",
+      "source_domain": "www.koreadaily.com",
+      "date": "Mon, 21 Sep 2026 04:01:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBvejJ6R0QyeXpha2hXajQ3M3JqYW9fdGZQblhsRHJxalVuS255alVPak5YLWpmSHg3bmpacHVTM2JDTTNOaXpEcmhYQXdsTFNtMldNNEZ5SXdGdS1VUzNkU1Vn?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "코인사기부터 ‘쌍둥이 형 행세’까지…금융·사이버사기 2만6782명 검거 미주중앙일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈",
       "source": "Chosunbiz",
@@ -779,7 +795,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전",
-      "source": "폴리스TV",
+      "source": "policetv.co.kr",
       "source_url": "http://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Mon, 21 Sep 2026 03:25:36 GMT",
@@ -787,7 +803,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 폴리스TV",
+      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 policetv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1176,7 +1192,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의",
-      "source": "라온신문",
+      "source": "raonnews.com",
       "source_url": "https://www.raonnews.com",
       "source_domain": "www.raonnews.com",
       "date": "Sun, 20 Sep 2026 04:10:47 GMT",
@@ -1184,7 +1200,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 라온신문",
+      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 raonnews.com",
       "collection_method": "google_news_24h"
     },
     {
