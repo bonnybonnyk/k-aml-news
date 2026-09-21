@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T07:10:56.991161+00:00",
+  "updated_at": "2026-09-21T07:41:27.847459+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -248,20 +248,26 @@
     },
     {
       "feed": "금융위/FIU:목록:p2",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 10,
+      "count": 29,
       "method": "body_relevance"
     },
     {
@@ -415,12 +421,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -428,6 +428,12 @@
     },
     {
       "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,21 +451,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -469,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -489,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 900,
+  "count": 901,
   "official_count": 35,
   "items": [
     {
@@ -527,7 +533,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -535,7 +541,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -561,7 +567,7 @@
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Mon, 21 Sep 2026 05:34:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA3SDFNMDBobEF0R2M5c2pUOU4zbDNkc2pLN0FEdjRGdDAtUmtGdUVmR0E2b2x5bDJCSVVIN0pDQmRTMU92S01fdTRXaUQ3bUR6dk05MWV1blJvYkZYdDh2NUR6X0ozWlBMcHZXbGw0emdmYjTSAXNBVV95cUxQN0gxTTAwaGxBdEdjOXNqVDlOM2wzZHNqSzdBRHY0RnQwLVJrRnVFZkdBNm9seWwyQklVSDdKQ0JkUzFPdktNX3U0V2lEN21EenZNOTFldW5Sb2JGWHQ4djVEel9KM1pQTHB2V2xsNHpnZmI0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1xUmkxbTNmZ1hMUTl6N0JHNVNJRS1yLXlucEZOWjItWWdLQ3h5dXB6RFFRTm5jX1JTOURMZFlPOWJEckpyZ2NsTE1LT1k2ZjFhQnZnRXczTEFaMnpzeUZ2a09pQVFLUXNtN2hOOXln0gFzQVVfeXFMUDdIMU0wMGhsQXRHYzlzalQ5TjNsM2Rzaks3QUR2NEZ0MC1Sa0Z1RWZHQTZvbHlsMkJJVUg3SkNCZFMxT3ZLTV91NFdpRDdtRHp2TTkxZXVuUm9iRlh0OHY1RHpfSjNaUExwdldsbDR6Z2ZiNA?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -589,7 +595,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전",
-      "source": "폴리스TV",
+      "source": "policetv.co.kr",
       "source_url": "http://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Mon, 21 Sep 2026 03:25:36 GMT",
@@ -597,7 +603,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 폴리스TV",
+      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 policetv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -608,7 +614,7 @@
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iQ0d6d0VSa2sxM1Y0bmJWbXBOQVllcnVLNVVoS2hQWVo5NzVUMFpkQjNjQnduMjNfMjFUZ0F4cUJUYmVzTXEyNTRYaWRVR3QwNl96YjhhdGFidDDSAWBBVV95cUxPWEZzemtJMi05N3JmamFUamZraG9FM29yUDItNk1seU55VVJ4T000OTFPMHduc0s1cm1VektlNmZzdVU5cV9sUWJGdl92ZWc4TWFvbUhtMXZsUU50RXRkWnY?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YRnN6a0kyLTk3cmZqYVRqZmtob0Uzb3JQMi02TWx5TnlVUnhPTTQ5MU8wd25zSzVybVV6S2U2ZnN1VTlxX2xRYkZ2X3ZlZzhNYW9tSG0xdmxRTnRFdGRadtIBYEFVX3lxTE9YRnN6a0kyLTk3cmZqYVRqZmtob0Uzb3JQMi02TWx5TnlVUnhPTTQ5MU8wd25zSzVybVV6S2U2ZnN1VTlxX2xRYkZ2X3ZlZzhNYW9tSG0xdmxRTnRFdGRadg?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -698,6 +704,21 @@
     },
     {
       "region": "국내",
+      "query": "제재·테러자금",
+      "title": "북조선 제재 회피 감시팀, 북조선 노동자 러시아에서 군사용 무인기 제조 참여하고 있는 듯",
+      "source": "nhk.or.jp",
+      "source_url": "https://www3.nhk.or.jp",
+      "source_domain": "www3.nhk.or.jp",
+      "date": "Mon, 21 Sep 2026 02:55:13 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4tMXVzUmxLMWpXZEtyMUxaUU9xRHBHWDYxM1FHNFBlRktpcmpDLTRGc2tsNHBwaVk0Q2pOTC1oVDU1RGduNF8xNUs2M3BpZ0s0Q1JFNVNmTldSSzI1dGJCdkxOX2FwSW8?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "북조선 제재 회피 감시팀, 북조선 노동자 러시아에서 군사용 무인기 제조 참여하고 있는 듯 nhk.or.jp",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "범죄수익",
       "title": "불법 성인 PC방 387건 단속…범죄수익 52억 몰수·추징",
       "source": "OBS경인TV",
@@ -759,8 +780,8 @@
     {
       "region": "국내",
       "query": "제재·테러자금",
-      "title": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영",
-      "source": "글로벌이코노믹",
+      "title": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 - g-enews.com",
+      "source": "g-enews.com",
       "source_url": "https://www.g-enews.com",
       "source_domain": "www.g-enews.com",
       "date": "Sun, 20 Sep 2026 22:49:14 GMT",
@@ -768,7 +789,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 글로벌이코노믹",
+      "description": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 g-enews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -839,7 +860,7 @@
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Sun, 20 Sep 2026 15:30:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5nR3MwM18wVVNWOHpkQkE1S1hSV2VDMkJSVnprUHNKUXdUam5iTzBJVVhHVExUMG1aNjk1dG5JS1UyXzRCaUc5NUV2SWRzMTFRZlhlVVJtZ1JFTm1TVUhOZkRUVnJhVFdoU0QxN0dUaGFXY3FERnfSAWZBVV95cUxPaGtoNUtvdmZxaGxGX05oSXl2YWJHb1R0aEtQOTU3NGRBZzV2eU8xSkQwVlFURGRXbmVvRGRyY0xjWGRCc1EyTWs3TjdpOGNQbkhkTlRZa2dzY0FLZkNOSXRQWmJIcWc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9oa2g1S292ZnFobEZfTmhJeXZhYkdvVHRoS1A5NTc0ZEFnNXZ5TzFKRDBWUVREZFduZW9EZHJjTGNYZEJzUTJNazdON2k4Y1BuSGROVFlrZ3NjQUtmQ05JdFBaYkhxZ9IBZkFVX3lxTE9oa2g1S292ZnFobEZfTmhJeXZhYkdvVHRoS1A5NTc0ZEFnNXZ5TzFKRDBWUVREZFduZW9EZHJjTGNYZEJzUTJNazdON2k4Y1BuSGROVFlrZ3NjQUtmQ05JdFBaYkhxZw?oc=5",
       "tags": [
         "사기"
       ],
@@ -1092,7 +1113,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보",
-      "source": "ddaily.co.kr",
+      "source": "디지털데일리",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Sun, 20 Sep 2026 03:16:37 GMT",
@@ -1100,7 +1121,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보 ddaily.co.kr",
+      "description": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보 디지털데일리",
       "collection_method": "google_news_24h"
     },
     {
