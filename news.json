@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T08:40:39.689102+00:00",
+  "updated_at": "2026-09-21T09:10:40.775608+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "범죄수익",
@@ -30,12 +30,12 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "불법사금융",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -397,6 +397,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -404,12 +416,6 @@
     },
     {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,12 +433,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
@@ -445,15 +445,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -477,9 +477,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 902,
+  "count": 904,
   "official_count": 35,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도",
+      "source": "sedaily.com",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
+      "date": "Mon, 21 Sep 2026 08:33:58 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lWFRkMmNNcVl4WDFENlZuTEdwejJQa0puMXV6UHFsRDBpNVpRellPTWo4VTJWbWo4QVFnRU1iMS1SUTVrOW9yVTdWX3QyeW5QSnfSAVNBVV95cUxOd3ZrVzJfQ3prTkR1RHNCU1R6clZ5UTk1azhaZjhoN2o2aHRaVFRGTUVuM1N6azEyNHU4VkY3WXRUZVFxYjRPYlg4MkhKMkg0a01qTQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도 sedaily.com",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -543,6 +558,21 @@
     },
     {
       "region": "국내",
+      "query": "트래블룰",
+      "title": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산",
+      "source": "Traders Union",
+      "source_url": "https://tradersunion.com",
+      "source_domain": "tradersunion.com",
+      "date": "Mon, 21 Sep 2026 06:15:19 GMT",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbVh0YTlSdkFfYW5pbzVSSDFqZ1ZGY0FCQ2NmMUNFT1dSdmpSYWhOMnlZeDFPNEJ1anE1ZGI4aHpteUF3Yi1sYTdxdFVyTmVMRzRiWDZ3QjZSOEJNQ01kbXFRRVprdGZ1NGN6cmxvSnFCQmhwb3QzMDV3Y1dRUXhGZGRTYk9uRXBSU3ZGY1pFeThudm80alJRMlZB?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산 Traders Union",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
       "source": "법률신문",
@@ -591,7 +621,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈",
-      "source": "biz.chosun.com",
+      "source": "Chosunbiz",
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Mon, 21 Sep 2026 03:34:00 GMT",
@@ -600,7 +630,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈 biz.chosun.com",
+      "description": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈 Chosunbiz",
       "collection_method": "google_news_24h"
     },
     {
@@ -654,7 +684,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "다단계 코인 사기 '기승'…고수익 보장한다며 투자자 '현혹'",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -663,14 +693,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "다단계 코인 사기 '기승'…고수익 보장한다며 투자자 '현혹' 뉴스1",
+      "description": "다단계 코인 사기 '기승'…고수익 보장한다며 투자자 '현혹' news1.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "투자사기",
       "title": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거",
-      "source": "서울경제",
+      "source": "sedaily.com",
       "source_url": "https://m.sedaily.com",
       "source_domain": "m.sedaily.com",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -679,7 +709,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거 서울경제",
+      "description": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거 sedaily.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -793,7 +823,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "소비자가 만드는 신문",
+      "source": "consumernews.co.kr",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -801,7 +831,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
