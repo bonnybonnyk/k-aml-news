@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T12:41:22.321955+00:00",
+  "updated_at": "2026-09-21T13:09:29.740315+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "범죄수익",
@@ -30,7 +30,7 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "보이스피싱",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "환치기·외환",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,7 +439,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,25 +451,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -498,6 +498,21 @@
   "count": 912,
   "official_count": 35,
   "items": [
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "\"남친 범죄수익 260만 달러 숨겼다\"...어바인 여성 오늘 선고",
+      "source": "라디오코리아",
+      "source_url": "https://www.radiokorea.com",
+      "source_domain": "www.radiokorea.com",
+      "date": "Mon, 21 Sep 2026 12:03:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5uUk1IVlhMYzZFaTgyalNfZzF1d3RoSXFIR3NLdHdwZjBNQVFXLW1SVi1lM3MwY2d3c3AybHlnUlV1X3hmUEdKVFozZ0t1Umkxc0pMNG93RUN0VGtXRnQwakswOUU?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "\"남친 범죄수익 260만 달러 숨겼다\"...어바인 여성 오늘 선고 라디오코리아",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "가상자산 AML",
@@ -550,10 +565,10 @@
       "query": "보이스피싱",
       "title": "[SOVAC 2026] SKT, AI로 돌봄·재난·보이스피싱 해법 찾는다…스타트업 사업화 지원",
       "source": "포쓰저널",
-      "source_url": "http://www.4th.kr",
+      "source_url": "https://www.4th.kr",
       "source_domain": "www.4th.kr",
       "date": "Mon, 21 Sep 2026 09:15:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBWdkdzZHZjZ293OVM4V2pSdzU5ZUxOVFhrZndsRGpRRUJ2eXZqcXhuTWk0SEtCV21FckNuckVtM3lqOHl1cEd4S2YyU3B0OURBOUMyZE1qU3N1dWRoWFRTUFh3Yw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBxcS0yWU5lQ1BvRjVCbDN5LUVWYXhhd09xclA0ZFY0OEFWcUpsLWd1QzVpaGVDM2VLLXZSeHNMclg4U1V5TzlHNFFnaU5sOVZ4cVRNc1l2VkdxTmY5ZGpLSU5GS2g?oc=5",
       "tags": [
         "사기"
       ],
@@ -564,7 +579,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져",
-      "source": "Traders Union",
+      "source": "tradersunion.com",
       "source_url": "https://tradersunion.com",
       "source_domain": "tradersunion.com",
       "date": "Mon, 21 Sep 2026 08:37:28 GMT",
@@ -572,7 +587,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져 Traders Union",
+      "description": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져 tradersunion.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -624,7 +639,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "허위 사실 유튜버 범죄수익 억대… 경찰 기소 전 추징 보전 인용",
-      "source": "매일경제",
+      "source": "mk.co.kr",
       "source_url": "https://m.mk.co.kr",
       "source_domain": "m.mk.co.kr",
       "date": "Mon, 21 Sep 2026 06:45:02 GMT",
@@ -632,7 +647,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "허위 사실 유튜버 범죄수익 억대… 경찰 기소 전 추징 보전 인용 매일경제",
+      "description": "허위 사실 유튜버 범죄수익 억대… 경찰 기소 전 추징 보전 인용 mk.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -655,7 +670,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산",
-      "source": "Traders Union",
+      "source": "tradersunion.com",
       "source_url": "https://tradersunion.com",
       "source_domain": "tradersunion.com",
       "date": "Mon, 21 Sep 2026 06:15:19 GMT",
@@ -663,7 +678,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산 Traders Union",
+      "description": "비댁스 KRW1 백서 논란, 가상자산업계 VASP 신고 취소 요구 확산 tradersunion.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -748,7 +763,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전",
-      "source": "폴리스TV",
+      "source": "policetv.co.kr",
       "source_url": "http://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Mon, 21 Sep 2026 03:25:36 GMT",
@@ -756,14 +771,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 폴리스TV",
+      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 policetv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
@@ -772,7 +787,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 연합뉴스",
+      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1004,21 +1019,6 @@
         "가상자산"
       ],
       "description": "수백 명 피해…악성코드, 48시간 새 암호화폐 3억2595만원 탈취 토큰포스트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "\"남친 범죄수익 260만 달러 숨겼다\"...어바인 여성 오늘 선고",
-      "source": "라디오코리아",
-      "source_url": "https://radiokorea.com",
-      "source_domain": "radiokorea.com",
-      "date": "Sun, 20 Sep 2026 20:03:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMZVpZSzVnQjl2WnFOdFg1dUE5N0dXVkRnb1VzTUlxbmpUZUtVMTFxbkI1UUFCQVhyWFlGLWZfRjVCRzY0bFo0ay1wSi1ndncyaXMzd05wTGhDeFZtazcw?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "\"남친 범죄수익 260만 달러 숨겼다\"...어바인 여성 오늘 선고 라디오코리아",
       "collection_method": "google_news_24h"
     },
     {
@@ -1357,21 +1357,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
-      "source": "아시아경제",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83TVJTUXVOMnl4OHozdnZPX3MtakpIU1hHUXdXRTlIRmxQUVkzcWhJMU50eGRwWEF3dGNuMkQ1N3BSRjFXUHJGeTlOSDRKaDd1OVlXLV9IZ1k0LURBaHlZWA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
       "source": "dailian.co.kr",
       "source_url": "https://www.dailian.co.kr",
@@ -1382,6 +1367,21 @@
         "사기"
       ],
       "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83TVJTUXVOMnl4OHozdnZPX3MtakpIU1hHUXdXRTlIRmxQUVkzcWhJMU50eGRwWEF3dGNuMkQ1N3BSRjFXUHJGeTlOSDRKaDd1OVlXLV9IZ1k0LURBaHlZWA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
