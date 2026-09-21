@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T11:09:55.811240+00:00",
+  "updated_at": "2026-09-21T11:40:50.784349+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "범죄수익",
@@ -15,27 +15,27 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "환치기·외환",
@@ -55,12 +55,12 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -85,25 +85,25 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -133,13 +133,13 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -163,7 +163,7 @@
     {
       "feed": "실무:회귀검증·FIU정보공유",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,7 +397,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,37 +415,31 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -495,7 +477,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 907,
+  "count": 909,
   "official_count": 35,
   "items": [
     {
@@ -512,6 +494,21 @@
         "사기"
       ],
       "description": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "‘노인일자리 어르신’ 보이스피싱 신속 차단",
+      "source": "전남타임스",
+      "source_url": "http://www.jntimes.kr",
+      "source_domain": "www.jntimes.kr",
+      "date": "Mon, 21 Sep 2026 10:27:52 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAwYU9yZHkySl96NktzWV9GeHF4YjB3d1l4NF9JeDFSSzktSmxWTHJCYmVfRm1iaXRXRjI5ME5vczQtOXdaSURBNDRZSUd2OENzMWRsZHVUVWdNeGlHS053TVBZTkU3dw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "‘노인일자리 어르신’ 보이스피싱 신속 차단 전남타임스",
       "collection_method": "google_news_24h"
     },
     {
@@ -624,7 +621,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -632,7 +629,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -668,6 +665,22 @@
     },
     {
       "region": "국내",
+      "query": "FIU·STR",
+      "title": "가상자산 의심거래 312배 늘었는데…FIU 분석 인력은 43명뿐",
+      "source": "녹색경제신문",
+      "source_url": "https://www.greened.kr",
+      "source_domain": "www.greened.kr",
+      "date": "Mon, 21 Sep 2026 05:26:32 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBxbFphZXlMbXpRcElkU2FFRjd4U0JoUi1ZWTJvcU1ETlpaTzgzU2lsbTJzTmVyc3JnbS1iVUVNVWJoZXk1WmhqS1VpWlpfTXBtdEszenkxVl9DZGMzQ0d3dlNqbnducUR1?oc=5",
+      "tags": [
+        "가상자산",
+        "FIU·규제"
+      ],
+      "description": "가상자산 의심거래 312배 늘었는데…FIU 분석 인력은 43명뿐 녹색경제신문",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈",
       "source": "Chosunbiz",
@@ -686,7 +699,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전",
-      "source": "policetv.co.kr",
+      "source": "폴리스TV",
       "source_url": "http://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Mon, 21 Sep 2026 03:25:36 GMT",
@@ -694,7 +707,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 policetv.co.kr",
+      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 폴리스TV",
       "collection_method": "google_news_24h"
     },
     {
