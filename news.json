@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T00:13:50.483392+00:00",
+  "updated_at": "2026-09-21T00:43:55.056381+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 8
+      "count": 10
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 23
+      "count": 25
     },
     {
       "feed": "불법사금융",
@@ -45,12 +45,12 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "마약자금",
@@ -85,13 +85,13 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -403,6 +409,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -415,27 +427,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -446,6 +446,12 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -483,8 +489,8 @@
     {
       "region": "국내",
       "query": "제재·테러자금",
-      "title": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영",
-      "source": "글로벌이코노믹",
+      "title": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 - g-enews.com",
+      "source": "g-enews.com",
       "source_url": "https://www.g-enews.com",
       "source_domain": "www.g-enews.com",
       "date": "Sun, 20 Sep 2026 22:49:14 GMT",
@@ -492,14 +498,14 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 글로벌이코노믹",
+      "description": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 g-enews.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "소비자가 만드는 신문",
+      "source": "consumernews.co.kr",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -507,7 +513,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -529,7 +535,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "수백 명 피해…악성코드, 48시간 새 암호화폐 3억2595만원 탈취",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 20 Sep 2026 20:40:00 GMT",
@@ -537,7 +543,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "수백 명 피해…악성코드, 48시간 새 암호화폐 3억2595만원 탈취 토큰포스트",
+      "description": "수백 명 피해…악성코드, 48시간 새 암호화폐 3억2595만원 탈취 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -559,7 +565,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "명절 틈탄 보이스피싱 기승 … 외화 거래는 금융사에서만",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "source_url": "https://www.mk.co.kr",
       "source_domain": "www.mk.co.kr",
       "date": "Sun, 20 Sep 2026 08:45:56 GMT",
@@ -567,7 +573,7 @@
       "tags": [
         "사기"
       ],
-      "description": "명절 틈탄 보이스피싱 기승 … 외화 거래는 금융사에서만 mk.co.kr",
+      "description": "명절 틈탄 보이스피싱 기승 … 외화 거래는 금융사에서만 매일경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -650,10 +656,10 @@
       "query": "보이스피싱",
       "title": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야”",
       "source": "세계비즈",
-      "source_url": "http://www.segyebiz.com",
+      "source_url": "https://www.segyebiz.com",
       "source_domain": "www.segyebiz.com",
       "date": "Sun, 20 Sep 2026 05:35:59 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5pLUNvT3N0NURXYWYxbXZ4QkZZdldscG9BVlBySXBKc1R2d0pGd084eWlsYm5jOHlyTXdMWEV2cEZNVlQ4NVRLVEM4Wk5ERnpqZzFMaF9IcUdFb3c?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5rY2M2bVlzaUpTcVpPbHZDMzVPeTBTbDA0bEVwSHhFOUJINVpXTE9hN2FlVXpPQmh2Xy1DeDNSUnVDckhDVHRwQUhjYXNtLXRpQXYtS0hkTHV3YjVl?oc=5",
       "tags": [
         "사기"
       ],
@@ -725,7 +731,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "터키, 가상자산·외환 사기 용의자 201명 구금",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 20 Sep 2026 04:04:35 GMT",
@@ -734,7 +740,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "터키, 가상자산·외환 사기 용의자 201명 구금 토큰포스트",
+      "description": "터키, 가상자산·외환 사기 용의자 201명 구금 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -816,7 +822,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야”",
-      "source": "donga.com",
+      "source": "동아일보",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Sun, 20 Sep 2026 03:12:12 GMT",
@@ -824,7 +830,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야” donga.com",
+      "description": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야” 동아일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -891,6 +897,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
+      "source": "dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
       "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
@@ -920,21 +941,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 불법 성인PC방 ‘꼼수영업’ 387건 단속…범죄수익 52억 몰수",
       "source": "경향신문",
@@ -952,7 +958,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표상 157명 검거…범죄수익 20억원 몰수·추징 보전 조치",
-      "source": "stvnews.kr",
+      "source": "서울STV뉴스",
       "source_url": "https://www.stvnews.kr",
       "source_domain": "www.stvnews.kr",
       "date": "Sun, 20 Sep 2026 02:26:52 GMT",
@@ -960,7 +966,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표상 157명 검거…범죄수익 20억원 몰수·추징 보전 조치 stvnews.kr",
+      "description": "경찰, 매크로 암표상 157명 검거…범죄수익 20억원 몰수·추징 보전 조치 서울STV뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -982,7 +988,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "스페인 암호화폐 사기 2건…250명 피해·76만유로",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 20 Sep 2026 01:02:44 GMT",
@@ -991,14 +997,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "스페인 암호화폐 사기 2건…250명 피해·76만유로 토큰포스트",
+      "description": "스페인 암호화폐 사기 2건…250명 피해·76만유로 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Sun, 20 Sep 2026 00:55:43 GMT",
@@ -1006,7 +1012,7 @@
       "tags": [
         "사기"
       ],
-      "description": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이 mt.co.kr",
+      "description": "SKT, 보이스피싱부터 취약계층 돌봄까지…'선한 AI' 11종 선보인다 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1721,7 +1727,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "부동산감독추진단, 위법 의심 광고 1만여건 적발…아파트 의심거래 624건",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Fri, 18 Sep 2026 07:00:00 GMT",
@@ -1729,7 +1735,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "부동산감독추진단, 위법 의심 광고 1만여건 적발…아파트 의심거래 624건 뉴스1",
+      "description": "부동산감독추진단, 위법 의심 광고 1만여건 적발…아파트 의심거래 624건 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
