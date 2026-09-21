@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T05:10:15.281096+00:00",
+  "updated_at": "2026-09-21T05:40:07.827898+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 9
+      "count": 8
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -103,13 +103,13 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -127,7 +127,7 @@
     {
       "feed": "실무:명의도용·차단",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -242,32 +242,20 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
@@ -415,13 +403,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +433,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -569,7 +557,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBnTzVRM3dTdS0ycWdrOVJQUlVGQlV1Mm5RbW9tMEVqUVF0cUxhVmtCMFBuSktsbEMtelA1Ri1fUlk2bjNxd2ZrRGJ6cU1tN0g3V3pfdms4VGwyLVpvNGpSWEF30gFnQVVfeXFMT3ZFbGxTRURXMUJ5UzdlSDRJTHBBa2l4Snh2SXpVUjJLbnlsVFZKeXIyUjVzWXZKUGVGcmVZSmtCc2ZiQURFRl9kUEstcWNqb29MR0xyaXl3eUZTRjlZTFRUelRGWXppOA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92RWxsU0VEVzFCeVM3ZUg0SUxwQWtpeEp4dkl6VVIyS255bFRWSnlyMlI1c1l2SlBlRnJlWUprQnNmYkFERUZfZFBLLXFjam9vTEdMcml5d3lGU0Y5WUxUVHpURll6aTjSAWdBVV95cUxPdkVsbFNFRFcxQnlTN2VINElMcEFraXhKeHZJelVSMktueWxUVkp5cjJSNXNZdkpQZUZyZVlKa0JzZmJBREVGX2RQSy1xY2pvb0xHTHJpeXd5RlNGOVlMVFR6VEZZemk4?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -823,7 +811,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "작년 은행 고객 보이스피싱 피해 5870억원…보상은 미미",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Sun, 20 Sep 2026 05:52:30 GMT",
@@ -831,7 +819,7 @@
       "tags": [
         "사기"
       ],
-      "description": "작년 은행 고객 보이스피싱 피해 5870억원…보상은 미미 뉴시스",
+      "description": "작년 은행 고객 보이스피싱 피해 5870억원…보상은 미미 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1003,21 +991,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야”",
-      "source": "동아일보",
-      "source_url": "https://www.donga.com",
-      "source_domain": "www.donga.com",
-      "date": "Sun, 20 Sep 2026 03:12:12 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9hVkFxRzdxSF9BNGpFdDBhSUpxWjdXWm5fQm1tNnZaU1Qxb0tuUzZyRW02MDY0b2dEWkZtcFRqRGhuYzFURU5NcGg1Wmd4ellFU242TzRWN01yX0RkTWk0VncwUEJjYXk5dGF0d2c1Tkx1MTVBZ0HSAWZBVV95cUxOZmVMcjhoSmF1Smo5eHNnU1RNaXlRYUs1NlBzSGh1OVRBV1BKYl9iUmJDOFNlYjhyWUs5Nm5CdVNhcUZ2SEhOelpsYk5UZWNyT0lsc0VQc1prUUJoVXZ6SnJmUm9xRGc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야” 동아일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "투자사기",
       "title": "\"AI로 큰 수익 낸다더니\"…가짜 앱 동원한 투자사기범 징역 5년",
       "source": "edaily.co.kr",
@@ -1075,6 +1048,21 @@
         "사기"
       ],
       "description": "“택배 주소 오류” 문자 눌렀다가 털린다…추석 보이스피싱 주의보 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\"",
+      "source": "newsis.com",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1JQ1RZUVhpUDFJRTJLZThSVUFqY3JqbG85bmk0dkh2b0JCNDNKOGFTUW5EUURZbzNFS3VKcVYxcFhnRkM2SFp2Tm9DUm56X2NqLS00dmttNXU5N1R1ZFE0LXpsS0NwZTZ6ZE1OemxZT2dDdkxrVThJS9IBeEFVX3lxTE1JQ1RZUVhpUDFJRTJLZThSVUFqY3JqbG85bmk0dkh2b0JCNDNKOGFTUW5EUURZbzNFS3VKcVYxcFhnRkM2SFp2Tm9DUm56X2NqLS00dmttNXU5N1R1ZFE0LXpsS0NwZTZ6ZE1OemxZT2dDdkxrVThJSw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\" newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -13787,6 +13775,22 @@
     },
     {
       "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
+      "source": "금융감독원",
+      "date": "2026-09-07T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -13802,22 +13806,6 @@
         "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "금융권 보이스피싱 대응역량 제고를 위한 우수사례 포상 추진",
-      "source": "금융감독원",
-      "date": "2026-09-07T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=227219&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
