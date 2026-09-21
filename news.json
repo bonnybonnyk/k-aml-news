@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T01:09:45.487981+00:00",
+  "updated_at": "2026-09-21T01:39:44.711210+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 10
+      "count": 8
     },
     {
       "feed": "범죄수익",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -242,20 +242,26 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
       "ok": false,
       "count": 0,
       "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "The read operation timed out"
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "body_relevance"
     },
     {
@@ -403,9 +409,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -421,19 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,27 +451,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -483,7 +489,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 883,
+  "count": 884,
   "official_count": 35,
   "items": [
     {
@@ -505,7 +511,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "소비자가 만드는 신문",
+      "source": "consumernews.co.kr",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -513,7 +519,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -655,15 +661,15 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야”",
-      "source": "segyebiz.com",
-      "source_url": "http://www.segyebiz.com",
+      "source": "세계비즈",
+      "source_url": "https://www.segyebiz.com",
       "source_domain": "www.segyebiz.com",
       "date": "Sun, 20 Sep 2026 05:35:59 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5pLUNvT3N0NURXYWYxbXZ4QkZZdldscG9BVlBySXBKc1R2d0pGd084eWlsYm5jOHlyTXdMWEV2cEZNVlQ4NVRLVEM4Wk5ERnpqZzFMaF9IcUdFb3c?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5rY2M2bVlzaUpTcVpPbHZDMzVPeTBTbDA0bEVwSHhFOUJINVpXTE9hN2FlVXpPQmh2Xy1DeDNSUnVDckhDVHRwQUhjYXNtLXRpQXYtS0hkTHV3YjVl?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야” segyebiz.com",
+      "description": "“추석 전후 보이스피싱 주의…금융거래 안심차단서비스 미리 가입해야” 세계비즈",
       "collection_method": "google_news_24h"
     },
     {
@@ -807,7 +813,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Sun, 20 Sep 2026 03:16:37 GMT",
@@ -815,14 +821,14 @@
       "tags": [
         "사기"
       ],
-      "description": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보 디지털데일리",
+      "description": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야”",
-      "source": "동아일보",
+      "source": "donga.com",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Sun, 20 Sep 2026 03:12:12 GMT",
@@ -830,7 +836,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야” 동아일보",
+      "description": "“추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야” donga.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -862,6 +868,21 @@
         "자금세탁"
       ],
       "description": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도 조세일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"택배·과태료 문자 클릭 금지\"…금융당국, 추석 보이스피싱 주의 당부",
+      "source": "동행일보",
+      "source_url": "https://www.dhilbo.co.kr",
+      "source_domain": "www.dhilbo.co.kr",
+      "date": "Sun, 20 Sep 2026 03:05:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5FT0wwTEJyMlhzUkF3bmVta1lncFVXWlBSMzFwSml0ZTZnTUd5aUF5WGVDcDMzLWlkby1nS2xjT1p1V254UG4yUmpmVW1JQ21UX0ZscXpHRnlHd0VtbTFhV2lWUDVlVGs5?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"택배·과태료 문자 클릭 금지\"…금융당국, 추석 보이스피싱 주의 당부 동행일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -912,21 +933,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
-      "source": "이투데이",
-      "source_url": "https://www.etoday.co.kr",
-      "source_domain": "www.etoday.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE51bmUwYkR1b3ZYTWpTOFpoX1VFWXRDZUJXbDZXSUlPU2pKY3hzQ1pob0FGRlBUZmFTdEdKT0NTdFFUXzVpSk1ubG1jR29IVHhtOFN0OA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승 이투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
       "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
@@ -937,6 +943,21 @@
         "사기"
       ],
       "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
+      "source": "이투데이",
+      "source_url": "https://www.etoday.co.kr",
+      "source_domain": "www.etoday.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE51bmUwYkR1b3ZYTWpTOFpoX1VFWXRDZUJXbDZXSUlPU2pKY3hzQ1pob0FGRlBUZmFTdEdKT0NTdFFUXzVpSk1ubG1jR29IVHhtOFN0OA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승 이투데이",
       "collection_method": "google_news_24h"
     },
     {
