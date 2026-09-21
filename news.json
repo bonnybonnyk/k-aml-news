@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21T07:41:27.847459+00:00",
+  "updated_at": "2026-09-21T08:11:23.152553+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "범죄수익",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -242,32 +242,20 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
@@ -415,12 +403,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -433,13 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,19 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -472,6 +454,12 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,9 +483,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 901,
+  "count": 902,
   "official_count": 35,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "[단독]책임 분담은 생색?…'그림의 떡' 된 보이스피싱 자율배상",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Mon, 21 Sep 2026 08:07:43 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbjFXaVFWY3gwdmU0SUx1SzJLb1pmcFV3WVZuTU14UkpET2JwSHFBUVhqcFJxM3kxcWo1ZWloQ2N2b0hidGRIZU1uV0lBUzZOLWJVOEpqYnAwbWN4OHVRRTh4QmtpVWo4dFBwTmlkWlE1ZkVNRm1mZ1FTcWR6dkRTaA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[단독]책임 분담은 생색?…'그림의 떡' 된 보이스피싱 자율배상 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "범죄수익",
@@ -533,7 +536,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "lawtimes.co.kr",
+      "source": "법률신문",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -541,7 +544,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -567,7 +570,7 @@
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Mon, 21 Sep 2026 05:34:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1xUmkxbTNmZ1hMUTl6N0JHNVNJRS1yLXlucEZOWjItWWdLQ3h5dXB6RFFRTm5jX1JTOURMZFlPOWJEckpyZ2NsTE1LT1k2ZjFhQnZnRXczTEFaMnpzeUZ2a09pQVFLUXNtN2hOOXln0gFzQVVfeXFMUDdIMU0wMGhsQXRHYzlzalQ5TjNsM2Rzaks3QUR2NEZ0MC1Sa0Z1RWZHQTZvbHlsMkJJVUg3SkNCZFMxT3ZLTV91NFdpRDdtRHp2TTkxZXVuUm9iRlh0OHY1RHpfSjNaUExwdldsbDR6Z2ZiNA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA3SDFNMDBobEF0R2M5c2pUOU4zbDNkc2pLN0FEdjRGdDAtUmtGdUVmR0E2b2x5bDJCSVVIN0pDQmRTMU92S01fdTRXaUQ3bUR6dk05MWV1blJvYkZYdDh2NUR6X0ozWlBMcHZXbGw0emdmYjTSAXNBVV95cUxQN0gxTTAwaGxBdEdjOXNqVDlOM2wzZHNqSzdBRHY0RnQwLVJrRnVFZkdBNm9seWwyQklVSDdKQ0JkUzFPdktNX3U0V2lEN21EenZNOTFldW5Sb2JGWHQ4djVEel9KM1pQTHB2V2xsNHpnZmI0?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -595,7 +598,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전",
-      "source": "policetv.co.kr",
+      "source": "폴리스TV",
       "source_url": "http://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Mon, 21 Sep 2026 03:25:36 GMT",
@@ -603,7 +606,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 policetv.co.kr",
+      "description": "경찰, 매크로 암표 6개월간 157명 검거…범죄수익 20억원 보전 폴리스TV",
       "collection_method": "google_news_24h"
     },
     {
@@ -657,22 +660,6 @@
     {
       "region": "국내",
       "query": "투자사기",
-      "title": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거",
-      "source": "서울경제",
-      "source_url": "https://m.sedaily.com",
-      "source_domain": "m.sedaily.com",
-      "date": "Mon, 21 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1wLTFfV1QzaGRBZ3p6bmpNc3k2NXVkeFFvVjVFdjJQOHhITnZBOE4wQzZOYXpkdmJrVkg0LUhzbi1fUk1OdHJFRnU5WEEzejVrM2800gFTQVVfeXFMTXAtMV9XVDNoZEFnenpuak1zeTY1dWR4UW9WNUV2MlA4eEhOdkE4TjBDNk5hemR2YmtWSDQtSHNuLV9STU50ckVGdTlYQTN6NWszbzQ?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거 서울경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
       "title": "코인 채굴 투자사기 논란 한인 “한국서 구속”",
       "source": "미주한국일보",
       "source_url": "http://www.koreatimes.com",
@@ -684,6 +671,22 @@
         "사기"
       ],
       "description": "코인 채굴 투자사기 논란 한인 “한국서 구속” 미주한국일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거",
+      "source": "서울경제",
+      "source_url": "https://m.sedaily.com",
+      "source_domain": "m.sedaily.com",
+      "date": "Mon, 21 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1wLTFfV1QzaGRBZ3p6bmpNc3k2NXVkeFFvVjVFdjJQOHhITnZBOE4wQzZOYXpkdmJrVkg0LUhzbi1fUk1OdHJFRnU5WEEzejVrM2800gFTQVVfeXFMTXAtMV9XVDNoZEFnenpuak1zeTY1dWR4UW9WNUV2MlA4eEhOdkE4TjBDNk5hemR2YmtWSDQtSHNuLV9STU50ckVGdTlYQTN6NWszbzQ?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "가상자산 투자사기부터 중고거래까지…6개월간 2만 6782명 검거 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -780,8 +783,8 @@
     {
       "region": "국내",
       "query": "제재·테러자금",
-      "title": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 - g-enews.com",
-      "source": "g-enews.com",
+      "title": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영",
+      "source": "글로벌이코노믹",
       "source_url": "https://www.g-enews.com",
       "source_domain": "www.g-enews.com",
       "date": "Sun, 20 Sep 2026 22:49:14 GMT",
@@ -789,7 +792,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 g-enews.com",
+      "description": "러·이란, 美 주도 서방 제재 회피 위한 전략 로드맵 작성·운영 글로벌이코노믹",
       "collection_method": "google_news_24h"
     },
     {
