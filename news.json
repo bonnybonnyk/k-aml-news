@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T02:09:59.677391+00:00",
+  "updated_at": "2026-09-21T02:40:18.296013+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 0
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 23
+      "count": 22
     },
     {
       "feed": "불법사금융",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "탈세",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,12 +242,6 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 0,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
       "ok": false,
       "count": 0,
       "error": "The read operation timed out"
@@ -415,19 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,13 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,13 +445,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -489,7 +483,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 885,
+  "count": 886,
   "official_count": 35,
   "items": [
     {
@@ -505,6 +499,21 @@
         "제재·테러자금"
       ],
       "description": "걸프국, 호르무즈 뚫으려 이란의 제재 회피 전술 차용 KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "추석 선물 문자 눌렀다가 '텅장'…온라인 환전도 '돈세탁' 덫",
+      "source": "nbn 시사경제",
+      "source_url": "https://www.nbnbiz.co.kr",
+      "source_domain": "www.nbnbiz.co.kr",
+      "date": "Mon, 21 Sep 2026 01:29:53 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9uMzY2azNPSHVleG5yUnlLbkZJalM5cE5wdDlyTklwM0REYkFuOUpCNjZ1ZE9xWXU5a1FxSlRDWEdjY0tnYm9nQVJHRzEtMW9vbUk4SXhvRF9GVnJ5bXc0ZV9OWXhVS0lFS1E?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "추석 선물 문자 눌렀다가 '텅장'…온라인 환전도 '돈세탁' 덫 nbn 시사경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -526,7 +535,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "소비자가 만드는 신문",
+      "source": "consumernews.co.kr",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -534,7 +543,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -586,7 +595,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "명절 틈탄 보이스피싱 기승 … 외화 거래는 금융사에서만",
-      "source": "매일경제",
+      "source": "mk.co.kr",
       "source_url": "https://www.mk.co.kr",
       "source_domain": "www.mk.co.kr",
       "date": "Sun, 20 Sep 2026 08:45:56 GMT",
@@ -594,7 +603,7 @@
       "tags": [
         "사기"
       ],
-      "description": "명절 틈탄 보이스피싱 기승 … 외화 거래는 금융사에서만 매일경제",
+      "description": "명절 틈탄 보이스피싱 기승 … 외화 거래는 금융사에서만 mk.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -631,7 +640,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "'보이스피싱 막고, 취약계층 돌보고'…SKT, AI 사회가치 11종 공개",
-      "source": "신아일보",
+      "source": "shinailbo.co.kr",
       "source_url": "https://www.shinailbo.co.kr",
       "source_domain": "www.shinailbo.co.kr",
       "date": "Sun, 20 Sep 2026 05:59:49 GMT",
@@ -639,7 +648,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'보이스피싱 막고, 취약계층 돌보고'…SKT, AI 사회가치 11종 공개 신아일보",
+      "description": "'보이스피싱 막고, 취약계층 돌보고'…SKT, AI 사회가치 11종 공개 shinailbo.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -889,7 +898,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"택배·과태료 문자 클릭 금지\"…금융당국, 추석 보이스피싱 주의 당부",
-      "source": "dhilbo.co.kr",
+      "source": "동행일보",
       "source_url": "https://www.dhilbo.co.kr",
       "source_domain": "www.dhilbo.co.kr",
       "date": "Sun, 20 Sep 2026 03:05:00 GMT",
@@ -897,7 +906,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"택배·과태료 문자 클릭 금지\"…금융당국, 추석 보이스피싱 주의 당부 dhilbo.co.kr",
+      "description": "\"택배·과태료 문자 클릭 금지\"…금융당국, 추석 보이스피싱 주의 당부 동행일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -933,6 +942,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83TVJTUXVOMnl4OHozdnZPX3MtakpIU1hHUXdXRTlIRmxQUVkzcWhJMU50eGRwWEF3dGNuMkQ1N3BSRjFXUHJGeTlOSDRKaDd1OVlXLV9IZ1k0LURBaHlZWA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승",
       "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
@@ -943,21 +967,6 @@
         "사기"
       ],
       "description": "추석 전후 보이스피싱 주의⋯택배ㆍ과태료 사칭 스미싱 기승 이투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
-      "source": "아시아경제",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5TZ0VFMHFEMmJITjQxckFOR1NuVF9mZFlxdjlGZkw3TVFqdmZsdEYzZEdZa1MyZkZLVU5RdFdLa1lNM0QxVTdBN29hN1ZybVlpZWppcHJBdWxPaHFjVkFCbGc2bkJWR1FkWTdvNkNZak1FX0xZcWc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1265,7 +1274,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\"",
-      "source": "코인리더스",
+      "source": "coinreaders.com",
       "source_url": "https://www.coinreaders.com",
       "source_domain": "www.coinreaders.com",
       "date": "Sat, 19 Sep 2026 12:00:00 GMT",
@@ -1274,7 +1283,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\" 코인리더스",
+      "description": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\" coinreaders.com",
       "collection_method": "google_news_24h"
     },
     {
