@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T12:12:33.738587+00:00",
+  "updated_at": "2026-09-21T12:41:22.321955+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -45,12 +45,12 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "마약자금",
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -415,6 +415,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -427,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -442,18 +448,6 @@
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -469,15 +463,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 911,
+  "count": 912,
   "official_count": 35,
   "items": [
     {
@@ -558,6 +558,21 @@
         "사기"
       ],
       "description": "[SOVAC 2026] SKT, AI로 돌봄·재난·보이스피싱 해법 찾는다…스타트업 사업화 지원 포쓰저널",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져",
+      "source": "Traders Union",
+      "source_url": "https://tradersunion.com",
+      "source_domain": "tradersunion.com",
+      "date": "Mon, 21 Sep 2026 08:37:28 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeGdPMVdua2RjbHJTMWNjazhzU1RsYUVsLWE1eDlKSHgwbEI4YjhzVjJSRjNmSGRxVW5DOTJJYWx6cVZ2ajQwdkNtcFR5QzN2VU9TekFfNEtId0FUSG52LWlYck9oNVhzMXk0d3lhZ01MZnNSNEdtOHkzWTJyZmotYUtQZ1BpWmQxQ2d2MXh5RGJzNDdSRWJFaFpUcHg5eHJtbXc?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "JPYC, 국내 결제·예치 확산에 자금세탁 우려 커져 Traders Union",
       "collection_method": "google_news_24h"
     },
     {
@@ -655,7 +670,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "lawtimes.co.kr",
+      "source": "법률신문",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -663,7 +678,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -828,7 +843,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거",
-      "source": "fnnews.com",
+      "source": "파이낸셜뉴스",
       "source_url": "https://www.fnnews.com",
       "source_domain": "www.fnnews.com",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -837,7 +852,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 fnnews.com",
+      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 파이낸셜뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1297,7 +1312,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도",
-      "source": "joseilbo.com",
+      "source": "조세일보",
       "source_url": "https://m.joseilbo.com",
       "source_domain": "m.joseilbo.com",
       "date": "Sun, 20 Sep 2026 03:05:00 GMT",
@@ -1306,7 +1321,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도 joseilbo.com",
+      "description": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도 조세일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1863,7 +1878,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판]",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 18 Sep 2026 22:00:00 GMT",
@@ -1872,7 +1887,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] etoday.co.kr",
+      "description": "이제는 보이스피싱도 ‘외주화’? 돈세탁 조직의 법적 책임 [수사와 재판] 이투데이",
       "collection_method": "google_news_24h"
     },
     {
