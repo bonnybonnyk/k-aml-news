@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-22T00:43:08.163325+00:00",
+  "updated_at": "2026-09-22T01:08:44.807138+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 13
+      "count": 14
     },
     {
       "feed": "지갑·해외거래소",
@@ -30,12 +30,12 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -397,18 +397,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -421,31 +409,37 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,6 +457,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 15,
@@ -477,9 +477,39 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 922,
+  "count": 925,
   "official_count": 33,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "바이낸스, 이란 제재 회피 의혹 미 연방 검찰 수사",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Tue, 22 Sep 2026 01:03:24 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5VTGVERDZncWRPckVkQUw4MGpUM2RSdEtucVR5bEV1QjFnWmI5NDJXN3o5WXg5NHZKU3ZkX3pHQUVKY01zeV90MWNGS1J3V0xmd0hhVGNvbE4?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "바이낸스, 이란 제재 회피 의혹 미 연방 검찰 수사 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "트래블룰",
+      "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
+      "source": "뉴스퀘스트",
+      "source_url": "https://www.newsquest.co.kr",
+      "source_domain": "www.newsquest.co.kr",
+      "date": "Tue, 22 Sep 2026 00:39:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA0S3N5Rm9KVEhHS0t5a2d0bjJENDZJdTduTUdXTjFfajllXzQ3Ni0ybFR2Q0J6Uk5VSVZtbVJXWTY4NmJUWjRmUUZkcjluSHRMb0tGeEljSGlhT3VLVFhHVDdtRHpjUjZZd3NOc1A5MA?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -500,7 +530,7 @@
     {
       "region": "국내",
       "query": "제재·테러자금",
-      "title": "[밤 사이 해외뉴스 영상]러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투",
+      "title": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투",
       "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
@@ -509,7 +539,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "[밤 사이 해외뉴스 영상]러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 한국경제",
+      "description": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -640,10 +670,10 @@
       "query": "보이스피싱",
       "title": "‘노인일자리 어르신’ 보이스피싱 신속 차단",
       "source": "전남타임스",
-      "source_url": "http://www.jntimes.kr",
+      "source_url": "https://www.jntimes.kr",
       "source_domain": "www.jntimes.kr",
       "date": "Mon, 21 Sep 2026 10:27:52 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAwYU9yZHkySl96NktzWV9GeHF4YjB3d1l4NF9JeDFSSzktSmxWTHJCYmVfRm1iaXRXRjI5ME5vczQtOXdaSURBNDRZSUd2OENzMWRsZHVUVWdNeGlHS053TVBZTkU3dw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4MGtMdmRlRGZHYk9JUldFUDRsd2xGZUc3VTJQdXNWbldqcnpsSGVuVUo1V1NIVDZ4NDgwcFN5YzEyY1VWdEdJUHpTSGZQN0dqZHNDZloxTWV1U05ldXI3SWNHRE00RE0?oc=5",
       "tags": [
         "사기"
       ],
@@ -775,7 +805,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "'고수익 약속합니다'…다단계 투자사기에 '피눈물'",
-      "source": "biz.sbs.co.kr",
+      "source": "SBS Biz",
       "source_url": "https://biz.sbs.co.kr",
       "source_domain": "biz.sbs.co.kr",
       "date": "Mon, 21 Sep 2026 06:21:00 GMT",
@@ -783,7 +813,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'고수익 약속합니다'…다단계 투자사기에 '피눈물' biz.sbs.co.kr",
+      "description": "'고수익 약속합니다'…다단계 투자사기에 '피눈물' SBS Biz",
       "collection_method": "google_news_24h"
     },
     {
@@ -805,7 +835,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "lawtimes.co.kr",
+      "source": "법률신문",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -813,7 +843,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -881,9 +911,24 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "광주지구축산농협 김혜경 과장, 80대 고객 보이스피싱 막았다…1,300만원 지켜",
+      "source": "mediaissue.net",
+      "source_url": "http://www.mediaissue.net",
+      "source_domain": "www.mediaissue.net",
+      "date": "Mon, 21 Sep 2026 03:48:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE85bzNtRU1HbTdzcndXay1rWEZRV2RlWEVKbkNzVmlUOERzQV90NXc0MXlmMmdIY3ExaFpWOFliX1J6NjdTdE9xZA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "광주지구축산농협 김혜경 과장, 80대 고객 보이스피싱 막았다…1,300만원 지켜 mediaissue.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈",
-      "source": "Chosunbiz",
+      "source": "biz.chosun.com",
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Mon, 21 Sep 2026 03:34:00 GMT",
@@ -892,7 +937,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈 Chosunbiz",
+      "description": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈 biz.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1448,7 +1493,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도",
-      "source": "조세일보",
+      "source": "joseilbo.com",
       "source_url": "https://m.joseilbo.com",
       "source_domain": "m.joseilbo.com",
       "date": "Sun, 20 Sep 2026 03:05:00 GMT",
@@ -1457,7 +1502,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도 조세일보",
+      "description": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도 joseilbo.com",
       "collection_method": "google_news_24h"
     },
     {
