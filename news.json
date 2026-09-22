@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T11:39:46.467648+00:00",
+  "updated_at": "2026-09-22T12:12:41.212536+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "FIU·STR",
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,30 +397,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
@@ -451,7 +409,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,13 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -478,6 +454,12 @@
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,7 +477,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 933,
+  "count": 934,
   "official_count": 33,
   "items": [
     {
@@ -670,7 +652,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "복지부, 불법사금융 피해자·취약채무자 복지망 연계 강화",
-      "source": "뉴스핌",
+      "source": "newspim.com",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Tue, 22 Sep 2026 04:00:00 GMT",
@@ -678,7 +660,7 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "복지부, 불법사금융 피해자·취약채무자 복지망 연계 강화 뉴스핌",
+      "description": "복지부, 불법사금융 피해자·취약채무자 복지망 연계 강화 newspim.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -762,7 +744,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전",
-      "source": "welfarenews.net",
+      "source": "웰페어뉴스",
       "source_url": "https://www.welfarenews.net",
       "source_domain": "www.welfarenews.net",
       "date": "Tue, 22 Sep 2026 01:48:18 GMT",
@@ -771,7 +753,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전 welfarenews.net",
+      "description": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전 웰페어뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -853,7 +835,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "뉴스퀘스트",
+      "source": "newsquest.co.kr",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -861,7 +843,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -901,7 +883,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Mon, 21 Sep 2026 23:27:13 GMT",
@@ -909,7 +891,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 hankyung.com",
+      "description": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -970,6 +952,21 @@
         "자금세탁"
       ],
       "description": "부동산 사업에서 자금세탁 위험을 파악하고 관리를 강화하십시오. Vietnam.vn",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "\"거래 플랫폼 자금세탁 집중 단속\"",
+      "source": "chosundaily.com",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Mon, 21 Sep 2026 16:47:27 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQYUhkRWtsNHpYQzlfVW9MRnFlLUo1ZHFXTVZnNTZOYzRrWTBhQjNtYzZ6VU1Zb0laYXJBX1VWbjJKRXhmYjRrcjhnUkVpWXJxQzI4RG0wX2JLTGJyQkR5NDdqQWVmN0JRZXNRQVpSVHgxVXFlcTVxWlRKYUJPeTQ2SFU3WVc2X2lnZjRqODRKbGJMQ25kbzRoLTUzMGNJNDJJZnQxUDZxLUp0ZFVxZjMzem16NFpmempMc2ZScXo5LVZvanpPVkFWbUpsbUZlMjlQVWpqdk5GNEZvRTdvR3RN?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "\"거래 플랫폼 자금세탁 집중 단속\" chosundaily.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1054,7 +1051,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘노인일자리 어르신’ 보이스피싱 신속 차단",
-      "source": "jntimes.kr",
+      "source": "전남타임스",
       "source_url": "https://www.jntimes.kr",
       "source_domain": "www.jntimes.kr",
       "date": "Mon, 21 Sep 2026 10:27:52 GMT",
@@ -1062,7 +1059,7 @@
       "tags": [
         "사기"
       ],
-      "description": "‘노인일자리 어르신’ 보이스피싱 신속 차단 jntimes.kr",
+      "description": "‘노인일자리 어르신’ 보이스피싱 신속 차단 전남타임스",
       "collection_method": "google_news_24h"
     },
     {
