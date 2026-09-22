@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T16:10:15.453724+00:00",
+  "updated_at": "2026-09-22T16:40:43.721260+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 8
+      "count": 9
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "환치기·외환",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -415,18 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -445,6 +433,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
@@ -454,6 +454,12 @@
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -470,12 +476,6 @@
     },
     {
       "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -512,6 +512,22 @@
         "사기"
       ],
       "description": "후난 경찰, 3만위안 가상자산 사기 피의자 2명 구속 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
+      "source": "kbsm.net",
+      "source_url": "https://www.kbsm.net",
+      "source_domain": "www.kbsm.net",
+      "date": "Tue, 22 Sep 2026 09:57:23 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EbWFIOXg0TnNRX1Boa0pfRlJFdmgzckM1LUxZMHVzbHJJcHZWZmpzZ0xpVWkybVJ2REZwVFJWOWc3bm9ZbThiNjVIcXNJRVJLSWwxel95bGs?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 kbsm.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -625,6 +641,21 @@
     },
     {
       "region": "국내",
+      "query": "투자사기",
+      "title": "VMS 투자사기 의혹 박가람씨 한국서 구속",
+      "source": "미주조선일보",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Tue, 22 Sep 2026 05:17:25 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNT1I3V1N0NjJROU9Wak84VEVpU3F0cEcxXzFRUk00NExLeXNyVVNKRkRMbDhiOGdNc2dWM19ocXlUWndCNmhYSUdKVWFrSFZEV3FwSEthWkdkT3lWQS1LTTlfRUxVZEJ2S0Vxek1KM251blBrdE9FYmthbkhmWWxWU0JGOXJTWlZ6LUxwRW1UckYzUTU1V0R4emFQMWl4STltZnZaQmR2T252dXkyZERsUFBQOWFBUnR6RXc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "VMS 투자사기 의혹 박가람씨 한국서 구속 미주조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "병원서 우연히 들은 통화…원주 경찰, 5000만원 보이스피싱 피해 막아",
       "source": "강원도민일보",
@@ -711,21 +742,6 @@
         "불법사금융"
       ],
       "description": "복지부, 불법사금융 피해자·취약채무자 복지망 연계 강화 뉴스핌",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "VMS 투자사기 의혹 박가람씨 한국서 구속",
-      "source": "미주조선일보",
-      "source_url": "https://chosundaily.com",
-      "source_domain": "chosundaily.com",
-      "date": "Tue, 22 Sep 2026 03:47:33 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ2RKTVdIeEpEeXJUUklReERMQWttem1VTTRGcG9hX1ROdGN2QWxrdFRwR20zVHpwMjNRQXE4dU55aGVZbjJoclNlNUcwM3d3SUJfcXQ0NEhJaUVlcDVtTWM1bkFNVlFxcDg2VzNUOEE1a2dsdmZDTEd0MThKbjcta0hEQlFSbC13Y2xhT0tHRmd4YXlKV09oQWhsTVpQYzNua1pF?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "VMS 투자사기 의혹 박가람씨 한국서 구속 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -841,7 +857,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화",
-      "source": "파이낸셜투데이",
+      "source": "ftoday.co.kr",
       "source_url": "https://www.ftoday.co.kr",
       "source_domain": "www.ftoday.co.kr",
       "date": "Tue, 22 Sep 2026 01:35:52 GMT",
@@ -849,7 +865,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 파이낸셜투데이",
+      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 ftoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1420,22 +1436,6 @@
     {
       "region": "국내",
       "query": "가상자산 AML",
-      "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Mon, 21 Sep 2026 03:00:09 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iQ0d6d0VSa2sxM1Y0bmJWbXBOQVllcnVLNVVoS2hQWVo5NzVUMFpkQjNjQnduMjNfMjFUZ0F4cUJUYmVzTXEyNTRYaWRVR3QwNl96YjhhdGFidDDSAWBBVV95cUxPWEZzemtJMi05N3JmamFUamZraG9FM29yUDItNk1seU55VVJ4T000OTFPMHduc0s1cm1VektlNmZzdVU5cV9sUWJGdl92ZWc4TWFvbUhtMXZsUU50RXRkWnY?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
       "title": "\"코인 맡기면 월 1.8% 이자\"…금융범죄·사이버사기 2.6만명 검거",
       "source": "edaily.co.kr",
       "source_url": "https://www.edaily.co.kr",
@@ -1517,7 +1517,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다",
-      "source": "fintechtoday.co.kr",
+      "source": "핀테크투데이",
       "source_url": "http://www.fintechtoday.co.kr",
       "source_domain": "www.fintechtoday.co.kr",
       "date": "Mon, 21 Sep 2026 02:47:56 GMT",
@@ -1526,7 +1526,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 fintechtoday.co.kr",
+      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 핀테크투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1773,7 +1773,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의",
-      "source": "raonnews.com",
+      "source": "라온신문",
       "source_url": "https://www.raonnews.com",
       "source_domain": "www.raonnews.com",
       "date": "Sun, 20 Sep 2026 04:10:47 GMT",
@@ -1781,7 +1781,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 raonnews.com",
+      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 라온신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1970,23 +1970,8 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\"",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -1994,7 +1979,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\" newsis.com",
+      "description": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\" 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -2010,6 +1995,21 @@
         "사기"
       ],
       "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
+      "source": "dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
       "collection_method": "google_news_24h"
     },
     {
