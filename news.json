@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T21:39:02.115538+00:00",
+  "updated_at": "2026-09-22T22:08:48.107355+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "가상자산 AML",
@@ -30,7 +30,7 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "보이스피싱",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,13 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -415,19 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -485,10 +503,10 @@
       "query": "투자사기",
       "title": "\"낯선 사람에 계속 큰돈 송금\"…치매 남편 로맨스 스캠에 이혼 고민",
       "source": "뉴시스",
-      "source_url": "https://www.newsis.com",
-      "source_domain": "www.newsis.com",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Tue, 22 Sep 2026 20:20:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA2LWUwYURiTzhYdnBKOXVfNTFfbmhTZ2tacUhiemdxYV9rdmVlVXA4dWlBQ0pYUkNWeEdKbXVaTExWbFQxOU11V085YnpFTmQyNGlod3hnSmVwU3k1OGlCSdIBeEFVX3lxTE0teWdfYnBjT05EWnhnb2trenNtYkNId1ZKTVl5Yk1qNXQwd04tdElVN1czbWdIVWNEOVVCM2lwNHd6eFM0YWtBYnRkek9VMkFySDJGdjdrWGt0YUhBdDAtTm4tY2xnaVdyVldVb0d1VHB1aUZmdzNBVA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0teWdfYnBjT05EWnhnb2trenNtYkNId1ZKTVl5Yk1qNXQwd04tdElVN1czbWdIVWNEOVVCM2lwNHd6eFM0YWtBYnRkek9VMkFySDJGdjdrWGt0YUhBdDAtTm4tY2xnaVdyVldVb0d1VHB1aUZmdzNBVNIBeEFVX3lxTE0teWdfYnBjT05EWnhnb2trenNtYkNId1ZKTVl5Yk1qNXQwd04tdElVN1czbWdIVWNEOVVCM2lwNHd6eFM0YWtBYnRkek9VMkFySDJGdjdrWGt0YUhBdDAtTm4tY2xnaVdyVldVb0d1VHB1aUZmdzNBVA?oc=5",
       "tags": [
         "AML"
       ],
@@ -582,26 +600,11 @@
       "source_url": "https://www.newstomato.com",
       "source_domain": "www.newstomato.com",
       "date": "Tue, 22 Sep 2026 06:34:12 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TT2p0UzdWOEdkNmlNWkN0TVV4SC01eXJjVG13Yk9FQ29Xbl8yM19ubmNLYjBHdWpVQTBOZjFNaXExZGF1enp3QTZVQXZVRlNSbExVQXh1aFRFUHQyTUNQOA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFByTDBFMlV2eExoSDdMbHBZVllxUF9PRUNGTG5pUmtONk1ZVlo3WUY2XzZ0NkhSajkydUREQ1hTTHpOQTczVUdDeXBIczZOM3lWQ1BFUFB0OUI2aF95SGw3Sg?oc=5",
       "tags": [
         "사기"
       ],
       "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' 뉴스토마토",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "VMS 투자사기 의혹 박가람씨 한국서 구속",
-      "source": "미주조선일보",
-      "source_url": "https://chosundaily.com",
-      "source_domain": "chosundaily.com",
-      "date": "Tue, 22 Sep 2026 05:50:58 GMT",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPLVRHMUZHb1lLRWVWdF85Y1VhbUVHYmNUem51aXJYUkttT2dfOFdpckZHQzBWTGxMWTFnNG9CaGpsYVlfaGt0VF9DY2JSZ1h6c2VQTWRiTGJSRFdZSExTRmlfUjktRkMxdEhjcTgySThUQ3NRYnNaOTVERkk4T2ZPdzhwWnE1d3RwUUVOWTh4dFl2bTNQMHVISU1fcDRabE9TcjZmTFUzbTBrcmpyMndYd2RvVmNwejQxOTZlcFQtZHVCM1lvUXJSdU45NHhzSjB1?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "VMS 투자사기 의혹 박가람씨 한국서 구속 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -623,7 +626,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손",
-      "source": "스마트경제",
+      "source": "dailysmart.co.kr",
       "source_url": "https://www.dailysmart.co.kr",
       "source_domain": "www.dailysmart.co.kr",
       "date": "Tue, 22 Sep 2026 05:25:10 GMT",
@@ -632,7 +635,22 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
+      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 dailysmart.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "VMS 투자사기 의혹 박가람씨 한국서 구속",
+      "source": "미주조선일보",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Tue, 22 Sep 2026 05:17:25 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNT1I3V1N0NjJROU9Wak84VEVpU3F0cEcxXzFRUk00NExLeXNyVVNKRkRMbDhiOGdNc2dWM19ocXlUWndCNmhYSUdKVWFrSFZEV3FwSEthWkdkT3lWQS1LTTlfRUxVZEJ2S0Vxek1KM251blBrdE9FYmthbkhmWWxWU0JGOXJTWlZ6LUxwRW1UckYzUTU1V0R4emFQMWl4STltZnZaQmR2T252dXkyZERsUFBQOWFBUnR6RXc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "VMS 투자사기 의혹 박가람씨 한국서 구속 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -654,7 +672,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대",
-      "source": "khan.co.kr",
+      "source": "경향신문",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Tue, 22 Sep 2026 04:45:00 GMT",
@@ -662,7 +680,7 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대 khan.co.kr",
+      "description": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대 경향신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -964,8 +982,8 @@
       "source": "핀포인트뉴스",
       "source_url": "https://www.pinpointnews.co.kr",
       "source_domain": "www.pinpointnews.co.kr",
-      "date": "Mon, 21 Sep 2026 23:55:03 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fYlMweGpGbjdyMGxLdTV1ZFNwUVU2a3lPTzhuZnRUT0VKNXdmSkVVVURZaDFXNDZqdHdPNVZSa1gxbzdvS2hVZ3c3NFNXZWhPaV9nNVVsQmdXc0VBODc4RW9ORjFPUDQ1UVphRV80Uk1SLWfSAXdBVV95cUxQNEpkamFFWHNCdktIQTFGa05FYkJEMmFLd1lxRDlTUGpQdkxzMmVkZ0pUWThvVWo1ZDBuTTJVLU52dmQxb0VydzNOei1XUTBsdjQzMEQxXzVRZ0RmdE1EU3ZhcjN2RXNmN3dOZUkxU1ZtWWN1bXQwSQ?oc=5",
+      "date": "Tue, 22 Sep 2026 00:08:36 GMT",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA0SmRqYUVYc0J2S0hBMUZrTkViQkQyYUt3WXFEOVNQalB2THMyZWRnSlRZOG9VajVkMG5NMlUtTnZ2ZDFvRXJ3M056LVdRMGx2NDMwRDFfNVFnRGZ0TURTdmFyM3ZFc2Y3d05lSTFTVm1ZY3VtdDBJ0gF3QVVfeXFMUDRKZGphRVhzQnZLSEExRmtORWJCRDJhS3dZcUQ5U1BqUHZMczJlZGdKVFk4b1VqNWQwbk0yVS1OdnZkMW9FcnczTnotV1EwbHY0MzBEMV81UWdEZnRNRFN2YXIzdkVzZjd3TmVJMVNWbVljdW10MEk?oc=5",
       "tags": [
         "FIU·규제",
         "자금세탁"
@@ -1008,10 +1026,10 @@
       "query": "트래블룰",
       "title": "“보관업 신고로 코인 발행?”…비댁스 KRW1 업계서도 논란",
       "source": "서울경제",
-      "source_url": "https://www.sedaily.com",
-      "source_domain": "www.sedaily.com",
+      "source_url": "https://m.sedaily.com",
+      "source_domain": "m.sedaily.com",
       "date": "Mon, 21 Sep 2026 22:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA0LXlXZzBLT2NXa3lyWDlrZWVoUk5JQ3l0SVpxZEZNWW94Q2pral9EQlBqV1BDamlEUU12aU9YRDBMTUJJQVJpQUdWVlh5SUpEOWfSAVNBVV95cUxQdVBjSUFYM0xFYVFZeWlPTDFIS3d0cl82VU9NMWVfUDg2X2VIZC1qejdOTG1fb1NBTVVzbjNFLUJ0cGJRb01EUFZ2ZzVQWWlmUW9IZw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB1UGNJQVgzTEVhUVl5aU9MMUhLd3RyXzZVT00xZV9QODZfZUhkLWp6N05MbV9vU0FNVXNuM0UtQnRwYlFvTURQVnZnNVBZaWZRb0hn0gFTQVVfeXFMUHVQY0lBWDNMRWFRWXlpT0wxSEt3dHJfNlVPTTFlX1A4Nl9lSGQtano3TkxtX29TQU1Vc24zRS1CdHBiUW9NRFBWdmc1UFlpZlFvSGc?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -1403,7 +1421,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈",
-      "source": "Chosunbiz",
+      "source": "biz.chosun.com",
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Mon, 21 Sep 2026 03:34:00 GMT",
@@ -1412,7 +1430,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈 Chosunbiz",
+      "description": "경찰, ‘가짜 코인 투자’ 등 금융·사이버사기 2만6000여명 검거 - 조선비즈 biz.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1606,7 +1624,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "consumernews.co.kr",
+      "source": "소비자가 만드는 신문",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -1614,7 +1632,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1786,7 +1804,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의",
-      "source": "라온신문",
+      "source": "raonnews.com",
       "source_url": "https://www.raonnews.com",
       "source_domain": "www.raonnews.com",
       "date": "Sun, 20 Sep 2026 04:10:47 GMT",
@@ -1794,7 +1812,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 라온신문",
+      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 raonnews.com",
       "collection_method": "google_news_24h"
     },
     {
