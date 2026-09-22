@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T06:43:40.791226+00:00",
+  "updated_at": "2026-09-22T07:10:29.888084+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -248,9 +248,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_rss_fallback"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -403,13 +403,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,15 +451,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -483,14 +483,29 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 944,
+  "count": 931,
   "official_count": 33,
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁'",
+      "source": "뉴스토마토",
+      "source_url": "https://www.newstomato.com",
+      "source_domain": "www.newstomato.com",
+      "date": "Tue, 22 Sep 2026 06:34:12 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TT2p0UzdWOEdkNmlNWkN0TVV4SC01eXJjVG13Yk9FQ29Xbl8yM19ubmNLYjBHdWpVQTBOZjFNaXExZGF1enp3QTZVQXZVRlNSbExVQXh1aFRFUHQyTUNQOA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' 뉴스토마토",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "FIU·STR",
       "title": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰",
-      "source": "yonhapnewstv.co.kr",
+      "source": "연합뉴스TV",
       "source_url": "https://www.yonhapnewstv.co.kr",
       "source_domain": "www.yonhapnewstv.co.kr",
       "date": "Tue, 22 Sep 2026 05:27:00 GMT",
@@ -498,14 +513,14 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 yonhapnewstv.co.kr",
+      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 연합뉴스TV",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손",
-      "source": "스마트경제",
+      "source": "dailysmart.co.kr",
       "source_url": "https://www.dailysmart.co.kr",
       "source_domain": "www.dailysmart.co.kr",
       "date": "Tue, 22 Sep 2026 05:25:10 GMT",
@@ -514,7 +529,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
+      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 dailysmart.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -536,7 +551,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대",
-      "source": "경향신문",
+      "source": "khan.co.kr",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Tue, 22 Sep 2026 04:45:00 GMT",
@@ -544,7 +559,7 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대 경향신문",
+      "description": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대 khan.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -656,7 +671,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "제재 비웃는 푸틴…글로벌 은행에 '가짜 도장' 찍어 자금세탁",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 22 Sep 2026 02:54:44 GMT",
@@ -665,7 +680,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "제재 비웃는 푸틴…글로벌 은행에 '가짜 도장' 찍어 자금세탁 연합뉴스",
+      "description": "제재 비웃는 푸틴…글로벌 은행에 '가짜 도장' 찍어 자금세탁 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -794,7 +809,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "newsquest.co.kr",
+      "source": "뉴스퀘스트",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -802,7 +817,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -829,8 +844,8 @@
       "source": "핀포인트뉴스",
       "source_url": "https://www.pinpointnews.co.kr",
       "source_domain": "www.pinpointnews.co.kr",
-      "date": "Tue, 22 Sep 2026 00:08:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA0SmRqYUVYc0J2S0hBMUZrTkViQkQyYUt3WXFEOVNQalB2THMyZWRnSlRZOG9VajVkMG5NMlUtTnZ2ZDFvRXJ3M056LVdRMGx2NDMwRDFfNVFnRGZ0TURTdmFyM3ZFc2Y3d05lSTFTVm1ZY3VtdDBJ0gF3QVVfeXFMUDRKZGphRVhzQnZLSEExRmtORWJCRDJhS3dZcUQ5U1BqUHZMczJlZGdKVFk4b1VqNWQwbk0yVS1OdnZkMW9FcnczTnotV1EwbHY0MzBEMV81UWdEZnRNRFN2YXIzdkVzZjd3TmVJMVNWbVljdW10MEk?oc=5",
+      "date": "Mon, 21 Sep 2026 23:55:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fYlMweGpGbjdyMGxLdTV1ZFNwUVU2a3lPTzhuZnRUT0VKNXdmSkVVVURZaDFXNDZqdHdPNVZSa1gxbzdvS2hVZ3c3NFNXZWhPaV9nNVVsQmdXc0VBODc4RW9ORjFPUDQ1UVphRV80Uk1SLWfSAXdBVV95cUxQNEpkamFFWHNCdktIQTFGa05FYkJEMmFLd1lxRDlTUGpQdkxzMmVkZ0pUWThvVWo1ZDBuTTJVLU52dmQxb0VydzNOei1XUTBsdjQzMEQxXzVRZ0RmdE1EU3ZhcjN2RXNmN3dOZUkxU1ZtWWN1bXQwSQ?oc=5",
       "tags": [
         "FIU·규제",
         "자금세탁"
@@ -870,21 +885,6 @@
     },
     {
       "region": "국내",
-      "query": "횡령·배임",
-      "title": "한인타운 외식업계 공금횡령 관련 소송전",
-      "source": "미주조선일보",
-      "source_url": "https://chosundaily.com",
-      "source_domain": "chosundaily.com",
-      "date": "Mon, 21 Sep 2026 21:48:10 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQkVKNkRlamJ0SGZXN3d4b3NhTFdMRnUwVjgwOG5HT3ZzQVRJUFAwMERkQ0p0NWt6cVVrRjNueUJFZDgxM195U3YzcGNwYmF5N2c3YWYyV0pvR0N6RjFCMjRXc2wybE5vdUhCc1lnNGNaZDJFTVNxc0RWNU9yclpVcy1IczMyblB6VU9NZHJ3eVVyU253ZDJHdXpjX2JVdEs1c0dxZjhZR1FwR2M?oc=5",
-      "tags": [
-        "횡령·배임"
-      ],
-      "description": "한인타운 외식업계 공금횡령 관련 소송전 미주조선일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "가상자산 AML",
       "title": "美 '비트코인 ATM' 피싱 급증...올해 3억불 이상 털려",
       "source": "미주조선일보",
@@ -911,6 +911,21 @@
         "자금세탁"
       ],
       "description": "부동산 사업에서 자금세탁 위험을 파악하고 관리를 강화하십시오. Vietnam.vn",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "한인타운 외식업계 공금횡령 관련 소송전",
+      "source": "미주조선일보",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Mon, 21 Sep 2026 17:48:29 GMT",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQXV1ODFhMnprZU1pQmdOVGEyVUhXTk5lcnkxVUtHa0NuUk80OE92bjBBcEE2a05wUlN2Vkc5UTZ6VGdDRHhtRnQtYU1qeC1KMjlFbFB5cFEtOTIxbkdqc1J3YnpqT29mRXczby1ZVGV4MFY1VEpFU3lHNDFUUU11YUpGX1RLcmx5TFYyUFZ6N0ZUeU01NWtINTZjLXIyU0U?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "한인타운 외식업계 공금횡령 관련 소송전 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -979,7 +994,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "11억 코인 사기 고소 석 달째 ‘감감무소식’",
-      "source": "세계일보",
+      "source": "segye.com",
       "source_url": "https://m.segye.com",
       "source_domain": "m.segye.com",
       "date": "Mon, 21 Sep 2026 10:32:15 GMT",
@@ -988,7 +1003,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "11억 코인 사기 고소 석 달째 ‘감감무소식’ 세계일보",
+      "description": "11억 코인 사기 고소 석 달째 ‘감감무소식’ segye.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1284,7 +1299,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
@@ -1293,7 +1308,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 연합뉴스",
+      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1636,7 +1651,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의",
-      "source": "라온신문",
+      "source": "raonnews.com",
       "source_url": "https://www.raonnews.com",
       "source_domain": "www.raonnews.com",
       "date": "Sun, 20 Sep 2026 04:10:47 GMT",
@@ -1644,7 +1659,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 라온신문",
+      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 raonnews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1788,7 +1803,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도",
-      "source": "조세일보",
+      "source": "joseilbo.com",
       "source_url": "https://m.joseilbo.com",
       "source_domain": "m.joseilbo.com",
       "date": "Sun, 20 Sep 2026 03:05:00 GMT",
@@ -1797,7 +1812,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도 조세일보",
+      "description": "남은 외화 팔았을 뿐인데…보이스피싱 ‘돈세탁책’ 될 수도 joseilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1834,7 +1849,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -1842,7 +1857,7 @@
       "tags": [
         "사기"
       ],
-      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" asiae.co.kr",
+      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -14219,210 +14234,6 @@
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAteXZHanZPaTNUTDk3b21GVjA1cDJ0aHZKaURNazFWX2JPS2tNc2ZZUnc4VkVTaTZ4c09pTGotelpwbGdKNGpxeG9kQjVCNXhseEVqeG04a3R4amEtOWo5RUh2bUtLSXM?oc=5",
       "tags": [
         "횡령·배임"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "형식적 RBA를 넘어, 설명 가능한 위험평가로 [화우 자금세탁방지인사이트]",
-      "source": "매일경제",
-      "source_url": "https://www.mk.co.kr",
-      "source_domain": "www.mk.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5JMHlrbXkwV1NpMUI1MDZHZjBLd1Y2RkgwNzVVT3UyZmJjcGU3SndzOFJrWlZQSWdaTEV0NXdEWTZ0bzE4MkxnQTFPbUJTejlnc2dfUg?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "형식적 RBA를 넘어, 설명 가능한 위험평가로 [화우 자금세탁방지인사이트] 매일경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "금융보안원·인터넷은행, 보이스피싱 AI 공동모델 적용",
-      "source": "한국보험신문",
-      "source_url": "https://www.insnews.co.kr",
-      "source_domain": "www.insnews.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9BSkd3d1JxSHljTld5eDVEeTNHckwwRkZwZkFCQWtCSzlDdjlPRlVlY0FudTluSDBzdklnakU1c0lkZFF2QkU5YWprR2NtUzdidjBWbTNFcFRnNWU1VFdaYWVYNjZ6eGJwR2VR0gFvQVVfeXFMTS02N3FZaXBqWUN5TlgzdF9VNFRJeE5tSGxwRUFjaldqcFcwTkFJU1VjYWNoYnJQaW1LS2ZWVTRYRHlGOXZ1NVVCWDF0WWd4QW8xUnNjLUt0LVN4TWpWZjBYTkltbjZzTlZiRFJ1Wkhz?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "금융보안원·인터넷은행, 보이스피싱 AI 공동모델 적용 한국보험신문",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "금융위 \"미신고사업자 가상자산 거래, 모두 불법\"",
-      "source": "파이낸셜뉴스",
-      "source_url": "https://www.fnnews.com",
-      "source_domain": "www.fnnews.com",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WTC1UOWZmOFhFZDhUUk9vOEJ3RVBMSU02aGpBdFZDRElvSjJ3VEMtZ3IyMGZ6R3J6S2tvbS1ZX0ZkR09Nc0dWcm44Q0tCcFN1eXZNdFhOcnVIdw?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "금융위 \"미신고사업자 가상자산 거래, 모두 불법\" 파이낸셜뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "불법 가상자산 취급업자 급증…FIU “미신고 업체 이용 말아야”",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5OZWxpeGRzNHdXdmhfeWk4eWNVR01lcURrMU16bjJMZHRjWnZZajRTMVYxQlBHUEUxYk9ham5GalQ1b09uSEgxTVhSTGlHRGo4N2lfdk1xNUFETVk?oc=5",
-      "tags": [
-        "가상자산",
-        "FIU·규제"
-      ],
-      "description": "불법 가상자산 취급업자 급증…FIU “미신고 업체 이용 말아야” KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "FIU \"신고 가상자산사업자 28곳 빼고 다 불법\"…투자주의 당부",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBWaE94OUhQeG1CMlBxaFpFM0JkWE1BUmpBek9JVTlnRDAxVTdOZU9XRHZ6U3dEQi0wdjRCbWg0NHJsODlPN2lGZnJUVVFYTlNzRFpmYzFPQ1NKbm_SAWBBVV95cUxNNTBQOXVUemxoVVJTcWxuM21ZU1BrM3JkNlN3M3hVZXl4aWgzQTRHa3NaN1AyUGV1RGFTOHdMMDE1SjdUV0FOSjFLdXc0SG56cGhXdEtjcjdlaVNTMFRqZDg?oc=5",
-      "tags": [
-        "가상자산",
-        "FIU·규제"
-      ],
-      "description": "FIU \"신고 가상자산사업자 28곳 빼고 다 불법\"…투자주의 당부 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "FIU \"해외 가상자산거래소 레퍼럴은 미신고 영업 조력...형사처벌 가능\"",
-      "source": "디지털애셋",
-      "source_url": "https://www.digitalasset.works",
-      "source_domain": "www.digitalasset.works",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE56ajJ3bEUzeUIwVlNBM000bldxX3VuSjFWNUFvd0xJX1VtMzVUMHJaSTMwU2c2U3ZkdV85cnVaMnBfbVFRWDkzcmhVTlFnSVE3TWhuRmxnaUkyR2NKMnMyZk55NWlUQ3dYX1psaVNYdHhxdw?oc=5",
-      "tags": [
-        "가상자산",
-        "FIU·규제"
-      ],
-      "description": "FIU \"해외 가상자산거래소 레퍼럴은 미신고 영업 조력...형사처벌 가능\" 디지털애셋",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "FIU “미신고 가상자산사업자 기승…28곳 빼고 다 불법”",
-      "source": "시사저널",
-      "source_url": "https://www.sisajournal.com",
-      "source_domain": "www.sisajournal.com",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1IYWhOUHJVYWRhY21UanNRN2kzLWQ1VDFySVZ1ZmZLWkhHNE1vbGxEcU54eGhiQl9qZ1ZqN2c3ei1zWFg0VVFlVWlMYnpCTmduVk9VZ0hiWUZEUThqMTg2dHV0ODN3MThqdDI4ZTRGWdIBc0FVX3lxTE15Y3FmMGFCd2xKTVpBUzN0NFFYTWNKaHZVc3JQeEo5YmhicWxZUnVLZU14OHc5dnE1aVNhZXFPY2xIU294UGVqd3JuQUxuMER6dWRxQzZPT1NaTHY5VDVSa1QwUmNMYTN4SFRsR1VNNkw4V28?oc=5",
-      "tags": [
-        "가상자산",
-        "FIU·규제"
-      ],
-      "description": "FIU “미신고 가상자산사업자 기승…28곳 빼고 다 불법” 시사저널",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "FIU \"28곳 제외 모두 불법\" … 미신고 가상자산사업자 주의보",
-      "source": "뉴데일리",
-      "source_url": "https://biz.newdaily.co.kr",
-      "source_domain": "biz.newdaily.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE81bHlZbHJfeHc3b3FmeWFFMm9LY0tBY3pkbWdDaVFYMUl3alJtTF9mNnFlNkNMSlZHcG5ZdlBsVmRaaU9sOHEtSF92TFB2NjdOQ1pkelN2MWRUMDI5ZUdLZ0lUZHZJVEhqRnd1MmdjZnJpRHJ0X2RqSlVUUQ?oc=5",
-      "tags": [
-        "가상자산",
-        "FIU·규제"
-      ],
-      "description": "FIU \"28곳 제외 모두 불법\" … 미신고 가상자산사업자 주의보 뉴데일리",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "“외국인에 eSIM 판매” 투자사기 고소…인천청 수사 착수",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBUcUZtWHFuSXp1ZWFvbkppUHF2Tl9xNVZBdW82Q2U5eldXUFkydVpKMlU0bEdkcTJhTUVXSEVBb1NMOUwwZmc5eEVDUWpvcjd5blNjbjBoeTdacHc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“외국인에 eSIM 판매” 투자사기 고소…인천청 수사 착수 KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "트래블룰",
-      "title": "수수료 62배 떼고 개인정보까지…미신고 코인거래소 '주의보'",
-      "source": "리드경제",
-      "source_url": "https://www.leadeconomy.co.kr",
-      "source_domain": "www.leadeconomy.co.kr",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1MdjJmdzdkNnFhZlpBUlJwQzVBVVQ5S1Ayampwckp0ZjNENHM2T2ZmQ3RZNVFQX1UxejBldWJOX0c2dktFNlF4SWtEbkZraGtWZTVqQnVzUkNoUUdhMW55NDFSZWw5aHVBYzY2b1VsRQ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "수수료 62배 떼고 개인정보까지…미신고 코인거래소 '주의보' 리드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "'가상자산 투자 사기' 14억 가로챈 태영호 前의원 장남 구속기소",
-      "source": "연합뉴스",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE14aTlNRTNwNHpzRTcyX0dUY0lHaDEtYldnTC0xREZuRlRWeFI1MjFDUkwyUGhIU291bmlkOEN2eUN2NWp5UnRQcU4tWVZFc1ZPQmx6OUU4ZEg4Q03SAWBBVV95cUxQNUVkendYcjRyQnNFZVZyQ1NEdUZuMnlWbV9ad0ZLRXlCN2dtLXBuNGNxaTE5U0JKNk1hckx4cUtJaGdQZDFyTVlldndaT2NaSFVyR0trMnprR0thM1VGejY?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "‘가상자산 투자사기’ 14억원 가로챈 태영호 전 의원 아들 재판행",
-      "source": "JTBC",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5zRFlPcmxPd1RsUTQ3azZqMDhlOUF4M0FQUUVQeVZ3emtwT3BzSTdrM0dGWXpKb0xxY2VxTGlTdEZTdFp4RUNSbUJWZ1QwWnRvZEc0NQ?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "검찰, '가상자산 투자 사기' 태영호 전 의원 장남 구속기소",
-      "source": "아시아경제",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBPMWZoZGNHZDk0N1BmcVhhNkNMYmg2Q2R1ZGZEYUtCRGZLYzNMLTZsX1N5d1BkY0ItWHpNWE0zY1hqY1BOdm9lbHVhR3BlRTh2QlEyMnhPQkpxRFF1YmVtZw?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "檢, '14억 가상자산 투자 사기' 태영호 장남 구속기소",
-      "source": "파이낸셜뉴스",
-      "date": "Wed, 24 Jun 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1QbTVSXzVITjV5OWlXMUxmVEYxM1B0T0hjbTFtZERiZzJCamJqQUdpOFMtOHpVSUJUNVhKUUYza2diNkJrc3poYk9uUGs0dTlXZTloU1EteEdJdw?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
       ]
     }
   ],
