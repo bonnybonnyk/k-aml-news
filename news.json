@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T02:10:11.029111+00:00",
+  "updated_at": "2026-09-22T02:39:57.015799+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 14
+      "count": 15
     },
     {
       "feed": "지갑·해외거래소",
@@ -30,12 +30,12 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,9 +242,21 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -255,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
@@ -403,30 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -439,7 +427,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,13 +463,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -490,7 +502,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전",
-      "source": "웰페어뉴스",
+      "source": "welfarenews.net",
       "source_url": "https://www.welfarenews.net",
       "source_domain": "www.welfarenews.net",
       "date": "Tue, 22 Sep 2026 01:48:18 GMT",
@@ -499,7 +511,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전 웰페어뉴스",
+      "description": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전 welfarenews.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -581,7 +593,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "바이낸스, 이란 제재 회피 의혹 미 연방 검찰 수사",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 22 Sep 2026 01:03:24 GMT",
@@ -589,7 +601,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "바이낸스, 이란 제재 회피 의혹 미 연방 검찰 수사 토큰포스트",
+      "description": "바이낸스, 이란 제재 회피 의혹 미 연방 검찰 수사 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -689,7 +701,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "부동산 사업에서 자금세탁 위험을 파악하고 관리를 강화하십시오.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Mon, 21 Sep 2026 18:42:47 GMT",
@@ -697,7 +709,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "부동산 사업에서 자금세탁 위험을 파악하고 관리를 강화하십시오. vietnam.vn",
+      "description": "부동산 사업에서 자금세탁 위험을 파악하고 관리를 강화하십시오. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -719,7 +731,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "409억원 가상자산 사기단 26명 검거…캄보디아 거점",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 21 Sep 2026 14:51:36 GMT",
@@ -728,7 +740,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "409억원 가상자산 사기단 26명 검거…캄보디아 거점 토큰포스트",
+      "description": "409억원 가상자산 사기단 26명 검거…캄보디아 거점 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -750,7 +762,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 21 Sep 2026 10:52:16 GMT",
@@ -759,7 +771,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금 토큰포스트",
+      "description": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1167,7 +1179,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다",
-      "source": "fintechtoday.co.kr",
+      "source": "핀테크투데이",
       "source_url": "http://www.fintechtoday.co.kr",
       "source_domain": "www.fintechtoday.co.kr",
       "date": "Mon, 21 Sep 2026 02:47:56 GMT",
@@ -1176,7 +1188,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 fintechtoday.co.kr",
+      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 핀테크투데이",
       "collection_method": "google_news_24h"
     },
     {
