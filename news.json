@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T17:09:33.275229+00:00",
+  "updated_at": "2026-09-22T17:38:15.989162+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 8
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,6 +397,24 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -427,37 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,7 +451,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -502,7 +484,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "후난 경찰, 3만위안 가상자산 사기 피의자 2명 구속",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 22 Sep 2026 11:08:07 GMT",
@@ -511,7 +493,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "후난 경찰, 3만위안 가상자산 사기 피의자 2명 구속 토큰포스트",
+      "description": "후난 경찰, 3만위안 가상자산 사기 피의자 2명 구속 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -533,7 +515,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "병원 진료 대기 중 “보이스피싱 같은데?”…금전 피해 막은 경찰관",
-      "source": "kwnews.co.kr",
+      "source": "강원일보",
       "source_url": "https://www.kwnews.co.kr",
       "source_domain": "www.kwnews.co.kr",
       "date": "Tue, 22 Sep 2026 08:50:44 GMT",
@@ -541,7 +523,7 @@
       "tags": [
         "사기"
       ],
-      "description": "병원 진료 대기 중 “보이스피싱 같은데?”…금전 피해 막은 경찰관 kwnews.co.kr",
+      "description": "병원 진료 대기 중 “보이스피싱 같은데?”…금전 피해 막은 경찰관 강원일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -611,7 +593,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰",
-      "source": "연합뉴스TV",
+      "source": "yonhapnewstv.co.kr",
       "source_url": "https://www.yonhapnewstv.co.kr",
       "source_domain": "www.yonhapnewstv.co.kr",
       "date": "Tue, 22 Sep 2026 05:27:00 GMT",
@@ -619,7 +601,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 연합뉴스TV",
+      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 yonhapnewstv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -841,7 +823,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화",
-      "source": "ftoday.co.kr",
+      "source": "파이낸셜투데이",
       "source_url": "https://www.ftoday.co.kr",
       "source_domain": "www.ftoday.co.kr",
       "date": "Tue, 22 Sep 2026 01:35:52 GMT",
@@ -849,7 +831,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 ftoday.co.kr",
+      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 파이낸셜투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -916,7 +898,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "뉴스퀘스트",
+      "source": "newsquest.co.kr",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -924,7 +906,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -964,7 +946,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Mon, 21 Sep 2026 23:27:13 GMT",
@@ -972,7 +954,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 hankyung.com",
+      "description": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -994,7 +976,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "“보관업 신고로 코인 발행?”…비댁스 KRW1 업계서도 논란",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Mon, 21 Sep 2026 22:00:00 GMT",
@@ -1002,7 +984,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "“보관업 신고로 코인 발행?”…비댁스 KRW1 업계서도 논란 sedaily.com",
+      "description": "“보관업 신고로 코인 발행?”…비댁스 KRW1 업계서도 논란 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1193,7 +1175,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Mon, 21 Sep 2026 08:33:58 GMT",
@@ -1201,7 +1183,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도 sedaily.com",
+      "description": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1469,7 +1451,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거",
-      "source": "파이낸셜뉴스",
+      "source": "fnnews.com",
       "source_url": "https://www.fnnews.com",
       "source_domain": "www.fnnews.com",
       "date": "Mon, 21 Sep 2026 03:00:00 GMT",
@@ -1478,7 +1460,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 파이낸셜뉴스",
+      "description": "가짜 코인투자 유인·봉사단체 사칭까지…금융범죄·사이버사기 2만6782명 검거 fnnews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1789,7 +1771,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의",
-      "source": "raonnews.com",
+      "source": "라온신문",
       "source_url": "https://www.raonnews.com",
       "source_domain": "www.raonnews.com",
       "date": "Sun, 20 Sep 2026 04:10:47 GMT",
@@ -1797,7 +1779,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 raonnews.com",
+      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 라온신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1986,8 +1968,23 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
+      "source": "dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\"",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -1995,7 +1992,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\" 뉴시스",
+      "description": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\" newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2011,21 +2008,6 @@
         "사기"
       ],
       "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
       "collection_method": "google_news_24h"
     },
     {
