@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-22T21:09:14.969045+00:00",
+  "updated_at": "2026-09-22T21:39:02.115538+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -421,7 +403,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,13 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,19 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +445,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -548,7 +530,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "병원 진료 대기 중 “보이스피싱 같은데?”…금전 피해 막은 경찰관",
-      "source": "kwnews.co.kr",
+      "source": "강원일보",
       "source_url": "https://www.kwnews.co.kr",
       "source_domain": "www.kwnews.co.kr",
       "date": "Tue, 22 Sep 2026 08:50:44 GMT",
@@ -556,7 +538,7 @@
       "tags": [
         "사기"
       ],
-      "description": "병원 진료 대기 중 “보이스피싱 같은데?”…금전 피해 막은 경찰관 kwnews.co.kr",
+      "description": "병원 진료 대기 중 “보이스피싱 같은데?”…금전 피해 막은 경찰관 강원일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -605,6 +587,21 @@
         "사기"
       ],
       "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' 뉴스토마토",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "VMS 투자사기 의혹 박가람씨 한국서 구속",
+      "source": "미주조선일보",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Tue, 22 Sep 2026 05:50:58 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPLVRHMUZHb1lLRWVWdF85Y1VhbUVHYmNUem51aXJYUkttT2dfOFdpckZHQzBWTGxMWTFnNG9CaGpsYVlfaGt0VF9DY2JSZ1h6c2VQTWRiTGJSRFdZSExTRmlfUjktRkMxdEhjcTgySThUQ3NRYnNaOTVERkk4T2ZPdzhwWnE1d3RwUUVOWTh4dFl2bTNQMHVISU1fcDRabE9TcjZmTFUzbTBrcmpyMndYd2RvVmNwejQxOTZlcFQtZHVCM1lvUXJSdU45NHhzSjB1?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "VMS 투자사기 의혹 박가람씨 한국서 구속 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -672,7 +669,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 수거책 검거 장면이 블록으로…부산은행 160곳에 뜬다",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Tue, 22 Sep 2026 04:41:37 GMT",
@@ -680,7 +677,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 수거책 검거 장면이 블록으로…부산은행 160곳에 뜬다 news1.kr",
+      "description": "보이스피싱 수거책 검거 장면이 블록으로…부산은행 160곳에 뜬다 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -730,24 +727,9 @@
     },
     {
       "region": "국내",
-      "query": "투자사기",
-      "title": "VMS 투자사기 의혹 박가람씨 한국서 구속",
-      "source": "미주조선일보",
-      "source_url": "https://chosundaily.com",
-      "source_domain": "chosundaily.com",
-      "date": "Tue, 22 Sep 2026 03:47:33 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ2RKTVdIeEpEeXJUUklReERMQWttem1VTTRGcG9hX1ROdGN2QWxrdFRwR20zVHpwMjNRQXE4dU55aGVZbjJoclNlNUcwM3d3SUJfcXQ0NEhJaUVlcDVtTWM1bkFNVlFxcDg2VzNUOEE1a2dsdmZDTEd0MThKbjcta0hEQlFSbC13Y2xhT0tHRmd4YXlKV09oQWhsTVpQYzNua1pF?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "VMS 투자사기 의혹 박가람씨 한국서 구속 미주조선일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "보이스피싱",
       "title": "'카드번호' 알려주는 60대 보고 보이스피싱 직감…피해 막은 경찰관",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Tue, 22 Sep 2026 03:28:38 GMT",
@@ -755,7 +737,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'카드번호' 알려주는 60대 보고 보이스피싱 직감…피해 막은 경찰관 news1.kr",
+      "description": "'카드번호' 알려주는 60대 보고 보이스피싱 직감…피해 막은 경찰관 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -841,7 +823,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "“가상자산 송·수신 정보 안전하게 연결”…하나은행, 업비트 글로벌과 트래블룰 협력",
-      "source": "spochoo.com",
+      "source": "더게이트",
       "source_url": "http://www.spochoo.com",
       "source_domain": "www.spochoo.com",
       "date": "Tue, 22 Sep 2026 01:54:19 GMT",
@@ -849,7 +831,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "“가상자산 송·수신 정보 안전하게 연결”…하나은행, 업비트 글로벌과 트래블룰 협력 spochoo.com",
+      "description": "“가상자산 송·수신 정보 안전하게 연결”…하나은행, 업비트 글로벌과 트래블룰 협력 더게이트",
       "collection_method": "google_news_24h"
     },
     {
@@ -872,7 +854,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화",
-      "source": "ftoday.co.kr",
+      "source": "파이낸셜투데이",
       "source_url": "https://www.ftoday.co.kr",
       "source_domain": "www.ftoday.co.kr",
       "date": "Tue, 22 Sep 2026 01:35:52 GMT",
@@ -880,7 +862,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 ftoday.co.kr",
+      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 파이낸셜투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -982,8 +964,8 @@
       "source": "핀포인트뉴스",
       "source_url": "https://www.pinpointnews.co.kr",
       "source_domain": "www.pinpointnews.co.kr",
-      "date": "Tue, 22 Sep 2026 00:08:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA0SmRqYUVYc0J2S0hBMUZrTkViQkQyYUt3WXFEOVNQalB2THMyZWRnSlRZOG9VajVkMG5NMlUtTnZ2ZDFvRXJ3M056LVdRMGx2NDMwRDFfNVFnRGZ0TURTdmFyM3ZFc2Y3d05lSTFTVm1ZY3VtdDBJ0gF3QVVfeXFMUDRKZGphRVhzQnZLSEExRmtORWJCRDJhS3dZcUQ5U1BqUHZMczJlZGdKVFk4b1VqNWQwbk0yVS1OdnZkMW9FcnczTnotV1EwbHY0MzBEMV81UWdEZnRNRFN2YXIzdkVzZjd3TmVJMVNWbVljdW10MEk?oc=5",
+      "date": "Mon, 21 Sep 2026 23:55:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fYlMweGpGbjdyMGxLdTV1ZFNwUVU2a3lPTzhuZnRUT0VKNXdmSkVVVURZaDFXNDZqdHdPNVZSa1gxbzdvS2hVZ3c3NFNXZWhPaV9nNVVsQmdXc0VBODc4RW9ORjFPUDQ1UVphRV80Uk1SLWfSAXdBVV95cUxQNEpkamFFWHNCdktIQTFGa05FYkJEMmFLd1lxRDlTUGpQdkxzMmVkZ0pUWThvVWo1ZDBuTTJVLU52dmQxb0VydzNOei1XUTBsdjQzMEQxXzVRZ0RmdE1EU3ZhcjN2RXNmN3dOZUkxU1ZtWWN1bXQwSQ?oc=5",
       "tags": [
         "FIU·규제",
         "자금세탁"
@@ -1624,7 +1606,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "소비자가 만드는 신문",
+      "source": "consumernews.co.kr",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -1632,7 +1614,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
