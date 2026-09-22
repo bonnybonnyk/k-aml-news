@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-22T20:39:50.234059+00:00",
+  "updated_at": "2026-09-22T21:09:14.969045+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 8
+      "count": 7
     },
     {
       "feed": "범죄수익",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "탈세",
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 28,
+      "count": 29,
       "method": "body_relevance"
     },
     {
@@ -415,13 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +427,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -442,12 +448,6 @@
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -463,6 +463,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
@@ -470,12 +476,6 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -657,7 +657,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대",
-      "source": "경향신문",
+      "source": "khan.co.kr",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Tue, 22 Sep 2026 04:45:00 GMT",
@@ -665,7 +665,7 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대 경향신문",
+      "description": "불법사금융 피해 신고하면 복지 지원 대상으로···위기가구 발굴 정보 50종으로 확대 khan.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -791,9 +791,25 @@
     },
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "비트코인 ATM 사기 급증, 작년 1억달러 넘어",
+      "source": "미주조선일보",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Tue, 22 Sep 2026 02:35:20 GMT",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNc0NsckwxclVwYkVvZkFMWW0wNG5GMHUtRm9jWnBMWDd0RXhJQ2Frb3VjVmdSZWtzQ3ZzdEdlbVFQb3A1M1dUYl9Zb0x6dFpDLUdleHpvTW8zdmVTUzNkbkNlM0xPLUxfWFp1N2dCYzA2Q1dkbUNMd2tfVlRXUFhCRkF4QVdIZWpjMVVMNzVLU1RLU2I5a2JmRGswbURWcTBIUDNfanZUQkFKY0ZobVhhMF9EWEFab1ZmVkx3and2bw?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "비트코인 ATM 사기 급증, 작년 1억달러 넘어 미주조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "5대 거래소, 보이스피싱 핫라인 구축",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Tue, 22 Sep 2026 02:16:36 GMT",
@@ -802,14 +818,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "5대 거래소, 보이스피싱 핫라인 구축 mbiz.heraldcorp.com",
+      "description": "5대 거래소, 보이스피싱 핫라인 구축 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드",
-      "source": "Histoire pour tous",
+      "title": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 - histoire-pour-tous.fr",
+      "source": "histoire-pour-tous.fr",
       "source_url": "https://www.histoire-pour-tous.fr",
       "source_domain": "www.histoire-pour-tous.fr",
       "date": "Tue, 22 Sep 2026 02:00:25 GMT",
@@ -818,7 +834,7 @@
         "도박",
         "자금세탁"
       ],
-      "description": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 Histoire pour tous",
+      "description": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 histoire-pour-tous.fr",
       "collection_method": "google_news_24h"
     },
     {
@@ -856,7 +872,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화",
-      "source": "파이낸셜투데이",
+      "source": "ftoday.co.kr",
       "source_url": "https://www.ftoday.co.kr",
       "source_domain": "www.ftoday.co.kr",
       "date": "Tue, 22 Sep 2026 01:35:52 GMT",
@@ -864,7 +880,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 파이낸셜투데이",
+      "description": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화 ftoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1033,22 +1049,6 @@
         "횡령·배임"
       ],
       "description": "한인타운 외식업계 공금횡령 관련 소송전 미주조선일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "비트코인 ATM 사기 급증, 작년 1억달러 넘어",
-      "source": "미주조선일보",
-      "source_url": "https://chosundaily.com",
-      "source_domain": "chosundaily.com",
-      "date": "Mon, 21 Sep 2026 20:41:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPNGRBQjJlSXdLUUk5ZW9qcmZXSWtQVERTdmxYbXhhcGdVUzJhYzg1T2U1Vk56Uk04RmQtTXVjQWlkejBCcDRQRHZocWUyaXV1cmpROEhSMHY3WnFEcHJSeDFCSDQ1WWVjNGV3V25rT1hFYUZWamJrYkx6LXB2RU9HaGxLdnI2YUZ1RUFlRTNnOFVFQW82SnlQTTFLQkcyNHdxQUkwb1ZVSlhpSU9yUEdJeC0xck5HU01kdWdfYWl0UmtyaXhQeTdTcWIwaTJQWktoM09uWG1YTGxZTXBZYzlTTzJvcEM5dw?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "비트코인 ATM 사기 급증, 작년 1억달러 넘어 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
