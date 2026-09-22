@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-22T22:38:34.845709+00:00",
+  "updated_at": "2026-09-22T23:08:53.836147+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 8
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -133,7 +133,7 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -403,6 +403,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -410,12 +416,6 @@
     },
     {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,19 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -458,6 +452,12 @@
     },
     {
       "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -477,9 +477,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 939,
+  "count": 940,
   "official_count": 33,
   "items": [
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다",
+      "source": "아시아경제",
+      "source_url": "https://core.asiae.co.kr",
+      "source_domain": "core.asiae.co.kr",
+      "date": "Tue, 22 Sep 2026 22:59:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9OVmVIUVFnblQ0ZzFfamlYem5ORVBRSm9xbTFsX3BfVkNjalljYU5QOG1FTlhCTnBjTnhvLUhuSkl4Y0U2cERrWUN4V2tLTE9DM1FydVh0a242MG1kbFEwaUJB?oc=5",
+      "tags": [
+        "가상자산",
+        "FIU·규제"
+      ],
+      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 아시아경제",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "투자사기",
@@ -582,7 +598,7 @@
       "source_url": "https://www.newstomato.com",
       "source_domain": "www.newstomato.com",
       "date": "Tue, 22 Sep 2026 06:34:12 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFByTDBFMlV2eExoSDdMbHBZVllxUF9PRUNGTG5pUmtONk1ZVlo3WUY2XzZ0NkhSajkydUREQ1hTTHpOQTczVUdDeXBIczZOM3lWQ1BFUFB0OUI2aF95SGw3Sg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TT2p0UzdWOEdkNmlNWkN0TVV4SC01eXJjVG13Yk9FQ29Xbl8yM19ubmNLYjBHdWpVQTBOZjFNaXExZGF1enp3QTZVQXZVRlNSbExVQXh1aFRFUHQyTUNQOA?oc=5",
       "tags": [
         "사기"
       ],
@@ -608,7 +624,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손",
-      "source": "dailysmart.co.kr",
+      "source": "스마트경제",
       "source_url": "https://www.dailysmart.co.kr",
       "source_domain": "www.dailysmart.co.kr",
       "date": "Tue, 22 Sep 2026 05:25:10 GMT",
@@ -617,7 +633,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 dailysmart.co.kr",
+      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -759,7 +775,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "제재 비웃는 푸틴…글로벌 은행에 '가짜 도장' 찍어 자금세탁",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 22 Sep 2026 02:54:44 GMT",
@@ -768,7 +784,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "제재 비웃는 푸틴…글로벌 은행에 '가짜 도장' 찍어 자금세탁 yna.co.kr",
+      "description": "제재 비웃는 푸틴…글로벌 은행에 '가짜 도장' 찍어 자금세탁 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -806,8 +822,8 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 - histoire-pour-tous.fr",
-      "source": "histoire-pour-tous.fr",
+      "title": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드",
+      "source": "Histoire pour tous",
       "source_url": "https://www.histoire-pour-tous.fr",
       "source_domain": "www.histoire-pour-tous.fr",
       "date": "Tue, 22 Sep 2026 02:00:25 GMT",
@@ -816,7 +832,7 @@
         "도박",
         "자금세탁"
       ],
-      "description": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 histoire-pour-tous.fr",
+      "description": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 Histoire pour tous",
       "collection_method": "google_news_24h"
     },
     {
@@ -869,15 +885,15 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "[영상] \"문까지 부쉈다\" 5000억 자금세탁 조직 검거",
-      "source": "policetv.co.kr",
-      "source_url": "http://www.policetv.co.kr",
+      "source": "폴리스TV",
+      "source_url": "https://www.policetv.co.kr",
       "source_domain": "www.policetv.co.kr",
       "date": "Tue, 22 Sep 2026 01:27:40 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8xSGp1Rmw5V0dQNndHdnJtWG85LUlVY29ueV96SG5JbnNQeEtxdDFfUXhxcTRYVlBqbG5sTGxyWkNpWHBNYmxiQm9zOVZYd2RGSERxY1c3MDlUUVRXQklqMUlJVFd4Z3FsTVRJ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41c096WUtsbldBb1ZXTzAxME9Ub0lqNlZPT1lWREFPQ0hVTklRaS00aDNFbFF4ek5kdjU2dHhUSTJLeFdpWkhMNkpTLTRZSjcyV2FOeEdhcGt0aWFhdVlIeXNlQV9NYWgxb1hjdQ?oc=5",
       "tags": [
         "자금세탁"
       ],
-      "description": "[영상] \"문까지 부쉈다\" 5000억 자금세탁 조직 검거 policetv.co.kr",
+      "description": "[영상] \"문까지 부쉈다\" 5000억 자금세탁 조직 검거 폴리스TV",
       "collection_method": "google_news_24h"
     },
     {
@@ -929,7 +945,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "newsquest.co.kr",
+      "source": "뉴스퀘스트",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -937,7 +953,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -977,7 +993,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Mon, 21 Sep 2026 23:27:13 GMT",
@@ -985,7 +1001,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 hankyung.com",
+      "description": "[밤 사이 해외뉴스 영상] 러시아 ‘제재 회피’ 핀테크 A7, 위조서류로 글로벌 금융망 침투 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1295,7 +1311,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -1303,7 +1319,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1434,7 +1450,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
@@ -1443,7 +1459,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 yna.co.kr",
+      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1606,7 +1622,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "소비자가 만드는 신문",
+      "source": "consumernews.co.kr",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -1614,7 +1630,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1786,7 +1802,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의",
-      "source": "raonnews.com",
+      "source": "라온신문",
       "source_url": "https://www.raonnews.com",
       "source_domain": "www.raonnews.com",
       "date": "Sun, 20 Sep 2026 04:10:47 GMT",
@@ -1794,7 +1810,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 raonnews.com",
+      "description": "여행 쓰고 남은 달러, 개인 간 거래하다 자금세탁 연루 주의 라온신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1999,7 +2015,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Sun, 20 Sep 2026 03:00:00 GMT",
@@ -2007,7 +2023,7 @@
       "tags": [
         "사기"
       ],
-      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" asiae.co.kr",
+      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
