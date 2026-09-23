@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T07:10:46.913731+00:00",
+  "updated_at": "2026-09-23T07:40:23.516816+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -242,32 +242,20 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
@@ -421,6 +409,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
@@ -433,25 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,7 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -478,6 +460,12 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -764,7 +752,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁'",
-      "source": "뉴스토마토",
+      "source": "newstomato.com",
       "source_url": "https://www.newstomato.com",
       "source_domain": "www.newstomato.com",
       "date": "Tue, 22 Sep 2026 06:34:12 GMT",
@@ -772,7 +760,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' 뉴스토마토",
+      "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' newstomato.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -809,7 +797,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손",
-      "source": "스마트경제",
+      "source": "dailysmart.co.kr",
       "source_url": "https://www.dailysmart.co.kr",
       "source_domain": "www.dailysmart.co.kr",
       "date": "Tue, 22 Sep 2026 05:25:10 GMT",
@@ -818,7 +806,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
+      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 dailysmart.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1024,7 +1012,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "“가상자산 송·수신 정보 안전하게 연결”…하나은행, 업비트 글로벌과 트래블룰 협력",
-      "source": "더게이트",
+      "source": "spochoo.com",
       "source_url": "http://www.spochoo.com",
       "source_domain": "www.spochoo.com",
       "date": "Tue, 22 Sep 2026 01:54:19 GMT",
@@ -1032,7 +1020,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "“가상자산 송·수신 정보 안전하게 연결”…하나은행, 업비트 글로벌과 트래블룰 협력 더게이트",
+      "description": "“가상자산 송·수신 정보 안전하게 연결”…하나은행, 업비트 글로벌과 트래블룰 협력 spochoo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1146,7 +1134,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "newsquest.co.kr",
+      "source": "뉴스퀘스트",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -1154,7 +1142,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1408,10 +1396,10 @@
       "query": "자금세탁",
       "title": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도",
       "source": "서울경제",
-      "source_url": "https://m.sedaily.com",
-      "source_domain": "m.sedaily.com",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
       "date": "Mon, 21 Sep 2026 08:33:58 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE53dmtXMl9DemtORHVEc0JTVHpyVnlROTVrOFpmOGg3ajZodFpUVEZNRW4zU3prMTI0dThWRjdZdFRlUXFiNE9iWDgySEoySDRrTWpN0gFTQVVfeXFMTnd2a1cyX0N6a05EdURzQlNUenJWeVE5NWs4WmY4aDdqNmh0WlRURk1FbjNTemsxMjR1OFZGN1l0VGVRcWI0T2JYODJISjJINGtNak0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lWFRkMmNNcVl4WDFENlZuTEdwejJQa0puMXV6UHFsRDBpNVpRellPTWo4VTJWbWo4QVFnRU1iMS1SUTVrOW9yVTdWX3QyeW5QSnfSAVNBVV95cUxOd3ZrVzJfQ3prTkR1RHNCU1R6clZ5UTk1azhaZjhoN2o2aHRaVFRGTUVuM1N6azEyNHU4VkY3WXRUZVFxYjRPYlg4MkhKMkg0a01qTQ?oc=5",
       "tags": [
         "자금세탁"
       ],
@@ -14612,22 +14600,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
