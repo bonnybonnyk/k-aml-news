@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T21:10:24.164257+00:00",
+  "updated_at": "2026-09-23T21:38:57.968063+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 10,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,7 +397,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -472,12 +460,6 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -791,7 +773,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "외국인 부동산 위법의심거래 840건…국토부, 자금출처·실거주까지 본다 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Wed, 23 Sep 2026 03:50:20 GMT",
@@ -799,7 +781,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "외국인 부동산 위법의심거래 840건…국토부, 자금출처·실거주까지 본다 - 머니투데이 mt.co.kr",
+      "description": "외국인 부동산 위법의심거래 840건…국토부, 자금출처·실거주까지 본다 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1037,7 +1019,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손",
-      "source": "dailysmart.co.kr",
+      "source": "스마트경제",
       "source_url": "https://www.dailysmart.co.kr",
       "source_domain": "www.dailysmart.co.kr",
       "date": "Tue, 22 Sep 2026 05:25:10 GMT",
@@ -1046,7 +1028,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 dailysmart.co.kr",
+      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -14824,22 +14806,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
