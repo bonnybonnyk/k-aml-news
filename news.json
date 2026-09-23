@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T22:38:47.121058+00:00",
+  "updated_at": "2026-09-23T23:08:10.334596+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 10,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -421,13 +421,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,18 +451,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
@@ -466,6 +460,12 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,14 +495,45 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 967,
+  "count": 969,
   "official_count": 34,
   "items": [
     {
       "region": "국내",
+      "query": "FIU·STR",
+      "title": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보'",
+      "source": "뉴스핌",
+      "source_url": "https://www.newspim.com",
+      "source_domain": "www.newspim.com",
+      "date": "Wed, 23 Sep 2026 23:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yUFdSdGJmVnQyS0M1TmZ6VHczTXpQMWRxWlJuU0ZldXFSRWtTVm5yRnBsY3RNSmpzdTluMkVXT0FoR2tKVUtkSDlhMVNacG50dzlWai1FUEJtenRv?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' 뉴스핌",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배",
+      "source": "월드장애인사랑뉴스",
+      "source_url": "https://www.youcandonews.com",
+      "source_domain": "www.youcandonews.com",
+      "date": "Wed, 23 Sep 2026 22:59:07 GMT",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBHdXhIUGt4ckN0dE53eHdwZVlwZnEyWmhJVXBkTDdNNVQzZVZDeXNQaDJBYTk1dks3S1hwdlNnbGd0dkFvQi1ZTnlTWnJtUVd4Q0lyYTR6Q3BvNkFDUERXS1N3b3BSdUV2TnR3cmRZdw?oc=5",
+      "tags": [
+        "사기",
+        "FIU·규제"
+      ],
+      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 월드장애인사랑뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "러시아 중앙은행, 불법 암호화폐 환전 ‘회색지대’ 2027년 7월 1일까지 정리해야",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 23 Sep 2026 15:08:00 GMT",
@@ -510,14 +541,14 @@
       "tags": [
         "가상자산"
       ],
-      "description": "러시아 중앙은행, 불법 암호화폐 환전 ‘회색지대’ 2027년 7월 1일까지 정리해야 tokenpost.kr",
+      "description": "러시아 중앙은행, 불법 암호화폐 환전 ‘회색지대’ 2027년 7월 1일까지 정리해야 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "러시아 중앙은행, 범죄 연루 암호화폐 ‘오염 지갑’ DB 검토",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 23 Sep 2026 15:04:00 GMT",
@@ -525,7 +556,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "러시아 중앙은행, 범죄 연루 암호화폐 ‘오염 지갑’ DB 검토 tokenpost.kr",
+      "description": "러시아 중앙은행, 범죄 연루 암호화폐 ‘오염 지갑’ DB 검토 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -548,7 +579,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "110만달러 암호화폐 추적…AI 피싱 서비스 이블토큰스 적발",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 23 Sep 2026 10:24:17 GMT",
@@ -556,14 +587,14 @@
       "tags": [
         "가상자산"
       ],
-      "description": "110만달러 암호화폐 추적…AI 피싱 서비스 이블토큰스 적발 tokenpost.kr",
+      "description": "110만달러 암호화폐 추적…AI 피싱 서비스 이블토큰스 적발 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁, 부패 또는 권력 남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 23 Sep 2026 10:19:53 GMT",
@@ -571,14 +602,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "자금세탁, 부패 또는 권력 남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. Vietnam.vn",
+      "description": "자금세탁, 부패 또는 권력 남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "트래블룰",
       "title": "튀르키예 가상자산사업자 규제체계 구축…감독·집행은 미흡",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 23 Sep 2026 10:14:57 GMT",
@@ -587,14 +618,14 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "튀르키예 가상자산사업자 규제체계 구축…감독·집행은 미흡 tokenpost.kr",
+      "description": "튀르키예 가상자산사업자 규제체계 구축…감독·집행은 미흡 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁, 경제범죄, 부패 또는 권력남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 23 Sep 2026 08:48:09 GMT",
@@ -602,7 +633,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "자금세탁, 경제범죄, 부패 또는 권력남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. Vietnam.vn",
+      "description": "자금세탁, 경제범죄, 부패 또는 권력남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -624,7 +655,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "돈세탁, 부패 혐의에 대한 유죄 판결 없이 자산 회수 제안",
-      "source": "ko.laodong.vn",
+      "source": "Laodong.vn",
       "source_url": "https://ko.laodong.vn",
       "source_domain": "ko.laodong.vn",
       "date": "Wed, 23 Sep 2026 08:03:20 GMT",
@@ -632,7 +663,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "돈세탁, 부패 혐의에 대한 유죄 판결 없이 자산 회수 제안 ko.laodong.vn",
+      "description": "돈세탁, 부패 혐의에 대한 유죄 판결 없이 자산 회수 제안 Laodong.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -685,7 +716,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대",
-      "source": "digitalasset.works",
+      "source": "디지털애셋",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 23 Sep 2026 05:50:00 GMT",
@@ -694,7 +725,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대 digitalasset.works",
+      "description": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대 디지털애셋",
       "collection_method": "google_news_24h"
     },
     {
@@ -716,7 +747,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검",
-      "source": "레디앙",
+      "source": "redian.org",
       "source_url": "https://www.redian.org",
       "source_domain": "www.redian.org",
       "date": "Wed, 23 Sep 2026 05:15:25 GMT",
@@ -724,7 +755,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 레디앙",
+      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 redian.org",
       "collection_method": "google_news_24h"
     },
     {
@@ -866,16 +897,16 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Tue, 22 Sep 2026 23:00:42 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB2VFN6MUIzZ2poMXMtemlvSWNKcDVWLXpaUDdfUEpkZTlQaUhjREZVUHo3R1RjOUoyalIyaWQ2TkpONC1RYWJDS09acDh5NnlRUC12SA?oc=5",
+      "source": "아시아경제",
+      "source_url": "https://core.asiae.co.kr",
+      "source_domain": "core.asiae.co.kr",
+      "date": "Tue, 22 Sep 2026 23:46:05 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9OVmVIUVFnblQ0ZzFfamlYem5ORVBRSm9xbTFsX3BfVkNjalljYU5QOG1FTlhCTnBjTnhvLUhuSkl4Y0U2cERrWUN4V2tLTE9DM1FydVh0a242MG1kbFEwaUJB?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
       ],
-      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 v.daum.net",
+      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1022,7 +1053,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰",
-      "source": "연합뉴스TV",
+      "source": "yonhapnewstv.co.kr",
       "source_url": "https://www.yonhapnewstv.co.kr",
       "source_domain": "www.yonhapnewstv.co.kr",
       "date": "Tue, 22 Sep 2026 05:27:00 GMT",
@@ -1030,7 +1061,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 연합뉴스TV",
+      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 yonhapnewstv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1300,10 +1331,10 @@
       "query": "트래블룰",
       "title": "하나은행, 업비트 글로벌과 ‘트래블룰’ 협력...디지털 자산 인프라 강화",
       "source": "파이낸셜투데이",
-      "source_url": "https://www.ftoday.co.kr",
+      "source_url": "http://www.ftoday.co.kr",
       "source_domain": "www.ftoday.co.kr",
-      "date": "Tue, 22 Sep 2026 01:35:52 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9jTWl1d2tHakVIaTNUalFTWldaY0NTM0lYUmprVFhZc1VxWkhrNHZweUZFeF9feVM1aW4xZ2NhRjRsY29ZdWJ6ZmJsYWZYOTBSN0p5bzlmS1UyMThYT2FGYmZpWm8xeEREYXhv0gFuQVVfeXFMUE5sWlVpX2MzZE0xT1FNd3FiVDNGQURDM3JFQURjY1hiS2RuYjJHUHRUSUpVaW0wVnVzUmJ2Y0xvc0x6S1VoaG9WeDh6ZjJ3VVl0SmxDVm5UWFcwc1dCdVdrVFVxZzBYZXZlNlhSRGc?oc=5",
+      "date": "Tue, 22 Sep 2026 01:38:49 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBObFpVaV9jM2RNMU9RTXdxYlQzRkFEQzNyRUFEY2NYYktkbmIyR1B0VElKVWltMFZ1c1JidmNMb3NMektVaGhvVng4emYyd1VZdEpsQ1ZuVFhXMHNXQnVXa1RVcWcwWGV2ZTZYUkRn0gFuQVVfeXFMUE5sWlVpX2MzZE0xT1FNd3FiVDNGQURDM3JFQURjY1hiS2RuYjJHUHRUSUpVaW0wVnVzUmJ2Y0xvc0x6S1VoaG9WeDh6ZjJ3VVl0SmxDVm5UWFcwc1dCdVdrVFVxZzBYZXZlNlhSRGc?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -1695,7 +1726,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“가상자산은 익명이 아닌 가명”…원화 스테이블코인 자금세탁 가능성은",
-      "source": "wikyung.com",
+      "source": ":: 위즈경제 ::",
       "source_url": "https://wikyung.com",
       "source_domain": "wikyung.com",
       "date": "Mon, 21 Sep 2026 07:00:00 GMT",
@@ -1704,7 +1735,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“가상자산은 익명이 아닌 가명”…원화 스테이블코인 자금세탁 가능성은 wikyung.com",
+      "description": "“가상자산은 익명이 아닌 가명”…원화 스테이블코인 자금세탁 가능성은 :: 위즈경제 ::",
       "collection_method": "google_news_24h"
     },
     {
@@ -1756,7 +1787,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "lawtimes.co.kr",
+      "source": "법률신문",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -1764,7 +1795,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
       "collection_method": "google_news_24h"
     },
     {
