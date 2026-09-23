@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T05:39:21.619736+00:00",
+  "updated_at": "2026-09-23T06:13:20.015651+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,12 +10,12 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 8,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -133,7 +133,7 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,15 +457,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +495,40 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 949,
+  "count": 951,
   "official_count": 33,
   "items": [
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "정부, 불법사이트 29% 감소…운영자 32명 검거·범죄수익 27억 추징",
+      "source": "sideview.co.kr",
+      "source_url": "https://www.sideview.co.kr",
+      "source_domain": "www.sideview.co.kr",
+      "date": "Wed, 23 Sep 2026 06:04:57 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBzRnQ4RXNlcXB2RmdPUXVpZFBGSEZaektCNnRQcklXeGdwSHlZYmtsZTVKRkVHblFQV09hdENuRDlDalUzcXh6X0duWW5PUVdGRk43aDVzdklQV0tPYlp0S1ZIRk80M2IxelVoVw?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "정부, 불법사이트 29% 감소…운영자 32명 검거·범죄수익 27억 추징 sideview.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대",
+      "source": "디지털애셋",
+      "source_url": "https://www.digitalasset.works",
+      "source_domain": "www.digitalasset.works",
+      "date": "Wed, 23 Sep 2026 05:50:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFAtTVYydUlFUmJEUlY3Z21xQ1RwRWZWYS05c0w4Tm9zM0kxMjAxTkxJSGJZZnVIcHk1cVFKNWx5RFRBaEdSay1ZMF81VFJoaEszdDdXZDQ2MnRpME1Ud1NpdmdTbkU1ZlM1LUhFUHlXTjFWdw?oc=5",
+      "tags": [
+        "가상자산",
+        "FIU·규제"
+      ],
+      "description": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대 디지털애셋",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -531,23 +562,23 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "[숏츠뉴스] \"김민수 검사입니다\" 보이스피싱 사칭",
+      "title": "[숏츠뉴스] \"김민수 검사입니다\" 보이스피싱 사칭 |",
       "source": "LG헬로비전",
       "source_url": "http://news.lghellovision.net",
       "source_domain": "news.lghellovision.net",
-      "date": "Wed, 23 Sep 2026 03:58:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5QcXRiWXBGX0pSU2RKNU02TmxkN3BLTjhNZHMwb0RNMVFXam9aSnlpajFEaUE4dHlvVkdicy1CZFQ5TWtQRjZwNE5BVjNXT0RTNHhTZHFrUXRHSmF4M1RjSTY2YlFpNUdyMERpQ01abnR3dw?oc=5",
+      "date": "Wed, 23 Sep 2026 04:05:46 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE05dE9fV1RyTU9XdTYyOGxfc21NQUhnQnBhM20zdS03ZDdCSHBoVGpacXN5cWJNcklCeC1yX1lsMXFaSElXQ0RRWDRXb1BTeDVGNk1KcUVQemp5OElBXzM1V0UxeVhiVVBMWUJjc2dTbEdWQV96Rnc?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "[숏츠뉴스] \"김민수 검사입니다\" 보이스피싱 사칭 LG헬로비전",
+      "description": "[숏츠뉴스] \"김민수 검사입니다\" 보이스피싱 사칭 | LG헬로비전",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "FIU·STR",
       "title": "외국인 부동산 위법의심거래 840건…국토부, 자금출처·실거주까지 본다 - 머니투데이",
-      "source": "머니투데이",
+      "source": "mt.co.kr",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Wed, 23 Sep 2026 03:50:20 GMT",
@@ -555,7 +586,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "외국인 부동산 위법의심거래 840건…국토부, 자금출처·실거주까지 본다 - 머니투데이 머니투데이",
+      "description": "외국인 부동산 위법의심거래 840건…국토부, 자금출처·실거주까지 본다 - 머니투데이 mt.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -654,7 +685,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수",
-      "source": "뉴스후플러스",
+      "source": "newswhoplus.com",
       "source_url": "https://www.newswhoplus.com",
       "source_domain": "www.newswhoplus.com",
       "date": "Tue, 22 Sep 2026 08:51:55 GMT",
@@ -662,7 +693,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수 뉴스후플러스",
+      "description": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수 newswhoplus.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -857,7 +888,7 @@
       "source_url": "https://www.decenter.kr",
       "source_domain": "www.decenter.kr",
       "date": "Tue, 22 Sep 2026 04:25:47 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB6dzZDMUx3Q2ltTmV4UUJwczlNb0gwNS10UERGSVpSTHpfM3p4LXB0aDdJU3g5aWxjSnB3eTAtZXVTWjhtWEFSREQxYlY3TUxFOXc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xMWMtNDRwTVVyZlZJVzdHZFJfeDduTURpcW9nYmtFR3FvczdVSVdQQjA1TVhTbzBOSmNJMlB1XzgwUEhuY002MWxpbDZTUWR4U3VXenk4Szc4WUM3S3N6dmJqNHI?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -1465,7 +1496,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 21 Sep 2026 06:00:43 GMT",
@@ -1473,7 +1504,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 법률신문",
+      "description": "미국 스테이블코인 고객확인 규칙안 : 발행자는 누구까지 확인해야 하나 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
