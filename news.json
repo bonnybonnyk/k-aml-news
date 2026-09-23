@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-23T06:43:55.997075+00:00",
+  "updated_at": "2026-09-23T07:10:46.913731+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "지갑·해외거래소",
@@ -30,17 +30,17 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "투자사기",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 10,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,19 +433,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,19 +469,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 952,
+  "count": 953,
   "official_count": 34,
   "items": [
     {
@@ -533,7 +533,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 건수 줄었으나 피해액은 급증…기관사칭형 피해 1조원 육박",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Wed, 23 Sep 2026 04:52:13 GMT",
@@ -541,7 +541,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 건수 줄었으나 피해액은 급증…기관사칭형 피해 1조원 육박 imaeil.com",
+      "description": "보이스피싱 건수 줄었으나 피해액은 급증…기관사칭형 피해 1조원 육박 매일신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -652,6 +652,22 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "보너스 구매와 자연 진입 조건, 도박 보이스피싱 신고 규칙 비교",
+      "source": "Histoire pour tous",
+      "source_url": "https://www.histoire-pour-tous.fr",
+      "source_domain": "www.histoire-pour-tous.fr",
+      "date": "Tue, 22 Sep 2026 20:40:22 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPSEkxNWoxU3ZuUTZ5QTB3M3hhcThQWnJBVjdjOG5mQ2t5dHFHSFBJVS1yNndvZEVaT0Nfb0NrZ2xhSnJQWkFNZ004TkRwelhleHoxd3JQWVd6N0lWbExJajRVU3Q1WWdPX08xX2trTFNHZFRBT1Nnd1N5bmFpVl9ucTRnZFozYXVvRHFKSlBNVEFkMWtaVG95SU9OclptLXdDY2VkOHk3aWpIWFQxUE1ZR0l0aExwdG96UzU3R25IbE5TY3ZJR2JxWnVYTzJSTkxJQmtyb09SOUxWREo2eURGeXhnZjFKMGplSkZjZUtuN3h1a2ZGbW53LWFwZEhPSVE?oc=5",
+      "tags": [
+        "사기",
+        "도박"
+      ],
+      "description": "보너스 구매와 자연 진입 조건, 도박 보이스피싱 신고 규칙 비교 Histoire pour tous",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "투자사기",
       "title": "\"낯선 사람에 계속 큰돈 송금\"…치매 남편 로맨스 스캠에 이혼 고민",
       "source": "뉴시스",
@@ -685,7 +701,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수",
-      "source": "newswhoplus.com",
+      "source": "뉴스후플러스",
       "source_url": "https://www.newswhoplus.com",
       "source_domain": "www.newswhoplus.com",
       "date": "Tue, 22 Sep 2026 08:51:55 GMT",
@@ -693,7 +709,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수 newswhoplus.com",
+      "description": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수 뉴스후플러스",
       "collection_method": "google_news_24h"
     },
     {
@@ -888,7 +904,7 @@
       "source_url": "https://www.decenter.kr",
       "source_domain": "www.decenter.kr",
       "date": "Tue, 22 Sep 2026 04:25:47 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB6dzZDMUx3Q2ltTmV4UUJwczlNb0gwNS10UERGSVpSTHpfM3p4LXB0aDdJU3g5aWxjSnB3eTAtZXVTWjhtWEFSREQxYlY3TUxFOXc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xMWMtNDRwTVVyZlZJVzdHZFJfeDduTURpcW9nYmtFR3FvczdVSVdQQjA1TVhTbzBOSmNJMlB1XzgwUEhuY002MWxpbDZTUWR4U3VXenk4Szc4WUM3S3N6dmJqNHI?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -1130,7 +1146,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "뉴스퀘스트",
+      "source": "newsquest.co.kr",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -1138,7 +1154,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1392,29 +1408,14 @@
       "query": "자금세탁",
       "title": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도",
       "source": "서울경제",
-      "source_url": "https://www.sedaily.com",
-      "source_domain": "www.sedaily.com",
+      "source_url": "https://m.sedaily.com",
+      "source_domain": "m.sedaily.com",
       "date": "Mon, 21 Sep 2026 08:33:58 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lWFRkMmNNcVl4WDFENlZuTEdwejJQa0puMXV6UHFsRDBpNVpRellPTWo4VTJWbWo4QVFnRU1iMS1SUTVrOW9yVTdWX3QyeW5QSnfSAVNBVV95cUxOd3ZrVzJfQ3prTkR1RHNCU1R6clZ5UTk1azhaZjhoN2o2aHRaVFRGTUVuM1N6azEyNHU4VkY3WXRUZVFxYjRPYlg4MkhKMkg0a01qTQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE53dmtXMl9DemtORHVEc0JTVHpyVnlROTVrOFpmOGg3ajZodFpUVEZNRW4zU3prMTI0dThWRjdZdFRlUXFiNE9iWDgySEoySDRrTWpN0gFTQVVfeXFMTnd2a1cyX0N6a05EdURzQlNUenJWeVE5NWs4WmY4aDdqNmh0WlRURk1FbjNTemsxMjR1OFZGN1l0VGVRcWI0T2JYODJISjJINGtNak0?oc=5",
       "tags": [
         "자금세탁"
       ],
       "description": "[단독]2% 이자 받고 병원선 15% 할인…국내 이용 늘어 자금세탁 우려도 서울경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "[단독]책임 분담은 생색?…'그림의 떡' 된 보이스피싱 자율배상",
-      "source": "edaily.co.kr",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
-      "date": "Mon, 21 Sep 2026 08:07:43 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbjFXaVFWY3gwdmU0SUx1SzJLb1pmcFV3WVZuTU14UkpET2JwSHFBUVhqcFJxM3kxcWo1ZWloQ2N2b0hidGRIZU1uV0lBUzZOLWJVOEpqYnAwbWN4OHVRRTh4QmtpVWo4dFBwTmlkWlE1ZkVNRm1mZ1FTcWR6dkRTaA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "[단독]책임 분담은 생색?…'그림의 떡' 된 보이스피싱 자율배상 edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1430,6 +1431,21 @@
         "사기"
       ],
       "description": "책임 분담은 생색?…'그림의 떡' 된 보이스피싱 자율배상 marketin.edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "[단독]책임 분담은 생색?…'그림의 떡' 된 보이스피싱 자율배상",
+      "source": "tvm.edaily.co.kr",
+      "source_url": "https://tvm.edaily.co.kr",
+      "source_domain": "tvm.edaily.co.kr",
+      "date": "Mon, 21 Sep 2026 08:07:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9LSHhCc2lvS19TanNIeGtUbU9BelRTYTFkclhBYV8zZTBZd0xTcFQ4OFc2SXQ0dEtQbjI3MWpPNkhObGJIZ244WDhxU1FDVmNJdzNjWnE0ZXFUbjhXbGQxUlplM3dCTG5DZUFyNF9FZ0J6dy0wd0dhSA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[단독]책임 분담은 생색?…'그림의 떡' 된 보이스피싱 자율배상 tvm.edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1651,7 +1667,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
@@ -1660,7 +1676,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 yna.co.kr",
+      "description": "경찰, 금융·사이버사기 2.7만명 검거·809명 구속…코인미끼 등 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
