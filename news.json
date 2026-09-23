@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-23T00:42:44.372961+00:00",
+  "updated_at": "2026-09-23T01:09:42.743353+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "지갑·해외거래소",
@@ -40,7 +40,7 @@
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 5
+      "count": 3
     },
     {
       "feed": "투자사기",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,12 +397,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -439,15 +415,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -463,9 +445,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -475,9 +457,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +477,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 941,
+  "count": 942,
   "official_count": 33,
   "items": [
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Wed, 23 Sep 2026 01:03:49 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUmhmSVhqZ0lwMGc5NkJqSmJyZXgwd3FNVURkRjJmVERiYnJJa3ZGVTREYzlhYjFUR3RaRGJmZWl6SUpjUjl2aXpPd0JsbllUaFkxeXg0dXZ3Z0JNbXhxVlIxX0xHamRuQmhmczl0cjB6MUM2WHFVcDYxSW5pMTViTA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "FIU·STR",
@@ -565,7 +562,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수",
-      "source": "뉴스후플러스",
+      "source": "newswhoplus.com",
       "source_url": "https://www.newswhoplus.com",
       "source_domain": "www.newswhoplus.com",
       "date": "Tue, 22 Sep 2026 08:51:55 GMT",
@@ -573,7 +570,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수 뉴스후플러스",
+      "description": "성착취물 사이트 66곳 운영 중단…범죄수익 27억원 환수 newswhoplus.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -658,7 +655,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰",
-      "source": "연합뉴스TV",
+      "source": "yonhapnewstv.co.kr",
       "source_url": "https://www.yonhapnewstv.co.kr",
       "source_domain": "www.yonhapnewstv.co.kr",
       "date": "Tue, 22 Sep 2026 05:27:00 GMT",
@@ -666,7 +663,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 연합뉴스TV",
+      "description": "’최고 4만6,500원 웃돈’ 추석 암표 의심거래 19건 수사의뢰 yonhapnewstv.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -950,7 +947,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "불법사금융 피해 등 금융위기정보, 복지발굴시스템에 연결된다 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Tue, 22 Sep 2026 01:24:10 GMT",
@@ -958,7 +955,7 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "불법사금융 피해 등 금융위기정보, 복지발굴시스템에 연결된다 - 머니투데이 mt.co.kr",
+      "description": "불법사금융 피해 등 금융위기정보, 복지발굴시스템에 연결된다 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -995,7 +992,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "뉴스퀘스트",
+      "source": "newsquest.co.kr",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -1003,7 +1000,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
       "collection_method": "google_news_24h"
     },
     {
