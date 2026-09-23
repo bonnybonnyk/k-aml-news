@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-23T02:10:22.477282+00:00",
+  "updated_at": "2026-09-23T02:39:52.751605+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "불법사금융",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -415,7 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,25 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,9 +457,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -475,9 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 943,
+  "count": 944,
   "official_count": 33,
   "items": [
     {
@@ -682,6 +682,21 @@
         "자금세탁"
       ],
       "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’",
+      "source": "전라일보",
+      "source_url": "http://www.jeollailbo.com",
+      "source_domain": "www.jeollailbo.com",
+      "date": "Tue, 22 Sep 2026 05:02:04 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zcXFzUnZ2UlBPd3czNGtfcVNJNkpGdEYyR2Z0dnNFX2p4VmRQQmNseE9YWDhieHA3UUJRUG1lUWdXUXNpWWEtUWp5ZU51NGF2WjhiM2FTa1d4cFhUekRaQ0FBajlpVU1QZHZZVdIBcEFVX3lxTE9sVkI2ZG80TG5FOXV6TE9WdUNVU1hzd016dnVmQXJDcHBRcnlZT0w2a0VDV2Jaei02d3R0MDVNajdPMXhuY3JDOEpveWpCc0hiY3JKYVhvekc4YUs5VkJnd3gyLUMxdzI2bzh5bXlnX0E?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’ 전라일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1610,7 +1625,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다",
-      "source": "핀테크투데이",
+      "source": "fintechtoday.co.kr",
       "source_url": "http://www.fintechtoday.co.kr",
       "source_domain": "www.fintechtoday.co.kr",
       "date": "Mon, 21 Sep 2026 02:47:56 GMT",
@@ -1619,7 +1634,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 핀테크투데이",
+      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 fintechtoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1686,7 +1701,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "consumernews.co.kr",
+      "source": "소비자가 만드는 신문",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -1694,7 +1709,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -2063,21 +2078,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\"",
       "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
@@ -2103,6 +2103,21 @@
         "사기"
       ],
       "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" asiae.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
+      "source": "dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
+      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
       "collection_method": "google_news_24h"
     },
     {
