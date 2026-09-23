@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T12:43:54.205798+00:00",
+  "updated_at": "2026-09-23T13:11:50.936161+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 9,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,12 +457,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
@@ -472,6 +466,12 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 963,
+  "count": 964,
   "official_count": 34,
   "items": [
     {
@@ -561,9 +561,24 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "추석 연휴, '혼자 사는 사람'일수록 보이스피싱에 더 취약한 이유",
+      "source": "dailypop.kr",
+      "source_url": "http://www.dailypop.kr",
+      "source_domain": "www.dailypop.kr",
+      "date": "Wed, 23 Sep 2026 08:34:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9pZzhUYkFSY1dJQ3dhZERnV0lLdFN6bjczVG0yS2RCM1RSbXZkNmYxbkZ6YThPZW5yaW1paS1KeVZzX3VmMEZmYXdfcEIwc1hLbWdZN3B0Q1lXZld6N1AxYzFlWVQ3NEtP?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "추석 연휴, '혼자 사는 사람'일수록 보이스피싱에 더 취약한 이유 dailypop.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "돈세탁, 부패 혐의에 대한 유죄 판결 없이 자산 회수 제안",
-      "source": "Laodong.vn",
+      "source": "ko.laodong.vn",
       "source_url": "https://ko.laodong.vn",
       "source_domain": "ko.laodong.vn",
       "date": "Wed, 23 Sep 2026 08:03:20 GMT",
@@ -571,7 +586,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "돈세탁, 부패 혐의에 대한 유죄 판결 없이 자산 회수 제안 Laodong.vn",
+      "description": "돈세탁, 부패 혐의에 대한 유죄 판결 없이 자산 회수 제안 ko.laodong.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -639,7 +654,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검",
-      "source": "레디앙",
+      "source": "redian.org",
       "source_url": "https://www.redian.org",
       "source_domain": "www.redian.org",
       "date": "Wed, 23 Sep 2026 05:15:25 GMT",
@@ -647,7 +662,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 레디앙",
+      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 redian.org",
       "collection_method": "google_news_24h"
     },
     {
@@ -774,7 +789,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수",
-      "source": "marketin.edaily.co.kr",
+      "source": "마켓인",
       "source_url": "https://marketin.edaily.co.kr",
       "source_domain": "marketin.edaily.co.kr",
       "date": "Wed, 23 Sep 2026 01:03:49 GMT",
@@ -782,7 +797,7 @@
       "tags": [
         "사기"
       ],
-      "description": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수 marketin.edaily.co.kr",
+      "description": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수 마켓인",
       "collection_method": "google_news_24h"
     },
     {
@@ -1143,7 +1158,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "5대 거래소, 보이스피싱 핫라인 구축",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Tue, 22 Sep 2026 02:16:36 GMT",
@@ -1152,7 +1167,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "5대 거래소, 보이스피싱 핫라인 구축 mbiz.heraldcorp.com",
+      "description": "5대 거래소, 보이스피싱 핫라인 구축 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1822,7 +1837,7 @@
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 21 Sep 2026 03:00:09 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iQ0d6d0VSa2sxM1Y0bmJWbXBOQVllcnVLNVVoS2hQWVo5NzVUMFpkQjNjQnduMjNfMjFUZ0F4cUJUYmVzTXEyNTRYaWRVR3QwNl96YjhhdGFidDDSAWBBVV95cUxPWEZzemtJMi05N3JmamFUamZraG9FM29yUDItNk1seU55VVJ4T000OTFPMHduc0s1cm1VektlNmZzdVU5cV9sUWJGdl92ZWc4TWFvbUhtMXZsUU50RXRkWnY?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YRnN6a0kyLTk3cmZqYVRqZmtob0Uzb3JQMi02TWx5TnlVUnhPTTQ5MU8wd25zSzVybVV6S2U2ZnN1VTlxX2xRYkZ2X3ZlZzhNYW9tSG0xdmxRTnRFdGRadtIBYEFVX3lxTE9YRnN6a0kyLTk3cmZqYVRqZmtob0Uzb3JQMi02TWx5TnlVUnhPTTQ5MU8wd25zSzVybVV6S2U2ZnN1VTlxX2xRYkZ2X3ZlZzhNYW9tSG0xdmxRTnRFdGRadg?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -1990,7 +2005,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급",
-      "source": "소비자가 만드는 신문",
+      "source": "consumernews.co.kr",
       "source_url": "https://www.consumernews.co.kr",
       "source_domain": "www.consumernews.co.kr",
       "date": "Sun, 20 Sep 2026 21:07:00 GMT",
@@ -1998,7 +2013,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 소비자가 만드는 신문",
+      "description": "[금융소비자보호 우수콘텐츠 대상] KB국민은행, 통신사와 의심고객 정보 공유해 보이스피싱 차단…빗썸 피해금 533억 환급 consumernews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
