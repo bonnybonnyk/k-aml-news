@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T23:37:01.731722+00:00",
+  "updated_at": "2026-09-24T00:13:17.022385+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "환치기·외환",
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -415,13 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,15 +457,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -475,9 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,14 +495,44 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 969,
+  "count": 971,
   "official_count": 34,
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"택배 문자 눌렀다가 2억 피해\"…추석연휴 부모님 노리는 보이스피싱 수법 5가지",
+      "source": "마켓인",
+      "source_url": "https://marketin.edaily.co.kr",
+      "source_domain": "marketin.edaily.co.kr",
+      "date": "Thu, 24 Sep 2026 00:04:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5hM05vRkd3ZC1pOTg3Q296MldXeHFjdXdBTmJmc2o5dDZtbHVwZWxMRHRlQlFhN2g2VmhkOE1FS1QyTlp2UmROR0pmRXp5Xzd1TlpYMXB6T2JUSmtJRVllX0FmTm5oNjl3NmVGU2VvNzdlOWc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"택배 문자 눌렀다가 2억 피해\"…추석연휴 부모님 노리는 보이스피싱 수법 5가지 마켓인",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Thu, 24 Sep 2026 00:00:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9qUmF4NGd5Ym9QbHZtQVpCb19YSE83bFQzSnlyRW4yVXlqM0lFMjVsWlJnWXhyUnNHVGxISy1vX2JVOTNZNmFnMjhQOFB6Q055dGtLY2ZCWmhhV1HSAWBBVV95cUxPMGt4VDVCN3ZkYzdWcXFQSUVkQ2pYdm9VbG42NEpUTHcxRTVvOW5Zc1J0QTRIdmpVLVdxWHRGVXVuQndNM2sxRWF5SF95WXF6WHh3clNjVjN5TWZZaGZnTWs?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "FIU·STR",
       "title": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보'",
-      "source": "newspim.com",
+      "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Wed, 23 Sep 2026 23:00:00 GMT",
@@ -510,7 +540,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' newspim.com",
+      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
@@ -594,7 +624,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁, 부패 또는 권력 남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 23 Sep 2026 10:19:53 GMT",
@@ -602,7 +632,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "자금세탁, 부패 또는 권력 남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. vietnam.vn",
+      "description": "자금세탁, 부패 또는 권력 남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -625,7 +655,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁, 경제범죄, 부패 또는 권력남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 23 Sep 2026 08:48:09 GMT",
@@ -633,7 +663,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "자금세탁, 경제범죄, 부패 또는 권력남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. vietnam.vn",
+      "description": "자금세탁, 경제범죄, 부패 또는 권력남용에 대한 유죄 판결 없이 자산을 회수하기 위한 제안. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -747,7 +777,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검",
-      "source": "redian.org",
+      "source": "레디앙",
       "source_url": "https://www.redian.org",
       "source_domain": "www.redian.org",
       "date": "Wed, 23 Sep 2026 05:15:25 GMT",
@@ -755,7 +785,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 redian.org",
+      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 레디앙",
       "collection_method": "google_news_24h"
     },
     {
@@ -898,10 +928,10 @@
       "query": "FIU·STR",
       "title": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다",
       "source": "아시아경제",
-      "source_url": "https://core.asiae.co.kr",
-      "source_domain": "core.asiae.co.kr",
-      "date": "Tue, 22 Sep 2026 23:46:05 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9OVmVIUVFnblQ0ZzFfamlYem5ORVBRSm9xbTFsX3BfVkNjalljYU5QOG1FTlhCTnBjTnhvLUhuSkl4Y0U2cERrWUN4V2tLTE9DM1FydVh0a242MG1kbFEwaUJB?oc=5",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Tue, 22 Sep 2026 22:59:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE53ZHJ4RkpuRmMzNmhsV1g0OW9SMHVjTXdxckNwd1B2S1VqQmNuV0tXRzlSQVpkUXFCaFhVZUx1VEg4NHBqa3oyeGNLYXM4U0h1MkFZYkFRaVoxMEtFNmVFYQ?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -1420,7 +1450,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁방지 위험줄이는 스테이블코인 이전, 전통·디지털 금융 공동모색",
-      "source": "지디넷코리아",
+      "source": "zdnet.co.kr",
       "source_url": "https://zdnet.co.kr",
       "source_domain": "zdnet.co.kr",
       "date": "Tue, 22 Sep 2026 00:31:21 GMT",
@@ -1430,7 +1460,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "자금세탁방지 위험줄이는 스테이블코인 이전, 전통·디지털 금융 공동모색 지디넷코리아",
+      "description": "자금세탁방지 위험줄이는 스테이블코인 이전, 전통·디지털 금융 공동모색 zdnet.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2006,7 +2036,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다",
-      "source": "핀테크투데이",
+      "source": "fintechtoday.co.kr",
       "source_url": "http://www.fintechtoday.co.kr",
       "source_domain": "www.fintechtoday.co.kr",
       "date": "Mon, 21 Sep 2026 02:47:56 GMT",
@@ -2015,7 +2045,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 핀테크투데이",
+      "description": "[조승현 연구위원] 보조금 부정수급 근절, 금융권 자금세탁방지(AML) 기법에서 답을 찾다 fintechtoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
