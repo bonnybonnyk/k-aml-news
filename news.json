@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-24T10:40:24.705429+00:00",
+  "updated_at": "2026-09-24T11:09:58.064815+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -416,74 +416,80 @@
     },
     {
       "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:가상자산:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:범죄수익:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:fallback",
       "ok": true,
       "count": 0,
-      "method": "official_board"
+      "method": "exact_official_fallback"
     },
     {
       "feed": "금융감독원",
       "ok": true,
-      "count": 16,
+      "count": 0,
       "method": "official_board"
     }
   ],
@@ -517,7 +523,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Thu, 24 Sep 2026 08:25:19 GMT",
@@ -525,7 +531,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다. Vietnam.vn",
+      "description": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -562,7 +568,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다",
-      "source": "동아일보",
+      "source": "donga.com",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Thu, 24 Sep 2026 06:05:18 GMT",
@@ -570,14 +576,14 @@
       "tags": [
         "사기"
       ],
-      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 동아일보",
+      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 donga.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대",
-      "source": "매일신문",
+      "source": "imaeil.com",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Thu, 24 Sep 2026 03:25:04 GMT",
@@ -585,7 +591,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 매일신문",
+      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 imaeil.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1062,7 +1068,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다",
-      "source": "아시아경제",
+      "source": "asiae.co.kr",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Tue, 22 Sep 2026 22:59:00 GMT",
@@ -1071,7 +1077,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 아시아경제",
+      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 asiae.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1233,7 +1239,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손",
-      "source": "dailysmart.co.kr",
+      "source": "스마트경제",
       "source_url": "https://www.dailysmart.co.kr",
       "source_domain": "www.dailysmart.co.kr",
       "date": "Tue, 22 Sep 2026 05:25:10 GMT",
@@ -1242,7 +1248,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 dailysmart.co.kr",
+      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1602,7 +1608,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "비댁스, 전 임직원 대상 자금세탁방지 교육…내부통제 강화",
-      "source": "핀포인트뉴스",
+      "source": "pinpointnews.co.kr",
       "source_url": "https://www.pinpointnews.co.kr",
       "source_domain": "www.pinpointnews.co.kr",
       "date": "Tue, 22 Sep 2026 00:08:36 GMT",
@@ -1611,7 +1617,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "비댁스, 전 임직원 대상 자금세탁방지 교육…내부통제 강화 핀포인트뉴스",
+      "description": "비댁스, 전 임직원 대상 자금세탁방지 교육…내부통제 강화 pinpointnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -14930,13 +14936,12 @@
     {
       "region": "공식자료",
       "query": "금융위/FIU",
-      "official_source": "금융위원회·금융감독원",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융위원회",
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "가상자산시장 불공정거래 혐의자 수사기관 고발·통보 - 제16차 금융위원회 정례회의(’26.9.23.) 의결 -",
-      "source": "금융위원회·금융감독원",
+      "source": "금융위원회",
       "date": "2026-09-23T00:00:00+09:00",
       "link": "https://www.fsc.go.kr/no010101/87783?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
@@ -14945,7 +14950,7 @@
         "FIU·규제",
         "제재·테러자금"
       ],
-      "collection_method": "official_multi_source"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
@@ -15149,6 +15154,22 @@
     },
     {
       "region": "공식자료",
+      "query": "DAXA",
+      "official_source": "DAXA",
+      "official_sources": [
+        "DAXA"
+      ],
+      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
+      "source": "DAXA",
+      "date": "2026-08-27T00:00:00+09:00",
+      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
+      "tags": [
+        "가상자산"
+      ],
+      "collection_method": "verified_daxa_board"
+    },
+    {
+      "region": "공식자료",
       "query": "자금세탁",
       "official_source": "금융감독원",
       "official_sources": [
@@ -15163,22 +15184,6 @@
         "자금세탁"
       ],
       "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "DAXA",
-      "official_source": "DAXA",
-      "official_sources": [
-        "DAXA"
-      ],
-      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
-      "source": "DAXA",
-      "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
-      "tags": [
-        "가상자산"
-      ],
-      "collection_method": "verified_daxa_board"
     },
     {
       "region": "공식자료",
@@ -15346,22 +15351,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
-      "source": "금융감독원",
-      "date": "2026-07-29T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "DAXA",
       "official_source": "DAXA",
       "official_sources": [
@@ -15376,6 +15365,22 @@
         "사기"
       ],
       "collection_method": "verified_daxa_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
+      "source": "금융감독원",
+      "date": "2026-07-29T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
