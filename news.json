@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T00:43:54.740801+00:00",
+  "updated_at": "2026-09-24T01:09:37.020082+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "불법사금융",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 9,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,13 +415,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +451,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 4,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -458,24 +476,6 @@
     },
     {
       "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 971,
+  "count": 972,
   "official_count": 34,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "명절 특수 노리는 피싱범들…추석 낀 달 보이스피싱 피해 4년 새 두 배",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Thu, 24 Sep 2026 00:58:07 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPWW5lNUpVQzA1enpfTHlZNUZLQjMyODFPQUM5eVoxNTRzdzZsbG11V3p6RmVwd2ZqSlBwSHIzWGRkZ2JaVHlyRldDdENkWnhhRUJqVGNiOUtTWk1hQWNKOWxFSjcteFhhVWsyZmRFWUJlSXJZY1M5S2VKTXBLN3NLTw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "명절 특수 노리는 피싱범들…추석 낀 달 보이스피싱 피해 4년 새 두 배 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -856,7 +871,7 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Wed, 23 Sep 2026 03:50:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5HVGQ3cl9CZmxXc2p2WXJSVTVWQkxablRvczFBaHBXazhZNHlUZDhPWmhjUzlaTzU4LW04MkFERFFOYWQycHpHZUdIM2pEbENlNDA4SUcxRC1YRGFQQS0yczBOVE85eEFHN19nZHNKWdIBb0FVX3lxTE5HVGQ3cl9CZmxXc2p2WXJSVTVWQkxablRvczFBaHBXazhZNHlUZDhPWmhjUzlaTzU4LW04MkFERFFOYWQycHpHZUdIM2pEbENlNDA4SUcxRC1YRGFQQS0yczBOVE85eEFHN19nZHNKWQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0xc2hqc3lQSnJIZjBYcEEzeTcxRTR1aGNoU2VPdWlZcjQzdDk3dXdqZ2ktWU5rQ2Q0YnBCUmpfck4tRHNTLVN0ektzdzBkcERMamxRVy0xQkU5czFxcTcwR001Z0RtcVJCWVHSAW9BVV95cUxOR1RkN3JfQmZsV3NqdllyUlU1VkJMWm5Ub3MxQWhwV2s4WTR5VGQ4T1poY1M5Wk81OC1tODJBRERRTmFkMnB6R2VHSDNqRGxDZTQwOElHMUQtWERhUEEtMnMwTlRPOXhBRzdfZ2RzSlk?oc=5",
       "tags": [
         "FIU·규제"
       ],
@@ -1467,7 +1482,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "비댁스, 전 임직원 대상 자금세탁방지 교육…내부통제 강화",
-      "source": "핀포인트뉴스",
+      "source": "pinpointnews.co.kr",
       "source_url": "https://www.pinpointnews.co.kr",
       "source_domain": "www.pinpointnews.co.kr",
       "date": "Tue, 22 Sep 2026 00:08:36 GMT",
@@ -1476,7 +1491,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "비댁스, 전 임직원 대상 자금세탁방지 교육…내부통제 강화 핀포인트뉴스",
+      "description": "비댁스, 전 임직원 대상 자금세탁방지 교육…내부통제 강화 pinpointnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
