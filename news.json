@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T14:10:50.996027+00:00",
+  "updated_at": "2026-09-24T14:42:28.824660+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "불법도박",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -97,13 +97,13 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -217,7 +217,7 @@
     {
       "feed": "출처집중:segye.com",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,15 +260,9 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -403,19 +397,13 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,19 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,15 +445,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -483,14 +477,29 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 976,
+  "count": 977,
   "official_count": 34,
   "items": [
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
+      "source": "세계일보",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
+      "date": "Thu, 24 Sep 2026 14:02:06 GMT",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAtM2dpY0o5UE9uLWFUdkFjS3RybHVXejczV0tQTUU1ZTFKU202c0dyLWRfT0YwWXFNNjdjQW1HOExMVmktZGxNczJub3N3cllPdUpROXh2UUhiSWdibDhGY1VCdXpFejVMQ1Nn0gFUQVVfeXFMUEZxQVFweDNQQzF5Qll0akNoT1hobWhGdExyblJEUHEwdzVhMzFIbXU5UGVqUUp1bHdIanZnd3YzMi01QzNhUWxNZ25KSVhXYVBHOFd0?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 세계일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁 위험도에 따른 은행 분류.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Thu, 24 Sep 2026 10:19:28 GMT",
@@ -498,7 +507,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "자금세탁 위험도에 따른 은행 분류. vietnam.vn",
+      "description": "자금세탁 위험도에 따른 은행 분류. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -535,7 +544,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Thu, 24 Sep 2026 08:25:19 GMT",
@@ -543,7 +552,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다. vietnam.vn",
+      "description": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -565,7 +574,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다",
-      "source": "동아일보",
+      "source": "donga.com",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Thu, 24 Sep 2026 06:05:18 GMT",
@@ -573,7 +582,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 동아일보",
+      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 donga.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -640,7 +649,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 24 Sep 2026 00:00:03 GMT",
@@ -648,7 +657,7 @@
       "tags": [
         "사기"
       ],
-      "description": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어 연합뉴스",
+      "description": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -670,7 +679,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배",
-      "source": "youcandonews.com",
+      "source": "월드장애인사랑뉴스",
       "source_url": "https://www.youcandonews.com",
       "source_domain": "www.youcandonews.com",
       "date": "Wed, 23 Sep 2026 22:59:07 GMT",
@@ -679,7 +688,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 youcandonews.com",
+      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 월드장애인사랑뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -853,7 +862,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Wed, 23 Sep 2026 07:32:11 GMT",
@@ -861,7 +870,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억 hankyung.com",
+      "description": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1080,7 +1089,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Tue, 22 Sep 2026 22:59:00 GMT",
@@ -1089,7 +1098,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 asiae.co.kr",
+      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
