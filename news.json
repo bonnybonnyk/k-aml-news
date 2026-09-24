@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T21:38:20.055116+00:00",
+  "updated_at": "2026-09-24T22:10:07.172238+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 7
+      "count": 9
     },
     {
       "feed": "불법사금융",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,13 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -415,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,6 +469,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
@@ -477,9 +495,39 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 977,
+  "count": 979,
   "official_count": 34,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "\"해외여행 후 남은 외화거래, 자금세탁에 연루될 수 있습니다\"",
+      "source": "미디어펜",
+      "source_url": "https://www.mediapen.com",
+      "source_domain": "www.mediapen.com",
+      "date": "Thu, 24 Sep 2026 21:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5tdnlpZV95cjZlNHVTTDFLRjM1UDVQS2lTQzgyWGFKaXpacm14SFZHU0toUDVHX0pubUVxcktNQmZRVDJkeVBaOUo2M1FOSmV5QUJwVtIBWEFVX3lxTFA3aXpjeUJhS2RaSEJ6VjF4czdFSXdVSUNIVkREQUFlbF8xSEpaaVowRUNacTFMY3c3NEtBVDBibXZONXgtRWFfNTRDSi1NZzUtNFBtQ3FYajk?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "\"해외여행 후 남은 외화거래, 자금세탁에 연루될 수 있습니다\" 미디어펜",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "택배 문자 한 통에 1000억 넘게 털렸다…역대급 추석 보이스피싱",
+      "source": "sedaily.com",
+      "source_url": "https://m.sedaily.com",
+      "source_domain": "m.sedaily.com",
+      "date": "Thu, 24 Sep 2026 19:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE92SmN4T3ZUaE1janR1T19oNVU5UnRNUnhBTmUzNjV4YW9kN2ZFU2EyQ3ZkblRJUk9YMEM1OTVNMWpCQ3RHWXlCdkhnYmhNUGd4TmU40gFTQVVfeXFMT3ZKY3hPdlRoTWNqdHVPX2g1VTlSdE1SeEFOZTM2NXhhb2Q3ZkVTYTJDdmRuVElST1gwQzU5NU0xakJDdEdZeUJ2SGdiaE1QZ3hOZTg?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "택배 문자 한 통에 1000억 넘게 털렸다…역대급 추석 보이스피싱 sedaily.com",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "가상자산 AML",
@@ -1059,7 +1107,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 23 Sep 2026 01:54:09 GMT",
@@ -1067,7 +1115,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 newsis.com",
+      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1215,7 +1263,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁'",
-      "source": "newstomato.com",
+      "source": "뉴스토마토",
       "source_url": "https://www.newstomato.com",
       "source_domain": "www.newstomato.com",
       "date": "Tue, 22 Sep 2026 06:34:12 GMT",
@@ -1223,7 +1271,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' newstomato.com",
+      "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' 뉴스토마토",
       "collection_method": "google_news_24h"
     },
     {
@@ -14976,19 +15024,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
