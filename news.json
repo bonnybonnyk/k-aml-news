@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T14:42:28.824660+00:00",
+  "updated_at": "2026-09-24T15:10:48.444049+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 3
     },
     {
       "feed": "지갑·해외거래소",
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,6 +403,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
@@ -421,13 +439,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -442,12 +454,6 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -485,10 +491,10 @@
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
       "source": "세계일보",
-      "source_url": "https://www.segye.com",
-      "source_domain": "www.segye.com",
+      "source_url": "https://m.segye.com",
+      "source_domain": "m.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAtM2dpY0o5UE9uLWFUdkFjS3RybHVXejczV0tQTUU1ZTFKU202c0dyLWRfT0YwWXFNNjdjQW1HOExMVmktZGxNczJub3N3cllPdUpROXh2UUhiSWdibDhGY1VCdXpFejVMQ1Nn0gFUQVVfeXFMUEZxQVFweDNQQzF5Qll0akNoT1hobWhGdExyblJEUHEwdzVhMzFIbXU5UGVqUUp1bHdIanZnd3YzMi01QzNhUWxNZ25KSVhXYVBHOFd0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBGcUFRcHgzUEMxeUJZdGpDaE9YaG1oRnRMcm5SRFBxMHc1YTMxSG11OVBlalFKdWx3SGp2Z3d2MzItNUMzYVFsTWduSklYV2FQRzhXdNIBVEFVX3lxTFBGcUFRcHgzUEMxeUJZdGpDaE9YaG1oRnRMcm5SRFBxMHc1YTMxSG11OVBlalFKdWx3SGp2Z3d2MzItNUMzYVFsTWduSklYV2FQRzhXdA?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -574,7 +580,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다",
-      "source": "donga.com",
+      "source": "동아일보",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Thu, 24 Sep 2026 06:05:18 GMT",
@@ -582,7 +588,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 donga.com",
+      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 동아일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -649,7 +655,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 24 Sep 2026 00:00:03 GMT",
@@ -657,7 +663,7 @@
       "tags": [
         "사기"
       ],
-      "description": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어 yna.co.kr",
+      "description": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1059,7 +1065,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 23 Sep 2026 01:54:09 GMT",
@@ -1067,7 +1073,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 뉴시스",
+      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1597,7 +1603,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축",
-      "source": "뉴스퀘스트",
+      "source": "newsquest.co.kr",
       "source_url": "https://www.newsquest.co.kr",
       "source_domain": "www.newsquest.co.kr",
       "date": "Tue, 22 Sep 2026 00:39:03 GMT",
@@ -1605,7 +1611,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 뉴스퀘스트",
+      "description": "하나은행, 업비트와 ‘코인 송금망’ 잇는다…트래블룰 공동 구축 newsquest.co.kr",
       "collection_method": "google_news_24h"
     },
     {
