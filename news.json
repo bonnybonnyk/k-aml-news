@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T13:40:46.081514+00:00",
+  "updated_at": "2026-09-25T14:11:03.906578+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "불법사금융",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "불법도박",
@@ -85,19 +85,19 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,13 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,27 +439,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -478,6 +466,18 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,14 +495,29 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 991,
+  "count": 992,
   "official_count": 34,
   "items": [
     {
       "region": "국내",
       "query": "자금세탁",
+      "title": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요?",
+      "source": "vietnam.vn",
+      "source_url": "https://www.vietnam.vn",
+      "source_domain": "www.vietnam.vn",
+      "date": "Fri, 25 Sep 2026 12:27:19 GMT",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUlNaU0szVTBXc3Q3M0lLeFhOUTNSd2k4QWY2UnJqX25XeG9FWmRLT19WWk1nQlRGal9Yd3NOQXlaajFzX1EzVHU1M2xQU0pBUkE5QWtXdno4eVY5RFBpS0hzVkJBel9SOWZUT0QxZmdvdGhxWGRnNF9aZk5zWmFXalhiZU8zcG5PZ0dORmswZXRiNmZCajhCbVhpcVItNXJ5LUFiSA?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요? vietnam.vn",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
       "title": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Fri, 25 Sep 2026 06:05:45 GMT",
@@ -511,7 +526,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다. Vietnam.vn",
+      "description": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -671,10 +686,10 @@
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
       "source": "세계일보",
-      "source_url": "https://m.segye.com",
-      "source_domain": "m.segye.com",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBGcUFRcHgzUEMxeUJZdGpDaE9YaG1oRnRMcm5SRFBxMHc1YTMxSG11OVBlalFKdWx3SGp2Z3d2MzItNUMzYVFsTWduSklYV2FQRzhXdNIBVEFVX3lxTFBGcUFRcHgzUEMxeUJZdGpDaE9YaG1oRnRMcm5SRFBxMHc1YTMxSG11OVBlalFKdWx3SGp2Z3d2MzItNUMzYVFsTWduSklYV2FQRzhXdA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE96WG9LQnZPTWhJOEdYUXU4aTBIZElQNTFLVjFMX25pbVFXZ3pjV1BDNllGM0N0cjBpYTIxdVRjNTluX3h1cVVjNWVsajluUEkwRFVrdFJLS3XSAVRBVV95cUxQRnFBUXB4M1BDMXlCWXRqQ2hPWGhtaEZ0THJuUkRQcTB3NWEzMUhtdTlQZWpRSnVsd0hqdmd3djMyLTVDM2FRbE1nbkpJWFdhUEc4V3Q?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -715,7 +730,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 09:41:51 GMT",
@@ -723,14 +738,14 @@
       "tags": [
         "AML"
       ],
-      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 토큰포스트",
+      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Thu, 24 Sep 2026 08:25:19 GMT",
@@ -738,7 +753,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다. Vietnam.vn",
+      "description": "주요 고객, 주주, 이사회 구성원 및 은행 경영진은 자금세탁 방지 감시 대상입니다. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
@@ -775,7 +790,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Thu, 24 Sep 2026 03:25:04 GMT",
@@ -783,7 +798,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 imaeil.com",
+      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 매일신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -835,7 +850,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "택배·과태료·남은 외화 '주의 필수'···추석 금융사기 피하는 법",
-      "source": "뉴스웨이",
+      "source": "newsway.co.kr",
       "source_url": "https://www.newsway.co.kr",
       "source_domain": "www.newsway.co.kr",
       "date": "Thu, 24 Sep 2026 00:01:08 GMT",
@@ -843,7 +858,7 @@
       "tags": [
         "사기"
       ],
-      "description": "택배·과태료·남은 외화 '주의 필수'···추석 금융사기 피하는 법 뉴스웨이",
+      "description": "택배·과태료·남은 외화 '주의 필수'···추석 금융사기 피하는 법 newsway.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -957,7 +972,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "고객 및 거래 데이터를 기반으로 자금세탁 위험을 분류합니다.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Wed, 23 Sep 2026 10:22:27 GMT",
@@ -965,7 +980,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "고객 및 거래 데이터를 기반으로 자금세탁 위험을 분류합니다. Vietnam.vn",
+      "description": "고객 및 거래 데이터를 기반으로 자금세탁 위험을 분류합니다. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
