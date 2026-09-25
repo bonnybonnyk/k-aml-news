@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T11:09:57.469683+00:00",
+  "updated_at": "2026-09-25T11:40:47.410104+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -421,19 +421,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -442,6 +436,12 @@
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -457,13 +457,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -655,7 +655,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
-      "source": "세계일보",
+      "source": "segye.com",
       "source_url": "https://m.segye.com",
       "source_domain": "m.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
@@ -663,7 +663,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 세계일보",
+      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 segye.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -700,7 +700,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 09:41:51 GMT",
@@ -708,7 +708,7 @@
       "tags": [
         "AML"
       ],
-      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 토큰포스트",
+      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -850,7 +850,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보'",
-      "source": "뉴스핌",
+      "source": "newspim.com",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Wed, 23 Sep 2026 23:00:00 GMT",
@@ -858,7 +858,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' 뉴스핌",
+      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' newspim.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1275,7 +1275,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 23 Sep 2026 01:54:09 GMT",
@@ -1283,7 +1283,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 newsis.com",
+      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
