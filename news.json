@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T01:38:03.394466+00:00",
+  "updated_at": "2026-09-25T02:09:38.877209+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "차명계좌",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -254,20 +254,20 @@
     },
     {
       "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 20,
       "method": "body_relevance"
     },
     {
@@ -415,19 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +427,39 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -463,21 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 982,
+  "count": 983,
   "official_count": 34,
   "items": [
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해”",
+      "source": "한국경제",
+      "source_url": "https://www.hankyung.com",
+      "source_domain": "www.hankyung.com",
+      "date": "Fri, 25 Sep 2026 01:48:34 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5tWExKT05PNklGTzhIRWFzaXQtVFF2WjcxLVVsMFg1MzQ1R1ByazgwT0ZrUjRtRXQyR2Z0MGhJNUUteUt1dEFlQnJRUUo4NzZXdFVtUlVOa0x5UQ?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해” 한국경제",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -517,15 +532,15 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Thu, 24 Sep 2026 23:39:06 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ySGh4MlFacmViZTJlQV9fMmhLTkUyTmY1TmtpMW5kcXRxUzZIUFJ5eXJ0U3BHaWdLR05iUEo5cTVHdHFQYzRtc2pVcTVFNDBkNk85MjNn0gFbQVVfeXFMT0o0akJ2QnQ5Qk5lQ0d5YlU3UzMxS0dEVE94dzJuUlBDNVAzWlFSNk82OC1lNGVsSzFaWFF5blpQWXNLakRpWC1hcVN1c2hKSEx0MW5pUUpsMzNocw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9KNGpCdkJ0OUJOZUNHeWJVN1MzMUtHRFRPeHcyblJQQzVQM1pRUjZPNjgtZTRlbEsxWlhReW5aUFlzS2pEaVgtYXFTdXNoSkhMdDFuaVFKbDMzaHPSAVtBVV95cUxPSjRqQnZCdDlCTmVDR3liVTdTMzFLR0RUT3h3Mm5SUEM1UDNaUVI2TzY4LWU0ZWxLMVpYUXluWlBZc0tqRGlYLWFxU3VzaEpITHQxbmlRSmwzM2hz?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 뉴스1",
+      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -622,7 +637,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 09:41:51 GMT",
@@ -630,7 +645,7 @@
       "tags": [
         "AML"
       ],
-      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 tokenpost.kr",
+      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -652,7 +667,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 07:30:39 GMT",
@@ -660,7 +675,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형 tokenpost.kr",
+      "description": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -682,7 +697,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Thu, 24 Sep 2026 03:25:04 GMT",
@@ -690,7 +705,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 imaeil.com",
+      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 매일신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -772,7 +787,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배",
-      "source": "youcandonews.com",
+      "source": "월드장애인사랑뉴스",
       "source_url": "https://www.youcandonews.com",
       "source_domain": "www.youcandonews.com",
       "date": "Wed, 23 Sep 2026 22:59:07 GMT",
@@ -781,7 +796,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 youcandonews.com",
+      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 월드장애인사랑뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1182,16 +1197,16 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다",
-      "source": "아시아경제",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Tue, 22 Sep 2026 22:59:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE53ZHJ4RkpuRmMzNmhsV1g0OW9SMHVjTXdxckNwd1B2S1VqQmNuV0tXRzlSQVpkUXFCaFhVZUx1VEg4NHBqa3oyeGNLYXM4U0h1MkFZYkFRaVoxMEtFNmVFYQ?oc=5",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Tue, 22 Sep 2026 23:00:42 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB2VFN6MUIzZ2poMXMtemlvSWNKcDVWLXpaUDdfUEpkZTlQaUhjREZVUHo3R1RjOUoyalIyaWQ2TkpONC1RYWJDS09acDh5NnlRUC12SA?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
       ],
-      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 아시아경제",
+      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
