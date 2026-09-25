@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T09:10:19.014510+00:00",
+  "updated_at": "2026-09-25T09:40:58.462030+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -242,20 +242,32 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -403,19 +415,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +451,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,27 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -553,7 +565,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진",
-      "source": "chaovietnam.co.kr",
+      "source": "씬짜오베트남",
       "source_url": "https://chaovietnam.co.kr",
       "source_domain": "chaovietnam.co.kr",
       "date": "Fri, 25 Sep 2026 01:41:59 GMT",
@@ -561,7 +573,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 chaovietnam.co.kr",
+      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 씬짜오베트남",
       "collection_method": "google_news_24h"
     },
     {
@@ -572,7 +584,7 @@
       "source_url": "https://www.dailian.co.kr",
       "source_domain": "www.dailian.co.kr",
       "date": "Thu, 24 Sep 2026 23:42:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB4bDJibk1HNWZmRTZiRmtnTWpZd1dlSjlOV1h2dUJhVEl1N1hWRFNQc2ZCX2JGcWE5TXpqWnlybUFGSGFMb29WeUk4eXUtTXdVSE9qaXlWdw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHR0toTE5td1ZhNzIxMl9xZl82eDg4MjRtZDB2ZHJQS2NHTlE3MUMzMU5KV254MmpydDZEakdMVXYwMWdpeEM0dFh6X1hMcFYyWEppNS1B?oc=5",
       "tags": [
         "사기"
       ],
@@ -1278,7 +1290,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수",
-      "source": "마켓인",
+      "source": "marketin.edaily.co.kr",
       "source_url": "https://marketin.edaily.co.kr",
       "source_domain": "marketin.edaily.co.kr",
       "date": "Wed, 23 Sep 2026 01:03:49 GMT",
@@ -1286,7 +1298,7 @@
       "tags": [
         "사기"
       ],
-      "description": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수 마켓인",
+      "description": "토스뱅크, 추석 연휴 고객센터 24시간 운영…금융사기 신고도 접수 marketin.edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -15180,19 +15192,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
