@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T23:38:16.993696+00:00",
+  "updated_at": "2026-09-25T00:14:33.421997+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "불법사금융",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,25 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -446,6 +434,18 @@
     },
     {
       "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,15 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,9 +495,39 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 979,
+  "count": 981,
   "official_count": 34,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Thu, 24 Sep 2026 23:39:06 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ySGh4MlFacmViZTJlQV9fMmhLTkUyTmY1TmtpMW5kcXRxUzZIUFJ5eXJ0U3BHaWdLR05iUEo5cTVHdHFQYzRtc2pVcTVFNDBkNk85MjNn0gFbQVVfeXFMT0o0akJ2QnQ5Qk5lQ0d5YlU3UzMxS0dEVE94dzJuUlBDNVAzWlFSNk82OC1lNGVsSzFaWFF5blpQWXNLakRpWC1hcVN1c2hKSEx0MW5pUUpsMzNocw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 뉴스1",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀'",
+      "source": "딜사이트",
+      "source_url": "https://dealsite.co.kr",
+      "source_domain": "dealsite.co.kr",
+      "date": "Thu, 24 Sep 2026 23:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE43WnFlUk1yR2xlZDhudWNfZEF1Yko2SFgzYl9vQ0RQX1RKRjFUaDM3TDJhMlJQYWR1RTE4SVpnSkFrVUpOM1ZYVkZGZExabWM?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' 딜사이트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -506,7 +536,7 @@
       "source_url": "https://www.mediapen.com",
       "source_domain": "www.mediapen.com",
       "date": "Thu, 24 Sep 2026 21:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5tdnlpZV95cjZlNHVTTDFLRjM1UDVQS2lTQzgyWGFKaXpacm14SFZHU0toUDVHX0pubUVxcktNQmZRVDJkeVBaOUo2M1FOSmV5QUJwVtIBWEFVX3lxTFA3aXpjeUJhS2RaSEJ6VjF4czdFSXdVSUNIVkREQUFlbF8xSEpaaVowRUNacTFMY3c3NEtBVDBibXZONXgtRWFfNTRDSi1NZzUtNFBtQ3FYajk?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA3aXpjeUJhS2RaSEJ6VjF4czdFSXdVSUNIVkREQUFlbF8xSEpaaVowRUNacTFMY3c3NEtBVDBibXZONXgtRWFfNTRDSi1NZzUtNFBtQ3FYajnSAVhBVV95cUxQN2l6Y3lCYUtkWkhCelYxeHM3RUl3VUlDSFZEREFBZWxfMUhKWmlaMEVDWnExTGN3NzRLQVQwYm12TjV4LUVhXzU0Q0otTWc1LTRQbUNxWGo5?oc=5",
       "tags": [
         "자금세탁"
       ],
@@ -622,7 +652,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다",
-      "source": "donga.com",
+      "source": "동아일보",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Thu, 24 Sep 2026 06:05:18 GMT",
@@ -630,7 +660,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 donga.com",
+      "description": "“엄마, 나야” 분명 아들 목소리인데…AI 보이스피싱, 가족까지 속인다 동아일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1066,7 +1096,7 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Wed, 23 Sep 2026 03:50:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0xc2hqc3lQSnJIZjBYcEEzeTcxRTR1aGNoU2VPdWlZcjQzdDk3dXdqZ2ktWU5rQ2Q0YnBCUmpfck4tRHNTLVN0ektzdzBkcERMamxRVy0xQkU5czFxcTcwR001Z0RtcVJCWVHSAW9BVV95cUxOR1RkN3JfQmZsV3NqdllyUlU1VkJMWm5Ub3MxQWhwV2s4WTR5VGQ4T1poY1M5Wk81OC1tODJBRERRTmFkMnB6R2VHSDNqRGxDZTQwOElHMUQtWERhUEEtMnMwTlRPOXhBRzdfZ2RzSlk?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5HVGQ3cl9CZmxXc2p2WXJSVTVWQkxablRvczFBaHBXazhZNHlUZDhPWmhjUzlaTzU4LW04MkFERFFOYWQycHpHZUdIM2pEbENlNDA4SUcxRC1YRGFQQS0yczBOVE85eEFHN19nZHNKWdIBb0FVX3lxTE5HVGQ3cl9CZmxXc2p2WXJSVTVWQkxablRvczFBaHBXazhZNHlUZDhPWmhjUzlaTzU4LW04MkFERFFOYWQycHpHZUdIM2pEbENlNDA4SUcxRC1YRGFQQS0yczBOVE85eEFHN19nZHNKWQ?oc=5",
       "tags": [
         "FIU·규제"
       ],
@@ -15029,25 +15059,6 @@
       "official_sources": [
         "금융위원회"
       ],
-      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
-      "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
-      ],
-      "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
-      "official_sources": [
-        "금융위원회"
-      ],
       "title": "금융정보분석원, 타지키스탄 국립은행과 정보교환 협력을 위한 양해각서(MOU) 체결",
       "source": "금융위원회",
       "date": "2026-09-18T00:00:00+09:00",
@@ -15060,6 +15071,25 @@
         "FIU·규제",
         "제재·테러자금",
         "자금세탁"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
     },
