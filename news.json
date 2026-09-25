@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T00:43:40.217610+00:00",
+  "updated_at": "2026-09-25T01:09:55.417782+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -254,9 +254,9 @@
     },
     {
       "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 20,
       "method": "body_relevance"
     },
     {
@@ -427,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +439,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -457,9 +463,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -472,12 +478,6 @@
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -506,7 +506,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Thu, 24 Sep 2026 23:39:06 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ySGh4MlFacmViZTJlQV9fMmhLTkUyTmY1TmtpMW5kcXRxUzZIUFJ5eXJ0U3BHaWdLR05iUEo5cTVHdHFQYzRtc2pVcTVFNDBkNk85MjNn0gFbQVVfeXFMT0o0akJ2QnQ5Qk5lQ0d5YlU3UzMxS0dEVE94dzJuUlBDNVAzWlFSNk82OC1lNGVsSzFaWFF5blpQWXNLakRpWC1hcVN1c2hKSEx0MW5pUUpsMzNocw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9KNGpCdkJ0OUJOZUNHeWJVN1MzMUtHRFRPeHcyblJQQzVQM1pRUjZPNjgtZTRlbEsxWlhReW5aUFlzS2pEaVgtYXFTdXNoSkhMdDFuaVFKbDMzaHPSAVtBVV95cUxPSjRqQnZCdDlCTmVDR3liVTdTMzFLR0RUT3h3Mm5SUEM1UDNaUVI2TzY4LWU0ZWxLMVpYUXluWlBZc0tqRGlYLWFxU3VzaEpITHQxbmlRSmwzM2hz?oc=5",
       "tags": [
         "사기"
       ],
@@ -607,7 +607,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 09:41:51 GMT",
@@ -615,7 +615,7 @@
       "tags": [
         "AML"
       ],
-      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 tokenpost.kr",
+      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -637,7 +637,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 07:30:39 GMT",
@@ -645,7 +645,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형 tokenpost.kr",
+      "description": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -656,7 +656,7 @@
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Thu, 24 Sep 2026 06:05:18 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE14aW9ZdHNLSWpfaXQzbUZyX2dyTkNoWVdmbHRxaWY1TDF1ODRvNTVHRWtQUkVGVW5fSklydjBxZE5haVVzWS1FS0U3WGtXTU1md0tRb3pZZGJLb2ZaRmdsdVVwUHlJQdIBZkFVX3lxTE14aW9ZdHNLSWpfaXQzbUZyX2dyTkNoWVdmbHRxaWY1TDF1ODRvNTVHRWtQUkVGVW5fSklydjBxZE5haVVzWS1FS0U3WGtXTU1md0tRb3pZZGJLb2ZaRmdsdVVwUHlJQQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE55T2FiRFZPYUIzNUtCQXdzVUtRQUQ0Tk5GUWVWdzNqY0ZMbThVN1ZjeXBsVkRGN0k2aE5CN1RjV3VVNEZJbG5pR2x6RlM2MEJYZUROYUE2Y0JYN1ljUjgyem1kcjJEU2tDZENQRHRiYjRBeDZ5dVHSAWZBVV95cUxNeGlvWXRzS0lqX2l0M21Gcl9nck5DaFlXZmx0cWlmNUwxdTg0bzU1R0VrUFJFRlVuX0pJcnYwcWROYWlVc1ktRUtFN1hrV01NZndLUW96WWRiS29mWkZnbHVVcFB5SUE?oc=5",
       "tags": [
         "사기"
       ],
@@ -667,7 +667,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Thu, 24 Sep 2026 03:25:04 GMT",
@@ -675,7 +675,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 imaeil.com",
+      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 매일신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -742,7 +742,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보'",
-      "source": "뉴스핌",
+      "source": "newspim.com",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Wed, 23 Sep 2026 23:00:00 GMT",
@@ -750,7 +750,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' 뉴스핌",
+      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' newspim.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1338,7 +1338,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손",
-      "source": "스마트경제",
+      "source": "dailysmart.co.kr",
       "source_url": "https://www.dailysmart.co.kr",
       "source_domain": "www.dailysmart.co.kr",
       "date": "Tue, 22 Sep 2026 05:25:10 GMT",
@@ -1347,7 +1347,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 스마트경제",
+      "description": "“자금세탁 차단하고 코인 안전하게 보낸다”… 하나은행, 업비트 글로벌과 ‘트래블룰’ 맞손 dailysmart.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1584,7 +1584,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "비댁스 전사 자금세탁방지 교육 실시...규제 준수 원칙 강화",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 22 Sep 2026 01:44:32 GMT",
@@ -1593,7 +1593,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "비댁스 전사 자금세탁방지 교육 실시...규제 준수 원칙 강화 tokenpost.kr",
+      "description": "비댁스 전사 자금세탁방지 교육 실시...규제 준수 원칙 강화 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
