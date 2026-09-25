@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-25T08:10:27.007582+00:00",
+  "updated_at": "2026-09-25T08:41:38.844982+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,13 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,7 +451,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,15 +463,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -475,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -565,7 +565,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진",
-      "source": "chaovietnam.co.kr",
+      "source": "씬짜오베트남",
       "source_url": "https://chaovietnam.co.kr",
       "source_domain": "chaovietnam.co.kr",
       "date": "Fri, 25 Sep 2026 01:41:59 GMT",
@@ -573,7 +573,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 chaovietnam.co.kr",
+      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 씬짜오베트남",
       "collection_method": "google_news_24h"
     },
     {
@@ -610,7 +610,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀'",
-      "source": "dealsite.co.kr",
+      "source": "딜사이트",
       "source_url": "https://dealsite.co.kr",
       "source_domain": "dealsite.co.kr",
       "date": "Thu, 24 Sep 2026 23:00:00 GMT",
@@ -618,7 +618,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' dealsite.co.kr",
+      "description": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' 딜사이트",
       "collection_method": "google_news_24h"
     },
     {
@@ -655,7 +655,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
-      "source": "세계일보",
+      "source": "segye.com",
       "source_url": "https://m.segye.com",
       "source_domain": "m.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
@@ -663,7 +663,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 세계일보",
+      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 segye.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1140,7 +1140,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검",
-      "source": "레디앙",
+      "source": "redian.org",
       "source_url": "https://www.redian.org",
       "source_domain": "www.redian.org",
       "date": "Wed, 23 Sep 2026 05:15:25 GMT",
@@ -1148,7 +1148,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 레디앙",
+      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 redian.org",
       "collection_method": "google_news_24h"
     },
     {
@@ -1275,7 +1275,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 23 Sep 2026 01:54:09 GMT",
@@ -1283,7 +1283,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 newsis.com",
+      "description": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
