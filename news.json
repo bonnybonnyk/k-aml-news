@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T08:41:38.844982+00:00",
+  "updated_at": "2026-09-25T09:10:19.014510+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "불법사금융",
@@ -242,21 +242,9 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -267,7 +255,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
@@ -415,7 +403,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,13 +421,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,9 +433,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -463,19 +457,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -532,7 +520,7 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "연준, 은행식 스테이블코인 규정 제안했지만, 바 장관은 자금세탁방지(AML) 집행상의 허점을 지적",
+      "title": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다",
       "source": "Cryptopolitan",
       "source_url": "https://www.cryptopolitan.com",
       "source_domain": "www.cryptopolitan.com",
@@ -543,7 +531,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "연준, 은행식 스테이블코인 규정 제안했지만, 바 장관은 자금세탁방지(AML) 집행상의 허점을 지적 Cryptopolitan",
+      "description": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다 Cryptopolitan",
       "collection_method": "google_news_24h"
     },
     {
@@ -565,7 +553,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진",
-      "source": "씬짜오베트남",
+      "source": "chaovietnam.co.kr",
       "source_url": "https://chaovietnam.co.kr",
       "source_domain": "chaovietnam.co.kr",
       "date": "Fri, 25 Sep 2026 01:41:59 GMT",
@@ -573,7 +561,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 씬짜오베트남",
+      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 chaovietnam.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -655,7 +643,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
-      "source": "segye.com",
+      "source": "세계일보",
       "source_url": "https://m.segye.com",
       "source_domain": "m.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
@@ -663,7 +651,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 segye.com",
+      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 세계일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1140,7 +1128,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검",
-      "source": "redian.org",
+      "source": "레디앙",
       "source_url": "https://www.redian.org",
       "source_domain": "www.redian.org",
       "date": "Wed, 23 Sep 2026 05:15:25 GMT",
@@ -1148,7 +1136,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 redian.org",
+      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 레디앙",
       "collection_method": "google_news_24h"
     },
     {
@@ -15192,22 +15180,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
