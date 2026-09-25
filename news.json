@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T02:09:38.877209+00:00",
+  "updated_at": "2026-09-25T02:39:31.329681+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -85,13 +85,13 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -254,20 +254,20 @@
     },
     {
       "feed": "금융위/FIU:목록:p3",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 20,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -415,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,19 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -448,6 +442,12 @@
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -469,13 +469,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 983,
+  "count": 985,
   "official_count": 34,
   "items": [
     {
@@ -532,7 +532,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Thu, 24 Sep 2026 23:39:06 GMT",
@@ -540,7 +540,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 news1.kr",
+      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -751,6 +751,21 @@
         "사기"
       ],
       "description": "\"택배 문자 눌렀다가 2억 피해\"…추석연휴 부모님 노리는 보이스피싱 수법 5가지 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "택배·과태료·남은 외화 '주의 필수'···추석 금융사기 피하는 법",
+      "source": "뉴스웨이",
+      "source_url": "https://www.newsway.co.kr",
+      "source_domain": "www.newsway.co.kr",
+      "date": "Thu, 24 Sep 2026 00:01:08 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0wWHAyYzNYWWtUT3FyS1dyRjlmLWZtYkhjcFQ5Q1ZtYjZNcDF0YUdiU01IaWp4Ry1aZE50dkxsS0RYQkdSU1FJNEcyeGs5SUNEOThSVWk2b2lGQ2stWnR6N0Y0S0p4TVAtRFE?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "택배·과태료·남은 외화 '주의 필수'···추석 금융사기 피하는 법 뉴스웨이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1126,11 +1141,26 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Wed, 23 Sep 2026 03:50:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0xc2hqc3lQSnJIZjBYcEEzeTcxRTR1aGNoU2VPdWlZcjQzdDk3dXdqZ2ktWU5rQ2Q0YnBCUmpfck4tRHNTLVN0ektzdzBkcERMamxRVy0xQkU5czFxcTcwR001Z0RtcVJCWVHSAW9BVV95cUxOR1RkN3JfQmZsV3NqdllyUlU1VkJMWm5Ub3MxQWhwV2s4WTR5VGQ4T1poY1M5Wk81OC1tODJBRERRTmFkMnB6R2VHSDNqRGxDZTQwOElHMUQtWERhUEEtMnMwTlRPOXhBRzdfZ2RzSlk?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5HVGQ3cl9CZmxXc2p2WXJSVTVWQkxablRvczFBaHBXazhZNHlUZDhPWmhjUzlaTzU4LW04MkFERFFOYWQycHpHZUdIM2pEbENlNDA4SUcxRC1YRGFQQS0yczBOVE85eEFHN19nZHNKWdIBb0FVX3lxTE5HVGQ3cl9CZmxXc2p2WXJSVTVWQkxablRvczFBaHBXazhZNHlUZDhPWmhjUzlaTzU4LW04MkFERFFOYWQycHpHZUdIM2pEbENlNDA4SUcxRC1YRGFQQS0yczBOVE85eEFHN19nZHNKWQ?oc=5",
       "tags": [
         "FIU·규제"
       ],
       "description": "외국인 부동산 위법의심거래 840건…국토부, 자금출처·실거주까지 본다 - 머니투데이 머니투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "외국인 부동산 의심거래 840건 선별…\"자금출처·임대자격 검증\"[부동산AtoZ]",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Wed, 23 Sep 2026 03:48:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PS2JJNjlpVVYzcE5hQzJPOElrZzJSSWRpY1E1ZHZ4RVk3dWdaN2JZQnhsWmNoY3VGNlBGbG5keVhxdTl5RmdlMmlJckFDWngxUkFyYnhiUjJoMURIaXJCVQ?oc=5",
+      "tags": [
+        "FIU·규제"
+      ],
+      "description": "외국인 부동산 의심거래 840건 선별…\"자금출처·임대자격 검증\"[부동산AtoZ] 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1197,16 +1227,16 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Tue, 22 Sep 2026 23:00:42 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB2VFN6MUIzZ2poMXMtemlvSWNKcDVWLXpaUDdfUEpkZTlQaUhjREZVUHo3R1RjOUoyalIyaWQ2TkpONC1RYWJDS09acDh5NnlRUC12SA?oc=5",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Tue, 22 Sep 2026 22:59:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE53ZHJ4RkpuRmMzNmhsV1g0OW9SMHVjTXdxckNwd1B2S1VqQmNuV0tXRzlSQVpkUXFCaFhVZUx1VEg4NHBqa3oyeGNLYXM4U0h1MkFZYkFRaVoxMEtFNmVFYQ?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
       ],
-      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 v.daum.net",
+      "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1323,7 +1353,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁'",
-      "source": "newstomato.com",
+      "source": "뉴스토마토",
       "source_url": "https://www.newstomato.com",
       "source_domain": "www.newstomato.com",
       "date": "Tue, 22 Sep 2026 06:34:12 GMT",
@@ -1331,7 +1361,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' newstomato.com",
+      "description": "보이스피싱 의심계좌 차단했더니…정상 고객은 '소명 전쟁' 뉴스토마토",
       "collection_method": "google_news_24h"
     },
     {
@@ -15089,25 +15119,6 @@
       "official_sources": [
         "금융위원회"
       ],
-      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
-      "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
-      ],
-      "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
-      "official_sources": [
-        "금융위원회"
-      ],
       "title": "금융정보분석원, 타지키스탄 국립은행과 정보교환 협력을 위한 양해각서(MOU) 체결",
       "source": "금융위원회",
       "date": "2026-09-18T00:00:00+09:00",
@@ -15120,6 +15131,25 @@
         "FIU·규제",
         "제재·테러자금",
         "자금세탁"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
     },
