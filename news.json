@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T16:11:06.584795+00:00",
+  "updated_at": "2026-09-25T16:42:13.547447+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -403,19 +421,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,7 +433,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,9 +457,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -451,9 +469,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -530,7 +548,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다",
-      "source": "Cryptopolitan",
+      "source": "cryptopolitan.com",
       "source_url": "https://www.cryptopolitan.com",
       "source_domain": "www.cryptopolitan.com",
       "date": "Fri, 25 Sep 2026 04:36:21 GMT",
@@ -540,14 +558,14 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다 Cryptopolitan",
+      "description": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다 cryptopolitan.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "횡령·배임",
       "title": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해”",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Fri, 25 Sep 2026 01:48:34 GMT",
@@ -555,7 +573,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해” hankyung.com",
+      "description": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해” 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -772,7 +790,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Thu, 24 Sep 2026 03:25:04 GMT",
@@ -780,7 +798,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 imaeil.com",
+      "description": "보이스피싱 피해 43% 줄었지만… 건당 5384만원 역대 최대 매일신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1060,7 +1078,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Wed, 23 Sep 2026 07:32:11 GMT",
@@ -1068,7 +1086,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억 hankyung.com",
+      "description": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1121,7 +1139,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대",
-      "source": "디지털애셋",
+      "source": "digitalasset.works",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 23 Sep 2026 05:50:00 GMT",
@@ -1130,7 +1148,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대 디지털애셋",
+      "description": "방미심위·FIU, 미신고 코인거래소 '불법정보'에 형법·특금법 적용 공감대 digitalasset.works",
       "collection_method": "google_news_24h"
     },
     {
@@ -1242,7 +1260,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "외국인 부동산 의심거래 840건 선별…\"자금출처·임대자격 검증\"[부동산AtoZ]",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Wed, 23 Sep 2026 03:48:15 GMT",
@@ -1250,7 +1268,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "외국인 부동산 의심거래 840건 선별…\"자금출처·임대자격 검증\"[부동산AtoZ] asiae.co.kr",
+      "description": "외국인 부동산 의심거래 840건 선별…\"자금출처·임대자격 검증\"[부동산AtoZ] 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -15204,19 +15222,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
