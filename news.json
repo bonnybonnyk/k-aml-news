@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-25T06:13:01.710576+00:00",
+  "updated_at": "2026-09-25T06:45:10.398265+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -85,13 +85,13 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -415,12 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -439,25 +433,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,13 +463,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -495,14 +495,46 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 987,
+  "count": 989,
   "official_count": 34,
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "서천경찰서 보이스피싱 수거책 검거 유공 주민 표창 수여",
+      "source": "newsdaily.kr",
+      "source_url": "https://www.newsdaily.kr",
+      "source_domain": "www.newsdaily.kr",
+      "date": "Fri, 25 Sep 2026 05:28:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBqOUs1SWVidlE1VzZzZ3VLUjlLU1h0eV85d0E4amtTYzdmQndRZ211Qy1sX2RFV3dHUUV2VjdHdGJ0UFk0bExsc1Jqem9sZlFZTkpTc3p2NDg3RUxsWDlqbl9fZUQtYXVXVnlr?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "서천경찰서 보이스피싱 수거책 검거 유공 주민 표창 수여 newsdaily.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "연준, 은행식 스테이블코인 규정 제안했지만, 바 장관은 자금세탁방지(AML) 집행상의 허점을 지적",
+      "source": "Cryptopolitan",
+      "source_url": "https://www.cryptopolitan.com",
+      "source_domain": "www.cryptopolitan.com",
+      "date": "Fri, 25 Sep 2026 04:36:21 GMT",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcVF0dmJRemR3XzlmUE11OTYySG53N0xIaU9ZbktBUEs4X2NubTluTUlldnZTUWRZd1lEVjU0aGVRbjgydl9idWVWLVp2UUJ3Z2FzbG5TX2N2dF9wb1hGaTF6TzFveXM4djJQdGsxSFZEOGhILW1UYS1pNVJJNXlzN0hFTGdjWUplbDVFd29GbUQ2UlRYUHZBRFRTaThQRURqeTB5Z1J6QXhnV3BubmE5ZGln?oc=5",
+      "tags": [
+        "가상자산",
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "연준, 은행식 스테이블코인 규정 제안했지만, 바 장관은 자금세탁방지(AML) 집행상의 허점을 지적 Cryptopolitan",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해”",
-      "source": "한국경제",
+      "source": "hankyung.com",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Fri, 25 Sep 2026 01:48:34 GMT",
@@ -510,14 +542,14 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해” 한국경제",
+      "description": "가족 건물 관리하며 보증금 빼돌렸는데…대법 “횡령 단정 못해” hankyung.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진",
-      "source": "chaovietnam.co.kr",
+      "source": "씬짜오베트남",
       "source_url": "https://chaovietnam.co.kr",
       "source_domain": "chaovietnam.co.kr",
       "date": "Fri, 25 Sep 2026 01:41:59 GMT",
@@ -525,7 +557,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 chaovietnam.co.kr",
+      "description": "베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진 씬짜오베트남",
       "collection_method": "google_news_24h"
     },
     {
@@ -562,7 +594,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀'",
-      "source": "dealsite.co.kr",
+      "source": "딜사이트",
       "source_url": "https://dealsite.co.kr",
       "source_domain": "dealsite.co.kr",
       "date": "Thu, 24 Sep 2026 23:00:00 GMT",
@@ -570,7 +602,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' dealsite.co.kr",
+      "description": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' 딜사이트",
       "collection_method": "google_news_24h"
     },
     {
@@ -652,7 +684,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 09:41:51 GMT",
@@ -660,7 +692,7 @@
       "tags": [
         "AML"
       ],
-      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 tokenpost.kr",
+      "description": "대만 검찰, 201억 대만달러 세탁 혐의 30명 기소 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -682,7 +714,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 24 Sep 2026 07:30:39 GMT",
@@ -690,7 +722,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형 tokenpost.kr",
+      "description": "코인베이스 사칭해 1600만달러 탈취한 23세, 최대 12년형 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -802,7 +834,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보'",
-      "source": "뉴스핌",
+      "source": "newspim.com",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Wed, 23 Sep 2026 23:00:00 GMT",
@@ -810,14 +842,14 @@
       "tags": [
         "사기"
       ],
-      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' 뉴스핌",
+      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' newspim.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배",
-      "source": "월드장애인사랑뉴스",
+      "source": "youcandonews.com",
       "source_url": "https://www.youcandonews.com",
       "source_domain": "www.youcandonews.com",
       "date": "Wed, 23 Sep 2026 22:59:07 GMT",
@@ -826,7 +858,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 월드장애인사랑뉴스",
+      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 youcandonews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -924,7 +956,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "튀르키예 가상자산사업자 규제체계 구축…감독·집행은 미흡",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 23 Sep 2026 10:14:57 GMT",
@@ -933,7 +965,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "튀르키예 가상자산사업자 규제체계 구축…감독·집행은 미흡 tokenpost.kr",
+      "description": "튀르키예 가상자산사업자 규제체계 구축…감독·집행은 미흡 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1000,7 +1032,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억",
-      "source": "한국경제",
+      "source": "hankyung.com",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Wed, 23 Sep 2026 07:32:11 GMT",
@@ -1008,7 +1040,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억 한국경제",
+      "description": "농·축협 계좌 보이스피싱·투자사기, 5년간 피해 3200억 hankyung.com",
       "collection_method": "google_news_24h"
     },
     {
