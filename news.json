@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T01:08:38.025655+00:00",
+  "updated_at": "2026-09-26T01:39:08.722388+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "불법사금융",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 10,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,25 +397,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,7 +421,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -464,6 +440,12 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -521,7 +503,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 25 Sep 2026 23:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE10bUVQUFM2Yk94NGF6MDBSd1FLbVBiY25HS3lDSVFVY1ZWTnc4VVA2Uk1WRnMxc3FTdWZla0gzdTdIa1lkbkRWcnViM2ZjNVBTRGNNdktSejNkQndCcU5ObDcxVFlUNTF0UFR6WUFjY1JYYWVi?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lUHJRd1l0dHJJbWRESXE0WVdUeDBKaXFRdXVsd19XT2RNaFFMcWd4MmU1ak5aTDdqUGdBZ2wwbEdJdUNSZWZVbzRYV0Z6MjNvYmxGYQ?oc=5",
       "tags": [
         "사기"
       ],
@@ -731,7 +713,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
-      "source": "segye.com",
+      "source": "세계일보",
       "source_url": "https://www.segye.com",
       "source_domain": "www.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
@@ -739,7 +721,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 segye.com",
+      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 세계일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -926,7 +908,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보'",
-      "source": "newspim.com",
+      "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Wed, 23 Sep 2026 23:00:00 GMT",
@@ -934,7 +916,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' newspim.com",
+      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
@@ -15283,22 +15265,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
