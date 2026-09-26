@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-26T01:39:08.722388+00:00",
+  "updated_at": "2026-09-26T02:09:32.736730+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 9,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -127,7 +127,7 @@
     {
       "feed": "실무:명의도용·차단",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,13 +403,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,31 +433,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,6 +463,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 16,
@@ -477,14 +483,44 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 996,
+  "count": 998,
   "official_count": 34,
   "items": [
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "[Pocus 심층 진단 기획] 고도화된 AI 보이스피싱, 가족 목소리로 ‘가짜 확인’까지 연출한 신종 수법",
+      "source": "유스연합",
+      "source_url": "https://www.youthassembly.kr",
+      "source_domain": "www.youthassembly.kr",
+      "date": "Sat, 26 Sep 2026 01:36:42 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBPSnctSzZkNkItRWpxYTJ4OHJUYjNhZ2hVUEExUzhBSUNaYU0tcXpscVRwSTZwNmo4c0RuSkxldy1Dend5WGlkaGRHM3lvRnpwQjVr?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[Pocus 심층 진단 기획] 고도화된 AI 보이스피싱, 가족 목소리로 ‘가짜 확인’까지 연출한 신종 수법 유스연합",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360]",
+      "source": "헤럴드경제",
+      "source_url": "https://mbiz.heraldcorp.com",
+      "source_domain": "mbiz.heraldcorp.com",
+      "date": "Sat, 26 Sep 2026 01:20:06 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0wejFrUXlxUndBbFJoTjZvSmpqN3RfY3BweldXbmZjMG9JU3g4MlU5ODJ3Y29tZ3YzU2tFNi1rTDFKNHR5UnNVaERsMmEtM0M3ajkzX0xPcw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360] 헤럴드경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Fri, 25 Sep 2026 23:20:50 GMT",
@@ -492,22 +528,22 @@
       "tags": [
         "사기"
       ],
-      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 mbiz.heraldcorp.com",
+      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’",
-      "source": "이투데이",
-      "source_url": "https://www.etoday.co.kr",
-      "source_domain": "www.etoday.co.kr",
-      "date": "Fri, 25 Sep 2026 23:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lUHJRd1l0dHJJbWRESXE0WVdUeDBKaXFRdXVsd19XT2RNaFFMcWd4MmU1ak5aTDdqUGdBZ2wwbEdJdUNSZWZVbzRYV0Z6MjNvYmxGYQ?oc=5",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Fri, 25 Sep 2026 23:00:05 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCR3N1a001c1UwZlhzdkxmQmlBMGJuOGk5NmZlSlVPUlpsTUdaTFZ6VHpoc0ZBaUU4UUNidFFEOVJxdU40dnFMNHNYMmdUUmhfd2xkVA?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’ 이투데이",
+      "description": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’ v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -923,7 +959,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배",
-      "source": "youcandonews.com",
+      "source": "월드장애인사랑뉴스",
       "source_url": "https://www.youcandonews.com",
       "source_domain": "www.youcandonews.com",
       "date": "Wed, 23 Sep 2026 22:59:07 GMT",
@@ -932,7 +968,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 youcandonews.com",
+      "description": "손명수 의원 “추석 스미싱·보이스피싱 주의”…명절 금융사기 계좌 지급정지 급증·기관사칭 피해 4년 새 6.7배 월드장애인사랑뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1198,7 +1234,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검",
-      "source": "레디앙",
+      "source": "redian.org",
       "source_url": "https://www.redian.org",
       "source_domain": "www.redian.org",
       "date": "Wed, 23 Sep 2026 05:15:25 GMT",
@@ -1206,7 +1242,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 레디앙",
+      "description": "국토부, 외국인 부동산 위법 의심거래 840건 선별...자금출처·실거주 점검 redian.org",
       "collection_method": "google_news_24h"
     },
     {
