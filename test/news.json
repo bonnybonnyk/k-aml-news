@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T13:30:42.955038+00:00",
+  "updated_at": "2026-09-27T13:50:25.155163+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -181,7 +181,7 @@
     {
       "feed": "실무:PG·결제대행 AML",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,13 +397,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +409,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,19 +451,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,7 +477,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 974,
+  "count": 968,
   "official_count": 34,
   "items": [
     {
@@ -1321,21 +1303,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "(사)한국여성소비자연합 함양군지부, 보이스피싱 및 건강증진 교육",
-      "source": "koreasisailbo.com",
-      "source_url": "http://www.koreasisailbo.com",
-      "source_domain": "www.koreasisailbo.com",
-      "date": "Wed, 23 Sep 2026 01:55:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5OQldQeXJ6UHpKcTNTUG95N1I4Qms0dGtBVjFhc0ZSaTFrODdBQ3g4NVRWWnNlS1pBZmFrSVR3Z28wSjZEOENhakhmRjA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "(사)한국여성소비자연합 함양군지부, 보이스피싱 및 건강증진 교육 koreasisailbo.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "\"검은 봉투에 테이프 감으라고?\"…보이스피싱 직감한 70대, 경찰과 현장 검거",
       "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
@@ -1377,22 +1344,6 @@
         "FIU·규제"
       ],
       "description": "[단독]해외 코인거래소 FIU 신고 안하면 바로 차단한다 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보너스 구매와 자연 진입 조건, 도박 보이스피싱 신고 규칙 비교",
-      "source": "Histoire pour tous",
-      "source_url": "https://www.histoire-pour-tous.fr",
-      "source_domain": "www.histoire-pour-tous.fr",
-      "date": "Tue, 22 Sep 2026 20:40:22 GMT",
-      "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPSEkxNWoxU3ZuUTZ5QTB3M3hhcThQWnJBVjdjOG5mQ2t5dHFHSFBJVS1yNndvZEVaT0Nfb0NrZ2xhSnJQWkFNZ004TkRwelhleHoxd3JQWVd6N0lWbExJajRVU3Q1WWdPX08xX2trTFNHZFRBT1Nnd1N5bmFpVl9ucTRnZFozYXVvRHFKSlBNVEFkMWtaVG95SU9OclptLXdDY2VkOHk3aWpIWFQxUE1ZR0l0aExwdG96UzU3R25IbE5TY3ZJR2JxWnVYTzJSTkxJQmtyb09SOUxWREo2eURGeXhnZjFKMGplSkZjZUtuN3h1a2ZGbW53LWFwZEhPSVE?oc=5",
-      "tags": [
-        "사기",
-        "도박"
-      ],
-      "description": "보너스 구매와 자연 진입 조건, 도박 보이스피싱 신고 규칙 비교 Histoire pour tous",
       "collection_method": "google_news_24h"
     },
     {
@@ -1612,21 +1563,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "“AI 배우고 보이스피싱 막고”…aT, 지역 어르신 디지털 교육",
-      "source": "소비자를 위한 신문",
-      "source_url": "http://www.consumertimes.kr",
-      "source_domain": "www.consumertimes.kr",
-      "date": "Tue, 22 Sep 2026 04:31:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9qaWZFc0JfZWM4czhiWXI4aUxfdFUxY2NWaEdJNjh6UWxSZFppLTRJVlpnOWhBekctVE5vcG9XUjI1SHJFaFE4bw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“AI 배우고 보이스피싱 막고”…aT, 지역 어르신 디지털 교육 소비자를 위한 신문",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "가상자산 AML",
       "title": "“57.4ETH 곧 사라진다”…코인베이스 사칭 피싱",
       "source": "decenter.kr",
@@ -1735,22 +1671,6 @@
     },
     {
       "region": "국내",
-      "query": "자금세탁",
-      "title": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 - histoire-pour-tous.fr",
-      "source": "histoire-pour-tous.fr",
-      "source_url": "https://www.histoire-pour-tous.fr",
-      "source_domain": "www.histoire-pour-tous.fr",
-      "date": "Tue, 22 Sep 2026 02:00:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNVBaX3h1bU9zWVpXYlpZMWkzRXJGODFWZm9FVnNOM0hjTV9mcTM3NWtDQW1uanZLWmVCekY4NU9ycE90SFlQVkt1NGdZZ1VLeDJlMnhCOTNUS1pzSVdPVjJoZmtIdzR1TklybE9HVFlDbkFBU1NiWERITldEaV9UbEpFOVNBU2cwVlFTeWdBT0ppTU5IYkNRRHR5c213Z0xXNjVVTDd0T2xuRE50XzBGYw?oc=5",
-      "tags": [
-        "도박",
-        "자금세탁"
-      ],
-      "description": "도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드 histoire-pour-tous.fr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "트래블룰",
       "title": "“가상자산 송·수신 정보 안전하게 연결”…하나은행, 업비트 글로벌과 트래블룰 협력",
       "source": "더게이트",
@@ -1778,22 +1698,6 @@
         "자금세탁"
       ],
       "description": "‘5·18 북한군 폭동’ 등 허위정보 유포 유튜버 검거…범죄수익 2억5천만원 추징보전 웰페어뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "비댁스 전사 자금세탁방지 교육 실시...규제 준수 원칙 강화",
-      "source": "tokenpost.kr",
-      "source_url": "https://www.tokenpost.kr",
-      "source_domain": "www.tokenpost.kr",
-      "date": "Tue, 22 Sep 2026 01:44:32 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE16Qlp0Rl9WQlgxZzlwaVhYNDMzYWpJN3ZSZXBkdExqY3l1MklfVVo0VlZERDZzRDlLZTRoYl9MQXVERTdsY3htdXZzVUVRQTlLNmlnYXRGa0Vwczg?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "비댁스 전사 자금세탁방지 교육 실시...규제 준수 원칙 강화 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -5949,22 +5853,6 @@
         "사기"
       ],
       "description": "경찰 간부 부친 내세워 코인 투자 사기…검찰 \"수사 중\" 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "모바일 주소창이 가리는 영역을 점검하는 도박 보이스피싱 신고",
-      "source": "Histoire pour tous",
-      "source_url": "https://www.histoire-pour-tous.fr",
-      "source_domain": "www.histoire-pour-tous.fr",
-      "date": "Tue, 15 Sep 2026 08:42:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiswJBVV95cUxPNHA2eDNRSzZGZE5TYWU4X0JaRHdMbml0TmV4dVdyWXRvOC1WU3VRSElLeVdNajVZQzdaRVcyTFZmYnI1ZmFtd1hMUUZyR2dNYmxGVmNMWlYwRDZlRjZwY09ONXZITDU0enl5N1lqUTBzazVUVGlybFJhU21RaG5qWElDb2Zna1RLcEtFdGN3NERibmVNbW93QVZwZFRPMUJEdkRoSGw3QjNTZU5xcDR6VFFaejdMdUtyOVl2X2l2UWFiYnRfUjZrZUZRekFTR0p0b2hoSUt3ZG52YU5Kb0dTVVpCc1JrM0xPODVFTkdyelFpT3ZrRUN2cklnYTBORjVwY3ZfS2UxNGFHM0hEbEFtbHZZLWlESjBUQ0xlcFE3OXpsMDhpa1h2T0FYekJUUUJKZnNn?oc=5",
-      "tags": [
-        "사기",
-        "도박"
-      ],
-      "description": "모바일 주소창이 가리는 영역을 점검하는 도박 보이스피싱 신고 Histoire pour tous",
       "collection_method": "google_news_24h"
     },
     {
@@ -14951,22 +14839,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
