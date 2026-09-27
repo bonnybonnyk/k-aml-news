@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-27T11:39:25.402240+00:00",
+  "updated_at": "2026-09-27T12:12:32.692527+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "범죄수익",
@@ -20,12 +20,12 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "트래블룰",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -254,9 +254,9 @@
     },
     {
       "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 20,
       "method": "body_relevance"
     },
     {
@@ -415,7 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,13 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,18 +457,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
@@ -478,6 +466,18 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,9 +495,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1005,
+  "count": 1006,
   "official_count": 34,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한”",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Sun, 27 Sep 2026 11:58:56 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9Ga0RTOEdVdWJPT0FYQk12S1Rxa1RiWGtPcE9VcUtiay0yVzBYTlAxdlhRZVVJaDJmT0t6RTdlbmJHWGxRR2Y0dlFoMVZYblN3NTBaSDdkZnc?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한” 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -532,7 +548,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 27 Sep 2026 01:46:52 GMT",
@@ -541,7 +557,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자 tokenpost.kr",
+      "description": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -582,7 +598,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Sun, 27 Sep 2026 01:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5td25kZ3NQS1R0ZkZZMXh2akpLYWgteHRaTzhyN3J6V2phbVpXR1hzOG4xNEZ5WmMzbTFRRFR1S1NvdWVxQ0FsU3ZXeTZULUxiczFpX1RuMDdnREXSAVtBVV95cUxObXduZGdzUEtUdGZGWTF4dmpKS2FoLXh0Wk84cjdyeldqYW1aV0dYczhuMTRGeVpjM20xUURUdUtTb3VlcUNBbFN2V3k2VC1MYnMxaV9UbjA3Z0RF?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9WQkJTZk83bkhWQXRoMlR0blA0Rk1kNVJXemFuNE1POWpnWmlvRVRyQWticUpLOU5vZzFJZ1VablJQYnV1OWdrb1pmc2RXbUlwX1NLOWtB0gFbQVVfeXFMTm13bmRnc1BLVHRmRlkxeHZqSkthaC14dFpPOHI3cnpXamFtWldHWHM4bjE0RnlaYzNtMVFEVHVLU291ZXFDQWxTdld5NlQtTGJzMWlfVG4wN2dERQ?oc=5",
       "tags": [
         "횡령·배임"
       ],
@@ -623,7 +639,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법",
-      "source": "브런치",
+      "source": "brunch.co.kr",
       "source_url": "https://brunch.co.kr",
       "source_domain": "brunch.co.kr",
       "date": "Sat, 26 Sep 2026 13:37:07 GMT",
@@ -631,7 +647,7 @@
       "tags": [
         "사기"
       ],
-      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 브런치",
+      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 brunch.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -759,7 +775,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요?",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Fri, 25 Sep 2026 12:27:19 GMT",
@@ -767,14 +783,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요? Vietnam.vn",
+      "description": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요? vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다.",
-      "source": "Vietnam.vn",
+      "source": "vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Fri, 25 Sep 2026 06:05:45 GMT",
@@ -783,7 +799,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다. Vietnam.vn",
+      "description": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다. vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
