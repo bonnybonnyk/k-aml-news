@@ -375,6 +375,11 @@ def exclude_news_editorial(title, source_name='', source_domain=''):
         incident = re.search(r'피해액|피해자|피해금|검거|구속|체포|기소|송치|적발|수사|범행|조직|일당|새\s*수법|신종\s*수법|자금세탁|대포통장|현금화', t)
         if not incident and re.search(r'주의보|예방\s*(?:안내|교육|캠페인|수칙)|안심차단\s*\d*종|조심하세요|예방\s*체계\s*정비\s*시급', t):
             return True
+        # 명절 안내·경찰 홍보 활동 중 실제 사건/피해 수치가 없는 것만 정리한다.
+        concrete = re.search(r'\d[\d,.]*(?:억|만)?\s*원|\d+\s*(?:명|건|%|배)|피해액|피해자|피해금|검거|구속|체포|기소|송치|적발|수사|범행|조직|일당|자금세탁|대포통장|현금화|법안|개정|시행', t)
+        advisory = re.search(r'착한운전|귀성길.*(?:막는다|예방)|(?:택배|과태료).*(?:주의\s*필수|조심|예방)|(?:추석|명절).*(?:주의\s*필수|예방\s*수칙|예방\s*안내)', t)
+        if advisory and not concrete:
+            return True
     # '논문에 따르면'처럼 논문을 인용한 정상 기사는 살린다.
     if re.match(r'^\s*\d{1,4}\s*(?:\[\s*논문\s*\]|논문)(?:초록)?', t):
         return True
@@ -1361,6 +1366,8 @@ def run_regression_selfcheck():
         ('추석 부모님 선물 하나 더…보이스피싱 막는 안심차단 3종', '이투데이', 'etoday.co.kr'),
         ('추석 선물 배송왔습니다…명절 노리는 보이스피싱 주의보', '데일리안', 'dailian.co.kr'),
         ('목소리도 못 믿는다…AI 보이스피싱에 통신사도 진땀', 'Naver Blog', 'blog.naver.com'),
+        ('전북경찰청장, 추석 귀성길 착한운전으로 안전 더하고 보이스피싱도 막는다', '뉴스데일리', 'newsdaily.kr'),
+        ('택배·과태료·낮은 외환 주의 필수…추석 금융사기 피하는 법', '뉴스웨이', 'newsway.co.kr'),
     ]
     editorial_keep = [
         ('부시장, 자금세탁 혐의로 체포', 'VOI.ID', 'voi.id'),
@@ -1370,6 +1377,9 @@ def run_regression_selfcheck():
         ('보이스피싱 피해금 7억 송금한 조직 검거', '연합뉴스', 'yna.co.kr'),
         ('신종 수법으로 피해자 20명 속인 보이스피싱 일당 구속', '뉴스1', 'news1.kr'),
         ('보이스피싱 계좌 지급정지 시스템 시행', '금융위', 'fsc.go.kr'),
+        ('명절 틈 노리는 피싱범들…추석 2억 피해 4년 새 두 배', '이데일리', 'edaily.co.kr'),
+        ('택배 문자 눌렀다가 2억 피해…추석연휴 부모님 노리는 보이스피싱 수법', '이데일리', 'edaily.co.kr'),
+        ('AI 보이스피싱, 가족 목소리로 가짜 확인까지 연출한 신종 수법', '뉴스1', 'news1.kr'),
     ]
     for title, src, dom in editorial_reject:
         if not exclude_news_editorial(title, src, dom):
