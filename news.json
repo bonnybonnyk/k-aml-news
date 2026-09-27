@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T10:39:23.602531+00:00",
+  "updated_at": "2026-09-27T11:09:33.593533+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,7 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,18 +445,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
@@ -457,27 +457,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1004,
+  "count": 1005,
   "official_count": 34,
   "items": [
     {
@@ -515,9 +515,24 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "농협 보이스피싱 피해 3,220억 원...\"예방 체계 정비 시급\"",
+      "source": "여수MBC",
+      "source_url": "https://ysmbc.co.kr",
+      "source_domain": "ysmbc.co.kr",
+      "date": "Sun, 27 Sep 2026 06:54:46 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE14RUlCQzJycjJUbWFDY0g0ZkZncUVfam14enZRaFRDdWFQLXpzV2N5RW9wNjY2blV6S2RJY3ViOHhwWlRuQVNVbXFGaDh1N0hJ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "농협 보이스피싱 피해 3,220억 원...\"예방 체계 정비 시급\" 여수MBC",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 27 Sep 2026 01:46:52 GMT",
@@ -526,14 +541,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자 tokenpost.kr",
+      "description": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년",
-      "source": "jnilbo.com",
+      "source": "진일보",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Sun, 27 Sep 2026 01:35:26 GMT",
@@ -541,7 +556,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 jnilbo.com",
+      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 진일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -563,7 +578,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "종중 자금 8억5000만 원 횡령 혐의 종중 회장 항소심서 감형",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Sun, 27 Sep 2026 01:00:00 GMT",
@@ -571,7 +586,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "종중 자금 8억5000만 원 횡령 혐의 종중 회장 항소심서 감형 뉴스1",
+      "description": "종중 자금 8억5000만 원 횡령 혐의 종중 회장 항소심서 감형 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -593,7 +608,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\"",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Sat, 26 Sep 2026 22:00:00 GMT",
@@ -601,14 +616,14 @@
       "tags": [
         "가상자산"
       ],
-      "description": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\" 뉴시스",
+      "description": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\" newsis.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법",
-      "source": "브런치",
+      "source": "brunch.co.kr",
       "source_url": "https://brunch.co.kr",
       "source_domain": "brunch.co.kr",
       "date": "Sat, 26 Sep 2026 13:37:07 GMT",
@@ -616,7 +631,7 @@
       "tags": [
         "사기"
       ],
-      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 브런치",
+      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 brunch.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -867,7 +882,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Thu, 24 Sep 2026 23:39:06 GMT",
@@ -875,7 +890,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 뉴스1",
+      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
