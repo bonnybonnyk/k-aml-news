@@ -357,6 +357,30 @@ def v48_nonarticle(title, source_url, source_domain):
         return True
     return False
 
+def exclude_news_editorial(title, source_name='', source_domain=''):
+    """기사 피드의 명백한 비뉴스 콘텐츠만 제외한다. 공식자료 경로에는 적용하지 않는다."""
+    t = (title or '').strip()
+    s = (source_name or '').lower().replace(' ', '')
+    d = (source_domain or '').lower().rstrip('.')
+    if d == 'vietnam.vn' or d.endswith('.vietnam.vn') or 'vietnam.vn' in s:
+        return True
+    # '논문에 따르면'처럼 논문을 인용한 정상 기사는 살린다.
+    if re.match(r'^\s*(?:\[\s*)?\d{1,4}\s*논문(?:초록)?(?:\s*\]|\s*[:：.·-]?\s*)', t):
+        return True
+    if re.search(r'^(?:\[\s*)?(?:논문초록|연구논문|학술논문|학술지|학위논문|박사논문)(?:\s*\]|\s*[:：|·-])', t):
+        return True
+    if re.search(r'(?:논문초록|연구논문|학술논문|학위논문|박사논문)\s*$', t):
+        return True
+    # 질문·개념 풀이형 제목만 제한한다. 시행·제재·실제 사건 뉴스는 유지한다.
+    explainer = re.search(r'자금세탁(?:방지)?(?:란|이란|의\s*뜻|의\s*개념|의\s*중요성)|\bAML\s*(?:이란|뜻|기초)|(?:VIP|PEP)\s*고객.*(?:왜|이유|감시해야)', t, re.I)
+    if explainer and not re.search(r'체포|검거|구속|기소|송치|수사|적발|판결|선고|제재|과태료|법안|개정|시행|의결', t):
+        return True
+    # 현지 정책 소개형 반복 기사: 씬짜오베트남의 VIP/PEP 감시 안내에 한정.
+    if ('씬짜오베트남' in s or 'xinchaovietnam' in s or 'xinchaovietnam' in d):
+        if re.search(r'베트남\s*중앙은행.*(?:VIP|PEP).*자금세탁.*감시\s*강화\s*추진', t, re.I):
+            return True
+    return False
+
 def infer_news_category(title):
     t = (title or '').lower()
 
@@ -675,6 +699,8 @@ def fetch_query(name, query, window_days=1):
         if not title or is_promo(title):
             continue
         source_name, source_url, source_domain = get_source_meta(it, raw_title)
+        if exclude_news_editorial(title, source_name, source_domain):
+            continue
         description = strip_html(it.findtext('description') or '')
         context = (title + ' ' + description).strip()
         # 5.8: 고정 화이트리스트만으로는 뉴스핌·라온신문처럼 유효한 매체가 빠질 수 있다.
@@ -1311,6 +1337,26 @@ def run_regression_selfcheck():
     for title in reject_official:
         if official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title):
             failed.append('공식자료 과수집:'+title)
+    editorial_reject = [
+        ('베트남 중앙은행은 왜 자금세탁 방지를 위해 PEP를 감시하나', 'Vietnam.vn', 'vietnam.vn'),
+        ('96논문 중계기와 AI 딥페이크 보이스피싱 차단법', '뉴스', 'example.com'),
+        ('97논문초록 보이스피싱 대응 연구', '뉴스', 'example.com'),
+        ('연구논문: 자금세탁방지 운영 분석', '뉴스', 'example.com'),
+        ('자금세탁이란 무엇인가', '뉴스', 'example.com'),
+        ('베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진', '씬짜오베트남', 'xinchaovietnam.com'),
+    ]
+    editorial_keep = [
+        ('부시장, 자금세탁 혐의로 체포', 'VOI.ID', 'voi.id'),
+        ('논문에 따르면 보이스피싱 조직 검거 급증', '연합뉴스', 'yna.co.kr'),
+        ('FIU, 자금세탁방지법 개정안 의결', '연합뉴스', 'yna.co.kr'),
+        ('베트남 자금세탁 조직 적발', '씬짜오베트남', 'xinchaovietnam.com'),
+    ]
+    for title, src, dom in editorial_reject:
+        if not exclude_news_editorial(title, src, dom):
+            failed.append('비뉴스 미제외:'+title)
+    for title, src, dom in editorial_keep:
+        if exclude_news_editorial(title, src, dom):
+            failed.append('정상기사 제외:'+title)
     if failed:
         raise RuntimeError('5.8 regression self-check failed: ' + ' | '.join(failed))
     print('SELF_CHECK OK', len(keep_cases), 'keep cases +', len(reject_official), 'official reject cases')
@@ -1383,6 +1429,8 @@ def main():
         src_domain = x.get('source_domain','')
         title0 = x.get('title','')
         context0 = (title0 + ' ' + x.get('description','')).strip()
+        if exclude_news_editorial(title0, src_name, src_domain):
+            continue
         if not (trusted_news_source(src_name, src_domain) or strong_unlisted_source_ok(title0, context0, src_name, src_domain)):
             continue
         if v48_nonarticle(title0, x.get('source_url',''), src_domain):
