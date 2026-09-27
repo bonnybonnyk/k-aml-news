@@ -357,6 +357,61 @@ def v48_nonarticle(title, source_url, source_domain):
         return True
     return False
 
+def exclude_news_editorial(title, source_name='', source_domain='', article_link=''):
+    """기사 피드의 명백한 비뉴스 콘텐츠만 제외한다. 공식자료 경로에는 적용하지 않는다."""
+    t = (title or '').strip()
+    s = (source_name or '').lower().replace(' ', '')
+    d = (source_domain or '').lower().rstrip('.')
+    link_domain = urllib.parse.urlparse(article_link or '').netloc.lower().split(':')[0]
+    if any(host == 'histoire-pour-tous.fr' or host.endswith('.histoire-pour-tous.fr') for host in (d, link_domain)):
+        return True
+    if 'histoire-pour-tous.fr' in s or 'histoire pour tous' in s:
+        return True
+    if any(host == 'spinkr222.com' or host.endswith('.spinkr222.com') for host in (d, link_domain)):
+        return True
+    # 광고성 출처명으로 검색에 걸린 글도 원문 링크가 Google 경유일 수 있다.
+    if 'histoire pour tous' in s and re.search(r'보너스|도박|보이스피싱|카지노', t):
+        return True
+    if re.search(r'보너스\s*구매|자연\s*진입\s*조건', t) and re.search(r'도박|보이스피싱|신고\s*규칙', t):
+        return True
+    if d == 'vietnam.vn' or d.endswith('.vietnam.vn') or 'vietnam.vn' in s:
+        return True
+    if re.search(r'보이스피싱|금융사기|자금세탁', t) and re.search(r'교육|강좌|특강', t):
+        if re.search(r'교육\s*(?:실시|진행|개최)|교육\s*$|및\s*건강증진\s*교육|예방\s*교육', t) and not re.search(r'검거|구속|기소|수사|적발|제재|법안|개정|시행|과태료', t):
+            return True
+    if d in ('blog.naver.com', 'm.blog.naver.com') or 'naverblog' in s or '네이버블로그' in s:
+        return True
+    # 주민 표창·감사장 등 홍보성 보도는 금융범죄 사건의 새 정보가 아니다.
+    if re.search(r'보이스피싱|금융사기|자금세탁', t) and re.search(r'표창|감사장|공로패|포상', t):
+        if re.search(r'주민|시민|예방\s*공로|검거\s*유공|수거책\s*검거\s*유공', t):
+            return True
+    # 주의 환기·서비스 소개에 그친 제목만 제외. 실제 사건/수사/새 수법은 유지.
+    if re.search(r'보이스피싱|피싱|금융사기', t):
+        incident = re.search(r'피해액|피해자|피해금|검거|구속|체포|기소|송치|적발|수사|범행|조직|일당|새\s*수법|신종\s*수법|자금세탁|대포통장|현금화', t)
+        if not incident and re.search(r'주의보|예방\s*(?:안내|교육|캠페인|수칙)|안심차단\s*\d*종|조심하세요|예방\s*체계\s*정비\s*시급', t):
+            return True
+        # 명절 안내·경찰 홍보 활동 중 실제 사건/피해 수치가 없는 것만 정리한다.
+        concrete = re.search(r'\d[\d,.]*(?:억|만)?\s*원|\d+\s*(?:명|건|%|배)|피해액|피해자|피해금|검거|구속|체포|기소|송치|적발|수사|범행|조직|일당|자금세탁|대포통장|현금화|법안|개정|시행', t)
+        advisory = re.search(r'착한운전|귀성길.*(?:막는다|예방)|(?:택배|과태료).*(?:주의\s*필수|조심|예방)|(?:추석|명절).*(?:주의\s*필수|예방\s*수칙|예방\s*안내)', t)
+        if advisory and not concrete:
+            return True
+    # '논문에 따르면'처럼 논문을 인용한 정상 기사는 살린다.
+    if re.match(r'^\s*\d{1,4}\s*(?:\[\s*논문\s*\]|논문)(?:초록)?', t):
+        return True
+    if re.search(r'^(?:\[\s*)?(?:논문초록|연구논문|학술논문|학술지|학위논문|박사논문)(?:\s*\]|\s*[:：|·-])', t):
+        return True
+    if re.search(r'(?:논문초록|연구논문|학술논문|학위논문|박사논문)\s*$', t):
+        return True
+    # 질문·개념 풀이형 제목만 제한한다. 시행·제재·실제 사건 뉴스는 유지한다.
+    explainer = re.search(r'자금세탁(?:방지)?(?:란|이란|의\s*뜻|의\s*개념|의\s*중요성)|\bAML\s*(?:이란|뜻|기초)|(?:VIP|PEP)\s*고객.*(?:왜|이유|감시해야)', t, re.I)
+    if explainer and not re.search(r'체포|검거|구속|기소|송치|수사|적발|판결|선고|제재|과태료|법안|개정|시행|의결', t):
+        return True
+    # 현지 정책 소개형 반복 기사: 씬짜오베트남의 VIP/PEP 감시 안내에 한정.
+    if ('씬짜오베트남' in s or 'xinchaovietnam' in s or 'xinchaovietnam' in d):
+        if re.search(r'베트남\s*중앙은행.*(?:VIP|PEP).*자금세탁.*감시\s*강화\s*추진', t, re.I):
+            return True
+    return False
+
 def infer_news_category(title):
     t = (title or '').lower()
 
@@ -675,6 +730,8 @@ def fetch_query(name, query, window_days=1):
         if not title or is_promo(title):
             continue
         source_name, source_url, source_domain = get_source_meta(it, raw_title)
+        if exclude_news_editorial(title, source_name, source_domain, it.findtext('link') or ''):
+            continue
         description = strip_html(it.findtext('description') or '')
         context = (title + ' ' + description).strip()
         # 5.8: 고정 화이트리스트만으로는 뉴스핌·라온신문처럼 유효한 매체가 빠질 수 있다.
@@ -1311,6 +1368,45 @@ def run_regression_selfcheck():
     for title in reject_official:
         if official_relevant(title) or v55_practical_info(title) or v49_practical_aml(title):
             failed.append('공식자료 과수집:'+title)
+    editorial_reject = [
+        ('베트남 중앙은행은 왜 자금세탁 방지를 위해 PEP를 감시하나', 'Vietnam.vn', 'vietnam.vn'),
+        ('96논문 중계기와 AI 딥페이크 보이스피싱 차단법', '뉴스', 'example.com'),
+        ('97논문초록 보이스피싱 대응 연구', '뉴스', 'example.com'),
+        ('96[논문]변작기,중계기와 AI딥페이크 보이스피싱차단법', '브런치', 'brunch.co.kr'),
+        ('97[논문]초록·밀입국자연계 반란군 보이스피싱 차단방법', '브런치', 'brunch.co.kr'),
+        ('연구논문: 자금세탁방지 운영 분석', '뉴스', 'example.com'),
+        ('자금세탁이란 무엇인가', '뉴스', 'example.com'),
+        ('베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진', '씬짜오베트남', 'xinchaovietnam.com'),
+        ('서천경찰서 보이스피싱 수거책 검거 유공 주민 표창 수여', '뉴스데일리', 'newsdaily.kr'),
+        ('추석 부모님 선물 하나 더…보이스피싱 막는 안심차단 3종', '이투데이', 'etoday.co.kr'),
+        ('추석 선물 배송왔습니다…명절 노리는 보이스피싱 주의보', '데일리안', 'dailian.co.kr'),
+        ('목소리도 못 믿는다…AI 보이스피싱에 통신사도 진땀', 'Naver Blog', 'blog.naver.com'),
+        ('(사)한국여성소비자연합 함양군지부, 보이스피싱 및 건강증진 교육', '한국일보', 'hankookilbo.com'),
+        ('보너스 구매와 자연 진입 조건, 도박 보이스피싱 신고 규칙 비교', 'Histoire pour tous', 'histoire-pour-tous.fr'),
+        ('도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드', 'histoire-pour-tous.fr', 'histoire-pour-tous.fr'),
+        ('전북경찰청장, 추석 귀성길 착한운전으로 안전 더하고 보이스피싱도 막는다', '뉴스데일리', 'newsdaily.kr'),
+        ('택배·과태료·낮은 외환 주의 필수…추석 금융사기 피하는 법', '뉴스웨이', 'newsway.co.kr'),
+    ]
+    editorial_keep = [
+        ('부시장, 자금세탁 혐의로 체포', 'VOI.ID', 'voi.id'),
+        ('논문에 따르면 보이스피싱 조직 검거 급증', '연합뉴스', 'yna.co.kr'),
+        ('FIU, 자금세탁방지법 개정안 의결', '연합뉴스', 'yna.co.kr'),
+        ('베트남 자금세탁 조직 적발', '씬짜오베트남', 'xinchaovietnam.com'),
+        ('보이스피싱 피해금 7억 송금한 조직 검거', '연합뉴스', 'yna.co.kr'),
+        ('신종 수법으로 피해자 20명 속인 보이스피싱 일당 구속', '뉴스1', 'news1.kr'),
+        ('보이스피싱 계좌 지급정지 시스템 시행', '금융위', 'fsc.go.kr'),
+        ('명절 틈 노리는 피싱범들…추석 2억 피해 4년 새 두 배', '이데일리', 'edaily.co.kr'),
+        ('택배 문자 눌렀다가 2억 피해…추석연휴 부모님 노리는 보이스피싱 수법', '이데일리', 'edaily.co.kr'),
+        ('AI 보이스피싱, 가족 목소리로 가짜 확인까지 연출한 신종 수법', '뉴스1', 'news1.kr'),
+    ]
+    for title, src, dom in editorial_reject:
+        if not exclude_news_editorial(title, src, dom):
+            failed.append('비뉴스 미제외:'+title)
+    if not exclude_news_editorial('가상자산 뉴스', '뉴스', 'example.com', 'https://spinkr222.com/article'):
+        failed.append('도박 원문 도메인 미제외')
+    for title, src, dom in editorial_keep:
+        if exclude_news_editorial(title, src, dom):
+            failed.append('정상기사 제외:'+title)
     if failed:
         raise RuntimeError('5.8 regression self-check failed: ' + ' | '.join(failed))
     print('SELF_CHECK OK', len(keep_cases), 'keep cases +', len(reject_official), 'official reject cases')
@@ -1383,6 +1479,8 @@ def main():
         src_domain = x.get('source_domain','')
         title0 = x.get('title','')
         context0 = (title0 + ' ' + x.get('description','')).strip()
+        if exclude_news_editorial(title0, src_name, src_domain, x.get('link','')):
+            continue
         if not (trusted_news_source(src_name, src_domain) or strong_unlisted_source_ok(title0, context0, src_name, src_domain)):
             continue
         if v48_nonarticle(title0, x.get('source_url',''), src_domain):
