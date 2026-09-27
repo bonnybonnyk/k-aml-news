@@ -364,8 +364,19 @@ def exclude_news_editorial(title, source_name='', source_domain=''):
     d = (source_domain or '').lower().rstrip('.')
     if d == 'vietnam.vn' or d.endswith('.vietnam.vn') or 'vietnam.vn' in s:
         return True
+    if d in ('blog.naver.com', 'm.blog.naver.com') or 'naverblog' in s or '네이버블로그' in s:
+        return True
+    # 주민 표창·감사장 등 홍보성 보도는 금융범죄 사건의 새 정보가 아니다.
+    if re.search(r'보이스피싱|금융사기|자금세탁', t) and re.search(r'표창|감사장|공로패|포상', t):
+        if re.search(r'주민|시민|예방\s*공로|검거\s*유공|수거책\s*검거\s*유공', t):
+            return True
+    # 주의 환기·서비스 소개에 그친 제목만 제외. 실제 사건/수사/새 수법은 유지.
+    if re.search(r'보이스피싱|피싱|금융사기', t):
+        incident = re.search(r'피해액|피해자|피해금|검거|구속|체포|기소|송치|적발|수사|범행|조직|일당|새\s*수법|신종\s*수법|자금세탁|대포통장|현금화', t)
+        if not incident and re.search(r'주의보|예방\s*(?:안내|교육|캠페인|수칙)|안심차단\s*\d*종|조심하세요|예방\s*체계\s*정비\s*시급', t):
+            return True
     # '논문에 따르면'처럼 논문을 인용한 정상 기사는 살린다.
-    if re.match(r'^\s*(?:\[\s*)?\d{1,4}\s*논문(?:초록)?(?:\s*\]|\s*[:：.·-]?\s*)', t):
+    if re.match(r'^\s*\d{1,4}\s*(?:\[\s*논문\s*\]|논문)(?:초록)?', t):
         return True
     if re.search(r'^(?:\[\s*)?(?:논문초록|연구논문|학술논문|학술지|학위논문|박사논문)(?:\s*\]|\s*[:：|·-])', t):
         return True
@@ -1341,15 +1352,24 @@ def run_regression_selfcheck():
         ('베트남 중앙은행은 왜 자금세탁 방지를 위해 PEP를 감시하나', 'Vietnam.vn', 'vietnam.vn'),
         ('96논문 중계기와 AI 딥페이크 보이스피싱 차단법', '뉴스', 'example.com'),
         ('97논문초록 보이스피싱 대응 연구', '뉴스', 'example.com'),
+        ('96[논문]변작기,중계기와 AI딥페이크 보이스피싱차단법', '브런치', 'brunch.co.kr'),
+        ('97[논문]초록·밀입국자연계 반란군 보이스피싱 차단방법', '브런치', 'brunch.co.kr'),
         ('연구논문: 자금세탁방지 운영 분석', '뉴스', 'example.com'),
         ('자금세탁이란 무엇인가', '뉴스', 'example.com'),
         ('베트남 중앙은행, VIP 고객·은행 임원 자금세탁 감시 강화 추진', '씬짜오베트남', 'xinchaovietnam.com'),
+        ('서천경찰서 보이스피싱 수거책 검거 유공 주민 표창 수여', '뉴스데일리', 'newsdaily.kr'),
+        ('추석 부모님 선물 하나 더…보이스피싱 막는 안심차단 3종', '이투데이', 'etoday.co.kr'),
+        ('추석 선물 배송왔습니다…명절 노리는 보이스피싱 주의보', '데일리안', 'dailian.co.kr'),
+        ('목소리도 못 믿는다…AI 보이스피싱에 통신사도 진땀', 'Naver Blog', 'blog.naver.com'),
     ]
     editorial_keep = [
         ('부시장, 자금세탁 혐의로 체포', 'VOI.ID', 'voi.id'),
         ('논문에 따르면 보이스피싱 조직 검거 급증', '연합뉴스', 'yna.co.kr'),
         ('FIU, 자금세탁방지법 개정안 의결', '연합뉴스', 'yna.co.kr'),
         ('베트남 자금세탁 조직 적발', '씬짜오베트남', 'xinchaovietnam.com'),
+        ('보이스피싱 피해금 7억 송금한 조직 검거', '연합뉴스', 'yna.co.kr'),
+        ('신종 수법으로 피해자 20명 속인 보이스피싱 일당 구속', '뉴스1', 'news1.kr'),
+        ('보이스피싱 계좌 지급정지 시스템 시행', '금융위', 'fsc.go.kr'),
     ]
     for title, src, dom in editorial_reject:
         if not exclude_news_editorial(title, src, dom):
