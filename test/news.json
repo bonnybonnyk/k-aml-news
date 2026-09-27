@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T13:09:04.077343+00:00",
+  "updated_at": "2026-09-27T13:18:42.160124+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 7
+      "count": 3
     },
     {
       "feed": "불법사금융",
@@ -127,7 +127,7 @@
     {
       "feed": "실무:명의도용·차단",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -415,81 +415,75 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
     },
     {
       "feed": "금융감독원:AML:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
     },
     {
       "feed": "금융감독원:보이스피싱:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": false,
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "금융감독원:시세조종:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
     },
     {
-      "feed": "금융감독원:fallback",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
-      "method": "exact_official_fallback"
+      "count": 10,
+      "method": "official_board"
     },
     {
       "feed": "금융감독원",
       "ok": true,
-      "count": 0,
+      "count": 16,
       "method": "official_board"
     }
   ],
@@ -501,24 +495,9 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 994,
+  "count": 976,
   "official_count": 34,
   "items": [
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' : 네이버 블로그",
-      "source": "Naver Blog",
-      "source_url": "https://blog.naver.com",
-      "source_domain": "blog.naver.com",
-      "date": "Sun, 27 Sep 2026 12:17:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajZ4X1U4RldNY3pkUHhkWUtUX1hfaC1yTXZ6ZkFERGlDSnJpckJ5TW44QzNQdHQybm84WUJLTm5yU0UyblZZQVB5V0ptT1FsUGM2SHk4NnBqcHc0d2lFUGZfd0JleFVGMTFGMnluUzRrMmozOFFKcGVaeGE2RFJQMUR1bUtpQXlTSE44aUJXMA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' : 네이버 블로그 Naver Blog",
-      "collection_method": "google_news_24h"
-    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -548,21 +527,6 @@
         "사기"
       ],
       "description": "농협, 보이스피싱 등 4년반 동안 3220억원…피해자 환급 10%대 불과 부산일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "농협 보이스피싱 피해 3,220억 원...\"예방 체계 정비 시급\"",
-      "source": "여수MBC",
-      "source_url": "https://ysmbc.co.kr",
-      "source_domain": "ysmbc.co.kr",
-      "date": "Sun, 27 Sep 2026 06:54:46 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE14RUlCQzJycjJUbWFDY0g0ZkZncUVfam14enZRaFRDdWFQLXpzV2N5RW9wNjY2blV6S2RJY3ViOHhwWlRuQVNVbXFGaDh1N0hJ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "농협 보이스피싱 피해 3,220억 원...\"예방 체계 정비 시급\" 여수MBC",
       "collection_method": "google_news_24h"
     },
     {
@@ -659,21 +623,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법",
-      "source": "브런치",
-      "source_url": "https://brunch.co.kr",
-      "source_domain": "brunch.co.kr",
-      "date": "Sat, 26 Sep 2026 13:37:07 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5fMUhKX2RMMURnSlo2SWVRanBPOFVaWGIzelM3NVB1Z21QVG5tSjZzeElRM3JubTVfeE95WjBkd0duYm8zNFE?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 브런치",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "보이스피싱 자율배상 2년 반…배상 사각지대 속 ‘사전 차단’ 커져",
       "source": "토요경제",
       "source_url": "https://sateconomy.co.kr",
@@ -720,7 +669,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360]",
-      "source": "헤럴드경제",
+      "source": "mbiz.heraldcorp.com",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Sat, 26 Sep 2026 01:20:06 GMT",
@@ -728,14 +677,14 @@
       "tags": [
         "사기"
       ],
-      "description": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360] 헤럴드경제",
+      "description": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360] mbiz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억",
-      "source": "헤럴드경제",
+      "source": "mbiz.heraldcorp.com",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Fri, 25 Sep 2026 23:20:50 GMT",
@@ -743,22 +692,7 @@
       "tags": [
         "사기"
       ],
-      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’",
-      "source": "etoday.co.kr",
-      "source_url": "https://www.etoday.co.kr",
-      "source_domain": "www.etoday.co.kr",
-      "date": "Fri, 25 Sep 2026 23:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lUHJRd1l0dHJJbWRESXE0WVdUeDBKaXFRdXVsd19XT2RNaFFMcWd4MmU1ak5aTDdqUGdBZ2wwbEdJdUNSZWZVbzRYV0Z6MjNvYmxGYQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’ etoday.co.kr",
+      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 mbiz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -790,21 +724,6 @@
         "자금세탁"
       ],
       "description": "고와 시티 후스니아 탈렌랑 부국장, 허가 및 돈세탁 부패 혐의로 체포 Gowa - Gowa Regent Sitti Husniah Talenrang has been arrested on corruption charges related to licensing and money laundering. VOI.ID",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "서천경찰서 보이스피싱 수거책 검거 유공 주민 표창 수여",
-      "source": "newsdaily.kr",
-      "source_url": "https://www.newsdaily.kr",
-      "source_domain": "www.newsdaily.kr",
-      "date": "Fri, 25 Sep 2026 05:28:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBqOUs1SWVidlE1VzZzZ3VLUjlLU1h0eV85d0E4amtTYzdmQndRZ211Qy1sX2RFV3dHUUV2VjdHdGJ0UFk0bExsc1Jqem9sZlFZTkpTc3p2NDg3RUxsWDlqbl9fZUQtYXVXVnlr?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "서천경찰서 보이스피싱 수거책 검거 유공 주민 표창 수여 newsdaily.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -857,21 +776,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "“추석 선물 배송왔습니다” 무심코 눌렀다간…명절 노리는 보이스피싱 주의보",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Thu, 24 Sep 2026 23:42:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHR0toTE5td1ZhNzIxMl9xZl82eDg4MjRtZDB2ZHJQS2NHTlE3MUMzMU5KV254MmpydDZEakdMVXYwMWdpeEM0dFh6X1hMcFYyWEppNS1B?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“추석 선물 배송왔습니다” 무심코 눌렀다간…명절 노리는 보이스피싱 주의보 dailian.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면",
       "source": "뉴스1",
       "source_url": "https://www.news1.kr",
@@ -882,21 +786,6 @@
         "사기"
       ],
       "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 뉴스1",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "96[논문]변작기,중계기와 AI딥페이크 보이스피싱차단법",
-      "source": "브런치",
-      "source_url": "https://brunch.co.kr",
-      "source_domain": "brunch.co.kr",
-      "date": "Thu, 24 Sep 2026 22:24:28 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1nZGJqdGtoMm1UYWE1UGZKcUpwaGhQc3A1cTJyLUtGVXJySll6VHNVNk1DRk9HM1htaVNETkYtRUZHR19MY3c?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "96[논문]변작기,중계기와 AI딥페이크 보이스피싱차단법 브런치",
       "collection_method": "google_news_24h"
     },
     {
@@ -933,7 +822,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
-      "source": "segye.com",
+      "source": "세계일보",
       "source_url": "https://www.segye.com",
       "source_domain": "www.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
@@ -941,7 +830,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 segye.com",
+      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 세계일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1092,21 +981,6 @@
         "사기"
       ],
       "description": "명절 보이스피싱 기승…작년 추석 낀 달 피해액 1천억원 넘어 yna.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보'",
-      "source": "뉴스핌",
-      "source_url": "https://www.newspim.com",
-      "source_domain": "www.newspim.com",
-      "date": "Wed, 23 Sep 2026 23:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yUFdSdGJmVnQyS0M1TmZ6VHczTXpQMWRxWlJuU0ZldXFSRWtTVm5yRnBsY3RNSmpzdTluMkVXT0FoR2tKVUtkSDlhMVNacG50dzlWai1FUEJtenRv?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "'배송 불가' '과태료 미납' 문자 조심…은행권, 추석 '금융사기 주의보' 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
@@ -2183,21 +2057,6 @@
     },
     {
       "region": "국내",
-      "query": "범죄수익",
-      "title": "94[논문]범죄수익 완전몰수, 금융거래제한과 처벌강화",
-      "source": "브런치",
-      "source_url": "https://brunch.co.kr",
-      "source_domain": "brunch.co.kr",
-      "date": "Mon, 21 Sep 2026 11:31:32 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5lUDhZcHg4SXFIc1FsNkpiZXpJaWF5aW43cXVKMENfY0hmYUpxQ1JncjFzQXEtdmJ3SThRbnVfcmFGTGZiOVE?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "94[논문]범죄수익 완전몰수, 금융거래제한과 처벌강화 브런치",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "가상자산 AML",
       "title": "말레이시아 중국인 2명, 가상자산 사기 공모로 각 4700링깃 벌금",
       "source": "토큰포스트",
@@ -2993,21 +2852,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보",
-      "source": "디지털데일리",
-      "source_url": "https://www.ddaily.co.kr",
-      "source_domain": "www.ddaily.co.kr",
-      "date": "Sun, 20 Sep 2026 03:16:37 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAxN3d1Z2oxblljR1d5UTdFV0V5V054YUV1YnZINmpHOFZ1ejEzZm9PWHNpM0hieWNPRkdUcklvaThxUDNraEhVNVpEVnoxMDlYUmo2ZzI5M01iUkRXTkVLZzk3WTg?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“남은 달러 중고거래 했다가 계좌 정지”…추석 노리는 보이스피싱 주의보 디지털데일리",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "투자사기",
       "title": "\"AI로 큰 수익 낸다더니\"…가짜 앱 동원한 투자사기범 징역 5년",
       "source": "edaily.co.kr",
@@ -3055,21 +2899,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "“택배 주소 오류” 문자 눌렀다가 털린다…추석 보이스피싱 주의보",
-      "source": "edaily.co.kr",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:05 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNM3pYZkRodnBYY0JWY1pUVmw0RE1Zd1h4bG5VN2E3alhCYS1sdGs2WW5YQlliXzQ5alpHNXRzV09mNE9ieDlMWmUtMFFLbTh2WTlGcm5CVUZGS2dSeG9vSGFxdmVyRzBEekFuY2FuX2JrT05RVXRySGJtNkNSTDlxMQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“택배 주소 오류” 문자 눌렀다가 털린다…추석 보이스피싱 주의보 edaily.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\"",
       "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
@@ -3080,36 +2909,6 @@
         "사기"
       ],
       "description": "\"추석 보이스피싱 성행…택배·과태료 사칭 문자 주의해야\" 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\"",
-      "source": "asiae.co.kr",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE83TVJTUXVOMnl4OHozdnZPX3MtakpIU1hHUXdXRTlIRmxQUVkzcWhJMU50eGRwWEF3dGNuMkQ1N3BSRjFXUHJGeTlOSDRKaDd1OVlXLV9IZ1k0LURBaHlZWA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "추석 앞두고 보이스피싱 주의보…\"택배 문자·외화 직거래 조심\" asiae.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Sun, 20 Sep 2026 03:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPUjl6VjBTYS04QXUyVXVxeXBHWEl5TExVVnZIWnZfUzJHYm12TjNmb1IydWY4X2FKZjhtdGFMdjJXVUJFSGdFR0Z3MDNkRV9HU0tHdUp2VHpZZU8xUG5nQ2RyMUduTThxTFpqTmNhdjRYM0ZDZWp0NGdxenhjT3FWYmdoQTV4ODg0Qks0T09CWWZEWnlyaG1ybEdLY19jWjIyaG5SR0JLU3Z2NGdkYnlFV3lHZXh6djUzaTlSX1JkMnpjVEtwaDlJcXJiYk5KbXlGdmVsQTRZUWZBWEhqZHFsdktuMm9sSzZZdW9sX1JmblNwQ2hjaGdlajNnUkJpTGxWZERnY3JXUHd2UVpWdnNNNFFRb05DTTF6QUhfSFNocGJVNmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“택배 주소 오류” 눌렀다간 악성앱…금융당국, 추석 보이스피싱 주의보 dailian.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -6230,21 +6029,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "“카드로 상품권 사라” 보이스피싱 주의보",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Tue, 15 Sep 2026 08:25:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBqd2FOVGNTUlAtYTZiaU5TZ2kyTmJIZ2VjbmZ4UEJKUGdlTV95aUE0cWNOVU1xVjBpVTFYZURYQzdheDVybmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“카드로 상품권 사라” 보이스피싱 주의보 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "범죄수익",
       "title": "김세의 범죄수익 묶은 검찰...\"1억 7천만원 추징보전\"",
       "source": "JTBC",
@@ -6533,21 +6317,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "'저금리 대출·고수익 부업' 미끼…카드 결제 보이스피싱 주의보",
-      "source": "SBS Biz",
-      "source_url": "https://biz.sbs.co.kr",
-      "source_domain": "biz.sbs.co.kr",
-      "date": "Tue, 15 Sep 2026 06:24:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE52V0hkUElGdG1BeFFyVEh5NERsM3c2dURqQ0FCR1A0UVRpNGE3RnJlM01uc0tTaWNQT3dEV0hOLXdWbXNOSWloVWRMdWk3ejFPb1hJ0gFYQVVfeXFMUFFTb2VwenNxNnVBemRQUDFTc0UxVTlSRkt5LVNWSWh2ell6VkN4ZklmUTFKNnJyWG9rX2J3OWZUVk9fMFRsaUs4YVV4SXl0V2VJY3lSckw3Zw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "'저금리 대출·고수익 부업' 미끼…카드 결제 보이스피싱 주의보 SBS Biz",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "범죄수익",
       "title": "檢, 김세의 소유 토지 추징보전…\"범죄수익 1억6940만원 박탈\"",
       "source": "한국경제",
@@ -6714,21 +6483,6 @@
         "사기"
       ],
       "description": "보이스피싱으로 챙긴 3억원, 코인 환전 후 중국에 넘긴 일당 검거 매일신문",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "카드결제 유도 보이스피싱 주의보…상품권·부업·대출 미끼",
-      "source": "뉴스에듀신문",
-      "source_url": "https://www.newsedu.co.kr",
-      "source_domain": "www.newsedu.co.kr",
-      "date": "Tue, 15 Sep 2026 04:32:09 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fbjdIejJBMUZJLWNSd0VWWFhzMVR5Mzk1VEJfOVRVZkRVR3ZvY2k0dVNkaVRCM3AxMlZGeFN3U0N0U2dnS3BJLUd2dXdBLWhPeHJ4V2UweVNVdW9zSTk3bUFDV2xMM2VJRE5rMNIBcEFVX3lxTFBrNEpxU3NiUnk5TTRUemlPNmtKN3NIOHV0OS0zNHYzZ0Z2dHJaTk01YjhjcUp1ZG5hcVRfUlBqLUREQlVnM0Q2bFNYaUNUSmJaU3B0LVFJY0hTbzA3WF9CQWdwNUE0bnBZbjY3dXpLaFU?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "카드결제 유도 보이스피싱 주의보…상품권·부업·대출 미끼 뉴스에듀신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -12471,21 +12225,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "“상품권 구매실적 쌓으면 대출”…신종 보이스피싱 주의보",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Sun, 09 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5jcm9hekgydWRoRGt2QW1FUkNYdlF3WlJJaC0tNXVZSHptSzZCRGEzVEkwZWtPSWpuek5HZFFrdjNJUk1XSlBSdnpjcHpGNEtzWUN3Wg?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“상품권 구매실적 쌓으면 대출”…신종 보이스피싱 주의보 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "'상품권 사면 대출 가능' 신종 보이스피싱 기승…금감원 소비자경보",
       "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
@@ -12526,21 +12265,6 @@
         "사기"
       ],
       "description": "상품권 사면 대출?...“100% 보이스피싱입니다” hidomin.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“공무원 대리구매 요청은 100% 사기”…신종피싱 주의보",
-      "source": "이투데이",
-      "source_url": "https://www.etoday.co.kr",
-      "source_domain": "www.etoday.co.kr",
-      "date": "Sun, 09 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9NbXk0Z2lnUE1INlFNWGdFLUZsVEVlVVB1UGxJZ24tVWIyZVVLZlJ3Z19CTUlhclZFUFlXeGJyTFpUOTRENjdzSzlnX3FGcTNrNVRKUA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“공무원 대리구매 요청은 100% 사기”…신종피싱 주의보 이투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -15238,12 +14962,13 @@
     {
       "region": "공식자료",
       "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "official_source": "금융위원회·금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융위원회",
+        "금융감독원"
       ],
       "title": "가상자산시장 불공정거래 혐의자 수사기관 고발·통보 - 제16차 금융위원회 정례회의(’26.9.23.) 의결 -",
-      "source": "금융위원회",
+      "source": "금융위원회·금융감독원",
       "date": "2026-09-23T00:00:00+09:00",
       "link": "https://www.fsc.go.kr/no010101/87783?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
@@ -15252,7 +14977,7 @@
         "FIU·규제",
         "제재·테러자금"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "official_multi_source"
     },
     {
       "region": "공식자료",
@@ -15456,22 +15181,6 @@
     },
     {
       "region": "공식자료",
-      "query": "DAXA",
-      "official_source": "DAXA",
-      "official_sources": [
-        "DAXA"
-      ],
-      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
-      "source": "DAXA",
-      "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
-      "tags": [
-        "가상자산"
-      ],
-      "collection_method": "verified_daxa_board"
-    },
-    {
-      "region": "공식자료",
       "query": "자금세탁",
       "official_source": "금융감독원",
       "official_sources": [
@@ -15486,6 +15195,22 @@
         "자금세탁"
       ],
       "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "DAXA",
+      "official_source": "DAXA",
+      "official_sources": [
+        "DAXA"
+      ],
+      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
+      "source": "DAXA",
+      "date": "2026-08-27T00:00:00+09:00",
+      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
+      "tags": [
+        "가상자산"
+      ],
+      "collection_method": "verified_daxa_board"
     },
     {
       "region": "공식자료",
@@ -15653,6 +15378,22 @@
     },
     {
       "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
+      "source": "금융감독원",
+      "date": "2026-07-29T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
       "query": "DAXA",
       "official_source": "DAXA",
       "official_sources": [
@@ -15667,22 +15408,6 @@
         "사기"
       ],
       "collection_method": "verified_daxa_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
-      "source": "금융감독원",
-      "date": "2026-07-29T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
