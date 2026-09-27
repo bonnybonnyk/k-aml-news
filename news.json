@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T09:09:47.820232+00:00",
+  "updated_at": "2026-09-27T09:39:26.558240+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "지갑·해외거래소",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,39 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -421,13 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,19 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -469,7 +451,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -527,7 +515,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'주식 투자하려고' 종중 자금 8억 횡령한 회장…항소심서 감형",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Sun, 27 Sep 2026 01:00:03 GMT",
@@ -535,7 +523,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'주식 투자하려고' 종중 자금 8억 횡령한 회장…항소심서 감형 연합뉴스",
+      "description": "'주식 투자하려고' 종중 자금 8억 횡령한 회장…항소심서 감형 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -572,7 +560,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\"",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Sat, 26 Sep 2026 22:00:00 GMT",
@@ -580,14 +568,14 @@
       "tags": [
         "가상자산"
       ],
-      "description": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\" 뉴시스",
+      "description": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\" newsis.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법",
-      "source": "브런치",
+      "source": "brunch.co.kr",
       "source_url": "https://brunch.co.kr",
       "source_domain": "brunch.co.kr",
       "date": "Sat, 26 Sep 2026 13:37:07 GMT",
@@ -595,14 +583,14 @@
       "tags": [
         "사기"
       ],
-      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 브런치",
+      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 brunch.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 자율배상 2년 반…배상 사각지대 속 ‘사전 차단’ 커져",
-      "source": "sateconomy.co.kr",
+      "source": "토요경제",
       "source_url": "https://sateconomy.co.kr",
       "source_domain": "sateconomy.co.kr",
       "date": "Sat, 26 Sep 2026 11:38:55 GMT",
@@ -610,7 +598,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 자율배상 2년 반…배상 사각지대 속 ‘사전 차단’ 커져 sateconomy.co.kr",
+      "description": "보이스피싱 자율배상 2년 반…배상 사각지대 속 ‘사전 차단’ 커져 토요경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -677,7 +665,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 25 Sep 2026 23:00:00 GMT",
@@ -685,7 +673,7 @@
       "tags": [
         "사기"
       ],
-      "description": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’ etoday.co.kr",
+      "description": "추석 부모님 선물 하나 더…보이스피싱 막는 ‘안심차단 3종’ 이투데이",
       "collection_method": "google_news_24h"
     },
     {
