@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T15:09:51.316435+00:00",
+  "updated_at": "2026-09-27T15:39:30.329877+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -242,9 +242,21 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -255,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -403,21 +415,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
       "method": "official_board"
     },
     {
@@ -439,6 +439,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
@@ -451,9 +463,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -463,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -657,7 +669,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360]",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Sat, 26 Sep 2026 01:20:06 GMT",
@@ -665,14 +677,14 @@
       "tags": [
         "사기"
       ],
-      "description": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360] mbiz.heraldcorp.com",
+      "description": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360] 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Fri, 25 Sep 2026 23:20:50 GMT",
@@ -680,7 +692,7 @@
       "tags": [
         "사기"
       ],
-      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 mbiz.heraldcorp.com",
+      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -718,7 +730,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다",
-      "source": "Cryptopolitan",
+      "source": "cryptopolitan.com",
       "source_url": "https://www.cryptopolitan.com",
       "source_domain": "www.cryptopolitan.com",
       "date": "Fri, 25 Sep 2026 04:36:21 GMT",
@@ -728,7 +740,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다 Cryptopolitan",
+      "description": "연준은 은행식 스테이블코인 규정을 제안했지만, 바는 자금세탁방지(AML) 집행상의 허점을 지적했다 cryptopolitan.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -14845,19 +14857,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
