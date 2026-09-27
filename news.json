@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T01:39:32.222261+00:00",
+  "updated_at": "2026-09-27T02:10:02.467960+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -424,6 +424,18 @@
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -439,27 +451,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -475,7 +475,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -517,7 +517,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "불법 몰랐고 전달만?…보이스피싱 전달책 변명 안 통한 이유",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Sat, 26 Sep 2026 22:00:08 GMT",
@@ -525,7 +525,7 @@
       "tags": [
         "사기"
       ],
-      "description": "불법 몰랐고 전달만?…보이스피싱 전달책 변명 안 통한 이유 yna.co.kr",
+      "description": "불법 몰랐고 전달만?…보이스피싱 전달책 변명 안 통한 이유 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -592,7 +592,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360]",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Sat, 26 Sep 2026 01:20:06 GMT",
@@ -600,14 +600,14 @@
       "tags": [
         "사기"
       ],
-      "description": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360] mbiz.heraldcorp.com",
+      "description": "한은 총재가 주식 종목 추천?…유명인 사칭한 불법 리딩방, 피해액만 수천억대 [투자360] 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Fri, 25 Sep 2026 23:20:50 GMT",
@@ -615,7 +615,7 @@
       "tags": [
         "사기"
       ],
-      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 mbiz.heraldcorp.com",
+      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -851,7 +851,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길",
-      "source": "세계일보",
+      "source": "segye.com",
       "source_url": "https://www.segye.com",
       "source_domain": "www.segye.com",
       "date": "Thu, 24 Sep 2026 14:02:06 GMT",
@@ -859,7 +859,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 세계일보",
+      "description": "중수청 수사조직 확정…가상자산 분석·범죄정보 수집 부서 눈길 segye.com",
       "collection_method": "google_news_24h"
     },
     {
