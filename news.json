@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T04:09:48.785340+00:00",
+  "updated_at": "2026-09-27T04:40:56.232603+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "지갑·해외거래소",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 1,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -415,31 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,7 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,7 +457,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -472,6 +466,12 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,9 +495,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1004,
+  "count": 1005,
   "official_count": 34,
   "items": [
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Sun, 27 Sep 2026 01:46:52 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5LY2s2UVZZbzZDQlI2LVdNbDJWS1EycG90Y1d6YUNkMjhHclpwX3o5TWlRMmdJUS1TOW5mX3ZzdUNreXZvQm5ELWp6ZTR0RnRFTElQNlgzV2ZIa3lhbm96Tg?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "횡령·배임",
@@ -821,7 +837,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Thu, 24 Sep 2026 23:39:06 GMT",
@@ -829,7 +845,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 news1.kr",
+      "description": "보이스피싱 악성 앱에 7억 날릴 뻔한 70대, 경찰 설득 끝에 피해 모면 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
