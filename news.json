@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T12:12:32.692527+00:00",
+  "updated_at": "2026-09-27T12:43:13.149343+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 7
     },
     {
       "feed": "불법사금융",
@@ -254,9 +254,9 @@
     },
     {
       "feed": "금융위/FIU:목록:p3",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 20,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -421,7 +421,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,7 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,6 +457,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
@@ -464,12 +470,6 @@
     },
     {
       "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1006,
+  "count": 1007,
   "official_count": 34,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' : 네이버 블로그",
+      "source": "Naver Blog",
+      "source_url": "https://blog.naver.com",
+      "source_domain": "blog.naver.com",
+      "date": "Sun, 27 Sep 2026 12:17:13 GMT",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajZ4X1U4RldNY3pkUHhkWUtUX1hfaC1yTXZ6ZkFERGlDSnJpckJ5TW44QzNQdHQybm84WUJLTm5yU0UyblZZQVB5V0ptT1FsUGM2SHk4NnBqcHc0d2lFUGZfd0JleFVGMTFGMnluUzRrMmozOFFKcGVaeGE2RFJQMUR1bUtpQXlTSE44aUJXMA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"목소리도 못 믿는다\"…AI 보이스피싱에 통신사도 '진땀' : 네이버 블로그 Naver Blog",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -639,7 +654,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법",
-      "source": "brunch.co.kr",
+      "source": "브런치",
       "source_url": "https://brunch.co.kr",
       "source_domain": "brunch.co.kr",
       "date": "Sat, 26 Sep 2026 13:37:07 GMT",
@@ -647,7 +662,7 @@
       "tags": [
         "사기"
       ],
-      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 brunch.co.kr",
+      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 브런치",
       "collection_method": "google_news_24h"
     },
     {
@@ -775,7 +790,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요?",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Fri, 25 Sep 2026 12:27:19 GMT",
@@ -783,14 +798,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요? vietnam.vn",
+      "description": "베트남 중앙은행은 왜 자금세탁 방지를 위해 은행의 주요 주주와 VIP 고객을 감시하려는 것일까요? Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다.",
-      "source": "vietnam.vn",
+      "source": "Vietnam.vn",
       "source_url": "https://www.vietnam.vn",
       "source_domain": "www.vietnam.vn",
       "date": "Fri, 25 Sep 2026 06:05:45 GMT",
@@ -799,7 +814,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다. vietnam.vn",
+      "description": "자금세탁 위험 보고: 은행은 정치적으로 중요한 인물(PEP) 고객, VIP 고객, 부동산 사업체 및 암호화폐 자산에 대한 정보를 제공해야 합니다. Vietnam.vn",
       "collection_method": "google_news_24h"
     },
     {
