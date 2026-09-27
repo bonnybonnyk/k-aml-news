@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T10:09:57.769485+00:00",
+  "updated_at": "2026-09-27T10:39:23.602531+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -415,25 +415,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,15 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,14 +495,29 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1003,
+  "count": 1004,
   "official_count": 34,
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "농협, 보이스피싱 등 4년반 동안 3220억원…피해자 환급 10%대 불과",
+      "source": "부산일보",
+      "source_url": "https://mobile.busan.com",
+      "source_domain": "mobile.busan.com",
+      "date": "Sun, 27 Sep 2026 09:56:06 GMT",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5jaEhNejhzSnBtTE9OOU9FOXlYWEF0bW0zaXRZWjRseVFwQi11cDM4REtMbWlGUGtmR1M3YXR6djlvQmo3aHdxQ1ZJU3NUTmtpdXo0elpFUFpqbWRUTmRnUzlOVmpFbTY5RHNrLTNZbTdSZW5BRDJISjhEOHU?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "농협, 보이스피싱 등 4년반 동안 3220억원…피해자 환급 10%대 불과 부산일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 27 Sep 2026 01:46:52 GMT",
@@ -511,14 +526,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자 토큰포스트",
+      "description": "80만 위안 가상자산 환전 지시…유학생도 사기 피해자 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년",
-      "source": "진일보",
+      "source": "jnilbo.com",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Sun, 27 Sep 2026 01:35:26 GMT",
@@ -526,7 +541,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 진일보",
+      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 jnilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -578,7 +593,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\"",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Sat, 26 Sep 2026 22:00:00 GMT",
@@ -586,14 +601,14 @@
       "tags": [
         "가상자산"
       ],
-      "description": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\" newsis.com",
+      "description": "코인 과세 강행 시 거래대금 258兆 증발 우려…업계 \"취득가 산정·신고 인프라 미비\" 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법",
-      "source": "brunch.co.kr",
+      "source": "브런치",
       "source_url": "https://brunch.co.kr",
       "source_domain": "brunch.co.kr",
       "date": "Sat, 26 Sep 2026 13:37:07 GMT",
@@ -601,7 +616,7 @@
       "tags": [
         "사기"
       ],
-      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 brunch.co.kr",
+      "description": "97[논문]조폭·밀입국자연계 반란군 보이스피싱 차단방법 브런치",
       "collection_method": "google_news_24h"
     },
     {
