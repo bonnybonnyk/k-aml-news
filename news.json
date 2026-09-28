@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T16:41:50.015847+00:00",
+  "updated_at": "2026-09-28T17:10:55.630504+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 12
+      "count": 9
     },
     {
       "feed": "지갑·해외거래소",
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,13 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,19 +451,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -452,12 +476,6 @@
     },
     {
       "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -477,14 +495,14 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 990,
+  "count": 992,
   "official_count": 30,
   "items": [
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "FCA, 가상자산 사기 피해자 65명에 85만1402파운드 반환 추진",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 28 Sep 2026 14:47:35 GMT",
@@ -493,7 +511,22 @@
         "가상자산",
         "사기"
       ],
-      "description": "FCA, 가상자산 사기 피해자 65명에 85만1402파운드 반환 추진 tokenpost.kr",
+      "description": "FCA, 가상자산 사기 피해자 65명에 85만1402파운드 반환 추진 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아",
+      "source": "와이뉴스",
+      "source_url": "https://www.whynews.co.kr",
+      "source_domain": "www.whynews.co.kr",
+      "date": "Mon, 28 Sep 2026 12:26:34 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9zUHJ5NlFGZTRmSFJ0ZWllaEpQWkpUVVpUVzBXbEVmWTJfR1RDcWEtbEZHMjdhRHJfYmtIeTlRSVpOcllMX1hMdzYtdE1TTGhLenFQUjFvWUh3OXFQVHhHd3dxQQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아 와이뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -532,7 +565,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 09:03:28 GMT",
@@ -541,7 +574,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행 뉴시스",
+      "description": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -670,7 +703,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발",
-      "source": "khan.co.kr",
+      "source": "경향신문",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Mon, 28 Sep 2026 07:49:00 GMT",
@@ -679,7 +712,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 khan.co.kr",
+      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 경향신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -778,7 +811,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "檢 발빠른 대처로 보이스피싱 피해금 찾았다",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 07:01:08 GMT",
@@ -786,7 +819,7 @@
       "tags": [
         "사기"
       ],
-      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 뉴시스",
+      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -823,7 +856,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 28 Sep 2026 04:49:30 GMT",
@@ -831,7 +864,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년 tokenpost.kr",
+      "description": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -928,7 +961,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용",
-      "source": "lawtimes.co.kr",
+      "source": "법률신문",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 28 Sep 2026 01:44:01 GMT",
@@ -937,7 +970,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 lawtimes.co.kr",
+      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 법률신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -959,7 +992,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 00:43:15 GMT",
@@ -967,7 +1000,7 @@
       "tags": [
         "사기"
       ],
-      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 뉴시스",
+      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -998,6 +1031,21 @@
         "가상자산"
       ],
       "description": "불법 외환거래 적발액 7년간 20조 넘어…가상자산 악용 늘어 서울경제TV",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법도박",
+      "title": "이찬진 금감원장, 청소년 대상 불법도박 근절 강연",
+      "source": "marketin.edaily.co.kr",
+      "source_url": "https://marketin.edaily.co.kr",
+      "source_domain": "marketin.edaily.co.kr",
+      "date": "Mon, 28 Sep 2026 00:20:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1PTDhfSEVuazlEWldGa1M4cXpLb2F3S2UzOEdSQkdOU0pkX2NmNUN0OExRc3p2TXJnQW53QUtFTG9XbUpqWEZEMDYzS1Q4a3hNeDdHbmE1Y0V5Smdvd0hzVXZESks1Y2xYblB5ZzF0dFpQRE0?oc=5",
+      "tags": [
+        "도박"
+      ],
+      "description": "이찬진 금감원장, 청소년 대상 불법도박 근절 강연 marketin.edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1080,7 +1128,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서]",
-      "source": "biz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sun, 27 Sep 2026 22:45:00 GMT",
@@ -1089,14 +1137,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] biz.heraldcorp.com",
+      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "[단독] 수협銀, 보이스피싱 감소에도 평균 피해액 급증..회수율도 34.9% 그쳐",
-      "source": "fnnews.com",
+      "source": "파이낸셜뉴스",
       "source_url": "https://www.fnnews.com",
       "source_domain": "www.fnnews.com",
       "date": "Sun, 27 Sep 2026 21:00:00 GMT",
@@ -1104,14 +1152,14 @@
       "tags": [
         "사기"
       ],
-      "description": "[단독] 수협銀, 보이스피싱 감소에도 평균 피해액 급증..회수율도 34.9% 그쳐 fnnews.com",
+      "description": "[단독] 수협銀, 보이스피싱 감소에도 평균 피해액 급증..회수율도 34.9% 그쳐 파이낸셜뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한”",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 27 Sep 2026 11:58:56 GMT",
@@ -1120,7 +1168,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한” tokenpost.kr",
+      "description": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한” 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -15179,19 +15227,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
