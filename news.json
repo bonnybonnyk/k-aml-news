@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T00:46:20.662080+00:00",
+  "updated_at": "2026-09-28T01:10:10.298586+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "마약자금",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 2
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,15 +260,9 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -403,31 +397,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,13 +409,31 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,13 +445,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -483,9 +477,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 975,
+  "count": 977,
   "official_count": 32,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Mon, 28 Sep 2026 00:43:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YWmd0Ry1XUXVhOHVjMWVXU3hmRjhjR1QxX01RZEtOaUx4WXNvLWtQNnp4bUM5S0tWaWwxQkNZZHY0OUxycGxQb1NPc3lGaFAydWJfZ2FTMGZJS1N0aXJrTdIBeEFVX3lxTE01NFJld1NBcnBuTUFGRzl1Wlg5Q2psTkxGVFFlT2YyUlp6VWE2Zmp4YkJYeFU0cjlEYnN5QnBhZzBCU2UyQUJtbkFFTzdQX1d4MWlZQnNFc1JQeGdmeFZlNDU3N3AxLVJVQ2NGalptbjVPRkk3WU95MA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 뉴시스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "트래블룰",
@@ -499,6 +508,21 @@
         "가상자산"
       ],
       "description": "美 국방장관, 비트코인 보유 신고…코인베이스에 최대 6만5000달러 디지털투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "환치기·외환",
+      "title": "불법 외환거래 적발액 7년간 20조 넘어…가상자산 악용 늘어",
+      "source": "서울경제TV",
+      "source_url": "https://www.sentv.co.kr",
+      "source_domain": "www.sentv.co.kr",
+      "date": "Mon, 28 Sep 2026 00:30:29 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5YdFlYZFY0bXdhMEJ2VjdpZkk2WmNoVjBoVVVkc1BkYUVnZUM4dVRkRWRWVW1FMnd4M19pQnJwZk1JVUp0SklTVHlVcXFQS1RQTThBSGsySFhVVUpWMm9jc0daTGY?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "불법 외환거래 적발액 7년간 20조 넘어…가상자산 악용 늘어 서울경제TV",
       "collection_method": "google_news_24h"
     },
     {
@@ -644,7 +668,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년",
-      "source": "jnilbo.com",
+      "source": "진일보",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Sun, 27 Sep 2026 01:35:26 GMT",
@@ -652,7 +676,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 jnilbo.com",
+      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 진일보",
       "collection_method": "google_news_24h"
     },
     {
