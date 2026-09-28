@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T03:43:20.514447+00:00",
+  "updated_at": "2026-09-28T04:10:58.835385+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "불법사금융",
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,32 +242,20 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
@@ -415,6 +403,24 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -427,27 +433,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
       "method": "official_board"
     },
     {
@@ -457,13 +445,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +463,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -563,7 +551,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "美 국방장관, 비트코인 보유 신고…코인베이스에 최대 6만5000달러",
-      "source": "digitaltoday.co.kr",
+      "source": "디지털투데이",
       "source_url": "https://www.digitaltoday.co.kr",
       "source_domain": "www.digitaltoday.co.kr",
       "date": "Mon, 28 Sep 2026 00:39:35 GMT",
@@ -571,7 +559,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "美 국방장관, 비트코인 보유 신고…코인베이스에 최대 6만5000달러 digitaltoday.co.kr",
+      "description": "美 국방장관, 비트코인 보유 신고…코인베이스에 최대 6만5000달러 디지털투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -593,7 +581,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\"",
-      "source": "아시아경제",
+      "source": "asiae.co.kr",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Mon, 28 Sep 2026 00:06:34 GMT",
@@ -601,14 +589,14 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\" 아시아경제",
+      "description": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\" asiae.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\"",
-      "source": "digitaltoday.co.kr",
+      "source": "디지털투데이",
       "source_url": "https://www.digitaltoday.co.kr",
       "source_domain": "www.digitaltoday.co.kr",
       "date": "Mon, 28 Sep 2026 00:03:08 GMT",
@@ -617,7 +605,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\" digitaltoday.co.kr",
+      "description": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\" 디지털투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -15040,6 +15028,22 @@
     },
     {
       "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
+    },
+    {
+      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -15057,25 +15061,6 @@
         "FIU·규제",
         "제재·테러자금",
         "자금세탁"
-      ],
-      "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
-      "official_sources": [
-        "금융위원회"
-      ],
-      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
-      "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
     },
