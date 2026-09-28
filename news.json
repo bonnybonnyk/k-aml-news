@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T20:41:58.031759+00:00",
+  "updated_at": "2026-09-28T21:10:21.889038+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "마약자금",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -415,13 +415,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,13 +451,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -454,18 +460,6 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -478,6 +472,12 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 994,
+  "count": 995,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "유학비자로 들어온 우즈벡인, 테러자금 지원 혐의로 재판",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Mon, 28 Sep 2026 20:55:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QUHdxYVdOcTJwTjM3ZmJaZ01aYVczV2NoNDNGNUdaSUtQOU1iWENWN3ZUekVfU21WZ3U0dmVtdkNTTmM0NC02TGxqbVo0MVF1eElQaC1meTlabFXSAWBBVV95cUxOWWw2WFU0TWxmclhQNUkzWnJZMTBPUHdQYlBSSDAtbHhCOVJLTkt6NllITnBXYWF2V29SbFBXQV9uMzVjUU9teU1tLUY1WXVQMEFfREwwLTNKMTlkWUQ1UHo?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "유학비자로 들어온 우즈벡인, 테러자금 지원 혐의로 재판 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -627,7 +642,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도?",
-      "source": "news.jtbc.co.kr",
+      "source": "JTBC",
       "source_url": "https://news.jtbc.co.kr",
       "source_domain": "news.jtbc.co.kr",
       "date": "Mon, 28 Sep 2026 08:49:00 GMT",
@@ -635,7 +650,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? news.jtbc.co.kr",
+      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? JTBC",
       "collection_method": "google_news_24h"
     },
     {
@@ -657,7 +672,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약 수사 중 압수한 비트코인 빼돌려 현금화한 경찰관 기소",
-      "source": "한국일보",
+      "source": "hankookilbo.com",
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Mon, 28 Sep 2026 08:28:00 GMT",
@@ -666,7 +681,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약 수사 중 압수한 비트코인 빼돌려 현금화한 경찰관 기소 한국일보",
+      "description": "마약 수사 중 압수한 비트코인 빼돌려 현금화한 경찰관 기소 hankookilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -704,7 +719,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리'",
-      "source": "1conomynews.co.kr",
+      "source": "1코노미뉴스",
       "source_url": "https://www.1conomynews.co.kr",
       "source_domain": "www.1conomynews.co.kr",
       "date": "Mon, 28 Sep 2026 08:05:39 GMT",
@@ -712,7 +727,7 @@
       "tags": [
         "사기"
       ],
-      "description": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리' 1conomynews.co.kr",
+      "description": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리' 1코노미뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -962,7 +977,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "불법 외환거래 7년간 20조 적발…올해만 5조 육박",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Mon, 28 Sep 2026 04:17:31 GMT",
@@ -970,7 +985,7 @@
       "tags": [
         "AML"
       ],
-      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 imaeil.com",
+      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 매일신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -992,7 +1007,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 28 Sep 2026 01:44:01 GMT",
@@ -1001,7 +1016,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 법률신문",
+      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1372,7 +1387,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억",
-      "source": "헤럴드경제",
+      "source": "mbiz.heraldcorp.com",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Fri, 25 Sep 2026 23:20:50 GMT",
@@ -1380,7 +1395,7 @@
       "tags": [
         "사기"
       ],
-      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 헤럴드경제",
+      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 mbiz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
