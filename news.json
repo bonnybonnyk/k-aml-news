@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T23:38:29.332776+00:00",
+  "updated_at": "2026-09-28T00:15:28.365942+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,24 +403,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
@@ -427,15 +415,39 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -457,12 +469,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원",
       "ok": true,
       "count": 16,
@@ -477,9 +483,55 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 971,
+  "count": 974,
   "official_count": 32,
   "items": [
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\"",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Mon, 28 Sep 2026 00:06:34 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ieTE5ckZ5T3ZQQ1pRUWxPV3lnMVFtRWlsakZmbElNdzhPSUtnT21iaGxuWUVINzkzbndNTUdjZGhxMnk0OW5lek9qamZCa1FGYU5MZUhGeVNJS2pMTW92Xw?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\" 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\"",
+      "source": "digitaltoday.co.kr",
+      "source_url": "https://www.digitaltoday.co.kr",
+      "source_domain": "www.digitaltoday.co.kr",
+      "date": "Mon, 28 Sep 2026 00:03:08 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE53VkJDaG1yUTVIVThWYURFRHZEcmN3Z1U0SGdQVW9KMUl1T09tVnU4UEwwMmRvNEZLYVdTdmJfb1Z1MnI3OUJUb1FYTE53Zk9qQjNnNy1jQks0akdFa2hXM25sVkVEbXNxVDZ3M2FTSHdHQlU?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\" digitaltoday.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "[해피라이프]정교해지는 보이스피싱…범죄 연루 시 대응법은?",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Sun, 27 Sep 2026 23:52:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUUt3a2ZuOVR3TmVDNXFFN2Y2WGN4Q3ZFSlZZZUNrazlKVGV3TGk0Szh0YUdWN2dfZnBPbFZ4bS1QT0NXVjVLX1otODZaYjA0Rmd5cWlidXROQWZSYU01NG9SWmhGTDNHZGdna3RwUHJaeldiQlBVTVphTkV5YnZ1NQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[해피라이프]정교해지는 보이스피싱…범죄 연루 시 대응법은? edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "환치기·외환",
@@ -577,7 +629,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년",
-      "source": "jnilbo.com",
+      "source": "진일보",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Sun, 27 Sep 2026 01:35:26 GMT",
@@ -585,7 +637,7 @@
       "tags": [
         "사기"
       ],
-      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 jnilbo.com",
+      "description": "“불법인 줄 몰랐다”…7억 보이스피싱 전달책에 징역 2년 진일보",
       "collection_method": "google_news_24h"
     },
     {
