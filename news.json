@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T17:10:55.630504+00:00",
+  "updated_at": "2026-09-28T17:41:06.412449+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 12
+      "count": 11
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -415,19 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +439,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -460,12 +466,6 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,9 +495,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 992,
+  "count": 993,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "테더, 이란 제재 회피의 '생명선'으로 지목된 이유는…",
+      "source": "민심뉴스",
+      "source_url": "https://www.minsimnews.com",
+      "source_domain": "www.minsimnews.com",
+      "date": "Mon, 28 Sep 2026 16:58:11 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB2Qk95OVI1THh5OHUtaFR3VUhYUzNnSWxfeXV0Rl9oQ1J3NTJjU3l6YTlQblZoWXc3ZXVheFZ0ZGNoZ2RqT0xDZEhldmV4eEVoRzdmcjc4dnVsQ3JPMUN6VmtvSC1PcUYyZm4xSw?oc=5",
+      "tags": [
+        "가상자산",
+        "제재·테러자금"
+      ],
+      "description": "테더, 이란 제재 회피의 '생명선'으로 지목된 이유는… 민심뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "가상자산 AML",
@@ -565,7 +581,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 09:03:28 GMT",
@@ -574,7 +590,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행 newsis.com",
+      "description": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -719,7 +735,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 07:47:39 GMT",
@@ -728,7 +744,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 연합뉴스",
+      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -811,7 +827,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "檢 발빠른 대처로 보이스피싱 피해금 찾았다",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 07:01:08 GMT",
@@ -819,14 +835,14 @@
       "tags": [
         "사기"
       ],
-      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 newsis.com",
+      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "남편 사망보험금 보이스피싱 피해…검찰, 2억원 되찾아",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 06:56:06 GMT",
@@ -834,7 +850,7 @@
       "tags": [
         "사기"
       ],
-      "description": "남편 사망보험금 보이스피싱 피해…검찰, 2억원 되찾아 연합뉴스",
+      "description": "남편 사망보험금 보이스피싱 피해…검찰, 2억원 되찾아 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -961,7 +977,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 28 Sep 2026 01:44:01 GMT",
@@ -970,7 +986,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 법률신문",
+      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -992,7 +1008,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 00:43:15 GMT",
@@ -1000,7 +1016,7 @@
       "tags": [
         "사기"
       ],
-      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 newsis.com",
+      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1067,7 +1083,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\"",
-      "source": "디지털투데이",
+      "source": "digitaltoday.co.kr",
       "source_url": "https://www.digitaltoday.co.kr",
       "source_domain": "www.digitaltoday.co.kr",
       "date": "Mon, 28 Sep 2026 00:03:08 GMT",
@@ -1076,7 +1092,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\" 디지털투데이",
+      "description": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\" digitaltoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
