@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T12:47:18.653524+00:00",
+  "updated_at": "2026-09-28T13:11:37.902823+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "지갑·해외거래소",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "불법도박",
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,13 +397,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,31 +433,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +457,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -534,7 +516,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 09:03:28 GMT",
@@ -543,7 +525,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행 newsis.com",
+      "description": "마약수사중 압수 비트코인 슬쩍한 경찰관 재판행 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -565,7 +547,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도?",
-      "source": "JTBC",
+      "source": "news.jtbc.co.kr",
       "source_url": "https://news.jtbc.co.kr",
       "source_domain": "news.jtbc.co.kr",
       "date": "Mon, 28 Sep 2026 08:49:00 GMT",
@@ -573,7 +555,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? JTBC",
+      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? news.jtbc.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -672,7 +654,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발",
-      "source": "경향신문",
+      "source": "khan.co.kr",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Mon, 28 Sep 2026 07:49:00 GMT",
@@ -681,14 +663,14 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 경향신문",
+      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 khan.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "마약자금",
       "title": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 07:47:39 GMT",
@@ -697,14 +679,14 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 yna.co.kr",
+      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "마약자금",
       "title": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 07:45:07 GMT",
@@ -713,7 +695,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소 뉴스1",
+      "description": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -765,7 +747,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 07:03:33 GMT",
@@ -773,14 +755,14 @@
       "tags": [
         "사기"
       ],
-      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 뉴스1",
+      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "檢 발빠른 대처로 보이스피싱 피해금 찾았다",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 07:01:08 GMT",
@@ -788,14 +770,14 @@
       "tags": [
         "사기"
       ],
-      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 newsis.com",
+      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "남편 사망보험금 보이스피싱 피해…검찰, 2억원 되찾아",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 06:56:06 GMT",
@@ -803,14 +785,14 @@
       "tags": [
         "사기"
       ],
-      "description": "남편 사망보험금 보이스피싱 피해…검찰, 2억원 되찾아 yna.co.kr",
+      "description": "남편 사망보험금 보이스피싱 피해…검찰, 2억원 되찾아 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "횡령·배임",
       "title": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 06:09:39 GMT",
@@ -818,7 +800,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 뉴스1",
+      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -885,7 +867,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 04:20:03 GMT",
@@ -893,7 +875,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 뉴스1",
+      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -961,7 +943,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 00:43:15 GMT",
@@ -969,7 +951,7 @@
       "tags": [
         "사기"
       ],
-      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 newsis.com",
+      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -15166,22 +15148,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
