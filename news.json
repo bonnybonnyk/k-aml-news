@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T05:10:33.740045+00:00",
+  "updated_at": "2026-09-28T05:41:30.873294+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -40,7 +40,7 @@
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "차명계좌",
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -242,12 +242,6 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 0,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
       "ok": false,
       "count": 0,
       "error": "The read operation timed out"
@@ -409,7 +403,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,13 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,21 +445,27 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -489,7 +483,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 983,
+  "count": 984,
   "official_count": 32,
   "items": [
     {
@@ -520,6 +514,21 @@
         "불법사금융"
       ],
       "description": "나랏돈으로 돈놀이…'불법대부' 명륜당에 과징금 149억원 MTN 머니투데이방송",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Mon, 28 Sep 2026 04:20:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5HNFFqSDFtb1p4VEpaTDZHTkxpQ3RLdEdSTTMxeXg5aG9VOGpKOXU3QU5ZY28tbmJWOHNkQVlSRkxnbmhESUhiY3NpVmNqSTZsQkc1eldEMmhpa19KNWFhWFVmLUl0UdIBZkFVX3lxTE5HNFFqSDFtb1p4VEpaTDZHTkxpQ3RLdEdSTTMxeXg5aG9VOGpKOXU3QU5ZY28tbmJWOHNkQVlSRkxnbmhESUhiY3NpVmNqSTZsQkc1eldEMmhpa19KNWFhWFVmLUl0UQ?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -741,10 +750,10 @@
       "query": "보이스피싱",
       "title": "농협, 보이스피싱 등 4년반 동안 3220억원…피해자 환급 10%대 불과",
       "source": "부산일보",
-      "source_url": "https://www.busan.com",
-      "source_domain": "www.busan.com",
+      "source_url": "https://mobile.busan.com",
+      "source_domain": "mobile.busan.com",
       "date": "Sun, 27 Sep 2026 09:56:06 GMT",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9abkFZdnQ2SWowSmg1TDdyWTJ1b0VGTHdyNGg2RVc0MXJ2UWZYVmVKc1BNX3V0SGRBOFZZbVN6dDZqRkdNWVZfREdzM1ZNLUpvUFdnM0tsU3BBYmxVU2V5MC1ISjVoT0g1OU1wa1JNcnYtdUtESENR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5jaEhNejhzSnBtTE9OOU9FOXlYWEF0bW0zaXRZWjRseVFwQi11cDM4REtMbWlGUGtmR1M3YXR6djlvQmo3aHdxQ1ZJU3NUTmtpdXo0elpFUFpqbWRUTmRnUzlOVmpFbTY5RHNrLTNZbTdSZW5BRDJISjhEOHU?oc=5",
       "tags": [
         "사기"
       ],
