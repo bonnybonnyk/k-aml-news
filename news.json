@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-28T07:43:02.027369+00:00",
+  "updated_at": "2026-09-28T08:12:58.938951+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 8
+      "count": 9
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "환치기·외환",
@@ -55,12 +55,12 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 1
+      "count": 3
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "탈세",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -403,13 +403,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,19 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,15 +451,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -483,14 +483,106 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 969,
+  "count": 975,
   "official_count": 32,
   "items": [
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "압수한 비트코인 현금화해 은닉한 경찰관 불구속 기소",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Mon, 28 Sep 2026 07:58:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0bVZnSjk4a1dYVWNvZTg2Y3ZWcW1GYjl4bFZuTWJRMWxvX0JFV3lvQ2Y5dzEzaUJIWUpCTXljRzFYcUJaV1Y3WXcxbXNKWlFBOFRzMFVIZVl6Yzg?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "압수한 비트코인 현금화해 은닉한 경찰관 불구속 기소 KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발",
+      "source": "경향신문",
+      "source_url": "https://www.khan.co.kr",
+      "source_domain": "www.khan.co.kr",
+      "date": "Mon, 28 Sep 2026 07:49:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTUVoMVFWNUVyWDRIeTQ4OFN4aUpQc2NkYUdncVBTZTl5b0JTdjYwSkJ6b3NWWlZFeV9HQ2hZbE4yeWV6QXlmc0pqcHZ0dVFETEdQRlBjRW11ODh4emt3NGdEWjM5Vm05b3VaRjBWRnFNMHRIUlZkc0YybTNCM1lGaUwydkY3TVI4VHJIM0twQ1NqRDVWTEFQZVY1VHZyZnRyRl9rX0hKbkdiUdIBX0FVX3lxTE42RzhTdkFOdzdIZWlMMjlQN2dXUTh1ZjNQUUhfSjhNQVBnLVl1cGNkM1JkaVZoeUhHSWxIUk1hREtQS3A3TWd6R2lXTXRhVUY3YlREdnZxNUROLUZVbjVR?oc=5",
+      "tags": [
+        "가상자산",
+        "마약"
+      ],
+      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 경향신문",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소",
+      "source": "news1.kr",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Mon, 28 Sep 2026 07:45:07 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE40bkFYUFR5c0M3c0lYakhZdEtpVm5SYXlXTE40SzA4WFFmY3NlUnljQTNzRDkzOGFEN1hBWjFLZVU4dEs1T1JtRV9WX2xrUzZjU3NKatIBWkFVX3lxTE54RThpeHp4VG1iVkJ0aGhvVEhyZVJaRFBsZHFEUlpIVXRTWDgyX25pdEZiMWJtalN2cl9Wbk9xTm5Oc2hucVBxQTFMLVhadHhZLTlUcTJaSTBfdw?oc=5",
+      "tags": [
+        "가상자산",
+        "마약"
+      ],
+      "description": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소 news1.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "국민은행·빗썸 1년 더 동행...FIU 변경신고 수리",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Mon, 28 Sep 2026 07:43:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0xdTdUV3dNamZCX2NXbE85M3VqbTlPTXJQbHJDVEdzcWpRanpaY1h5WEF3Wm13Q1BUQXV5MWlnMGNsNHFXTXZKVTgydGZTRnM?oc=5",
+      "tags": [
+        "FIU·규제"
+      ],
+      "description": "국민은행·빗썸 1년 더 동행...FIU 변경신고 수리 v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "싱가포르 3조원 자금세탁 압수품 경매 대박…'에르메스 팔찌' 4억에",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Mon, 28 Sep 2026 07:38:30 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE05dVB2aGYwamlGT0lSNU9EZ1hqcDBSbTFTSXFEQ09LdFdMYUFqaFN0MHZ5ZDVqdVRFMHRNQ09XbHAxbHdaQVpkNHZKRElnZEU?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "싱가포르 3조원 자금세탁 압수품 경매 대박…'에르메스 팔찌' 4억에 v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐",
+      "source": "강원일보",
+      "source_url": "https://www.kwnews.co.kr",
+      "source_domain": "www.kwnews.co.kr",
+      "date": "Mon, 28 Sep 2026 07:30:38 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5qSjRIQ1ZRXzRUMHRjU3laTUtDS0NLS3RSTTB0Mmc4WHFUYXpnYWpLWS1NdnUtaEhnaFBXcGMxLUNUTkVBUXR3dFlCRGVfUGxRa1M0eDNoU1BpUk0?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐 강원일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 07:03:33 GMT",
@@ -498,14 +590,14 @@
       "tags": [
         "사기"
       ],
-      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 뉴스1",
+      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "檢 발빠른 대처로 보이스피싱 피해금 찾았다",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Mon, 28 Sep 2026 07:01:08 GMT",
@@ -513,14 +605,14 @@
       "tags": [
         "사기"
       ],
-      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 뉴시스",
+      "description": "檢 발빠른 대처로 보이스피싱 피해금 찾았다 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "횡령·배임",
       "title": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 06:09:39 GMT",
@@ -528,7 +620,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 뉴스1",
+      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -565,7 +657,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 04:20:03 GMT",
@@ -573,7 +665,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 뉴스1",
+      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -595,7 +687,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[AI 남동이]보이스피싱 녹음 틀어주며…금감원장, 북향민에 '금융사기' 경고",
-      "source": "남동뉴스",
+      "source": "namdongnews.co.kr",
       "source_url": "http://www.namdongnews.co.kr",
       "source_domain": "www.namdongnews.co.kr",
       "date": "Mon, 28 Sep 2026 02:16:59 GMT",
@@ -603,7 +695,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[AI 남동이]보이스피싱 녹음 틀어주며…금감원장, 북향민에 '금융사기' 경고 남동뉴스",
+      "description": "[AI 남동이]보이스피싱 녹음 틀어주며…금감원장, 북향민에 '금융사기' 경고 namdongnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -641,7 +733,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수",
-      "source": "뉴시스",
+      "source": "newsis.com",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Mon, 28 Sep 2026 00:43:15 GMT",
@@ -649,7 +741,7 @@
       "tags": [
         "사기"
       ],
-      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 뉴시스",
+      "description": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수 newsis.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -798,7 +890,7 @@
       "source_url": "https://mobile.busan.com",
       "source_domain": "mobile.busan.com",
       "date": "Sun, 27 Sep 2026 09:56:06 GMT",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBpUTczOENCd3J1b1hDRUJ4ZFBuNmVvbVhEY0EycDloeTBFWHhXRFFIZDVISjA1RmJTSzlCZUFSMWNpem5JdEtKMGhlS3pyYy1WY3BfQzNXWDY3azlReW1fNC1ZUXdsVS1mU2NjbmhHZGtfNVRyeGFDXzhLTVQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5jaEhNejhzSnBtTE9OOU9FOXlYWEF0bW0zaXRZWjRseVFwQi11cDM4REtMbWlGUGtmR1M3YXR6djlvQmo3aHdxQ1ZJU3NUTmtpdXo0elpFUFpqbWRUTmRnUzlOVmpFbTY5RHNrLTNZbTdSZW5BRDJISjhEOHU?oc=5",
       "tags": [
         "사기"
       ],
@@ -960,7 +1052,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억",
-      "source": "헤럴드경제",
+      "source": "mbiz.heraldcorp.com",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Fri, 25 Sep 2026 23:20:50 GMT",
@@ -968,7 +1060,7 @@
       "tags": [
         "사기"
       ],
-      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 헤럴드경제",
+      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 mbiz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
