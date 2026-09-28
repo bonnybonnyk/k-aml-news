@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T20:09:14.388534+00:00",
+  "updated_at": "2026-09-28T20:41:58.031759+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 12
+      "count": 14
     },
     {
       "feed": "불법사금융",
@@ -45,12 +45,12 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "마약자금",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -427,9 +427,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -439,19 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -470,6 +464,12 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 993,
+  "count": 994,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "[함께하는 금융] 보이스피싱 사전예방 시스템 고도화",
+      "source": "중앙일보",
+      "source_url": "https://www.joongang.co.kr",
+      "source_domain": "www.joongang.co.kr",
+      "date": "Mon, 28 Sep 2026 20:30:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5zZFBScTJPZURiTDQtZ1NzWlFORmxCWEJHczBDWFN6a1g5RGotTktRZ21QRk5kNTlzY1hMWHFaS0hCSFBwZGxSbDNVbjBxYzhxTGlZUzJB?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[함께하는 금융] 보이스피싱 사전예방 시스템 고도화 중앙일보",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "제재·테러자금",
@@ -612,7 +627,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도?",
-      "source": "JTBC",
+      "source": "news.jtbc.co.kr",
       "source_url": "https://news.jtbc.co.kr",
       "source_domain": "news.jtbc.co.kr",
       "date": "Mon, 28 Sep 2026 08:49:00 GMT",
@@ -620,7 +635,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? JTBC",
+      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? news.jtbc.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -630,8 +645,8 @@
       "source": "v.daum.net",
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
-      "date": "Mon, 28 Sep 2026 08:46:45 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE10dUZLeVFLbmF1eDFKSHQxcGszcnpONFR3NlllaHJZdzI4MWwzREpGaUJSMWpFNkpDM04xTjlvb3pmUE42aEE4bzVKRTRwQmc?oc=5",
+      "date": "Mon, 28 Sep 2026 08:46:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAyVHAzdEhMaFRmMzFNYUlESTlaTEhDbmF0SThOcmExaTY0VGRwZzNYckRzV0RTeExiX0xQN3c2UnA2djBEbDU3Q1NzMDVaaGZFY3ZxcQ?oc=5",
       "tags": [
         "자금세탁"
       ],
@@ -689,7 +704,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리'",
-      "source": "1코노미뉴스",
+      "source": "1conomynews.co.kr",
       "source_url": "https://www.1conomynews.co.kr",
       "source_domain": "www.1conomynews.co.kr",
       "date": "Mon, 28 Sep 2026 08:05:39 GMT",
@@ -697,7 +712,7 @@
       "tags": [
         "사기"
       ],
-      "description": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리' 1코노미뉴스",
+      "description": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리' 1conomynews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -947,7 +962,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "불법 외환거래 7년간 20조 적발…올해만 5조 육박",
-      "source": "매일신문",
+      "source": "imaeil.com",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Mon, 28 Sep 2026 04:17:31 GMT",
@@ -955,7 +970,7 @@
       "tags": [
         "AML"
       ],
-      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 매일신문",
+      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 imaeil.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1357,7 +1372,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억",
-      "source": "mbiz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://mbiz.heraldcorp.com",
       "source_domain": "mbiz.heraldcorp.com",
       "date": "Fri, 25 Sep 2026 23:20:50 GMT",
@@ -1365,7 +1380,7 @@
       "tags": [
         "사기"
       ],
-      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 mbiz.heraldcorp.com",
+      "description": "권영진 의원, 보이스피싱 한 번 당하면 5384만원…피해액 1조2578억 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
