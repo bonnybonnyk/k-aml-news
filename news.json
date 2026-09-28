@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T03:10:52.627757+00:00",
+  "updated_at": "2026-09-28T03:43:20.514447+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -242,20 +242,32 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -409,12 +421,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
@@ -433,6 +439,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
@@ -445,25 +457,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -551,7 +563,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "美 국방장관, 비트코인 보유 신고…코인베이스에 최대 6만5000달러",
-      "source": "디지털투데이",
+      "source": "digitaltoday.co.kr",
       "source_url": "https://www.digitaltoday.co.kr",
       "source_domain": "www.digitaltoday.co.kr",
       "date": "Mon, 28 Sep 2026 00:39:35 GMT",
@@ -559,7 +571,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "美 국방장관, 비트코인 보유 신고…코인베이스에 최대 6만5000달러 디지털투데이",
+      "description": "美 국방장관, 비트코인 보유 신고…코인베이스에 최대 6만5000달러 digitaltoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -596,7 +608,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\"",
-      "source": "디지털투데이",
+      "source": "digitaltoday.co.kr",
       "source_url": "https://www.digitaltoday.co.kr",
       "source_domain": "www.digitaltoday.co.kr",
       "date": "Mon, 28 Sep 2026 00:03:08 GMT",
@@ -605,7 +617,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\" 디지털투데이",
+      "description": "유명 투자자 \"밈코인은 거대한 사기…전재산 잃어도 괜찮으면 사라\" digitaltoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -690,10 +702,10 @@
       "query": "보이스피싱",
       "title": "농협, 보이스피싱 등 4년반 동안 3220억원…피해자 환급 10%대 불과",
       "source": "부산일보",
-      "source_url": "https://mobile.busan.com",
-      "source_domain": "mobile.busan.com",
+      "source_url": "https://www.busan.com",
+      "source_domain": "www.busan.com",
       "date": "Sun, 27 Sep 2026 09:56:06 GMT",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5jaEhNejhzSnBtTE9OOU9FOXlYWEF0bW0zaXRZWjRseVFwQi11cDM4REtMbWlGUGtmR1M3YXR6djlvQmo3aHdxQ1ZJU3NUTmtpdXo0elpFUFpqbWRUTmRnUzlOVmpFbTY5RHNrLTNZbTdSZW5BRDJISjhEOHU?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9abkFZdnQ2SWowSmg1TDdyWTJ1b0VGTHdyNGg2RVc0MXJ2UWZYVmVKc1BNX3V0SGRBOFZZbVN6dDZqRkdNWVZfREdzM1ZNLUpvUFdnM0tsU3BBYmxVU2V5MC1ISjVoT0g1OU1wa1JNcnYtdUtESENR?oc=5",
       "tags": [
         "사기"
       ],
@@ -15028,22 +15040,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "금융위/FIU",
       "official_source": "금융위원회",
       "official_sources": [
@@ -15071,10 +15067,29 @@
       "official_sources": [
         "금융위원회"
       ],
+      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
       "title": "「국가 자금세탁·테러자금조달·확산금융방지 전략 및 정책 운영방향」 발표",
       "source": "금융위원회",
       "date": "2026-09-16T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87728?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fsc.go.kr/no010101/87728?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
         "사기",
