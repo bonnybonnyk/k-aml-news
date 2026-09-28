@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T04:10:58.835385+00:00",
+  "updated_at": "2026-09-28T04:43:37.361054+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "지갑·해외거래소",
@@ -40,7 +40,7 @@
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "투자사기",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "마약자금",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -242,6 +242,12 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
       "ok": false,
       "count": 0,
       "error": "The read operation timed out"
@@ -255,7 +261,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "body_relevance"
     },
     {
@@ -403,7 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,25 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,6 +463,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 16,
@@ -483,9 +489,39 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 980,
+  "count": 982,
   "official_count": 32,
   "items": [
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "나랏돈으로 돈놀이…'불법대부' 명륜당에 과징금 149억원",
+      "source": "MTN 머니투데이방송",
+      "source_url": "https://news.mtn.co.kr",
+      "source_domain": "news.mtn.co.kr",
+      "date": "Mon, 28 Sep 2026 04:39:33 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBuY0doLVRqcFVhbjBuN3lkRVo2SVNpVkdiZ0trN2ctWV9YdU1UZ3JYTzZweXF2Uko1SFpsQzExWFNPb2E5RXVXWVR4NkMzVWNhVHN3MzllWTVwQWEwMHFzWENyOWs?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "나랏돈으로 돈놀이…'불법대부' 명륜당에 과징금 149억원 MTN 머니투데이방송",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "환치기·외환",
+      "title": "불법 외환거래 7년간 20조 적발…올해만 5조 육박",
+      "source": "매일신문",
+      "source_url": "https://www.imaeil.com",
+      "source_domain": "www.imaeil.com",
+      "date": "Mon, 28 Sep 2026 04:17:31 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE96R3lfNFdHUXFxZTAwQ1ZyTWxreUhhWm43SkR0QUxBb3ZQTk5JZ3J2SGZjSnVnaHhkOThYbHFGQ2dnZHliM0ZqUm1tMUQ1b2gtYnd2TU0td2U2N1Y1Qm9vNGNB?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 매일신문",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -581,7 +617,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\"",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Mon, 28 Sep 2026 00:06:34 GMT",
@@ -589,7 +625,7 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\" asiae.co.kr",
+      "description": "불법사금융 피해구제 요청 10명 중 6명은 '2030'…\"노출경로 차단필요\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
