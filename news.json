@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-28T04:43:37.361054+00:00",
+  "updated_at": "2026-09-28T05:10:33.740045+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -243,7 +243,7 @@
     {
       "feed": "금융위/FIU:목록:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "direct_official_board"
     },
     {
@@ -261,7 +261,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "body_relevance"
     },
     {
@@ -415,6 +415,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
@@ -427,19 +439,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,27 +451,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -489,9 +489,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 982,
+  "count": 983,
   "official_count": 32,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Mon, 28 Sep 2026 04:49:30 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5DYW9XeFlOaFBEX1hFSkRFMWxZdGwwQ2o1R0tZLWt0OGxvRjV6WDBaQ1JlZmJPQnJWUk5aOW8wTGNqVy01M2lRbU1BNzJsNEg1OG9fUmpTVWQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "불법사금융",
