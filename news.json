@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T10:41:36.624271+00:00",
+  "updated_at": "2026-09-28T11:10:44.973422+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 13
+      "count": 12
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "불법사금융",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 11
+      "count": 13
     },
     {
       "feed": "불법도박",
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,25 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,15 +427,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -463,7 +457,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 985,
+  "count": 987,
   "official_count": 32,
   "items": [
     {
@@ -563,6 +563,21 @@
     },
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도?",
+      "source": "JTBC",
+      "source_url": "https://news.jtbc.co.kr",
+      "source_domain": "news.jtbc.co.kr",
+      "date": "Mon, 28 Sep 2026 08:49:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5YNmt3MU1uZzd0dHVkOENMX1RQdy1iZ19ISFVLVTJmQ0NLc3F4Q2ZKa2ZrVnI0MjNPTC1iNHRTY20zME0tc2VSb1drelAxT1FDSXc5Nw?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? JTBC",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "범죄수익",
       "title": "가세연 김세의 땅 묶었던 그 장면 이제 보기 어렵다…힘 빠지는 범죄수익환수 [세상&]",
       "source": "v.daum.net",
@@ -625,6 +640,21 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리'",
+      "source": "1코노미뉴스",
+      "source_url": "https://www.1conomynews.co.kr",
+      "source_domain": "www.1conomynews.co.kr",
+      "date": "Mon, 28 Sep 2026 08:05:39 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82dkI4eXp6SWp2UnBmYm42b2ZUdElEUnF3Q3A2QWthTTZzTG12bGlSZjNCUndya29ONHBNSUFsaUxuLXo3VVVxRUJfMHZxZ0o5bEdvRnRLQ1FBTUs3TTd6bTdzWjFnVGd2czg2eUVhMGQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "수협은행, 금융소비자 보호 허술 …보이스피싱 안심차단 가입 '제자리' 1코노미뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "압수한 비트코인 현금화해 은닉한 경찰관 불구속 기소",
       "source": "KBS 뉴스",
@@ -642,7 +672,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발",
-      "source": "경향신문",
+      "source": "khan.co.kr",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Mon, 28 Sep 2026 07:49:00 GMT",
@@ -651,7 +681,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 경향신문",
+      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 khan.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -674,7 +704,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 07:45:07 GMT",
@@ -683,7 +713,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소 뉴스1",
+      "description": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -693,8 +723,8 @@
       "source": "v.daum.net",
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
-      "date": "Mon, 28 Sep 2026 07:43:48 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9zVGsxNE1YUHN1QTU0S3dqaFd5Mm9UYk5FNlJiWTdZRFJ1UmQ1VjRsWHRhcXZIVHlhQ2V3aGsxMGtiMF9mUlE?oc=5",
+      "date": "Mon, 28 Sep 2026 07:43:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5fWks2bUt1dXpsU2ZRZkFuLUhuWXBOMFlyVkRLZDM4ZjFQd3dLWDcxSUlMVF9lb0dVWDQ1czFxTEx4cWdjajRVWDFKaw?oc=5",
       "tags": [
         "FIU·규제"
       ],
@@ -735,7 +765,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 07:03:33 GMT",
@@ -743,7 +773,7 @@
       "tags": [
         "사기"
       ],
-      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 뉴스1",
+      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -780,7 +810,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 06:09:39 GMT",
@@ -788,14 +818,14 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 뉴스1",
+      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 28 Sep 2026 04:49:30 GMT",
@@ -803,7 +833,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년 토큰포스트",
+      "description": "중국 BAIC 전 회장, 뇌물수수로 사형 집행유예…자금세탁은 징역 2년 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -840,7 +870,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 04:20:03 GMT",
@@ -848,7 +878,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 뉴스1",
+      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1053,7 +1083,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한”",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 27 Sep 2026 11:58:56 GMT",
@@ -1062,7 +1092,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한” 토큰포스트",
+      "description": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한” tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
