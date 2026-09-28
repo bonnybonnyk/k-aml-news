@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-09-28T02:09:58.030957+00:00",
+  "updated_at": "2026-09-28T02:41:53.572206+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -55,12 +55,12 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -80,30 +80,30 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -403,6 +403,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -421,12 +427,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
@@ -439,19 +439,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -463,7 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -483,9 +483,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 978,
+  "count": 979,
   "official_count": 32,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용",
+      "source": "법률신문",
+      "source_url": "https://www.lawtimes.co.kr",
+      "source_domain": "www.lawtimes.co.kr",
+      "date": "Mon, 28 Sep 2026 01:44:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1qb3VLV2RoYk9iTkNydkVlQ3VEY2o4X0VEOFZLZk01eEtRODdiUGthTnNYY2F6UmJ1THZub1JibHFwNUVoZG4tbDQ4YWZoWWpHdE15SE84c0VEVVBSeVRRbVMxNjhEQTJqUmgyOWhB0gFyQVVfeXFMTjBiWHotZW5CQnh3cjF1aVhicDB2N3lxaC1GaTNLbmRQeFBscGtBTEw0TENIRFh4RDhwYldNU3dSVXE4N2g4QkRyWkRLV2dyYW0zbER1NTJqQXpRdlVES3NleVF1SE1yaGNqT25hSUNnQlRB?oc=5",
+      "tags": [
+        "제재·테러자금",
+        "자금세탁"
+      ],
+      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 법률신문",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -506,10 +522,10 @@
       "query": "보이스피싱",
       "title": "Sh수협은행, 보이스피싱 피해 222억 달하는데…3분의 1만 회수",
       "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Mon, 28 Sep 2026 00:43:15 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE01NFJld1NBcnBuTUFGRzl1Wlg5Q2psTkxGVFFlT2YyUlp6VWE2Zmp4YkJYeFU0cjlEYnN5QnBhZzBCU2UyQUJtbkFFTzdQX1d4MWlZQnNFc1JQeGdmeFZlNDU3N3AxLVJVQ2NGalptbjVPRkk3WU95MNIBeEFVX3lxTE01NFJld1NBcnBuTUFGRzl1Wlg5Q2psTkxGVFFlT2YyUlp6VWE2Zmp4YkJYeFU0cjlEYnN5QnBhZzBCU2UyQUJtbkFFTzdQX1d4MWlZQnNFc1JQeGdmeFZlNDU3N3AxLVJVQ2NGalptbjVPRkk3WU95MA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YWmd0Ry1XUXVhOHVjMWVXU3hmRjhjR1QxX01RZEtOaUx4WXNvLWtQNnp4bUM5S0tWaWwxQkNZZHY0OUxycGxQb1NPc3lGaFAydWJfZ2FTMGZJS1N0aXJrTdIBeEFVX3lxTE01NFJld1NBcnBuTUFGRzl1Wlg5Q2psTkxGVFFlT2YyUlp6VWE2Zmp4YkJYeFU0cjlEYnN5QnBhZzBCU2UyQUJtbkFFTzdQX1d4MWlZQnNFc1JQeGdmeFZlNDU3N3AxLVJVQ2NGalptbjVPRkk3WU95MA?oc=5",
       "tags": [
         "사기"
       ],
@@ -554,7 +570,7 @@
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Mon, 28 Sep 2026 00:06:34 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ieTE5ckZ5T3ZQQ1pRUWxPV3lnMVFtRWlsakZmbElNdzhPSUtnT21iaGxuWUVINzkzbndNTUdjZGhxMnk0OW5lek9qamZCa1FGYU5MZUhGeVNJS2pMTW92Xw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1aV3BXczQwNktOdUZyRG13aHlOY3VOR2lCSUNrT3BHSTQ4RkUyYmE3dk13VDFlZDB0TzBxcW00Z1lCRlJEb1RSS0ZLUEpJWUpzTU9Qb1puTnFhNkE5b2E0aGJzNlVReEF3azhKVE8zVW5YdFlsTkE?oc=5",
       "tags": [
         "불법사금융"
       ],
@@ -611,7 +627,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서]",
-      "source": "헤럴드경제",
+      "source": "biz.heraldcorp.com",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sun, 27 Sep 2026 22:45:00 GMT",
@@ -620,7 +636,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] 헤럴드경제",
+      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] biz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
