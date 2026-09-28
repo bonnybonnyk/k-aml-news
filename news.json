@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T13:11:37.902823+00:00",
+  "updated_at": "2026-09-28T13:44:06.209911+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 11
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -50,12 +50,12 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 11
+      "count": 9
     },
     {
       "feed": "불법도박",
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -409,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,31 +439,13 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -460,6 +460,24 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -654,7 +672,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발",
-      "source": "khan.co.kr",
+      "source": "경향신문",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Mon, 28 Sep 2026 07:49:00 GMT",
@@ -663,7 +681,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 khan.co.kr",
+      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 경향신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -686,7 +704,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 07:45:07 GMT",
@@ -695,7 +713,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소 news1.kr",
+      "description": "마약사범에게 압수한 비트코인 빼돌린 40대 경찰관 불구속 기소 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -747,7 +765,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 07:03:33 GMT",
@@ -755,7 +773,7 @@
       "tags": [
         "사기"
       ],
-      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 news1.kr",
+      "description": "남편 사망보험금 등 보이스피싱 피해…검찰, 2억 되찾아줘 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -792,7 +810,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 06:09:39 GMT",
@@ -800,7 +818,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 news1.kr",
+      "description": "'동업자 몰래 회사 수익 5000만원 횡령' 30만 유튜버 검찰 송치 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -867,7 +885,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 04:20:03 GMT",
@@ -875,14 +893,14 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 news1.kr",
+      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "환치기·외환",
       "title": "불법 외환거래 7년간 20조 적발…올해만 5조 육박",
-      "source": "매일신문",
+      "source": "imaeil.com",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Mon, 28 Sep 2026 04:17:31 GMT",
@@ -890,14 +908,14 @@
       "tags": [
         "AML"
       ],
-      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 매일신문",
+      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 imaeil.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "[AI 남동이]보이스피싱 녹음 틀어주며…금감원장, 북향민에 '금융사기' 경고",
-      "source": "남동뉴스",
+      "source": "namdongnews.co.kr",
       "source_url": "http://www.namdongnews.co.kr",
       "source_domain": "www.namdongnews.co.kr",
       "date": "Mon, 28 Sep 2026 02:16:59 GMT",
@@ -905,7 +923,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[AI 남동이]보이스피싱 녹음 틀어주며…금감원장, 북향민에 '금융사기' 경고 남동뉴스",
+      "description": "[AI 남동이]보이스피싱 녹음 틀어주며…금감원장, 북향민에 '금융사기' 경고 namdongnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -15148,19 +15166,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
