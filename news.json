@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-29T10:43:03.618365+00:00",
+  "updated_at": "2026-09-29T11:10:48.313150+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "범죄수익",
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "가상자산 AML",
@@ -30,12 +30,12 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 31
+      "count": 33
     },
     {
       "feed": "불법사금융",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,75 +397,81 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:대포통장:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:가상자산:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:환치기:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:범죄수익:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:fallback",
       "ok": true,
       "count": 0,
-      "method": "official_board"
+      "method": "exact_official_fallback"
     },
     {
       "feed": "금융감독원",
       "ok": true,
-      "count": 15,
+      "count": 0,
       "method": "official_board"
     }
   ],
@@ -495,9 +483,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1033,
+  "count": 1035,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "트래블룰",
+      "title": "자메이카 하원, 가상자산사업자 규제 법안 심의",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Tue, 29 Sep 2026 11:06:22 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0tM193X1J6cmkxMmtVQW05X2o5T0xoSnpWN3BlMWxfU2VJOFZPRW50ZHEzWTFyamJIekxQekJwcWw2RUVUOTRNNUhsbW44QmZHMnhxdGVkcU0?oc=5",
+      "tags": [
+        "가상자산",
+        "FIU·규제"
+      ],
+      "description": "자메이카 하원, 가상자산사업자 규제 법안 심의 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "환치기·외환",
@@ -577,6 +581,21 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 피해액 1년 새 76% 감소…2023년 이후 ‘최저’",
+      "source": "서울경제",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
+      "date": "Tue, 29 Sep 2026 08:52:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBMR2dfbmxWVXdxVTNEb2pGaDJoTjJudjRtbC1YbUZKaHluNFlOZ1FOTmNBTmdQWnluMDhQUldMRnpLWmNFUFVUY3R3aFlOakt2WEHSAVNBVV95cUxPeU1wSUJKNnd5cXV0Y3dKWm9RY2JpVTdlT2FPcXV3anhSemdXajlNQTl5bjBfb2dLdndwbUtodl9IbG9lbU5lejJ4MUNNUmx4VE5WTQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 피해액 1년 새 76% 감소…2023년 이후 ‘최저’ 서울경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "현직 변호사, 공탁금 등 18억원 횡령·사기 혐의…구속 송치",
       "source": "뉴시스",
@@ -640,15 +659,15 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "경찰청, 전기통신금융사기 통합대응단 출범 1주년, 민관 협업으로 보이스피싱 줄였다",
-      "source": "누리일보",
-      "source_url": "https://nuriilbo.com",
-      "source_domain": "nuriilbo.com",
+      "source": "nuriilbo.com",
+      "source_url": "https://www.nuriilbo.com",
+      "source_domain": "www.nuriilbo.com",
       "date": "Tue, 29 Sep 2026 08:31:07 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9nMks4TF9wNzVLYV9RbHlhcXBzdVE0Q2VaOEhIMXhKbUI4b0ItT3ZxWmMtTFNfWUZfQ1dHUHJLZElUajI4dXZHR2dxczBUalc2XzBYa2FxdUZwcGJy?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBaOEhSSUdJb1NqYVRRRXpPa2NDZ0NTQnhoTmljVFhacEU2ZVRzR3AzVlkydURTS0d0SnZDZDZjWkdZRW5iZnJicjlrLWZHU1RqMFRxSXBvajQwWVg0X1JUZTVn?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "경찰청, 전기통신금융사기 통합대응단 출범 1주년, 민관 협업으로 보이스피싱 줄였다 누리일보",
+      "description": "경찰청, 전기통신금융사기 통합대응단 출범 1주년, 민관 협업으로 보이스피싱 줄였다 nuriilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -675,7 +694,7 @@
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Tue, 29 Sep 2026 08:16:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9OVTBVZjBSR211LWljZnBoT3hRMERNZms3ZlEtMlllc0xveGZHdkIzWmFtQ0dqdDdPVVo0d2hyWnZPNWRhRmtMMTJoUWdVSGYwSjFiQ04xZXBFSmpDc3lmdXVXWUhKQQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5vV2hmR1UxTXVYYlV3MU1SYnRmNUU5S3dkZTBsdHFmbVVYMm5pYkZhakxnWjlscnlfVEhGc0dzZkRmczBOODl2Z3JqemhpTTFCZnhRaXNrS3VfaDg?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -691,7 +710,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Tue, 29 Sep 2026 08:01:59 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9fZGlWVVF6TWxyX19LV2s4RVppNUYwUzJuMnRraDBsLU1fMTZvUjdQMy1jNEViMExUTEswZUV3VkRxQ0MtSUE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1FZDlNZnByNG5YRXRkT1ZYUXF3V21SS0lsTWxRLV9PMnVSc005cWZQdGxYMXJGYTR2cUlhaWdtdWlxcndPMVNfN0dGV2RkdU0?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -717,7 +736,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 줄고 신종스캠도 감소세…통합대응단 출범 1년",
-      "source": "아시아투데이",
+      "source": "asiatoday.co.kr",
       "source_url": "https://www.asiatoday.co.kr",
       "source_domain": "www.asiatoday.co.kr",
       "date": "Tue, 29 Sep 2026 07:30:18 GMT",
@@ -725,7 +744,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 줄고 신종스캠도 감소세…통합대응단 출범 1년 아시아투데이",
+      "description": "보이스피싱 줄고 신종스캠도 감소세…통합대응단 출범 1년 asiatoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -837,7 +856,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "“주소 바꿔 또 열린다”…저작권 침해, 범죄수익 환부·CDN 책임 강화 제안",
-      "source": "etnews.com",
+      "source": "전자신문",
       "source_url": "https://www.etnews.com",
       "source_domain": "www.etnews.com",
       "date": "Tue, 29 Sep 2026 06:29:39 GMT",
@@ -845,7 +864,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "“주소 바꿔 또 열린다”…저작권 침해, 범죄수익 환부·CDN 책임 강화 제안 etnews.com",
+      "description": "“주소 바꿔 또 열린다”…저작권 침해, 범죄수익 환부·CDN 책임 강화 제안 전자신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -883,7 +902,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈",
-      "source": "Chosunbiz",
+      "source": "biz.chosun.com",
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Tue, 29 Sep 2026 05:16:00 GMT",
@@ -892,14 +911,14 @@
         "가상자산",
         "환치기·외환"
       ],
-      "description": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈 Chosunbiz",
+      "description": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈 biz.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘코인 지갑’에 묶여 있던 보이스피싱 피해금 263억 1137명에 환급",
-      "source": "진일보",
+      "source": "jnilbo.com",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Tue, 29 Sep 2026 05:07:12 GMT",
@@ -908,7 +927,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘코인 지갑’에 묶여 있던 보이스피싱 피해금 263억 1137명에 환급 진일보",
+      "description": "‘코인 지갑’에 묶여 있던 보이스피싱 피해금 263억 1137명에 환급 jnilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -933,7 +952,7 @@
       "source": "조선일보",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
-      "date": "Tue, 29 Sep 2026 04:49:00 GMT",
+      "date": "Tue, 29 Sep 2026 04:54:48 GMT",
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQeVJrWDZCVS1XM3lLN1VZY1l4Tl83NkFtbEtXUlBRRTZGZ1dvUHIyM1lfTmZrSGdYQW9fbFFPTGhxQmRUOEdTNVUxT0F4YW5tT1FhTlhPWV9xbjVIbXpDb1E4bHEyQ1ZwQkl1Q1R2TGM3U0pJM0Q2NXpXUEhCdE1JRWpiWHUteE1BMU9fWnBIeUE?oc=5",
       "tags": [
         "가상자산"
@@ -1376,7 +1395,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[함께하는 금융] 보이스피싱 사전예방 시스템 고도화",
-      "source": "joongang.co.kr",
+      "source": "중앙일보",
       "source_url": "https://www.joongang.co.kr",
       "source_domain": "www.joongang.co.kr",
       "date": "Mon, 28 Sep 2026 20:30:00 GMT",
@@ -1384,7 +1403,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[함께하는 금융] 보이스피싱 사전예방 시스템 고도화 joongang.co.kr",
+      "description": "[함께하는 금융] 보이스피싱 사전예방 시스템 고도화 중앙일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -16056,6 +16075,22 @@
     },
     {
       "region": "공식자료",
+      "query": "DAXA",
+      "official_source": "DAXA",
+      "official_sources": [
+        "DAXA"
+      ],
+      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
+      "source": "DAXA",
+      "date": "2026-08-27T00:00:00+09:00",
+      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
+      "tags": [
+        "가상자산"
+      ],
+      "collection_method": "verified_daxa_board"
+    },
+    {
+      "region": "공식자료",
       "query": "자금세탁",
       "official_source": "금융감독원",
       "official_sources": [
@@ -16070,22 +16105,6 @@
         "자금세탁"
       ],
       "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "DAXA",
-      "official_source": "DAXA",
-      "official_sources": [
-        "DAXA"
-      ],
-      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
-      "source": "DAXA",
-      "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
-      "tags": [
-        "가상자산"
-      ],
-      "collection_method": "verified_daxa_board"
     },
     {
       "region": "공식자료",
@@ -16253,22 +16272,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
-      "source": "금융감독원",
-      "date": "2026-07-29T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "DAXA",
       "official_source": "DAXA",
       "official_sources": [
@@ -16283,6 +16286,22 @@
         "사기"
       ],
       "collection_method": "verified_daxa_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
+      "source": "금융감독원",
+      "date": "2026-07-29T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
