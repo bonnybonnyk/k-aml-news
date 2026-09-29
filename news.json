@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T17:42:09.616761+00:00",
+  "updated_at": "2026-09-29T18:13:31.807214+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 15
+      "count": 14
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 39
+      "count": 40
     },
     {
       "feed": "불법사금융",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,13 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,13 +457,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -627,7 +627,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[그래픽] 보이스피싱 피해 현황",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 29 Sep 2026 11:10:05 GMT",
@@ -635,7 +635,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[그래픽] 보이스피싱 피해 현황 yna.co.kr",
+      "description": "[그래픽] 보이스피싱 피해 현황 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -948,21 +948,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Tue, 29 Sep 2026 07:31:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5rR0VwaFBPN2EwMmNPcXB4bGs0OHg4MlhWckFXNlJrSFdsV0RULTJGd082WUtvVmxmT1h5ZDJrQ1NpTVNaVXc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "보이스피싱 줄고 신종스캠도 감소세…통합대응단 출범 1년",
       "source": "아시아투데이",
       "source_url": "https://www.asiatoday.co.kr",
@@ -994,7 +979,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 8월 피해액 257억원으로 2023년 이후 최저",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
@@ -1002,7 +987,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 8월 피해액 257억원으로 2023년 이후 최저 yna.co.kr",
+      "description": "보이스피싱 8월 피해액 257억원으로 2023년 이후 최저 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1048,6 +1033,21 @@
         "사기"
       ],
       "description": "보이스피싱 피해액 3년 만에 최저…11개월 연속 감소 뉴시스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다",
+      "source": "더팩트",
+      "source_url": "https://m.tf.co.kr",
+      "source_domain": "m.tf.co.kr",
+      "date": "Tue, 29 Sep 2026 07:30:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE42bXdjNUtXMHdlM1BWaXM2SGdiX01LRkNqbGR6RFE0Y0xjNWliNlBYN0RBNDNSd3NOWWtWa01MY29GeUJOcERNSnRiMDV0S1Ns0gFQQVVfeXFMTjZtd2M1S1cwd2UzUFZpczZIZ2JfTUtGQ2psZHpEUTRjTGM1aWI2UFg3REE0M1J3c05Za1ZrTUxjb0Z5Qk5wRE1KdGIwNXRLU2w?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다 더팩트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1129,7 +1129,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈",
-      "source": "Chosunbiz",
+      "source": "biz.chosun.com",
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Tue, 29 Sep 2026 05:16:00 GMT",
@@ -1138,7 +1138,7 @@
         "가상자산",
         "환치기·외환"
       ],
-      "description": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈 Chosunbiz",
+      "description": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈 biz.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1252,7 +1252,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 코인거래소에 묶인 '피싱 피해금' 263억원 주인 돌려줘",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 29 Sep 2026 03:00:11 GMT",
@@ -1260,14 +1260,14 @@
       "tags": [
         "가상자산"
       ],
-      "description": "경찰, 코인거래소에 묶인 '피싱 피해금' 263억원 주인 돌려줘 yna.co.kr",
+      "description": "경찰, 코인거래소에 묶인 '피싱 피해금' 263억원 주인 돌려줘 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "투자사기",
       "title": "'투자사기' 동창 부탁에 사무실 PC 설치…대법 \"방조죄 처벌 못해\"",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 29 Sep 2026 03:00:05 GMT",
@@ -1275,7 +1275,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'투자사기' 동창 부탁에 사무실 PC 설치…대법 \"방조죄 처벌 못해\" yna.co.kr",
+      "description": "'투자사기' 동창 부탁에 사무실 PC 설치…대법 \"방조죄 처벌 못해\" 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1312,7 +1312,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘2200만원이 입금되었습니다’ 가족도 몰랐던 보이스피싱 사기…코인거래소 263억 주인 찾았다 [세상&]",
-      "source": "헤럴드경제",
+      "source": "biz.heraldcorp.com",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Tue, 29 Sep 2026 03:00:00 GMT",
@@ -1321,7 +1321,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘2200만원이 입금되었습니다’ 가족도 몰랐던 보이스피싱 사기…코인거래소 263억 주인 찾았다 [세상&] 헤럴드경제",
+      "description": "‘2200만원이 입금되었습니다’ 가족도 몰랐던 보이스피싱 사기…코인거래소 263억 주인 찾았다 [세상&] biz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1407,7 +1407,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해액 사상 첫 ‘1조’ 넘어…1인당 평균 5300만원",
-      "source": "donga.com",
+      "source": "동아일보",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Tue, 29 Sep 2026 02:03:53 GMT",
@@ -1415,7 +1415,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해액 사상 첫 ‘1조’ 넘어…1인당 평균 5300만원 donga.com",
+      "description": "보이스피싱 피해액 사상 첫 ‘1조’ 넘어…1인당 평균 5300만원 동아일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1483,6 +1483,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유",
+      "source": "K스피릿",
+      "source_url": "http://www.ikoreanspirit.com",
+      "source_domain": "www.ikoreanspirit.com",
+      "date": "Tue, 29 Sep 2026 00:24:20 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9fQ1FyTy14WG1rMzV2b3ozTVNLZEloZFY3YkpxR3FjU0FKcnhrUFRMRV9Balh2Z2RzOG1SWi1jaE9uVlFPVW1Cb2tlb3NrQ1BaN211a1lfSEhCRE5yTkkxMHNVQXpCMjVFSFRHTHNSQVIzMm_SAXNBVV95cUxPX0NRck8teFhtazM1dm96M01TS2RJaGRWN2JKcUdxY1NBSnJ4a1BUTEVfQWpYdmdkczhtUlotY2hPblZRT1VtQm9rZW9za0NQWjdtdWtZX0hIQkROck5JMTBzVUF6QjI1RUhUR0xzUkFSMzJv?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유 K스피릿",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "\"보이스피싱 피해 1조원 돌파…94%가 전화·문자로 침투\"",
       "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
@@ -1542,32 +1557,17 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유",
-      "source": "K스피릿",
-      "source_url": "https://www.ikoreanspirit.com",
-      "source_domain": "www.ikoreanspirit.com",
-      "date": "Mon, 28 Sep 2026 23:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YVUxfWGJRbW1GR2FGM3pCN2lsbE9EUjcwLUx3OVl4SXhiM1dBc2thTU0wZVhYZUUzdXRlaUNOYkJhREdlcE04ZVFuN1ZFeVh3M1RsTUNicjduTzNJaTFYR0NYVGNOM1NVVTVfc0FSVkLSAXNBVV95cUxPX0NRck8teFhtazM1dm96M01TS2RJaGRWN2JKcUdxY1NBSnJ4a1BUTEVfQWpYdmdkczhtUlotY2hPblZRT1VtQm9rZW9za0NQWjdtdWtZX0hIQkROck5JMTBzVUF6QjI1RUhUR0xzUkFSMzJv?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유 K스피릿",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "제재·테러자금",
-      "title": "유학생 비자로 입국해 테러자금 송금...우즈벡인 ＇재판행＇",
-      "source": "한국경제TV",
-      "source_url": "https://www.wowtv.co.kr",
-      "source_domain": "www.wowtv.co.kr",
-      "date": "Mon, 28 Sep 2026 22:37:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB2WGQ4WjNPaG5yQmlxc2phNFNwbGRpNFBHYVdpWGlNemdqRERTV1BtQ2FYbHlqWllFc1Z3NWx0QXM2Ymc4UldibmRxMFdvZWtncEhETlFwZkwtdHlWaUVYVGcyS1QzZlBZTFFVLUhSNklxYTBlZWhr?oc=5",
+      "title": "유학생 비자로 입국해 테러자금 송금...우즈벡인 '재판행'",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Mon, 28 Sep 2026 22:38:59 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5sd2htVmxMLUFjTDg0RGFhbHhMVHJGdUw1bng1cW5ndlZGemQwcjRrd0oxbHlSN1lTX18wMDJ5bHEwUVpqYmc?oc=5",
       "tags": [
         "제재·테러자금"
       ],
-      "description": "유학생 비자로 입국해 테러자금 송금...우즈벡인 ＇재판행＇ 한국경제TV",
+      "description": "유학생 비자로 입국해 테러자금 송금...우즈벡인 '재판행' v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -1622,7 +1622,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "유학비자로 들어온 우즈벡인, 테러자금 지원 혐의로 재판",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 20:55:00 GMT",
@@ -1630,7 +1630,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "유학비자로 들어온 우즈벡인, 테러자금 지원 혐의로 재판 yna.co.kr",
+      "description": "유학비자로 들어온 우즈벡인, 테러자금 지원 혐의로 재판 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1715,7 +1715,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아",
-      "source": "와이뉴스",
+      "source": "whynews.co.kr",
       "source_url": "https://www.whynews.co.kr",
       "source_domain": "www.whynews.co.kr",
       "date": "Mon, 28 Sep 2026 12:26:34 GMT",
@@ -1723,7 +1723,7 @@
       "tags": [
         "사기"
       ],
-      "description": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아 와이뉴스",
+      "description": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아 whynews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1916,7 +1916,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 07:47:39 GMT",
@@ -1925,7 +1925,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 yna.co.kr",
+      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -2143,7 +2143,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 28 Sep 2026 01:44:01 GMT",
@@ -2152,7 +2152,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 법률신문",
+      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2310,7 +2310,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서]",
-      "source": "헤럴드경제",
+      "source": "biz.heraldcorp.com",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sun, 27 Sep 2026 22:45:00 GMT",
@@ -2319,7 +2319,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] 헤럴드경제",
+      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] biz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -16107,6 +16107,25 @@
       "official_sources": [
         "금융위원회"
       ],
+      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
       "title": "금융정보분석원, 타지키스탄 국립은행과 정보교환 협력을 위한 양해각서(MOU) 체결",
       "source": "금융위원회",
       "date": "2026-09-18T00:00:00+09:00",
@@ -16119,25 +16138,6 @@
         "FIU·규제",
         "제재·테러자금",
         "자금세탁"
-      ],
-      "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
-      "official_sources": [
-        "금융위원회"
-      ],
-      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
-      "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
     },
