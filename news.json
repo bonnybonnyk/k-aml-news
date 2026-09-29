@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T17:09:45.881815+00:00",
+  "updated_at": "2026-09-29T17:42:09.616761+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 38
+      "count": 39
     },
     {
       "feed": "불법사금융",
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,15 +415,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
       "method": "official_board"
     },
     {
@@ -433,13 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,7 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,9 +457,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -475,7 +475,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -801,7 +801,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Tue, 29 Sep 2026 08:49:32 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBVVUtuWG56Mzd1Tl9GSW9NN0ZsMWJyNjN1OW9fbC1icGR5Rl91MzZyTEJGT1A5YTViMGMzQ2FMOTM2TzJ6OHJKR1NNQQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5HZGFCckpITHJEZnp0Qlk0cU1QVHF3VE1sZnp3MTBpOTZ6eUFmald5YlNpS3pvaENxa0ZuV3JRejg4TEhGMlE?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -948,6 +948,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Tue, 29 Sep 2026 07:31:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5rR0VwaFBPN2EwMmNPcXB4bGs0OHg4MlhWckFXNlJrSFdsV0RULTJGd082WUtvVmxmT1h5ZDJrQ1NpTVNaVXc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다 v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "보이스피싱 줄고 신종스캠도 감소세…통합대응단 출범 1년",
       "source": "아시아투데이",
       "source_url": "https://www.asiatoday.co.kr",
@@ -1033,21 +1048,6 @@
         "사기"
       ],
       "description": "보이스피싱 피해액 3년 만에 최저…11개월 연속 감소 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다",
-      "source": "더팩트",
-      "source_url": "https://m.tf.co.kr",
-      "source_domain": "m.tf.co.kr",
-      "date": "Tue, 29 Sep 2026 07:30:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE42bXdjNUtXMHdlM1BWaXM2SGdiX01LRkNqbGR6RFE0Y0xjNWliNlBYN0RBNDNSd3NOWWtWa01MY29GeUJOcERNSnRiMDV0S1Ns0gFQQVVfeXFMTjZtd2M1S1cwd2UzUFZpczZIZ2JfTUtGQ2psZHpEUTRjTGM1aWI2UFg3REE0M1J3c05Za1ZrTUxjb0Z5Qk5wRE1KdGIwNXRLU2w?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱 통합대응단 출범 1년만…피해 '절반' 줄었다 더팩트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1407,7 +1407,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해액 사상 첫 ‘1조’ 넘어…1인당 평균 5300만원",
-      "source": "동아일보",
+      "source": "donga.com",
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Tue, 29 Sep 2026 02:03:53 GMT",
@@ -1415,7 +1415,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해액 사상 첫 ‘1조’ 넘어…1인당 평균 5300만원 동아일보",
+      "description": "보이스피싱 피해액 사상 첫 ‘1조’ 넘어…1인당 평균 5300만원 donga.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -16107,25 +16107,6 @@
       "official_sources": [
         "금융위원회"
       ],
-      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
-      "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
-      ],
-      "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
-      "official_sources": [
-        "금융위원회"
-      ],
       "title": "금융정보분석원, 타지키스탄 국립은행과 정보교환 협력을 위한 양해각서(MOU) 체결",
       "source": "금융위원회",
       "date": "2026-09-18T00:00:00+09:00",
@@ -16138,6 +16119,25 @@
         "FIU·규제",
         "제재·테러자금",
         "자금세탁"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
       "collection_method": "direct_fsc_board"
     },
