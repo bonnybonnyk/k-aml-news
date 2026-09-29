@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T21:40:22.111883+00:00",
+  "updated_at": "2026-09-29T22:10:04.903173+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 13
+      "count": 12
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 40
+      "count": 38
     },
     {
       "feed": "불법사금융",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 0
+      "count": 4
     },
     {
       "feed": "마약자금",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,31 +403,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,13 +415,37 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -529,7 +535,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "美 상원 조사 \"이란 테러자금 연계 지갑 87%, USDT 주로 사용\"",
-      "source": "블루밍비트",
+      "source": "bloomingbit.io",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Tue, 29 Sep 2026 13:09:45 GMT",
@@ -538,14 +544,14 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "美 상원 조사 \"이란 테러자금 연계 지갑 87%, USDT 주로 사용\" 블루밍비트",
+      "description": "美 상원 조사 \"이란 테러자금 연계 지갑 87%, USDT 주로 사용\" bloomingbit.io",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Tue, 29 Sep 2026 12:44:39 GMT",
@@ -554,7 +560,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 디지털데일리",
+      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -607,7 +613,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "8년간 코인 환치기만 12조원… 전체 70% 육박, 외국인 80%는 중국인 - 머니투데이",
-      "source": "머니투데이",
+      "source": "mt.co.kr",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Tue, 29 Sep 2026 11:50:55 GMT",
@@ -616,7 +622,7 @@
         "가상자산",
         "환치기·외환"
       ],
-      "description": "8년간 코인 환치기만 12조원… 전체 70% 육박, 외국인 80%는 중국인 - 머니투데이 머니투데이",
+      "description": "8년간 코인 환치기만 12조원… 전체 70% 육박, 외국인 80%는 중국인 - 머니투데이 mt.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -686,10 +692,10 @@
       "query": "환치기·외환",
       "title": "‘코인 환치기’ 적발액 8년여간 12조원…외국인 피의자 80% 중국인",
       "source": "헤럴드경제",
-      "source_url": "https://mbiz.heraldcorp.com",
-      "source_domain": "mbiz.heraldcorp.com",
+      "source_url": "https://biz.heraldcorp.com",
+      "source_domain": "biz.heraldcorp.com",
       "date": "Tue, 29 Sep 2026 10:52:53 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBRNUlQLWJ5UGVpUE9PcURtSVBGRlZ6aXBHV0M4S2FiQ1BJQWNZalJUWFVYWmpVRG9KWnJkN012RFRlOVlXeHFUQ3huTXFLTWtUT3F6WU45Yw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1YVlZOVmVfNVVHZEUxZGYxQV9UVU83alNua2prQ0RmOC0ybGt2T0E5R1FJVUFhNk1wZmRBMG9NWDN4aFc4SXZ5NFdEZHRlUFlIOTFISGZ3?oc=5",
       "tags": [
         "가상자산",
         "환치기·외환"
@@ -701,7 +707,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해 사상 첫 ‘1조원’ 돌파,피싱통로 94%가 ‘통신망’(전화·문자) 은행·통신사 책임배상 등 신속구제 제도 개선 시급",
-      "source": "ppnews.kr",
+      "source": "검경일보",
       "source_url": "https://www.ppnews.kr",
       "source_domain": "www.ppnews.kr",
       "date": "Tue, 29 Sep 2026 10:42:48 GMT",
@@ -710,7 +716,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "보이스피싱 피해 사상 첫 ‘1조원’ 돌파,피싱통로 94%가 ‘통신망’(전화·문자) 은행·통신사 책임배상 등 신속구제 제도 개선 시급 ppnews.kr",
+      "description": "보이스피싱 피해 사상 첫 ‘1조원’ 돌파,피싱통로 94%가 ‘통신망’(전화·문자) 은행·통신사 책임배상 등 신속구제 제도 개선 시급 검경일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -733,7 +739,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"동결된 보이스피싱 피해금 263억원, 가상자산 거래소서 환급\"",
-      "source": "블루밍비트",
+      "source": "bloomingbit.io",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Tue, 29 Sep 2026 09:06:41 GMT",
@@ -742,7 +748,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "\"동결된 보이스피싱 피해금 263억원, 가상자산 거래소서 환급\" 블루밍비트",
+      "description": "\"동결된 보이스피싱 피해금 263억원, 가상자산 거래소서 환급\" bloomingbit.io",
       "collection_method": "google_news_24h"
     },
     {
@@ -855,7 +861,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해액 56% 뚝 … 전화번호 긴급차단 통했다",
-      "source": "매일경제",
+      "source": "mk.co.kr",
       "source_url": "https://m.mk.co.kr",
       "source_domain": "m.mk.co.kr",
       "date": "Tue, 29 Sep 2026 08:43:58 GMT",
@@ -863,14 +869,14 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해액 56% 뚝 … 전화번호 긴급차단 통했다 매일경제",
+      "description": "보이스피싱 피해액 56% 뚝 … 전화번호 긴급차단 통했다 mk.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "코인거래소 묶인 피싱 피해금, 주인 찾았다",
-      "source": "매일경제",
+      "source": "mk.co.kr",
       "source_url": "https://m.mk.co.kr",
       "source_domain": "m.mk.co.kr",
       "date": "Tue, 29 Sep 2026 08:43:57 GMT",
@@ -878,7 +884,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "코인거래소 묶인 피싱 피해금, 주인 찾았다 매일경제",
+      "description": "코인거래소 묶인 피싱 피해금, 주인 찾았다 mk.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1051,7 +1057,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해액 '3년래 최저'…11개월째 작년보다 감소 - 머니투데이",
-      "source": "머니투데이",
+      "source": "mt.co.kr",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
@@ -1059,7 +1065,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해액 '3년래 최저'…11개월째 작년보다 감소 - 머니투데이 머니투데이",
+      "description": "보이스피싱 피해액 '3년래 최저'…11개월째 작년보다 감소 - 머니투데이 mt.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1096,7 +1102,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파",
-      "source": "매일경제",
+      "source": "mk.co.kr",
       "source_url": "https://www.mk.co.kr",
       "source_domain": "www.mk.co.kr",
       "date": "Tue, 29 Sep 2026 07:17:53 GMT",
@@ -1104,7 +1110,7 @@
       "tags": [
         "사기"
       ],
-      "description": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파 매일경제",
+      "description": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파 mk.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1415,6 +1421,22 @@
     },
     {
       "region": "국내",
+      "query": "자금세탁",
+      "title": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로",
+      "source": "데일리머니",
+      "source_url": "http://www.thedailymoney.com",
+      "source_domain": "www.thedailymoney.com",
+      "date": "Tue, 29 Sep 2026 02:40:35 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1NSHJ1alc2aXRvd1hIYk53OE51M0ZrQWxaakJ4ZWlRMVd4MS1UMVRkV1UwMjl5a2hWSnBvTWdGcFlYQWdJdDg2Mkg5Q0paTlRJSXktRFhhQkh4UE5tQkZGalFPaGFtc21DdVR6Ylgtd2JfY2NTZ2fSAXZBVV95cUxNTUhydWpXNml0b3dYSGJOdzhOdTNGa0FsWmpCeGVpUTFXeDEtVDFUZFdVMDI5eWtoVkpwb01nRnBZWEFnSXQ4NjJIOUNKWk5USUl5LURYYUJIeFBObUJGRmpRT2hhbXNtQ3VUemJYLXdiX2NjU2dn?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로 데일리머니",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "손명수 국회의원, 보이스피싱 피해 사상 첫 ‘1조원’ 돌파, 피싱통로 94%가 ‘통신망’(전화·문자)... 은행·통신사 책임배상 등 신속구제 제도 개선 시급",
       "source": "뉴뉴스",
@@ -1540,21 +1562,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유",
-      "source": "K스피릿",
-      "source_url": "http://www.ikoreanspirit.com",
-      "source_domain": "www.ikoreanspirit.com",
-      "date": "Tue, 29 Sep 2026 00:24:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9fQ1FyTy14WG1rMzV2b3ozTVNLZEloZFY3YkpxR3FjU0FKcnhrUFRMRV9Balh2Z2RzOG1SWi1jaE9uVlFPVW1Cb2tlb3NrQ1BaN211a1lfSEhCRE5yTkkxMHNVQXpCMjVFSFRHTHNSQVIzMm_SAXNBVV95cUxPX0NRck8teFhtazM1dm96M01TS2RJaGRWN2JKcUdxY1NBSnJ4a1BUTEVfQWpYdmdkczhtUlotY2hPblZRT1VtQm9rZW9za0NQWjdtdWtZX0hIQkROck5JMTBzVUF6QjI1RUhUR0xzUkFSMzJv?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유 K스피릿",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "\"보이스피싱 피해 1조원 돌파…94%가 전화·문자로 침투\"",
       "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
@@ -1614,6 +1621,21 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유",
+      "source": "K스피릿",
+      "source_url": "https://www.ikoreanspirit.com",
+      "source_domain": "www.ikoreanspirit.com",
+      "date": "Mon, 28 Sep 2026 23:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YVUxfWGJRbW1GR2FGM3pCN2lsbE9EUjcwLUx3OVl4SXhiM1dBc2thTU0wZVhYZUUzdXRlaUNOYkJhREdlcE04ZVFuN1ZFeVh3M1RsTUNicjduTzNJaTFYR0NYVGNOM1NVVTVfc0FSVkLSAXNBVV95cUxPX0NRck8teFhtazM1dm96M01TS2RJaGRWN2JKcUdxY1NBSnJ4a1BUTEVfQWpYdmdkczhtUlotY2hPblZRT1VtQm9rZW9za0NQWjdtdWtZX0hIQkROck5JMTBzVUF6QjI1RUhUR0xzUkFSMzJv?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유 K스피릿",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "제재·테러자금",
       "title": "유학생 비자로 입국해 테러자금 송금...우즈벡인 '재판행'",
       "source": "v.daum.net",
@@ -1631,7 +1653,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구",
-      "source": "블루밍비트",
+      "source": "bloomingbit.io",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Mon, 28 Sep 2026 22:19:11 GMT",
@@ -1641,23 +1663,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 블루밍비트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로",
-      "source": "뉴스1",
-      "source_url": "https://www.news1.kr",
-      "source_domain": "www.news1.kr",
-      "date": "Mon, 28 Sep 2026 22:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jMG5ydGVGdkRTeHpzZ2x2dW12YV9vZ3BFZk5ZTlVWaUxtOHlZUkNkbEtvbVNmTVowUHRrY0RLYTFtaHdrTVFlYjBzOUlSZFp1RkFsZld6MUc3UkZac01IRHVqY2ZOT1hTWWk00gFrQVVfeXFMTmMwbnJ0ZUZ2RFN4enNnbHZ1bXZhX29ncEVmTllOVVZpTG04eVlSQ2RsS29tU2ZNWjBQdGtjREthMW1od2tNUWViMHM5SVJkWnVGQWxmV3oxRzdSRlpzTUhEdWpjZk5PWFNZaTQ?oc=5",
-      "tags": [
-        "가상자산",
-        "자금세탁"
-      ],
-      "description": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로 뉴스1",
+      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 bloomingbit.io",
       "collection_method": "google_news_24h"
     },
     {
@@ -1773,7 +1779,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아",
-      "source": "whynews.co.kr",
+      "source": "와이뉴스",
       "source_url": "https://www.whynews.co.kr",
       "source_domain": "www.whynews.co.kr",
       "date": "Mon, 28 Sep 2026 12:26:34 GMT",
@@ -1781,7 +1787,7 @@
       "tags": [
         "사기"
       ],
-      "description": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아 whynews.co.kr",
+      "description": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아 와이뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -2261,15 +2267,15 @@
       "region": "국내",
       "query": "불법도박",
       "title": "이찬진 금감원장, 청소년 대상 불법도박 근절 강연",
-      "source": "marketin.edaily.co.kr",
-      "source_url": "https://marketin.edaily.co.kr",
-      "source_domain": "marketin.edaily.co.kr",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
       "date": "Mon, 28 Sep 2026 00:20:03 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1PTDhfSEVuazlEWldGa1M4cXpLb2F3S2UzOEdSQkdOU0pkX2NmNUN0OExRc3p2TXJnQW53QUtFTG9XbUpqWEZEMDYzS1Q4a3hNeDdHbmE1Y0V5Smdvd0hzVXZESks1Y2xYblB5ZzF0dFpQRE0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMFB1YjJtSDU1ZjFoSW9CVWxSdFdCejZueHVXQVdzSXlIaVp1aUdHUThlLXVPT0hkRGtmR2sxZUdvQ0plU3doQVk0d2xIRjRHV29pZGR1TTNCOUt6LXJiQzJrU2VmMk5qeHZ6VXppcTNkTFZ6X29NU0tUMFJVWi12Qw?oc=5",
       "tags": [
         "도박"
       ],
-      "description": "이찬진 금감원장, 청소년 대상 불법도박 근절 강연 marketin.edaily.co.kr",
+      "description": "이찬진 금감원장, 청소년 대상 불법도박 근절 강연 edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
