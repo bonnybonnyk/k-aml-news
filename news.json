@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-28T23:40:00.679051+00:00",
+  "updated_at": "2026-09-29T00:14:38.776234+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 8
+      "count": 7
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 14
+      "count": 13
     },
     {
       "feed": "지갑·해외거래소",
@@ -40,7 +40,7 @@
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 30,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -421,9 +403,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -439,13 +421,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -454,6 +436,12 @@
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -469,15 +457,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +477,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 999,
+  "count": 1000,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "금융민원 40% 폭증…보험금·보이스피싱·주식거래 불만 집중",
+      "source": "thedailyeconomy.kr",
+      "source_url": "https://www.thedailyeconomy.kr",
+      "source_domain": "www.thedailyeconomy.kr",
+      "date": "Mon, 28 Sep 2026 23:48:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1LcTFlak1jcF9Qb1FtcXhHSURVUzJYeUcxcHdpNkdORGszemFKYUphdGJ6VTdGM3ZyaE4yS1g0YjlzbzYxWFFVOUhDX0tueFQySEN5V3hnZmxvNWNxTXI5VkdfSExmSU1GZUtPTTJqMkI?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "금융민원 40% 폭증…보험금·보이스피싱·주식거래 불만 집중 thedailyeconomy.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "제재·테러자금",
@@ -553,7 +550,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 22:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jMG5ydGVGdkRTeHpzZ2x2dW12YV9vZ3BFZk5ZTlVWaUxtOHlZUkNkbEtvbVNmTVowUHRrY0RLYTFtaHdrTVFlYjBzOUlSZFp1RkFsZld6MUc3UkZac01IRHVqY2ZOT1hTWWk00gFrQVVfeXFMTmMwbnJ0ZUZ2RFN4enNnbHZ1bXZhX29ncEVmTllOVVZpTG04eVlSQ2RsS29tU2ZNWjBQdGtjREthMW1od2tNUWViMHM5SVJkWnVGQWxmV3oxRzdSRlpzTUhEdWpjZk5PWFNZaTQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAxMUlMYzZndmNHTWMxcC00cmpWdnUwX0lTUnlXWXZIbTEyQjRLOUxHVnlmemUyVFVKX3hFcUs0YnZYN2QzN0JDWVRhUTJsOFFlQTUxck1jcEFyOGlxWTBESHZfS3ZTUdIBa0FVX3lxTE5jMG5ydGVGdkRTeHpzZ2x2dW12YV9vZ3BFZk5ZTlVWaUxtOHlZUkNkbEtvbVNmTVowUHRrY0RLYTFtaHdrTVFlYjBzOUlSZFp1RkFsZld6MUc3UkZac01IRHVqY2ZOT1hTWWk0?oc=5",
       "tags": [
         "가상자산",
         "자금세탁"
@@ -705,7 +702,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도?",
-      "source": "news.jtbc.co.kr",
+      "source": "JTBC",
       "source_url": "https://news.jtbc.co.kr",
       "source_domain": "news.jtbc.co.kr",
       "date": "Mon, 28 Sep 2026 08:49:00 GMT",
@@ -713,7 +710,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? news.jtbc.co.kr",
+      "description": "압수 비트코인 빼돌린 간큰 경찰관 기소…이미 현금화도? JTBC",
       "collection_method": "google_news_24h"
     },
     {
@@ -735,7 +732,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약 수사 중 압수한 비트코인 빼돌려 현금화한 경찰관 기소",
-      "source": "hankookilbo.com",
+      "source": "한국일보",
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Mon, 28 Sep 2026 08:28:00 GMT",
@@ -744,7 +741,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약 수사 중 압수한 비트코인 빼돌려 현금화한 경찰관 기소 hankookilbo.com",
+      "description": "마약 수사 중 압수한 비트코인 빼돌려 현금화한 경찰관 기소 한국일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -812,7 +809,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발",
-      "source": "khan.co.kr",
+      "source": "경향신문",
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Mon, 28 Sep 2026 07:49:00 GMT",
@@ -821,7 +818,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 khan.co.kr",
+      "description": "마약수사 중 압수한 비트코인 빼돌려 사용한 현직 경찰관 적발 경향신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -890,7 +887,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐",
-      "source": "강원일보",
+      "source": "kwnews.co.kr",
       "source_url": "https://www.kwnews.co.kr",
       "source_domain": "www.kwnews.co.kr",
       "date": "Mon, 28 Sep 2026 07:30:38 GMT",
@@ -898,7 +895,7 @@
       "tags": [
         "사기"
       ],
-      "description": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐 강원일보",
+      "description": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐 kwnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -995,7 +992,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’",
-      "source": "domin.co.kr",
+      "source": "전북도민일보",
       "source_url": "http://www.domin.co.kr",
       "source_domain": "www.domin.co.kr",
       "date": "Mon, 28 Sep 2026 04:28:00 GMT",
@@ -1003,7 +1000,7 @@
       "tags": [
         "사기"
       ],
-      "description": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’ domin.co.kr",
+      "description": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’ 전북도민일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1237,7 +1234,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서]",
-      "source": "biz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sun, 27 Sep 2026 22:45:00 GMT",
@@ -1246,7 +1243,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] biz.heraldcorp.com",
+      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -15336,22 +15333,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
