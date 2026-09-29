@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T01:10:56.979227+00:00",
+  "updated_at": "2026-09-29T01:40:38.700272+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -40,12 +40,12 @@
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,6 +403,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -409,19 +421,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,13 +451,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -477,9 +483,55 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1003,
+  "count": 1006,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "USDT, 이란 테러자금 연루 지갑 87%서 주로 거래",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Tue, 29 Sep 2026 01:35:47 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5IdXBRVjJ2QUtrbE4zMmdpQ0dlSlR0WWxvYTZYMXItV1ZlanBHV3UyOWlaM0gwZ2pJZVhCWk9yTU5zb2EzOUo2VjJqSEJhd0YyZGJ3cFlncG8?oc=5",
+      "tags": [
+        "가상자산",
+        "제재·테러자금"
+      ],
+      "description": "USDT, 이란 테러자금 연루 지갑 87%서 주로 거래 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "100만원도 못 갚는다…불법사금융예방대출 연체율 43.7%",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Tue, 29 Sep 2026 01:34:26 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOdDc5WkFMYmY4cHkyUklsMXVnRUh5dDh2RGNoQjNoZkxYajZpdGF0VHZrcE1vdUNaM0o0dmpaclBFandkODZBYnl4dDhtVEFRdzlmaU5VZ1JsQzJ5NG13ci14Z2pYS3M0VnpPWmdnelVjcS12MGI4V1I2cTVMWXpUaw?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "100만원도 못 갚는다…불법사금융예방대출 연체율 43.7% edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유",
+      "source": "K스피릿",
+      "source_url": "http://www.ikoreanspirit.com",
+      "source_domain": "www.ikoreanspirit.com",
+      "date": "Tue, 29 Sep 2026 00:24:20 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9fQ1FyTy14WG1rMzV2b3ozTVNLZEloZFY3YkpxR3FjU0FKcnhrUFRMRV9Balh2Z2RzOG1SWi1jaE9uVlFPVW1Cb2tlb3NrQ1BaN211a1lfSEhCRE5yTkkxMHNVQXpCMjVFSFRHTHNSQVIzMm_SAXNBVV95cUxPX0NRck8teFhtazM1dm96M01TS2RJaGRWN2JKcUdxY1NBSnJ4a1BUTEVfQWpYdmdkczhtUlotY2hPblZRT1VtQm9rZW9za0NQWjdtdWtZX0hIQkROck5JMTBzVUF6QjI1RUhUR0xzUkFSMzJv?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유 K스피릿",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -518,7 +570,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Mon, 28 Sep 2026 23:09:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBpZnBWMlRsalBVRC1zMHQ4YXJ3S19GNVpZb2VidW02bFRCRUU4TlJMSzZ6Yl8yUVNzcDNqdXlnMVdfOFhWdW9lSHliQUJndjA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1XMEZ6SDdnRWNDbDU3REVsODZIOEdIUGNoU0xOdGtHNERZM3gzbVAtMTBvVkFoZGF0YTRMbE9QT1BMOExBN1E?oc=5",
       "tags": [
         "제재·테러자금"
       ],
@@ -1037,7 +1089,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’",
-      "source": "domin.co.kr",
+      "source": "전북도민일보",
       "source_url": "http://www.domin.co.kr",
       "source_domain": "www.domin.co.kr",
       "date": "Mon, 28 Sep 2026 04:28:00 GMT",
@@ -1045,14 +1097,14 @@
       "tags": [
         "사기"
       ],
-      "description": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’ domin.co.kr",
+      "description": "완주서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’ 전북도민일보",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "완주경찰서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’",
-      "source": "domin.co.kr",
+      "source": "전북도민일보",
       "source_url": "https://m.domin.co.kr",
       "source_domain": "m.domin.co.kr",
       "date": "Mon, 28 Sep 2026 04:28:00 GMT",
@@ -1060,7 +1112,7 @@
       "tags": [
         "사기"
       ],
-      "description": "완주경찰서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’ domin.co.kr",
+      "description": "완주경찰서, 추석 대목 노쇼·보이스피싱 사기 차단 ‘총력’ 전북도민일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1112,7 +1164,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용",
-      "source": "법률신문",
+      "source": "lawtimes.co.kr",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 28 Sep 2026 01:44:01 GMT",
@@ -1121,7 +1173,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 법률신문",
+      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 lawtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1279,7 +1331,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서]",
-      "source": "헤럴드경제",
+      "source": "biz.heraldcorp.com",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sun, 27 Sep 2026 22:45:00 GMT",
@@ -1288,7 +1340,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] 헤럴드경제",
+      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] biz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
