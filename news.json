@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-29T23:09:39.911672+00:00",
+  "updated_at": "2026-09-29T23:38:41.571188+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -254,9 +254,9 @@
     },
     {
       "feed": "금융위/FIU:목록:p3",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 20,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -415,6 +415,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -428,18 +440,6 @@
     },
     {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,9 +463,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -475,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -842,7 +842,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "현직 변호사, 공탁금 등 18억원 횡령·사기 혐의…구속 송치",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Tue, 29 Sep 2026 08:46:46 GMT",
@@ -851,7 +851,7 @@
         "사기",
         "횡령·배임"
       ],
-      "description": "현직 변호사, 공탁금 등 18억원 횡령·사기 혐의…구속 송치 newsis.com",
+      "description": "현직 변호사, 공탁금 등 18억원 횡령·사기 혐의…구속 송치 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -948,7 +948,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "공탁금 횡령·사기로 18억 원 챙겨…현직 변호사 구속 송치",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Tue, 29 Sep 2026 08:24:29 GMT",
@@ -957,7 +957,7 @@
         "사기",
         "횡령·배임"
       ],
-      "description": "공탁금 횡령·사기로 18억 원 챙겨…현직 변호사 구속 송치 뉴스1",
+      "description": "공탁금 횡령·사기로 18억 원 챙겨…현직 변호사 구속 송치 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1054,7 +1054,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "통합대응단 1년…'보이스피싱 범죄' 제대로 꺾었다",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
@@ -1062,7 +1062,7 @@
       "tags": [
         "사기"
       ],
-      "description": "통합대응단 1년…'보이스피싱 범죄' 제대로 꺾었다 asiae.co.kr",
+      "description": "통합대응단 1년…'보이스피싱 범죄' 제대로 꺾었다 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1084,7 +1084,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해액 3년 만에 최저…11개월 연속 감소",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
@@ -1092,7 +1092,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해액 3년 만에 최저…11개월 연속 감소 newsis.com",
+      "description": "보이스피싱 피해액 3년 만에 최저…11개월 연속 감소 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1159,7 +1159,7 @@
       "region": "국내",
       "query": "불법사금융",
       "title": "\"100만원도 못 갚아\"…불법사금융예방대출, 청년 절반이 연체",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Tue, 29 Sep 2026 06:01:08 GMT",
@@ -1167,14 +1167,14 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "\"100만원도 못 갚아\"…불법사금융예방대출, 청년 절반이 연체 newsis.com",
+      "description": "\"100만원도 못 갚아\"…불법사금융예방대출, 청년 절반이 연체 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "횡령·배임",
       "title": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Tue, 29 Sep 2026 06:00:35 GMT",
@@ -1182,7 +1182,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 뉴스1",
+      "description": "'투자금 횡령' IC코퍼레이션 전 대표, 추가 범죄 처벌 피해 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1221,7 +1221,7 @@
       "region": "국내",
       "query": "불법도박",
       "title": "경찰 적발에도 버젓이 강원랜드 사칭 불법도박 광고",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Tue, 29 Sep 2026 05:02:16 GMT",
@@ -1229,7 +1229,7 @@
       "tags": [
         "도박"
       ],
-      "description": "경찰 적발에도 버젓이 강원랜드 사칭 불법도박 광고 newsis.com",
+      "description": "경찰 적발에도 버젓이 강원랜드 사칭 불법도박 광고 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1372,7 +1372,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해 1137명, 가상자산 거래소 묶였던 돈 돌려 받았다",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Tue, 29 Sep 2026 03:00:00 GMT",
@@ -1381,7 +1381,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "보이스피싱 피해 1137명, 가상자산 거래소 묶였던 돈 돌려 받았다 newsis.com",
+      "description": "보이스피싱 피해 1137명, 가상자산 거래소 묶였던 돈 돌려 받았다 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1467,7 +1467,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "이란 연계 제재지갑 846개 중 84%, 거래 '테더 USDT'…美상원 보고서",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Tue, 29 Sep 2026 02:18:00 GMT",
@@ -1476,14 +1476,14 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "이란 연계 제재지갑 846개 중 84%, 거래 '테더 USDT'…美상원 보고서 newsis.com",
+      "description": "이란 연계 제재지갑 846개 중 84%, 거래 '테더 USDT'…美상원 보고서 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "마약자금",
       "title": "902㎏ 필로폰 밀수 돕고 자금 전달한 40대 징역 5년",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Tue, 29 Sep 2026 02:09:52 GMT",
@@ -1491,7 +1491,7 @@
       "tags": [
         "마약"
       ],
-      "description": "902㎏ 필로폰 밀수 돕고 자금 전달한 40대 징역 5년 뉴스1",
+      "description": "902㎏ 필로폰 밀수 돕고 자금 전달한 40대 징역 5년 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1590,7 +1590,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"보이스피싱 피해 1조원 돌파…94%가 전화·문자로 침투\"",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Tue, 29 Sep 2026 00:21:29 GMT",
@@ -1598,7 +1598,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"보이스피싱 피해 1조원 돌파…94%가 전화·문자로 침투\" asiae.co.kr",
+      "description": "\"보이스피싱 피해 1조원 돌파…94%가 전화·문자로 침투\" 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
