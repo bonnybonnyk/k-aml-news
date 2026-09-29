@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-29T01:40:38.700272+00:00",
+  "updated_at": "2026-09-29T02:09:31.709882+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
@@ -45,22 +45,22 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 10
+      "count": 8
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "탈세",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -248,9 +248,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "The read operation timed out"
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -409,6 +409,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -421,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,19 +439,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,6 +463,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 15,
@@ -483,9 +483,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1006,
+  "count": 1007,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 피해액 사상 첫 '1조' 넘어…1인당 평균 5300만원",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Tue, 29 Sep 2026 01:58:47 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB6OVdOM0NHbDNDY3hXR3A3SXZrYnZISUlQeW9IRjIyTjBpazRNYmVqaDBvdmpFTkpQenF6NlozOFAwNENkbVdna1JVTFpOX0dhdFlYTm9TdkpLRFZvWHVqM9IBeEFVX3lxTE95ZUl6ZUVhX3ZLcTMwb0JfSzFYMUlfUGV2NEV0ak80SG5HY2ozV1hUZmtjdTNvQVBmbGV5aTBiV2I0cDVmWG1UTDhMOHkyZmVEUERIcW9SeU5WNHRBNWNIM0kzRmhyVUY4T3Q5NWNlc3VhR2s1TXdsRQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 피해액 사상 첫 '1조' 넘어…1인당 평균 5300만원 뉴시스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "제재·테러자금",
@@ -520,26 +535,11 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유",
-      "source": "K스피릿",
-      "source_url": "http://www.ikoreanspirit.com",
-      "source_domain": "www.ikoreanspirit.com",
-      "date": "Tue, 29 Sep 2026 00:24:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9fQ1FyTy14WG1rMzV2b3ozTVNLZEloZFY3YkpxR3FjU0FKcnhrUFRMRV9Balh2Z2RzOG1SWi1jaE9uVlFPVW1Cb2tlb3NrQ1BaN211a1lfSEhCRE5yTkkxMHNVQXpCMjVFSFRHTHNSQVIzMm_SAXNBVV95cUxPX0NRck8teFhtazM1dm96M01TS2RJaGRWN2JKcUdxY1NBSnJ4a1BUTEVfQWpYdmdkczhtUlotY2hPblZRT1VtQm9rZW9za0NQWjdtdWtZX0hIQkROck5JMTBzVUF6QjI1RUhUR0xzUkFSMzJv?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유 K스피릿",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "\"보이스피싱 피해 1조원 돌파…94%가 전화·문자로 침투\"",
       "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
-      "date": "Tue, 29 Sep 2026 00:21:29 GMT",
+      "date": "Tue, 29 Sep 2026 01:25:02 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA1b0EtdzlFU0h4ZGpiLTVJZ2w3T29VRlUwanE0WTdPT2pBQ0w2WjdLNXRoNTRqSkNjRnZRYlhWd0x4Zm5paG93Q3VaYUZuVTI2Z1dXalJRX1pZaUtwbmtrSA?oc=5",
       "tags": [
         "사기"
@@ -575,6 +575,21 @@
         "제재·테러자금"
       ],
       "description": "유학비자로 국내 입국했는데···‘테러자금 지원’ 혐의로 재판 넘겨진 우즈벡인 v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유",
+      "source": "K스피릿",
+      "source_url": "https://www.ikoreanspirit.com",
+      "source_domain": "www.ikoreanspirit.com",
+      "date": "Mon, 28 Sep 2026 23:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YVUxfWGJRbW1GR2FGM3pCN2lsbE9EUjcwLUx3OVl4SXhiM1dBc2thTU0wZVhYZUUzdXRlaUNOYkJhREdlcE04ZVFuN1ZFeVh3M1RsTUNicjduTzNJaTFYR0NYVGNOM1NVVTVfc0FSVkLSAXNBVV95cUxPX0NRck8teFhtazM1dm96M01TS2RJaGRWN2JKcUdxY1NBSnJ4a1BUTEVfQWpYdmdkczhtUlotY2hPblZRT1VtQm9rZW9za0NQWjdtdWtZX0hIQkROck5JMTBzVUF6QjI1RUhUR0xzUkFSMzJv?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱수거책 혐의 적용 기준은? ‘몰랐다’는 말이 통하지 않는 이유 K스피릿",
       "collection_method": "google_news_24h"
     },
     {
@@ -984,7 +999,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐",
-      "source": "강원일보",
+      "source": "kwnews.co.kr",
       "source_url": "https://www.kwnews.co.kr",
       "source_domain": "www.kwnews.co.kr",
       "date": "Mon, 28 Sep 2026 07:30:38 GMT",
@@ -992,7 +1007,7 @@
       "tags": [
         "사기"
       ],
-      "description": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐 강원일보",
+      "description": "수협은행 보이스피싱 피해 5년간 222억…회수율은 34.9% 그쳐 kwnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1164,7 +1179,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용",
-      "source": "lawtimes.co.kr",
+      "source": "법률신문",
       "source_url": "https://www.lawtimes.co.kr",
       "source_domain": "www.lawtimes.co.kr",
       "date": "Mon, 28 Sep 2026 01:44:01 GMT",
@@ -1173,7 +1188,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 lawtimes.co.kr",
+      "description": "「국가 자금세탁·테러자금조달·확산금융 방지 전략 및 정책 운영방향」 주요 내용 법률신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1331,7 +1346,7 @@
       "region": "국내",
       "query": "투자사기",
       "title": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서]",
-      "source": "biz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Sun, 27 Sep 2026 22:45:00 GMT",
@@ -1340,7 +1355,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] biz.heraldcorp.com",
+      "description": "‘새벽 5시 쓰러진 부모’ ‘억대 슈퍼카 몰던 코인사기범’… 서대문구를 지켜낸 그들 [우리동네 경찰서] 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
