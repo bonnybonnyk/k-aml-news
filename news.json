@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-09-30T04:11:13.257407+00:00",
+  "updated_at": "2026-09-30T04:42:49.336290+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 7
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 5
+      "count": 3
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 13
+      "count": 15
     },
     {
       "feed": "지갑·해외거래소",
@@ -55,12 +55,12 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "탈세",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,15 +260,9 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -403,7 +397,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -415,7 +421,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,27 +433,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -457,13 +445,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -483,9 +477,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1066,
+  "count": 1068,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Wed, 30 Sep 2026 04:20:48 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9hMVMxcEhfNEhIUDQ0VDRLZnNHRzRxVS1zdWJKSjN1Tl9qWndiMkRNTW1WUFNLejlnTlE4VEpUTzNpTEVleXhrMXkwM2l5VDRsVHlMWE9SQjI?oc=5",
+      "tags": [
+        "가상자산",
+        "FIU·규제"
+      ],
+      "description": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "가상자산 AML",
@@ -557,7 +567,7 @@
       "source_url": "https://www.segye.com",
       "source_domain": "www.segye.com",
       "date": "Wed, 30 Sep 2026 02:34:11 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jcV9ZVXFITHE4QVVqa3pfdWxKb3JNd1E4UEpnNVp2WTlmR19OeFpQaDFRWUlhWHpYaERwZFpwMzY5ZTl1VlE2dFdXbWJ4NjZTc3QyMUVjOHJfZWRSY2Z3WnVLOUtlU0lZNHlV0gFUQVVfeXFMT1ladGVQbXZmVE1QaFZ0TUxaT3VPWHdSM2JqbFgwNTdQeGZjOGd0LXlVTGE1dlZxZ3FyMk9OQXVFV0FlU1hET2ZKSi1qTGF3T3k0YTJ3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1HWmV3dTFaN3dSVmlQN1VpSE1IN3hSUkp4MVVOS0FSdFdtMEpMRXRLQmZDSWhwY08tdXV3MzhIdlRXMmFxNWpvazZERi1QblVBa19RZDZUSlTSAVRBVV95cUxPWVp0ZVBtdmZUTVBoVnRNTFpPdU9Yd1IzYmpsWDA1N1B4ZmM4Z3QteVVMYTV2VnFncXIyT05BdUVXQWVTWERPZkpKLWpMYXdPeTRhMnc?oc=5",
       "tags": [
         "사기"
       ],
@@ -598,6 +608,22 @@
     },
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "“가상자산 거래 영향” 신규계좌 사기이용 1위 어디?",
+      "source": "한경매거진&북",
+      "source_url": "https://magazine.hankyung.com",
+      "source_domain": "magazine.hankyung.com",
+      "date": "Wed, 30 Sep 2026 00:44:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE14QTN1YTY2S3NvbGFmT0xFOXdpYkE1eGlmMXM3VU9kNHUxZjR1UHQ3NF95ejZiSUFHdTB2cWFnUjdVSXpYRkloYmdBTVpBTDRNMW5DRG0yQThmYzdhRXJYSl83bUtoLWRBd3lvSA?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "“가상자산 거래 영향” 신규계좌 사기이용 1위 어디? 한경매거진&북",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해금, 코인 거래소서 263억 환급… 다음 달부터 제도 개선:검찰연합일보",
       "source": "검찰연합일보",
@@ -617,7 +643,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "정부 합동 피싱 통합대응단 1주년… 보이스피싱 피해 역대 최저 '257억'",
-      "source": "kpolice.kr",
+      "source": "참수리소식",
       "source_url": "https://www.kpolice.kr",
       "source_domain": "www.kpolice.kr",
       "date": "Wed, 30 Sep 2026 00:20:38 GMT",
@@ -625,7 +651,7 @@
       "tags": [
         "사기"
       ],
-      "description": "정부 합동 피싱 통합대응단 1주년… 보이스피싱 피해 역대 최저 '257억' kpolice.kr",
+      "description": "정부 합동 피싱 통합대응단 1주년… 보이스피싱 피해 역대 최저 '257억' 참수리소식",
       "collection_method": "google_news_24h"
     },
     {
@@ -723,7 +749,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "변호사•회계사에게도 자금세탁방지 의무",
-      "source": "brunch.co.kr",
+      "source": "브런치",
       "source_url": "https://brunch.co.kr",
       "source_domain": "brunch.co.kr",
       "date": "Tue, 29 Sep 2026 13:12:14 GMT",
@@ -732,14 +758,14 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "변호사•회계사에게도 자금세탁방지 의무 brunch.co.kr",
+      "description": "변호사•회계사에게도 자금세탁방지 의무 브런치",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "'北 자금세탁'으로 美 송환 북한인 형기 마쳐",
-      "source": "chosundaily.com",
+      "source": "미주조선일보",
       "source_url": "https://chosundaily.com",
       "source_domain": "chosundaily.com",
       "date": "Tue, 29 Sep 2026 13:10:08 GMT",
@@ -748,7 +774,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "'北 자금세탁'으로 美 송환 북한인 형기 마쳐 chosundaily.com",
+      "description": "'北 자금세탁'으로 美 송환 북한인 형기 마쳐 미주조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1291,7 +1317,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해액 1년 새 76%↓…2023년 이후 최저",
-      "source": "fnnews.com",
+      "source": "파이낸셜뉴스",
       "source_url": "https://www.fnnews.com",
       "source_domain": "www.fnnews.com",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
@@ -1299,7 +1325,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해액 1년 새 76%↓…2023년 이후 최저 fnnews.com",
+      "description": "보이스피싱 피해액 1년 새 76%↓…2023년 이후 최저 파이낸셜뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1397,7 +1423,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘코인 지갑’에 묶여 있던 보이스피싱 피해금 263억 1137명에 환급",
-      "source": "진일보",
+      "source": "jnilbo.com",
       "source_url": "https://www.jnilbo.com",
       "source_domain": "www.jnilbo.com",
       "date": "Tue, 29 Sep 2026 05:07:12 GMT",
@@ -1406,7 +1432,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "‘코인 지갑’에 묶여 있던 보이스피싱 피해금 263억 1137명에 환급 진일보",
+      "description": "‘코인 지갑’에 묶여 있던 보이스피싱 피해금 263억 1137명에 환급 jnilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1488,7 +1514,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화",
-      "source": "wikitree.co.kr",
+      "source": "위키트리",
       "source_url": "https://www.wikitree.co.kr",
       "source_domain": "www.wikitree.co.kr",
       "date": "Tue, 29 Sep 2026 03:03:00 GMT",
@@ -1497,7 +1523,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화 wikitree.co.kr",
+      "description": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화 위키트리",
       "collection_method": "google_news_24h"
     },
     {
@@ -1998,7 +2024,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아",
-      "source": "와이뉴스",
+      "source": "whynews.co.kr",
       "source_url": "https://www.whynews.co.kr",
       "source_domain": "www.whynews.co.kr",
       "date": "Mon, 28 Sep 2026 12:26:34 GMT",
@@ -2006,7 +2032,7 @@
       "tags": [
         "사기"
       ],
-      "description": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아 와이뉴스",
+      "description": "시민의 112신고로 7,500만 원 상당 보이스피싱 피해 막아 whynews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
