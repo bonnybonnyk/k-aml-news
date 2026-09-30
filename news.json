@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T21:42:52.092572+00:00",
+  "updated_at": "2026-09-30T22:10:31.417242+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 11,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,15 +397,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -439,25 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +445,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -506,7 +488,7 @@
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Wed, 30 Sep 2026 21:05:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE93NURGaTZhUlBKRFN2eDNPZU9GSTl3QVRtRlk2bGw1NHpfZEVld2JDcjd3dWFfZkxRdDFsV0tIQmJ0Qmt3VEdoUkQyUnNPbDdINzhDUW9OVzVoeVBZaTU5ZW9ERGJpd9IBU0FVX3lxTE9HS1RRemlldzFMWFVfMkQ3emswcWR6UTM3NVJnX1JmYkdhOGRsNzk1MzZDeUhEOG9tYlREUjhLb1RZY0JzaXZrVXFQaTk5SFJIZFNF?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uSXJvWlota20xMWtUTzhwWmVwY3BvTXlqNzdJRWlTME10eHkyNWh1UHZ3TDNCenllSGFiWGs4WHFrN3JJLWZTRHVvNTZvRWpTY3fSAVNBVV95cUxPR0tUUXppZXcxTFhVXzJEN3prMHFkelEzNzVSZ19SZmJHYThkbDc5NTM2Q3lIRDhvbWJURFI4S29UWWNCc2l2a1VxUGk5OUhSSGRTRQ?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -703,7 +685,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "BNK경남은행, 2억3천만 원 보이스피싱 피해 차단",
-      "source": "breaknews.com",
+      "source": "브레이크뉴스",
       "source_url": "https://www.breaknews.com",
       "source_domain": "www.breaknews.com",
       "date": "Wed, 30 Sep 2026 06:09:49 GMT",
@@ -711,7 +693,7 @@
       "tags": [
         "사기"
       ],
-      "description": "BNK경남은행, 2억3천만 원 보이스피싱 피해 차단 breaknews.com",
+      "description": "BNK경남은행, 2억3천만 원 보이스피싱 피해 차단 브레이크뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1310,10 +1292,10 @@
       "query": "보이스피싱",
       "title": "손명수 의원, 보이스피싱 피해 사상 첫 ‘1조원’ 돌파, 피싱통로 94%가 ‘통신망’",
       "source": "koreasisailbo.com",
-      "source_url": "https://www.koreasisailbo.com",
-      "source_domain": "www.koreasisailbo.com",
+      "source_url": "https://m.koreasisailbo.com",
+      "source_domain": "m.koreasisailbo.com",
       "date": "Tue, 29 Sep 2026 09:45:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9odjMwVjhhNFk5WXV6YUR4VmVlVUVpMGEtdHZqRUdQNXJ3OE9zZlQyRmZnV2ZuSWhPSF9vLWhtTGpPX0MzYndwN1lZLXVBUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05WUQ5ZUJ5aTRLalExcS1keWhNbi0zWFNld0IyelVoOURVbVVPeTlvMlVxQnU1NTgyYmU5czR3MG9oZXNRMmZjcHcxZGt1WEdsdndjRDlMTXNjdw?oc=5",
       "tags": [
         "사기"
       ],
@@ -1461,7 +1443,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소",
-      "source": "YTN",
+      "source": "ytn.co.kr",
       "source_url": "https://www.ytn.co.kr",
       "source_domain": "www.ytn.co.kr",
       "date": "Tue, 29 Sep 2026 08:31:00 GMT",
@@ -1469,7 +1451,7 @@
       "tags": [
         "사기"
       ],
-      "description": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소 YTN",
+      "description": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소 ytn.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -16629,22 +16611,19 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융위원회",
-      "date": "2026-09-18T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "source": "금융감독원",
+      "date": "2026-09-20T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
