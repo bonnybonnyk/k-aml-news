@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T11:10:31.400861+00:00",
+  "updated_at": "2026-09-30T11:41:58.204375+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -25,7 +25,7 @@
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "트래블룰",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 11
+      "count": 13
     },
     {
       "feed": "불법사금융",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -415,25 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,15 +427,27 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -463,15 +457,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1075,
+  "count": 1076,
   "official_count": 30,
   "items": [
     {
@@ -590,6 +590,21 @@
         "FIU·규제"
       ],
       "description": "전 CFTC 위원 “위험은 차단보다 관리”⋯해외 거래소 규제 일관성 강조 이투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개",
+      "source": "decenter.kr",
+      "source_url": "https://www.decenter.kr",
+      "source_domain": "www.decenter.kr",
+      "date": "Wed, 30 Sep 2026 06:34:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9kVE9qUkpUWmhybUVRdXNhRGtSM3NvTkRiWmRrb0pPMDRXa1M0Q2pWT3ljLV84V1V6SURjZ2hvc1FGbWx5VmRGcExHZGRHSm9JOGc?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개 decenter.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -969,7 +984,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "美 상원 조사 \"이란 테러자금 연계 지갑 87%, USDT 주로 사용\"",
-      "source": "블루밍비트",
+      "source": "bloomingbit.io",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Tue, 29 Sep 2026 13:09:45 GMT",
@@ -978,7 +993,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "美 상원 조사 \"이란 테러자금 연계 지갑 87%, USDT 주로 사용\" 블루밍비트",
+      "description": "美 상원 조사 \"이란 테러자금 연계 지갑 87%, USDT 주로 사용\" bloomingbit.io",
       "collection_method": "google_news_24h"
     },
     {
@@ -1031,7 +1046,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "경찰청, 전기통신금융사기 통합대응단 출범 1주년, 민관 협업으로 보이스피싱 줄였다",
-      "source": "행정신문",
+      "source": "adtimes.co.kr",
       "source_url": "http://www.adtimes.co.kr",
       "source_domain": "www.adtimes.co.kr",
       "date": "Tue, 29 Sep 2026 12:10:00 GMT",
@@ -1039,7 +1054,7 @@
       "tags": [
         "사기"
       ],
-      "description": "경찰청, 전기통신금융사기 통합대응단 출범 1주년, 민관 협업으로 보이스피싱 줄였다 행정신문",
+      "description": "경찰청, 전기통신금융사기 통합대응단 출범 1주년, 민관 협업으로 보이스피싱 줄였다 adtimes.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1339,7 +1354,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소",
-      "source": "YTN",
+      "source": "ytn.co.kr",
       "source_url": "https://www.ytn.co.kr",
       "source_domain": "www.ytn.co.kr",
       "date": "Tue, 29 Sep 2026 08:31:00 GMT",
@@ -1347,7 +1362,7 @@
       "tags": [
         "사기"
       ],
-      "description": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소 YTN",
+      "description": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소 ytn.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2070,7 +2085,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구",
-      "source": "블루밍비트",
+      "source": "bloomingbit.io",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Mon, 28 Sep 2026 22:19:11 GMT",
@@ -2080,14 +2095,14 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 블루밍비트",
+      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 bloomingbit.io",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 28 Sep 2026 22:00:00 GMT",
@@ -2096,7 +2111,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로 뉴스1",
+      "description": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
