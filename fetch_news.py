@@ -357,8 +357,32 @@ def v48_nonarticle(title, source_url, source_domain):
         return True
     return False
 
+def giftcard_cashout_promo(title):
+    """상품권·소액결제 현금화의 구매 유도형 제목만 제외한다."""
+    t = (title or '').lower()
+    if not re.search(r'상품권|소액\s*결제|(?:정보|콘텐츠|컨텐츠)\s*이용료', t):
+        return False
+    # 수사·집행·피해회복·규제 및 신종수법 보도는 광고 문구를 인용해도 유지.
+    concrete_news = re.search(
+        r'검거|구속|기소|송치|수사|적발|압수|추징|몰수|징역|벌금|판결|선고|'
+        r'피해자|피해액|피해금|범죄수익|자금세탁|돈세탁|보이스피싱|신종피싱|'
+        r'지급정지|거래정지|법안|개정|제재|규제|신종\s*수법|사각지대|악용', t)
+    if concrete_news:
+        return False
+    shopping = re.search(
+        r'구매\s*안내|상품\s*비교|(?:상품권|상품)\s*선택|선택\s*편의|'
+        r'정보\s*(?:찾는|검색)|이용자\s*주목|소비자에게|'
+        r'업체\s*추천|추천\s*업체|상담\s*문의|구매\s*문의|'
+        r'최저\s*수수료|당일\s*입금|즉시\s*입금|24시간\s*상담', t)
+    cashout = re.search(r'현금화|상품권\s*깡', t)
+    vendor_domain = re.search(r'(?:[a-z0-9가-힣-]+\.)+(?:com|net|kr|co\.kr)\b', t)
+    return bool((cashout and (shopping or vendor_domain)) or (vendor_domain and shopping))
+
+
 def exclude_news_editorial(title, source_name='', source_domain='', article_link=''):
     """기사 피드의 명백한 비뉴스 콘텐츠만 제외한다. 공식자료 경로에는 적용하지 않는다."""
+    if giftcard_cashout_promo(title):
+        return True
     t = (title or '').strip()
     s = (source_name or '').lower().replace(' ', '')
     d = (source_domain or '').lower().rstrip('.')
@@ -499,7 +523,7 @@ V49_CASE_ACTION = re.compile(
 V49_PREDICATE = re.compile(
     r'보이스피싱|신종피싱|전화금융사기|리딩방|투자사기|투자\s*사기|유사수신|로맨스\s*스캠|'
     r'불법도박|온라인도박|도박사이트|사설토토|마약|필로폰|대마|코카인|'
-    r'탈세|조세포탈|횡령|배임|불법\s*외환|외국환거래법|환치기|대포통장|사기이용계좌|차명계좌|불법사금융|불법사채|고리사채|불법대부'
+    r'탈세|조세포탈|횡령|배임|불법\s*외환|외국환거래법|환치기|대포통장|차명계좌|불법사금융|불법사채|고리사채|불법대부'
 )
 V53_CONCRETE_AMOUNT = re.compile(
     r'(?:약\s*)?\d[\d,.]*(?:억|만|천)?\s*(?:원|달러|페소|유로)|'
