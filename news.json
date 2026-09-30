@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T06:46:43.147906+00:00",
+  "updated_at": "2026-09-30T07:12:21.048123+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 24
+      "count": 21
     },
     {
       "feed": "불법사금융",
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -248,9 +248,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_rss_fallback"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -403,27 +403,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -439,9 +427,27 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -452,12 +458,6 @@
     },
     {
       "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -483,7 +483,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1074,
+  "count": 1072,
   "official_count": 30,
   "items": [
     {
@@ -505,15 +505,15 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "skt kt lg 정보이용료상품권 현금화 정보 찾는 이용자 주목…신용카드할부상품권.com, 상품권 선택 편의 강화",
-      "source": "eanews.kr",
-      "source_url": "https://www.eanews.kr",
-      "source_domain": "www.eanews.kr",
+      "source": "didimkorea.net",
+      "source_url": "https://www.didimkorea.net",
+      "source_domain": "www.didimkorea.net",
       "date": "Wed, 30 Sep 2026 05:38:30 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1ORDZ3RGNSbWJiTWNvd0xZVWtTUkpQMHFfZk42a2lLdUdXTEdUem1xWmxiNENvdnU4cGNMQjBrei1SMlRZcGE2cTZn?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5SWXZsc3FaS20zTTFxazVxN2g2Y0JUbkQ5ZDhpa1hOTHl1YzdkaXNKTGZVbTBxTHc5LXNwTFVnNkdoT3pvRFpFYkZhTHI1cUU?oc=5",
       "tags": [
         "AML"
       ],
-      "description": "skt kt lg 정보이용료상품권 현금화 정보 찾는 이용자 주목…신용카드할부상품권.com, 상품권 선택 편의 강화 eanews.kr",
+      "description": "skt kt lg 정보이용료상품권 현금화 정보 찾는 이용자 주목…신용카드할부상품권.com, 상품권 선택 편의 강화 didimkorea.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -596,7 +596,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의",
-      "source": "digitalasset.works",
+      "source": "디지털애셋",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 30 Sep 2026 03:40:00 GMT",
@@ -605,7 +605,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 digitalasset.works",
+      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 디지털애셋",
       "collection_method": "google_news_24h"
     },
     {
@@ -688,6 +688,22 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Wed, 30 Sep 2026 00:51:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95QTJEN01VaHZMYWRfSmFLajlkMjJ6N1FjUkpNLVhQQ1ZzLU50dlFySXFkNWMtSnZMVXlqdXh3ZHUySEVVSmJvcmRMTTM3cVE1NUR3eG1mbGxGNWs?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로 KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "보이스피싱 피해금, 코인 거래소서 263억 환급… 다음 달부터 제도 개선:경찰연합신문",
       "source": "경찰연합신문",
       "source_url": "https://m.koreapolicenews.com",
@@ -763,22 +779,6 @@
         "사기"
       ],
       "description": "올 상반기 사기이용계좌 6만개 육박…작년 전체의 72% 조선일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Tue, 29 Sep 2026 22:39:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yVTFUOFlsQXBSS2FtR0gzZ0w2Z2tYdTdFaERsTVdVUUkzUXRWbi00SU9tcTZIb0FRek9ETHRPTHJ1QkxManpYcHJUdW5tajdTMV83VV9IOGo3S3c?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로 KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -981,6 +981,21 @@
         "제재·테러자금"
       ],
       "description": "美 상원 “이란 제재 회피에 USDT”…테더 “올해 5억5,000만달러 동결” 코인리더스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "코인거래소에 묶인 피싱 피해금…경찰, 일일이 추적해 환급",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Tue, 29 Sep 2026 11:12:30 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBSaHdPY2NBRXVkRFNIUm5xVGhwVkdYbDgwOXNvYmVERFBmVW5kdkV5bU12ZEk1N0JiM1p0N1c4Ml90VldQZjJaNTlHa2RkWlA1YVlUaVNyLXVRVXVGblE5ctIBYEFVX3lxTFBSaHdPY2NBRXVkRFNIUm5xVGhwVkdYbDgwOXNvYmVERFBmVW5kdkV5bU12ZEk1N0JiM1p0N1c4Ml90VldQZjJaNTlHa2RkWlA1YVlUaVNyLXVRVXVGblE5cg?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "코인거래소에 묶인 피싱 피해금…경찰, 일일이 추적해 환급 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1358,7 +1373,7 @@
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1NTW16MVByTTBLTlFSSl8yN1ZFNXpJSTdQUEpCSnZVRUFHb01PZndYelJUekRLWVVNQjI0TG5zS0Rlci1ZaElnbEs0SzBNOFBEMkdJREg4bDBKZmNjSGpN0gFfQVVfeXFMTU1NbXoxUHJNMEtOUVJKXzI3VkU1eklJN1BQSkJKdlVFQUdvTU9md1h6UlR6REtZVU1CMjRMbnNLRGVyLVloSWdsSzRLME04UEQyR0lESDhsMEpmY2NIak0?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMXQyS1o1V2JyRHZnLU5pZkljR2pjN3dXVVlfREZaclRyeE4wUllKZGZlNjJ2bG1FMF8tY1lITE02Y0JmQlNDWTNCbDBOVE9qU0hXSVMtOFpkNFNuVFdudExMMXNwSHEwaVNPV3F6OGk2NXYxNzlPWTNXNjVnVy1sSXczYzNqamlCRXVQWGtFSUpTMWlQaUFQbDN3YjBnOVlsQXdaV3RzVHV1Z9IBX0FVX3lxTE1NTW16MVByTTBLTlFSSl8yN1ZFNXpJSTdQUEpCSnZVRUFHb01PZndYelJUekRLWVVNQjI0TG5zS0Rlci1ZaElnbEs0SzBNOFBEMkdJREg4bDBKZmNjSGpN?oc=5",
       "tags": [
         "사기"
       ],
@@ -16406,51 +16421,6 @@
       "tags": [
         "사기"
       ]
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "\"범죄수익 은닉 수법 교묘해져\"..적금·외화계좌 등 전방위 악용",
-      "source": "kpenews.com",
-      "source_url": "https://kpenews.com",
-      "source_domain": "kpenews.com",
-      "date": "Thu, 02 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9FRmFZejlpQ1pnWlVMWVFBMWhYUGNnY2dHcGwxazVSaTNaZnZIU1d3bDBMM3B3eHFuWFFybk1XanJucFR0c25iWG8zSjNCa1lydkE?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "\"범죄수익 은닉 수법 교묘해져\"..적금·외화계좌 등 전방위 악용 kpenews.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "'자유적금'도 뚫렸다, 금감원의 신종 자금세탁 수법 경고",
-      "source": "동행일보",
-      "source_url": "https://www.dhilbo.co.kr",
-      "source_domain": "www.dhilbo.co.kr",
-      "date": "Thu, 02 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBka2FRamtHS3Fxem1CUHJ0VHYxMUxxd2UwQ0pXb0JPMHZWbnFBZEFfYm5JSTBaS1VMNDdVU0d2LVBQUzU3YTB4VlFKMWJaYXRKUC1pOFZDdjNMNE1uNkRiUnVCVDUyUVYt?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "'자유적금'도 뚫렸다, 금감원의 신종 자금세탁 수법 경고 동행일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "[이코노 브리핑] 보이스피싱 피해구제 비대면으로 가능 외",
-      "source": "세계일보",
-      "source_url": "https://www.segye.com",
-      "source_domain": "www.segye.com",
-      "date": "Thu, 02 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5GOS1EZWppd0RlNHFNcXc2YWk4Qm8xOGlCdTdFSktZcnJ0c1VrNUVjdktQT1RiRThOczB6OXBLRWdKOGlWRkRGcjZIdXUwWVVneWt1UGNYcDHSAVRBVV95cUxQRUx1MVI1ZXFtWEowWUNQYjZSemJxM1NtQ2tTQXR3S1B6aXlpRThvc295X3VKdDhIN3pMNXJhcUM1OHF4Nk1IOEdZa1dYYXNkQVA2NkQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "[이코노 브리핑] 보이스피싱 피해구제 비대면으로 가능 외 세계일보",
-      "collection_method": "google_news_24h"
     }
   ],
   "official_items": [
