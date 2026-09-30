@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T10:11:58.567929+00:00",
+  "updated_at": "2026-09-30T10:42:46.961860+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,12 +20,12 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 12
+      "count": 11
     },
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "트래블룰",
@@ -40,7 +40,7 @@
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "투자사기",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "마약자금",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -415,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,27 +439,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -472,6 +466,12 @@
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +495,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1078,
+  "count": 1079,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "미 상원 소위, USDT 이란 제재 회피 통로 지목…당국 회부",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Wed, 30 Sep 2026 10:36:57 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9lTjJ6X3ZEdVRpSW1JT2hqR0o2SmNSbWVQd2g1OEZ4Skxtckpyejh4X2ZLZkxUcXVoNUpEYXMxcTZxTFM5V3VhTFFSUmhEOFlFUUZ3WVJ5MjA?oc=5",
+      "tags": [
+        "가상자산",
+        "제재·테러자금"
+      ],
+      "description": "미 상원 소위, USDT 이란 제재 회피 통로 지목…당국 회부 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -568,7 +584,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 07:19:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nTUdlS3YxdjRiNTFQejFZdUk4SHVmR0E0R0lPLVpFR19VeW9QNmlKcm9YTmxoUW1ZOXRlRVZRR1pZTTBhQ3hlWm5jbzQ0dzFIVjVMZ2V0dVhsencwaWZOeTI2b0tMcUFXQk1lT3NZUXVZMUdG?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aMDFPUXEwMVR1QjdMUWp1bjhjTWp5dGhUdU8yXzBwMHd2QlRaTmF6czFNc0k0dlN6eUN6Uko2SDFlcHBDRnZtcW1HWGhtbnJEWkpWTTdRbHUxYnZJUFZiTlp1NkN2VVpVNDVVTQ?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -655,7 +671,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "통신업계, 보이스피싱 배상책임 요구에 선긋기…“불법감청 강요와 다름없어”",
-      "source": "etnews.com",
+      "source": "전자신문",
       "source_url": "https://www.etnews.com",
       "source_domain": "www.etnews.com",
       "date": "Wed, 30 Sep 2026 05:33:50 GMT",
@@ -663,7 +679,7 @@
       "tags": [
         "사기"
       ],
-      "description": "통신업계, 보이스피싱 배상책임 요구에 선긋기…“불법감청 강요와 다름없어” etnews.com",
+      "description": "통신업계, 보이스피싱 배상책임 요구에 선긋기…“불법감청 강요와 다름없어” 전자신문",
       "collection_method": "google_news_24h"
     },
     {
