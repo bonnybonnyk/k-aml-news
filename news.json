@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T09:10:51.838328+00:00",
+  "updated_at": "2026-09-30T09:44:05.466853+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 14
+      "count": 13
     },
     {
       "feed": "불법사금융",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "차명계좌",
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -242,20 +242,32 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
@@ -403,6 +415,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -421,25 +445,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,7 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -522,7 +534,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소",
-      "source": "news.kbs.co.kr",
+      "source": "KBS 뉴스",
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Wed, 30 Sep 2026 08:04:00 GMT",
@@ -530,14 +542,14 @@
       "tags": [
         "사기"
       ],
-      "description": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소 news.kbs.co.kr",
+      "description": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소 KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 07:22:03 GMT",
@@ -545,7 +557,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박 tokenpost.kr",
+      "description": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -556,7 +568,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 07:19:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aMDFPUXEwMVR1QjdMUWp1bjhjTWp5dGhUdU8yXzBwMHd2QlRaTmF6czFNc0k0dlN6eUN6Uko2SDFlcHBDRnZtcW1HWGhtbnJEWkpWTTdRbHUxYnZJUFZiTlp1NkN2VVpVNDVVTQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nTUdlS3YxdjRiNTFQejFZdUk4SHVmR0E0R0lPLVpFR19VeW9QNmlKcm9YTmxoUW1ZOXRlRVZRR1pZTTBhQ3hlWm5jbzQ0dzFIVjVMZ2V0dVhsencwaWZOeTI2b0tMcUFXQk1lT3NZUXVZMUdG?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -598,7 +610,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "skt kt lg 정보이용료상품권 현금화 정보 찾는 이용자 주목…신용카드할부상품권.com, 상품권 선택 편의 강화",
-      "source": "eanews.kr",
+      "source": "얼리어답터뉴스",
       "source_url": "https://www.eanews.kr",
       "source_domain": "www.eanews.kr",
       "date": "Wed, 30 Sep 2026 05:38:30 GMT",
@@ -606,29 +618,29 @@
       "tags": [
         "AML"
       ],
-      "description": "skt kt lg 정보이용료상품권 현금화 정보 찾는 이용자 주목…신용카드할부상품권.com, 상품권 선택 편의 강화 eanews.kr",
+      "description": "skt kt lg 정보이용료상품권 현금화 정보 찾는 이용자 주목…신용카드할부상품권.com, 상품권 선택 편의 강화 얼리어답터뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "FIU·STR",
       "title": "skt kt lg 콘텐츠이용료상품권 현금화 정보 검색부터 상품 비교까지…신용카드할부상품권.com 구매 안내",
-      "source": "eanews.kr",
-      "source_url": "https://www.eanews.kr",
-      "source_domain": "www.eanews.kr",
+      "source": "대한청년일보",
+      "source_url": "https://www.koreayouthdaily.com",
+      "source_domain": "www.koreayouthdaily.com",
       "date": "Wed, 30 Sep 2026 05:37:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE45aXB4UE55VURMT05YeWNaOUZ2dzBURVU1amp4YnJkNzlXejd4SmlvYlZIUm9PSVVoV1hacXdVeTUzaTlka3VyYmFR?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBTT1ZsYi1uMUV4OU5TcGsyR1Z5X3ZkUTBWNmF2azQ3UDZ1cmY1LU1xcjRIRURFTFc3ZE1DdV9xdHhkQXJ4cERVc2FoaVp0andIOHIxbGxB?oc=5",
       "tags": [
         "AML"
       ],
-      "description": "skt kt lg 콘텐츠이용료상품권 현금화 정보 검색부터 상품 비교까지…신용카드할부상품권.com 구매 안내 eanews.kr",
+      "description": "skt kt lg 콘텐츠이용료상품권 현금화 정보 검색부터 상품 비교까지…신용카드할부상품권.com 구매 안내 대한청년일보",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "FIU·STR",
       "title": "휴대폰소액결제 상품권현금화 정보 찾는 소비자에게…신용카드할부상품권.com, 상품권 구매 안내",
-      "source": "eanews.kr",
+      "source": "얼리어답터뉴스",
       "source_url": "https://www.eanews.kr",
       "source_domain": "www.eanews.kr",
       "date": "Wed, 30 Sep 2026 05:34:43 GMT",
@@ -636,7 +648,7 @@
       "tags": [
         "AML"
       ],
-      "description": "휴대폰소액결제 상품권현금화 정보 찾는 소비자에게…신용카드할부상품권.com, 상품권 구매 안내 eanews.kr",
+      "description": "휴대폰소액결제 상품권현금화 정보 찾는 소비자에게…신용카드할부상품권.com, 상품권 구매 안내 얼리어답터뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -673,7 +685,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 04:20:48 GMT",
@@ -682,7 +694,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의 tokenpost.kr",
+      "description": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -706,7 +718,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의",
-      "source": "digitalasset.works",
+      "source": "디지털애셋",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 30 Sep 2026 03:40:00 GMT",
@@ -715,14 +727,14 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 digitalasset.works",
+      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 디지털애셋",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "영국 법원, 가상자산 사기범 2명에 85만파운드 환수 명령",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 03:38:12 GMT",
@@ -731,14 +743,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "영국 법원, 가상자산 사기범 2명에 85만파운드 환수 명령 tokenpost.kr",
+      "description": "영국 법원, 가상자산 사기범 2명에 85만파운드 환수 명령 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "SEC, 왓츠앱 가상자산·AI 사기 혐의 법인 4곳 제소",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 02:59:34 GMT",
@@ -747,7 +759,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "SEC, 왓츠앱 가상자산·AI 사기 혐의 법인 4곳 제소 tokenpost.kr",
+      "description": "SEC, 왓츠앱 가상자산·AI 사기 혐의 법인 4곳 제소 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -799,7 +811,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로",
-      "source": "news.kbs.co.kr",
+      "source": "KBS 뉴스",
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Wed, 30 Sep 2026 00:51:00 GMT",
@@ -808,7 +820,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로 news.kbs.co.kr",
+      "description": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로 KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -939,7 +951,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "중국·홍콩 경찰, 가상자산 이용 조직 적발…170여명 체포",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 29 Sep 2026 15:06:00 GMT",
@@ -947,7 +959,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "중국·홍콩 경찰, 가상자산 이용 조직 적발…170여명 체포 tokenpost.kr",
+      "description": "중국·홍콩 경찰, 가상자산 이용 조직 적발…170여명 체포 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1155,7 +1167,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "자메이카 하원, 가상자산사업자 규제 법안 심의",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 29 Sep 2026 11:06:22 GMT",
@@ -1164,7 +1176,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "자메이카 하원, 가상자산사업자 규제 법안 심의 tokenpost.kr",
+      "description": "자메이카 하원, 가상자산사업자 규제 법안 심의 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -1432,7 +1444,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "금융사기 통합대응단 출범 1년…보이스피싱 피해액 56%↓",
-      "source": "뉴스핌",
+      "source": "newspim.com",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Tue, 29 Sep 2026 07:42:00 GMT",
@@ -1440,7 +1452,7 @@
       "tags": [
         "사기"
       ],
-      "description": "금융사기 통합대응단 출범 1년…보이스피싱 피해액 56%↓ 뉴스핌",
+      "description": "금융사기 통합대응단 출범 1년…보이스피싱 피해액 56%↓ newspim.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1552,7 +1564,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "source_url": "https://www.mk.co.kr",
       "source_domain": "www.mk.co.kr",
       "date": "Tue, 29 Sep 2026 07:17:53 GMT",
@@ -1560,7 +1572,7 @@
       "tags": [
         "사기"
       ],
-      "description": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파 mk.co.kr",
+      "description": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파 매일경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1780,7 +1792,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "가상자산 거래소에 묶인 보이스피싱 피해금 263억… 1,137명에 뒤늦게 환급",
-      "source": "hankookilbo.com",
+      "source": "Hankookilbo",
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Tue, 29 Sep 2026 03:00:00 GMT",
@@ -1789,7 +1801,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "가상자산 거래소에 묶인 보이스피싱 피해금 263억… 1,137명에 뒤늦게 환급 hankookilbo.com",
+      "description": "가상자산 거래소에 묶인 보이스피싱 피해금 263억… 1,137명에 뒤늦게 환급 Hankookilbo",
       "collection_method": "google_news_24h"
     },
     {
@@ -2854,7 +2866,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한”",
-      "source": "tokenpost.kr",
+      "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sun, 27 Sep 2026 11:58:56 GMT",
@@ -2863,7 +2875,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한” tokenpost.kr",
+      "description": "럼미스 “클래리티 법안에 해외 거래소 자금세탁 차단 권한” 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
@@ -16539,19 +16551,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "추석 명절 전후 보이스피싱 피해에 주의하세요!",
-      "source": "금융감독원",
-      "date": "2026-09-20T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=229732&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "source": "금융위원회",
+      "date": "2026-09-18T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87779?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
