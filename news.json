@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-30T14:45:16.765984+00:00",
+  "updated_at": "2026-09-30T15:14:32.463124+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 11
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -115,13 +115,13 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": true,
-      "count": 10,
-      "method": "official_rss_fallback"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -415,13 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,12 +445,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
@@ -457,15 +457,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -475,15 +469,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원",
       "ok": true,
-      "count": 15,
+      "count": 14,
       "method": "official_board"
     }
   ],
@@ -496,7 +496,7 @@
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
   "count": 1080,
-  "official_count": 30,
+  "official_count": 29,
   "items": [
     {
       "region": "국내",
@@ -518,7 +518,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[커버스토리] 보이스피싱 전쟁…민관 ‘AI 방어선’ 구축",
-      "source": "컴퓨터월드",
+      "source": "comworld.co.kr",
       "source_url": "https://www.comworld.co.kr",
       "source_domain": "www.comworld.co.kr",
       "date": "Wed, 30 Sep 2026 12:10:40 GMT",
@@ -526,7 +526,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[커버스토리] 보이스피싱 전쟁…민관 ‘AI 방어선’ 구축 컴퓨터월드",
+      "description": "[커버스토리] 보이스피싱 전쟁…민관 ‘AI 방어선’ 구축 comworld.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -565,7 +565,7 @@
     {
       "region": "국내",
       "query": "불법사금융",
-      "title": "보완수사로 불법사금융 총책 적발…檢, 공판우수사례 발표",
+      "title": "보완수사로 불법사금융 총책 적발…檢 마지막 공판우수사례 발표",
       "source": "edaily.co.kr",
       "source_url": "https://www.edaily.co.kr",
       "source_domain": "www.edaily.co.kr",
@@ -574,7 +574,7 @@
       "tags": [
         "불법사금융"
       ],
-      "description": "보완수사로 불법사금융 총책 적발…檢, 공판우수사례 발표 edaily.co.kr",
+      "description": "보완수사로 불법사금융 총책 적발…檢 마지막 공판우수사례 발표 edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -615,7 +615,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 07:19:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9weWNkRDdRSm9Kc3hMQ01PbllIVUlWQ3hpcTlZemdSejBHd0tBXzBxYTRGcDJ1TzFCZDNxNUJXcUstcE5WY3FySHNIcE5FU2oxTUEzVQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aMDFPUXEwMVR1QjdMUWp1bjhjTWp5dGhUdU8yXzBwMHd2QlRaTmF6czFNc0k0dlN6eUN6Uko2SDFlcHBDRnZtcW1HWGhtbnJEWkpWTTdRbHUxYnZJUFZiTlp1NkN2VVpVNDVVTQ?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -657,7 +657,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "BNK경남은행, 2억3천만 원 보이스피싱 피해 차단",
-      "source": "브레이크뉴스",
+      "source": "breaknews.com",
       "source_url": "https://www.breaknews.com",
       "source_domain": "www.breaknews.com",
       "date": "Wed, 30 Sep 2026 06:09:49 GMT",
@@ -665,7 +665,7 @@
       "tags": [
         "사기"
       ],
-      "description": "BNK경남은행, 2억3천만 원 보이스피싱 피해 차단 브레이크뉴스",
+      "description": "BNK경남은행, 2억3천만 원 보이스피싱 피해 차단 breaknews.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -921,6 +921,21 @@
     },
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "美 '비트코인 ATM' 피싱 급증...올해 3억불 이상 털려",
+      "source": "미주조선일보",
+      "source_url": "https://chosundaily.com",
+      "source_domain": "chosundaily.com",
+      "date": "Tue, 29 Sep 2026 18:58:29 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPMkZKbklsZUJjQ244eERNUjBfQzFGZGNhWkFBSHA1NTlWUG9UWDA2dVNwTDQwWFpSYWtYMHk1a0dhWWVoWkdWanFlNFlIY2RfRHNKZEJoUTJiaU42NFVDNEhCWXQ0aEJUZi0tLXh6SE5DYVBjZ2oxb2pGdjV5SldNSGNUVEF2Q1k4UE9qZ09mN01ZXzk2ZGM4ZWFNaVhpS1YzS0w3MzJBUGJvVDlPMUh1LVN3ZklSaWR1bHhoU3FqOE5JcldxOWhiUURQelNrcUlQdDRNSTZrNA?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "美 '비트코인 ATM' 피싱 급증...올해 3억불 이상 털려 미주조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "캐나다, 자금세탁 수사 및 기소 역량 강화 촉구",
       "source": "Investing.com 한국어",
@@ -938,7 +953,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해액 '3년래 최저'…11개월째 작년보다 감소 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Tue, 29 Sep 2026 18:53:13 GMT",
@@ -946,22 +961,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 피해액 '3년래 최저'…11개월째 작년보다 감소 - 머니투데이 mt.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "美 '비트코인 ATM' 피싱 급증...올해 3억불 이상 털려",
-      "source": "미주조선일보",
-      "source_url": "https://chosundaily.com",
-      "source_domain": "chosundaily.com",
-      "date": "Tue, 29 Sep 2026 17:41:34 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQeWRFaldyTzJnNFJMNXplU3ZRbC1FclBTQVdOd2FJbmNycFMtb21VWE9kbHFYck1SRnk3TUZtR0ZKWGRoN29SSnRubGlKTGdsV3ZUdHRsX0F2Y1F2QWs3b3pCbVA4NmR1Sk9WVjRGak1FUWs4YVp4MjFfZ01CSGR4R2dlSHpXYlR3cENJWVppLWpEcTZXTkhfREoxS2ZKOFVJV2VaVFEtQXktbnVXcTVrT0lDOURsTlNBV3dGTzRCZFg4R1AxdFg1b0xCWQ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "美 '비트코인 ATM' 피싱 급증...올해 3억불 이상 털려 미주조선일보",
+      "description": "보이스피싱 피해액 '3년래 최저'…11개월째 작년보다 감소 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1046,7 +1046,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Tue, 29 Sep 2026 12:44:39 GMT",
@@ -1055,7 +1055,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 디지털데일리",
+      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1122,7 +1122,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "8년간 코인 환치기만 12조원… 전체 70% 육박, 외국인 80%는 중국인 - 머니투데이",
-      "source": "mt.co.kr",
+      "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Tue, 29 Sep 2026 11:50:55 GMT",
@@ -1131,14 +1131,14 @@
         "가상자산",
         "환치기·외환"
       ],
-      "description": "8년간 코인 환치기만 12조원… 전체 70% 육박, 외국인 80%는 중국인 - 머니투데이 mt.co.kr",
+      "description": "8년간 코인 환치기만 12조원… 전체 70% 육박, 외국인 80%는 중국인 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "제재·테러자금",
       "title": "美 상원 “이란 제재 회피에 USDT”…테더 “올해 5억5,000만달러 동결”",
-      "source": "코인리더스",
+      "source": "coinreaders.com",
       "source_url": "https://www.coinreaders.com",
       "source_domain": "www.coinreaders.com",
       "date": "Tue, 29 Sep 2026 11:13:00 GMT",
@@ -1147,7 +1147,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "美 상원 “이란 제재 회피에 USDT”…테더 “올해 5억5,000만달러 동결” 코인리더스",
+      "description": "美 상원 “이란 제재 회피에 USDT”…테더 “올해 5억5,000만달러 동결” coinreaders.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2146,7 +2146,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구",
-      "source": "bloomingbit.io",
+      "source": "블루밍비트",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Mon, 28 Sep 2026 22:19:11 GMT",
@@ -2156,7 +2156,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 bloomingbit.io",
+      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 블루밍비트",
       "collection_method": "google_news_24h"
     },
     {
@@ -17085,22 +17085,6 @@
         "자금세탁"
       ],
       "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "이찬진 금융감독원장, 가상자산사업자 CEO 간담회 개최",
-      "source": "금융감독원",
-      "date": "2026-07-03T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219050&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
-      "tags": [
-        "가상자산"
-      ],
-      "collection_method": "verified_fss_board"
     }
   ]
 }
