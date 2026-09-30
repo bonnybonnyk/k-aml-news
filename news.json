@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-09-30T03:11:01.564915+00:00",
+  "updated_at": "2026-09-30T03:43:23.386322+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 12
+      "count": 13
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "환치기·외환",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 9,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -243,13 +243,13 @@
     {
       "feed": "금융위/FIU:목록:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:목록:p2",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "direct_official_board"
     },
     {
@@ -260,14 +260,14 @@
     },
     {
       "feed": "금융위/FIU:RSS",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "official_rss_fallback"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 10,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -415,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,21 +427,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -463,12 +463,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
@@ -476,6 +470,12 @@
     },
     {
       "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,9 +495,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1064,
+  "count": 1065,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "영국 법원, 가상자산 사기범 2명에 85만파운드 환수 명령",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Wed, 30 Sep 2026 03:38:12 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1kWEtmQkVNZm1sTG9DZXVjV3pxVk45Vm9RLUFGVXFlRFlkYkpUM3doa2tCNkpDOG41LXVRRzg1dElGa0kxUk9lSFZveGtnckZUX2lJekZSNlg?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "영국 법원, 가상자산 사기범 2명에 85만파운드 환수 명령 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "가상자산 AML",
@@ -612,7 +628,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "올 상반기 사기이용계좌 6만개 육박…작년 전체의 72%",
-      "source": "조선일보",
+      "source": "chosun.com",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
       "date": "Tue, 29 Sep 2026 22:59:00 GMT",
@@ -620,14 +636,14 @@
       "tags": [
         "사기"
       ],
-      "description": "올 상반기 사기이용계좌 6만개 육박…작년 전체의 72% 조선일보",
+      "description": "올 상반기 사기이용계좌 6만개 육박…작년 전체의 72% chosun.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로",
-      "source": "news.kbs.co.kr",
+      "source": "KBS 뉴스",
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Tue, 29 Sep 2026 22:39:00 GMT",
@@ -636,7 +652,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로 news.kbs.co.kr",
+      "description": "“포기했는데”…코인거래소에 묶인 ‘보이스피싱 피해금’ 260억 원 피해자 품으로 KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -782,7 +798,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "이상금융거래탐지 도입… 보이스피싱 피해 ‘0건’ 달성",
-      "source": "조선일보",
+      "source": "chosun.com",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
       "date": "Tue, 29 Sep 2026 11:58:00 GMT",
@@ -790,7 +806,7 @@
       "tags": [
         "사기"
       ],
-      "description": "이상금융거래탐지 도입… 보이스피싱 피해 ‘0건’ 달성 조선일보",
+      "description": "이상금융거래탐지 도입… 보이스피싱 피해 ‘0건’ 달성 chosun.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -813,7 +829,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "美 상원 “이란 제재 회피에 USDT”…테더 “올해 5억5,000만달러 동결”",
-      "source": "코인리더스",
+      "source": "coinreaders.com",
       "source_url": "https://www.coinreaders.com",
       "source_domain": "www.coinreaders.com",
       "date": "Tue, 29 Sep 2026 11:13:00 GMT",
@@ -822,14 +838,14 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "美 상원 “이란 제재 회피에 USDT”…테더 “올해 5억5,000만달러 동결” 코인리더스",
+      "description": "美 상원 “이란 제재 회피에 USDT”…테더 “올해 5억5,000만달러 동결” coinreaders.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "[그래픽] 보이스피싱 피해 현황",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 29 Sep 2026 11:10:05 GMT",
@@ -837,7 +853,7 @@
       "tags": [
         "사기"
       ],
-      "description": "[그래픽] 보이스피싱 피해 현황 yna.co.kr",
+      "description": "[그래픽] 보이스피싱 피해 현황 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -954,7 +970,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 콜센터 컴퓨터 설치…대법 \"통상 영업이면 사기방조 아냐\"",
-      "source": "hankyung.com",
+      "source": "한국경제",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Tue, 29 Sep 2026 08:56:45 GMT",
@@ -962,7 +978,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 콜센터 컴퓨터 설치…대법 \"통상 영업이면 사기방조 아냐\" hankyung.com",
+      "description": "보이스피싱 콜센터 컴퓨터 설치…대법 \"통상 영업이면 사기방조 아냐\" 한국경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1075,7 +1091,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소",
-      "source": "YTN",
+      "source": "ytn.co.kr",
       "source_url": "https://www.ytn.co.kr",
       "source_domain": "www.ytn.co.kr",
       "date": "Tue, 29 Sep 2026 08:31:00 GMT",
@@ -1083,7 +1099,7 @@
       "tags": [
         "사기"
       ],
-      "description": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소 YTN",
+      "description": "통합대응단 출범 1년...보이스피싱 피해액 56% 감소 ytn.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1211,7 +1227,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 8월 피해액 257억원으로 2023년 이후 최저",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
@@ -1219,7 +1235,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 8월 피해액 257억원으로 2023년 이후 최저 yna.co.kr",
+      "description": "보이스피싱 8월 피해액 257억원으로 2023년 이후 최저 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1408,7 +1424,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "경찰, 가상자산 거래소에 묶인 피싱 피해금 263억원 되찾아줘",
-      "source": "조선일보",
+      "source": "chosun.com",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
       "date": "Tue, 29 Sep 2026 04:54:48 GMT",
@@ -1416,7 +1432,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "경찰, 가상자산 거래소에 묶인 피싱 피해금 263억원 되찾아줘 조선일보",
+      "description": "경찰, 가상자산 거래소에 묶인 피싱 피해금 263억원 되찾아줘 chosun.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2163,7 +2179,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 07:47:39 GMT",
@@ -2172,7 +2188,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 yna.co.kr",
+      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
