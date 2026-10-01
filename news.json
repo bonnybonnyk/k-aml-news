@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-01T03:11:13.336949+00:00",
+  "updated_at": "2026-10-01T03:43:42.623203+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 23
+      "count": 24
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 3
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "불법도박",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "차명계좌",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -403,13 +403,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,21 +439,15 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -463,7 +457,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -483,9 +483,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1113,
+  "count": 1117,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "해외 총책부터 1.5조 돈세탁까지 잡았다…합수단 4년 성과와 남은 과제",
+      "source": "ppss.kr",
+      "source_url": "https://www.ppss.kr",
+      "source_domain": "www.ppss.kr",
+      "date": "Thu, 01 Oct 2026 03:00:37 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAtbHYzTmpVam1tNUtVbXE1X2hMNFRGYkg3Z3VfZngtWWZ2c3RYOWVadDE1ZnRFbm5nYk5sZkl0QjRSd3pWa3hIbDNOeEtZNmlTYS1nOUx2N2ppaVZxTElwZGNOZ2k?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "해외 총책부터 1.5조 돈세탁까지 잡았다…합수단 4년 성과와 남은 과제 ppss.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "횡령·배임",
@@ -519,17 +534,47 @@
     },
     {
       "region": "국내",
+      "query": "횡령·배임",
+      "title": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정",
+      "source": "서울경제",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
+      "date": "Thu, 01 Oct 2026 02:27:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1jR2NZNFFWNVhyaEFxYUtINlBERlc1UWNaLVdCZFJwbjFXdzNwT1dsUTJBQ0dOeml5Y1Q2bHFuU0RfMUZwWThscEYzLUlOVHlVTHfSAVNBVV95cUxONGl4ZU44NEhib29ERjhWNnhKRDZyYWZiOWd0X3Rrb254TEJ3bTZGNG56aWRxdFBITktmRVdRX0dBY3hLOHFieGgyeFk5MnhQeWhYUQ?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정 서울경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Thu, 01 Oct 2026 02:28:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBUSUlIM0lXNDgzcnlYbHhXcjhmN0p1RWphdFFMZGpIa3lNOEdlNnBGSkpJUlFsVTdFWmlOb2lEdUxrcE5xWFAzM2ZjaEhQYUk?oc=5",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Thu, 01 Oct 2026 02:26:13 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FVFg5Smw3NldlcHlBMnI2U1RMSmRnMDctMl9FLTV6S1FTdTBrbFg2Q0t4NlotQzhObUdLdTZmTmdMLXRQekJtNGR1YnpiZGRsZUdpanZoZXN2YmRjYzJRQ9IBYEFVX3lxTE5FVFg5Smw3NldlcHlBMnI2U1RMSmRnMDctMl9FLTV6S1FTdTBrbFg2Q0t4NlotQzhObUdLdTZmTmdMLXRQekJtNGR1YnpiZGRsZUdpanZoZXN2YmRjYzJRQw?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 v.daum.net",
+      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "쌀·과일 판다며 속인 1161건…뒤에 자금세탁 조직 있었다",
+      "source": "서울경제",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
+      "date": "Thu, 01 Oct 2026 02:22:51 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE95SWN0R3R5Sm5xLXhaRi0tWXFGRTBqQWtockxocXF1NWUzWmtlQ3B5eFh3M3hNQ0Rrd1ZtcXpGU3JjRjBPaXdpTDlLWnpac0MwZ2fSAVNBVV95cUxOa19JQXR2WmpDckxGZGVpeEJfWnFwZWZlQk5sN2d1SDFZZ1FaajAyUTRTdmFTQVBlNzhLVGJGMlMtSnpaUm5QMmZFWlFMcUNDcmN5UQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "쌀·과일 판다며 속인 1161건…뒤에 자금세탁 조직 있었다 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -599,7 +644,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수단 “4년간 1,381명 입건 성과”",
-      "source": "news.kbs.co.kr",
+      "source": "KBS 뉴스",
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Thu, 01 Oct 2026 02:11:00 GMT",
@@ -607,7 +652,7 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수단 “4년간 1,381명 입건 성과” news.kbs.co.kr",
+      "description": "서울동부지검 보이스피싱 합수단 “4년간 1,381명 입건 성과” KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -645,7 +690,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "사이버사기 범죄수익금(피해자 1,161명, 4.3억원)을 조직적으로 세탁한 일당 8명 검거 구속",
-      "source": "뉴스데일리",
+      "source": "newsdaily.kr",
       "source_url": "https://www.newsdaily.kr",
       "source_domain": "www.newsdaily.kr",
       "date": "Thu, 01 Oct 2026 01:57:24 GMT",
@@ -654,7 +699,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "사이버사기 범죄수익금(피해자 1,161명, 4.3억원)을 조직적으로 세탁한 일당 8명 검거 구속 뉴스데일리",
+      "description": "사이버사기 범죄수익금(피해자 1,161명, 4.3억원)을 조직적으로 세탁한 일당 8명 검거 구속 newsdaily.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -680,7 +725,7 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Thu, 01 Oct 2026 01:54:23 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBrcTdaeEttX2Y0RHFLSkpBVjFjaGVVT213NUNoMmRhYk5QVTgxTzRqV0ZveUtPOGdSTkRMai1PUmU2M1VCUmM2OUcwallBbHJwZG9ZZGJaWDUyTjdMa08tVzhqb0JBWmM0cEN5T3hYbTDSAXBBVV95cUxQa3E3WnhLbV9mNERxS0pKQVYxY2hlVU9tdzVDaDJkYWJOUFU4MU80aldGb3lLTzhnUk5ETGotT1JlNjNVQlJjNjlHMGpZQWxycGRvWWRiWlg1Mk43TGtPLVc4am9CQVpjNHBDeU94WG0w?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE54QVhTanQ2NFFFdjdYUUhUdTFnUVNvZGZRQUVGc2ZLU204RXcwYTBQMklSbmdOTzZld0JqWnV1QlAzLUczTWxyaXdmYUREeHo5Zi1zeWVJSWtwc1lscWFsbFg5QnB4TGRmYWNabDZ4b095dlhBNHFBRNIBfkFVX3lxTE1jWUZ2d2JLaVVpM1lBcmNxX0c3eENtcHpqZ1I4b3ItQnZRaVEwckRyYXl1Z3pwZTJldHZUZkNFTzJvSHpQSVhvaHgzTFc2dHVNelRWWmNVd2lORXFfb0lDbDliUnVqYTNkWTgzUDd0NXBSZUJFRmlqUjE0UjExQQ?oc=5",
       "tags": [
         "탈세",
         "횡령·배임"
@@ -754,10 +799,10 @@
       "query": "자금세탁",
       "title": "\"사기 돈 세탁해드립니다\"…범죄수익 4억3000만원 세탁 일당 구속 송치",
       "source": "경남신문",
-      "source_url": "https://m.knnews.co.kr",
-      "source_domain": "m.knnews.co.kr",
+      "source_url": "http://www.knnews.co.kr",
+      "source_domain": "www.knnews.co.kr",
       "date": "Thu, 01 Oct 2026 01:22:11 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1LNktBY3p1c1hFZmszSGhrS3hPS2VFUjFaZHlGQ2JuM0FSc2w4S1FHVmRlVGswOVRWZGxsWDhUZlhxdmFIdDVPd05aVlEwRHAwQWhxZl9jaFIwUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5FY0pMRWd5T0hBYThPTDhUMGJJelZkU3NFeXE2YWEzcjhUSmdwLXRVSHFOdlBNOURXQVA4bEJXUl85Z1daNjN3YjUyOFlkNTVnbllFVjN4R2dPWEFzLW5TeDd1dm0tNkZCWE9JYVBnVFRycnc?oc=5",
       "tags": [
         "사기",
         "자금세탁"
@@ -770,10 +815,10 @@
       "query": "보이스피싱",
       "title": "인천 보이스피싱, 지난해 대비 55.9% 뚝…피해액도 60%↓",
       "source": "뉴시스",
-      "source_url": "https://www.newsis.com",
-      "source_domain": "www.newsis.com",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Thu, 01 Oct 2026 01:11:27 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBob3R5YWpGLXBxWC10ZkFTSXVmTGI0WXBXVEtKQnhDeUZhOXRreGJpcXQzYXV1ZGthWGxzOE9YdjNZN3RndGpQcVlYdjZybjNuUzdNR25EaEFLWDFTR01radIBeEFVX3lxTE9oYmxzRDZNTlFkVTdWdzljVTBtZU9kbWdpSGpOeU5XaXBhUVdGMURJSnRkaFp2VGFKTldMbVhUVXRJZWZpbW1KdmgxOU9IMlFuSW05azcwRm9BemdoUTdRZmtWdldBOURHMEppa1B2RUxIVUI3em9nag?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9oYmxzRDZNTlFkVTdWdzljVTBtZU9kbWdpSGpOeU5XaXBhUVdGMURJSnRkaFp2VGFKTldMbVhUVXRJZWZpbW1KdmgxOU9IMlFuSW05azcwRm9BemdoUTdRZmtWdldBOURHMEppa1B2RUxIVUI3em9natIBeEFVX3lxTE9oYmxzRDZNTlFkVTdWdzljVTBtZU9kbWdpSGpOeU5XaXBhUVdGMURJSnRkaFp2VGFKTldMbVhUVXRJZWZpbW1KdmgxOU9IMlFuSW05azcwRm9BemdoUTdRZmtWdldBOURHMEppa1B2RUxIVUI3em9nag?oc=5",
       "tags": [
         "사기"
       ],
@@ -798,6 +843,21 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 합수부 출범 4년…1381명 입건",
+      "source": "christiandaily.co.kr",
+      "source_url": "https://www.christiandaily.co.kr",
+      "source_domain": "www.christiandaily.co.kr",
+      "date": "Thu, 01 Oct 2026 01:03:49 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0wMk1BeElNMzFIN1Nzc0ctZnFiTU9NZVlsUmRIOUl3RVgzVE9Lc1Fvc05qWUpHNG1qSkltUS1UV3JLNEpVZWsxMTRqX3k3TjR1ZDF3Qlg0NNIBXEFVX3lxTE55bnpDSlBJLWdhVG9rMkFWZFg5VG1PUGdEZU9TUlBjSE16a0JtMFBrcnF6M3BSYjB5N2tFTjhhQXIzd0lEeFpRM3kzMDFXRHctRU1FcE55WlEzOURh?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 합수부 출범 4년…1381명 입건 christiandaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "범죄수익",
       "title": "보이스피싱 합수단, 4년간 526명 구속 기소…360억 범죄수익 환수",
       "source": "한국경제",
@@ -817,10 +877,10 @@
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소",
       "source": "뉴시스",
-      "source_url": "https://www.newsis.com",
-      "source_domain": "www.newsis.com",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Thu, 01 Oct 2026 00:51:22 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9tU0puM21ueEtBOXlSakJfRDY5cUdOeElKWWQyTThORDQwZGZZbEhsaUwxNDRoXzNlZFF1MC0zUEJOZTV6QUg3SG9sd0pNSzVBRy04TUpFSzJEYkhrUVJtdNIBeEFVX3lxTE5wVF91eTAwbC1kRmpRVGdjcW1uRXBQVjc5S3RkNy1HaHQ4VGJ2WEdTeGhrTUVWbVUzaEhIZVFsdHBKSWFNODVpUTVZZmhKTWNfdjJYeHdiLTBYcHZYV3luaEt4dFlMNGlWdG45V3JuUzFOMVpGcS0taA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5wVF91eTAwbC1kRmpRVGdjcW1uRXBQVjc5S3RkNy1HaHQ4VGJ2WEdTeGhrTUVWbVUzaEhIZVFsdHBKSWFNODVpUTVZZmhKTWNfdjJYeHdiLTBYcHZYV3luaEt4dFlMNGlWdG45V3JuUzFOMVpGcS0taNIBeEFVX3lxTE5wVF91eTAwbC1kRmpRVGdjcW1uRXBQVjc5S3RkNy1HaHQ4VGJ2WEdTeGhrTUVWbVUzaEhIZVFsdHBKSWFNODVpUTVZZmhKTWNfdjJYeHdiLTBYcHZYV3luaEt4dFlMNGlWdG45V3JuUzFOMVpGcS0taA?oc=5",
       "tags": [
         "사기"
       ],
@@ -926,7 +986,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 23:38:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBudzRCSjJOcTl4ZV9UeUpjSXVvYWNsMnRvdnJLNko0Rm4zUzdTdUhrRDRjanhySnZDUm1qM3dxaW1BZ19yM1ZySjdXeGttOWROemtzZDZDMzdkY2thQlh0SXBtdXFtbjU2X3FiVlpTdGJ3dXhYdzlQWExLc1FOeEE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBBaXI5RGVxUW1yODRZeW5xZldtTDhKR1VSVGlsOWF2TzYxQkJkc0tNbFRpTHljd3huUUw3cWNCa0o4U0h4WmxyVERGbTdwMUNBY2lEWQ?oc=5",
       "tags": [
         "사기"
       ],
@@ -1030,7 +1090,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까?",
-      "source": "블록미디어",
+      "source": "blockmedia.co.kr",
       "source_url": "https://www.blockmedia.co.kr",
       "source_domain": "www.blockmedia.co.kr",
       "date": "Wed, 30 Sep 2026 09:00:24 GMT",
@@ -1040,7 +1100,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? 블록미디어",
+      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? blockmedia.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1062,7 +1122,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소",
-      "source": "news.kbs.co.kr",
+      "source": "KBS 뉴스",
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Wed, 30 Sep 2026 08:04:00 GMT",
@@ -1070,7 +1130,7 @@
       "tags": [
         "사기"
       ],
-      "description": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소 news.kbs.co.kr",
+      "description": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소 KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1509,7 +1569,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "변호사•회계사에게도 자금세탁방지 의무",
-      "source": "brunch.co.kr",
+      "source": "브런치",
       "source_url": "https://brunch.co.kr",
       "source_domain": "brunch.co.kr",
       "date": "Tue, 29 Sep 2026 13:12:14 GMT",
@@ -1518,7 +1578,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "변호사•회계사에게도 자금세탁방지 의무 brunch.co.kr",
+      "description": "변호사•회계사에게도 자금세탁방지 의무 브런치",
       "collection_method": "google_news_24h"
     },
     {
@@ -1557,7 +1617,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Tue, 29 Sep 2026 12:44:39 GMT",
@@ -1566,7 +1626,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 디지털데일리",
+      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1726,7 +1786,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "‘코인 환치기’ 적발액 8년여간 12조원…외국인 피의자 80% 중국인",
-      "source": "biz.heraldcorp.com",
+      "source": "헤럴드경제",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Tue, 29 Sep 2026 10:52:53 GMT",
@@ -1735,7 +1795,7 @@
         "가상자산",
         "환치기·외환"
       ],
-      "description": "‘코인 환치기’ 적발액 8년여간 12조원…외국인 피의자 80% 중국인 biz.heraldcorp.com",
+      "description": "‘코인 환치기’ 적발액 8년여간 12조원…외국인 피의자 80% 중국인 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -3166,7 +3226,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "불법 외환거래 7년간 20조 적발…올해만 5조 육박",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Mon, 28 Sep 2026 04:17:31 GMT",
@@ -3174,7 +3234,7 @@
       "tags": [
         "AML"
       ],
-      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 imaeil.com",
+      "description": "불법 외환거래 7년간 20조 적발…올해만 5조 육박 매일신문",
       "collection_method": "google_news_24h"
     },
     {
