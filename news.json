@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T08:44:09.065820+00:00",
+  "updated_at": "2026-10-01T09:12:41.639700+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -25,7 +25,7 @@
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "트래블룰",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 27
+      "count": 28
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "투자사기",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 8,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -415,13 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,7 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,15 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,23 +495,38 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1133,
+  "count": 1134,
   "official_count": 30,
   "items": [
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해”",
+      "source": "IT조선",
+      "source_url": "https://it.chosun.com",
+      "source_domain": "it.chosun.com",
+      "date": "Thu, 01 Oct 2026 08:55:32 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE14NUR5ZjZzWjZlX2NwekdEaTJmNUpmUF93OEJ1ZHNHUE1aak1wUmNpYlQ4Vm93WHIxN0U5X0txRnhpMzc2X2ZzeTR3QjJsbXp6VzRLSV9YMXRMek1DS1BFT1k0RmN3ZmtMV3Q0WWFfM1jSAXRBVV95cUxPODE5NDFYcWU0ZzdzZ3ZxbGU0eldoT1BIMzZlRVc1WUlHYUduX3hHNjZlS25kdDdpTVZQTjdXTVpmU1M4by02VHB5NUlMRG9jZi1OeFZBYndmWGQwWndEczRveXU4ZDB1bjc3bzdkQnNjeGxnOQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해” IT조선",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Thu, 01 Oct 2026 08:31:57 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE40cmF4bTJmWXEyNElDSVEtelJJSzRaMU9oamUycXhIM2dDUUxJVkhLbDBtQ0RZTmhuR3VnVlVrenpld2s1VTR5R2tmX2ZvczA?oc=5",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Thu, 01 Oct 2026 08:30:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9NUTNYU1hIT1VJQ2FxbGhRTTlvaC1ScXV3TDFYM1BVMG9Yb2JRVHl0OXVYVTZnaEt1Wmk4cXBHSXBobThvZlJpTXctdzYtOUV2SWJSQ2VCWjBzZ3BaTWfSAWNBVV95cUxOTzlKNURaMzRNZTdyd2RjSVlNWTlVUWdpeW5ZWHN3UkF2UXRoUlZLQ3EtY09WOEl1V1lWQzVnSktGX2s3aEtfNnFGTFZfdDBjYlBHbnI3aVpRNEM1WWpFSy0yQWc?oc=5",
       "tags": [
         "가상자산",
         "사기"
       ],
-      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 v.daum.net",
+      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -642,7 +657,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수부 활동 마무리…4년간 1381명 입건·360억 환수",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://m.sedaily.com",
       "source_domain": "m.sedaily.com",
       "date": "Thu, 01 Oct 2026 05:08:05 GMT",
@@ -650,7 +665,7 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수부 활동 마무리…4년간 1381명 입건·360억 환수 sedaily.com",
+      "description": "서울동부지검 보이스피싱 합수부 활동 마무리…4년간 1381명 입건·360억 환수 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -749,7 +764,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://m.sedaily.com",
       "source_domain": "m.sedaily.com",
       "date": "Thu, 01 Oct 2026 02:27:50 GMT",
@@ -757,7 +772,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정 sedaily.com",
+      "description": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -779,7 +794,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "쌀·과일 판다며 속인 1161건…뒤에 자금세탁 조직 있었다",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Thu, 01 Oct 2026 02:22:51 GMT",
@@ -787,7 +802,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "쌀·과일 판다며 속인 1161건…뒤에 자금세탁 조직 있었다 sedaily.com",
+      "description": "쌀·과일 판다며 속인 1161건…뒤에 자금세탁 조직 있었다 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -857,7 +872,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수단 “4년간 1,381명 입건 성과”",
-      "source": "news.kbs.co.kr",
+      "source": "KBS 뉴스",
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Thu, 01 Oct 2026 02:11:00 GMT",
@@ -865,7 +880,7 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수단 “4년간 1,381명 입건 성과” news.kbs.co.kr",
+      "description": "서울동부지검 보이스피싱 합수단 “4년간 1,381명 입건 성과” KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -919,7 +934,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "檢 보이스피싱 합수단 “4년간 526명 구속·범죄 수익 360억 환수” - 조선비즈",
-      "source": "Chosunbiz",
+      "source": "biz.chosun.com",
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Thu, 01 Oct 2026 01:56:00 GMT",
@@ -927,7 +942,7 @@
       "tags": [
         "사기"
       ],
-      "description": "檢 보이스피싱 합수단 “4년간 526명 구속·범죄 수익 360억 환수” - 조선비즈 Chosunbiz",
+      "description": "檢 보이스피싱 합수단 “4년간 526명 구속·범죄 수익 360억 환수” - 조선비즈 biz.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1121,7 +1136,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "보이스피싱 합수단, 4년간 526명 구속 기소…360억 범죄수익 환수",
-      "source": "한국경제",
+      "source": "hankyung.com",
       "source_url": "https://www.hankyung.com",
       "source_domain": "www.hankyung.com",
       "date": "Thu, 01 Oct 2026 00:52:09 GMT",
@@ -1130,7 +1145,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "보이스피싱 합수단, 4년간 526명 구속 기소…360억 범죄수익 환수 한국경제",
+      "description": "보이스피싱 합수단, 4년간 526명 구속 기소…360억 범죄수익 환수 hankyung.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1273,7 +1288,7 @@
       "region": "국내",
       "query": "지갑·해외거래소",
       "title": "앱 바꿔 또 국내 영업...미신고 코인거래소 BTCC, 지갑 앱서 거래 재개",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Wed, 30 Sep 2026 21:05:00 GMT",
@@ -1281,7 +1296,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "앱 바꿔 또 국내 영업...미신고 코인거래소 BTCC, 지갑 앱서 거래 재개 sedaily.com",
+      "description": "앱 바꿔 또 국내 영업...미신고 코인거래소 BTCC, 지갑 앱서 거래 재개 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1398,7 +1413,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소",
-      "source": "news.kbs.co.kr",
+      "source": "KBS 뉴스",
       "source_url": "https://news.kbs.co.kr",
       "source_domain": "news.kbs.co.kr",
       "date": "Wed, 30 Sep 2026 08:04:00 GMT",
@@ -1406,7 +1421,7 @@
       "tags": [
         "사기"
       ],
-      "description": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소 news.kbs.co.kr",
+      "description": "‘eSIM 판매해 고수익 보장’ 대포통장 모집책 구속기소 KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1444,7 +1459,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Wed, 30 Sep 2026 06:34:50 GMT",
@@ -1452,7 +1467,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개 sedaily.com",
+      "description": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -2459,7 +2474,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "source_url": "https://m.mk.co.kr",
       "source_domain": "m.mk.co.kr",
       "date": "Tue, 29 Sep 2026 07:17:53 GMT",
@@ -2467,7 +2482,7 @@
       "tags": [
         "사기"
       ],
-      "description": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파 mk.co.kr",
+      "description": "전화·문자로 당했다...보이스피싱 피해액 1조원 돌파 매일경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -2534,7 +2549,7 @@
       "region": "국내",
       "query": "환치기·외환",
       "title": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈",
-      "source": "Chosunbiz",
+      "source": "biz.chosun.com",
       "source_url": "https://biz.chosun.com",
       "source_domain": "biz.chosun.com",
       "date": "Tue, 29 Sep 2026 05:16:00 GMT",
@@ -2543,7 +2558,7 @@
         "가상자산",
         "환치기·외환"
       ],
-      "description": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈 Chosunbiz",
+      "description": "[단독] 코인 환치기 외국인 피의자 10명 중 8명 중국인 - 조선비즈 biz.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
