@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-10-01T04:11:21.036703+00:00",
+  "updated_at": "2026-10-01T04:44:15.486313+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 8
+      "count": 10
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 8
+      "count": 10
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -55,12 +55,12 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "탈세",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -91,13 +91,13 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 10,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,15 +260,9 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -403,13 +397,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,21 +415,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -445,7 +427,31 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -454,18 +460,6 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -613,7 +607,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘활동 종료’ 앞둔 보이스피싱 합수부, 4년간 526명 구속·환수액 360억",
-      "source": "JTBC",
+      "source": "news.jtbc.co.kr",
       "source_url": "https://news.jtbc.co.kr",
       "source_domain": "news.jtbc.co.kr",
       "date": "Thu, 01 Oct 2026 02:14:00 GMT",
@@ -621,7 +615,7 @@
       "tags": [
         "사기"
       ],
-      "description": "‘활동 종료’ 앞둔 보이스피싱 합수부, 4년간 526명 구속·환수액 360억 JTBC",
+      "description": "‘활동 종료’ 앞둔 보이스피싱 합수부, 4년간 526명 구속·환수액 360억 news.jtbc.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -690,7 +684,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "사이버사기 범죄수익금(피해자 1,161명, 4.3억원)을 조직적으로 세탁한 일당 8명 검거 구속",
-      "source": "newsdaily.kr",
+      "source": "뉴스데일리",
       "source_url": "https://www.newsdaily.kr",
       "source_domain": "www.newsdaily.kr",
       "date": "Thu, 01 Oct 2026 01:57:24 GMT",
@@ -699,7 +693,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "사이버사기 범죄수익금(피해자 1,161명, 4.3억원)을 조직적으로 세탁한 일당 8명 검거 구속 newsdaily.kr",
+      "description": "사이버사기 범죄수익금(피해자 1,161명, 4.3억원)을 조직적으로 세탁한 일당 8명 검거 구속 뉴스데일리",
       "collection_method": "google_news_24h"
     },
     {
@@ -986,7 +980,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 23:38:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBudzRCSjJOcTl4ZV9UeUpjSXVvYWNsMnRvdnJLNko0Rm4zUzdTdUhrRDRjanhySnZDUm1qM3dxaW1BZ19yM1ZySjdXeGttOWROemtzZDZDMzdkY2thQlh0SXBtdXFtbjU2X3FiVlpTdGJ3dXhYdzlQWExLc1FOeEE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBBaXI5RGVxUW1yODRZeW5xZldtTDhKR1VSVGlsOWF2TzYxQkJkc0tNbFRpTHljd3huUUw3cWNCa0o4U0h4WmxyVERGbTdwMUNBY2lEWQ?oc=5",
       "tags": [
         "사기"
       ],
@@ -1291,7 +1285,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의",
-      "source": "digitalasset.works",
+      "source": "디지털애셋",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 30 Sep 2026 03:40:00 GMT",
@@ -1300,7 +1294,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 digitalasset.works",
+      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 디지털애셋",
       "collection_method": "google_news_24h"
     },
     {
@@ -1633,7 +1627,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편",
-      "source": "ddaily.co.kr",
+      "source": "디지털데일리",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Tue, 29 Sep 2026 12:44:39 GMT",
@@ -1642,7 +1636,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 ddaily.co.kr",
+      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 디지털데일리",
       "collection_method": "google_news_24h"
     },
     {
