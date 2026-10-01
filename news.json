@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-01T00:49:08.437799+00:00",
+  "updated_at": "2026-10-01T01:11:50.332936+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 3
+      "count": 5
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 0
+      "count": 3
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 13
+      "count": 14
     },
     {
       "feed": "불법사금융",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 5,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -403,7 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -415,19 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -436,12 +442,6 @@
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -454,6 +454,12 @@
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -477,9 +483,87 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1086,
+  "count": 1091,
   "official_count": 29,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "사이버사기 범죄수익금을 조직적으로 세탁한 일당 8명 및 계좌제공자 12명 검거",
+      "source": "로이슈",
+      "source_url": "https://www.lawissue.co.kr",
+      "source_domain": "www.lawissue.co.kr",
+      "date": "Thu, 01 Oct 2026 01:04:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9kLXU2QndXcy1DTnV6V0ROVjNnakdaMEVIMUlJWk1YLU5OSUxUZkoycjJnS3JUQ3Vic1hQbTl4ZDE5SW9NRm9XYnBwenNGeDdVRk0tZk5Td0RBbjY3dXJQazJ4cmJIanNBdFJCWDZmMlQ0bTBsNGpBR1hB?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "사이버사기 범죄수익금을 조직적으로 세탁한 일당 8명 및 계좌제공자 12명 검거 로이슈",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "보이스피싱 합수단, 4년간 526명 구속 기소…360억 범죄수익 환수",
+      "source": "한국경제",
+      "source_url": "https://www.hankyung.com",
+      "source_domain": "www.hankyung.com",
+      "date": "Thu, 01 Oct 2026 00:52:09 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ZdHdKaHpCMGFuTW5SWDlhQi1ZLWt5UVhMdlpYTWJuME5PSnRPUFZXQlJrRXp1T0pzUERNN0NpZnZtR3AtWXFRMHVsN1VPT3dNRzVkZERpQVRZdw?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "보이스피싱 합수단, 4년간 526명 구속 기소…360억 범죄수익 환수 한국경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Thu, 01 Oct 2026 00:51:22 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9tU0puM21ueEtBOXlSakJfRDY5cUdOeElKWWQyTThORDQwZGZZbEhsaUwxNDRoXzNlZFF1MC0zUEJOZTV6QUg3SG9sd0pNSzVBRy04TUpFSzJEYkhrUVJtdNIBeEFVX3lxTE5wVF91eTAwbC1kRmpRVGdjcW1uRXBQVjc5S3RkNy1HaHQ4VGJ2WEdTeGhrTUVWbVUzaEhIZVFsdHBKSWFNODVpUTVZZmhKTWNfdjJYeHdiLTBYcHZYV3luaEt4dFlMNGlWdG45V3JuUzFOMVpGcS0taA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 뉴시스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\"",
+      "source": "연합뉴스 한민족센터",
+      "source_url": "https://www.koreancenter.or.kr",
+      "source_domain": "www.koreancenter.or.kr",
+      "date": "Thu, 01 Oct 2026 00:50:35 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9mSGxyNGVSaHNxSWRrblphM051VE5JYkFjY05QRXhjVTJwVDVTR0pFTkxDcG9PcUE0Y21ZaGpvTUpPeHFPNjhGRHZuZlRQRTFmWmtQb0xMV3lHOHRNYk9FdUdLV01yM0pJb2RDWWNCSGNmbjA5?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" 연합뉴스 한민족센터",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "ESMA, 사기성 웹사이트 차단·가상자산 동결 권한 요구",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Thu, 01 Oct 2026 00:48:38 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12MWFINGdSc2Jtc1dVbGJiaUZpamM5Nm5acHVNdjhNRDhETW53VzQyQ2dKcHVwT1BYaDlIak5mQk0xQlItSzliaHFoQ1ZRUFQ5VEU0U3M1MG4?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "ESMA, 사기성 웹사이트 차단·가상자산 동결 권한 요구 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -791,7 +875,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 피해금, 코인 거래소서 263억 환급… 다음 달부터 제도 개선:경찰연합신문",
-      "source": "koreapolicenews.com",
+      "source": "경찰연합신문",
       "source_url": "https://www.koreapolicenews.com",
       "source_domain": "www.koreapolicenews.com",
       "date": "Wed, 30 Sep 2026 03:56:00 GMT",
@@ -801,7 +885,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "보이스피싱 피해금, 코인 거래소서 263억 환급… 다음 달부터 제도 개선:경찰연합신문 koreapolicenews.com",
+      "description": "보이스피싱 피해금, 코인 거래소서 263억 환급… 다음 달부터 제도 개선:경찰연합신문 경찰연합신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1866,7 +1950,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화",
-      "source": "위키트리",
+      "source": "wikitree.co.kr",
       "source_url": "https://www.wikitree.co.kr",
       "source_domain": "www.wikitree.co.kr",
       "date": "Tue, 29 Sep 2026 03:03:00 GMT",
@@ -1875,7 +1959,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화 위키트리",
+      "description": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화 wikitree.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2219,7 +2303,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구",
-      "source": "블루밍비트",
+      "source": "bloomingbit.io",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Mon, 28 Sep 2026 22:19:11 GMT",
@@ -2229,7 +2313,7 @@
         "제재·테러자금",
         "자금세탁"
       ],
-      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 블루밍비트",
+      "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 bloomingbit.io",
       "collection_method": "google_news_24h"
     },
     {
@@ -2546,7 +2630,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Mon, 28 Sep 2026 07:47:39 GMT",
@@ -2555,7 +2639,7 @@
         "가상자산",
         "마약"
       ],
-      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 연합뉴스",
+      "description": "마약사건 수사 시 압수한 비트코인 가로챈 경찰관 기소 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
