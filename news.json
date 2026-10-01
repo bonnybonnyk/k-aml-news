@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T07:43:15.498834+00:00",
+  "updated_at": "2026-10-01T08:12:41.000887+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 13
+      "count": 14
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 25
+      "count": 26
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -91,13 +91,13 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 10,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -242,20 +242,32 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
@@ -403,7 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -415,25 +433,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,15 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -483,9 +495,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1128,
+  "count": 1132,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "보이스피싱 합동수사단, 4년간 526명 구속 기소…범죄수익 360억원 환수",
+      "source": "뉴스핌",
+      "source_url": "https://www.newspim.com",
+      "source_domain": "www.newspim.com",
+      "date": "Thu, 01 Oct 2026 07:52:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAwWklNT0MtcDU0OGc5aGdfUUxzTTlPZDdGZnpTNnJ3V0FZc2tTbEJFZl9HaTRsaEo5NXJuSDdNTW5CeTVtaHd2dEkyZDdYNnZZd2k4T3hfbkhwZE9B?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "보이스피싱 합동수사단, 4년간 526명 구속 기소…범죄수익 360억원 환수 뉴스핌",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -522,7 +550,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "[단독] 檢 \"범죄수익 가상자산 조기동결 위해 특금법 개정해야\"",
-      "source": "디지털애셋",
+      "source": "digitalasset.works",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Thu, 01 Oct 2026 06:00:00 GMT",
@@ -531,7 +559,22 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "[단독] 檢 \"범죄수익 가상자산 조기동결 위해 특금법 개정해야\" 디지털애셋",
+      "description": "[단독] 檢 \"범죄수익 가상자산 조기동결 위해 특금법 개정해야\" digitalasset.works",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "[모·디·세] AI 입은 보이스피싱",
+      "source": "메가경제",
+      "source_url": "https://m.megaeconomy.co.kr",
+      "source_domain": "m.megaeconomy.co.kr",
+      "date": "Thu, 01 Oct 2026 05:42:24 GMT",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5NSHMweUZWUlBvLWVoYVpPNnlQb0EzNmN5OEZUN211YXhReWFlOUhPckZmaWJiTDBwVW43VGVQbnBiMW8zdnVPTDRpdVVDN2pMcTMwMVplR3FXMVI2T1NseXlqMDJlXzR6S2pRcXlzeGZ1d9IBckFVX3lxTE5NSHMweUZWUlBvLWVoYVpPNnlQb0EzNmN5OEZUN211YXhReWFlOUhPckZmaWJiTDBwVW43VGVQbnBiMW8zdnVPTDRpdVVDN2pMcTMwMVplR3FXMVI2T1NseXlqMDJlXzR6S2pRcXlzeGZ1dw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[모·디·세] AI 입은 보이스피싱 메가경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -542,11 +585,26 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Thu, 01 Oct 2026 05:27:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9RclRwODFkMUFnU2pBMzhUaUpPVkZScFNuRExIODBSSEt1YWo2MTgwYnZtWHg4akF6cTZabkJLMjVQMGUtQ1ZrQ2VreFd0eEpOTzJIemNZQlBld010UVBfaWEtVGNhMmxBWG84X2ZkTkXSAXBBVV95cUxPUXJUcDgxZDFBZ1NqQTM4VGlKT1ZGUnBTbkRMSDgwUkhLdWFqNjE4MGJ2bVh4OGpBenE2Wm5CSzI1UDBlLUNWa0Nla3hXdHhKTk8ySHpjWUJQZXdNdFFQX2lhLVRjYTJsQVhvOF9mZE5F?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9Hbi1uZ1dxVm0wclNWSU5DcmxYLWxPRzdmRV9WZFpYMXBKcWhBNURkWjBYVzVVWGNFWkhIOEE5RFJxRjhkN2R2ZDNydzBTNWExcVIzQVI4N09pRTl5bDdsS1RZYU5mc3ZSaWJnQ1ZjXzJ3ZUdmUUxKdtIBfkFVX3lxTE5sLXBMMEpOdWwxZng2XzFVazFmRU81R0xjWHFOYWZpQ1FXYy15ZWxkcU5iOFFjMDJLNVRGOHplaDJiUUVqSGFlVERxUkZuMFZROHpJSXZ1WS1hdzlFZHBsVUoyWVN5SXNZN0RsYWRjSkxyQzVhbVZmVkFUSHFZdw?oc=5",
       "tags": [
         "사기"
       ],
       "description": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소 - 머니투데이 머니투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소",
+      "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
+      "date": "Thu, 01 Oct 2026 05:27:25 GMT",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjWHBsdmVyZENEcjV0Y2Y5YzRLVWJjRnhueGlUSEVCWW1ieGpqZWhyUjEyNjF2WUk5UFVWamdwSXpjenRtSGJyMkpKb3ZYMWJQX0xGRlk4M0pwOXZFMU45TElhaTkzMExZaHVZ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -633,7 +691,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Thu, 01 Oct 2026 02:55:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9MZ0d4UDdFWnhveGcwenZqMEJhN2syOXo0MlAyOXdZQ05waUFINHpReHRQUmdBbUlRRmZKdnYtb2tJaXNOU0dGSWltU0RDaE5IVjVJeGVydGVtMmxoV2pvRlFKV2JuamYzOHVvMkF3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8taHlWNEFlMmkwU19LZXJtOUNLemVScDJndF9jWTZyNExLbVdmTEFJeGJha0JjS3JnUVk3RzV0blFlNnpnem5rbDVPZkxfODVtMDZ1Mg?oc=5",
       "tags": [
         "횡령·배임"
       ],
@@ -953,7 +1011,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "사이버사기 범죄수익 세탁한 일당 8명 구속 송치",
-      "source": "다바(DABA)뉴스",
+      "source": "dabanews.co.kr",
       "source_url": "https://www.dabanews.co.kr",
       "source_domain": "www.dabanews.co.kr",
       "date": "Thu, 01 Oct 2026 01:27:53 GMT",
@@ -962,7 +1020,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "사이버사기 범죄수익 세탁한 일당 8명 구속 송치 다바(DABA)뉴스",
+      "description": "사이버사기 범죄수익 세탁한 일당 8명 구속 송치 dabanews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -985,7 +1043,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "인천 보이스피싱, 지난해 대비 55.9% 뚝…피해액도 60%↓",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Thu, 01 Oct 2026 01:11:27 GMT",
@@ -993,7 +1051,7 @@
       "tags": [
         "사기"
       ],
-      "description": "인천 보이스피싱, 지난해 대비 55.9% 뚝…피해액도 60%↓ newsis.com",
+      "description": "인천 보이스피싱, 지난해 대비 55.9% 뚝…피해액도 60%↓ 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1063,7 +1121,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Thu, 01 Oct 2026 00:51:22 GMT",
@@ -1071,7 +1129,7 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 newsis.com",
+      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1154,7 +1212,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "\"사이버 범죄 수익금 돈세탁 해드립니다\"…8명 구속 송치",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 30 Sep 2026 23:55:36 GMT",
@@ -1162,7 +1220,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "\"사이버 범죄 수익금 돈세탁 해드립니다\"…8명 구속 송치 newsis.com",
+      "description": "\"사이버 범죄 수익금 돈세탁 해드립니다\"…8명 구속 송치 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1224,6 +1282,21 @@
         "사기"
       ],
       "description": "CFTC, 가상자산 사기 사건에 3100만달러 법원 명령 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "서류 위조해 60억 투자 사기?…하청 업체 무더기 피해",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Wed, 30 Sep 2026 12:54:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9EZG53NDlFSVJkY184Z3J1Nkl2Z052My1ickc0LW5FWm1HS291eE4zYTk4RzlmbjIySXBKMWZzTi10VzlnRnhZSVAxUzk0Zm4zZ2UwWHdBYjlPQ1E?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "서류 위조해 60억 투자 사기?…하청 업체 무더기 피해 KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1478,7 +1551,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의",
-      "source": "디지털애셋",
+      "source": "digitalasset.works",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 30 Sep 2026 03:40:00 GMT",
@@ -1487,7 +1560,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 디지털애셋",
+      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 digitalasset.works",
       "collection_method": "google_news_24h"
     },
     {
@@ -17300,20 +17373,21 @@
   "official_items": [
     {
       "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융감독원",
+      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융위원회",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
-        "FIU·규제"
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
