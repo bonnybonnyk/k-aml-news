@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T06:48:22.778776+00:00",
+  "updated_at": "2026-10-01T07:12:43.531550+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 25
+      "count": 26
     },
     {
       "feed": "불법사금융",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "차명계좌",
@@ -91,13 +91,13 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 10,
+      "count": 11,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,13 +397,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +409,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,13 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +445,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -495,7 +477,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1129,
+  "count": 1128,
   "official_count": 30,
   "items": [
     {
@@ -518,7 +500,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "미 재무부, 베네수엘라 갱단 연루 암호화폐 지갑 7개 제재",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 01 Oct 2026 06:17:13 GMT",
@@ -527,7 +509,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "미 재무부, 베네수엘라 갱단 연루 암호화폐 지갑 7개 제재 토큰포스트",
+      "description": "미 재무부, 베네수엘라 갱단 연루 암호화폐 지갑 7개 제재 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -554,7 +536,7 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Thu, 01 Oct 2026 05:27:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9RclRwODFkMUFnU2pBMzhUaUpPVkZScFNuRExIODBSSEt1YWo2MTgwYnZtWHg4akF6cTZabkJLMjVQMGUtQ1ZrQ2VreFd0eEpOTzJIemNZQlBld010UVBfaWEtVGNhMmxBWG84X2ZkTkXSAXBBVV95cUxPUXJUcDgxZDFBZ1NqQTM4VGlKT1ZGUnBTbkRMSDgwUkhLdWFqNjE4MGJ2bVh4OGpBenE2Wm5CSzI1UDBlLUNWa0Nla3hXdHhKTk8ySHpjWUJQZXdNdFFQX2lhLVRjYTJsQVhvOF9mZE5F?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9Hbi1uZ1dxVm0wclNWSU5DcmxYLWxPRzdmRV9WZFpYMXBKcWhBNURkWjBYVzVVWGNFWkhIOEE5RFJxRjhkN2R2ZDNydzBTNWExcVIzQVI4N09pRTl5bDdsS1RZYU5mc3ZSaWJnQ1ZjXzJ3ZUdmUUxKdtIBfkFVX3lxTE5sLXBMMEpOdWwxZng2XzFVazFmRU81R0xjWHFOYWZpQ1FXYy15ZWxkcU5iOFFjMDJLNVRGOHplaDJiUUVqSGFlVERxUkZuMFZROHpJSXZ1WS1hdzlFZHBsVUoyWVN5SXNZN0RsYWRjSkxyQzVhbVZmVkFUSHFZdw?oc=5",
       "tags": [
         "사기"
       ],
@@ -610,7 +592,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "\"사이버 사기 돈세탁 전문\" 수수료 챙긴 일당 덜미 |",
-      "source": "news.lghellovision.net",
+      "source": "LG헬로비전",
       "source_url": "http://news.lghellovision.net",
       "source_domain": "news.lghellovision.net",
       "date": "Thu, 01 Oct 2026 03:00:56 GMT",
@@ -619,7 +601,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "\"사이버 사기 돈세탁 전문\" 수수료 챙긴 일당 덜미 | news.lghellovision.net",
+      "description": "\"사이버 사기 돈세탁 전문\" 수수료 챙긴 일당 덜미 | LG헬로비전",
       "collection_method": "google_news_24h"
     },
     {
@@ -641,15 +623,15 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'회삿돈 횡령' 세화아이엠씨 전 경영진, 대법서 징역형 집행유예 확정",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Thu, 01 Oct 2026 02:55:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9MZ0d4UDdFWnhveGcwenZqMEJhN2syOXo0MlAyOXdZQ05waUFINHpReHRQUmdBbUlRRmZKdnYtb2tJaXNOU0dGSWltU0RDaE5IVjVJeGVydGVtMmxoV2pvRlFKV2JuamYzOHVvMkF3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8taHlWNEFlMmkwU19LZXJtOUNLemVScDJndF9jWTZyNExLbVdmTEFJeGJha0JjS3JnUVk3RzV0blFlNnpnem5rbDVPZkxfODVtMDZ1Mg?oc=5",
       "tags": [
         "횡령·배임"
       ],
-      "description": "'회삿돈 횡령' 세화아이엠씨 전 경영진, 대법서 징역형 집행유예 확정 etoday.co.kr",
+      "description": "'회삿돈 횡령' 세화아이엠씨 전 경영진, 대법서 징역형 집행유예 확정 이투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -671,6 +653,21 @@
     {
       "region": "국내",
       "query": "횡령·배임",
+      "title": "\"용역 실제로 있었다면 대금 부풀려도 횡령 아니다\"... 세화IMC 전 회장 부자 집유 확정",
+      "source": "파이낸셜뉴스",
+      "source_url": "https://www.fnnews.com",
+      "source_domain": "www.fnnews.com",
+      "date": "Thu, 01 Oct 2026 02:32:09 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5OWVgxOXJScFZYekkteUdlU1VqM3ZsaXFaUjN6TTZqelk2YUgyMlR6eFdYTnlZVmNtdlUwSDlWX21CQjVKWTAza3kwSmtxX205WEdTbEZrQ19zUQ?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "\"용역 실제로 있었다면 대금 부풀려도 횡령 아니다\"... 세화IMC 전 회장 부자 집유 확정 파이낸셜뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "횡령·배임",
       "title": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정",
       "source": "서울경제",
       "source_url": "https://m.sedaily.com",
@@ -687,7 +684,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 01 Oct 2026 02:26:13 GMT",
@@ -695,7 +692,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 yna.co.kr",
+      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -721,7 +718,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Thu, 01 Oct 2026 02:19:44 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBHTFhTMUwtWEVlYUFqcVNyZDlLV1BZVmN4M2xlNVR5SnhSUVpGQVV6bElneXhhZjQtaTJkbGlibm1GWF80N19NLW5Vbw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9JQXNRUE9CQmhHYjV3UFhXZjVtMWIzRDZINnBoenJNbkNYRWhzWUdnLW5jcXZOcFJZUV81MC1XcW9vZHZDQ3F3aTVjSHFpN0FLSS1jMg?oc=5",
       "tags": [
         "사기",
         "자금세탁"
@@ -965,24 +962,24 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "\"사기 돈 세탁해드립니다\"…범죄수익 4억3000만원 세탁 일당 구속 송치",
+      "title": "“사기 돈 세탁해드립니다”…범죄수익 4억3000만원 세탁 일당 구속 송치",
       "source": "경남신문",
-      "source_url": "http://www.knnews.co.kr",
+      "source_url": "https://www.knnews.co.kr",
       "source_domain": "www.knnews.co.kr",
       "date": "Thu, 01 Oct 2026 01:22:11 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5FY0pMRWd5T0hBYThPTDhUMGJJelZkU3NFeXE2YWEzcjhUSmdwLXRVSHFOdlBNOURXQVA4bEJXUl85Z1daNjN3YjUyOFlkNTVnbllFVjN4R2dPWEFzLW5TeDd1dm0tNkZCWE9JYVBnVFRycnc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0MzQ4WVNoTVJwQUNlbnVtcXNhM2oxekxHaU9tTG5JVEJGS0JTT2Rua0hZTTgxaTQ5RFNqeVVvMlRQNWY4Q29lUjVpZ0hwT2l3TlNIRlJUVjVQMG9zdkNqWHlfVTlwVGNoalJn?oc=5",
       "tags": [
         "사기",
         "자금세탁"
       ],
-      "description": "\"사기 돈 세탁해드립니다\"…범죄수익 4억3000만원 세탁 일당 구속 송치 경남신문",
+      "description": "“사기 돈 세탁해드립니다”…범죄수익 4억3000만원 세탁 일당 구속 송치 경남신문",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "인천 보이스피싱, 지난해 대비 55.9% 뚝…피해액도 60%↓",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Thu, 01 Oct 2026 01:11:27 GMT",
@@ -990,7 +987,7 @@
       "tags": [
         "사기"
       ],
-      "description": "인천 보이스피싱, 지난해 대비 55.9% 뚝…피해액도 60%↓ newsis.com",
+      "description": "인천 보이스피싱, 지난해 대비 55.9% 뚝…피해액도 60%↓ 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1060,7 +1057,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Thu, 01 Oct 2026 00:51:22 GMT",
@@ -1068,14 +1065,14 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 newsis.com",
+      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\"",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 01 Oct 2026 00:50:35 GMT",
@@ -1083,14 +1080,14 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" yna.co.kr",
+      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "ESMA, 사기성 웹사이트 차단·가상자산 동결 권한 요구",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 01 Oct 2026 00:48:38 GMT",
@@ -1099,7 +1096,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "ESMA, 사기성 웹사이트 차단·가상자산 동결 권한 요구 토큰포스트",
+      "description": "ESMA, 사기성 웹사이트 차단·가상자산 동결 권한 요구 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1151,7 +1148,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "\"사이버 범죄 수익금 돈세탁 해드립니다\"…8명 구속 송치",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Wed, 30 Sep 2026 23:55:36 GMT",
@@ -1159,14 +1156,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "\"사이버 범죄 수익금 돈세탁 해드립니다\"…8명 구속 송치 newsis.com",
+      "description": "\"사이버 범죄 수익금 돈세탁 해드립니다\"…8명 구속 송치 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "문 열림·복약·보이스피싱까지…경기도 장애인 252명에 'AI 자립비서'",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 23:38:00 GMT",
@@ -1174,7 +1171,7 @@
       "tags": [
         "사기"
       ],
-      "description": "문 열림·복약·보이스피싱까지…경기도 장애인 252명에 'AI 자립비서' etoday.co.kr",
+      "description": "문 열림·복약·보이스피싱까지…경기도 장애인 252명에 'AI 자립비서' 이투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1211,7 +1208,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "CFTC, 가상자산 사기 사건에 3100만달러 법원 명령",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 15:18:00 GMT",
@@ -1220,14 +1217,14 @@
         "가상자산",
         "사기"
       ],
-      "description": "CFTC, 가상자산 사기 사건에 3100만달러 법원 명령 토큰포스트",
+      "description": "CFTC, 가상자산 사기 사건에 3100만달러 법원 명령 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "일본 65세 남성, 가짜 경찰에 암호화폐 8억2600만엔 사기",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 12:51:42 GMT",
@@ -1236,7 +1233,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "일본 65세 남성, 가짜 경찰에 암호화폐 8억2600만엔 사기 토큰포스트",
+      "description": "일본 65세 남성, 가짜 경찰에 암호화폐 8억2600만엔 사기 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1258,7 +1255,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "미 상원 소위, USDT 이란 제재 회피 통로 지목…당국 회부",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 10:36:57 GMT",
@@ -1267,7 +1264,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "미 상원 소위, USDT 이란 제재 회피 통로 지목…당국 회부 토큰포스트",
+      "description": "미 상원 소위, USDT 이란 제재 회피 통로 지목…당국 회부 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1321,7 +1318,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 07:22:03 GMT",
@@ -1329,14 +1326,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박 토큰포스트",
+      "description": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "지갑·해외거래소",
       "title": "전 CFTC 위원 “위험은 차단보다 관리”⋯해외 거래소 규제 일관성 강조",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 07:19:00 GMT",
@@ -1345,7 +1342,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "전 CFTC 위원 “위험은 차단보다 관리”⋯해외 거래소 규제 일관성 강조 etoday.co.kr",
+      "description": "전 CFTC 위원 “위험은 차단보다 관리”⋯해외 거래소 규제 일관성 강조 이투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1442,7 +1439,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 04:20:48 GMT",
@@ -1451,7 +1448,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의 토큰포스트",
+      "description": "박민규 의원 등 11명, FIU 가상자산 주소 동결 법안 발의 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1507,7 +1504,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 03:00:46 GMT",
@@ -1516,7 +1513,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外 토큰포스트",
+      "description": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1817,7 +1814,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Tue, 29 Sep 2026 12:44:39 GMT",
@@ -1826,7 +1823,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 디지털데일리",
+      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1955,7 +1952,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "자메이카 하원, 가상자산사업자 규제 법안 심의",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 29 Sep 2026 11:06:22 GMT",
@@ -1964,7 +1961,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "자메이카 하원, 가상자산사업자 규제 법안 심의 토큰포스트",
+      "description": "자메이카 하원, 가상자산사업자 규제 법안 심의 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2750,7 +2747,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "KB국민은행, 디지털자산서 준비자산 관리·자금세탁방지 역할 제시",
-      "source": "businessplus.kr",
+      "source": "비즈니스플러스",
       "source_url": "https://www.businessplus.kr",
       "source_domain": "www.businessplus.kr",
       "date": "Tue, 29 Sep 2026 01:42:36 GMT",
@@ -2759,7 +2756,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "KB국민은행, 디지털자산서 준비자산 관리·자금세탁방지 역할 제시 businessplus.kr",
+      "description": "KB국민은행, 디지털자산서 준비자산 관리·자금세탁방지 역할 제시 비즈니스플러스",
       "collection_method": "google_news_24h"
     },
     {
@@ -3264,8 +3261,8 @@
       "source": "v.daum.net",
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
-      "date": "Mon, 28 Sep 2026 07:43:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50OG04T0RMNHNwMmdRSVNjWTU2WjdhX01EQkZVUnQ4Q25nLWd5RHdVaTExaU9aRFZidnRRUnNaVmxXdGhkYnZka1pXdW1CQmpEcXBXNw?oc=5",
+      "date": "Mon, 28 Sep 2026 07:43:48 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9zVGsxNE1YUHN1QTU0S3dqaFd5Mm9UYk5FNlJiWTdZRFJ1UmQ1VjRsWHRhcXZIVHlhQ2V3aGsxMGtiMF9mUlE?oc=5",
       "tags": [
         "FIU·규제"
       ],
@@ -17292,48 +17289,25 @@
       "tags": [
         "자금세탁"
       ]
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "트럼프, 암호화폐 '2조 수익' 논란에 \"불법 아냐\"",
-      "source": "MBC 뉴스",
-      "date": "Fri, 03 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBvOEppbHBYMHFxTVZKbmZJWGMxcEdnVUxxTENlaHZuNGhta3Nrblg0Q1JMZ0pXTHpIYWItcEUxZkxvQXlKWkszMGFJN0JwQTZ5enU1WU9DUGRGWW9wU3ExcnhuamlBZ29HYVpQcnJXMTlQaEhM0gF0QVVfeXFMT0drUXhqYURfeHE0QnVVWWFiZ2tReDUxWUI1aFZBemdRY3VLZVJqWHg1WkhrV2gwLWJpXzIwenc4U0wxSkZQYVJPS0lwMGdrRHpfY0I4eEVhVVV4LTdod0JQVnNoVDVBdndSOTZqbVBWVnhqR1o?oc=5",
-      "tags": [
-        "가상자산"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱 잡으러 만든 계좌정지 … 되레 사기꾼이 악용",
-      "source": "매일경제",
-      "date": "Fri, 03 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE12SWYxMEdtZGRad0U0Q0ZDWkgtU0UwaWJFaUhmT2tjVWRuYUo4TkQxR1BDcUo2Rk40OEluVmtzcXVOaHNLYVc2UHdxYTFWT0NweDFNTA?oc=5",
-      "tags": [
-        "사기"
-      ]
     }
   ],
   "official_items": [
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "가상자산",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
-      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융위원회",
+      "title": "26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융감독원",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
-        "FIU·규제",
-        "제재·테러자금"
+        "FIU·규제"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
