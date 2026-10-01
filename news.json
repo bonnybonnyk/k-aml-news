@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-01T04:44:15.486313+00:00",
+  "updated_at": "2026-10-01T05:10:57.927899+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 10
+      "count": 11
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 22
+      "count": 24
     },
     {
       "feed": "불법사금융",
@@ -91,19 +91,19 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 9,
+      "count": 11,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,9 +260,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -403,13 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -418,6 +424,18 @@
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -434,18 +452,6 @@
     },
     {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -477,9 +483,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1118,
+  "count": 1120,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "‘보이스피싱 저승사자’ 동부지검 합수부 역사속으로…500명 구속, 360억원 환수 [세상&]",
+      "source": "헤럴드경제",
+      "source_url": "https://mbiz.heraldcorp.com",
+      "source_domain": "mbiz.heraldcorp.com",
+      "date": "Thu, 01 Oct 2026 04:45:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBwaW1ZYzB1YU0xdGk0UkRUbGljRU9UdGVZZUtVRUE1UHBVUDB3SU1peFhMRnA2bEs2V2RrWWhGY1VDWVV2aHdFY0RuWlJvZU9rY1lvMUlqYw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "‘보이스피싱 저승사자’ 동부지검 합수부 역사속으로…500명 구속, 360억원 환수 [세상&] 헤럴드경제",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -528,21 +549,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Thu, 01 Oct 2026 02:28:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBUSUlIM0lXNDgzcnlYbHhXcjhmN0p1RWphdFFMZGpIa3lNOEdlNnBGSkpJUlFsVTdFWmlOb2lEdUxrcE5xWFAzM2ZjaEhQYUk?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "횡령·배임",
       "title": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정",
       "source": "서울경제",
@@ -554,6 +560,21 @@
         "횡령·배임"
       ],
       "description": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정 서울경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Thu, 01 Oct 2026 02:26:13 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FVFg5Smw3NldlcHlBMnI2U1RMSmRnMDctMl9FLTV6S1FTdTBrbFg2Q0t4NlotQzhObUdLdTZmTmdMLXRQekJtNGR1YnpiZGRsZUdpanZoZXN2YmRjYzJRQ9IBYEFVX3lxTE5FVFg5Smw3NldlcHlBMnI2U1RMSmRnMDctMl9FLTV6S1FTdTBrbFg2Q0t4NlotQzhObUdLdTZmTmdMLXRQekJtNGR1YnpiZGRsZUdpanZoZXN2YmRjYzJRQw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -607,7 +628,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘활동 종료’ 앞둔 보이스피싱 합수부, 4년간 526명 구속·환수액 360억",
-      "source": "news.jtbc.co.kr",
+      "source": "JTBC",
       "source_url": "https://news.jtbc.co.kr",
       "source_domain": "news.jtbc.co.kr",
       "date": "Thu, 01 Oct 2026 02:14:00 GMT",
@@ -615,7 +636,7 @@
       "tags": [
         "사기"
       ],
-      "description": "‘활동 종료’ 앞둔 보이스피싱 합수부, 4년간 526명 구속·환수액 360억 news.jtbc.co.kr",
+      "description": "‘활동 종료’ 앞둔 보이스피싱 합수부, 4년간 526명 구속·환수액 360억 JTBC",
       "collection_method": "google_news_24h"
     },
     {
@@ -791,8 +812,24 @@
     {
       "region": "국내",
       "query": "자금세탁",
+      "title": "사이버사기 범죄수익 세탁한 일당 8명 구속 송치",
+      "source": "다바(DABA)뉴스",
+      "source_url": "https://www.dabanews.co.kr",
+      "source_domain": "www.dabanews.co.kr",
+      "date": "Thu, 01 Oct 2026 01:27:53 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PV1lEZ0NqNV8zNjZMSzNoRHp4TVhPQlYtdDIyRlhPd0I3eTZsLXZNWm9aUUlJbXBhLWdqZkltN192MGw4VC1LMHVDN1NVRG1mRzhXdFRfcEp5RUI4cVNiRnpNa0tlLTVOVXFJb9IBcEFVX3lxTE1GRkFGdVdMUlVRaVV4ZGRzaVFjb1lvMGdHRGFNY1VXd1MtRzJlcFAtX0djX3VwM1FzQUo3TW80cWppN0k0T3FkZFRTVUw5UVdSNFd0NmlaSmNJdjFfazZDS0xldUZZQnRkNWItcGYyaVA?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "사이버사기 범죄수익 세탁한 일당 8명 구속 송치 다바(DABA)뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
       "title": "\"사기 돈 세탁해드립니다\"…범죄수익 4억3000만원 세탁 일당 구속 송치",
-      "source": "경남신문",
+      "source": "knnews.co.kr",
       "source_url": "http://www.knnews.co.kr",
       "source_domain": "www.knnews.co.kr",
       "date": "Thu, 01 Oct 2026 01:22:11 GMT",
@@ -801,7 +838,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "\"사기 돈 세탁해드립니다\"…범죄수익 4억3000만원 세탁 일당 구속 송치 경남신문",
+      "description": "\"사기 돈 세탁해드립니다\"…범죄수익 4억3000만원 세탁 일당 구속 송치 knnews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -885,7 +922,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\"",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 01 Oct 2026 00:50:35 GMT",
@@ -893,7 +930,7 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" yna.co.kr",
+      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1832,7 +1869,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Tue, 29 Sep 2026 10:27:30 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1jX2F1SWh2enNoN3A3ME9yV3dfZThBazF6RExJNEVFbk84VUFHaWR2VWVVOWVLeVk1ekNONEhhc0hyTE1taUFuWUNueG1XZzlKMlNQUFdTa3N3bC1DQThuanRIZ3bSAWRBVV95cUxNY19hdUlodnpzaDdwNzBPcld3X2U4QWsxekRMSTRFRW5POFVBR2lkdlVlVTllS3lZNXpDTjRIYXNIckxNbWlBbllDbnhtV2c5SjJTUFBXU2tzd2wtQ0E4bmp0SGd2?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTMHdFYWxwVVhBbVZhQWpkaXRXamx2Nml2MWFSaC1uLThhTjlyMzBvd0JXdE05T0JEeVgzUWJESnhHXzk1ZHlBV0VZdXNwSUs4MFF2Y19iUzhUUURCcjRZ0gFkQVVfeXFMTWNfYXVJaHZ6c2g3cDcwT3JXd19lOEFrMXpETEk0RUVuTzhVQUdpZHZVZVU5ZUt5WTV6Q040SGFzSHJMTW1pQW5ZQ254bVdnOUoyU1BQV1Nrc3dsLUNBOG5qdEhndg?oc=5",
       "tags": [
         "가상자산",
         "환치기·외환"
