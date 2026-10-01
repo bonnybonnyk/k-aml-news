@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T21:43:09.406160+00:00",
+  "updated_at": "2026-10-01T22:09:36.662648+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 29
+      "count": 28
     },
     {
       "feed": "불법사금융",
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,25 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,13 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,7 +457,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -460,6 +466,18 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -1444,7 +1462,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "내일 개정 형소법 시행‥보이스피싱 합수단 4년 만에 해체",
-      "source": "imnews.imbc.com",
+      "source": "MBC 뉴스",
       "source_url": "https://imnews.imbc.com",
       "source_domain": "imnews.imbc.com",
       "date": "Thu, 01 Oct 2026 00:26:43 GMT",
@@ -1452,7 +1470,7 @@
       "tags": [
         "사기"
       ],
-      "description": "내일 개정 형소법 시행‥보이스피싱 합수단 4년 만에 해체 imnews.imbc.com",
+      "description": "내일 개정 형소법 시행‥보이스피싱 합수단 4년 만에 해체 MBC 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -2887,7 +2905,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화",
-      "source": "위키트리",
+      "source": "wikitree.co.kr",
       "source_url": "https://www.wikitree.co.kr",
       "source_domain": "www.wikitree.co.kr",
       "date": "Tue, 29 Sep 2026 03:03:00 GMT",
@@ -2896,7 +2914,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화 위키트리",
+      "description": "준비자산·자금세탁방지까지…은행권 디지털자산 경쟁 본격화 wikitree.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -3020,6 +3038,22 @@
         "제재·테러자금"
       ],
       "description": "유학비자로 들어온 우즈벡인, 테러자금 지원 혐의로 재판 news.sbs.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로",
+      "source": "데일리머니",
+      "source_url": "http://www.thedailymoney.com",
+      "source_domain": "www.thedailymoney.com",
+      "date": "Tue, 29 Sep 2026 02:40:35 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1NSHJ1alc2aXRvd1hIYk53OE51M0ZrQWxaakJ4ZWlRMVd4MS1UMVRkV1UwMjl5a2hWSnBvTWdGcFlYQWdJdDg2Mkg5Q0paTlRJSXktRFhhQkh4UE5tQkZGalFPaGFtc21DdVR6Ylgtd2JfY2NTZ2fSAXZBVV95cUxNTUhydWpXNml0b3dYSGJOdzhOdTNGa0FsWmpCeGVpUTFXeDEtVDFUZFdVMDI5eWtoVkpwb01nRnBZWEFnSXQ4NjJIOUNKWk5USUl5LURYYUJIeFBObUJGRmpRT2hhbXNtQ3VUemJYLXdiX2NjU2dn?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로 데일리머니",
       "collection_method": "google_news_24h"
     },
     {
@@ -3251,22 +3285,6 @@
         "자금세탁"
       ],
       "description": "美 상원 \"테더, 이란 제재 회피에 활용\"…자금세탁 방지 의무 조사 촉구 bloomingbit.io",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로",
-      "source": "뉴스1",
-      "source_url": "https://www.news1.kr",
-      "source_domain": "www.news1.kr",
-      "date": "Mon, 28 Sep 2026 22:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAxMUlMYzZndmNHTWMxcC00cmpWdnUwX0lTUnlXWXZIbTEyQjRLOUxHVnlmemUyVFVKX3hFcUs0YnZYN2QzN0JDWVRhUTJsOFFlQTUxck1jcEFyOGlxWTBESHZfS3ZTUdIBa0FVX3lxTE5jMG5ydGVGdkRTeHpzZ2x2dW12YV9vZ3BFZk5ZTlVWaUxtOHlZUkNkbEtvbVNmTVowUHRrY0RLYTFtaHdrTVFlYjBzOUlSZFp1RkFsZld6MUc3UkZac01IRHVqY2ZOT1hTWWk0?oc=5",
-      "tags": [
-        "가상자산",
-        "자금세탁"
-      ],
-      "description": "'발행 주체 누구' 집중된 스테이블코인, '자금세탁 방지' 중요 과제로 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -17635,20 +17653,21 @@
   "official_items": [
     {
       "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융감독원",
+      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융위원회",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
-        "FIU·규제"
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
