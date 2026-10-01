@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-01T03:43:42.623203+00:00",
+  "updated_at": "2026-10-01T04:11:21.036703+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 11
+      "count": 8
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 9
+      "count": 8
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 24
+      "count": 22
     },
     {
       "feed": "불법사금융",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 7,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -403,7 +403,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,31 +427,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,7 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -483,7 +483,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1117,
+  "count": 1118,
   "official_count": 30,
   "items": [
     {
@@ -534,6 +534,21 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Thu, 01 Oct 2026 02:28:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBUSUlIM0lXNDgzcnlYbHhXcjhmN0p1RWphdFFMZGpIa3lNOEdlNnBGSkpJUlFsVTdFWmlOb2lEdUxrcE5xWFAzM2ZjaEhQYUk?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정",
       "source": "서울경제",
@@ -545,21 +560,6 @@
         "횡령·배임"
       ],
       "description": "‘회삿돈 수백억 횡령’ 세화아이엠씨 전 오너일가 징역형 집행유예 확정 서울경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Thu, 01 Oct 2026 02:26:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FVFg5Smw3NldlcHlBMnI2U1RMSmRnMDctMl9FLTV6S1FTdTBrbFg2Q0t4NlotQzhObUdLdTZmTmdMLXRQekJtNGR1YnpiZGRsZUdpanZoZXN2YmRjYzJRQ9IBYEFVX3lxTE5FVFg5Smw3NldlcHlBMnI2U1RMSmRnMDctMl9FLTV6S1FTdTBrbFg2Q0t4NlotQzhObUdLdTZmTmdMLXRQekJtNGR1YnpiZGRsZUdpanZoZXN2YmRjYzJRQw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -725,7 +725,7 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Thu, 01 Oct 2026 01:54:23 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE54QVhTanQ2NFFFdjdYUUhUdTFnUVNvZGZRQUVGc2ZLU204RXcwYTBQMklSbmdOTzZld0JqWnV1QlAzLUczTWxyaXdmYUREeHo5Zi1zeWVJSWtwc1lscWFsbFg5QnB4TGRmYWNabDZ4b095dlhBNHFBRNIBfkFVX3lxTE1jWUZ2d2JLaVVpM1lBcmNxX0c3eENtcHpqZ1I4b3ItQnZRaVEwckRyYXl1Z3pwZTJldHZUZkNFTzJvSHpQSVhvaHgzTFc2dHVNelRWWmNVd2lORXFfb0lDbDliUnVqYTNkWTgzUDd0NXBSZUJFRmlqUjE0UjExQQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBrcTdaeEttX2Y0RHFLSkpBVjFjaGVVT213NUNoMmRhYk5QVTgxTzRqV0ZveUtPOGdSTkRMai1PUmU2M1VCUmM2OUcwallBbHJwZG9ZZGJaWDUyTjdMa08tVzhqb0JBWmM0cEN5T3hYbTDSAXBBVV95cUxQa3E3WnhLbV9mNERxS0pKQVYxY2hlVU9tdzVDaDJkYWJOUFU4MU80aldGb3lLTzhnUk5ETGotT1JlNjNVQlJjNjlHMGpZQWxycGRvWWRiWlg1Mk43TGtPLVc4am9CQVpjNHBDeU94WG0w?oc=5",
       "tags": [
         "탈세",
         "횡령·배임"
@@ -891,7 +891,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\"",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 01 Oct 2026 00:50:35 GMT",
@@ -899,7 +899,7 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" 연합뉴스",
+      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -986,7 +986,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 30 Sep 2026 23:38:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBBaXI5RGVxUW1yODRZeW5xZldtTDhKR1VSVGlsOWF2TzYxQkJkc0tNbFRpTHljd3huUUw3cWNCa0o4U0h4WmxyVERGbTdwMUNBY2lEWQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBudzRCSjJOcTl4ZV9UeUpjSXVvYWNsMnRvdnJLNko0Rm4zUzdTdUhrRDRjanhySnZDUm1qM3dxaW1BZ19yM1ZySjdXeGttOWROemtzZDZDMzdkY2thQlh0SXBtdXFtbjU2X3FiVlpTdGJ3dXhYdzlQWExLc1FOeEE?oc=5",
       "tags": [
         "사기"
       ],
@@ -1090,7 +1090,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까?",
-      "source": "blockmedia.co.kr",
+      "source": "블록미디어",
       "source_url": "https://www.blockmedia.co.kr",
       "source_domain": "www.blockmedia.co.kr",
       "date": "Wed, 30 Sep 2026 09:00:24 GMT",
@@ -1100,7 +1100,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? blockmedia.co.kr",
+      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? 블록미디어",
       "collection_method": "google_news_24h"
     },
     {
@@ -1291,7 +1291,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의",
-      "source": "디지털애셋",
+      "source": "digitalasset.works",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 30 Sep 2026 03:40:00 GMT",
@@ -1300,7 +1300,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 디지털애셋",
+      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 digitalasset.works",
       "collection_method": "google_news_24h"
     },
     {
@@ -1317,6 +1317,22 @@
         "사기"
       ],
       "description": "영국 법원, 가상자산 사기범 2명에 85만파운드 환수 명령 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Wed, 30 Sep 2026 03:00:46 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB0dkI0VHpZRDAtZFJONFo4ZWhNbHFlamt3TzhwOFlFdk9EWWlmV3Q3MF9BU1FuM3ctSFUxMGZuZDMxZW5mV1BKM0c3ZHJyWEEzMFBSQzdWMVE?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外 토큰포스트",
       "collection_method": "google_news_24h"
     },
     {
