@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T00:15:59.131424+00:00",
+  "updated_at": "2026-10-01T00:49:08.437799+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 12
+      "count": 13
     },
     {
       "feed": "불법사금융",
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -244,13 +244,13 @@
       "feed": "금융위/FIU:목록:p1",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "The read operation timed out"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
@@ -260,15 +260,9 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -409,19 +403,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,15 +439,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -483,9 +477,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1085,
+  "count": 1086,
   "official_count": 29,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 합수단 4년간 1381명 입건·526명 구속…360억 환수",
+      "source": "파이낸셜뉴스",
+      "source_url": "https://www.fnnews.com",
+      "source_domain": "www.fnnews.com",
+      "date": "Thu, 01 Oct 2026 00:18:19 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBXVERQdkVnV2lCUFc5UTd0RTlEYWo2U1h3cTg4dlloQTBsWGdOMFQ0MkJ0T0JSd2J1eXYyTG1CSWhlaUlpOGZ0VXVDMFFSVTU2VHNrZl81S3JxZw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 합수단 4년간 1381명 입건·526명 구속…360억 환수 파이낸셜뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -1330,7 +1339,7 @@
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Tue, 29 Sep 2026 10:27:30 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1jX2F1SWh2enNoN3A3ME9yV3dfZThBazF6RExJNEVFbk84VUFHaWR2VWVVOWVLeVk1ekNONEhhc0hyTE1taUFuWUNueG1XZzlKMlNQUFdTa3N3bC1DQThuanRIZ3bSAWRBVV95cUxNY19hdUlodnpzaDdwNzBPcld3X2U4QWsxekRMSTRFRW5POFVBR2lkdlVlVTllS3lZNXpDTjRIYXNIckxNbWlBbllDbnhtV2c5SjJTUFBXU2tzd2wtQ0E4bmp0SGd2?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBTMHdFYWxwVVhBbVZhQWpkaXRXamx2Nml2MWFSaC1uLThhTjlyMzBvd0JXdE05T0JEeVgzUWJESnhHXzk1ZHlBV0VZdXNwSUs4MFF2Y19iUzhUUURCcjRZ0gFkQVVfeXFMTWNfYXVJaHZ6c2g3cDcwT3JXd19lOEFrMXpETEk0RUVuTzhVQUdpZHZVZVU5ZUt5WTV6Q040SGFzSHJMTW1pQW5ZQ254bVdnOUoyU1BQV1Nrc3dsLUNBOG5qdEhndg?oc=5",
       "tags": [
         "가상자산",
         "환치기·외환"
