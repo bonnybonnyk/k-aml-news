@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T13:12:24.519882+00:00",
+  "updated_at": "2026-10-02T13:44:04.595602+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "환치기·외환",
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -421,19 +439,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,7 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -545,7 +563,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발",
-      "source": "대전일보",
+      "source": "daejonilbo.com",
       "source_url": "https://www.daejonilbo.com",
       "source_domain": "www.daejonilbo.com",
       "date": "Fri, 02 Oct 2026 06:40:10 GMT",
@@ -553,7 +571,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 대전일보",
+      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 daejonilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -606,16 +624,16 @@
       "region": "국내",
       "query": "탈세",
       "title": "\"투자자 탈세자 만든다\"…DAXA, 코인 과세 전면 재검토 촉구",
-      "source": "마켓인",
-      "source_url": "https://marketin.edaily.co.kr",
-      "source_domain": "marketin.edaily.co.kr",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
       "date": "Fri, 02 Oct 2026 05:05:33 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SRnl3Slk2M090cG4zY2xnOXZjRHQ3aXpueGc3TGN0SGRTU0FhVjBHYWFlOThuXzNqYXhrNUxIT29sZUVXb19vem81TnhRcFEySE4tZjJvRjA5ekdGUTR2VGxyN0hYdTV0MU9YZWNGUEtJOUE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOek1HS2NCSEd6cHpkNXJFY1c1bjA3LW9mY2otQkVqRjJkU2xyMmV4NElSZlZHS1hueGpHSy1xaTZucHZwY0NFWVhMMVJXVlFjT1NZeU9lRE5pejEwaS10Q19neU10WGsxQktUY0hhbjlwVGNiblJHVVlLSDdSdE5reg?oc=5",
       "tags": [
         "가상자산",
         "탈세"
       ],
-      "description": "\"투자자 탈세자 만든다\"…DAXA, 코인 과세 전면 재검토 촉구 마켓인",
+      "description": "\"투자자 탈세자 만든다\"…DAXA, 코인 과세 전면 재검토 촉구 edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -714,7 +732,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 02 Oct 2026 00:51:00 GMT",
@@ -722,14 +740,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설 etoday.co.kr",
+      "description": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설 이투데이",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아",
-      "source": "senews.kr",
+      "source": "사회적경제뉴스",
       "source_url": "http://www.senews.kr",
       "source_domain": "www.senews.kr",
       "date": "Fri, 02 Oct 2026 00:46:00 GMT",
@@ -737,7 +755,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아 senews.kr",
+      "description": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아 사회적경제뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -992,16 +1010,16 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행",
-      "source": "news1.kr",
-      "source_url": "https://www.news1.kr",
-      "source_domain": "www.news1.kr",
-      "date": "Thu, 01 Oct 2026 08:30:15 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9NUTNYU1hIT1VJQ2FxbGhRTTlvaC1ScXV3TDFYM1BVMG9Yb2JRVHl0OXVYVTZnaEt1Wmk4cXBHSXBobThvZlJpTXctdzYtOUV2SWJSQ2VCWjBzZ3BaTWfSAWNBVV95cUxOTzlKNURaMzRNZTdyd2RjSVlNWTlVUWdpeW5ZWHN3UkF2UXRoUlZLQ3EtY09WOEl1V1lWQzVnSktGX2s3aEtfNnFGTFZfdDBjYlBHbnI3aVpRNEM1WWpFSy0yQWc?oc=5",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Thu, 01 Oct 2026 08:31:57 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5nZHFRQmYyanFtSGE5WXhGbWVmVXZHRzlQWUVKZXpFTkVjVmE0ZGlub3ZORXRLX0VrM2tBdUdiVVYwaGlOSFE?oc=5",
       "tags": [
         "가상자산",
         "사기"
       ],
-      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 news1.kr",
+      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -1222,7 +1240,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "‘보이스피싱 저승사자’ 동부지검 합수부 역사속으로…500명 구속, 360억원 환수 [세상&]",
-      "source": "헤럴드경제",
+      "source": "biz.heraldcorp.com",
       "source_url": "https://biz.heraldcorp.com",
       "source_domain": "biz.heraldcorp.com",
       "date": "Thu, 01 Oct 2026 04:45:00 GMT",
@@ -1230,14 +1248,14 @@
       "tags": [
         "사기"
       ],
-      "description": "‘보이스피싱 저승사자’ 동부지검 합수부 역사속으로…500명 구속, 360억원 환수 [세상&] 헤럴드경제",
+      "description": "‘보이스피싱 저승사자’ 동부지검 합수부 역사속으로…500명 구속, 360억원 환수 [세상&] biz.heraldcorp.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "범죄수익",
       "title": "사이버사기 범죄수익 4억여원 세탁…조직원 8명 구속",
-      "source": "진주신문",
+      "source": "newsjinju.kr",
       "source_url": "http://www.newsjinju.kr",
       "source_domain": "www.newsjinju.kr",
       "date": "Thu, 01 Oct 2026 03:22:55 GMT",
@@ -1246,7 +1264,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "사이버사기 범죄수익 4억여원 세탁…조직원 8명 구속 진주신문",
+      "description": "사이버사기 범죄수익 4억여원 세탁…조직원 8명 구속 newsjinju.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -17935,37 +17953,41 @@
   "official_items": [
     {
       "region": "공식자료",
-      "query": "불법사금융",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융감독원",
+      "source": "금융위원회",
       "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
+        "가상자산",
         "불법사금융",
-        "FIU·규제"
+        "마약",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융감독원",
+      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융위원회",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
-        "FIU·규제"
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
