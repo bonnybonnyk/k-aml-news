@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-02T06:13:21.258551+00:00",
+  "updated_at": "2026-10-02T06:47:40.313664+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -133,7 +133,7 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 7,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -415,19 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,31 +439,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -476,6 +470,12 @@
     },
     {
       "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,9 +495,54 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1161,
+  "count": 1164,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발",
+      "source": "daejonilbo.com",
+      "source_url": "https://www.daejonilbo.com",
+      "source_domain": "www.daejonilbo.com",
+      "date": "Fri, 02 Oct 2026 06:32:37 GMT",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB1YUc1aVREOW9FWFZ4WHNUdW90VjhUNzZ3RmduWVhiemlYbEI5RmJYM191dDVQcUY1dExHb2FzTEJTYVNHbkRyRW53REtaZXUwLXl0eW0xby14MndIZFMzQnhEbml1ZkVldExBU1JlONIBc0FVX3lxTE1oSWFxd2NUNndyZExpZU5oRTdSNUN6ZEEwaTZSZERUREJ6VEJETVZCcnFDOThidkNURVVfOXBkNUhaUXVNaE52T3dpOWc5UnRGbE1Xa04tQzlOdFZsblZVUXluVXNZWUtpenhfXzUzcU9YVjQ?oc=5",
+      "tags": [
+        "FIU·규제"
+      ],
+      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 daejonilbo.com",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "신한·국민은행 ‘약한 고리’ 노린 해커들…보이스피싱 등 2차 피해 우려",
+      "source": "한겨레",
+      "source_url": "https://www.hani.co.kr",
+      "source_domain": "www.hani.co.kr",
+      "date": "Fri, 02 Oct 2026 06:26:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1qVmtrRFh3bGZCZ3VLUS1JYkZXMlBuamRRNmZzS1JIazREc0ZzemIzMmVYc2tDU05STWhZS0ZRZ3NmWllhNnlfd1dDNnRzTE13VVpRQmpSbDY2WTlKYmt5Z0Vrck53QUk?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "신한·국민은행 ‘약한 고리’ 노린 해커들…보이스피싱 등 2차 피해 우려 한겨레",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "美, 러 결제사 'A7' 범죄조직 지정…\"이란 제재 회피 도와\"",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Fri, 02 Oct 2026 06:12:36 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPZVA4bnVNY1JWOFI1aFpnc3k4amZyZ3F2YmJxZHlWOWUzZGl2TGJDR0JKUndxbWowOTRQYVJ3ak9wOEowNnUwN3UtZHNTcHZrMFNaQ0ZMekNEX1RCWkNtRUU3MmdtQzE0SUxKRUJBUDczalZTUjZOdDZjQnNKSDMyOQ?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "美, 러 결제사 'A7' 범죄조직 지정…\"이란 제재 회피 도와\" edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "가상자산 AML",
@@ -584,7 +629,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 02 Oct 2026 00:51:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0yZlplQ0dKM3VINlhBZUhXT2s1TlZuVXRBQWc0Nm1uQTNVNmdON0d4YUZqMkZFdkpmanJLdm43RjVTbjlnNXNXZE9fRUF6U3l1bjNORmxHM3pBS0cwS3FLaURUT2M1U3NQcXBhYQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE54YjhIRkt0V3gxb2xOeXE5TEhDUHFMUVJseTdObE9KM2pzYTNGYWFjRmlwYzBSdjBUWkJMU3NZRHJ3TVcwM0Rnc0hrMW1iNzRWclV3U1h0MzZhQ2Nkd0tzNmo1Wjk3MlEycU40WU53RDRLR2Yx?oc=5",
       "tags": [
         "자금세탁"
       ],
@@ -595,7 +640,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아",
-      "source": "senews.kr",
+      "source": "사회적경제뉴스",
       "source_url": "http://www.senews.kr",
       "source_domain": "www.senews.kr",
       "date": "Fri, 02 Oct 2026 00:46:00 GMT",
@@ -603,7 +648,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아 senews.kr",
+      "description": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아 사회적경제뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -796,7 +841,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해”",
-      "source": "it.chosun.com",
+      "source": "IT조선",
       "source_url": "https://it.chosun.com",
       "source_domain": "it.chosun.com",
       "date": "Thu, 01 Oct 2026 08:55:32 GMT",
@@ -804,7 +849,7 @@
       "tags": [
         "사기"
       ],
-      "description": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해” it.chosun.com",
+      "description": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해” IT조선",
       "collection_method": "google_news_24h"
     },
     {
@@ -2342,7 +2387,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Tue, 29 Sep 2026 12:44:39 GMT",
@@ -2351,7 +2396,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 디지털데일리",
+      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
