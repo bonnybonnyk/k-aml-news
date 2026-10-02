@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T05:42:05.665744+00:00",
+  "updated_at": "2026-10-02T06:13:21.258551+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,12 +10,12 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "가상자산 AML",
@@ -30,17 +30,17 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "투자사기",
@@ -133,7 +133,7 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -415,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,13 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,13 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,21 +457,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +495,25 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1159,
+  "count": 1161,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "피데우람 AI 음성 사기에 9500만유로 이체…3600만유로 가상자산 전환",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Fri, 02 Oct 2026 05:39:37 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03clB2R0pfY1J2Wk9walpQZ0ptTDZrOGk3SE9CVHdGTmlCc2g5OHlIT1Y1WXQwd3BXd1lsU3NsYXpxdUFXQVdLRFhlRlNoNzB2WTVqZFpNRHY?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "피데우람 AI 음성 사기에 9500만유로 이체…3600만유로 가상자산 전환 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "탈세",
@@ -564,7 +580,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설",
-      "source": "이투데이",
+      "source": "etoday.co.kr",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 02 Oct 2026 00:51:00 GMT",
@@ -572,14 +588,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설 이투데이",
+      "description": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설 etoday.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아",
-      "source": "사회적경제뉴스",
+      "source": "senews.kr",
       "source_url": "http://www.senews.kr",
       "source_domain": "www.senews.kr",
       "date": "Fri, 02 Oct 2026 00:46:00 GMT",
@@ -587,7 +603,7 @@
       "tags": [
         "사기"
       ],
-      "description": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아 사회적경제뉴스",
+      "description": "농협상호금융, 이상거래탐지시스템으로 보이스피싱 피해 막아 senews.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -748,6 +764,22 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "법제처, 가상자산 활용 보이스피싱 피해 구제 확대 및 배달앱 원산지 표시 고지 의무화",
+      "source": "dailyculture.kr",
+      "source_url": "https://m.dailyculture.kr",
+      "source_domain": "m.dailyculture.kr",
+      "date": "Thu, 01 Oct 2026 09:46:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBqakJoV05JbjFRVXY4WmxnVkVHSnJ1YXFUbUhjZjAyUGMybllHWXNOQVB6NEx1a0VKeG9UTVd3dEJQNmNlbWFNdE5iWGtPSXY4T3NCTlJqLUFnbko3UnpDcDFhVQ?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "법제처, 가상자산 활용 보이스피싱 피해 구제 확대 및 배달앱 원산지 표시 고지 의무화 dailyculture.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "익산경찰서, 은행원 신고로 보이스피싱 수거책 검거",
       "source": "전라일보",
       "source_url": "http://www.jeollailbo.com",
@@ -764,7 +796,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해”",
-      "source": "IT조선",
+      "source": "it.chosun.com",
       "source_url": "https://it.chosun.com",
       "source_domain": "it.chosun.com",
       "date": "Thu, 01 Oct 2026 08:55:32 GMT",
@@ -772,14 +804,14 @@
       "tags": [
         "사기"
       ],
-      "description": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해” IT조선",
+      "description": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해” it.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "자금세탁",
       "title": "경남경찰청, 전국 소액사기 1,161건 추적...4억3천만원 자금세탁 조직 검거",
-      "source": "newstown.co.kr",
+      "source": "뉴스타운",
       "source_url": "https://www.newstown.co.kr",
       "source_domain": "www.newstown.co.kr",
       "date": "Thu, 01 Oct 2026 08:41:26 GMT",
@@ -788,7 +820,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "경남경찰청, 전국 소액사기 1,161건 추적...4억3천만원 자금세탁 조직 검거 newstown.co.kr",
+      "description": "경남경찰청, 전국 소액사기 1,161건 추적...4억3천만원 자금세탁 조직 검거 뉴스타운",
       "collection_method": "google_news_24h"
     },
     {
@@ -826,7 +858,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "보이스피싱 합동수사단, 4년간 526명 구속 기소…범죄수익 360억원 환수",
-      "source": "newspim.com",
+      "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Thu, 01 Oct 2026 07:52:00 GMT",
@@ -835,7 +867,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "보이스피싱 합동수사단, 4년간 526명 구속 기소…범죄수익 360억원 환수 newspim.com",
+      "description": "보이스피싱 합동수사단, 4년간 526명 구속 기소…범죄수익 360억원 환수 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
@@ -903,7 +935,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "가족이 운영해온 마사지업소 위장 성매매 업소 · 자금세탁 범죄 조직 무더기 유죄 판결",
-      "source": "Radio Seoul",
+      "source": "radioseoul1650.com",
       "source_url": "https://www.radioseoul1650.com",
       "source_domain": "www.radioseoul1650.com",
       "date": "Thu, 01 Oct 2026 06:21:46 GMT",
@@ -911,7 +943,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "가족이 운영해온 마사지업소 위장 성매매 업소 · 자금세탁 범죄 조직 무더기 유죄 판결 Radio Seoul",
+      "description": "가족이 운영해온 마사지업소 위장 성매매 업소 · 자금세탁 범죄 조직 무더기 유죄 판결 radioseoul1650.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1256,7 +1288,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "경남경찰, 사이버사기 범죄수익금 세탁 조직 8명 구속 송치",
-      "source": "newspim.com",
+      "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Thu, 01 Oct 2026 02:04:00 GMT",
@@ -1265,7 +1297,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "경남경찰, 사이버사기 범죄수익금 세탁 조직 8명 구속 송치 newspim.com",
+      "description": "경남경찰, 사이버사기 범죄수익금 세탁 조직 8명 구속 송치 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
@@ -1349,7 +1381,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "10월 시행법령 84개…보이스피싱·건강보험·청소년·배달앱 제도 바뀐다",
-      "source": "매일안전신문",
+      "source": "idsn.co.kr",
       "source_url": "https://m.idsn.co.kr",
       "source_domain": "m.idsn.co.kr",
       "date": "Thu, 01 Oct 2026 01:45:56 GMT",
@@ -1358,7 +1390,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "10월 시행법령 84개…보이스피싱·건강보험·청소년·배달앱 제도 바뀐다 매일안전신문",
+      "description": "10월 시행법령 84개…보이스피싱·건강보험·청소년·배달앱 제도 바뀐다 idsn.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2740,7 +2772,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "금융사기 통합대응단 출범 1년…보이스피싱 피해액 56%↓",
-      "source": "newspim.com",
+      "source": "뉴스핌",
       "source_url": "https://www.newspim.com",
       "source_domain": "www.newspim.com",
       "date": "Tue, 29 Sep 2026 07:42:00 GMT",
@@ -2748,7 +2780,7 @@
       "tags": [
         "사기"
       ],
-      "description": "금융사기 통합대응단 출범 1년…보이스피싱 피해액 56%↓ newspim.com",
+      "description": "금융사기 통합대응단 출범 1년…보이스피싱 피해액 56%↓ 뉴스핌",
       "collection_method": "google_news_24h"
     },
     {
