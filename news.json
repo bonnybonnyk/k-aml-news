@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-02T07:11:59.453194+00:00",
+  "updated_at": "2026-10-02T07:43:06.160044+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 10
+      "count": 8
     },
     {
       "feed": "불법사금융",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,7 +445,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -458,12 +464,6 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -495,14 +495,14 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1162,
+  "count": 1163,
   "official_count": 31,
   "items": [
     {
       "region": "국내",
       "query": "FIU·STR",
       "title": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발",
-      "source": "대전일보",
+      "source": "daejonilbo.com",
       "source_url": "https://www.daejonilbo.com",
       "source_domain": "www.daejonilbo.com",
       "date": "Fri, 02 Oct 2026 06:32:37 GMT",
@@ -510,7 +510,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 대전일보",
+      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 daejonilbo.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -594,7 +594,7 @@
       "region": "국내",
       "query": "제재·테러자금",
       "title": "美, 러시아 제재 회피 업체 A7 '범죄조직' 지정…이란도 지원",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Fri, 02 Oct 2026 01:52:17 GMT",
@@ -602,7 +602,7 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "美, 러시아 제재 회피 업체 A7 '범죄조직' 지정…이란도 지원 newsis.com",
+      "description": "美, 러시아 제재 회피 업체 A7 '범죄조직' 지정…이란도 지원 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -623,9 +623,25 @@
     },
     {
       "region": "국내",
+      "query": "자금세탁",
+      "title": "[영상] 쌀·과일 거래 사기 추적하니 자금세탁 조직…경남경찰, 21명 검거",
+      "source": "nbn 시사경제",
+      "source_url": "https://www.nbnbiz.co.kr",
+      "source_domain": "www.nbnbiz.co.kr",
+      "date": "Fri, 02 Oct 2026 01:15:14 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE15b25ya1Z3b0FpRldsQ09ncUpFU2tmOFROVU45by02LUx0N2t1Nk1KUGt3UnpRc1NPSG12WmVkRzRra0lEVG1Gb20zOFdpQ3hCWTRmQ0RNbjN6THh2TFZGTmg1SXBwLUtJVlE?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "[영상] 쌀·과일 거래 사기 추적하니 자금세탁 조직…경남경찰, 21명 검거 nbn 시사경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "범죄수익",
       "title": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설",
-      "source": "etoday.co.kr",
+      "source": "이투데이",
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Fri, 02 Oct 2026 00:51:00 GMT",
@@ -633,7 +649,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설 etoday.co.kr",
+      "description": "공소청 첫 출범, 불송치심사부·범죄수익환수과 신설 이투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -701,7 +717,7 @@
       "region": "국내",
       "query": "마약자금",
       "title": "'美 제재' 볼리비아 검찰총장 등 무더기 체포…마약 밀매 혐의",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://www.newsis.com",
       "source_domain": "www.newsis.com",
       "date": "Thu, 01 Oct 2026 17:49:57 GMT",
@@ -710,7 +726,7 @@
         "마약",
         "제재·테러자금"
       ],
-      "description": "'美 제재' 볼리비아 검찰총장 등 무더기 체포…마약 밀매 혐의 newsis.com",
+      "description": "'美 제재' 볼리비아 검찰총장 등 무더기 체포…마약 밀매 혐의 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1026,7 +1042,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "[단독] 檢 \"범죄수익 가상자산 조기동결 위해 특금법 개정해야\"",
-      "source": "digitalasset.works",
+      "source": "디지털애셋",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Thu, 01 Oct 2026 06:00:00 GMT",
@@ -1035,7 +1051,7 @@
         "가상자산",
         "자금세탁"
       ],
-      "description": "[단독] 檢 \"범죄수익 가상자산 조기동결 위해 특금법 개정해야\" digitalasset.works",
+      "description": "[단독] 檢 \"범죄수익 가상자산 조기동결 위해 특금법 개정해야\" 디지털애셋",
       "collection_method": "google_news_24h"
     },
     {
@@ -1302,7 +1318,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "보이스피싱 합수부, 4년간 526명 기소…범죄수익 360억 환수",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Thu, 01 Oct 2026 02:16:22 GMT",
@@ -1311,7 +1327,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "보이스피싱 합수부, 4년간 526명 기소…범죄수익 360억 환수 asiae.co.kr",
+      "description": "보이스피싱 합수부, 4년간 526명 기소…범죄수익 360억 환수 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1441,7 +1457,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "10월 시행법령 84개…보이스피싱·건강보험·청소년·배달앱 제도 바뀐다",
-      "source": "매일안전신문",
+      "source": "idsn.co.kr",
       "source_url": "https://m.idsn.co.kr",
       "source_domain": "m.idsn.co.kr",
       "date": "Thu, 01 Oct 2026 01:45:56 GMT",
@@ -1450,7 +1466,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "10월 시행법령 84개…보이스피싱·건강보험·청소년·배달앱 제도 바뀐다 매일안전신문",
+      "description": "10월 시행법령 84개…보이스피싱·건강보험·청소년·배달앱 제도 바뀐다 idsn.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1645,7 +1661,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소",
-      "source": "newsis.com",
+      "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
       "source_domain": "mobile.newsis.com",
       "date": "Thu, 01 Oct 2026 00:51:22 GMT",
@@ -1653,7 +1669,7 @@
       "tags": [
         "사기"
       ],
-      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 newsis.com",
+      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1781,7 +1797,7 @@
       "region": "국내",
       "query": "지갑·해외거래소",
       "title": "앱 바꿔 또 국내 영업...미신고 코인거래소 BTCC, 지갑 앱서 거래 재개",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Wed, 30 Sep 2026 21:05:00 GMT",
@@ -1789,7 +1805,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "앱 바꿔 또 국내 영업...미신고 코인거래소 BTCC, 지갑 앱서 거래 재개 sedaily.com",
+      "description": "앱 바꿔 또 국내 영업...미신고 코인거래소 BTCC, 지갑 앱서 거래 재개 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -1937,7 +1953,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개",
-      "source": "sedaily.com",
+      "source": "서울경제",
       "source_url": "https://www.sedaily.com",
       "source_domain": "www.sedaily.com",
       "date": "Wed, 30 Sep 2026 06:34:50 GMT",
@@ -1945,7 +1961,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개 sedaily.com",
+      "description": "[단독]미신고 코인거래소 BTCC, 새 앱으로 불법영업 재개 서울경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -2060,7 +2076,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의",
-      "source": "digitalasset.works",
+      "source": "디지털애셋",
       "source_url": "https://www.digitalasset.works",
       "source_domain": "www.digitalasset.works",
       "date": "Wed, 30 Sep 2026 03:40:00 GMT",
@@ -2069,7 +2085,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 digitalasset.works",
+      "description": "\"FIU에 범죄 의심 가상자산주소 거래정지 요구권\" 특금법 개정안 발의 디지털애셋",
       "collection_method": "google_news_24h"
     },
     {
@@ -2402,7 +2418,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Tue, 29 Sep 2026 12:44:39 GMT",
@@ -2411,7 +2427,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 디지털데일리",
+      "description": "ACAMS, 한국 AML(자금세탁방지) 실무자 위한 CAMS 교육 개편 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
