@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T11:09:56.315954+00:00",
+  "updated_at": "2026-10-02T11:42:34.832005+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "FIU·STR",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "차명계좌",
@@ -133,7 +133,7 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -415,13 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +445,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
       "method": "official_board"
     },
     {
@@ -463,15 +463,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1166,
+  "count": 1167,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "\"평생 수당\" 속여 3천500억 모집…노인 울린 유사수신 일당 기소",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Fri, 02 Oct 2026 09:18:29 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1pbllKSFlnMldpZGVRSUlkV3JYRTlydC1jTEJxdV9hZjdNOG5CSGxickZmekMzVVpVaHBVMURSNnJfSU1zQ0c5bU8wdkwtampBakhlR2l5WWVvZjR5ZEJrRdIBYEFVX3lxTE1pbllKSFlnMldpZGVRSUlkV3JYRTlydC1jTEJxdV9hZjdNOG5CSGxickZmekMzVVpVaHBVMURSNnJfSU1zQ0c5bU8wdkwtampBakhlR2l5WWVvZjR5ZEJrRQ?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "description": "\"평생 수당\" 속여 3천500억 모집…노인 울린 유사수신 일당 기소 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "FIU·STR",
@@ -731,8 +746,8 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착 - e-patentnews.com",
-      "source": "e-patentnews.com",
+      "title": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착",
+      "source": "특허뉴스",
       "source_url": "http://www.e-patentnews.com",
       "source_domain": "www.e-patentnews.com",
       "date": "Thu, 01 Oct 2026 23:56:00 GMT",
@@ -740,7 +755,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착 e-patentnews.com",
+      "description": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착 특허뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -964,16 +979,16 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Thu, 01 Oct 2026 08:31:57 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5nZHFRQmYyanFtSGE5WXhGbWVmVXZHRzlQWUVKZXpFTkVjVmE0ZGlub3ZORXRLX0VrM2tBdUdiVVYwaGlOSFE?oc=5",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Thu, 01 Oct 2026 08:30:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9NUTNYU1hIT1VJQ2FxbGhRTTlvaC1ScXV3TDFYM1BVMG9Yb2JRVHl0OXVYVTZnaEt1Wmk4cXBHSXBobThvZlJpTXctdzYtOUV2SWJSQ2VCWjBzZ3BaTWfSAWNBVV95cUxOTzlKNURaMzRNZTdyd2RjSVlNWTlVUWdpeW5ZWHN3UkF2UXRoUlZLQ3EtY09WOEl1V1lWQzVnSktGX2s3aEtfNnFGTFZfdDBjYlBHbnI3aVpRNEM1WWpFSy0yQWc?oc=5",
       "tags": [
         "가상자산",
         "사기"
       ],
-      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 v.daum.net",
+      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -1209,7 +1224,7 @@
       "region": "국내",
       "query": "범죄수익",
       "title": "사이버사기 범죄수익 4억여원 세탁…조직원 8명 구속",
-      "source": "newsjinju.kr",
+      "source": "진주신문",
       "source_url": "http://www.newsjinju.kr",
       "source_domain": "www.newsjinju.kr",
       "date": "Thu, 01 Oct 2026 03:22:55 GMT",
@@ -1218,7 +1233,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "사이버사기 범죄수익 4억여원 세탁…조직원 8명 구속 newsjinju.kr",
+      "description": "사이버사기 범죄수익 4억여원 세탁…조직원 8명 구속 진주신문",
       "collection_method": "google_news_24h"
     },
     {
@@ -1347,7 +1362,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“범죄수익 세탁해 드려요”… 사기조직 상대 ‘외주형 돈세탁’ 일당 21명 검거",
-      "source": "chosun.com",
+      "source": "조선일보",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
       "date": "Thu, 01 Oct 2026 02:19:19 GMT",
@@ -1356,7 +1371,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "“범죄수익 세탁해 드려요”… 사기조직 상대 ‘외주형 돈세탁’ 일당 21명 검거 chosun.com",
+      "description": "“범죄수익 세탁해 드려요”… 사기조직 상대 ‘외주형 돈세탁’ 일당 21명 검거 조선일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1936,7 +1951,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까?",
-      "source": "블록미디어",
+      "source": "blockmedia.co.kr",
       "source_url": "https://www.blockmedia.co.kr",
       "source_domain": "www.blockmedia.co.kr",
       "date": "Wed, 30 Sep 2026 09:00:24 GMT",
@@ -1946,7 +1961,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? 블록미디어",
+      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? blockmedia.co.kr",
       "collection_method": "google_news_24h"
     },
     {
