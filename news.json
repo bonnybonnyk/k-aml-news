@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-02T01:42:07.796833+00:00",
+  "updated_at": "2026-10-02T02:11:04.659443+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 13
+      "count": 12
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 10
+      "count": 8
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 4
+      "count": 7
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 20
+      "count": 16
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 3
     },
     {
       "feed": "투자사기",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "차명계좌",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -415,19 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,13 +439,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -454,12 +454,6 @@
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -481,6 +475,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 16,
@@ -495,9 +495,55 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1155,
+  "count": 1158,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "임기근 국무조정실장 “불법사금융은 사람 살리는 민생대책… 위장수사 도입 검토”",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Fri, 02 Oct 2026 01:59:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNX2U2eTRQbmpjVEx5UWlpdUxDWUo2aVR5RU5SOGkxNzVCNlVoTGM4Z2V3M0Vwa2pXN2Z1QmR3a0NlV1BORDg1MTlXSFdzTm50UHpqWGFWU0h6c3AzNWpwUUx5VjNTMlBJS2V2ZHRrOERrYTFCLTI5ZkFTWWx2ZVZaXw?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "임기근 국무조정실장 “불법사금융은 사람 살리는 민생대책… 위장수사 도입 검토” edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "美, 러시아 제재 회피 업체 A7 '범죄조직' 지정…이란도 지원",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Fri, 02 Oct 2026 01:52:17 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4zOG9jaExrMFE4c01hRVY5ang5T1JTSjZNdGVNblFBQUJwTVRsMl9fSFB4dEVwVWtOZTJYZmNwWnZyNWtaSWZIWG1fS01QdFdONDFVYVFvN2dyWmRMQWJTRtIBeEFVX3lxTE4xQUlqTkg0RUtsSk5lOERNNDdGSk5iUHJacjhjSmtjVW9aNDFCOFhSMmF4UWZIa204MVlTRGhuNzJBM08tOEktVExWWjN1ZlBvZUhnSFYtMWVuS2FndVFIdzJLd2pUQzJFMHdidF9sM2E0UFNIV1Zscw?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "美, 러시아 제재 회피 업체 A7 '범죄조직' 지정…이란도 지원 뉴시스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "중국 국가안전부, 암호화폐 간첩·자금세탁 악용 주장",
+      "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Fri, 02 Oct 2026 01:49:57 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA0TTJXaUxaaWdoRFZWNklFVGtRM3B1T0p5Z1owdHQyNUdrcVRDUjJaOEsySG1Pa1NsbnE3SGdWV25Qa0tlYjZMSEQ1UkpjT2VURmJYS0piTUQ?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "중국 국가안전부, 암호화폐 간첩·자금세탁 악용 주장 tokenpost.kr",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "범죄수익",
@@ -531,8 +577,8 @@
     {
       "region": "국내",
       "query": "자금세탁",
-      "title": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착",
-      "source": "특허뉴스",
+      "title": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착 - e-patentnews.com",
+      "source": "e-patentnews.com",
       "source_url": "http://www.e-patentnews.com",
       "source_domain": "www.e-patentnews.com",
       "date": "Thu, 01 Oct 2026 23:56:00 GMT",
@@ -540,14 +586,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착 특허뉴스",
+      "description": "“짝퉁 뒤엔 더 큰 범죄가 있었다”... 英, 위조상품서 조직범죄·돈세탁·인신착취 연결고리 포착 e-patentnews.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "제재·테러자금",
       "title": "미 재무부, 이란 제재 회피 연루 혐의 A7 네트워크 제재",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 01 Oct 2026 22:17:00 GMT",
@@ -555,14 +601,14 @@
       "tags": [
         "제재·테러자금"
       ],
-      "description": "미 재무부, 이란 제재 회피 연루 혐의 A7 네트워크 제재 토큰포스트",
+      "description": "미 재무부, 이란 제재 회피 연루 혐의 A7 네트워크 제재 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "앨라배마 암호화폐 ATM 사기 피해, 60일 내 신고하면 환급",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 01 Oct 2026 18:37:00 GMT",
@@ -571,7 +617,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "앨라배마 암호화폐 ATM 사기 피해, 60일 내 신고하면 환급 토큰포스트",
+      "description": "앨라배마 암호화폐 ATM 사기 피해, 60일 내 신고하면 환급 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -641,7 +687,7 @@
       "region": "국내",
       "query": "지갑·해외거래소",
       "title": "[단독]'적색수배' KOK 자금총책 지갑 보니…국내외 거래소로 1050억대 현금화",
-      "source": "이데일리TV",
+      "source": "tv.edaily.co.kr",
       "source_url": "https://tv.edaily.co.kr",
       "source_domain": "tv.edaily.co.kr",
       "date": "Thu, 01 Oct 2026 15:01:00 GMT",
@@ -649,7 +695,7 @@
       "tags": [
         "가상자산"
       ],
-      "description": "[단독]'적색수배' KOK 자금총책 지갑 보니…국내외 거래소로 1050억대 현금화 이데일리TV",
+      "description": "[단독]'적색수배' KOK 자금총책 지갑 보니…국내외 거래소로 1050억대 현금화 tv.edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -702,7 +748,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해”",
-      "source": "IT조선",
+      "source": "it.chosun.com",
       "source_url": "https://it.chosun.com",
       "source_domain": "it.chosun.com",
       "date": "Thu, 01 Oct 2026 08:55:32 GMT",
@@ -710,7 +756,7 @@
       "tags": [
         "사기"
       ],
-      "description": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해” IT조선",
+      "description": "금융권 “보이스피싱 피해배상 같이” vs 통신사 “분담 못해” it.chosun.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -841,7 +887,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "가족이 운영해온 마사지업소 위장 성매매 업소 · 자금세탁 범죄 조직 무더기 유죄 판결",
-      "source": "radioseoul1650.com",
+      "source": "Radio Seoul",
       "source_url": "https://www.radioseoul1650.com",
       "source_domain": "www.radioseoul1650.com",
       "date": "Thu, 01 Oct 2026 06:21:46 GMT",
@@ -849,14 +895,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "가족이 운영해온 마사지업소 위장 성매매 업소 · 자금세탁 범죄 조직 무더기 유죄 판결 radioseoul1650.com",
+      "description": "가족이 운영해온 마사지업소 위장 성매매 업소 · 자금세탁 범죄 조직 무더기 유죄 판결 Radio Seoul",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "가상자산 AML",
       "title": "미 재무부, 베네수엘라 갱단 연루 암호화폐 지갑 7개 제재",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Thu, 01 Oct 2026 06:17:13 GMT",
@@ -865,7 +911,7 @@
         "가상자산",
         "제재·테러자금"
       ],
-      "description": "미 재무부, 베네수엘라 갱단 연루 암호화폐 지갑 7개 제재 토큰포스트",
+      "description": "미 재무부, 베네수엘라 갱단 연루 암호화폐 지갑 7개 제재 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -902,6 +948,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소 - 머니투데이",
+      "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
+      "date": "Thu, 01 Oct 2026 05:27:25 GMT",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5sLXBMMEpOdWwxZng2XzFVazFmRU81R0xjWHFOYWZpQ1FXYy15ZWxkcU5iOFFjMDJLNVRGOHplaDJiUUVqSGFlVERxUkZuMFZROHpJSXZ1WS1hdzlFZHBsVUoyWVN5SXNZN0RsYWRjSkxyQzVhbVZmVkFUSHFZd9IBfkFVX3lxTE5sLXBMMEpOdWwxZng2XzFVazFmRU81R0xjWHFOYWZpQ1FXYy15ZWxkcU5iOFFjMDJLNVRGOHplaDJiUUVqSGFlVERxUkZuMFZROHpJSXZ1WS1hdzlFZHBsVUoyWVN5SXNZN0RsYWRjSkxyQzVhbVZmVkFUSHFZdw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소 - 머니투데이 머니투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소",
       "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
@@ -912,21 +973,6 @@
         "사기"
       ],
       "description": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소 머니투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소 - 머니투데이",
-      "source": "머니투데이",
-      "source_url": "https://www.mt.co.kr",
-      "source_domain": "www.mt.co.kr",
-      "date": "Thu, 01 Oct 2026 05:27:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9RclRwODFkMUFnU2pBMzhUaUpPVkZScFNuRExIODBSSEt1YWo2MTgwYnZtWHg4akF6cTZabkJLMjVQMGUtQ1ZrQ2VreFd0eEpOTzJIemNZQlBld010UVBfaWEtVGNhMmxBWG84X2ZkTkXSAXBBVV95cUxPUXJUcDgxZDFBZ1NqQTM4VGlKT1ZGUnBTbkRMSDgwUkhLdWFqNjE4MGJ2bVh4OGpBenE2Wm5CSzI1UDBlLUNWa0Nla3hXdHhKTk8ySHpjWUJQZXdNdFFQX2lhLVRjYTJsQVhvOF9mZE5F?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "동부지검 보이스피싱 합수단, 4년간 1381명 입건·526명 구속 기소 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1086,7 +1132,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행",
-      "source": "연합뉴스",
+      "source": "yna.co.kr",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Thu, 01 Oct 2026 02:26:13 GMT",
@@ -1094,7 +1140,7 @@
       "tags": [
         "사기"
       ],
-      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 연합뉴스",
+      "description": "'보이스피싱 피해구제 확대' 비롯해 84개 법령 이달 시행 yna.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1411,7 +1457,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "10월부터 달라지는 제도…가상자산 보이스피싱도 지급정지·피해환급",
-      "source": "피앤피뉴스",
+      "source": "gosiweek.com",
       "source_url": "https://m.gosiweek.com",
       "source_domain": "m.gosiweek.com",
       "date": "Thu, 01 Oct 2026 01:11:10 GMT",
@@ -1421,7 +1467,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "10월부터 달라지는 제도…가상자산 보이스피싱도 지급정지·피해환급 피앤피뉴스",
+      "description": "10월부터 달라지는 제도…가상자산 보이스피싱도 지급정지·피해환급 gosiweek.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1705,7 +1751,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까?",
-      "source": "블록미디어",
+      "source": "blockmedia.co.kr",
       "source_url": "https://www.blockmedia.co.kr",
       "source_domain": "www.blockmedia.co.kr",
       "date": "Wed, 30 Sep 2026 09:00:24 GMT",
@@ -1715,7 +1761,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? 블록미디어",
+      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? blockmedia.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1752,7 +1798,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 07:22:03 GMT",
@@ -1760,7 +1806,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박 토큰포스트",
+      "description": "내몽골 경찰, ‘무료 카드 대납’ 미끼 자금세탁…계좌 1000개 육박 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1938,7 +1984,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Wed, 30 Sep 2026 03:00:46 GMT",
@@ -1947,7 +1993,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外 토큰포스트",
+      "description": "[오후 뉴스브리핑] SEC, 왓츠앱 가상자산 사기 제소 外 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2386,7 +2432,7 @@
       "region": "국내",
       "query": "트래블룰",
       "title": "자메이카 하원, 가상자산사업자 규제 법안 심의",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 29 Sep 2026 11:06:22 GMT",
@@ -2395,7 +2441,7 @@
         "가상자산",
         "FIU·규제"
       ],
-      "description": "자메이카 하원, 가상자산사업자 규제 법안 심의 토큰포스트",
+      "description": "자메이카 하원, 가상자산사업자 규제 법안 심의 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2723,7 +2769,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "통합대응단 1년…'보이스피싱 범죄' 제대로 꺾었다",
-      "source": "asiae.co.kr",
+      "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
       "source_domain": "www.asiae.co.kr",
       "date": "Tue, 29 Sep 2026 07:30:00 GMT",
@@ -2731,7 +2777,7 @@
       "tags": [
         "사기"
       ],
-      "description": "통합대응단 1년…'보이스피싱 범죄' 제대로 꺾었다 asiae.co.kr",
+      "description": "통합대응단 1년…'보이스피싱 범죄' 제대로 꺾었다 아시아경제",
       "collection_method": "google_news_24h"
     },
     {
