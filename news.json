@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-03T00:14:25.303718+00:00",
+  "updated_at": "2026-10-03T00:46:17.618807+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 6
+      "count": 0
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 5
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 9,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -415,31 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,13 +433,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -481,6 +475,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
       "count": 16,
@@ -495,9 +495,73 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1171,
+  "count": 1175,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 피해금 20억 현금화 가담 40대 실형",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Sat, 03 Oct 2026 00:30:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5sRXN2ZV9pc0lzc3BQX1ZtUEVPQmdFNjB4RUg4cThTZDVsQ2NKWGVzZXF6RGVXTzdkUjZlS2NqTHZwb2pyZmJvRE9jb2hDaXhDeW1VX0VZOThENzJ2a044M9IBeEFVX3lxTFBLVU02YXJJaUxBX1ZsY1BWWG1keUlscnU2eFdzUW9FV2xJd203UDRlbW4telFhdFAzUk40Z1YtTS04ZHR3MW5SN3hEbzJiVnduemg0SzdWakpGM1JUc0VGWUhQYVYyYzVKYWVWbkZkVTVFamNvTkt2LQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 피해금 20억 현금화 가담 40대 실형 뉴시스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "투자사기",
+      "title": "20억 투자사기 돈이 카지노로…칩 바꿔 ‘현금 세탁’한 일당",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Sat, 03 Oct 2026 00:23:49 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUzVFelI4TWZ6aTJ0TjQxTXRjU0hMZ0V6MnBTd0V1WWtraUtzbVNpYmllYUdrcDVjc2REUTl3OFZjeWtGS3NpV3d4UVczZGtKUkZHMlJqUUZNVW9peDVDaEVKdE9rTlIwLVNqcjZINnhFX0ZOb3RFR3RSeEpMNW4xVQ?oc=5",
+      "tags": [
+        "사기",
+        "도박"
+      ],
+      "description": "20억 투자사기 돈이 카지노로…칩 바꿔 ‘현금 세탁’한 일당 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "20억대 보이스피싱 피해금 카지노 칩으로 세탁한 40대 실형",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Sat, 03 Oct 2026 00:15:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9Jc2xkWURmank4MDFISmIzWVQ1eHlHajRxV3FsR0ZRdmJ4eUhNQTY0OVR1Ykw5Ny1LcTEwdEEtUnBXdEhJZXpRaVN2X0o2RmFNcU9YeVNIMmdoSUFXeU5n0gFkQVVfeXFMTmQybDVuRW5hUERvaDZrMHFGTGhJZHI4QzViem1oOElLRGJwVDl5ZWRtUGJ5d2RZamVQQlNlaEFwUTVwaUdwTWJYaEwyYUZCQlVxV2M3Y0drSXkyY25BelRsOXVpaQ?oc=5",
+      "tags": [
+        "사기",
+        "도박"
+      ],
+      "description": "20억대 보이스피싱 피해금 카지노 칩으로 세탁한 40대 실형 뉴스1",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "투자사기 피해금 카지노 칩으로 돈세탁…40대 징역 1년 8개월",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Sat, 03 Oct 2026 00:01:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RSmNQQnNNTHZFRm9kajVYb1NnSHh5bkd4OG1rNzNWeEFIZ0F1T0xHSzBUcUl1Y3VvUzFkZndVWTdfQ3BjVDA1T2tqMjlQSXM?oc=5",
+      "tags": [
+        "사기",
+        "도박",
+        "자금세탁"
+      ],
+      "description": "투자사기 피해금 카지노 칩으로 돈세탁…40대 징역 1년 8개월 v.daum.net",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -517,7 +581,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "SMBC닛코증권, 유니스왑 훅에 자금세탁방지 넣어 2027년 중반 일본 디파이 관문 추진",
-      "source": "위키트리",
+      "source": "wikitree.co.kr",
       "source_url": "https://www.wikitree.co.kr",
       "source_domain": "www.wikitree.co.kr",
       "date": "Fri, 02 Oct 2026 17:02:00 GMT",
@@ -526,7 +590,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "SMBC닛코증권, 유니스왑 훅에 자금세탁방지 넣어 2027년 중반 일본 디파이 관문 추진 위키트리",
+      "description": "SMBC닛코증권, 유니스왑 훅에 자금세탁방지 넣어 2027년 중반 일본 디파이 관문 추진 wikitree.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1439,7 +1503,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "“범죄수익 세탁해 드려요”… 사기조직 상대 ‘외주형 돈세탁’ 일당 21명 검거",
-      "source": "조선일보",
+      "source": "chosun.com",
       "source_url": "https://www.chosun.com",
       "source_domain": "www.chosun.com",
       "date": "Thu, 01 Oct 2026 02:19:19 GMT",
@@ -1448,14 +1512,14 @@
         "사기",
         "자금세탁"
       ],
-      "description": "“범죄수익 세탁해 드려요”… 사기조직 상대 ‘외주형 돈세탁’ 일당 21명 검거 조선일보",
+      "description": "“범죄수익 세탁해 드려요”… 사기조직 상대 ‘외주형 돈세탁’ 일당 21명 검거 chosun.com",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "범죄수익",
       "title": "사이버사기 범죄수익 수억원 세탁 일당 등 21명 검거 [사건수첩]",
-      "source": "세계일보",
+      "source": "segye.com",
       "source_url": "https://www.segye.com",
       "source_domain": "www.segye.com",
       "date": "Thu, 01 Oct 2026 02:17:48 GMT",
@@ -1464,7 +1528,7 @@
         "사기",
         "자금세탁"
       ],
-      "description": "사이버사기 범죄수익 수억원 세탁 일당 등 21명 검거 [사건수첩] 세계일보",
+      "description": "사이버사기 범죄수익 수억원 세탁 일당 등 21명 검거 [사건수첩] segye.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -2028,7 +2092,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까?",
-      "source": "블록미디어",
+      "source": "blockmedia.co.kr",
       "source_url": "https://www.blockmedia.co.kr",
       "source_domain": "www.blockmedia.co.kr",
       "date": "Wed, 30 Sep 2026 09:00:24 GMT",
@@ -2038,7 +2102,7 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? 블록미디어",
+      "description": "[알쓸코법] 보이스피싱범에게 보낸 비트코인…은행처럼 지급정지할 수 있을까? blockmedia.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -2308,7 +2372,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "캄보디아 전화금융사기 조직에 청년들 넘긴 30대, 항소심도 ‘징역 2년8개월’",
-      "source": "세계일보",
+      "source": "segye.com",
       "source_url": "https://www.segye.com",
       "source_domain": "www.segye.com",
       "date": "Wed, 30 Sep 2026 02:34:11 GMT",
@@ -2316,7 +2380,7 @@
       "tags": [
         "사기"
       ],
-      "description": "캄보디아 전화금융사기 조직에 청년들 넘긴 30대, 항소심도 ‘징역 2년8개월’ 세계일보",
+      "description": "캄보디아 전화금융사기 조직에 청년들 넘긴 30대, 항소심도 ‘징역 2년8개월’ segye.com",
       "collection_method": "google_news_24h"
     },
     {
