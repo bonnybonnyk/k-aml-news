@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-03T10:58:46.830163+00:00",
+  "updated_at": "2026-10-03T13:26:36.197955+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 3
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "FIU·STR",
@@ -421,13 +421,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -440,12 +446,6 @@
     },
     {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,13 +469,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1177,
+  "count": 1178,
   "official_count": 31,
   "items": [
     {
@@ -595,7 +595,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "20억대 보이스피싱 피해금 카지노 칩으로 세탁한 40대 실형",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Sat, 03 Oct 2026 00:15:00 GMT",
@@ -604,7 +604,7 @@
         "사기",
         "도박"
       ],
-      "description": "20억대 보이스피싱 피해금 카지노 칩으로 세탁한 40대 실형 뉴스1",
+      "description": "20억대 보이스피싱 피해금 카지노 칩으로 세탁한 40대 실형 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -615,7 +615,7 @@
       "source_url": "https://v.daum.net",
       "source_domain": "v.daum.net",
       "date": "Sat, 03 Oct 2026 00:01:54 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RSmNQQnNNTHZFRm9kajVYb1NnSHh5bkd4OG1rNzNWeEFIZ0F1T0xHSzBUcUl1Y3VvUzFkZndVWTdfQ3BjVDA1T2tqMjlQSXM?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jSEw5cjVjTThzWlZDSkpxWGJSWlQ0eEJGLVpEUUNCRHM1RXFCb0tlSXZwbTlGbWJCSDMxcGVzaEpNZ0x2SEE?oc=5",
       "tags": [
         "사기",
         "도박",
@@ -702,6 +702,21 @@
     },
     {
       "region": "국내",
+      "query": "제재·테러자금",
+      "title": "미국, 이란 제재 회피 지원 혐의로 러시아 결제 네트워크 A7 표적",
+      "source": "Cryptopolitan",
+      "source_url": "https://www.cryptopolitan.com",
+      "source_domain": "www.cryptopolitan.com",
+      "date": "Fri, 02 Oct 2026 13:42:03 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbV9hU0NZODhSTnEwV01NU19KenNDZEYtOURUOS00QlBsNDVjRjZrekh1dEstLTcwc1Z2RHZYQ21UYTU5RUJiRVZMYWhxTzJBSVZYNGxlSlhWT2M0cDM4MXl2MDByVE5lNmdXYm1DN3NHQ09VcVl2V01oOUdoV1ZMcEh3?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "미국, 이란 제재 회피 지원 혐의로 러시아 결제 네트워크 A7 표적 Cryptopolitan",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "투자사기",
       "title": "\"평생 수당\" 속여 3천500억 원 투자 사기 일당 기소",
       "source": "대전MBC",
@@ -749,7 +764,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 송금 피해 땐 은행·112에 지급정지 요청",
-      "source": "비건뉴스",
+      "source": "vegannews.co.kr",
       "source_url": "https://www.vegannews.co.kr",
       "source_domain": "www.vegannews.co.kr",
       "date": "Fri, 02 Oct 2026 08:26:54 GMT",
@@ -758,14 +773,14 @@
         "사기",
         "FIU·규제"
       ],
-      "description": "보이스피싱 송금 피해 땐 은행·112에 지급정지 요청 비건뉴스",
+      "description": "보이스피싱 송금 피해 땐 은행·112에 지급정지 요청 vegannews.co.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "FIU·STR",
       "title": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발",
-      "source": "daejonilbo.com",
+      "source": "대전일보",
       "source_url": "https://www.daejonilbo.com",
       "source_domain": "www.daejonilbo.com",
       "date": "Fri, 02 Oct 2026 06:40:10 GMT",
@@ -773,7 +788,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 daejonilbo.com",
+      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 대전일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -1228,7 +1243,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행",
-      "source": "뉴스1",
+      "source": "news1.kr",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Thu, 01 Oct 2026 08:30:15 GMT",
@@ -1237,7 +1252,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 뉴스1",
+      "description": "코인으로 뜯긴 보이스피싱 피해금도 돌려받는다…법령 84개 시행 news1.kr",
       "collection_method": "google_news_24h"
     },
     {
