@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T11:20:57.799073+00:00",
+  "updated_at": "2026-10-04T18:03:29.658812+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,12 +20,12 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "트래블룰",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 3
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "환치기·외환",
@@ -65,7 +65,7 @@
     {
       "feed": "탈세",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "횡령·배임",
@@ -75,23 +75,23 @@
     {
       "feed": "차명계좌",
       "ok": true,
-      "count": 5
+      "count": 7
     },
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 4,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -415,12 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -433,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,19 +445,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +495,70 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1183,
+  "count": 1188,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "NH농협생명, 보이스피싱 의심거래 차단",
+      "source": "보험신보",
+      "source_url": "https://www.insweek.co.kr",
+      "source_domain": "www.insweek.co.kr",
+      "date": "Sun, 04 Oct 2026 15:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1mNTYwTzYzWk9kaVBfWjQ1bzJ1MG1jREpDZjBPTHNnRG5uZWtjRFJ3LTlYd2NCR1kxOTMzS284RXlJdGR5R1BuLWI2LW12aEYzbkd5TjdzenBjR0ZBaWZZc05Bd3l2WE1welRj?oc=5",
+      "tags": [
+        "사기",
+        "FIU·규제"
+      ],
+      "description": "NH농협생명, 보이스피싱 의심거래 차단 보험신보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "북한·러시아, 유엔 제재 회피해 러시아 드론 산업 지원 - Indo-Pacific Defense FORUM",
+      "source": "Indo-Pacific Defense FORUM",
+      "source_url": "https://ipdefenseforum.com",
+      "source_domain": "ipdefenseforum.com",
+      "date": "Sun, 04 Oct 2026 14:00:57 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxQeXFhZ25qMTlyZmhoMXcyRVpiWEdlaGZwSC1qc3B3eXUwLXVESGVKeWJTT2FUS2EyN0MwbTFmb1lQeHlOTThBcnNuaFAxSVRJcXFKbkc2ZWNObzkyUTJYSnd4SVdTOXVJTG9tMEt1UkVqUFhHSzJWdGdrS3VlaGQ5ckZzejhkQ1dIUWMzd2piQk91eHdMY2VLd3BQYXpzR05lYnBGeHFVS3dlLU1Hc2diLVo2bkx1bkR1XzZ6OXgwR3ZrbHF0REltT1cwVTRBaE04YjVuZVM0czUzVEtGVm5YUlhHNGRKZUw0V05jRkZxRHAwT3lHVjFMZkJWQkZOT2dRLWJSWXlHcWZpbmVMNUFIeDNHa25WaUlDaTZBT0M2UWdoNUR6cGNQMFFGRlVBTFhaeUY4OExMWGh4MzJFa3BXQjRLYWpZU2VscjgxNGRYSDQ4dw?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "북한·러시아, 유엔 제재 회피해 러시아 드론 산업 지원 Indo-Pacific Defense FORUM",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "차명계좌",
+      "title": "적발된 사업자 차명계좌 3471건…농협은행 703건 최다",
+      "source": "아주경제",
+      "source_url": "https://www.ajunews.com",
+      "source_domain": "www.ajunews.com",
+      "date": "Sun, 04 Oct 2026 11:39:51 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBHSndJNGF6eEFyN0lCSzg3LUc0emxkZThOMWNxZlFWZkstczc4a1RlN3ktYjQ2djIyTnY3bmR6UTREV1FUaGc4X1hBeGh4Sy1qWkg3SnB4aHLSAVhBVV95cUxQR0p3STRhenhBcjdJQks4Ny1HNHpsZGU4TjFjcWZRVmZLLXM3OGtUZTd5LWI0NnYyMk52N25kelE0RFdRVGhnOF9YQXhoeEstalpIN0pweGhy?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "description": "적발된 사업자 차명계좌 3471건…농협은행 703건 최다 아주경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "차명계좌",
+      "title": "\"차명계좌 적발 NH농협·국민·농축협·신한銀 순으로 많아\"(종합)",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Sun, 04 Oct 2026 11:19:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9WLWhwZmllcUUyZHVFNmdzNTkzS0tKaDlqVVBNTm52a29HN3JyZnI4TU5Ncld6UlhSOVlvcTR0dG5Rd0VyczJkcWRUQ2dFLTltWmhJSlhVWUt3X2RacFBFcjZKMG1haDY2SDRBTktnSVJvQkdmSWc?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "description": "\"차명계좌 적발 NH농협·국민·농축협·신한銀 순으로 많아\"(종합) 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "가상자산 AML",
@@ -562,6 +623,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "이억원 금융위원장 \"'AI 해킹' 최고 경각심…보이스피싱 등 2차 피해 선제 대응\"",
+      "source": "KBC광주방송",
+      "source_url": "https://www.ikbc.co.kr",
+      "source_domain": "www.ikbc.co.kr",
+      "date": "Sun, 04 Oct 2026 06:06:24 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1JX1o0Sl9helVfMVZqMUxLOEVWRUVHQTFHbkZqc1ZxU1RaVy1YcHByVS1sNHA3SHNuVXowNHQtRTk4cUYyaDlzcHB4VXd3Uk53VlZ6b3M3ejVXWUVxY01rVA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "이억원 금융위원장 \"'AI 해킹' 최고 경각심…보이스피싱 등 2차 피해 선제 대응\" KBC광주방송",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "[속보]이억원 \"소비자 해킹 피해 최소화…보이스피싱 가능성도 대비\"",
       "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
@@ -594,10 +670,10 @@
       "query": "차명계좌",
       "title": "\"차명계좌 적발, NH농협·국민·농축협·신한은행 순으로 많아\"",
       "source": "매일경제TV",
-      "source_url": "https://mbnmoney.mbn.co.kr",
+      "source_url": "http://mbnmoney.mbn.co.kr",
       "source_domain": "mbnmoney.mbn.co.kr",
       "date": "Sun, 04 Oct 2026 02:04:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE14Ry1HeDVEOENrVHNsZzZCeGVNUERTZGZIN1RNczBySjlxMWFiaFE2RlpCX1RQYWtVS0Vac1BkWDVIR1FmLUNmUlFYdmthMTlFNWVGOTloQ05PamFFRGF1YTRWMHI5cTdVRTZN?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE84UmZlcnQxeXVpTUs3OW1PTGh4cElBcU0tRVluNnkxQVhKNTVSVkRrNzhtaHBGT2J3bkw5ZjBKeVEtVGtvZGc0Nl91bElDX1VYYy1iQTdBYUtxMHY5NGxMZHZTZ1FZOFE?oc=5",
       "tags": [
         "AML"
       ],
@@ -623,7 +699,7 @@
       "region": "국내",
       "query": "횡령·배임",
       "title": "'가상 무속인'에 속아 회삿돈 66억 횡령해 바친 대표…2심서 감형",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Sun, 04 Oct 2026 00:00:00 GMT",
@@ -631,7 +707,7 @@
       "tags": [
         "횡령·배임"
       ],
-      "description": "'가상 무속인'에 속아 회삿돈 66억 횡령해 바친 대표…2심서 감형 news1.kr",
+      "description": "'가상 무속인'에 속아 회삿돈 66억 횡령해 바친 대표…2심서 감형 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -947,15 +1023,15 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발",
-      "source": "대전일보",
+      "source": "daejonilbo.com",
       "source_url": "https://www.daejonilbo.com",
       "source_domain": "www.daejonilbo.com",
-      "date": "Fri, 02 Oct 2026 06:40:10 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1oSWFxd2NUNndyZExpZU5oRTdSNUN6ZEEwaTZSZERUREJ6VEJETVZCcnFDOThidkNURVVfOXBkNUhaUXVNaE52T3dpOWc5UnRGbE1Xa04tQzlOdFZsblZVUXluVXNZWUtpenhfXzUzcU9YVjTSAXNBVV95cUxNaElhcXdjVDZ3cmRMaWVOaEU3UjVDemRBMGk2UmREVERCelRCRE1WQnJxQzk4YnZDVEVVXzlwZDVIWlF1TWhOdk93aTlnOVJ0RmxNV2tOLUM5TnRWbG5WVVF5blVzWVlLaXp4X181M3FPWFY0?oc=5",
+      "date": "Fri, 02 Oct 2026 06:32:37 GMT",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB1YUc1aVREOW9FWFZ4WHNUdW90VjhUNzZ3RmduWVhiemlYbEI5RmJYM191dDVQcUY1dExHb2FzTEJTYVNHbkRyRW53REtaZXUwLXl0eW0xby14MndIZFMzQnhEbml1ZkVldExBU1JlONIBc0FVX3lxTE1oSWFxd2NUNndyZExpZU5oRTdSNUN6ZEEwaTZSZERUREJ6VEJETVZCcnFDOThidkNURVVfOXBkNUhaUXVNaE52T3dpOWc5UnRGbE1Xa04tQzlOdFZsblZVUXluVXNZWUtpenhfXzUzcU9YVjQ?oc=5",
       "tags": [
         "FIU·규제"
       ],
-      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 대전일보",
+      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 daejonilbo.com",
       "collection_method": "google_news_24h"
     },
     {
