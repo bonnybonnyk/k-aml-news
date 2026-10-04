@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T21:47:46.252805+00:00",
+  "updated_at": "2026-10-04T22:10:11.092165+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -403,12 +421,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
@@ -421,31 +433,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,9 +463,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -534,7 +552,7 @@
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Sun, 04 Oct 2026 11:19:50 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9WLWhwZmllcUUyZHVFNmdzNTkzS0tKaDlqVVBNTm52a29HN3JyZnI4TU5Ncld6UlhSOVlvcTR0dG5Rd0VyczJkcWRUQ2dFLTltWmhJSlhVWUt3X2RacFBFcjZKMG1haDY2SDRBTktnSVJvQkdmSWc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBSd0dicDcxb3hKTVlSd0gxVldPbVloQXVxYWVxWExCTFBxbTc3azZJS2l0R2xva3hST000aENubFdQZkd0MFRPZUVnTGhaVFZWand5Z2ZQWHp2Sk3SAWBBVV95cUxOZDY5Z3RuT2pHZVNZQUhKRmMwbUk2SkljcXZNcHZIR1JFTmR4cDVpc0ZWbTV5Y2RrMGg3Wmp5WTFhVlo0cTZLZUxzd3ZvUEFrU21LTGhJSTdkaUJrYk1DUmo?oc=5",
       "tags": [
         "AML"
       ],
@@ -636,7 +654,7 @@
       "region": "국내",
       "query": "차명계좌",
       "title": "국세청에 신고된 차명계좌 1년새 3400건…NH농협은행 703건 최다",
-      "source": "디지털데일리",
+      "source": "ddaily.co.kr",
       "source_url": "https://www.ddaily.co.kr",
       "source_domain": "www.ddaily.co.kr",
       "date": "Sun, 04 Oct 2026 03:47:21 GMT",
@@ -644,7 +662,7 @@
       "tags": [
         "AML"
       ],
-      "description": "국세청에 신고된 차명계좌 1년새 3400건…NH농협은행 703건 최다 디지털데일리",
+      "description": "국세청에 신고된 차명계좌 1년새 3400건…NH농협은행 703건 최다 ddaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -666,7 +684,7 @@
       "region": "국내",
       "query": "차명계좌",
       "title": "강민국 차명계좌 적발, NH농협·국민·농축협·신한은행 순",
-      "source": "biz.sbs.co.kr",
+      "source": "SBS Biz",
       "source_url": "https://biz.sbs.co.kr",
       "source_domain": "biz.sbs.co.kr",
       "date": "Sun, 04 Oct 2026 01:49:00 GMT",
@@ -674,7 +692,7 @@
       "tags": [
         "AML"
       ],
-      "description": "강민국 차명계좌 적발, NH농협·국민·농축협·신한은행 순 biz.sbs.co.kr",
+      "description": "강민국 차명계좌 적발, NH농협·국민·농축협·신한은행 순 SBS Biz",
       "collection_method": "google_news_24h"
     },
     {
@@ -898,7 +916,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "SMBC닛코증권, 유니스왑 훅에 자금세탁방지 넣어 2027년 중반 일본 디파이 관문 추진",
-      "source": "위키트리",
+      "source": "wikitree.co.kr",
       "source_url": "https://www.wikitree.co.kr",
       "source_domain": "www.wikitree.co.kr",
       "date": "Fri, 02 Oct 2026 17:02:00 GMT",
@@ -907,7 +925,7 @@
         "FIU·규제",
         "자금세탁"
       ],
-      "description": "SMBC닛코증권, 유니스왑 훅에 자금세탁방지 넣어 2027년 중반 일본 디파이 관문 추진 위키트리",
+      "description": "SMBC닛코증권, 유니스왑 훅에 자금세탁방지 넣어 2027년 중반 일본 디파이 관문 추진 wikitree.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1005,7 +1023,7 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발",
-      "source": "daejonilbo.com",
+      "source": "대전일보",
       "source_url": "https://www.daejonilbo.com",
       "source_domain": "www.daejonilbo.com",
       "date": "Fri, 02 Oct 2026 06:32:37 GMT",
@@ -1013,7 +1031,7 @@
       "tags": [
         "FIU·규제"
       ],
-      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 daejonilbo.com",
+      "description": "코레일, 추석 암표 의심거래 35건 수사 의뢰…AI 위조 승차권도 적발 대전일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -18230,37 +18248,41 @@
   "official_items": [
     {
       "region": "공식자료",
-      "query": "불법사금융",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융감독원",
+      "source": "금융위원회",
       "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
+        "가상자산",
         "불법사금융",
-        "FIU·규제"
+        "마약",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융감독원",
+      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융위원회",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
-        "FIU·규제"
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
