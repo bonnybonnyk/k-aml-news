@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T08:45:33.890507+00:00",
+  "updated_at": "2026-10-05T09:13:05.424933+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "지갑·해외거래소",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -415,75 +415,81 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:가상자산:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
+      "feed": "금융감독원:시세조종:p1",
+      "ok": false,
       "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원:환치기:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "feed": "금융감독원:fallback",
       "ok": true,
       "count": 0,
-      "method": "official_board"
+      "method": "exact_official_fallback"
     },
     {
       "feed": "금융감독원",
       "ok": true,
-      "count": 16,
+      "count": 0,
       "method": "official_board"
     }
   ],
@@ -638,7 +644,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "보이스피싱 조직원 면허증·수배내역 누설한 경찰 재판행",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Sun, 04 Oct 2026 22:31:02 GMT",
@@ -646,7 +652,7 @@
       "tags": [
         "사기"
       ],
-      "description": "보이스피싱 조직원 면허증·수배내역 누설한 경찰 재판행 yna.co.kr",
+      "description": "보이스피싱 조직원 면허증·수배내역 누설한 경찰 재판행 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -908,6 +914,21 @@
     },
     {
       "region": "국내",
+      "query": "지갑·해외거래소",
+      "title": "[단독]'적색수배' KOK 자금총책 지갑 보니…국내외 거래소로 1050억대 현금화",
+      "source": "edaily.co.kr",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Sat, 03 Oct 2026 20:10:55 GMT",
+      "link": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNdHNvWlVDTmplMkM0MEpFOG9aOXZZYWY0dHJBeFEzZF9TRlJCeTdDSGo0aEQtcXU1NzVvejhfV3VvdUMzRXpmR2FFZzFXMVZZMlI1cTF6YXlVdkZrZWNnbzVDMUxBc05xQ1VyR204U2lva1QxLWpyRGNSMExzMUo5SjF6emNRbDJ2RWk3OWhCaUdSM0VFY0FRMl9zRDlsZFN2NjlYWTNEQlAzMS14Z0huMmJ6ZUU3U2dUY2FGSEZNZFRyZGtvQjBNNVhkRjQzM3FUb095d0NIVUJtdmh2MzkxR2FxTExyX3VZQmtUbkM3c0hOVERJZXVRV2RFcjBDbG5tajAtX3dHYkZDbTN5RGxveXFtcEhCSFczLWNzMFpQMFZJRklDSUNrODNtWXg?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "[단독]'적색수배' KOK 자금총책 지갑 보니…국내외 거래소로 1050억대 현금화 edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "투자사기",
       "title": "CFTC, 온라인 친분 이용한 가상자산 투자 사기 경고",
       "source": "토큰포스트",
@@ -1107,21 +1128,6 @@
         "가상자산"
       ],
       "description": "\"北해킹 암호화폐 세탁에 바이낸스 연루\" 미주조선일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "지갑·해외거래소",
-      "title": "[단독]'적색수배' KOK 자금총책 지갑 보니…국내외 거래소로 1050억대 현금화",
-      "source": "edaily.co.kr",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
-      "date": "Fri, 02 Oct 2026 15:53:33 GMT",
-      "link": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNb0lzYzJDYVZpUE1WY2VDTEZrU0NEb20wZ0FBMHR4MnBNd0hsRXpQeTAxRENzM3NRUlVmaWVLTzFYMmhnVF9acG9LSTlPZzNqTXVZTUVvNFlCc2RnazRSSkoyNXFVb3VjOEt5cnFzdXRKSlctOVlpYjVSdllfOElxYk03TG5ReWJjTVlCc2IyNGVjc0k1dUFxeGFoQi03TnVUdF9BWUhZRjg1UE9lUU9UMExfdWVWUk80QlVLXzJ1ekw4eU5nRkVhT0c2MmRUUngzRGs3RjBwa25wUHBReFB4ZXhfcWwzQjFvUlZFWWNpWk50RjJTeTF6aUR3Y2oyaWFuTnJEdTBURl9zRGlLd05weTBiMFNWVHdkRU42Nm5naUJXeE5hWVZxVE10dmM?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "[단독]'적색수배' KOK 자금총책 지갑 보니…국내외 거래소로 1050억대 현금화 edaily.co.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -18350,13 +18356,12 @@
     {
       "region": "공식자료",
       "query": "금융위/FIU",
-      "official_source": "금융위원회·금융감독원",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융위원회",
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "가상자산시장 불공정거래 혐의자 수사기관 고발·통보 - 제16차 금융위원회 정례회의(’26.9.23.) 의결 -",
-      "source": "금융위원회·금융감독원",
+      "source": "금융위원회",
       "date": "2026-09-23T00:00:00+09:00",
       "link": "https://www.fsc.go.kr/no010101/87783?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
@@ -18365,7 +18370,7 @@
         "FIU·규제",
         "제재·테러자금"
       ],
-      "collection_method": "official_multi_source"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
@@ -18566,6 +18571,22 @@
     },
     {
       "region": "공식자료",
+      "query": "DAXA",
+      "official_source": "DAXA",
+      "official_sources": [
+        "DAXA"
+      ],
+      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
+      "source": "DAXA",
+      "date": "2026-08-27T00:00:00+09:00",
+      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
+      "tags": [
+        "가상자산"
+      ],
+      "collection_method": "verified_daxa_board"
+    },
+    {
+      "region": "공식자료",
       "query": "자금세탁",
       "official_source": "금융감독원",
       "official_sources": [
@@ -18580,22 +18601,6 @@
         "자금세탁"
       ],
       "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "DAXA",
-      "official_source": "DAXA",
-      "official_sources": [
-        "DAXA"
-      ],
-      "title": "DAXA, ‘가상자산사업자 전용 외환 전산망 구축 설명회’ 개최",
-      "source": "DAXA",
-      "date": "2026-08-27T00:00:00+09:00",
-      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=87&sk=&sw=&offset=0&category=",
-      "tags": [
-        "가상자산"
-      ],
-      "collection_method": "verified_daxa_board"
     },
     {
       "region": "공식자료",
@@ -18763,22 +18768,6 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
-      "source": "금융감독원",
-      "date": "2026-07-29T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
       "query": "DAXA",
       "official_source": "DAXA",
       "official_sources": [
@@ -18793,6 +18782,22 @@
         "사기"
       ],
       "collection_method": "verified_daxa_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
+      "official_sources": [
+        "금융감독원"
+      ],
+      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
+      "source": "금융감독원",
+      "date": "2026-07-29T00:00:00+09:00",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "tags": [
+        "사기"
+      ],
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
