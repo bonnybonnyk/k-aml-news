@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T11:11:37.924466+00:00",
+  "updated_at": "2026-10-05T11:45:30.435064+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "불법사금융",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "불법도박",
@@ -421,12 +421,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
@@ -439,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,6 +445,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
@@ -458,12 +464,6 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -495,9 +495,24 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1193,
+  "count": 1194,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "연휴 마치면 보이스피싱?‥금융권 해킹 2차 피해 우려",
+      "source": "MBC 뉴스",
+      "source_url": "https://imnews.imbc.com",
+      "source_domain": "imnews.imbc.com",
+      "date": "Mon, 05 Oct 2026 11:05:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1FazVMcW1Bc3hDWFBnVWFwUTFoZFAxSC1va1E2dm5XTjJzQkEtcGdqb3IyX1M3ek1Iald2YnBnUnJYNXVQQklpcEhlNENRdUpNVlU4SXR5V0JlMVhqY1QxcjNsMkliZTRjbzdRYkYzR0pHRWFvQ3pDdtIBeEFVX3lxTE5veUtzSjlxcDAyZFpFTXN0ME5zOW1SOTMtRnJRcjdFUGQ3N1I2TXZ6LU9zYkZ5Z1pSY2o5akp3a1JNckNSQlhYbjQ4TldNNGVGZnNwaUZkakJJR3NQREt1ZkJLREtMRlF3NlRfdzR0QXFNRTc2ZWZDSA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "연휴 마치면 보이스피싱?‥금융권 해킹 2차 피해 우려 MBC 뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -532,21 +547,6 @@
     {
       "region": "국내",
       "query": "마약자금",
-      "title": "경찰, 마약 공급망 차단…제조·밀수 적발 33.8% 증가",
-      "source": "아시아경제",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Mon, 05 Oct 2026 05:53:16 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPYktvNzk0d18yNTB3cjg4NnRnVnc1V01UYmV3YUE4X3JmdFBKUXFEZjRDV1JhVGpOMUg4d0FXOVpRM1BmMy05VHJQcWJZbDlHNjFaOGZIeHZianR1S1FScmY0MlBudm81ZUxXOHJuZHhjOWc1clBKNkFvMGM4eG5oSU9B?oc=5",
-      "tags": [
-        "마약"
-      ],
-      "description": "경찰, 마약 공급망 차단…제조·밀수 적발 33.8% 증가 아시아경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "마약자금",
       "title": "마약 밀수·제조사범 검거 34% 증가… 경찰 \"공급망 차단 집중\"",
       "source": "한국일보",
       "source_url": "https://www.hankookilbo.com",
@@ -562,8 +562,23 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "“AI 목소리·해킹까지 결합”… 진화하는 보이스피싱, 국가적 재난이 되다",
+      "source": "뉴스N연합",
+      "source_url": "https://newsyonhap.com",
+      "source_domain": "newsyonhap.com",
+      "date": "Mon, 05 Oct 2026 04:55:20 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1wVURZMlJ5M3E5Z2VHcnZPa3BFaFZGQkhsSWpfRldZaXBmSnBIWU16WVY2dE1qTVY3cEx3SDBLMXkzMjdEVkpKQlpn?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“AI 목소리·해킹까지 결합”… 진화하는 보이스피싱, 국가적 재난이 되다 뉴스N연합",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "대출 보이스피싱, 한도까지 읊는다…해킹 7개사 뒤 판별 3수칙",
-      "source": "imaeil.com",
+      "source": "매일신문",
       "source_url": "https://www.imaeil.com",
       "source_domain": "www.imaeil.com",
       "date": "Mon, 05 Oct 2026 03:55:58 GMT",
@@ -571,14 +586,14 @@
       "tags": [
         "사기"
       ],
-      "description": "대출 보이스피싱, 한도까지 읊는다…해킹 7개사 뒤 판별 3수칙 imaeil.com",
+      "description": "대출 보이스피싱, 한도까지 읊는다…해킹 7개사 뒤 판별 3수칙 매일신문",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "마약자금",
       "title": "‘마약왕’ 박왕열 송환 뒤 공급망 차단 집중…유통사범 적발 크게 늘어",
-      "source": "hani.co.kr",
+      "source": "한겨레",
       "source_url": "https://www.hani.co.kr",
       "source_domain": "www.hani.co.kr",
       "date": "Mon, 05 Oct 2026 02:19:00 GMT",
@@ -586,22 +601,7 @@
       "tags": [
         "마약"
       ],
-      "description": "‘마약왕’ 박왕열 송환 뒤 공급망 차단 집중…유통사범 적발 크게 늘어 hani.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“AI 목소리·해킹까지 결합”… 진화하는 보이스피싱, 국가적 재난이 되다",
-      "source": "대한청년일보",
-      "source_url": "https://www.koreayouthdaily.com",
-      "source_domain": "www.koreayouthdaily.com",
-      "date": "Mon, 05 Oct 2026 01:45:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xbnJFX041b3NaXzFZR082MWdmUzBlUE5FaV9vdXJOZk9PSXhYN1FmZ19fR3lzUC1RVENuZmNMRm5SemtDcTJ5cUdGZVJrVGlYWEVOdVln?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“AI 목소리·해킹까지 결합”… 진화하는 보이스피싱, 국가적 재난이 되다 대한청년일보",
+      "description": "‘마약왕’ 박왕열 송환 뒤 공급망 차단 집중…유통사범 적발 크게 늘어 한겨레",
       "collection_method": "google_news_24h"
     },
     {
@@ -622,21 +622,6 @@
     {
       "region": "국내",
       "query": "마약자금",
-      "title": "밀수·제조 마약사범 34% 늘었다…경찰, 공급망 차단에 수사력 집중",
-      "source": "파이낸셜뉴스",
-      "source_url": "https://www.fnnews.com",
-      "source_domain": "www.fnnews.com",
-      "date": "Mon, 05 Oct 2026 00:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BTHZIRG5VbUV4aWpLWGJPUl9tVUFxdzcydDVmYWp2aW5kSHR5aHRKOUcxektuZnE4cHNPVzJPMWFqdU9rV3kzSDl3TE5XSklIRTliS3BWY3Vhdw?oc=5",
-      "tags": [
-        "마약"
-      ],
-      "description": "밀수·제조 마약사범 34% 늘었다…경찰, 공급망 차단에 수사력 집중 파이낸셜뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "마약자금",
       "title": "밀반입 추적 집중…마약 밀수·제조 사범 검거 전년 대비 34% 증가",
       "source": "sedaily.com",
       "source_url": "https://m.sedaily.com",
@@ -647,6 +632,36 @@
         "마약"
       ],
       "description": "밀반입 추적 집중…마약 밀수·제조 사범 검거 전년 대비 34% 증가 sedaily.com",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "경찰, 마약 공급망 차단…제조·밀수 적발 33.8% 증가",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Mon, 05 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE43YkJMQXFPaWN5SHQwSzVzZTVrLWhSWmVaMHhKd2ZXVm9NVUs4dGRMWnZNZGdUVkI2dEU4SVdRZnVkb3ZYck5VanVnbVhsUmtLdlZYNFYzcXc5STF2eUN4dA?oc=5",
+      "tags": [
+        "마약"
+      ],
+      "description": "경찰, 마약 공급망 차단…제조·밀수 적발 33.8% 증가 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "밀수·제조 마약사범 34% 늘었다…경찰, 공급망 차단에 수사력 집중",
+      "source": "파이낸셜뉴스",
+      "source_url": "https://www.fnnews.com",
+      "source_domain": "www.fnnews.com",
+      "date": "Mon, 05 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BTHZIRG5VbUV4aWpLWGJPUl9tVUFxdzcydDVmYWp2aW5kSHR5aHRKOUcxektuZnE4cHNPVzJPMWFqdU9rV3kzSDl3TE5XSklIRTliS3BWY3Vhdw?oc=5",
+      "tags": [
+        "마약"
+      ],
+      "description": "밀수·제조 마약사범 34% 늘었다…경찰, 공급망 차단에 수사력 집중 파이낸셜뉴스",
       "collection_method": "google_news_24h"
     },
     {
