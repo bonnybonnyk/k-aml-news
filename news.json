@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T23:41:07.326348+00:00",
+  "updated_at": "2026-10-05T00:15:47.293026+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 2
+      "count": 4
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 0
+      "count": 3
     },
     {
       "feed": "불법도박",
@@ -70,12 +70,12 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "제재·테러자금",
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -223,7 +223,7 @@
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -415,6 +415,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -427,6 +433,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -434,18 +446,6 @@
     },
     {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,12 +463,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
@@ -478,6 +472,12 @@
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -495,9 +495,54 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1189,
+  "count": 1192,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "[속보] 경찰 간부, 보이스피싱 조직원 수배내역 누설…재판행",
+      "source": "헤럴드경제",
+      "source_url": "https://biz.heraldcorp.com",
+      "source_domain": "biz.heraldcorp.com",
+      "date": "Mon, 05 Oct 2026 00:00:17 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9PZFJBbS0ySXJic3dvc1AwUEFySFh1RzBTVWxmY0c5WkJhY3BxSDFzTjNraVFYeDNGaEJ0VFh1TnNvUmFYWjQtcU54Vm5DSHVjXzlSVnZR?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[속보] 경찰 간부, 보이스피싱 조직원 수배내역 누설…재판행 헤럴드경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "밀수·제조 마약사범 34% 늘었다…경찰, 공급망 차단에 수사력 집중",
+      "source": "파이낸셜뉴스",
+      "source_url": "https://www.fnnews.com",
+      "source_domain": "www.fnnews.com",
+      "date": "Mon, 05 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1BTHZIRG5VbUV4aWpLWGJPUl9tVUFxdzcydDVmYWp2aW5kSHR5aHRKOUcxektuZnE4cHNPVzJPMWFqdU9rV3kzSDl3TE5XSklIRTliS3BWY3Vhdw?oc=5",
+      "tags": [
+        "마약"
+      ],
+      "description": "밀수·제조 마약사범 34% 늘었다…경찰, 공급망 차단에 수사력 집중 파이낸셜뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "경찰, 마약 공급망 차단…제조·밀수 적발 33.8% 증가",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Mon, 05 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE43YkJMQXFPaWN5SHQwSzVzZTVrLWhSWmVaMHhKd2ZXVm9NVUs4dGRMWnZNZGdUVkI2dEU4SVdRZnVkb3ZYck5VanVnbVhsUmtLdlZYNFYzcXc5STF2eUN4dA?oc=5",
+      "tags": [
+        "마약"
+      ],
+      "description": "경찰, 마약 공급망 차단…제조·밀수 적발 33.8% 증가 아시아경제",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -506,7 +551,7 @@
       "source_url": "https://www.yna.co.kr",
       "source_domain": "www.yna.co.kr",
       "date": "Sun, 04 Oct 2026 22:31:02 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zWW1aa1FwZ3FsZHlNVkdpUmhSaG9OMFBjMHBxVlItR3E5UjREU0d5UUtndkdlS0h4YTFxc2hPTFhOTXEtSGh6LTNSZW5LaDhTWWFuMWJrT2h5bm_SAWBBVV95cUxPMzkyWlRSVXBWVUFGT0F6LXJIWHJqUEY1aDFsT1hiWWQtbnAtYUUxZFJia3hodktXazJSMXJWODJYc0Mya2xaaklRUUtJNzlBNUluc0xEY2tTeTljaGh2YnI?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zOTJaVFJVcFZVQUZPQXotckhYcmpQRjVoMWxPWGJZZC1ucC1hRTFkUmJreGh2S1drMlIxclY4MlhzQzJrbFpqSVFRS0k3OUE1SW5zTERja1N5OWNoaHZictIBYEFVX3lxTE8zOTJaVFJVcFZVQUZPQXotckhYcmpQRjVoMWxPWGJZZC1ucC1hRTFkUmJreGh2S1drMlIxclY4MlhzQzJrbFpqSVFRS0k3OUE1SW5zTERja1N5OWNoaHZicg?oc=5",
       "tags": [
         "사기"
       ],
@@ -625,10 +670,10 @@
       "query": "차명계좌",
       "title": "“2025년부터 국세청에 적발된 차명계좌 NH농협·국민·농축협·신한銀 57% 차지”",
       "source": "세계일보",
-      "source_url": "https://m.segye.com",
-      "source_domain": "m.segye.com",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
       "date": "Sun, 04 Oct 2026 06:42:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0tV1k3Tk1CdzBvQ0pNQlJBazZWeHdSanowaEVVVGo2QTZROGJ5VWRJLUV5RkxjRjRkM2NHNEhIdVdaNFNIQU16bmJac1ZTNkNf0gFUQVVfeXFMTmJPWmc2eEgybVRVOUJWbGNlSmlVMTc3dEdMaWh2a2RWNWdwVVk2d3JYaFI3R1hocExtYXpTOUNOYWU4cDE3S2UwRHVEX3VBOWFZWTRP?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE51MmNJa1pfR0J5SzRoYTJXa0hTQVBzbVNzWDFhZlpFMWNTWGFaZDlqa1h3TXFHZE5SR24tSDVjWTR0NUo4NGp0S3JHSFU4N29zQnAxSjI4aWHSAVRBVV95cUxOYk9aZzZ4SDJtVFU5QlZsY2VKaVUxNzd0R0xpaHZrZFY1Z3BVWTZ3clhoUjdHWGhwTG1helM5Q05hZThwMTdLZTBEdURfdUE5YVlZNE8?oc=5",
       "tags": [
         "AML"
       ],
