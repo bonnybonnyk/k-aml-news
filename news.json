@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T08:12:08.168055+00:00",
+  "updated_at": "2026-10-06T08:43:51.699356+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 32
+      "count": 29
     },
     {
       "feed": "불법사금융",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -415,6 +415,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
@@ -433,31 +445,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -500,17 +500,47 @@
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단",
+      "source": "비즈워치",
+      "source_url": "https://news.bizwatch.co.kr",
+      "source_domain": "news.bizwatch.co.kr",
+      "date": "Tue, 06 Oct 2026 08:39:02 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HRXRuajBEcnotYXN2ZHJUMXBxNjlxZ2RTb1RRUmtqTURwQzRYQWZaWnJ0VDF6MWh0b0o0VUdRZWZCNUo3NmNYOWZ1aC0zWEpQSHcxM2ZFTlU2dXFCUnAzNFJ4R0l4LVFLSUE?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단 비즈워치",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "김정은 자금세탁책, 텔레그램서 새 친구…ZachXBT였다",
       "source": "BeInCrypto",
       "source_url": "https://kr.beincrypto.com",
       "source_domain": "kr.beincrypto.com",
-      "date": "Tue, 06 Oct 2026 07:57:21 GMT",
+      "date": "Tue, 06 Oct 2026 08:26:15 GMT",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9rWk9TU3JWUjJqMDROQlhkVVJTQm1neC1ZOWV0MkVTODEyMmNSSlBpanhfS2hmQTZVeGxBSkdlWnpvWmI0MktHQ3lscFYzeWtTaFlmbDBKOF93NkE1elVlcHFVQjVQeklqS2t0Vm15Szk5QQ?oc=5",
       "tags": [
         "자금세탁"
       ],
       "description": "김정은 자금세탁책, 텔레그램서 새 친구…ZachXBT였다 BeInCrypto",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "일본, 제재 회피 의혹 가란텍스 자산 동결 대상 지정",
+      "source": "tokenpost.kr",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Tue, 06 Oct 2026 08:15:51 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8yNzNXREhERHI3aDg4LWdpQ0g1Z2xXOEtLN1Z1WkhwX2lQUXJ3emdrM3JvdmctWlY4WXJaWWlEOVJXNlNVMnlHdWpQZlMzblpKLXZTaHNnYmM?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "일본, 제재 회피 의혹 가란텍스 자산 동결 대상 지정 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -541,6 +571,21 @@
         "사기"
       ],
       "description": "[단독]보이스피싱 피해금 4분의 1도 못 돌려받았다…비은행권 환급 ‘구멍’ edaily.co.kr",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "우리은행-LG유플러스, 금융·통신 데이터 연계…보이스피싱 탐지 강화",
+      "source": "폴리뉴스 Polinews",
+      "source_url": "https://www.polinews.co.kr",
+      "source_domain": "www.polinews.co.kr",
+      "date": "Tue, 06 Oct 2026 07:37:38 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5QTTI5TFU0VDFueGg4UnJCREprS2xSRDJQZVRkVktXWWJRTWZkc0JVQWNWdVl1Q05icEJzNzkwQVZzaHZJSm9VM2ZuUElPemkyc2RaREpkS1hZRlNJakdsVU9OdDlQSElMcExYbVl3?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "우리은행-LG유플러스, 금융·통신 데이터 연계…보이스피싱 탐지 강화 폴리뉴스 Polinews",
       "collection_method": "google_news_24h"
     },
     {
@@ -683,7 +728,7 @@
       "region": "국내",
       "query": "가상자산 AML",
       "title": "그리스 경찰, 투자자 1만여명 겨냥한 AI 가상자산 사기 수사",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Tue, 06 Oct 2026 04:15:04 GMT",
@@ -692,7 +737,7 @@
         "가상자산",
         "사기"
       ],
-      "description": "그리스 경찰, 투자자 1만여명 겨냥한 AI 가상자산 사기 수사 토큰포스트",
+      "description": "그리스 경찰, 투자자 1만여명 겨냥한 AI 가상자산 사기 수사 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -1287,7 +1332,7 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "연휴 마치면 보이스피싱?‥해킹 2차 피해 우려",
-      "source": "MBC 뉴스",
+      "source": "imnews.imbc.com",
       "source_url": "https://imnews.imbc.com",
       "source_domain": "imnews.imbc.com",
       "date": "Tue, 06 Oct 2026 00:37:18 GMT",
@@ -1295,7 +1340,7 @@
       "tags": [
         "사기"
       ],
-      "description": "연휴 마치면 보이스피싱?‥해킹 2차 피해 우려 MBC 뉴스",
+      "description": "연휴 마치면 보이스피싱?‥해킹 2차 피해 우려 imnews.imbc.com",
       "collection_method": "google_news_24h"
     },
     {
@@ -1348,7 +1393,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "자크XBT, 34만9700달러 들여 자금세탁 의심 조직 잠입 주장",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 05 Oct 2026 20:57:00 GMT",
@@ -1356,14 +1401,14 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "자크XBT, 34만9700달러 들여 자금세탁 의심 조직 잠입 주장 토큰포스트",
+      "description": "자크XBT, 34만9700달러 들여 자금세탁 의심 조직 잠입 주장 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
       "region": "국내",
       "query": "보이스피싱",
       "title": "\"내 연소득·대출한도까지 알고 있다\"…'보이스피싱' 비상[AI 해킹 쇼크④]",
-      "source": "news1.kr",
+      "source": "뉴스1",
       "source_url": "https://www.news1.kr",
       "source_domain": "www.news1.kr",
       "date": "Mon, 05 Oct 2026 20:30:00 GMT",
@@ -1371,7 +1416,7 @@
       "tags": [
         "사기"
       ],
-      "description": "\"내 연소득·대출한도까지 알고 있다\"…'보이스피싱' 비상[AI 해킹 쇼크④] news1.kr",
+      "description": "\"내 연소득·대출한도까지 알고 있다\"…'보이스피싱' 비상[AI 해킹 쇼크④] 뉴스1",
       "collection_method": "google_news_24h"
     },
     {
@@ -1393,7 +1438,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "ZachXBT, 중국 자금세탁 조직 10억달러 추적 보도",
-      "source": "토큰포스트",
+      "source": "tokenpost.kr",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 05 Oct 2026 15:23:00 GMT",
@@ -1401,7 +1446,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "ZachXBT, 중국 자금세탁 조직 10억달러 추적 보도 토큰포스트",
+      "description": "ZachXBT, 중국 자금세탁 조직 10억달러 추적 보도 tokenpost.kr",
       "collection_method": "google_news_24h"
     },
     {
@@ -18430,39 +18475,6 @@
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8ycENnUWNuNnBZcjNHOVVGWGFfRW1UcHUxWWNZNGZnWEtiTWlrZDlLZVFKRGJra1E2TzU5NHlrNm5neGFMVkRiSkhnd0dSS0xHTDlNdjc5UjZsM2lZSjN3UzZtV19ZZ0E?oc=5",
       "tags": [
         "AML"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
-      "title": "해외재산 은닉·쪼개기 송금…상반기 7조2천억원 불법 외환거래",
-      "source": "연합뉴스",
-      "date": "Mon, 27 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5SNHFnUVR0NTVZaWo4dHpYNDJTZ0d4M3loTEdyY2wzVEd4WnRQNVV4dDBhMW9acmNlOXphVXBNekF5X2xEbDYyVWNFMnNKNUpHY3RIcGxGQXRoX0nSAWBBVV95cUxOWGZzcDZJVWlGS3l1LVRfOURld0JJbGpPd3ktQmoyTEhmdDdfT3Q4UjVkZW1FZmltZHZuZW5McWF5aGJVNV9UdWo4ZkM4UDNlZzg4UlJzVVJjWXNMRmpoMEg?oc=5",
-      "tags": [
-        "AML"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
-      "title": "계좌 쪼개고 가상자산으로 송금…7.2조원 불법 외환거래 적발",
-      "source": "연합뉴스TV",
-      "date": "Mon, 27 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE84cUE0QTVSX0ZJSGVUSm5SRE5pczRGRVdsM21TOEdielM5UTVTQzlreWtSa2tYbHJCVGFIQkQ5YUdTQ1R1aXlWV2c1dm1oMkx3MUk2VVNPaDBNanpkWE1Ha0tsOGQwRFU?oc=5",
-      "tags": [
-        "가상자산"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
-      "title": "관세청, 상반기 7.2조 원 상당 불법외환거래 적발",
-      "source": "KBS 뉴스",
-      "date": "Mon, 27 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBqMEl1MldCRS1JSFd0SGtQVC1CTjBRLXBlNXF0ZERHZlVlS3Y2c1laRkpyWDJGbHdJV2I2cGlZblVyMXNlLXFUUmEtUFRLZzNZQXNTenNyX1lQczA?oc=5",
-      "tags": [
-        "환치기·외환"
       ]
     }
   ],
