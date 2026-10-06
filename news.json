@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-06T02:43:35.443144+00:00",
+  "updated_at": "2026-10-06T03:10:41.269568+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "가상자산 AML",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 23
+      "count": 33
     },
     {
       "feed": "불법사금융",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,9 +397,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -427,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -442,12 +430,6 @@
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
       "method": "official_board"
     },
     {
@@ -501,6 +483,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "LGU+·우리은행, 보이스피싱 실시간 차단",
+      "source": "뉴스핌",
+      "source_url": "https://www.newspim.com",
+      "source_domain": "www.newspim.com",
+      "date": "Tue, 06 Oct 2026 02:05:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5IMFVTbnczZGJ0UU1IUXdVV25lOGRycllFTzIwWHpJdnBsdlVjZTF5WF9BbXFXZlo1VV9jdkVuaFAyZlhEY08tRHUxWlMzdmVHX3lqMno1ZGw0bzRB?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "LGU+·우리은행, 보이스피싱 실시간 차단 뉴스핌",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "LG유플러스-우리은행, 금융·통신 정보 연계로 보이스피싱 막는다",
       "source": "인더뉴스",
       "source_url": "https://www.inthenews.co.kr",
@@ -516,6 +513,21 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "우리은행, LG유플러스와 보이스피싱 탐지 강화…금융·통신 데이터 연계",
+      "source": "디지털투데이",
+      "source_url": "https://www.digitaltoday.co.kr",
+      "source_domain": "www.digitaltoday.co.kr",
+      "date": "Tue, 06 Oct 2026 01:47:36 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1MZ2hSY2VCSWI1SHBYOXktQ1VPOXRhTldzTnJXY09ib0JhWVpJVzdqYnNtVi1TVm84TU1lNGFFNUlxMWdqdUQzdDMzT0pQb2ctLVhMZDl1LTdHSExlSmRlVkt3N3VIWG0xcFQtbTBXbi1VdDA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "우리은행, LG유플러스와 보이스피싱 탐지 강화…금융·통신 데이터 연계 디지털투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "보이스피싱 피해 1.2조인데 환급은 26%…서민금융硏 “송금 전에 막아야”",
       "source": "마이데일리",
       "source_url": "https://www.mydaily.co.kr",
@@ -526,6 +538,67 @@
         "사기"
       ],
       "description": "보이스피싱 피해 1.2조인데 환급은 26%…서민금융硏 “송금 전에 막아야” 마이데일리",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "우리은행-LG유플러스, '보이스피싱' 탐지정보 FDS에 실시간 연계",
+      "source": "포쓰저널",
+      "source_url": "https://www.4th.kr",
+      "source_domain": "www.4th.kr",
+      "date": "Tue, 06 Oct 2026 01:29:56 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9ObjF5eV85MGRCcElsNzZNeWFEd21tNjRTV29RSWNiblg0R3gzbGI0YlFINDRQZGNlejRTcEh6YlA5VmNKWWVPRU5GeFpLWVo3Y0VNcnEzR2hIV1U2bFF1S2tSbjI?oc=5",
+      "tags": [
+        "사기",
+        "FIU·규제"
+      ],
+      "description": "우리은행-LG유플러스, '보이스피싱' 탐지정보 FDS에 실시간 연계 포쓰저널",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "우리은행, 보이스피싱 탐지 체계 고도화..LG유플러스와 연계",
+      "source": "한국정경신문",
+      "source_url": "https://kpenews.com",
+      "source_domain": "kpenews.com",
+      "date": "Tue, 06 Oct 2026 01:27:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE44NnU0djdWTVdjVHQ1Rmo4UGFpcC1sSEo2RXRYWmhTalhJMFduT0pIVG5hNXo2R0tZMkloVVFibWVnbWhNZXkyMlBqeWhoZ0hCUGc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "우리은행, 보이스피싱 탐지 체계 고도화..LG유플러스와 연계 한국정경신문",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "LG유플러스, 우리은행과 보이스피싱 차단…통화 위험정보 실시간 연계",
+      "source": "이지경제",
+      "source_url": "https://www.ezyeconomy.com",
+      "source_domain": "www.ezyeconomy.com",
+      "date": "Tue, 06 Oct 2026 01:20:26 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE12OHA0TjMzY1dvR2lRbXIwTEtOYTdNUVZnNk9hNC0wUWkzV3k1UlZuRDVxeGJTVHMxSHRaQlZRQmlEY1lXbVIza1lGazJHdGhKNGtwSlk2bjVhazdHS0lLNTJLLVE5ckVMdWVCVy1B?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "LG유플러스, 우리은행과 보이스피싱 차단…통화 위험정보 실시간 연계 이지경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "우리은행·LG유플러스, 금융·통신 데이터 연계해 보이스피싱 막는다",
+      "source": "SR타임스",
+      "source_url": "https://www.srtimes.kr",
+      "source_domain": "www.srtimes.kr",
+      "date": "Tue, 06 Oct 2026 01:19:45 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1SSDFOUmo1QTcyUTBTRGFrZU9TR1BhLTNjY1NXU3hTbjZJbkVaemdMRnBJaDd6dW1xTFljWHRxN1pTdjFndUJGWW5JelVoc05aNnlibHVLOWhfMW5VenpTM3FmS1dISkZx0gFrQVVfeXFMTkhBWXhrUVpiMFp6OTc0VUdtcXFFWkVDNll5S1VTMGhaMGtwb2taWnB1RktiV0syVXhDOUg4dUZnaXhIVVM0eG5VdTd1cjRmN1g3RWR5dzFwbmRKLWRyT1c0VjdSZmpEVjFTVG8?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "우리은행·LG유플러스, 금융·통신 데이터 연계해 보이스피싱 막는다 SR타임스",
       "collection_method": "google_news_24h"
     },
     {
@@ -576,16 +649,31 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스",
-      "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
-      "date": "Tue, 06 Oct 2026 01:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNtIBeEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNg?oc=5",
+      "title": "LGU+, 우리은행과 보이스피싱 위험 실시간 공유",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Tue, 06 Oct 2026 01:02:58 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0taHdNbDFQYW1qZG1lRUs3WVRTdlNoSWE3bWlMbWNzMHJ5M0MzNVlHT01iWlBmQTA4QXZTTThzaEtoR3ZFUE1teEdNc2tFV2c?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스 뉴시스",
+      "description": "LGU+, 우리은행과 보이스피싱 위험 실시간 공유 v.daum.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"보이스피싱 실시간 탐지·차단\"…LGU+, 우리은행과 맞손",
+      "source": "v.daum.net",
+      "source_url": "https://v.daum.net",
+      "source_domain": "v.daum.net",
+      "date": "Tue, 06 Oct 2026 01:02:04 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MdlFCaEJORGdrb29IRWMwdDdDZkcwQkM0Y3FxVUh5Vk9IeUZiQnVkaWN2ZkNsTTlQUGlZcmRZekk2bzcyUGgyVnc0aldnNm8?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"보이스피싱 실시간 탐지·차단\"…LGU+, 우리은행과 맞손 v.daum.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -606,16 +694,16 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "\"보이스피싱 실시간 탐지·차단\"…LGU+, 우리은행과 맞손",
-      "source": "뉴스1",
-      "source_url": "https://www.news1.kr",
-      "source_domain": "www.news1.kr",
+      "title": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스",
+      "source": "뉴시스",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Tue, 06 Oct 2026 01:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBiY3VhNzBiLWJFdHoxNW1XbXRPNjFGY284TFpCaW9RNEhEX0ZNWWlCSy1RYWkwVGszcGpsckZCRTVoemE0dkE0NHRHcGg1T2lsQVlEU20ycElHTS1PM0g5bGRwY1luQdIBZkFVX3lxTFBiY3VhNzBiLWJFdHoxNW1XbXRPNjFGY284TFpCaW9RNEhEX0ZNWWlCSy1RYWkwVGszcGpsckZCRTVoemE0dkE0NHRHcGg1T2lsQVlEU20ycElHTS1PM0g5bGRwY1luQQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNtIBeEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNg?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "\"보이스피싱 실시간 탐지·차단\"…LGU+, 우리은행과 맞손 뉴스1",
+      "description": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -661,6 +749,21 @@
         "사기"
       ],
       "description": "LGU+, 우리은행과 보이스피싱 막는다…‘익시오’ 위험정보 실시간 연계 헤럴드경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "LGU+, 우리은행과 맞손...금융·통신 정보 실시간 연계해 보이스피싱 막는다",
+      "source": "핀포인트뉴스",
+      "source_url": "https://www.pinpointnews.co.kr",
+      "source_domain": "www.pinpointnews.co.kr",
+      "date": "Tue, 06 Oct 2026 01:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1TeTJTdndaVkJJY29hcGtLcmZLMnROdXB5bEFienFuaVVFdVl4NEFZRjRfVXVlRkxWamVFcjVNZkN0RzZleVU0bDlFN3ludGI1d0xCaEJxNENNd0RBZnlmZ1BRSVpPYktjT3dGUUhHckt0SEnSAXdBVV95cUxQQmMzQ1pndVFReXByamY2YmRvdjVJMkRVaTktMG00ZVo4VVdYYWRMTU9pMi1rMkViNUdOY1UtSFl3V3A2Rm12RG85WXdvYW9sNDBWejFvQm9IN2I1NUlDLUQ1X2hRVURDYXBoZGhCVVVJYV9ZUlVJQQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "LGU+, 우리은행과 맞손...금융·통신 정보 실시간 연계해 보이스피싱 막는다 핀포인트뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -833,7 +936,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "잭XBT \"바이비트 해킹 연계 라자루스 자금세탁 조직 잠입에 35만달러 위험 감수\"",
-      "source": "bloomingbit.io",
+      "source": "블루밍비트",
       "source_url": "https://bloomingbit.io",
       "source_domain": "bloomingbit.io",
       "date": "Mon, 05 Oct 2026 19:50:34 GMT",
@@ -841,7 +944,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "잭XBT \"바이비트 해킹 연계 라자루스 자금세탁 조직 잠입에 35만달러 위험 감수\" bloomingbit.io",
+      "description": "잭XBT \"바이비트 해킹 연계 라자루스 자금세탁 조직 잠입에 35만달러 위험 감수\" 블루밍비트",
       "collection_method": "google_news_24h"
     },
     {
@@ -893,7 +996,7 @@
       "region": "국내",
       "query": "자금세탁",
       "title": "싱가포르뉴스 싱가포르 3조 원대 자금세탁 범죄 압수품 경매에 쏠린 눈… 현직 변호사가 낙찰받은 명품 화제",
-      "source": "뉴스케이",
+      "source": "newsk.net",
       "source_url": "https://newsk.net",
       "source_domain": "newsk.net",
       "date": "Mon, 05 Oct 2026 10:15:23 GMT",
@@ -901,7 +1004,7 @@
       "tags": [
         "자금세탁"
       ],
-      "description": "싱가포르뉴스 싱가포르 3조 원대 자금세탁 범죄 압수품 경매에 쏠린 눈… 현직 변호사가 낙찰받은 명품 화제 뉴스케이",
+      "description": "싱가포르뉴스 싱가포르 3조 원대 자금세탁 범죄 압수품 경매에 쏠린 눈… 현직 변호사가 낙찰받은 명품 화제 newsk.net",
       "collection_method": "google_news_24h"
     },
     {
@@ -18329,150 +18432,42 @@
         "가상자산",
         "사기"
       ]
-    },
-    {
-      "region": "국내",
-      "query": "횡령·배임",
-      "title": "육아휴직급여 부정수급·회사자금 횡령 4명 불구속 기소",
-      "source": "뉴시스",
-      "date": "Thu, 16 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBzdU14NGxTcTc4a0U4X1JfNnFBdzNRVEoxSGdsb1ZVdmwteEVTZE8tNzYxa1A2MW5hLWNUbFNVYkFMOHdMX1VGSFM4aDJHS2N1QktQY2tTQ1VsRkdLYVJUetIBeEFVX3lxTE1UZ1JzS2hKeDZMZGxUV2RxZl83YVlIOGp0djJoMjlGTVpVMHE2RWlZWUt0WGItdFlrV2hZOFNCbDZHM19aYThLYzdFNnhpcFRiUWFabnJibkVVVzNmYlljQkNiTXBOU3NNSzhUTDU0dVItb1Z3bmJiVg?oc=5",
-      "tags": [
-        "횡령·배임"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "금융위 “디지털자산법 연내 마련…스테이블코인 AML 규율 강화”",
-      "source": "edaily.co.kr",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
-      "date": "Wed, 15 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNZmpKM1ZuR2RvLXRmaU5VZ0hMTkEzbEVITzBGdzdpNm9RdUY5UndzMkNPRGdSb3VINHlWdmRLS3BTQlJ2cmJaVnQ5N2ZfTy14alpnQ28wN2VGRlV6WDVZOEszYWNlUE9oTlhwZVJmQWRlVmgzNkRwbmgzd0VNTzV6MA?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "금융위 “디지털자산법 연내 마련…스테이블코인 AML 규율 강화” edaily.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "이철규 의원, 금융정보분석원 특금법 개정안 수정 촉구",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Wed, 15 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5KZ2VxWGQyS09Ob3d1MDdNLW1Rc2ZRVlAzV0FJdDBVZkliZEFCYWpCVWdFMjVWelBSOHJTeEtlSklweUFRa0FMdVdCOGJBR2l4NElqMmQ2MW0xNGPSAWBBVV95cUxNNG1Ba2NqSFJyRU9jSjBUTnByS0ZzXzJDR2drd2hTci01OFZiYUtVdzV1dFR6ZUNCaDNibjgwZzU3ZlhUaHNPYVZ5a1oyVGJqTXpScGRYaVVyMDg1T0pHM3Y?oc=5",
-      "tags": [
-        "FIU·규제"
-      ],
-      "description": "이철규 의원, 금융정보분석원 특금법 개정안 수정 촉구 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "이철규 의원, \"강원랜드 특수성 외면한 FIU 특금법 개정 재검토해야\"",
-      "source": "강원신문",
-      "source_url": "https://www.gwnews.org",
-      "source_domain": "www.gwnews.org",
-      "date": "Wed, 15 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE93MXBFaXp1dE43SWNJNEtreGhDM1N5bHhBblRQdnNtVjViMk9KeDRJeUlpRGpsVUE2R2NoTnE2N2R1amhCTDhTdWlvQktqUElhY2VDMnZtUGtXUV9RdHhJZVEtbktuWEN1?oc=5",
-      "tags": [
-        "FIU·규제"
-      ],
-      "description": "이철규 의원, \"강원랜드 특수성 외면한 FIU 특금법 개정 재검토해야\" 강원신문",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "봉사단체 가장해 접근…409억원대 코인사기 일당 구속 송치",
-      "source": "연합뉴스",
-      "date": "Wed, 15 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1sOEZoNjFIQU9XRUd5cWdKWXJwS2phQUJJRWNGX09XZDRUTkJESlpNWUZGNEZWSHZvN29NUEpXQzdoV0NycDc5eVhhcGp2MWs2N2VjMmNOci1kaVHSAWBBVV95cUxOaGtGOG1FSGpPdVZtUEtHWmQwcGN4dnFlUC1CbWlNOTliMnFaWG0xRk1DMUpjOGhhbzIzalFKUF9oRjRfRmFMUFg2bzdlMllvOFE1RnRndnU4bGx3Q2hnZ0o?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "'가짜 봉사단체로 다단계 코인 사기' 7명 구속 송치",
-      "source": "YTN",
-      "date": "Wed, 15 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9XSzMtdDRWSDBXSjRYMFVWeTk2VlZwZThlLWlxNVd4V2RDSThpWjRZcFZRdG8xaTlJLXNTYjVCN3ZPR3BMU1JpaHpuSFBEbEY5U0NNSXdVZzhRY2U0TVE?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "‘409억 코인 사기’ 일당 7명 구속…봉사단체 위장해 투자 유도",
-      "source": "한겨레",
-      "date": "Wed, 15 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9MdlYycVNoVldOQTFFalN4dDZWY1FWdE81YWZEd21HZEdBOVRVb19ZSTRYeC01VXMxWFpodHhQdExsLXVDRzdZdmhpRFNnRFR5WkR6N2wtalpYZW80bkhiU2pVcw?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
-      "title": "마약 전담 'N차 저지선' 구축…고환율 편승 불법외환거래 단속",
-      "source": "연합뉴스",
-      "date": "Wed, 15 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uNGdrU211Q0N5bnZ5MTFLdVRuYVpNell5ZTRHOHpKc3dZY09PTDlGTzlWcXFOMXhEVW1SRVFZME1ueW50ZlRRYXhjckt6QjV1a2U1UUdBdEo5d0XSAWBBVV95cUxNRGdFSEFIV0pXS0M4aWtialpVU2s4dXJLM3hxSkJ0OHpkZVVqTnVWN01BV2NBN2FOSTBaWDYyMVhjOE4zMFVpNjd5aDdpc1I1dXNlWUxtMkpINzVnSUNERm8?oc=5",
-      "tags": [
-        "마약",
-        "환치기·외환"
-      ]
     }
   ],
   "official_items": [
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "불법사금융",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융위원회",
+      "source": "금융감독원",
       "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
       "tags": [
-        "가상자산",
         "불법사금융",
-        "마약",
-        "FIU·규제",
-        "제재·테러자금"
+        "FIU·규제"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "가상자산",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
-      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융위원회",
+      "title": "26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융감독원",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
-        "FIU·규제",
-        "제재·테러자금"
+        "FIU·규제"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
