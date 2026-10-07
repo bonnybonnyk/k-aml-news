@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-07T17:18:41.793793+00:00",
+  "updated_at": "2026-10-07T17:43:36.767187+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "FIU·STR",
@@ -35,12 +35,13 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 10
+      "count": 12
     },
     {
       "feed": "불법사금융",
-      "ok": true,
-      "count": 1
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "feed": "투자사기",
@@ -85,13 +86,13 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -108,9 +109,9 @@
     },
     {
       "feed": "실무:PG·가상계좌",
-      "ok": true,
-      "count": 2,
-      "window_days": 3
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     {
       "feed": "실무:불법외환·관세",
@@ -127,7 +128,7 @@
     {
       "feed": "실무:명의도용·차단",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -415,25 +416,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,9 +446,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -463,9 +464,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -475,9 +476,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -1836,15 +1837,15 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "AI가 통화 중 보이스피싱 잡는다…우리은행·LG유플러스 실시간 연동",
-      "source": "ikoreadaily.co.kr",
-      "source_url": "http://www.ikoreadaily.co.kr",
+      "source": "코리아데일리",
+      "source_url": "https://www.ikoreadaily.co.kr",
       "source_domain": "www.ikoreadaily.co.kr",
       "date": "Tue, 06 Oct 2026 02:09:51 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9MNFZwU015dWxXcm9BUHpXT3A3a3JJNWN1dHY4M2tmbmNwTnFab0VNREoxWS1vckRudlFaclRWcmFiOVpjS2twNkF5YXRjenkycWM0UGt4ZF8yTUxyS1Z5VVNmaC1jdjJEQ2Y0aHI4cXI?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9qVWR2MGg5cGo0bTV6SnE2eXQ0RFV5eTBRX3ZicWNrVFlkSVE2RS1vSlkwai1GZFM2bDB0Mjh5U3BiSmpDU0xMYV9mQmVWazRmOTdoSTh1MTVTZFBUM1gxMU9mdXdYc045MFNaTWRJYTZZQQ?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "AI가 통화 중 보이스피싱 잡는다…우리은행·LG유플러스 실시간 연동 ikoreadaily.co.kr",
+      "description": "AI가 통화 중 보이스피싱 잡는다…우리은행·LG유플러스 실시간 연동 코리아데일리",
       "collection_method": "google_news_24h"
     },
     {
