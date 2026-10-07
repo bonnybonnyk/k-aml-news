@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T07:44:08.777569+00:00",
+  "updated_at": "2026-10-07T08:12:45.255334+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "가상자산 AML",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -248,15 +248,9 @@
     },
     {
       "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 9,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -267,7 +261,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 28,
+      "count": 10,
       "method": "body_relevance"
     },
     {
@@ -415,31 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,13 +427,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 0,
+      "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,13 +451,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -498,6 +492,21 @@
   "count": 1200,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 막고 응급환자 배치…생활 문제 해결사로 나선 AI",
+      "source": "지디넷코리아",
+      "source_url": "https://zdnet.co.kr",
+      "source_domain": "zdnet.co.kr",
+      "date": "Wed, 07 Oct 2026 08:06:10 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBVRkRnUS1UUFhtd1FBVTZGWHBlb2dITmg4cW5PQmV2a0tqaUxtYVA2TllNR1k0cWhGa19icUhfRHhpRDlySkFiREtqWk5hWlIxbUF2U2V3?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 막고 응급환자 배치…생활 문제 해결사로 나선 AI 지디넷코리아",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -703,6 +712,21 @@
     {
       "region": "국내",
       "query": "환치기·외환",
+      "title": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이",
+      "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
+      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZkVGTFZqR25XcTcxSDM5Sm9naG5CXzB0VU5KTE44QVpvNkhqNHBJU0k3NDJ6NkdoZGpZdWUyNnd4dHJDUERQa0JsemkxVUR0d09SdEkzYXNqRmg4a2ZNLTQ0N0NyaThyd0tia3ZMOEnSAXBBVV95cUxPRGZFRkxWakduV3E3MUgzOUpvZ2huQl8wdFVOSkxOOEFabzZIajRwSVNJNzQyejZHaGRqWXVlMjZ3eHRyQ1BEUGtCbHppMVVEdHdPUnRJM2FzakZoOGtmTS00NDdDcmk4cndLYmt2TDhJ?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이 머니투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "환치기·외환",
       "title": "국경 간 가상자산 이전 감시 강화…외국환거래법 시행령 입법예고",
       "source": "뉴시스",
       "source_url": "https://mobile.newsis.com",
@@ -730,21 +754,6 @@
         "환치기·외환"
       ],
       "description": "'코인 환치기' 적발되면 환전소 즉시 퇴출…외국환거래법 시행령 개정안 입법예고 아시아경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
-      "title": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이",
-      "source": "머니투데이",
-      "source_url": "https://www.mt.co.kr",
-      "source_domain": "www.mt.co.kr",
-      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZkVGTFZqR25XcTcxSDM5Sm9naG5CXzB0VU5KTE44QVpvNkhqNHBJU0k3NDJ6NkdoZGpZdWUyNnd4dHJDUERQa0JsemkxVUR0d09SdEkzYXNqRmg4a2ZNLTQ0N0NyaThyd0tia3ZMOEnSAXBBVV95cUxPRGZFRkxWakduV3E3MUgzOUpvZ2huQl8wdFVOSkxOOEFabzZIajRwSVNJNzQyejZHaGRqWXVlMjZ3eHRyQ1BEUGtCbHppMVVEdHdPUnRJM2FzakZoOGtmTS00NDdDcmk4cndLYmt2TDhJ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1950,21 +1959,6 @@
     {
       "region": "국내",
       "query": "보이스피싱",
-      "title": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스",
-      "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
-      "date": "Tue, 06 Oct 2026 01:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNtIBeEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNg?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
       "title": "LG유플러스, 우리은행과 보이스피싱 대응…통화 위험정보 실시간 연계",
       "source": "데일리한국",
       "source_url": "https://daily.hankooki.com",
@@ -1990,6 +1984,21 @@
         "사기"
       ],
       "description": "LGU+, 우리은행과 보이스피싱 막는다…‘익시오’ 위험정보 실시간 연계 헤럴드경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스",
+      "source": "뉴시스",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
+      "date": "Tue, 06 Oct 2026 01:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNtIBeEFVX3lxTE1pRS1TS0FHM0ZjdlZiT01Xc0xVMFRQMTNCT3gzOGZ4NXpieTdDbWxZcXVvVW5XeGM3ZVJVeUJyLUt6TjB3ZGxDNHpETUlObE9yRHVhcDhtOWlhZF9tZzVHYTdleml3WWZ3OVJ3SU1rZXJkTEw5eFkyNg?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "\"통신·금융 합쳐 금융사기 막는다\"…LGU+·우리은행, '익시오' 보이스피싱 서비스 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -18510,22 +18519,6 @@
       ],
       "description": "카지노 자금세탁방지 전문검사 착수 v.daum.net",
       "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "카카오페이 '해외결제 자금세탁방지 미흡'..경영유의 조치",
-      "source": "포쓰저널",
-      "source_url": "https://www.4th.kr",
-      "source_domain": "www.4th.kr",
-      "date": "Wed, 05 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1rZEhXSTNjQjYxMDVKWk52d3p1bl9qMlJHT1FQVjF0ZFdNaDAwdzljbXg2MWZHOVJZQ3dLSXdWQm90ZWswcFBrV3VpRXcxRFF1STBCSjVqQnNJdlk4ZHkzTlV1WmU?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "카카오페이 '해외결제 자금세탁방지 미흡'..경영유의 조치 포쓰저널",
-      "collection_method": "google_news_24h"
     }
   ],
   "official_items": [
@@ -18550,41 +18543,37 @@
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "불법사금융",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융위원회",
+      "source": "금융감독원",
       "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
       "tags": [
-        "가상자산",
         "불법사금융",
-        "마약",
-        "FIU·규제",
-        "제재·테러자금"
+        "FIU·규제"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "가상자산",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
-      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융위원회",
+      "title": "26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융감독원",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
-        "FIU·규제",
-        "제재·테러자금"
+        "FIU·규제"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
