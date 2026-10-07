@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T17:43:36.767187+00:00",
+  "updated_at": "2026-10-07T18:13:13.393652+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "FIU·STR",
@@ -35,13 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 12
+      "count": 13
     },
     {
       "feed": "불법사금융",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+      "ok": true,
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -61,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "탈세",
@@ -76,7 +75,7 @@
     {
       "feed": "차명계좌",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "제재·테러자금",
@@ -109,9 +108,9 @@
     },
     {
       "feed": "실무:PG·가상계좌",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+      "ok": true,
+      "count": 2,
+      "window_days": 3
     },
     {
       "feed": "실무:불법외환·관세",
@@ -416,19 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -440,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -452,13 +439,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -470,15 +463,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -696,6 +695,22 @@
         "사기"
       ],
       "description": "금융 해킹에 보이스피싱 폭탄?…2차 피해 막으려면 SBS Biz",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "도박 보이스피싱 신고 도움말에서 자주 마주치는 표현",
+      "source": "Calgary Roughnecks",
+      "source_url": "https://calgaryroughnecks.com",
+      "source_domain": "calgaryroughnecks.com",
+      "date": "Wed, 07 Oct 2026 03:38:08 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTDh0NmJiTVZBS0hJdklGeXlPSnV1RWJCcmU0NE5CV1d2RmdENFRELWtSTV9RSVFLV1NrQVI5VVZ1QkdINHJoUFVGc3hvSXUzNVdtR1NYMWd6cHFmQThLaEtfNEl5NVpiRnpqUkh4em1CQlVzbmxBbDl4TWRIZjU2QQ?oc=5",
+      "tags": [
+        "사기",
+        "도박"
+      ],
+      "description": "도박 보이스피싱 신고 도움말에서 자주 마주치는 표현 Calgary Roughnecks",
       "collection_method": "google_news_24h"
     },
     {
@@ -18532,17 +18547,6 @@
       "tags": [
         "사기",
         "FIU·규제"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "거래 막힌 신종 피싱 계좌, ‘로맨스 스캠’이 가장 많았다",
-      "source": "동아일보",
-      "date": "Sun, 09 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFB6TW5EWFBvWEsya2hLMnNJMklxS01jM0JzN1psSTlQOHNVZmJtakcyV2E0NkhhRUdDRWVUQlR5aExSYWpGemw5Qlh3U3RtUVdtZUh4S3NLVGRoaVkwRk1XYmROaldkeUhFLWZ5RFJMaXJGamRnU2fSAWZBVV95cUxQYUhZdnh3RllSRWZkNGNZNGhVeGtyYXZia0lTUGhEMk5wWmJhVjMwQjB5V3RoTGlrSzc0eUQ3UUYzbEJBaC1fSWRlOUtNNjRGTnlIekFDaTBJYnNWeHFVTW95NWpoTlE?oc=5",
-      "tags": [
-        "AML"
       ]
     }
   ],
