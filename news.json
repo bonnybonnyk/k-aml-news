@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-07T23:08:16.232312+00:00",
+  "updated_at": "2026-10-07T23:40:59.415175+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 6
+      "count": 3
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 5
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 0
     },
     {
       "feed": "환치기·외환",
@@ -60,17 +60,17 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 1
+      "count": 3
     },
     {
       "feed": "탈세",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "차명계좌",
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 28,
       "method": "body_relevance"
     },
     {
@@ -415,12 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -433,7 +427,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,9 +451,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -463,21 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -500,6 +500,36 @@
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "[단독] ‘외국인 대포통장’ 총책 추적…“계좌만 2천 개, 윗선은 안 걸려”",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Wed, 07 Oct 2026 22:37:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5iczFQUlVKX3Y3UmZKNngweVZNWE5rcF9paEdWU1J5bjRHMjR6c2hxc2Z3SHdFM01ROHlySl9aZ1FGX1VZWTk1SVFONi1qWm15Qk5JeGo5NWhCRlU?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "[단독] ‘외국인 대포통장’ 총책 추적…“계좌만 2천 개, 윗선은 안 걸려” KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "가상자산 범죄, 범인 절반은 AI… 거래소 대응은 [해킹에 뚫린 금융 ③]",
+      "source": "IT조선",
+      "source_url": "https://it.chosun.com",
+      "source_domain": "it.chosun.com",
+      "date": "Wed, 07 Oct 2026 21:36:45 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9jSmllSGtnZVBlT0NvTjMzRTdWZlB0dTB2eWhCU0JnUnRkaC1La2doT2NleDhMalU1dWdJTjdhWnM1V0JESTBLY3VfXzFzSFJGVzFYVk14bm1lSHBBc3owTV82aEY3d3J6R0FtZVItLXZDNGJh0gF0QVVfeXFMT2NKaWVIa2dlUGVPQ29OMzNFN1ZmUHR1MHZ5aEJTQmdSdGRoLUtrZ2hPY2V4OExqVTV1Z0lON2FaczVXQkRJMEtjdV9fMXNIUkZXMVhWTXhubWVIcEFzejBNXzZoRjd3cnpHQW1lUi0tdkM0YmE?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "가상자산 범죄, 범인 절반은 AI… 거래소 대응은 [해킹에 뚫린 금융 ③] IT조선",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "5300만달러 암호화폐 탈취범 유죄…최대 징역 30년",
       "source": "토큰포스트",
@@ -511,21 +541,6 @@
         "가상자산"
       ],
       "description": "5300만달러 암호화폐 탈취범 유죄…최대 징역 30년 토큰포스트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "가상자산 범죄, 범인 절반은 AI… 거래소 대응은 [해킹에 뚫린 금융 ③]",
-      "source": "IT조선",
-      "source_url": "https://it.chosun.com",
-      "source_domain": "it.chosun.com",
-      "date": "Wed, 07 Oct 2026 21:30:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBQNUxpb1M3VjlUOC1pY1BWdG9UVkdoaEw2M0dkNkxKSDR6SUw5dEc1SXBPeVhzN2oyNDBCbFBqWGd2SFd4MENBaGVaelM3ZWV5YVB5RERsdkNCR05sLUdqLTVocGg1X3RqWmFNLUNuaFDSAXRBVV95cUxPY0ppZUhrZ2VQZU9Db04zM0U3VmZQdHUwdnloQlNCZ1J0ZGgtS2tnaE9jZXg4TGpVNXVnSU43YVpzNVdCREkwS2N1X18xc0hSRlcxWFZNeG5tZUhwQXN6ME1fNmhGN3dyekdBbWVSLS12QzRiYQ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "가상자산 범죄, 범인 절반은 AI… 거래소 대응은 [해킹에 뚫린 금융 ③] IT조선",
       "collection_method": "google_news_24h"
     },
     {
@@ -588,21 +603,6 @@
         "사기"
       ],
       "description": "해킹 피해 전액 보상한다는데…보이스피싱 송금 땐 불분명 중앙일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "[단독] ‘외국인 대포통장’ 총책 추적…“계좌만 2천 개, 윗선은 안 걸려”",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Wed, 07 Oct 2026 14:20:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5oVnA1b19QeloxTDJNWW1VVmR5QTJzdFZZS0pWVlZfaXFkMTQtN09IMGd6Z1ZKRHNCaS1hNmQtajgxbFpFeFMzbTFNZFB3TW50eV9sbFNnXzJOa2M?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "[단독] ‘외국인 대포통장’ 총책 추적…“계좌만 2천 개, 윗선은 안 걸려” KBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1106,16 +1106,16 @@
       "region": "국내",
       "query": "투자사기",
       "title": "KOK코인 사기 파장…이강일 “범죄 대응체계 전면 점검”",
-      "source": "이데일리",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
+      "source": "마켓인",
+      "source_url": "https://marketin.edaily.co.kr",
+      "source_domain": "marketin.edaily.co.kr",
       "date": "Tue, 06 Oct 2026 23:16:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQzg5V1V5NVhkUHp1Sl9kcEJzUWp2TW82QWp3UDkxNjFmZTZBSXZCYllzOGRhTFF4OEZUY3IzYXZFS0VFdk1Uek9GRmZCNE5KdXBCUlFscW9STVVHenlMdFRNVThvMjBFMkl4bXlrZ08tVlhFWFdVemNSUDlxLTM0cA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ZVkF1bzhPZ1p4TWJBZklQSWswWnZsdm4yTmNBOHhxTUtsWEZwczV6ZnZXLU5kTjZNS19hRzl2SmlRRGxIbFpNelZIMWJ2cnBBSm9aZmpQSGVmT25SRFZ2dEZmWi1WellIaGo4MHpRR0Z0NTQ?oc=5",
       "tags": [
         "가상자산",
         "사기"
       ],
-      "description": "KOK코인 사기 파장…이강일 “범죄 대응체계 전면 점검” 이데일리",
+      "description": "KOK코인 사기 파장…이강일 “범죄 대응체계 전면 점검” 마켓인",
       "collection_method": "google_news_24h"
     },
     {
