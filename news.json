@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T07:12:24.560053+00:00",
+  "updated_at": "2026-10-07T07:44:08.777569+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 11
+      "count": 12
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 22
+      "count": 18
     },
     {
       "feed": "불법사금융",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -254,9 +254,9 @@
     },
     {
       "feed": "금융위/FIU:목록:p3",
-      "ok": false,
-      "count": 0,
-      "error": "The read operation timed out"
+      "ok": true,
+      "count": 9,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 19,
+      "count": 28,
       "method": "body_relevance"
     },
     {
@@ -415,13 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,25 +439,31 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -464,18 +476,6 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -1094,7 +1094,7 @@
       "source_url": "https://biz.sbs.co.kr",
       "source_domain": "biz.sbs.co.kr",
       "date": "Tue, 06 Oct 2026 08:53:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE84ZnQ1OGlBemVBUEpva3dUX1lWUkhVRHJzdlBtYWxmRW9iZ3FRZExGR2hsbXUzUDYtSlViSVEwZkM3bTkweWRJQ0JOMHhseDZYaGJJ0gFYQVVfeXFMT0tfeU5LWWNjalhSR1pfd1RQY2JqdGFjeURZbHNMLTdQdE5xUHYwRHhZWHJRRUM0cU5rTHQzb1VmWjAwNklQWV9ldWxmaFIzUHB1SllvMGZoOA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9LX3lOS1ljY2pYUkdaX3dUUGNianRhY3lEWWxzTC03UHROcVB2MER4WVhyUUVDNHFOa0x0M29VZlowMDZJUFlfZXVsZmhSM1BwdUpZbzBmaDjSAVhBVV95cUxPS195TktZY2NqWFJHWl93VFBjYmp0YWN5RFlsc0wtN1B0TnFQdjBEeFlYclFFQzRxTmtMdDNvVWZaMDA2SVBZX2V1bGZoUjNQcHVKWW8wZmg4?oc=5",
       "tags": [
         "사기"
       ],
