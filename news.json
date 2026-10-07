@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T16:14:04.966009+00:00",
+  "updated_at": "2026-10-07T16:45:32.408833+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "feed": "지갑·해외거래소",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -127,7 +127,7 @@
     {
       "feed": "실무:명의도용·차단",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -421,6 +421,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -433,7 +439,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,7 +451,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,25 +475,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -498,6 +498,22 @@
   "count": 1200,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "우라늄 파이낸스 해커, 컴퓨터 사기·자금세탁 유죄",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Wed, 07 Oct 2026 16:21:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1kQ3VhaDBpeFMtTHVWenppLWdkd2hXTU40dkwzQjVBREhpenhBTmthWnFrVlhMUnhyZVdzMTJWejdKRV9MV1RyMXRiejlDTHAzMTlCTDlvRnk?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "우라늄 파이낸스 해커, 컴퓨터 사기·자금세탁 유죄 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -745,6 +761,21 @@
     },
     {
       "region": "국내",
+      "query": "환치기·외환",
+      "title": "환치기 송금 한 번 걸리면 끝…환전업체 ‘원스트라이크 아웃’",
+      "source": "마켓인",
+      "source_url": "https://marketin.edaily.co.kr",
+      "source_domain": "marketin.edaily.co.kr",
+      "date": "Wed, 07 Oct 2026 00:36:24 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE01NUdSNk5NSmZCWGJoNW9yQ3FKUkR0N3JNaTM1VE5DNlhlZ2dVcFh3T3p0SC1xcnJGNGpaTHpaM19oSzBhWTMzSEFKQlhrSHhqNXZjNVZGX3FoRFZtWFZmV0dDb1Y0aU9VSmxUdERIbjRXeVk?oc=5",
+      "tags": [
+        "환치기·외환"
+      ],
+      "description": "환치기 송금 한 번 걸리면 끝…환전업체 ‘원스트라이크 아웃’ 마켓인",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "지갑·해외거래소",
       "title": "거래소·개인지갑 오가는 코인도 외환전산망에 잡힌다",
       "source": "헤럴드경제",
@@ -841,31 +872,17 @@
     {
       "region": "국내",
       "query": "환치기·외환",
-      "title": "환치기 송금 한 번 걸리면 끝…환전업체 ‘원스트라이크 아웃’",
+      "title": "국경 넘는 가상자산 이전 내역 한은에 알려야…환치기 환전업체 ‘원스트라이크 아웃’",
       "source": "이데일리",
       "source_url": "https://www.edaily.co.kr",
       "source_domain": "www.edaily.co.kr",
       "date": "Wed, 07 Oct 2026 00:00:04 GMT",
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVk05Y1kwalhtRWZ4TzlRUmRrcEVyTW56bG5FdlVteTlYNWdUQkd2R21XNlRmYllSVGZWQTZ4aHcxRjVBcXpQck5FcnhjalNBOC1IQ3NNSV9FVXl3a1A4WkdHcC03Q19ET0ZWMnp2c25TQ1drMmE4ekVGbzFuWldobw?oc=5",
       "tags": [
+        "가상자산",
         "환치기·외환"
       ],
-      "description": "환치기 송금 한 번 걸리면 끝…환전업체 ‘원스트라이크 아웃’ 이데일리",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
-      "title": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이",
-      "source": "머니투데이",
-      "source_url": "https://www.mt.co.kr",
-      "source_domain": "www.mt.co.kr",
-      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZkVGTFZqR25XcTcxSDM5Sm9naG5CXzB0VU5KTE44QVpvNkhqNHBJU0k3NDJ6NkdoZGpZdWUyNnd4dHJDUERQa0JsemkxVUR0d09SdEkzYXNqRmg4a2ZNLTQ0N0NyaThyd0tia3ZMOEnSAXBBVV95cUxPRGZFRkxWakduV3E3MUgzOUpvZ2huQl8wdFVOSkxOOEFabzZIajRwSVNJNzQyejZHaGRqWXVlMjZ3eHRyQ1BEUGtCbHppMVVEdHdPUnRJM2FzakZoOGtmTS00NDdDcmk4cndLYmt2TDhJ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이 머니투데이",
+      "description": "국경 넘는 가상자산 이전 내역 한은에 알려야…환치기 환전업체 ‘원스트라이크 아웃’ 이데일리",
       "collection_method": "google_news_24h"
     },
     {
@@ -898,6 +915,21 @@
         "환치기·외환"
       ],
       "description": "'코인 환치기' 적발되면 환전소 즉시 퇴출…외국환거래법 시행령 개정안 입법예고 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "환치기·외환",
+      "title": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이",
+      "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
+      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZkVGTFZqR25XcTcxSDM5Sm9naG5CXzB0VU5KTE44QVpvNkhqNHBJU0k3NDJ6NkdoZGpZdWUyNnd4dHJDUERQa0JsemkxVUR0d09SdEkzYXNqRmg4a2ZNLTQ0N0NyaThyd0tia3ZMOEnSAXBBVV95cUxPRGZFRkxWakduV3E3MUgzOUpvZ2huQl8wdFVOSkxOOEFabzZIajRwSVNJNzQyejZHaGRqWXVlMjZ3eHRyQ1BEUGtCbHppMVVEdHdPUnRJM2FzakZoOGtmTS00NDdDcmk4cndLYmt2TDhJ?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -18508,36 +18540,6 @@
         "마약",
         "자금세탁"
       ]
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "\"공무원 사칭 대리구매 유도\"…한달간 신종피싱 의심계좌 5천건",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Sat, 08 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ScEJDYnI4MHFrMTJwd3hHZFhYT1FkOHV3Z0FKeTlzNnBFakMzbVpWZEJXU0M3Z3czTXBOVS11Z0t5SEE5U3NELXVSQk4waVBJUlEtTWVRUTgyQ0nSAWBBVV95cUxPT01janlCYjJfT1lPaGFLdkxrc3VJOXNKeFVqUEtPcmlNQjNRRzZGWXhGTUZheHBfTnlEbEh5anFsck53c2ZzcnBlV0x5bmNLRThZTW1sSzVOMTdwRzVySGY?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "\"공무원 사칭 대리구매 유도\"…한달간 신종피싱 의심계좌 5천건 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "마트 상품권으로 보이스피싱 피해금 세탁…금감원 소비자경보",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Sat, 08 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1lZ2F2cWNRMUdEdTdEVlZyOWRUNDdKNkhiNElzd2xwN1ZheGQtaFNVaVdpWUdsNzZaX2x0NnhHMldteFdVTEw4QXJ2T2lCVTlXWXpHY0thNnJVMHfSAWBBVV95cUxQdDk0QjlBMFN2Unpsa3NwYzg5Zi13X21CMG5vV0dKRHpaLUdOUmZiNFpaYkswUnBBSmRiZFZRZXFYTUROTmxWR0kwT05RWHdOTnNHajBVNzF2NG5QYjBUR1M?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "마트 상품권으로 보이스피싱 피해금 세탁…금감원 소비자경보 연합뉴스",
-      "collection_method": "google_news_24h"
     }
   ],
   "official_items": [
