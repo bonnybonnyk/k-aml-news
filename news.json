@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-07T12:51:00.435087+00:00",
+  "updated_at": "2026-10-07T13:14:54.029629+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 8
+      "count": 9
     },
     {
       "feed": "불법사금융",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "탈세",
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 1,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -445,7 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -457,7 +475,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -742,6 +760,22 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "보너스 전후에 유지되는 설정, 도박 보이스피싱 신고 기능 질문",
+      "source": "Calgary Roughnecks",
+      "source_url": "https://calgaryroughnecks.com",
+      "source_domain": "calgaryroughnecks.com",
+      "date": "Wed, 07 Oct 2026 00:22:43 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1zcF84WEw0SmRYQXVXTHpSMFd3WWVZWWR4bEhoNS1kMUZ0QTA1N21Fajhod3RmcjVaSmRWUGswQ2xYT2MxV2gwQVdKUThRLXFwcXB5RGxLRzF2dnBLV1RVbnJMMW5OYmIyMUE?oc=5",
+      "tags": [
+        "사기",
+        "도박"
+      ],
+      "description": "보너스 전후에 유지되는 설정, 도박 보이스피싱 신고 기능 질문 Calgary Roughnecks",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "환치기·외환",
       "title": "가상자산 이전 내역 한은 관리망에 잡힌다… 정부, 외국환거래법 시행령 입법예고 - 조선비즈",
       "source": "Chosunbiz",
@@ -839,21 +873,6 @@
     {
       "region": "국내",
       "query": "환치기·외환",
-      "title": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이",
-      "source": "머니투데이",
-      "source_url": "https://www.mt.co.kr",
-      "source_domain": "www.mt.co.kr",
-      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZkVGTFZqR25XcTcxSDM5Sm9naG5CXzB0VU5KTE44QVpvNkhqNHBJU0k3NDJ6NkdoZGpZdWUyNnd4dHJDUERQa0JsemkxVUR0d09SdEkzYXNqRmg4a2ZNLTQ0N0NyaThyd0tia3ZMOEnSAXBBVV95cUxPRGZFRkxWakduV3E3MUgzOUpvZ2huQl8wdFVOSkxOOEFabzZIajRwSVNJNzQyejZHaGRqWXVlMjZ3eHRyQ1BEUGtCbHppMVVEdHdPUnRJM2FzakZoOGtmTS00NDdDcmk4cndLYmt2TDhJ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이 머니투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
       "title": "'코인 환치기' 적발되면 환전소 즉시 퇴출…외국환거래법 시행령 개정안 입법예고",
       "source": "아시아경제",
       "source_url": "https://www.asiae.co.kr",
@@ -865,6 +884,21 @@
         "환치기·외환"
       ],
       "description": "'코인 환치기' 적발되면 환전소 즉시 퇴출…외국환거래법 시행령 개정안 입법예고 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "환치기·외환",
+      "title": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이",
+      "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
+      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EZkVGTFZqR25XcTcxSDM5Sm9naG5CXzB0VU5KTE44QVpvNkhqNHBJU0k3NDJ6NkdoZGpZdWUyNnd4dHJDUERQa0JsemkxVUR0d09SdEkzYXNqRmg4a2ZNLTQ0N0NyaThyd0tia3ZMOEnSAXBBVV95cUxPRGZFRkxWakduV3E3MUgzOUpvZ2huQl8wdFVOSkxOOEFabzZIajRwSVNJNzQyejZHaGRqWXVlMjZ3eHRyQ1BEUGtCbHppMVVEdHdPUnRJM2FzakZoOGtmTS00NDdDcmk4cndLYmt2TDhJ?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이 머니투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -1005,6 +1039,22 @@
         "도박"
       ],
       "description": "심벌 디자인이 비슷할 때 참고하는 도박 보이스피싱 신고 구분 포인트 Calgary Roughnecks",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "도박 보이스피싱 신고 이용 시간 알림 기능 확인",
+      "source": "Calgary Roughnecks",
+      "source_url": "https://calgaryroughnecks.com",
+      "source_domain": "calgaryroughnecks.com",
+      "date": "Tue, 06 Oct 2026 18:41:18 GMT",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE81dVRzZ1NVX0FnNFY3WE4tM3pucEVTSkN3cUd4YnV6dXBDUnlVdFk3Y3drOWhySnNFT1ktQ3F1T0VyZ0NXcWljVEN1VG0tZ2RnaXVqcDB3MXZ3SzFUNUFWX3JaRTNPOWcxWkVkaWJCelhZVTVtSkJDRllmQQ?oc=5",
+      "tags": [
+        "사기",
+        "도박"
+      ],
+      "description": "도박 보이스피싱 신고 이용 시간 알림 기능 확인 Calgary Roughnecks",
       "collection_method": "google_news_24h"
     },
     {
@@ -1151,10 +1201,10 @@
       "query": "보이스피싱",
       "title": "보이스피싱 피해 역대 최대…“사전 예방체계 구축해야”",
       "source": "서울경제",
-      "source_url": "https://m.sedaily.com",
-      "source_domain": "m.sedaily.com",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
       "date": "Tue, 06 Oct 2026 09:18:43 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5JU3EwRUxCaGlqQVhPQ3ZyM1JhNTRJV3REWmd0V2hoN1NGUE14NmhhSG90RTJOZHc0cDM3Ylo4TDl4cVFyc2NxTVBNcVdqNUNpemZr0gFTQVVfeXFMTklTcTBFTEJoaWpBWE9DdnIzUmE1NElXdERaZ3RXaGg3U0ZQTXg2aGFIb3RFMk5kdzRwMzdiWjhMOXhxUXJzY3FNUE1xV2o1Q2l6Zms?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBLa19KYVp3c0lUSFJXNHl0R2pxX21rMEt2RHNwUkhJb1BUcjRUX2ZVTlB1cEZVOUE4SlN4aEg4M2tNaXZ6RXZ5d2FyYW03ZWhtQWfSAVNBVV95cUxOSVNxMEVMQmhpakFYT0N2cjNSYTU0SVd0RFpndFdoaDdTRlBNeDZoYUhvdEUyTmR3NHAzN2JaOEw5eHFRcnNjcU1QTXFXajVDaXpmaw?oc=5",
       "tags": [
         "사기"
       ],
@@ -18489,88 +18539,65 @@
       ],
       "description": "마트 상품권으로 보이스피싱 피해금 세탁…금감원 소비자경보 연합뉴스",
       "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "美재무부 \"'이란 자금세탁' 가상화폐 거래소들 제재\"",
-      "source": "세계일보",
-      "source_url": "https://www.segye.com",
-      "source_domain": "www.segye.com",
-      "date": "Sat, 08 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9SSlVUamhka1Nxa0M4SWVUTEdydnNNM0tBSWh0TmVBMW9BWXE3YUgtaVB4VFN2WXFZQkIwVDh1cDZRNnhYVjR1Q1JpM1NVWElKTGJrczlVbDbSAVRBVV95cUxOWmNOdmhkZnExdkphb0lxVjJDSzNzcFdIOURlazJ2WWF5Yi1teUk5YTQ0c19CbG9PbFFKODJ2VkE1VFRhVzlrTmpRZjVaNE9JcmhBNno?oc=5",
-      "tags": [
-        "가상자산",
-        "제재·테러자금",
-        "자금세탁"
-      ],
-      "description": "美재무부 \"'이란 자금세탁' 가상화폐 거래소들 제재\" 세계일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "미 재무부 \"'이란 자금세탁' 가상화폐 거래소들 제재\"",
-      "source": "MBC 뉴스",
-      "date": "Sat, 08 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA3YWYzak5FelJ1am9tZWlUZEJWSFAxcWprYUQ4eDhUbGhybDJVdTg0WGt6Q3RBNXRaMFFBbWdGT1JHbk1EeDhUZS1zVjl5eS10S2ZkRWxkMWFaYVlpQVlJVGVGazVyUjRrejN3Q09MN0VWUUgw0gF0QVVfeXFMTzVFX3lYeVVKY3hSX2VBUS1POVdtR0RQZHNYMThCYlZnenVwTm5BU0tFQ1FKMVo4S29pZF95QlR3SW5XMm9WY3JNQzFEc1B6Q3Z1bGpNbDQwOUhoY3pXVkVBbkNPaEk4V3lWTXg1cno4Rmk0V2U?oc=5",
-      "tags": [
-        "가상자산",
-        "제재·테러자금",
-        "자금세탁"
-      ]
     }
   ],
   "official_items": [
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱, 스미싱 등 피해에 주의하세요",
-      "source": "금융감독원",
+      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요.",
+      "source": "금융위원회",
       "date": "2026-10-06T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=237928&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "불법사금융",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융감독원",
-      "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
-      "tags": [
-        "불법사금융",
-        "FIU·규제"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융감독원",
-      "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87882?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
-        "FIU·규제"
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
+      "source": "금융위원회",
+      "date": "2026-10-02T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "불법사금융",
+        "마약",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융위원회",
+      "date": "2026-10-01T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
