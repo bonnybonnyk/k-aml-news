@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T00:14:52.193824+00:00",
+  "updated_at": "2026-10-08T00:51:49.122240+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,12 +20,12 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 7
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "트래블룰",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 10
+      "count": 9
     },
     {
       "feed": "불법사금융",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 3
+      "count": 1
     },
     {
       "feed": "마약자금",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "탈세",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 8,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -415,19 +415,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,13 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -469,15 +469,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -1382,6 +1382,21 @@
     },
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단",
+      "source": "네이트뷰",
+      "source_url": "https://view.nate.com",
+      "source_domain": "view.nate.com",
+      "date": "Tue, 06 Oct 2026 08:45:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHWWpMdlhfQ1g0dG1CR1picVpiczRvTS1ObEFGMG5Jc0lnaXZ6UlV3eGdpZmstdVlJSXEzaTdKTnJucldWdGZzQlZMVUlIQ01fU0E4bEJn0gFWQVVfeXFMUEdZakx2WF9DWDR0bUJHWmJxWmJzNG9NLU5sQUYwbklzSWdpdnpSVXd4Z2lmay11WUlJcTNpN0pOcm5yV1Z0ZnNCVkxVSUhDTV9TQThsQmc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단 네이트뷰",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "투자사기",
       "title": "“6개월 투자하면 2배 수익”…전국 번지는 AIT 코인사기 피해",
       "source": "서울경제",
@@ -1394,21 +1409,6 @@
         "사기"
       ],
       "description": "“6개월 투자하면 2배 수익”…전국 번지는 AIT 코인사기 피해 서울경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단",
-      "source": "비즈워치",
-      "source_url": "https://news.bizwatch.co.kr",
-      "source_domain": "news.bizwatch.co.kr",
-      "date": "Tue, 06 Oct 2026 08:39:02 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HRXRuajBEcnotYXN2ZHJUMXBxNjlxZ2RTb1RRUmtqTURwQzRYQWZaWnJ0VDF6MWh0b0o0VUdRZWZCNUo3NmNYOWZ1aC0zWEpQSHcxM2ZFTlU2dXFCUnAzNFJ4R0l4LVFLSUE?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단 비즈워치",
       "collection_method": "google_news_24h"
     },
     {
