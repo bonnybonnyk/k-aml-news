@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-08T02:42:27.145483+00:00",
+  "updated_at": "2026-10-08T03:11:02.582063+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "범죄수익",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 16
+      "count": 18
     },
     {
       "feed": "불법사금융",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "탈세",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,19 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -427,25 +439,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -460,6 +466,18 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -482,6 +500,37 @@
   "items": [
     {
       "region": "국내",
+      "query": "보이스피싱",
+      "title": "구리경찰서, 보이스피싱 현금수거책·환전책 등 5명 검거…4명 송치",
+      "source": "뉴스핌",
+      "source_url": "https://www.newspim.com",
+      "source_domain": "www.newspim.com",
+      "date": "Thu, 08 Oct 2026 03:08:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5Kb1l2QXFaeVZlY0JhbEQzUFNiY2xnS3dQaEwxa3BMYmhRYk1hTHg2OENRNDRSRmY5bGJZdDFVWW9PTFVwYU93R2RsTFRNcmJRVkV0bFNIbXYyLXA2?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "구리경찰서, 보이스피싱 현금수거책·환전책 등 5명 검거…4명 송치 뉴스핌",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "대구남부서, 1.2억 보이스피싱 피해 막은 금거래소 표창",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Thu, 08 Oct 2026 03:01:12 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBGV3RhQzVPMXFMUV9LcVpub29Wa2YweGRUS2haLVdNa1pXSUFGUDlIc1JuVDRCdVBkX3F5MVlXdDZZNVpiRXQ4NWI4YWNxQkpIcHN2MmlpaktBZVZjT2x6Y9IBeEFVX3lxTFB6YzlIWl9RZm1fR1dMSnJ0MXRWZjJZV2FWbFlUOGJmZWVLeUNmRWpaajZZN3JXVTVid00tWi1fdVNVd0VmcGc2TkZHM1lmeVpqYXQzQWl1VnVtckdtTnhPSVZCbHNuaUNVcS1ad0tGNzBkLVVvMWZGeA?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "대구남부서, 1.2억 보이스피싱 피해 막은 금거래소 표창 뉴시스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "횡령·배임",
       "title": "'동대문구 주택조합 사기' 주범, 선처 호소…배임액 10억→12억원 상향",
       "source": "뉴스핌",
@@ -494,6 +543,21 @@
         "횡령·배임"
       ],
       "description": "'동대문구 주택조합 사기' 주범, 선처 호소…배임액 10억→12억원 상향 뉴스핌",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "검사 사칭해 수천만 원 가로챈 보이스피싱 조직원 검거",
+      "source": "MBC 뉴스",
+      "source_url": "https://imnews.imbc.com",
+      "source_domain": "imnews.imbc.com",
+      "date": "Thu, 08 Oct 2026 02:19:20 GMT",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wNUdhQ0d3YTN0VUV0Rmt4ZUs1QUhQaTY3bG5iZFR5MldENzRDbnRXTUZYYno1NU9NZTlQVFVOSUdNZFlzWERhWHg4a3gzSFI1Uk9SUkJvUmsxZFNUaXBqRzFmak5VUm8wdXFUOEhzV01PUnVjOExz0gF3QVVfeXFMTndjc2VxU0txM01JeGtxRGZxcW5ib3RkQXhudzQ5eG1DSjBIWXVLNXZWcFZadnpUNkNoZFR5QlFlRUxZN3FZSXNuS3RBU1NHcGVqbWR1Q3Q0aUVpejhMb1FmZUEyY0lBTXowSjZkdUxVQ3Utd1FfNHM?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "검사 사칭해 수천만 원 가로챈 보이스피싱 조직원 검거 MBC 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1225,16 +1289,16 @@
       "region": "국내",
       "query": "투자사기",
       "title": "KOK코인 사기 파장…이강일 “범죄 대응체계 전면 점검”",
-      "source": "이데일리",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
+      "source": "마켓인",
+      "source_url": "https://marketin.edaily.co.kr",
+      "source_domain": "marketin.edaily.co.kr",
       "date": "Tue, 06 Oct 2026 23:16:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQzg5V1V5NVhkUHp1Sl9kcEJzUWp2TW82QWp3UDkxNjFmZTZBSXZCYllzOGRhTFF4OEZUY3IzYXZFS0VFdk1Uek9GRmZCNE5KdXBCUlFscW9STVVHenlMdFRNVThvMjBFMkl4bXlrZ08tVlhFWFdVemNSUDlxLTM0cA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ZVkF1bzhPZ1p4TWJBZklQSWswWnZsdm4yTmNBOHhxTUtsWEZwczV6ZnZXLU5kTjZNS19hRzl2SmlRRGxIbFpNelZIMWJ2cnBBSm9aZmpQSGVmT25SRFZ2dEZmWi1WellIaGo4MHpRR0Z0NTQ?oc=5",
       "tags": [
         "가상자산",
         "사기"
       ],
-      "description": "KOK코인 사기 파장…이강일 “범죄 대응체계 전면 점검” 이데일리",
+      "description": "KOK코인 사기 파장…이강일 “범죄 대응체계 전면 점검” 마켓인",
       "collection_method": "google_news_24h"
     },
     {
@@ -18509,93 +18573,65 @@
       "tags": [
         "사기"
       ]
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "대포 통장 107개로 범죄수익 5천억 세탁...19명 검거",
-      "source": "YTN",
-      "date": "Mon, 10 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5Ldm85a05sOG5aUXQtN2xmdzMwN0hYMzVsSDZOZjRNcVZkZktVNFEwa3V3OEIyZ3IyWmlOYVF3Nl8yN2VieTg1b2pOMmhNd1pSajF2XzNnaG4tWVA0Tmc?oc=5",
-      "tags": [
-        "자금세탁"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "마약자금",
-      "title": "가상자산으로 마약 사고판 60명 무더기 검거",
-      "source": "YTN",
-      "date": "Mon, 10 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBzWUI2NzBrdDlCQjMtVWlCN3FySFFTbmg5aDVLQkZKNDRmbk9FMmJMSVA3VEpybXRpQ1NRZXVwaTBMQi1sbXZ3TVRxcElVTHVZeUdCNTNDRHRPTlRTeHc?oc=5",
-      "tags": [
-        "가상자산",
-        "마약"
-      ]
-    },
-    {
-      "region": "국내",
-      "query": "마약자금",
-      "title": "가상자산으로 마약대금 세탁…업자·투약자 60명 송치",
-      "source": "뉴시스",
-      "date": "Mon, 10 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4zbU9SMnF2d2hoYmIwR2tGcDF4VUNOOGJFYll5Wm5Jc3k2NWJ6YVZmLUpZQ3BuUUJSU2JQa3ZNTU9vZzlMOFNQQlV3LUQ4Zks4OXQxRWI1YVBfaTEzVERfd9IBeEFVX3lxTE5GYkxza1JUckpDcERUel9Kc25EZzVubm9ubkozU2MtaEh5Rk54Z2hpcXMyWmJLNzZScFRvRWJqQTVHaHJ4cHktbzI1MjMyOFA1WG5nc0hXM1FYYkdtZ1hVLTBmLW1wWDJCbHZqcXdJblNqMDdMV2NGQw?oc=5",
-      "tags": [
-        "가상자산",
-        "마약"
-      ]
     }
   ],
   "official_items": [
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱, 스미싱 등 피해에 주의하세요",
-      "source": "금융감독원",
+      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요.",
+      "source": "금융위원회",
       "date": "2026-10-06T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=237928&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "불법사금융",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융감독원",
-      "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
-      "tags": [
-        "불법사금융",
-        "FIU·규제"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융감독원",
-      "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87882?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
-        "FIU·규제"
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
+      "source": "금융위원회",
+      "date": "2026-10-02T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "불법사금융",
+        "마약",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융위원회",
+      "date": "2026-10-01T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
