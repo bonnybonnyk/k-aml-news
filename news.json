@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-10-08T03:45:09.618204+00:00",
+  "updated_at": "2026-10-08T04:11:24.120814+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "가상자산 AML",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "탈세",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 8,
+      "count": 9,
       "window_days": 3
     },
     {
@@ -127,7 +127,7 @@
     {
       "feed": "실무:명의도용·차단",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,19 +439,31 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -466,18 +478,6 @@
       "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -801,6 +801,22 @@
         "사기"
       ],
       "description": "해킹 피해 전액 보상한다는데…보이스피싱 송금 땐 불분명 중앙일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "자금세탁방지기구(AMLA) 의장 브루나 세고가 자금세탁방지 게시판과의 인터뷰에서 밝힌 내용입니다.",
+      "source": "The European Times",
+      "source_url": "https://europeantimes.news",
+      "source_domain": "europeantimes.news",
+      "date": "Wed, 07 Oct 2026 12:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi4wNBVV95cUxNbEdjNlhHMDJMcFYzUFhoQ0lSbzl0clExemJKT2VnaGlHY3IzRlMyR09FNnlMYms3TFdOVHRYdUJYYnFWSVhycUp4TFU2NDRGQlpjbTB3ZFRlejJzTUt5b1hsb0JfelY0MG9sT0RlbGN6cGFQZzVwNUllSllRTVlDTGt3Nkw3SHhCYlFsLXFBeG1hclFCV3pNRUVpQVJZT21MTl9KTy1fVjVhT1JKZGhROENHQVZZXy1zMzJfalEzbVFXTkZKeWg3WXZleEFzMkItWmlETG1ieEc4V1dDSk1fT1RYdmF1RDA2R3hQODVSRjhKN1VJQXczc0VJWVJEWGVNWTB5OFMxUDVlTFU3QkhIa1RBWDFCeTJrb05TY0R1WXNxNUVaZmdVRjZuWkhpSU5qNGtENWhsbUl0NjQxYWlvSGlSWDhpX0JlV3JSMWQ3QzF2dUpaRkxQMEpaM3VMMUFkNkoyVVQyUlJNQ3NJZW1CdXNGOVNjWlUzMDJNOEw2VzRRb050eF9KXzlJczh1SWxISFh6V21TX3ZUTXJDSzhJSjYwbFhpb05xWUNsU3g0UFYzZlVDVXg3WGxRRllVUU5zYWNZTEFELXZYMnZsNFhoZVRpcGtWbVd6NlN4ZWFWUGFqNEU?oc=5",
+      "tags": [
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "자금세탁방지기구(AMLA) 의장 브루나 세고가 자금세탁방지 게시판과의 인터뷰에서 밝힌 내용입니다. The European Times",
       "collection_method": "google_news_24h"
     },
     {
@@ -18560,21 +18576,6 @@
         "사기"
       ],
       "description": "마트 상품권으로 보이스피싱 피해금 세탁…소비자경보 연합뉴스TV",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“100% 사기”…‘상품권 사면 대출 가능’ 신종 보이스피싱 주의",
-      "source": "농민신문",
-      "source_url": "https://www.nongmin.com",
-      "source_domain": "www.nongmin.com",
-      "date": "Mon, 10 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE52QWlVU3RyTk9uUlJQZkl1X3E1WHI3UzQ5WnZfVGpURUNZcGprdGRfVHVfMURqVVRobWN1QlNvdG1nQjFZM3lFV2ZlRU5XODFsci1oTTN6eDRhUQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“100% 사기”…‘상품권 사면 대출 가능’ 신종 보이스피싱 주의 농민신문",
       "collection_method": "google_news_24h"
     }
   ],
