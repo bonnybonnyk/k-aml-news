@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T00:51:49.122240+00:00",
+  "updated_at": "2026-10-08T01:13:00.812249+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "FIU·STR",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 9
+      "count": 12
     },
     {
       "feed": "불법사금융",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 7,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -421,13 +403,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +415,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -469,15 +451,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -498,6 +480,51 @@
   "count": 1200,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "검찰 사칭해 수천만 원 가로챈 보이스피싱 조직 일당 검거",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Thu, 08 Oct 2026 01:08:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5wZFhrUktfenNDZzQtZjdmZ0hyM3g5MVpnb1NpYWFpdy1veURmcmE1WFBhOHM0VEpDMEd1bDFNSmJyelA0VGNucTc0V19kT0pqVi1MMWV1MUE4cDg?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "검찰 사칭해 수천만 원 가로챈 보이스피싱 조직 일당 검거 KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "“아들 돈까지 사라졌다”…보이스피싱 피해 키운 금융사 실수",
+      "source": "이데일리",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Thu, 08 Oct 2026 01:00:06 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZTNJMU9JWWNoS3VINFh5Mnc5YnBnNmpLT1hIdTktLUVnUVlkUXVUNnA4U2pRVXZLSHgtTlhfbURKeHNDSFoxZVJ6bko0MnNseFFtQTlNT3lNV2ZBTzJKLTJtNm03SlQ3aWh2ZUx6MWx3VTJ5NFd0a0w5N2puUXh3Rw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“아들 돈까지 사라졌다”…보이스피싱 피해 키운 금융사 실수 이데일리",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "7400만원 뜯은 보이스피싱 일당 검거…수거책 1명은 '피해자'였다",
+      "source": "뉴스1",
+      "source_url": "https://www.news1.kr",
+      "source_domain": "www.news1.kr",
+      "date": "Thu, 08 Oct 2026 01:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1YR0kxVGNjRndZbF8xbG5ISTZqeDBkeV9TV053TWNNZ0FQUkVVSVd3d1h6NkFnSzVWQi1nMmMzZUpGV1NCUG5BcUV1UHprQWZkWWVOTFZB?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "7400만원 뜯은 보이스피싱 일당 검거…수거책 1명은 '피해자'였다 뉴스1",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -1382,21 +1409,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단",
-      "source": "네이트뷰",
-      "source_url": "https://view.nate.com",
-      "source_domain": "view.nate.com",
-      "date": "Tue, 06 Oct 2026 08:45:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHWWpMdlhfQ1g0dG1CR1picVpiczRvTS1ObEFGMG5Jc0lnaXZ6UlV3eGdpZmstdVlJSXEzaTdKTnJucldWdGZzQlZMVUlIQ01fU0E4bEJn0gFWQVVfeXFMUEdZakx2WF9DWDR0bUJHWmJxWmJzNG9NLU5sQUYwbklzSWdpdnpSVXd4Z2lmay11WUlJcTNpN0pOcm5yV1Z0ZnNCVkxVSUhDTV9TQThsQmc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단 네이트뷰",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "투자사기",
       "title": "“6개월 투자하면 2배 수익”…전국 번지는 AIT 코인사기 피해",
       "source": "서울경제",
@@ -1409,6 +1421,21 @@
         "사기"
       ],
       "description": "“6개월 투자하면 2배 수익”…전국 번지는 AIT 코인사기 피해 서울경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단",
+      "source": "비즈워치",
+      "source_url": "https://news.bizwatch.co.kr",
+      "source_domain": "news.bizwatch.co.kr",
+      "date": "Tue, 06 Oct 2026 08:39:02 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HRXRuajBEcnotYXN2ZHJUMXBxNjlxZ2RTb1RRUmtqTURwQzRYQWZaWnJ0VDF6MWh0b0o0VUdRZWZCNUo3NmNYOWZ1aC0zWEpQSHcxM2ZFTlU2dXFCUnAzNFJ4R0l4LVFLSUE?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "LG U+, 우리은행과 AI로 통화 단계서 보이스피싱 차단 비즈워치",
       "collection_method": "google_news_24h"
     },
     {
@@ -18507,110 +18534,58 @@
       ],
       "description": "소상공인 등치는 ‘노쇼 사기’ 등 신종피싱 의심 신고 한 달 새 5000건 육박 경향신문",
       "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "'상품권 사면 대출 가능' 신종 보이스피싱 기승…금감원 소비자경보",
-      "source": "뉴스핌",
-      "source_url": "https://www.newspim.com",
-      "source_domain": "www.newspim.com",
-      "date": "Sun, 09 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5Fa25uT3hxSnVhYXBvcXNrTGhrV0l1aWY3QVBjSVhjbFhjel9HRGVrdTFiTWt5MVBtNVRBMmJISjM4SEF6aFlhdHB5T084ZlV1NVpZdnIzUEdwWlI5?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "'상품권 사면 대출 가능' 신종 보이스피싱 기승…금감원 소비자경보 뉴스핌",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“상품권 사면 대출”은 100% 사기…금감원, 보이스피싱 소비자경보",
-      "source": "동아일보",
-      "source_url": "https://www.donga.com",
-      "source_domain": "www.donga.com",
-      "date": "Sun, 09 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE96aVlaY1VlVTFJZVJUVkxOWUg5TGVkTUJXaUlxRUZnVGRnem82RVBKUlJsVkVyTE81NzFhS2xCVkZFak5RQlF4ZGltdjlPUHFiUldEa1pybTlOclM5a2RvSEtTTTMtMzNPQzVkc29oeEtPN1IzR3fSAWZBVV95cUxPRTBMMzF5cVNBRENISE5xeFpKeld0TzJBckFBa1IyMW1UZnZHSjZINmwyMmRlLVBxalh6UkhQWlNmSHJQdHVKSG4taUpZUVV4Mm9vdkkzeUhWWUd1enk1UjRrMzdvX0E?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“상품권 사면 대출”은 100% 사기…금감원, 보이스피싱 소비자경보 동아일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "상품권 사면 대출?...“100% 보이스피싱입니다”",
-      "source": "hidomin.com",
-      "source_url": "https://www.hidomin.com",
-      "source_domain": "www.hidomin.com",
-      "date": "Sun, 09 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5mMGpPLVBCd0sxYXNxajVsWnd3UTh1aGVpZmk5dzVJVkRmZWdxRzlyQTlUSFNBdEFBV3V2TDhlWmc4M1k5N3NhZnJRWmRndklsSjY1T09xS00ybkFpRUV0b05TbTAyMUQ0S3c?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "상품권 사면 대출?...“100% 보이스피싱입니다” hidomin.com",
-      "collection_method": "google_news_24h"
     }
   ],
   "official_items": [
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "보이스피싱",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
-      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요.",
-      "source": "금융위원회",
+      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱, 스미싱 등 피해에 주의하세요",
+      "source": "금융감독원",
       "date": "2026-10-06T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87882?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=237928&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
       "tags": [
-        "가상자산",
-        "사기",
-        "FIU·규제",
-        "제재·테러자금"
+        "사기"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "불법사금융",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
       "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융위원회",
+      "source": "금융감독원",
       "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
       "tags": [
-        "가상자산",
         "불법사금융",
-        "마약",
-        "FIU·규제",
-        "제재·테러자금"
+        "FIU·규제"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
-      "query": "금융위/FIU",
-      "official_source": "금융위원회",
+      "query": "가상자산",
+      "official_source": "금융감독원",
       "official_sources": [
-        "금융위원회"
+        "금융감독원"
       ],
-      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융위원회",
+      "title": "26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융감독원",
       "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
       "tags": [
         "가상자산",
-        "FIU·규제",
-        "제재·테러자금"
+        "FIU·규제"
       ],
-      "collection_method": "direct_fsc_board"
+      "collection_method": "verified_fss_board"
     },
     {
       "region": "공식자료",
