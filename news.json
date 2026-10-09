@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T16:44:55.666327+00:00",
+  "updated_at": "2026-10-09T17:10:32.154394+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "불법사금융",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -415,6 +415,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 0,
@@ -427,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -439,31 +445,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -475,7 +463,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -1710,22 +1710,6 @@
     {
       "region": "국내",
       "query": "환치기·외환",
-      "title": "국경 간 가상자산 이전 감시 강화…외국환거래법 시행령 입법예고",
-      "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
-      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1UbGROSXN4SlQ4bm9yajRNMnJFUExRTDdrUlpIeWxKM3ZkUDJUUWd0eGtHSklBZHdvSTBwZWVtSEFRakl3UUpiQzB3MEZud1ZpNnRyLWxHYVpjQ1AydWNFci1xcHNQNFpoZVB2cC1GMnJrQ0xLVldjU9IBeEFVX3lxTE1UbGROSXN4SlQ4bm9yajRNMnJFUExRTDdrUlpIeWxKM3ZkUDJUUWd0eGtHSklBZHdvSTBwZWVtSEFRakl3UUpiQzB3MEZud1ZpNnRyLWxHYVpjQ1AydWNFci1xcHNQNFpoZVB2cC1GMnJrQ0xLVldjUw?oc=5",
-      "tags": [
-        "가상자산",
-        "환치기·외환"
-      ],
-      "description": "국경 간 가상자산 이전 감시 강화…외국환거래법 시행령 입법예고 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "환치기·외환",
       "title": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이",
       "source": "머니투데이",
       "source_url": "https://www.mt.co.kr",
@@ -1736,6 +1720,22 @@
         "가상자산"
       ],
       "description": "가상자산 해외이전 한은 전산망에 잡힌다…불법 외환거래 감시 강화 - 머니투데이 머니투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "환치기·외환",
+      "title": "국경 간 가상자산 이전 감시 강화…외국환거래법 시행령 입법예고",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Wed, 07 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBzLWU1aE9DVS14S3VOQ1MwN1E2ZE1FUm9iaVg0NnpyT1pMNlNpamVJVFFWVU03ODB5UXhYa1lqdFFHdWdaZmNiYmI2Q1VqMEFjZTNQWHIxRzZKOFktM2lVVtIBeEFVX3lxTE1UbGROSXN4SlQ4bm9yajRNMnJFUExRTDdrUlpIeWxKM3ZkUDJUUWd0eGtHSklBZHdvSTBwZWVtSEFRakl3UUpiQzB3MEZud1ZpNnRyLWxHYVpjQ1AydWNFci1xcHNQNFpoZVB2cC1GMnJrQ0xLVldjUw?oc=5",
+      "tags": [
+        "가상자산",
+        "환치기·외환"
+      ],
+      "description": "국경 간 가상자산 이전 감시 강화…외국환거래법 시행령 입법예고 뉴시스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1821,10 +1821,10 @@
       "query": "자금세탁",
       "title": "JP모건부터 HSBC까지…글로벌 금융사, AI로 사이버 방어·자금세탁 탐지 강화",
       "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Tue, 06 Oct 2026 23:20:40 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE42U3c4Nm44b3lQaElYWC1wajgwRjBBMDBkMzFTQVhod3NEU2EyTnRUMnU2dXBqQXhYNmtZdC1zVHlqU1RJdDl1UHpUWTlTRENXUDE5QXFKVzBmX3V1TjRWcmNTakE5N1FCdGIzV1J0TEhxZFV1aENhRtIBeEFVX3lxTE42U3c4Nm44b3lQaElYWC1wajgwRjBBMDBkMzFTQVhod3NEU2EyTnRUMnU2dXBqQXhYNmtZdC1zVHlqU1RJdDl1UHpUWTlTRENXUDE5QXFKVzBmX3V1TjRWcmNTakE5N1FCdGIzV1J0TEhxZFV1aENhRg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBUZTRvNU9hMERISkpwd1Utd05kaldWNFJjYXVaa2JZSzNHc1doUUNNNjVCZjZhYVlNbnNldlQ3WWp1RHVnaGVDcFcyR3RaemFaY2hJdG1GdEMzRGtaallSQdIBeEFVX3lxTE42U3c4Nm44b3lQaElYWC1wajgwRjBBMDBkMzFTQVhod3NEU2EyTnRUMnU2dXBqQXhYNmtZdC1zVHlqU1RJdDl1UHpUWTlTRENXUDE5QXFKVzBmX3V1TjRWcmNTakE5N1FCdGIzV1J0TEhxZFV1aENhRg?oc=5",
       "tags": [
         "자금세탁"
       ],
