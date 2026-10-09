@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T05:11:28.019325+00:00",
+  "updated_at": "2026-10-09T05:44:17.392493+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 3
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 11
+      "count": 10
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 9,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,19 +397,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -451,7 +427,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -463,13 +445,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -610,6 +592,21 @@
         "사기"
       ],
       "description": "“교통과태료 체납정보 국세청 이관, 보이스피싱이 새로운 빌미 되어서는 안된다” 뉴스티앤티",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "ICE, 한인 불체자 체포… 돈세탁·성매매 공모",
+      "source": "애틀랜타 중앙일보",
+      "source_url": "https://www.atlantajoongang.com",
+      "source_domain": "www.atlantajoongang.com",
+      "date": "Thu, 08 Oct 2026 13:19:19 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9CLWxaSnNiaTNCZm5xTjlmcGRabXJ2MkZaWDBiVUp1ejZnM0tqX1BIdWNrVGlVX3otZkdWQVY3V3NidXpFOVpwRWx1TTN2RVU?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "ICE, 한인 불체자 체포… 돈세탁·성매매 공모 애틀랜타 중앙일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -812,21 +809,6 @@
         "가상자산"
       ],
       "description": "AI 활용 늘어나는 가상자산 범죄⋯금융권 해킹에 거래소 보안도 주목 이투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "ICE, 한인 불체자 체포…돈세탁·성매매 공모",
-      "source": "미주중앙일보",
-      "source_url": "https://www.koreadaily.com",
-      "source_domain": "www.koreadaily.com",
-      "date": "Thu, 08 Oct 2026 05:13:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1rMFNDVVJqd1N4bTNfU05WUVhjLU05cWJHWTdCbDBkeWhoMTVWRlUyRWdaSEpobjVOc1p2TWxpazFqLXgxYmFfOXlyYVV2REJYRGlQemh2WG5wNmRoc05GRWR3?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "ICE, 한인 불체자 체포…돈세탁·성매매 공모 미주중앙일보",
       "collection_method": "google_news_24h"
     },
     {
