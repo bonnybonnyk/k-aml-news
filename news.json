@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T22:10:43.660963+00:00",
+  "updated_at": "2026-10-09T22:43:12.017488+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 5,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -421,6 +403,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 0,
@@ -439,25 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -469,7 +445,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -835,7 +817,7 @@
       "source_url": "https://www.edaily.co.kr",
       "source_domain": "www.edaily.co.kr",
       "date": "Thu, 08 Oct 2026 09:23:18 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE92WEx4V1pqdno5U1hGTW4zUmVXMVozVnpzWUUySUxCcEN2MXB1TkUydlhDS1FaajZyellBeHlOQjVmNF9JV1l2eVZUSTFNcjdyNGc1WDF5bmRGRnlkV1JCc2FoQThvWlRJaVNB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOc3gxYlVwUC1CQ1NhUWVMeXBJWkwxS09NYmV1WGcwZjlCenViRlNobjFRNm1EM3pCZGJBQl91UlZGdElqOC1HNVJ4OU5iT1c0QVQ0S3JfX0NLd3dfTWtkRGFScFh4SmpkR0VfNkY3enRzMGpvMXJObndBSHpfdmdsbQ?oc=5",
       "tags": [
         "가상자산",
         "사기"
