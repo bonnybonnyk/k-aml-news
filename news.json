@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T15:12:00.415287+00:00",
+  "updated_at": "2026-10-09T15:45:37.497189+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,7 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:대포통장:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -415,31 +439,13 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -452,6 +458,18 @@
     },
     {
       "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -1611,21 +1629,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱 대응체계, 송금 전 차단으로 바꿔야",
-      "source": "이뉴스투데이",
-      "source_url": "http://www.enewstoday.co.kr",
-      "source_domain": "www.enewstoday.co.kr",
-      "date": "Wed, 07 Oct 2026 00:12:28 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ydXRvbUdIMGI4eWN6d0lxdzYzTl9UTXh5VkxpSUcwZ24xTUhnYVQ0NGJwV2RaUndBTWNRaWZMVVdOQmttQnA4dC1XdExxZHhOMGx4aWNNNnBmZWZJLWFJSFViZ2FHcmVIaUlLeGZ1YWpCTGtT0gF0QVVfeXFMTXJ1dG9tR0gwYjh5Y3p3SXF3NjNOX1RNeHlWTGlJRzBnbjFNSGdhVDQ0YnBXZFpSd0FNY1FpZkxVV05Ca21CcDh0LVd0THFkeE4wbHhpY002cGZlZkktYUlIVWJnYUdyZUhpSUt4ZnVhakJMa1M?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱 대응체계, 송금 전 차단으로 바꿔야 이뉴스투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "환치기·외환",
       "title": "가상자산 이전 내역 한은 관리망에 잡힌다… 정부, 외국환거래법 시행령 입법예고 - 조선비즈",
       "source": "Chosunbiz",
@@ -1654,6 +1657,21 @@
         "환치기·외환"
       ],
       "description": "가상자산 이전 내역 한은 관리망에 잡힌다… 정부, 외국환거래법 시행령 입법예고 Chosunbiz",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 대응체계, 송금 전 차단으로 바꿔야",
+      "source": "이뉴스투데이",
+      "source_url": "http://www.enewstoday.co.kr",
+      "source_domain": "www.enewstoday.co.kr",
+      "date": "Wed, 07 Oct 2026 00:07:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82cUNZbWg3ZWdCVU10WTZaanV0cmNtN2VPa3hLQ1ZYOG9weGUtcUNDcFZLamp4Z2cyRGhYSGlXMlE0LUt1UXhUR1FtMllOMTNZc3NzaW42MzlQemhEandfQ0YxZnhvSU5uUUN2d0NnZHrSAXRBVV95cUxNcnV0b21HSDBiOHljendJcXc2M05fVE14eVZMaUlHMGduMU1IZ2FUNDRicFdkWlJ3QU1jUWlmTFVXTkJrbUJwOHQtV3RMcWR4TjBseGljTTZwZmVmSS1hSUhVYmdhR3JlSGlJS3hmdWFqQkxrUw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 대응체계, 송금 전 차단으로 바꿔야 이뉴스투데이",
       "collection_method": "google_news_24h"
     },
     {
