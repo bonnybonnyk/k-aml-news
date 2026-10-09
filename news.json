@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-09T23:09:58.701242+00:00",
+  "updated_at": "2026-10-09T23:41:15.635787+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "범죄수익",
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "투자사기",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 6,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -211,7 +211,7 @@
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,31 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -433,13 +433,37 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
       "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -452,12 +476,6 @@
     },
     {
       "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -486,6 +504,21 @@
   "count": 1200,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "칼시, 전 FBI 요원 영입해 첫 자금세탁 방지팀 구성",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Fri, 09 Oct 2026 22:40:47 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5RcHBnYUpwZlB6OUFkMklBVEViMG1qTWFJQlRRU2pDMURPWHRTeVRMLWloM2hNanBfcm5TYW5OYnlmS0FZS2dUSHZENGU5R0Fsd2lIVzRn?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "칼시, 전 FBI 요원 영입해 첫 자금세탁 방지팀 구성 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "제재·테러자금",
@@ -622,6 +655,21 @@
         "사기"
       ],
       "description": "\"중수청 수사관입니다\"… 간판 바꿔단 보이스피싱 매일경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "“100만원 빌려 월 5만원도 못 갚아” 불법사채 막는 ‘예방대출’ 연체율 40% 돌파 [머니뭐니]",
+      "source": "헤럴드경제 미주판",
+      "source_url": "https://www.heraldk.com",
+      "source_domain": "www.heraldk.com",
+      "date": "Fri, 09 Oct 2026 07:32:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1LRWQxUGs2TEZVZ21mQmRjT1luYWlRVUV6WnFyUlo2QlB4bk5oMExPSGNGSE9jZXhvbFVqN0xnaTVuaFpWMWl6ajNOaTBhMk16bGlGa3BYWHZqM2sxR0lNXw?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "“100만원 빌려 월 5만원도 못 갚아” 불법사채 막는 ‘예방대출’ 연체율 40% 돌파 [머니뭐니] 헤럴드경제 미주판",
       "collection_method": "google_news_24h"
     },
     {
@@ -18575,36 +18623,6 @@
         "자금세탁"
       ],
       "description": "람다256, 금융권 자금세탁 대응 ‘한 흐름’으로…클레어 FRAML 고도화 테크42",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "트래블룰",
-      "title": "트래블룰 넘어 자금추적까지…람다256, 클레어 고도화",
-      "source": "네이트",
-      "source_url": "https://news.nate.com",
-      "source_domain": "news.nate.com",
-      "date": "Wed, 12 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBqTUZqOHI3NlR0R1F4YnN6NEFCbVRLQlNNVGk1YTJ6UlVQMjdKODIyNFVFaEhYandBeVZzYzRldlExMUNJUlg2U0pQNmhIbDhkbWd0Q1ZXZnZKYlcycjZhMw?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "트래블룰 넘어 자금추적까지…람다256, 클레어 고도화 네이트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "트래블룰",
-      "title": "특금법 개정에 중소 VASP 부담 확대… 네이버·두나무는 안도",
-      "source": "it.chosun.com",
-      "source_url": "https://it.chosun.com",
-      "source_domain": "it.chosun.com",
-      "date": "Wed, 12 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8xckROSE5Bejg3cVRnSWppUm55VXRGOVI1cnV4VVZ5ejF2YUQ0ZDVPZUZqbnp2NnNkdGZNUVBnZWt0RW9LZWNOc2hZWFpnMWFvcVE5TTlzUUZRbHQ5WGY1SDBUMXBuYjhYNFBzUm5ZM0LSAXRBVV95cUxQSjNaWGlwR2ZBakhqMHlnRXpHeGJxbTZjN19xR1pnUWZxYzAzRUtLNlNPc2hibnVhdzlzNnk3YU1PUjdqUk85WEZCd2x0eG1BOE5BRTFnMklKMFg5OFJEMzVvcXQ0UEdfNXVYc3JBZml0RmloRQ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "특금법 개정에 중소 VASP 부담 확대… 네이버·두나무는 안도 it.chosun.com",
       "collection_method": "google_news_24h"
     }
   ],
