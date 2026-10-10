@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T12:50:09.755386+00:00",
+  "updated_at": "2026-10-10T12:55:48.343425+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,6 +415,18 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -409,33 +439,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -451,13 +469,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -477,7 +495,7 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1200,
+  "count": 1192,
   "official_count": 31,
   "items": [
     {
@@ -789,22 +807,6 @@
     },
     {
       "region": "국내",
-      "query": "자금세탁",
-      "title": "게임 화면의 작은 문구까지 읽는 도박 돈세탁 정보 탐색",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://calgaryroughnecks.com",
-      "source_domain": "calgaryroughnecks.com",
-      "date": "Thu, 08 Oct 2026 14:53:11 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8yQlRPc0FkdHlka1l4Znd2cXRWZGhWbEFySGlzck5DWGE0WjUwai1FdjVwNGN4dTdONGlwcUJ4RklUbFpTdWFYQ2tXTTlfc2tWd2tSMzMzZm5hc1llRDh5MHBCdjJodw?oc=5",
-      "tags": [
-        "도박",
-        "자금세탁"
-      ],
-      "description": "게임 화면의 작은 문구까지 읽는 도박 돈세탁 정보 탐색 Calgary Roughnecks",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "보이스피싱",
       "title": "“교통과태료 체납정보 국세청 이관, 보이스피싱이 새로운 빌미 되어서는 안된다”",
       "source": "뉴스티앤티",
@@ -955,22 +957,6 @@
         "사기"
       ],
       "description": "[2026 국감] 이억원 \"AI 해킹 대응 미흡…보이스피싱 책임 강화 검토\" | 뉴스드림",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "빠른 진행 옵션이 궁금한 도박 보이스피싱 신고 기능 질문",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://calgaryroughnecks.com",
-      "source_domain": "calgaryroughnecks.com",
-      "date": "Thu, 08 Oct 2026 08:21:14 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ral9qdlJFTXNmdG8xMEVNVEt2Z1JicEVjYWVCbG1RTHU4Mk9tNEpKbmZfZEU4VlRUWjliS3A5Ui1YbnJuVjJzLW9MQVBqcE4xWHFfLWt6QkZxU1NmZEtCdDZIY1h4c1hvZnZQYmFmX2hvdkk?oc=5",
-      "tags": [
-        "사기",
-        "도박"
-      ],
-      "description": "빠른 진행 옵션이 궁금한 도박 보이스피싱 신고 기능 질문 Calgary Roughnecks",
       "collection_method": "google_news_24h"
     },
     {
@@ -1495,22 +1481,6 @@
     },
     {
       "region": "국내",
-      "query": "자금세탁",
-      "title": "일반 라운드로 돌아오는 시점, 도박 돈세탁 진행 규칙",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://www.calgaryroughnecks.com",
-      "source_domain": "www.calgaryroughnecks.com",
-      "date": "Wed, 07 Oct 2026 07:38:48 GMT",
-      "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOY1hiZTE2Q1FLdVcwX1RJWW9lU3BFNDlyVjloMHVxUWw4WHNScGRHdlJ2aHI0MzE4VWQ5U0NSVU9INnZzUzZOenhQdkM3MV9ORFR5VkM2eDZHOWNzZlpOcUlwRm9RQlp5SDRCRDU2MGdfWENKLThpZmpZRThVM3hyZUtzTGFsV1RhN21oRlcwRm1UblNKWTdKZWZtZHRweHd4QTZrSXRJeDFRX0cxMTh1Q29mQVpma2U4WHc5QUNGQ05wTzBGWHAwUGVTd1FBSlQ1Wi15Mk42X0ZLaUpoOWk3ZFNjMFF2OWJJc25IM1FrOVBCNmdPaC1OR04wSl9zaXdST2NVdlBDdk9pTW1YQUpzVTNaTEt3c3VqVDZr?oc=5",
-      "tags": [
-        "도박",
-        "자금세탁"
-      ],
-      "description": "일반 라운드로 돌아오는 시점, 도박 돈세탁 진행 규칙 Calgary Roughnecks",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "보이스피싱",
       "title": "경북 농축협, 사기이용계좌 비율 '전국 최고'…보이스피싱 4년째 상위권",
       "source": "뉴스1",
@@ -1552,22 +1522,6 @@
         "사기"
       ],
       "description": "금융 해킹에 보이스피싱 폭탄?…2차 피해 막으려면 SBS Biz",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "도박 보이스피싱 신고 도움말에서 자주 마주치는 표현",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://calgaryroughnecks.com",
-      "source_domain": "calgaryroughnecks.com",
-      "date": "Wed, 07 Oct 2026 03:38:08 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNTDh0NmJiTVZBS0hJdklGeXlPSnV1RWJCcmU0NE5CV1d2RmdENFRELWtSTV9RSVFLV1NrQVI5VVZ1QkdINHJoUFVGc3hvSXUzNVdtR1NYMWd6cHFmQThLaEtfNEl5NVpiRnpqUkh4em1CQlVzbmxBbDl4TWRIZjU2QQ?oc=5",
-      "tags": [
-        "사기",
-        "도박"
-      ],
-      "description": "도박 보이스피싱 신고 도움말에서 자주 마주치는 표현 Calgary Roughnecks",
       "collection_method": "google_news_24h"
     },
     {
@@ -1676,22 +1630,6 @@
         "가상자산"
       ],
       "description": "거래소·개인지갑 오가는 코인도 외환전산망에 잡힌다 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보너스 전후에 유지되는 설정, 도박 보이스피싱 신고 기능 질문",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://calgaryroughnecks.com",
-      "source_domain": "calgaryroughnecks.com",
-      "date": "Wed, 07 Oct 2026 00:22:43 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1zcF84WEw0SmRYQXVXTHpSMFd3WWVZWWR4bEhoNS1kMUZ0QTA1N21Fajhod3RmcjVaSmRWUGswQ2xYT2MxV2gwQVdKUThRLXFwcXB5RGxLRzF2dnBLV1RVbnJMMW5OYmIyMUE?oc=5",
-      "tags": [
-        "사기",
-        "도박"
-      ],
-      "description": "보너스 전후에 유지되는 설정, 도박 보이스피싱 신고 기능 질문 Calgary Roughnecks",
       "collection_method": "google_news_24h"
     },
     {
@@ -1962,22 +1900,6 @@
     },
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "심벌 디자인이 비슷할 때 참고하는 도박 보이스피싱 신고 구분 포인트",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://calgaryroughnecks.com",
-      "source_domain": "calgaryroughnecks.com",
-      "date": "Tue, 06 Oct 2026 19:55:57 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxQUXB6aExPVDBlTDNVaGdkT2J6VE9MU29wQnlxZXhxWUpib1ItUEZlMkJNR0lpYTk5MnZfY3ozYzN1NW5zYXRqXzVITXhxXzZpSTA1NUtWNG9Kcm05WTA1M0pfeGlYVEhUQTh3cVowb0ljOThNZ1hDMHdyMU01bUI3LXhHTDZQYTV0b3VLWVVWTEF0aUVLMnBQWDFsWkJpME1Wc0RYSW9DTlNOaEU3RElHSjJHdFU4ZkNja2kwWXhsUk5IY2d4ckxqbVYtazRpV094d2FkV2gwMFRidndsRjd2NTc4LV9qdXY4eUFiM05fc2Zub01yV2w3VFp3X0RsbHdHdmpJS05QdkswLTZrOVRnNWFVcDBzaDNXWU11emJuNjk5cnYyc1phbHFaaw?oc=5",
-      "tags": [
-        "사기",
-        "도박"
-      ],
-      "description": "심벌 디자인이 비슷할 때 참고하는 도박 보이스피싱 신고 구분 포인트 Calgary Roughnecks",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "자금세탁",
       "title": "\"라자루스, 中 돈세탁 조직 통해 10억달러 넘는 탈취 자금 세탁\"…ZachXBT 폭로",
       "source": "Yellow.com",
@@ -1989,22 +1911,6 @@
         "자금세탁"
       ],
       "description": "\"라자루스, 中 돈세탁 조직 통해 10억달러 넘는 탈취 자금 세탁\"…ZachXBT 폭로 Yellow.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "도박 보이스피싱 신고 이용 시간 알림 기능 확인",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://calgaryroughnecks.com",
-      "source_domain": "calgaryroughnecks.com",
-      "date": "Tue, 06 Oct 2026 18:41:18 GMT",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE81dVRzZ1NVX0FnNFY3WE4tM3pucEVTSkN3cUd4YnV6dXBDUnlVdFk3Y3drOWhySnNFT1ktQ3F1T0VyZ0NXcWljVEN1VG0tZ2RnaXVqcDB3MXZ3SzFUNUFWX3JaRTNPOWcxWkVkaWJCelhZVTVtSkJDRllmQQ?oc=5",
-      "tags": [
-        "사기",
-        "도박"
-      ],
-      "description": "도박 보이스피싱 신고 이용 시간 알림 기능 확인 Calgary Roughnecks",
       "collection_method": "google_news_24h"
     },
     {
@@ -10547,22 +10453,6 @@
     },
     {
       "region": "국내",
-      "query": "자금세탁",
-      "title": "선택형 보너스가 있다면 살펴볼 도박 돈세탁 조작 규칙",
-      "source": "Calgary Roughnecks",
-      "source_url": "https://www.calgaryroughnecks.com",
-      "source_domain": "www.calgaryroughnecks.com",
-      "date": "Fri, 18 Sep 2026 20:30:15 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNQ0RnSWZEYTYtV05ZODZnM1ctSndvdXNWQXEyTWpnb0xvQ2l4WndNWFdmenBaZWI4eDZyM1FDYlhuR09Ia0lhbGJqZTV1MDNiTVNYdWhsZmw5WWw5Y3dwdXZTVTd0STVfdlFtb2pSRzJLdnk4T0N2VHlieFhhR1hmZktQdUNEb2RHNnNwUlZSV2szRHdrZEJCZl9XTUs2TTdYWDRzSDBIcEkwV3FSUHNYUXp1dGxBZm9GYVU2TWZKWE5mc0FVMGk5RTN1N0N6NGg3LXNVeVQ0Qy1qZVlyUTZYOVRkcWtUOTl0VjhEVnhLTDRaUnJ5QmJKbnAtZjA5TjZPM1E?oc=5",
-      "tags": [
-        "도박",
-        "자금세탁"
-      ],
-      "description": "선택형 보너스가 있다면 살펴볼 도박 돈세탁 조작 규칙 Calgary Roughnecks",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "가상자산 AML",
       "title": "UAE·스웨덴, 700만달러 암호화폐 세탁조직 적발",
       "source": "토큰포스트",
@@ -18606,53 +18496,60 @@
   "official_items": [
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱, 스미싱 등 피해에 주의하세요",
-      "source": "금융감독원",
+      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요.",
+      "source": "금융위원회",
       "date": "2026-10-06T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=237928&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "불법사금융",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융감독원",
-      "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
-      "tags": [
-        "불법사금융",
-        "FIU·규제"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "가상자산",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "26년 상반기 가상자산사업자 실태조사 결과",
-      "source": "금융감독원",
-      "date": "2026-10-01T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=233627&menuNo=200218&searchCnd=1&searchWrd=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87882?srchCtgry=&curPage=1&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
         "가상자산",
-        "FIU·규제"
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
+      "source": "금융위원회",
+      "date": "2026-10-02T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "불법사금융",
+        "마약",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
+    },
+    {
+      "region": "공식자료",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
+      "official_sources": [
+        "금융위원회"
+      ],
+      "title": "’26년 상반기 가상자산사업자 실태조사 결과",
+      "source": "금융위원회",
+      "date": "2026-10-01T00:00:00+09:00",
+      "link": "https://www.fsc.go.kr/no010101/87835?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "tags": [
+        "가상자산",
+        "FIU·규제",
+        "제재·테러자금"
+      ],
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
