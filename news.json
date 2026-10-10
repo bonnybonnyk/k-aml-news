@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-10T04:45:24.792181+00:00",
+  "updated_at": "2026-10-10T05:10:28.494435+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 4
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -97,13 +97,13 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -415,6 +415,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 0,
@@ -427,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -445,7 +451,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -457,7 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -470,12 +476,6 @@
     },
     {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -506,6 +506,22 @@
   "items": [
     {
       "region": "국내",
+      "query": "자금세탁",
+      "title": "미 법무부, 바이낸스 자금세탁 방지·이란 제재 위반 여부 조사",
+      "source": "이코노미블록",
+      "source_url": "https://economybloc.com",
+      "source_domain": "economybloc.com",
+      "date": "Sat, 10 Oct 2026 04:51:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpaWxHeVFXanZCSG10dmVkRFNVNTZ5RlhYY2RwbVNINlJmRFBZQnJiSkJCS1ZkZ0U0dVVVellNeGRRQXNXQ1k2X21BTGQ0MU9J?oc=5",
+      "tags": [
+        "제재·테러자금",
+        "자금세탁"
+      ],
+      "description": "미 법무부, 바이낸스 자금세탁 방지·이란 제재 위반 여부 조사 이코노미블록",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "불법사금융",
       "title": "“100만원 빌려 월 5만원도 못 갚아” 불법사채 막는 ‘예방대출’ 연체율 40% 돌파 [머니뭐니]",
       "source": "헤럴드경제",
@@ -532,6 +548,21 @@
         "자금세탁"
       ],
       "description": "칼시, 전 FBI 요원 영입해 첫 자금세탁 방지팀 구성 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "프랑스서 7개월간 암호화폐 관련 강력범죄 90건…납치·갈취 잇따라",
+      "source": "디지털투데이",
+      "source_url": "https://www.digitaltoday.co.kr",
+      "source_domain": "www.digitaltoday.co.kr",
+      "date": "Fri, 09 Oct 2026 22:39:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83VllnZkZxSGxNS1RsMk50NGEwTDNVQlE2eU9RTU1IVUMxYUxodFBLMWpIUTA5c2w4NWZPb3FvZWpmU09UX1FqSnlNelI3V0dmSVVfVk5iSXNscVpGMTdTcFFxTGM2SWZGZUVQTEVMXy1XbzQ?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "프랑스서 7개월간 암호화폐 관련 강력범죄 90건…납치·갈취 잇따라 디지털투데이",
       "collection_method": "google_news_24h"
     },
     {
@@ -18593,36 +18624,6 @@
         "AML"
       ],
       "description": "[인터뷰] 남기훈 람다256 CTO “금융회사 AML, 기존 시스템 그대로 온체인까지 넓혀야” 디지털데일리",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "트래블룰",
-      "title": "람다256, 클레어 고도화…트래블룰 넘어 자금 흐름 추적까지",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Wed, 12 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9mSTRlWVpUMmdSTm54azloTnJVSFc2RndiQ1YxY2NOUVpaVlNVOVNwemNTNkZXQXFaaW5ZWUhzQ1I5eGxsR2pVSmstdXFOVXB3WWdZWg?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "람다256, 클레어 고도화…트래블룰 넘어 자금 흐름 추적까지 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "람다256, 금융권 자금세탁 대응 ‘한 흐름’으로…클레어 FRAML 고도화",
-      "source": "테크42",
-      "source_url": "https://www.tech42.co.kr",
-      "source_domain": "www.tech42.co.kr",
-      "date": "Wed, 12 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNdFFWZHJvNGRabXhCbXdSRVA5c1JsZERkSHAwRVNyMXYtRzZ4NlZ1d05jUTFBcVFYNXI0UmtGWlB0akhnOGhsajctLTB3OGp0VnVKanlfSW93aFhuTGptbUdkTGhrSndaRkEzdjZZRGFtZng2Rk81UXV0aGRIb1puQW1lcWdzZmNuVHJwaDZ6S0dxWXdtS1ZYb3BQNUw1OGhzOWUyeGs4c045Q0dmMmNKZ3I2eVhiX0gteEFWc3kzaUNnUUNCNXRISHV4bExUc0hPXzE2aXRiT0V4bktlY25YajNKZ0x2ekszc244ZW9GcEc4b2h6aHRjRHhEQnVZOXU2VERGZXQ3U1RCdzdWQ3p4clFVeURjWU1IV0VxSDI5TERoZw?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "람다256, 금융권 자금세탁 대응 ‘한 흐름’으로…클레어 FRAML 고도화 테크42",
       "collection_method": "google_news_24h"
     }
   ],
