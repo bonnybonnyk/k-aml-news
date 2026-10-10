@@ -393,6 +393,10 @@ def exclude_news_editorial(title, source_name='', source_domain='', article_link
         return True
     if any(host == 'spinkr222.com' or host.endswith('.spinkr222.com') for host in (d, link_domain)):
         return True
+    # 2026-10-10: Google News가 원문 도메인 대신 출처명 Calgary Roughnecks와
+    # news.google.com 경유 링크를 제공하는 스팸 수집 사례 차단.
+    if s == 'calgaryroughnecks':
+        return True
     # 광고성 출처명으로 검색에 걸린 글도 원문 링크가 Google 경유일 수 있다.
     if 'histoire pour tous' in s and re.search(r'보너스|도박|보이스피싱|카지노', t):
         return True
@@ -1407,6 +1411,8 @@ def run_regression_selfcheck():
         ('목소리도 못 믿는다…AI 보이스피싱에 통신사도 진땀', 'Naver Blog', 'blog.naver.com'),
         ('(사)한국여성소비자연합 함양군지부, 보이스피싱 및 건강증진 교육', '한국일보', 'hankookilbo.com'),
         ('보너스 구매와 자연 진입 조건, 도박 보이스피싱 신고 규칙 비교', 'Histoire pour tous', 'histoire-pour-tous.fr'),
+        ('도박 보이스피싱 신고 도움말에서 자주 마주치는 표현', 'Calgary Roughnecks', 'calgaryroughnecks.com'),
+        ('일반 라운드로 돌아오는 시점, 도박 돈세탁 진행 규칙', 'Calgary Roughnecks', 'calgaryroughnecks.com'),
         ('도박 돈세탁 컨설턴트를 위한 친환경 에너지 권위 있는 가이드', 'histoire-pour-tous.fr', 'histoire-pour-tous.fr'),
         ('전북경찰청장, 추석 귀성길 착한운전으로 안전 더하고 보이스피싱도 막는다', '뉴스데일리', 'newsdaily.kr'),
         ('택배·과태료·낮은 외환 주의 필수…추석 금융사기 피하는 법', '뉴스웨이', 'newsway.co.kr'),
