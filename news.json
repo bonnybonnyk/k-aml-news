@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T01:43:40.807965+00:00",
+  "updated_at": "2026-10-10T02:10:49.225585+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,19 +397,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": false,
-      "count": 0,
-      "error": "Remote end closed connection without response"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": false,
       "count": 0,
       "error": "Remote end closed connection without response"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": false,
       "count": 0,
       "error": "Remote end closed connection without response"
@@ -445,25 +421,13 @@
       "error": "Remote end closed connection without response"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": false,
       "count": 0,
       "error": "Remote end closed connection without response"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": false,
-      "count": 0,
-      "error": "Remote end closed connection without response"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": false,
-      "count": 0,
-      "error": "Remote end closed connection without response"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": false,
       "count": 0,
       "error": "Remote end closed connection without response"
@@ -475,7 +439,25 @@
       "error": "Remote end closed connection without response"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": false,
+      "count": 0,
+      "error": "Remote end closed connection without response"
+    },
+    {
       "feed": "금융감독원:환치기:p1",
+      "ok": false,
+      "count": 0,
+      "error": "Remote end closed connection without response"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": false,
+      "count": 0,
+      "error": "Remote end closed connection without response"
+    },
+    {
+      "feed": "금융감독원:불공정거래:p1",
       "ok": false,
       "count": 0,
       "error": "Remote end closed connection without response"
@@ -504,6 +486,21 @@
   "count": 1200,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "“100만원 빌려 월 5만원도 못 갚아” 불법사채 막는 ‘예방대출’ 연체율 40% 돌파 [머니뭐니]",
+      "source": "헤럴드경제",
+      "source_url": "https://biz.heraldcorp.com",
+      "source_domain": "biz.heraldcorp.com",
+      "date": "Fri, 09 Oct 2026 23:31:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UUGdRcWtqWmhqNXhzX080MjlaZFZMcUhwU0NPSkNzSXUwV2ctLVYwU2p3WGRwTjczMndhLWJiYlcyWDVzcDVDNnBLdlREemEwcXJSd25B?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "“100만원 빌려 월 5만원도 못 갚아” 불법사채 막는 ‘예방대출’ 연체율 40% 돌파 [머니뭐니] 헤럴드경제",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -655,21 +652,6 @@
         "사기"
       ],
       "description": "\"중수청 수사관입니다\"… 간판 바꿔단 보이스피싱 매일경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "“100만원 빌려 월 5만원도 못 갚아” 불법사채 막는 ‘예방대출’ 연체율 40% 돌파 [머니뭐니]",
-      "source": "헤럴드경제 미주판",
-      "source_url": "https://www.heraldk.com",
-      "source_domain": "www.heraldk.com",
-      "date": "Fri, 09 Oct 2026 07:32:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1LRWQxUGs2TEZVZ21mQmRjT1luYWlRVUV6WnFyUlo2QlB4bk5oMExPSGNGSE9jZXhvbFVqN0xnaTVuaFpWMWl6ajNOaTBhMk16bGlGa3BYWHZqM2sxR0lNXw?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "“100만원 빌려 월 5만원도 못 갚아” 불법사채 막는 ‘예방대출’ 연체율 40% 돌파 [머니뭐니] 헤럴드경제 미주판",
       "collection_method": "google_news_24h"
     },
     {
