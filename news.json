@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T07:11:23.829293+00:00",
+  "updated_at": "2026-10-11T07:43:06.646898+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 0
+      "count": 2
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "불법사금융",
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,15 +439,15 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -463,7 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -475,7 +475,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -495,9 +495,40 @@
   "practical_backfill_complete": true,
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
-  "count": 1194,
+  "count": 1196,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "일본 경찰, 사기 피해금 9100만엔 세탁 혐의 6명 체포",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Sun, 11 Oct 2026 07:18:36 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9SRTNZeURkM0t0Z0pNZl84UlktUnBnbjdCSDZneFZxdzg0RzRJcUtZSEtEdjI5SFJxMlF6OUtnakxpMklIcnNWa0ZMb1BQNjd6TEw1LVR3WXQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "일본 경찰, 사기 피해금 9100만엔 세탁 혐의 6명 체포 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "금거래소 운영자 신고로 1억2천만 원 보이스피싱 피해 막아",
+      "source": "경북매일",
+      "source_url": "https://www.kbmaeil.com",
+      "source_domain": "www.kbmaeil.com",
+      "date": "Sun, 11 Oct 2026 07:11:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE81QmVMeEw0T0xjMDdQblh1bDNGbDVYNldKcC1wRmlWcDgtelRuSU03VmZmTlgwZXVvRWRxZFhiYURoREZIUVpyTkU5YlpWelNDOWFqREhaNWt3QQ?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "금거래소 운영자 신고로 1억2천만 원 보이스피싱 피해 막아 경북매일",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "제재·테러자금",
@@ -793,10 +824,10 @@
       "query": "보이스피싱",
       "title": "명의도용 대출에 대포통장 개설까지…금융감독원 '2차 피해' 경보",
       "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
       "date": "Thu, 08 Oct 2026 23:21:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5DcjZ5c0x6U2dLNVFraUpTSTFYMEtiUWNQN2UzckNFQUlGWm9ySzFMU1NmN3hKbmVRSnBRNi1HQUI0MlFkMEV5VVdmSEp1TDAyOW9uTjRVSG9zTlhKT1JVVEZUVV91bWhXZE5mY2lYZkp0MTlCcVF2bdIBeEFVX3lxTE5DcjZ5c0x6U2dLNVFraUpTSTFYMEtiUWNQN2UzckNFQUlGWm9ySzFMU1NmN3hKbmVRSnBRNi1HQUI0MlFkMEV5VVdmSEp1TDAyOW9uTjRVSG9zTlhKT1JVVEZUVV91bWhXZE5mY2lYZkp0MTlCcVF2bQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAyRnlzUXlBNHVnQ1lGc2Z5Q1RtZDBndlVVc1BzLU1nMURzTDU0UUxHelc0QmZnTEtrUmQtemFMZWthMWJDelF6MXVobW9Ka3NsZ3NFRGNaM0tXUjllVWJkd9IBeEFVX3lxTE5DcjZ5c0x6U2dLNVFraUpTSTFYMEtiUWNQN2UzckNFQUlGWm9ySzFMU1NmN3hKbmVRSnBRNi1HQUI0MlFkMEV5VVdmSEp1TDAyOW9uTjRVSG9zTlhKT1JVVEZUVV91bWhXZE5mY2lYZkp0MTlCcVF2bQ?oc=5",
       "tags": [
         "사기"
       ],
