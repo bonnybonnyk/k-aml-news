@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-14T20:53:28.250933+00:00",
+  "updated_at": "2026-10-14T23:41:49.204207+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 20
+      "count": 21
     },
     {
       "feed": "범죄수익",
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 13
+      "count": 14
     },
     {
       "feed": "가상자산 AML",
@@ -25,7 +25,7 @@
     {
       "feed": "지갑·해외거래소",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "트래블룰",
@@ -50,7 +50,7 @@
     {
       "feed": "환치기·외환",
       "ok": true,
-      "count": 1
+      "count": 3
     },
     {
       "feed": "마약자금",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 13
+      "count": 12
     },
     {
       "feed": "탈세",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "feed": "차명계좌",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 5
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 9,
+      "count": 16,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 23,
+      "count": 24,
       "window_days": 3
     },
     {
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 9,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 14,
+      "count": 15,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,7 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -409,13 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,9 +445,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:AML:p1",
       "ok": true,
-      "count": 10,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -445,7 +457,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -454,6 +466,12 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -480,6 +498,52 @@
   "count": 1200,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "[단독]검사 지휘 사라졌는데 관세청 법률 전문가는 4명 뿐...관세 수사 공백 우려",
+      "source": "조선일보",
+      "source_url": "https://www.chosun.com",
+      "source_domain": "www.chosun.com",
+      "date": "Wed, 14 Oct 2026 22:03:28 GMT",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOcXlPZmc0LTBjRWl6Q000ZzNPbkdHLUlEeFhFQkRNZjlUSDJCQVZEMUxuSUpmSm10QzBzcUYzcDZwMUFSOVJsdnBLZ3VkU0ZZaW1CbV90ZGhESTlCbGZsR3VUWFhiak9yaUZEZkxieGhILVo1dndjQWJzNjk0ZlB6Ui1kVDlhT3U1NmphQnl3?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "description": "[단독]검사 지휘 사라졌는데 관세청 법률 전문가는 4명 뿐...관세 수사 공백 우려 조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "마약자금",
+      "title": "\"檢폐지에 관세청 사건 1천582건 '행방불명'…마약수사 공백\"",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Wed, 14 Oct 2026 20:52:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBwS25Uek81WWxTUVBHbnI0WUp6VEpCdHpBYzlLLU5xMHFvdmZPOE9WSHI4eHJIUlRyZVo3Y3RQbHJIX09UbFVTNzI2Q0ZIdjVjRGx0NnFENGduYWZ5M3lLRNIBYEFVX3lxTFBwS25Uek81WWxTUVBHbnI0WUp6VEpCdHpBYzlLLU5xMHFvdmZPOE9WSHI4eHJIUlRyZVo3Y3RQbHJIX09UbFVTNzI2Q0ZIdjVjRGx0NnFENGduYWZ5M3lLRA?oc=5",
+      "tags": [
+        "마약"
+      ],
+      "description": "\"檢폐지에 관세청 사건 1천582건 '행방불명'…마약수사 공백\" 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "충남경찰, ‘불법 온라인 도박 조직’ 34명 검거…“범죄수익 67억 원 환수 절차 진행”",
+      "source": "대전투데이",
+      "source_url": "http://www.daejeontoday.com",
+      "source_domain": "www.daejeontoday.com",
+      "date": "Wed, 14 Oct 2026 19:45:26 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE03ODZPQXpkbDdzZXBJcmtFZHVUOXQ0X3U3VktLSzRlY2JZbUkyWE5Dc3c2VkJldDBKMFhEZ1FWWmp4eFJnVG9VQ1Z1bTl4TEtRU0hMZXQ5Y25PSkQ1MHgzSDZNbFQ2bWRHeUpVajh6a2czMzDSAXNBVV95cUxNNzg2T0F6ZGw3c2VwSXJrRWR1VDl0NF91N1ZLS0s0ZWNiWW1JMlhOQ3N3NlZCZXQwSjBYRGdRVlpqeHhSZ1RvVUNWdW05eExLUVNITGV0OWNuT0pENTB4M0g2TWxUNm1kR3lKVWo4emtnMzMw?oc=5",
+      "tags": [
+        "도박",
+        "자금세탁"
+      ],
+      "description": "충남경찰, ‘불법 온라인 도박 조직’ 34명 검거…“범죄수익 67억 원 환수 절차 진행” 대전투데이",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "제재·테러자금",
@@ -562,10 +626,10 @@
       "query": "보이스피싱",
       "title": "계좌당 150만원 미끼로 대포통장 모집⋯34명 무더기 검거",
       "source": "강원일보",
-      "source_url": "https://m.kwnews.co.kr",
-      "source_domain": "m.kwnews.co.kr",
+      "source_url": "https://www.kwnews.co.kr",
+      "source_domain": "www.kwnews.co.kr",
       "date": "Wed, 14 Oct 2026 15:20:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5CNFJjTUZMNnNMakRtVElpQ3d6ODZ5RTY5eUFVcEVMbzduMlhFNGZ1MGlmY3pYVGhZXzM5djZ1Wnk3bE10M3ZOYXY1enJzTUNrXzF4MTJBdl8?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFByaW9EdjNlTW1IYlN6bWZHZWsxQU9wWWd0YWlQOTBCc0hSNkEyNHZtak1FRUYxVGRGd3o2cTBZLUtjaEF1VzZaYjhIcllYNm50SW1rMUZnanA4ZXc?oc=5",
       "tags": [
         "사기"
       ],
@@ -909,6 +973,21 @@
     {
       "region": "국내",
       "query": "자금세탁",
+      "title": "자금세탁 방지 실패로 Bank of America에 12.1억 달러 벌금 부과",
+      "source": "IDNFinancials",
+      "source_url": "https://www.idnfinancials.com",
+      "source_domain": "www.idnfinancials.com",
+      "date": "Wed, 14 Oct 2026 04:40:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxQN1NxTC1YbE9iMXdoLVp0TkVWMWNPa3JKdXdfY0lwbzgxaXlPYTRYMmZjTXpwOFRwSW9CQU1VdDBjd0M1ekRIMmFiTUxiWnpxcGkyeE1wdVE3RW5NQ3IyNWdGVkxuLWhGTzJ6ai0yYkNVUEFrSGM4eXBmYjhoXzZZMzdBS1Q1U0djcFVWZGhSZFZTdFVKaG14WDBkSXFZN2Y0Y3F4MzdWSTlmZkYxNlhCZEpPU1FUY1hoWC1YQlNIWGxOYTZIX1gwQWpLN2tmcGp5ZzgwYXM4LXpONHFfVFVWLWl0Rzd6c2JnRDZLTWFSREdHTWlSTHJ3dEMxRGFaNUw3WWpYWXYxVmxzU0pVSjlPZGtFQ3V1aFkwcHFUNEZFSlN4NFZsVkVRVWdITTFmUDJndHdBbHdpUDBZQkl6OGRSYUhpdnJ5Z0xpYy1vOWxFOE9sYnNMWXJUV2VHSUN4UQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "자금세탁 방지 실패로 Bank of America에 12.1억 달러 벌금 부과 IDNFinancials",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
       "title": "신분세탁해 UAE서 호화생활…도박사이트 총책, 10년 도피끝 검거",
       "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
@@ -1097,7 +1176,7 @@
       "source_url": "https://www.khan.co.kr",
       "source_domain": "www.khan.co.kr",
       "date": "Wed, 14 Oct 2026 01:52:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE84T0hXamJFNFVuOElaeERCM1BRZUhKRDRSNENWOWlFYklBcWd1YjJyTlVyMlZaVlRUaHd2QjJDdVJZdjBrLWhWUktMeGFZUlMyelpJMFA3RlFKQdIBX0FVX3lxTE05Zm9jcHlRU1NFTHJUYi1KSHNaakJicm9DYVZNV1d1eldBcDJnWkVXOW9MWTdVSUlCVURUcWRraGw1NlhNUkhfWEFqOGItSW1pSEtaU25ESTJ2MUJqZ2Jv?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTGo2aXZGZFNCZnNRcDg1OF9FOXV3em00TWM1QkR0NVVzUVJVbHhieTAzOW9ERWVKdmYxVDNYbS1adG1kVG1fTUNGVV9WV1M1dWpiRzVjQ1Z1Qmk0V1ZpSktpNXZ6VHNfeUVuT0cwX3piRHYyOTI2UGIyZlZPRU1DYnUwa3ZtMmVESVFpcmg3R1Yycm1jVHljNmVFTVA2aUN3OEpBSGEyYi1ORV9L0gFfQVVfeXFMTTlmb2NweVFTU0VMclRiLUpIc1pqQmJyb0NhVk1XV3V6V0FwMmdaRVc5b0xZN1VJSUJVRFRxZGtobDU2WE1SSF9YQWo4Yi1JbWlIS1pTbkRJMnYxQmpnYm8?oc=5",
       "tags": [
         "사기"
       ],
@@ -1447,6 +1526,22 @@
     {
       "region": "국내",
       "query": "자금세탁",
+      "title": "돈세탁 감시 부실에 12억 달러 제재…미국 2위 은행 BOA의 민낯",
+      "source": "뉴스로드",
+      "source_url": "http://www.newsroad.co.kr",
+      "source_domain": "www.newsroad.co.kr",
+      "date": "Tue, 13 Oct 2026 23:32:41 GMT",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9OS2pRdG9JYk54czR6MXUzTFZfOWh3X2FLbHdCQkdzYUkxVWJudFQtY3dnbkdCbWV6eGMwRnhvMlFBV0dTdExhVTlXaWV5M1NWZmJLTkh0QURoSVh2b1BJaGxhR19Jb1ZvUS0yc0NVSdIBb0FVX3lxTE9OS2pRdG9JYk54czR6MXUzTFZfOWh3X2FLbHdCQkdzYUkxVWJudFQtY3dnbkdCbWV6eGMwRnhvMlFBV0dTdExhVTlXaWV5M1NWZmJLTkh0QURoSVh2b1BJaGxhR19Jb1ZvUS0yc0NVSQ?oc=5",
+      "tags": [
+        "제재·테러자금",
+        "자금세탁"
+      ],
+      "description": "돈세탁 감시 부실에 12억 달러 제재…미국 2위 은행 BOA의 민낯 뉴스로드",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
       "title": "'자금세탁 방치' BofA에 1.6조원 벌금",
       "source": "연합뉴스",
       "source_url": "https://www.yna.co.kr",
@@ -1457,22 +1552,6 @@
         "자금세탁"
       ],
       "description": "'자금세탁 방치' BofA에 1.6조원 벌금 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "돈세탁 감시 부실에 12억 달러 제재…미국 2위 은행 BOA의 민낯",
-      "source": "뉴스로드",
-      "source_url": "http://www.newsroad.co.kr",
-      "source_domain": "www.newsroad.co.kr",
-      "date": "Tue, 13 Oct 2026 23:26:45 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YeVJoVTZnclVYNmJaa09aZ0ZiU3BiTXItWkc2S0EtZUpwYVgyY3JzNzRxbnpJVnd3VzRWMWgxU2dqSC1ZVlAxQ21aNkdJWlBhN3ZZRFZUdzMwWTNWbnRsX1dVcDBCU2VMaW1J0gFvQVVfeXFMT05LalF0b0liTnhzNHoxdTNMVl85aHdfYUtsd0JCR3NhSTFVYm50VC1jd2duR0JtZXp4YzBGeG8yUUFXR1N0TGFVOVdpZXkzU1ZmYktOSHRBRGhJWHZvUElobGFHX0lvVm9RLTJzQ1VJ?oc=5",
-      "tags": [
-        "제재·테러자금",
-        "자금세탁"
-      ],
-      "description": "돈세탁 감시 부실에 12억 달러 제재…미국 2위 은행 BOA의 민낯 뉴스로드",
       "collection_method": "google_news_24h"
     },
     {
@@ -1542,10 +1621,10 @@
       "query": "트래블룰",
       "title": "쿠코인·MEXC 등 27곳···미신고 영업에 접속 차단",
       "source": "한스경제",
-      "source_url": "http://www.hansbiz.co.kr",
+      "source_url": "https://www.hansbiz.co.kr",
       "source_domain": "www.hansbiz.co.kr",
-      "date": "Tue, 13 Oct 2026 21:35:26 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5kai1FeGk1UVd4RTZNVVhUcHhiSnVtNDc5Q1lBcnEzd1BxUEE5cGk4UTlrak5UWDlFQlhHN0VKbElRTW5RbFhNWWU0OHN6V0VackotcEZmSmxHT0wyZTQtZ1MyVVlyb2JVVV9lcUZJSdIBb0FVX3lxTE5kai1FeGk1UVd4RTZNVVhUcHhiSnVtNDc5Q1lBcnEzd1BxUEE5cGk4UTlrak5UWDlFQlhHN0VKbElRTW5RbFhNWWU0OHN6V0VackotcEZmSmxHT0wyZTQtZ1MyVVlyb2JVVV9lcUZJSQ?oc=5",
+      "date": "Tue, 13 Oct 2026 21:16:21 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1taTJlQWE1NTdlZ0FjalVtOUZmZUxTclVWV1p6cUFDVU13WVplOHNVcFlKazRwdF9KMk9pYXZ4aTdFaXlVZU1CekNrQmowdldkQ2I4cDBxWXlDTXY4bzFCTUhrMzVISlhXQlFlY9IBb0FVX3lxTE5kai1FeGk1UVd4RTZNVVhUcHhiSnVtNDc5Q1lBcnEzd1BxUEE5cGk4UTlrak5UWDlFQlhHN0VKbElRTW5RbFhNWWU0OHN6V0VackotcEZmSmxHT0wyZTQtZ1MyVVlyb2JVVV9lcUZJSQ?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -18802,67 +18881,6 @@
       ],
       "description": "인도, 해외 암호화폐 플랫폼 대대적 단속…15곳 차단 대상 디지털투데이",
       "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "잡아도 못 잡는다…국경 넘는 코인범죄, 수사는 ‘첩첩산중’",
-      "source": "마켓인",
-      "source_url": "https://marketin.edaily.co.kr",
-      "source_domain": "marketin.edaily.co.kr",
-      "date": "Thu, 10 Sep 2026 15:06:02 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBwNHNuc1JoY3hzMnN4Y3BiSnJHa1Q2UGhOVHVybFhFcVd4UVFsb2dCY0hxaXpicG1XZHY0X1VmUWw1ZlZRV1dkeFJMN2swLUcwbFZ4d3RYM0tHWi02ZC1aZUN5WGVLN3pIdWZScnVyT0taa2M?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "잡아도 못 잡는다…국경 넘는 코인범죄, 수사는 ‘첩첩산중’ 마켓인",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "지갑·해외거래소",
-      "title": "KOK 주동자 지갑 보니…中거래소 거쳐 500억대 현금화",
-      "source": "마켓인",
-      "source_url": "https://marketin.edaily.co.kr",
-      "source_domain": "marketin.edaily.co.kr",
-      "date": "Thu, 10 Sep 2026 15:02:02 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBIY1lSMTJPR2JZRDFLNUxQRUhpVE1MME90bGI4ekVrbjNsODlsVWlTSVY5TkFmZTcxX1ZrczZuTWVMZVV4RXF4LURqemN3OTZZRVhnS19oSGkyUmdua0Y1WFg4WUU0N2czQjFlU21LcEJqaXc?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "KOK 주동자 지갑 보니…中거래소 거쳐 500억대 현금화 마켓인",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "지갑·해외거래소",
-      "title": "[단독]KOK 주동자 지갑 보니…中거래소 거쳐 500억대 현금화",
-      "source": "edaily.co.kr",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
-      "date": "Thu, 10 Sep 2026 15:02:02 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPR1VOTVhtWE1hMmp4amN5Y2ZHaGhPZGt1aVlVenU0SWFPRjhqd0FTTmZOdXliejZEQW8wbDRtd2p4cWJOUlFwNFVNekxpQ3NTWG1GMnFtSnRHWWxMXzRWUi1yQUpSTzdKeTdHYkVEYnpDR0F2WmlvOTZsTEFxZVJWcQ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "[단독]KOK 주동자 지갑 보니…中거래소 거쳐 500억대 현금화 edaily.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "\"신한은행 자금세탁방지 노하우 배우러 왔다\"",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Thu, 10 Sep 2026 09:15:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFAyamVhMS03alV6dzhvZHozZVhYV3dkakdNTFEtWlJrUlNCNmw4ZFpHZV9zaHVNY25nQTJfQzdJVzZUdkJoenc?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "\"신한은행 자금세탁방지 노하우 배우러 왔다\" v.daum.net",
-      "collection_method": "google_news_24h"
     }
   ],
   "official_items": [
@@ -18909,36 +18927,42 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱, 스미싱 등 피해에 주의하세요",
-      "source": "금융감독원",
+      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요.",
+      "source": "금융위원회",
       "date": "2026-10-06T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=237928&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87882?srchCtgry=&curPage=2&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
-      "query": "불법사금융",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
       "title": "불법사금융 근절을 위한 4대 추가 제도 개선 추진",
-      "source": "금융감독원",
+      "source": "금융위원회",
       "date": "2026-10-02T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=234367&menuNo=200218&searchCnd=1&searchWrd=%EB%B6%88%EB%B2%95%EC%82%AC%EA%B8%88%EC%9C%B5&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87852?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
+        "가상자산",
         "불법사금융",
-        "FIU·규제"
+        "마약",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
