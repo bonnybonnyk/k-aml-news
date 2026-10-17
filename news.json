@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-17T13:05:02.930855+00:00",
+  "updated_at": "2026-10-17T16:34:06.281787+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "범죄수익",
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "가상자산 AML",
@@ -30,12 +30,12 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 3
+      "count": 2
     },
     {
       "feed": "환치기·외환",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 9,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -415,6 +415,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
@@ -427,13 +433,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,15 +451,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -463,13 +463,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -478,6 +472,12 @@
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -498,6 +498,37 @@
   "count": 1200,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "가상자산거래소도 보이스피싱 방지 의무, 10월 시행 예정…피해구제 대상에 가상자산 포함",
+      "source": "위키트리",
+      "source_url": "https://www.wikitree.co.kr",
+      "source_domain": "www.wikitree.co.kr",
+      "date": "Sat, 17 Oct 2026 15:02:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBsYmFIYV8zOHZaeU9tbk5VSjExMS1KdlRyeEZLM0E1OWJwMTFQSmxzS2xYa1RvdEZ2RmFCN0hnV1hxM2FnRXhCcTY2c3hkVU1yZEZXMXJ3?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "가상자산거래소도 보이스피싱 방지 의무, 10월 시행 예정…피해구제 대상에 가상자산 포함 위키트리",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "프랑스 가상자산 범죄 90건…223명 체포·126명 수감",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Sat, 17 Oct 2026 14:17:31 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4yMjdjVUMzekd4MzNmNEVmUXlKM3NabTJBcVdQS0ZiVUFlTU54aWRfS3ZCamN2VUdhNjJhQlVXdkdLX3FMaGVPWDZVWXNqay01N0lNSXdURzFXWGdwU0tKVw?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "프랑스 가상자산 범죄 90건…223명 체포·126명 수감 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "투자사기",
@@ -1422,10 +1453,10 @@
       "query": "자금세탁",
       "title": "투자사기 피해금 카지노서 자금세탁한 일당 검거",
       "source": "아이뉴스24",
-      "source_url": "http://www.inews24.com",
+      "source_url": "https://www.inews24.com",
       "source_domain": "www.inews24.com",
       "date": "Thu, 15 Oct 2026 04:38:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1kWFVOQmhzcTlxb3l3RWtiQ3NQN1VTRkNMaHhJMDEySm9jVjZ6MHZOY282OFZxY0xzRzhBSi1HUWI4amFzNnRCLTAwTQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9faEduNDQzbTA2WTFfV1lTQ3ZPOU84RkM5a3NNbkR3Q0xobl8zVDFyWWpyazlXX2ZUVTlmS01JQ2l6dktpS2ZmcGFabEE?oc=5",
       "tags": [
         "사기",
         "도박",
@@ -18892,37 +18923,6 @@
         "자금세탁"
       ],
       "description": "경기남부경찰청, 934억 원대 범죄수익 세탁한 '위장 상품권 업체' 조직 적발… 총책 등 7명 구속 경인종합일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "'20억원대 주식리딩방 자금세탁책' 30대 외국인 실형",
-      "source": "yna.co.kr",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Mon, 14 Sep 2026 05:05:40 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JTkxpY2tLSXNhWVQzcHlkRWI5NTRkS1VzRnFRaVo1OGROVG5ycm9ORElHV1R0b3d4cEpoSWdWZm1mTUtQaGpEM1o4M284WGZRVm5BUlZmRFg2aGvSAWBBVV95cUxOalpHUlN2dnFUY1JWU2JIaWI2QWhtMzk5SmRNQmljb3BKM2NzN04wTFUweGhRS1JKNHk1TnAwQjBncUQ3ZzBxaTlUb3dVYVFsQWEyZHpjeHN4ZWROZ1dacXc?oc=5",
-      "tags": [
-        "사기",
-        "자금세탁"
-      ],
-      "description": "'20억원대 주식리딩방 자금세탁책' 30대 외국인 실형 yna.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "박정현 의원 “보이스피싱 신고 후에도 1억3690만원 추가 피해”",
-      "source": "일간투데이",
-      "source_url": "https://www.dtoday.co.kr",
-      "source_domain": "www.dtoday.co.kr",
-      "date": "Mon, 14 Sep 2026 05:02:03 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBzSjNXV1UzSmY2RDFnOTBpQU1IZFBtTll4WkRWZ1dBc2tTZmsyZ3FhY1U4RTU0OWlVTWF3ZzJnQjJYSDhuNndkajhhUjdEdWtVWW1VaTJBai1BRk1mU2ZVTGNSQ1dsbkxqWXFB?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "박정현 의원 “보이스피싱 신고 후에도 1억3690만원 추가 피해” 일간투데이",
       "collection_method": "google_news_24h"
     }
   ],
