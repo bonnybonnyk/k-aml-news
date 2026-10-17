@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-17T04:48:57.732380+00:00",
+  "updated_at": "2026-10-17T09:00:44.107973+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 4
+      "count": 2
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 6
+      "count": 5
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "불법사금융",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -85,19 +85,19 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 10,
+      "count": 9,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 4,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 10,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -115,13 +115,13 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -133,19 +133,19 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 3,
+      "count": 5,
       "window_days": 3
     },
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 5,
+      "count": 3,
       "window_days": 3
     },
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -217,13 +217,13 @@
     {
       "feed": "출처집중:segye.com",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
       "feed": "출처집중:heraldcorp.com",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,7 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -415,27 +445,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -451,13 +463,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -518,7 +536,7 @@
       "source_url": "https://www.fn1966.com",
       "source_domain": "www.fn1966.com",
       "date": "Fri, 16 Oct 2026 14:25:22 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBvdkVUNjg4V1V4OTk3endVTUxGdjBXeVRnNk9lMXViSl9JNmVYLTUzLWp4dzlfVWNiWW5MejFYNEFkMFpacjNXZzRTSDBIbWVWR1FlUkRvVDg1ZzJoOEdjTEJPQTExUTg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBvdkVUNjg4V1V4OTk3endVTUxGdjBXeVRnNk9lMXViSl9JNmVYLTUzLWp4dzlfVWNiWW5MejFYNEFkMFpacjNXZzRTSDBIbWVWR1FlUkRvVDg1ZzJoOEdjTEJPQTExUTjSAWtBVV95cUxOTkhabGxLUk9pLVBya0MxVGdzdzRQNXE4SjFVNm9qWGZmWGJVNXlsSmM4WVExV0NMbVd5ekpOUEszV0k3NzZWY1dGUl9mRzFaNS1LWW1fVEc5aDcxQ0pFcE9LdDAzUmxzbkdjMA?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -1546,6 +1564,21 @@
     },
     {
       "region": "국내",
+      "query": "FIU·STR",
+      "title": "[2026 국정감사] 이헌욱 한국부동산원장 외국인 주택소유·상가공실 통계 확대…투기 의심거래 집중 점검",
+      "source": "아주경제",
+      "source_url": "https://www.ajunews.com",
+      "source_domain": "www.ajunews.com",
+      "date": "Thu, 15 Oct 2026 02:14:12 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0td1FGZTd6Vng1ZHlzMXpvbXppSnl1R2ppMW5qcW1CbEVpekhHT1A0eEdQb191VEQ5M21oLTVkZ2p3S0lBcXZYalFkNzZPUW9TZXFCb0N0eGRsZ9IBWEFVX3lxTE0xNGdIYjE5cUgyVzl4Wm1sQ2hxUW9Uc3F4a3JkRXVDRWJCVDVQNEY3dGhoUWFidmd2OWU0am1kNjYxai1sX09rUnR2SDFzdHF4NWFpVU9ESlM?oc=5",
+      "tags": [
+        "FIU·규제"
+      ],
+      "description": "[2026 국정감사] 이헌욱 한국부동산원장 외국인 주택소유·상가공실 통계 확대…투기 의심거래 집중 점검 아주경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "투자사기",
       "title": "카지노서 투자사기 피해금 287억 원 세탁…54명 검거",
       "source": "KBS 뉴스",
@@ -1787,7 +1820,7 @@
       "source_url": "https://www.etoday.co.kr",
       "source_domain": "www.etoday.co.kr",
       "date": "Wed, 14 Oct 2026 20:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE85U2Vpc2F4MnViZGhmcFAtMUhnZ1gtVDJpa3oySFlGT1AtaGJPbDN2eDlKY3BOdnhXMXFFN3pMOF9wYTBuaDQxdWp3WXB3b2diOUR5OA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1YU3VoZ3lsMHRmYVNiOS1ZMHdBc0pHNUNIV1ZHRFNORWVBQ1JpYnp6NzZGUGMybTV3MXFzdndYdzlQa0FhYkpPOThITi1QMjcybFhCZmI0bmRvUGl5LUVWMmJiYzdnMTdOSlpfVXhn?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -18891,21 +18924,6 @@
       ],
       "description": "유령 업체 앞세워 900억대 돈세탁 일당 검거 yna.co.kr",
       "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "상품권 업체인 척 934억 돈세탁…‘외주형 세탁조직’ 7명 구속",
-      "source": "미주중앙일보",
-      "source_url": "https://www.koreadaily.com",
-      "source_domain": "www.koreadaily.com",
-      "date": "Mon, 14 Sep 2026 04:59:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9wc0xnNldsU2NTRTlrdkhoRTEtZDZOeFlNQ2ZMVk1VN1lKcmpPcXM3cl9OUEt2MlNsWnFBTFR1UDJHaTZCSlJBSHpLNHhTRWdvTWN3ZTRwVjZraE9ucFFnb1Vn?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "상품권 업체인 척 934억 돈세탁…‘외주형 세탁조직’ 7명 구속 미주중앙일보",
-      "collection_method": "google_news_24h"
     }
   ],
   "official_items": [
@@ -18952,19 +18970,22 @@
     },
     {
       "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
+      "query": "금융위/FIU",
+      "official_source": "금융위원회",
       "official_sources": [
-        "금융감독원"
+        "금융위원회"
       ],
-      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱, 스미싱 등 피해에 주의하세요",
-      "source": "금융감독원",
+      "title": "최근 금융권 개인정보 유출사고에 따른 보이스피싱·스미싱 등 피해에 주의하세요.",
+      "source": "금융위원회",
       "date": "2026-10-06T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=237928&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
+      "link": "https://www.fsc.go.kr/no010101/87882?srchCtgry=&curPage=3&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
       "tags": [
-        "사기"
+        "가상자산",
+        "사기",
+        "FIU·규제",
+        "제재·테러자금"
       ],
-      "collection_method": "verified_fss_board"
+      "collection_method": "direct_fsc_board"
     },
     {
       "region": "공식자료",
