@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-19T14:51:38.164732+00:00",
+  "updated_at": "2026-10-19T20:22:12.977465+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 6
     },
     {
       "feed": "범죄수익",
@@ -15,7 +15,7 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "가상자산 AML",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -91,13 +91,13 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 2,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 30,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,25 +415,25 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -430,6 +448,18 @@
       "feed": "금융감독원:AML:p1",
       "ok": true,
       "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -451,18 +481,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원",
       "ok": true,
       "count": 15,
@@ -480,6 +498,51 @@
   "count": 1200,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "마스터카드, ‘스테이블코인 시큐리티’ 공개…송금 전 위험 차단",
+      "source": "블록미디어",
+      "source_url": "https://www.blockmedia.co.kr",
+      "source_domain": "www.blockmedia.co.kr",
+      "date": "Mon, 19 Oct 2026 19:27:04 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE15Y1hJZjFMdHZzVjlvMEVyU2EteThqSzFZMUZTUElpWUcxWmFyRENWOU5TdDdqTU9OMXdzbjVPbUNoT2Rnall3TC10SkxmLURGRVVSQ0ZONTQ?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "마스터카드, ‘스테이블코인 시큐리티’ 공개…송금 전 위험 차단 블록미디어",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "통장에 돈 보내놓고 “보이스피싱 당했다” 신고해 ‘통장묶기’",
+      "source": "조선일보",
+      "source_url": "https://www.chosun.com",
+      "source_domain": "www.chosun.com",
+      "date": "Mon, 19 Oct 2026 15:32:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPcmpvWnJ3WXVfSlNVdzJabkN4dENTTldFLWNEd0Uyd1VHbWF2b3I0MEZPTk41S2Z5WVBKcWF2ZGVNMjltSGVoS2JxTmdmQmhGblZOdzRHMUkxeS1vaXVwcnNPQWhuT2hRTzNKNDg4Y3ZmNFpKR290MXNUOUNCdVBDcUt3YXlMRHhMamZOSHB3?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "통장에 돈 보내놓고 “보이스피싱 당했다” 신고해 ‘통장묶기’ 조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "국무부, 신압록강대교 개통에 “제재 회피·북한 무기 개발 지원 안 돼”",
+      "source": "VOA 한국어 홈페이지",
+      "source_url": "https://www.voakorea.com",
+      "source_domain": "www.voakorea.com",
+      "date": "Mon, 19 Oct 2026 15:17:56 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQN0tULVY3bFZlTFFzanNOcGI4dnVoZ0U4eERFSUNsdGF0Zkl2M1BLZjBTOXB3ZTRHSXZlclNIYXhDanRaR29VdWY3Z2Y5c0RGVGdiN2dsZ1N4aVd0RDJEQkJVdUt0UUR4NXFlQVk4TTdkZXNpd1JOUUx3eGQtTjJ6SzJBNTdyTHRUdHfSAYoBQVVfeXFMUDdLVC1WN2xWZUxRc2pzTnBiOHZ1aGdFOHhERUlDbHRhdGZJdjNQS2YwUzlwd2U0R0l2ZXJTSGF4Q2p0WkdvVXVmN2dmOXNERlRnYjdnbGdTeGlXdEQyREJCVXVLdFFEeDVxZUFZOE03ZGVzaXdSTlFMd3hkLU4yeksyQTU3ckx0VHR3?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "국무부, 신압록강대교 개통에 “제재 회피·북한 무기 개발 지원 안 돼” VOA 한국어 홈페이지",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "자금세탁",
@@ -760,15 +823,15 @@
       "region": "국내",
       "query": "FIU·STR",
       "title": "이찬진 \"디지털자산 통합 감독체계 정부안에 반영…FIU 공조 강화\"",
-      "source": "이데일리",
-      "source_url": "https://www.edaily.co.kr",
-      "source_domain": "www.edaily.co.kr",
+      "source": "마켓인",
+      "source_url": "https://marketin.edaily.co.kr",
+      "source_domain": "marketin.edaily.co.kr",
       "date": "Mon, 19 Oct 2026 06:34:12 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNzF2RUNuRjg4LUc3RTJpZUVmeHk1ay1DT2RwY0dzbXFzUUVYVXBhZUY4b01BemF2SXBjVS1KVU52dFF5VlJUSmQ2Qzg4R0RIdWtCSW9mSk1OZkwzLWpoN0dhNHJmUTFNb3UwaEZnY1NhS1B0THFydERPV3VYZkpsbQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9yX0Zici1zTXBDY0VPZ2JVdjZPVEsweXl5TV9ROXNxNlloNWdTM1l6bC1JdzVUdG1VRl95SEMtSEtxTk96T2ZySlpqcGNjZmJTTzFaUUVfbWtrU3hTZ2hQdnBsMTVnNWxkMk96ZVp5eHlSQTA?oc=5",
       "tags": [
         "FIU·규제"
       ],
-      "description": "이찬진 \"디지털자산 통합 감독체계 정부안에 반영…FIU 공조 강화\" 이데일리",
+      "description": "이찬진 \"디지털자산 통합 감독체계 정부안에 반영…FIU 공조 강화\" 마켓인",
       "collection_method": "google_news_24h"
     },
     {
@@ -18867,51 +18930,6 @@
         "FIU·규제"
       ],
       "description": "카드결제 보이스피싱 직접결제도 위험한 이유 판다랭크",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "횡령·배임",
-      "title": "회사 자금 개인 계좌로 이체했다면…횡령죄 판단 기준은",
-      "source": "스포츠경향",
-      "source_url": "https://sports.khan.co.kr",
-      "source_domain": "sports.khan.co.kr",
-      "date": "Tue, 15 Sep 2026 03:29:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE52Qm9jN2VZT2Voa2hiYS1TUGRlX0dqN3dnZHpvNGg5b19BM3hwX21HS0NvRnBZdjZqZDRGcWZaLUVHQVByVE83cGc0ZzVvUlN2VHlkWl9pcnd1OHh1amfSAWNBVV95cUxPWEZOeVpoUUNhTW5KN21NcExOaE1PT2tuRTJfU2ozZXVJWDkyaFpMUVZEclB2RGhuSnQ4azJSNkdBblFmT2phdDJhOHFxQkJaUWxMRVlpemdPa2ZybXA1WjRSdU0?oc=5",
-      "tags": [
-        "횡령·배임"
-      ],
-      "description": "회사 자금 개인 계좌로 이체했다면…횡령죄 판단 기준은 스포츠경향",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "금감원, 고령층 보이스피싱 막는다… 의심스러운 상품권 결제 땐 상담 - 조선비즈",
-      "source": "Chosunbiz",
-      "source_url": "https://biz.chosun.com",
-      "source_domain": "biz.chosun.com",
-      "date": "Tue, 15 Sep 2026 03:13:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOeU9GbURXOFBXbHgxYUY0YVVJZm5PMHRTNVhEX3JwRW9vT0Ywa2xidnJwekZOSTJCTFFEVUlWeUhXaVRqY000OVdkMGRWRFhweExFR3pUaU94QUVyUHdaczJsY3RvSmlKVUdpY2hQNnZkM2tzT08yUFNwZVVnRVdPctIBlAFBVV95cUxQYkk4Mk4wN0thN25wdS0tR0Vxb1RUUXctQTVGczVwNjBQOFhVelJ4ZmRLcGJwb3kxb1k3OTZlSF92alItbkhZNTY1V0dBdkd6b3RNeFc3Yi1QdEtNMUowQWNEMllSVGJORzFzNjdQNlVPYkhqYlZxcUxkUU8yWmJiS1oxRG1VZEhwYmdGZzBRWDluRFlN?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "금감원, 고령층 보이스피싱 막는다… 의심스러운 상품권 결제 땐 상담 - 조선비즈 Chosunbiz",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱 속아 직접 카드결제해도 잡는다…이상거래 탐지 강화",
-      "source": "dailian.co.kr",
-      "source_url": "https://www.dailian.co.kr",
-      "source_domain": "www.dailian.co.kr",
-      "date": "Tue, 15 Sep 2026 03:05:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOVDBHeVFFSUVfRjhrbExMUmh1RFNINDNQenBuY3d6VGVJUG5mT2QyTUVGMl9TUEVOc3ZoTmhPckVFR2hyVDRMdmNCM3JzYklkdjRRY1ZadXc2YUJ3N2xkRHp4OXRUUDdVaG1ERXNGZEtCanpiYldnbF93eVNIeXIwV3Y5SW5rbjZrSEJCWmpuT1VvMmQyRUZjT05WNUpTWDdiYS1nZFk0eGl4eUFoSWhpc1NhNFQzUzZJRmY2cHZZZk44RFhCTGltV2RKQVR3N01xVW5UUGJiUnMyMkR3YmZWbzFUek44YWdkaGR4MXJuZHA1MnVYU3hRQzFtWkt1akRRUEtsQ0VYZmNHcnJjeXBJbVpVLVZ6N3o2amdBT2ZuaWZFTG8?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱 속아 직접 카드결제해도 잡는다…이상거래 탐지 강화 dailian.co.kr",
       "collection_method": "google_news_24h"
     }
   ],
