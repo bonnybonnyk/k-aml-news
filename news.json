@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-10-22T14:21:18.805112+00:00",
+  "updated_at": "2026-10-22T18:42:20.114489+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 11
+      "count": 12
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 8
+      "count": 9
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 12
+      "count": 11
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 8
+      "count": 9
     },
     {
       "feed": "지갑·해외거래소",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 15
+      "count": 14
     },
     {
       "feed": "환치기·외환",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "불법도박",
@@ -91,7 +91,7 @@
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 2,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -217,7 +217,7 @@
     {
       "feed": "출처집중:segye.com",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,7 +415,19 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -409,19 +439,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,12 +463,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
@@ -458,6 +470,12 @@
     },
     {
       "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -482,6 +500,38 @@
   "items": [
     {
       "region": "국내",
+      "query": "자금세탁",
+      "title": "美민주당 버지니아주의원, 마약 유통·돈세탁 혐의 기소…가족도 연루",
+      "source": "동아일보",
+      "source_url": "https://www.donga.com",
+      "source_domain": "www.donga.com",
+      "date": "Thu, 22 Oct 2026 17:10:26 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1CZWp3eF9tNUNWaGZSYjRlYkhQYW44c0ZqTmNPVUF1V25MUnc4eWlGQU1GbW5qWXoyem56U042UnJ6akpCU0gyc21URmVWSTc1MF9uM3hUUTZpYnlPbDcyNko2d1JiQ0tNb05uS0RCOEIzeXc?oc=5",
+      "tags": [
+        "마약",
+        "자금세탁"
+      ],
+      "description": "美민주당 버지니아주의원, 마약 유통·돈세탁 혐의 기소…가족도 연루 동아일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "백악관, 사기 연루 암호화폐 8억3300만달러 동결·사이트 503곳 폐쇄",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Thu, 22 Oct 2026 15:26:24 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9qZmJfejh2M2dXVFZrcEJHSUdRemZxNDktdFBZemR0TmRHM3YtT29qZ3VaRFNSYy1EanRQTWIxMEtCSkROd3M1TmxENmE0TXB4Z3VvaEhSNGbSAV5BVV95cUxPOVBSYlZ6emRhUmRsZkgwYkN3S0Voc0otQW9XaGVZMU1TSGR2anduOEZfR1VUby1wT09Fc18zajJPTUhHRlppZUZrc1VnLTR5dU45TVdTR25aUFFUMnhB?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "백악관, 사기 연루 암호화폐 8억3300만달러 동결·사이트 503곳 폐쇄 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "FIU·STR",
       "title": "빗썸-FIU, 영업정지 취소소송 공방…100만원 미만 거래 쟁점",
       "source": "MTN 머니투데이방송",
@@ -500,29 +550,14 @@
       "query": "FIU·STR",
       "title": "빗썸-FIU, 영업정지 취소 소송 첫 재판서 규제 기준 공방",
       "source": "뉴시스",
-      "source_url": "https://www.newsis.com",
-      "source_domain": "www.newsis.com",
+      "source_url": "https://mobile.newsis.com",
+      "source_domain": "mobile.newsis.com",
       "date": "Thu, 22 Oct 2026 12:04:40 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5CcUx1eTFxZXlCU2ROQU84OXVBRHllTXB3ZWtOYW1kZTNPUjRTSUZyXy1tME9vNk1PWTRSZHZpVS10d3FWYWZRYnlpVEZTSkhYVlJEeUlWSUkzQTlkT05aUdIBeEFVX3lxTFBSLUd4cDh1TUI1clpPRFdFd2hzUUJpcXp4MFZuTExiRWxBWnVqVFJ5cC11LWdqanUwdTRiMkswTWlzQ1JnRmdMUUxzdFloZmZHcGQ2a0VZOG9WWktCcDI3UUI5ZlhUdEoyWkltRGpWWHBKUEFSaEdGZQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBSLUd4cDh1TUI1clpPRFdFd2hzUUJpcXp4MFZuTExiRWxBWnVqVFJ5cC11LWdqanUwdTRiMkswTWlzQ1JnRmdMUUxzdFloZmZHcGQ2a0VZOG9WWktCcDI3UUI5ZlhUdEoyWkltRGpWWHBKUEFSaEdGZdIBeEFVX3lxTFBSLUd4cDh1TUI1clpPRFdFd2hzUUJpcXp4MFZuTExiRWxBWnVqVFJ5cC11LWdqanUwdTRiMkswTWlzQ1JnRmdMUUxzdFloZmZHcGQ2a0VZOG9WWktCcDI3UUI5ZlhUdEoyWkltRGpWWHBKUEFSaEdGZQ?oc=5",
       "tags": [
         "FIU·규제"
       ],
       "description": "빗썸-FIU, 영업정지 취소 소송 첫 재판서 규제 기준 공방 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "가산금리·보이스피싱…이억원·이찬진, 민생 현안 점검 약속",
-      "source": "화이트페이퍼",
-      "source_url": "http://www.whitepaper.co.kr",
-      "source_domain": "www.whitepaper.co.kr",
-      "date": "Thu, 22 Oct 2026 11:51:15 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1yS0xYb2V5VnNYdWtnSUtBVzQ5ZnV3XzRqX2dKMVJzbTVySmpEeGxiaEdueFJQd09jRWxrZGVZbF9aNzhTZUNiTmkxeVFCeG1tVkF3NWpCNGFSal8xbEhyd2htWkFSSkoxSlVzWllPbTh1NjDSAXNBVV95cUxNcktMWG9leVZzWHVrZ0lLQVc0OWZ1d180al9nSjFSc201ckpqRHhsYmhHbnhSUHdPY0Vsa2RlWWxfWjc4U2VDYk5pMXlRQnhtbVZBdzVqQjRhUmpfMWxIcndobVpBUkpKMUpVc1pZT204dTYw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "가산금리·보이스피싱…이억원·이찬진, 민생 현안 점검 약속 화이트페이퍼",
       "collection_method": "google_news_24h"
     },
     {
@@ -651,6 +686,21 @@
     {
       "region": "국내",
       "query": "자금세탁",
+      "title": "버지니아주 상원의원 루이스 루카스, 마리화나·자금세탁 혐의로 기소",
+      "source": "Mezha.net",
+      "source_url": "https://mezha.net",
+      "source_domain": "mezha.net",
+      "date": "Thu, 22 Oct 2026 07:51:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbGpnODJSODN1Z1RabFhIMEIxRHM2c0ZaMUhOMU15cS1wWXlwaGIyRFhmbEU1bVFKVW9WTENtWlhLeGJ0emNJQ29rWHAzb0pvWkJKeExBSkRvbHItVmprdEVDWVBtUFVoQU1BejRXbGctSlBEZFBMV0cwWUxTU2NnQnhERGd4NFpGS3djVjZkYTZTMmNINXN6eWx5SjZxMm8?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "버지니아주 상원의원 루이스 루카스, 마리화나·자금세탁 혐의로 기소 Mezha.net",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
       "title": "사기 피해금으로 외제차 수출 자금세탁 일당 검거",
       "source": "부산경남대표방송 KNN 뉴스",
       "source_url": "https://news.knn.co.kr",
@@ -694,6 +744,36 @@
         "사기"
       ],
       "description": "캄보디아 투자사기 조직원 집에서 나온 현금다발...대법 “몰수 가능” 매일경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "가산금리·보이스피싱…이억원·이찬진, 민생 현안 점검 약속",
+      "source": "화이트페이퍼",
+      "source_url": "https://www.whitepaper.co.kr",
+      "source_domain": "www.whitepaper.co.kr",
+      "date": "Thu, 22 Oct 2026 06:09:21 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE53ZThlUTNkZUdSYnpGRTd5SHBfWkVDQXAyUG5TX1pKcFVwUmtDdVUxbFlwaXUwQTU0U0ZXTFdzSWZrS2V3WHBuSmFoOXg2UVd4ZDFYUDNnaVdsb0xhSUpodUJVSUhEaVRwMXRCS2NvNnLSAXNBVV95cUxNcktMWG9leVZzWHVrZ0lLQVc0OWZ1d180al9nSjFSc201ckpqRHhsYmhHbnhSUHdPY0Vsa2RlWWxfWjc4U2VDYk5pMXlRQnhtbVZBdzVqQjRhUmpfMWxIcndobVpBUkpKMUpVc1pZT204dTYw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "가산금리·보이스피싱…이억원·이찬진, 민생 현안 점검 약속 화이트페이퍼",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "가상자산 AML",
+      "title": "업비트 ‘기와’ 사칭해 가상자산 탈취…금감원 소비자경보",
+      "source": "디지털데일리",
+      "source_url": "https://www.ddaily.co.kr",
+      "source_domain": "www.ddaily.co.kr",
+      "date": "Thu, 22 Oct 2026 05:15:37 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94LUFwZ1FaZEdWMVp5TkdmcnJKUklnUC1oU1o0cXNtMmQ0SldEUmxxSFhuNXVUWVlFSmhsYll3LUdobzVIYU8yOXIzNUtjTDRBWjRJajV1V2hGQkxVWGlGUWV6Y2U?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "업비트 ‘기와’ 사칭해 가상자산 탈취…금감원 소비자경보 디지털데일리",
       "collection_method": "google_news_24h"
     },
     {
@@ -1158,6 +1238,21 @@
         "자금세탁"
       ],
       "description": "ZachXBT \"하이퍼리퀴드의 FreedomXMR, 신규 익스플로잇 자금세탁 창구\" Cryptopolitan",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 수사 전문가 “범죄자 100명 검거보다 수익 환수 시스템 시급” [심층기획-유인, '공짜 비행기'에 탄 청년]",
+      "source": "세계일보",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
+      "date": "Wed, 21 Oct 2026 11:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBOVXBNMFgxMzNGNENPUzdqMG5ZOTYxNzFHX2F3MWpEZ0Y0LWNTVEhIODNKWk9VM3hhYWN5U1RlZzBmN3hYYkhoeG82cm1teXotc3lDQTFJLWbSAVRBVV95cUxQYU5LTTRNd3dCU2lYUnVLV2R5RFR4MUNKcGZRVk1zNVpNNzItVGM3OUllRWRCM29NbUxNRVhmdVZ3ekhWbldXVUwtWUd2aEVzb1NPMUc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 수사 전문가 “범죄자 100명 검거보다 수익 환수 시스템 시급” [심층기획-유인, '공짜 비행기'에 탄 청년] 세계일보",
       "collection_method": "google_news_24h"
     },
     {
@@ -18832,82 +18927,6 @@
         "마약"
       ],
       "description": "해바라기씨 봉투에 숨겨 필로폰 밀수…마약류 유통 일당 30명 검거 sedaily.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "2028년 FATF 상호평가 대비…범정부 ‘자금세탁 방지 5대 전략’ 확정",
-      "source": "intn.co.kr",
-      "source_url": "https://www.intn.co.kr",
-      "source_domain": "www.intn.co.kr",
-      "date": "Thu, 17 Sep 2026 02:55:34 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvYVZqY2RDS0R3bE95TXQ5LXlqWEo2N1NZc0pfZEttLXF6eWZQajZhbEY4OWtOSWQzS0ZfR1pqU0VseHptdFI3dnQ1QW9IZTdHNmNHWFluUTZScGpNb3BwZjQtdFIxV1U2Y2c?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "2028년 FATF 상호평가 대비…범정부 ‘자금세탁 방지 5대 전략’ 확정 intn.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "‘인력·예산’ 다 늘렸는데…농협銀 보이스피싱 피해액 2년새 2.3배 증가",
-      "source": "서울경제",
-      "source_url": "https://www.sedaily.com",
-      "source_domain": "www.sedaily.com",
-      "date": "Thu, 17 Sep 2026 02:32:57 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93eERVXzhRTmtWN1B0d3lyY1RUU3lSSm1JOHcyOHRMejB4VS01MFpYRkpWcy1rUEZnOTd3UHZqRXlObjczbmdtWE95Q1NxbjFteGfSAVNBVV95cUxPa0FvN3ZmMUpHd29QMldoOVBCcTQ1RF8wMDlEZm0tc2FzbTFPSU5CYUFPNHp0TGFDNGRZMDg2UkVGTnQtWTZtVXROU29NZWJmckc3WQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "‘인력·예산’ 다 늘렸는데…농협銀 보이스피싱 피해액 2년새 2.3배 증가 서울경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "투자사기",
-      "title": "‘불법 리딩방 피해’ 1분기만 1800억…피해자 75% 중장년 [사기공화국의 민낯][H-EXCLUSIVE]",
-      "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
-      "date": "Thu, 17 Sep 2026 02:31:24 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE05U3FfN0pQV0dfenI2eVJaOUEzNy1wOEsxT3BBQ3AtZ0dBLUEtMndaQkhhWHlRZFR3c2d3RU1EU2haZVFqZWdmSTB0QVhaMkVxcTZRcUVR?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "‘불법 리딩방 피해’ 1분기만 1800억…피해자 75% 중장년 [사기공화국의 민낯][H-EXCLUSIVE] 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱 ‘김민수 검사’ 잡았다…중국인 총책 등 67명 검거",
-      "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
-      "date": "Thu, 17 Sep 2026 02:30:57 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1XVnJqelNSNy02czIyX2VZOFB5MFRudFZ2b2xHUW9sQmJhYjAtRi1lNGdueUpkTTJpS2dFbjNIeGJtZU9nN1Yxb2RJYmVXMGM3Q00wQjJR?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱 ‘김민수 검사’ 잡았다…중국인 총책 등 67명 검거 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "횡령·배임",
-      "title": "한국토지신탁서 수백억원 횡령 의혹…계열사 자금총괄 임원 구속",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Thu, 17 Sep 2026 02:20:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1maGFMaktYTXZYUWktczdIaU9xZzludE9QVFpxdDBMcTlhUE5OeUhZTW1NdktsMUxwOWNCaGdfMlZIR0dCX3J2Z196ZkhDbWR2dy05alNIcU9nVjjSAWBBVV95cUxPV1luOVRFRDBmYkstQnAzOTJwMjE1eVZpbkl2QnROM090QUJTV21FSTQ0THRCN01QcmNHbUJHaEc1WkFfVDE1ZFNtYURoSlZweVpPbWRjQUlBb2tVTkdGMWU?oc=5",
-      "tags": [
-        "횡령·배임"
-      ],
-      "description": "한국토지신탁서 수백억원 횡령 의혹…계열사 자금총괄 임원 구속 연합뉴스",
       "collection_method": "google_news_24h"
     }
   ],
