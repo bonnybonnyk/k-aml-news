@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T17:50:11.161554+00:00",
+  "updated_at": "2026-10-24T20:15:19.289007+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "불법도박",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 28,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -415,12 +397,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -433,13 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -451,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -460,6 +436,18 @@
       "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -473,12 +461,6 @@
       "ok": true,
       "count": 0,
       "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융감독원",
@@ -1157,8 +1139,8 @@
       "source": "블로터",
       "source_url": "https://www.bloter.net",
       "source_domain": "www.bloter.net",
-      "date": "Thu, 22 Oct 2026 08:49:53 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uSlVfOVlsV1lkRmtvQVE0Qk9XRHVtelRQdFN1X2FkZE9sd1NvVmdQb0xqS1pUSTB2dGpNcUZSdnVNYzdhOWEyT1NxREpzY1Z5RDVYZGIzOVQ0MjhCNUdnWmVvbkVnZUNpVmZOMNIBbEFVX3lxTE5uSlVfOVlsV1lkRmtvQVE0Qk9XRHVtelRQdFN1X2FkZE9sd1NvVmdQb0xqS1pUSTB2dGpNcUZSdnVNYzdhOWEyT1NxREpzY1Z5RDVYZGIzOVQ0MjhCNUdnWmVvbkVnZUNpVmZOMA?oc=5",
+      "date": "Thu, 22 Oct 2026 08:46:15 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBKZjl1Mm41Rk1mV2xiaG40dWR3ZnIxQ3F1NXVzWEZ4WjNmZVZQeXphTGZJVEZZYWtsQ0M5QkNSQ3hvQV96Q1Vfb01EZ2Y4M0YwX0tUN1E4WXdiTU1zbF9hXzZQclZJREFt0gFsQVVfeXFMTm5KVV85WWxXWWRGa29BUTRCT1dEdW16VFB0U3VfYWRkT2x3U29WZ1BvTGpLWlRJMHZ0ak1xRlJ2dU1jN2E5YTJPU3FESnNjVnlENVhkYjM5VDQyOEI1R2daZW9uRWdlQ2lWZk4w?oc=5",
       "tags": [
         "FIU·규제"
       ],
@@ -1500,7 +1482,7 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Thu, 22 Oct 2026 02:07:10 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5YTDA4aHA3R09xempma2R5REZpaGN4RjJmRDl4ZmZBLWRCWXRVUTQ4QVF3SlZzbHpXTXR4Um5uazlvWE9ScGZGaHRVVzlCZThmY0phUVlrLWpldF9abzBNQnprSllEM2gwQVhWUDR30gFuQVVfeXFMTlhMMDhocDdHT3F6amZrZHlERmloY3hGMmZEOXhmZkEtZEJZdFVRNDhBUXdKVnNseldNdHhSbm5rOW9YT1JwZkZodFVXOUJlOGZjSmFRWWstamV0X1pvME1CemtKWUQzaDBBWFZQNHc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8taTlISU8zVDh1U3drcFVpbzk1UGZTMGpCLWt6WE03N21EdTdGanVybmVrV282dEs0UVFWOHF2SGNlTncxWHNYUGJYeDNVU0RHQkQ5X1VyeTZXMVRQRDI4ekQ5U2R2S1VK0gFuQVVfeXFMTlhMMDhocDdHT3F6amZrZHlERmloY3hGMmZEOXhmZkEtZEJZdFVRNDhBUXdKVnNseldNdHhSbm5rOW9YT1JwZkZodFVXOUJlOGZjSmFRWWstamV0X1pvME1CemtKWUQzaDBBWFZQNHc?oc=5",
       "tags": [
         "가상자산"
       ],
