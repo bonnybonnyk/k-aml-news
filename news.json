@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T22:54:05.004174+00:00",
+  "updated_at": "2026-10-24T01:22:21.396692+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "환치기·외환",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 3,
+      "count": 6,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 12,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -115,13 +115,13 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 4,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -272,15 +272,9 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "The read operation timed out"
     },
     {
       "feed": "FIU:fallback",
@@ -415,13 +409,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,9 +439,21 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -463,19 +469,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -500,6 +494,37 @@
   "items": [
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "중국인 피고인, 미 가상자산 사기 혐의로 네덜란드서 송환",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Sat, 24 Oct 2026 00:23:44 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBuWVEyVVIyQnVlb1RLUGV5YVpfR3FwTmdlSUtIWXVVVDM5eTJMMFp0R3NvSmNmTTdBaUpJeU9iYW10Wno3OTROOUFOZU8xcmZMZDZPUDBaLWTSAV5BVV95cUxOR0pQeUtoVVV4LWpRV2NZNGJxMDMxWGUyek1XYkJ6VkR3WUI5dlhBVzl3TktLQmwtaHplejZ5Z3FJVm9uWHdvVE5BcjJNQktnQ212a2xHdE1sNEx2Q1J3?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "중국인 피고인, 미 가상자산 사기 혐의로 네덜란드서 송환 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "네타냐후, 제재 회피용 블록체인 계획 지시",
+      "source": "Bitcoin News",
+      "source_url": "https://news.bitcoin.com",
+      "source_domain": "news.bitcoin.com",
+      "date": "Fri, 23 Oct 2026 22:50:34 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPemJRam50UUkyNEo4cVEzd19YU2VsaHVIUmlmcW84b0ZfZzNHc3RNaW1ITWNfbHVLdXI1ZkNHTjZsZGpKUXNGQ1dqbjJ6cFlnNjhuVjgzQXU3NlM1eU9jdFlHREhORmdtNTNUMjZvcTNoZ0o1OWdKeVFBZ2hNN1cyVjFsOC1wTXlxU0wwWjZVbEkyWm00RXNoT3QxN2hkdTR0cHdN?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "네타냐후, 제재 회피용 블록체인 계획 지시 Bitcoin News",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "보이스피싱",
       "title": "중국 거점 보이스피싱 조직 만든 한국인 총책 징역형",
       "source": "뉴스핌",
@@ -511,21 +536,6 @@
         "사기"
       ],
       "description": "중국 거점 보이스피싱 조직 만든 한국인 총책 징역형 뉴스핌",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "제재·테러자금",
-      "title": "네타냐후, 제재 회피용 블록체인 계획 지시",
-      "source": "Bitcoin News",
-      "source_url": "https://news.bitcoin.com",
-      "source_domain": "news.bitcoin.com",
-      "date": "Fri, 23 Oct 2026 20:30:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPemJRam50UUkyNEo4cVEzd19YU2VsaHVIUmlmcW84b0ZfZzNHc3RNaW1ITWNfbHVLdXI1ZkNHTjZsZGpKUXNGQ1dqbjJ6cFlnNjhuVjgzQXU3NlM1eU9jdFlHREhORmdtNTNUMjZvcTNoZ0o1OWdKeVFBZ2hNN1cyVjFsOC1wTXlxU0wwWjZVbEkyWm00RXNoT3QxN2hkdTR0cHdN?oc=5",
-      "tags": [
-        "제재·테러자금"
-      ],
-      "description": "네타냐후, 제재 회피용 블록체인 계획 지시 Bitcoin News",
       "collection_method": "google_news_24h"
     },
     {
@@ -18922,21 +18932,6 @@
         "마약"
       ],
       "description": "중수청에 마약 수사 전담 조직 설치… 공소청엔 마약 전담 검사 둔다 - 조선비즈 Chosunbiz",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "'김민수 검사' 사칭 보이스피싱 총책 등 67명 적발",
-      "source": "LG헬로비전",
-      "source_url": "https://news.lghellovision.net",
-      "source_domain": "news.lghellovision.net",
-      "date": "Thu, 17 Sep 2026 08:18:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9vdHh4LVNDQnlHUFJ0dDloanZ2b1hpS1Q3UUVmdWp1Q0JQeVlONjJ1TTl5bUp2TWNFTGJMbEVLMGdjbHZXSno0YmI2aGhDTFJNQUIxNldjLWFsNFBNTjRfSEdoTkEwQ3NZaVlQSDItTnJUWlnSAXZBVV95cUxOYTFCNk5JQ2lTMUpSQkprMGxGRmhTWjFGeWNMZktHVXlEeVoyeHJqNFltTnZvN2Q1SnVjOVh3WEFsdndJeXNJNG1fV0hQVlFCaGVZZ1Z2aHh2bG5vWkRXekdNYXd1TVlNRHNiSHBqS3VRYWhINUJn?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "'김민수 검사' 사칭 보이스피싱 총책 등 67명 적발 LG헬로비전",
       "collection_method": "google_news_24h"
     }
   ],
