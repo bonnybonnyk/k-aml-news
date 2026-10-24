@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-24T01:22:21.396692+00:00",
+  "updated_at": "2026-10-24T06:12:50.893864+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 6
+      "count": 8
     },
     {
       "feed": "범죄수익",
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 2
+      "count": 0
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 8
+      "count": 6
     },
     {
       "feed": "지갑·해외거래소",
@@ -30,12 +30,12 @@
     {
       "feed": "트래블룰",
       "ok": true,
-      "count": 2
+      "count": 0
     },
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 3
     },
     {
       "feed": "불법사금융",
@@ -45,7 +45,7 @@
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 4
+      "count": 1
     },
     {
       "feed": "환치기·외환",
@@ -85,13 +85,13 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 6,
+      "count": 5,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 16,
+      "count": 10,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 7,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -205,7 +205,7 @@
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -272,9 +272,15 @@
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "The read operation timed out"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -409,12 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -427,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:대포통장:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,21 +445,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
       "method": "official_board"
     },
     {
@@ -469,9 +457,27 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -500,12 +506,27 @@
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Sat, 24 Oct 2026 00:23:44 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBuWVEyVVIyQnVlb1RLUGV5YVpfR3FwTmdlSUtIWXVVVDM5eTJMMFp0R3NvSmNmTTdBaUpJeU9iYW10Wno3OTROOUFOZU8xcmZMZDZPUDBaLWTSAV5BVV95cUxOR0pQeUtoVVV4LWpRV2NZNGJxMDMxWGUyek1XYkJ6VkR3WUI5dlhBVzl3TktLQmwtaHplejZ5Z3FJVm9uWHdvVE5BcjJNQktnQ212a2xHdE1sNEx2Q1J3?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5HSlB5S2hVVXgtalFXY1k0YnEwMzFYZTJ6TVdiQnpWRHdZQjl2WEFXOXdOS0tCbC1oemV6NnlncUlWb25Yd29UTkFyMk1CS2dDbXZrbEd0TWw0THZDUnfSAV5BVV95cUxOR0pQeUtoVVV4LWpRV2NZNGJxMDMxWGUyek1XYkJ6VkR3WUI5dlhBVzl3TktLQmwtaHplejZ5Z3FJVm9uWHdvVE5BcjJNQktnQ212a2xHdE1sNEx2Q1J3?oc=5",
       "tags": [
         "가상자산",
         "사기"
       ],
       "description": "중국인 피고인, 미 가상자산 사기 혐의로 네덜란드서 송환 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "NH농협생명, 이상거래탐지시스템 도입…비대면 금융사기 차단",
+      "source": "아주경제",
+      "source_url": "https://www.ajunews.com",
+      "source_domain": "www.ajunews.com",
+      "date": "Sat, 24 Oct 2026 00:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5feDZlYy1landDRHhoTFcwcU1JV1AwNjBEN3NZXzZyenItX096enlreU5jRi1HX0oycTFWa1ptVlZIVTZyZGx4QVI0U1pfUkxlSTg0VlJ6elrSAVhBVV95cUxOX3g2ZWMtZWp3Q0R4aExXMHFNSVdQMDYwRDdzWV82cnpyLV9Penp5a3lOY0YtR19KMnExVmtabVZWSFU2cmRseEFSNFNaX1JMZUk4NFZSenpa?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "NH농협생명, 이상거래탐지시스템 도입…비대면 금융사기 차단 아주경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -663,6 +684,21 @@
     },
     {
       "region": "국내",
+      "query": "자금세탁",
+      "title": "돈세탁 혐의로, KPK은 페칼론 라비트의 남편인 파디아 아라피크의 BMW i7를 압수했다.",
+      "source": "VOI.ID",
+      "source_url": "https://voi.id",
+      "source_domain": "voi.id",
+      "date": "Fri, 23 Oct 2026 07:51:56 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9KUFhnbFkwbHd3NF92T1VaeEJQR3hxTi1vcGRUVzVKVzlUMmU1YXc4TVVlMlJhS2N6TjhUa1hFN1pwdjBZTFHSAUJBVV95cUxOanRBUFg5T0h4QTBMLTZoUGpjX2hBMnlhTS1sM180M0hBX29wcTgxaHBqN1ppRUdZNU9PX2VsT1I0Nnc?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "돈세탁 혐의로, KPK은 페칼론 라비트의 남편인 파디아 아라피크의 BMW i7를 압수했다. VOI.ID",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "FIU·STR",
       "title": "NH농협생명, 이상거래탐지시스템 도입…금융사기 대응",
       "source": "뉴시스",
@@ -760,10 +796,10 @@
       "query": "FIU·STR",
       "title": "NH농협생명, 금융사기 대응 위해 이상거래탐지시스템 도입",
       "source": "라온신문",
-      "source_url": "https://www.raonnews.com",
-      "source_domain": "www.raonnews.com",
+      "source_url": "https://raonnews.com",
+      "source_domain": "raonnews.com",
       "date": "Fri, 23 Oct 2026 02:09:13 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1OUWlOdWVyc1RrX0tCYjd1enRJTzNrM1hDWHc1Q0pZOHQzYlBDSEgteHQzMGhUZmREZUFGV3dTNE05RG1jckswVV9fT29yTDF2R1NoSC1OdFVGenUwZzl6MQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5OTFEtUzBkcFZrcG11d09fY1FabmEwSzRiUXZSdXJUUmNaMnNlT2t3NmtBQ0xNMFJTWHY2RUhjaHYwdTJmTk5jYkFUbEpITmJySExHTTlQWFE2a0NKS0E?oc=5",
       "tags": [
         "사기"
       ],
@@ -18902,36 +18938,6 @@
         "사기"
       ],
       "description": "[단독] 외화계좌로 빼돌린 보이스피싱 피해금 반환 가능해진다 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "마약자금",
-      "title": "중수청에 마약수사 전담조직 둔다…공소청에도 전담검사 배치(종합)",
-      "source": "yna.co.kr",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Thu, 17 Sep 2026 08:29:28 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBqYWxQNnV2V3hqbjhQelpqblFoQ0JrbkRoY1hLdHdNNkJIanNBWVMwT0JtYktQZVRoOUQzV2oxbUNkbzBSWkpGUFNFWWZBeTZEcXJjRWM0OWZPRFFfN2ZSb9IBYEFVX3lxTFBqYWxQNnV2V3hqbjhQelpqblFoQ0JrbkRoY1hLdHdNNkJIanNBWVMwT0JtYktQZVRoOUQzV2oxbUNkbzBSWkpGUFNFWWZBeTZEcXJjRWM0OWZPRFFfN2ZSbw?oc=5",
-      "tags": [
-        "마약"
-      ],
-      "description": "중수청에 마약수사 전담조직 둔다…공소청에도 전담검사 배치(종합) yna.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "마약자금",
-      "title": "중수청에 마약 수사 전담 조직 설치… 공소청엔 마약 전담 검사 둔다 - 조선비즈",
-      "source": "Chosunbiz",
-      "source_url": "https://biz.chosun.com",
-      "source_domain": "biz.chosun.com",
-      "date": "Thu, 17 Sep 2026 08:21:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYTl6OE9ERXJZLUNLcHJhZkZnc2c5ZVF5WkI0dXdYaEZtQnRYaGdFQndIc0cwYjdranF2Y2gwRXd2aFU2NXh4RHRmcnpOeXg0MFk4MVN1T21rV2NpWHF2MmFOYWVUS0dMX0I4ODM3QzVWTFpkNmxTSVd4c190TFROX3JoOGp0UzB2V3dJNU5qdXRDNlNOZ1dZ0gGXAUFVX3lxTFBhOXo4T0RFclktQ0twcmFmRmdzZzllUXlaQjR1d1hoRm1CdFhoZ0VCd0hzRzBiN2tqcXZjaDBFd3ZoVTY1eHhEdGZyek55eDQwWTgxU3VPbWtXY2lYcXYyYU5hZVRLR0xfQjg4MzdDNVZMWmQ2bFNJV3hzX3RMVE5fcmg4anRTMHZXd0k1Tmp1dEM2U05nV1k?oc=5",
-      "tags": [
-        "마약"
-      ],
-      "description": "중수청에 마약 수사 전담 조직 설치… 공소청엔 마약 전담 검사 둔다 - 조선비즈 Chosunbiz",
       "collection_method": "google_news_24h"
     }
   ],
