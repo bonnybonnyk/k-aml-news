@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T21:04:26.578336+00:00",
+  "updated_at": "2026-10-25T23:26:40.681776+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "FIU·STR",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "불법사금융",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "불법도박",
@@ -80,18 +80,18 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -103,7 +103,7 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -421,19 +403,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:자금세탁:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:보이스피싱:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,7 +427,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,13 +439,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,7 +451,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -498,6 +480,37 @@
   "count": 1200,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "구리경찰서, 안심카드부터 AI 영상까지.. 보이스피싱 차단 총력",
+      "source": "스포츠동아",
+      "source_url": "https://sports.donga.com",
+      "source_domain": "sports.donga.com",
+      "date": "Sun, 25 Oct 2026 22:34:14 GMT",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9mbTdFb1Vwd1lzeXFEeHhNalEwcUwyMVY2dUJtTVhDVk81alAxcmZhSzUtUmZENVNMNWRMQnRLWGJSVnJfcWFySEpsV0tPM3NDWnJhLW5venhXYU9IRS1JR2lOT2FnNmxWcXZQMmtGUmdHUQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "구리경찰서, 안심카드부터 AI 영상까지.. 보이스피싱 차단 총력 스포츠동아",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "교묘해진 수법에 범죄수익 추적도 ‘첩첩산중’… 수사기관 역량은 ‘뒷걸음’",
+      "source": "서울경제",
+      "source_url": "https://www.sedaily.com",
+      "source_domain": "www.sedaily.com",
+      "date": "Sun, 25 Oct 2026 21:02:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE90VjlCWlBIY3JHczdhS3dsWWRWejVEYUVNSGhIcTJvblAzdFh0MXpvMGR0Tmk1QWJKTmlIcVF4TFJ4ZjNacU1oNTdlV0h6eXl4N2fSAVNBVV95cUxNTGVDSXV0aUc0MmlscGFrcGhVMENvbmdrUW5hQk55ZTdGSVI3M2M4T21tSTBNR2o2Rk1wYXhndWdJV1NvcURYTkNVOFV5VGsxb2wwTQ?oc=5",
+      "tags": [
+        "사기",
+        "자금세탁"
+      ],
+      "description": "교묘해진 수법에 범죄수익 추적도 ‘첩첩산중’… 수사기관 역량은 ‘뒷걸음’ 서울경제",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "불법도박",
@@ -626,7 +639,7 @@
       "source_url": "https://mbnmoney.mbn.co.kr",
       "source_domain": "mbnmoney.mbn.co.kr",
       "date": "Sun, 25 Oct 2026 03:42:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeVFxanlCSXBlMmpOSGZXLUJMRlQxYWUyamFjMEtRaU9XaVpUMUZhSC0xaklZc2JOcXY0OU9tdGdnNzFvVXBNUWhRM0pIcDlaT3dHOEo3STBwSVhSZUhlallidmVEeXluY29GdWswMUtRaFh5UXF0Znhpdkgxa1lDVkZFT1JRNTlGRDB6aWVzVGRzMnFuQUE?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBWM0ZVMFpvWmREZmttNUduQkFiV0RUakhqemFHN3ZkcmljczhvblBya0ZSUUU3eXRTNGlzeTdIeGF0T01YRjFJem9Zc2hldWVBYndZM0gyQ1IzRnUwdjIwVm5idVphNmk2OUp3?oc=5",
       "tags": [
         "불법사금융"
       ],
@@ -1097,22 +1110,6 @@
     },
     {
       "region": "국내",
-      "query": "자금세탁",
-      "title": "“가상자산은 익명이 아닌 가명”…원화 스테이블코인 자금세탁 가능성은",
-      "source": ":: 위즈경제 ::",
-      "source_url": "https://wikyung.com",
-      "source_domain": "wikyung.com",
-      "date": "Fri, 23 Oct 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9nZXFZQ0ZRaUU4LVA0RDNIbm5mYW5UcjZ1SXlhZldNdERxMUNXemdLMEVZalZlMXA1NEFVS2NDQ2tDd095NDZobGVNdHFMRXFtcmtVNg?oc=5",
-      "tags": [
-        "가상자산",
-        "자금세탁"
-      ],
-      "description": "“가상자산은 익명이 아닌 가명”…원화 스테이블코인 자금세탁 가능성은 :: 위즈경제 ::",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "보이스피싱",
       "title": "ASAP, 보이스피싱 피해 186억원 막았지만…정보공유 확대 속 남은 과제는?",
       "source": ":: 위즈경제 ::",
@@ -1125,6 +1122,22 @@
         "FIU·규제"
       ],
       "description": "ASAP, 보이스피싱 피해 186억원 막았지만…정보공유 확대 속 남은 과제는? :: 위즈경제 ::",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "“가상자산은 익명이 아닌 가명”…원화 스테이블코인 자금세탁 가능성은",
+      "source": ":: 위즈경제 ::",
+      "source_url": "https://wikyung.com",
+      "source_domain": "wikyung.com",
+      "date": "Fri, 23 Oct 2026 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9nZXFZQ0ZRaUU4LVA0RDNIbm5mYW5UcjZ1SXlhZldNdERxMUNXemdLMEVZalZlMXA1NEFVS2NDQ2tDd095NDZobGVNdHFMRXFtcmtVNg?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "“가상자산은 익명이 아닌 가명”…원화 스테이블코인 자금세탁 가능성은 :: 위즈경제 ::",
       "collection_method": "google_news_24h"
     },
     {
@@ -18907,37 +18920,6 @@
         "사기"
       ],
       "description": "외화계좌로 빠져나간 보이스피싱 피해금액 이제 반환 가능해진다 [H-EXCLUSIVE] 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "대포통장 모집 범죄조직에 넘긴 일당 46명 검거",
-      "source": "KBS 뉴스",
-      "source_url": "https://news.kbs.co.kr",
-      "source_domain": "news.kbs.co.kr",
-      "date": "Fri, 18 Sep 2026 02:33:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hV2NZZUJqSkFLRXZfUzBqQ2hGblBqRFM4VTlWOXM5VWI5X0xieElmY2ZqUndyWEtiOUYxdFl2VkU5VWpiYXhWYS1PQjJua0VtZHYtLThySklPczA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "대포통장 모집 범죄조직에 넘긴 일당 46명 검거 KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "비트코인으로 혁명수비대 자금 옮겼다…美 재무부, 이란 거래소 비트뱅크 제재",
-      "source": "디지털투데이",
-      "source_url": "https://www.digitaltoday.co.kr",
-      "source_domain": "www.digitaltoday.co.kr",
-      "date": "Fri, 18 Sep 2026 01:54:05 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBERWlWNnNvSTZqNUZ4b3R6NURva0s0NWxabmozQnlzcWlsV1ZMOG8tZk1tdmlhVU5GZTJmMnotZUx2VWZqNEk5dmFhcExIS29Ha3lSZkxkYUJhc0FYc1BoOXpvdktXc3BCMkhER2pYcWZ5N1E?oc=5",
-      "tags": [
-        "가상자산",
-        "제재·테러자금"
-      ],
-      "description": "비트코인으로 혁명수비대 자금 옮겼다…美 재무부, 이란 거래소 비트뱅크 제재 디지털투데이",
       "collection_method": "google_news_24h"
     }
   ],
