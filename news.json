@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-10-25T23:26:40.681776+00:00",
+  "updated_at": "2026-10-26T01:30:55.921877+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 1
+      "count": 5
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 2
+      "count": 3
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 0
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 4
+      "count": 7
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 10
+      "count": 14
     },
     {
       "feed": "투자사기",
@@ -70,7 +70,7 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "차명계좌",
@@ -80,12 +80,12 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 0,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 2,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -109,7 +109,7 @@
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 6,
+      "count": 8,
       "window_days": 3
     },
     {
@@ -139,13 +139,13 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 6,
+      "count": 7,
       "window_days": 3
     },
     {
@@ -199,13 +199,13 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 4,
+      "count": 5,
       "window_days": 3
     },
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -235,34 +235,52 @@
     {
       "feed": "출처집중:raonnews.com",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     }
   ],
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 28,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,18 +415,6 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:자금세탁:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
@@ -416,6 +422,18 @@
     },
     {
       "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,6 +457,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:시세조종:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
@@ -454,12 +478,6 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
       "method": "official_board"
     },
     {
@@ -480,6 +498,238 @@
   "count": 1200,
   "official_count": 31,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "경남 농협 조합장, 1억 원 편취·자금세탁 의혹…경찰, 사건 송치",
+      "source": "코리아이글뉴스",
+      "source_url": "https://www.koreaeaglenews.com",
+      "source_domain": "www.koreaeaglenews.com",
+      "date": "Mon, 26 Oct 2026 01:25:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBWSU9oRktLSktBOE82LWxGdk1fYzJfVXhqOTJOTTdEWHJDb2JwdWVvcEZRMXV3YTRWN3lmMDhNWW9McUgxV001QUljejdqTkt5YmdJajloVGVSekp5NmEwTVRmNncxSEZRSU5QN2hJR2pRdzQ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "경남 농협 조합장, 1억 원 편취·자금세탁 의혹…경찰, 사건 송치 코리아이글뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "\"불법사금융 덫 빠진 도민 돕는다\"…경기도, 연 1% 금리 200만원 대출 - 머니투데이",
+      "source": "머니투데이",
+      "source_url": "https://www.mt.co.kr",
+      "source_domain": "www.mt.co.kr",
+      "date": "Mon, 26 Oct 2026 01:17:58 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0yTUJrTWNHY1ZFMlNGQVZmdVVrUjcxMWhFNjlVYkFzZ0xUamMzSkRrS0luRmRCTFl2TEZSUW1WQWpjUlBTTkhrNHdJMHZDZkRja2pUZGZiU2xoS29oZS1HdzZrTnRZS0JkdnfSAW9BVV95cUxQOThkcl91VmNMSkZZY29ON29YajY3VTB0S2RISnpvYVVQZWRpbnBWdmtleDVFUE5EeXpJRkJNZ0xudTJhY1hVRElENFJOMVhVUDc2RXctU29FdlRrOFdTOGdDWlJtWkxzeVJYVWs1WEU?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "\"불법사금융 덫 빠진 도민 돕는다\"…경기도, 연 1% 금리 200만원 대출 - 머니투데이 머니투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "애큐온저축은행, 전 직원 82% 자금세탁방지 자격증 보유",
+      "source": "뉴시스",
+      "source_url": "https://www.newsis.com",
+      "source_domain": "www.newsis.com",
+      "date": "Mon, 26 Oct 2026 01:05:31 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBobWRfck1LTGV3OF9FUzBtTTFaRHJZaVRPY1BLV3pVYWVyRVY4dlV4R0t4bTViRHpFeTVRMWs0OE1hNU1OUjFCYjZ2OHZFUHplcThyR1FscGkxVWRfUEdwbdIBeEFVX3lxTE8yZ0xuRnBXOVVtYzhUaFh1cERlWTN3ZlBSWWRRdnRMSDVWcXZqZkZ0TjYxek9RT1R0dFFrS3ZuOTBTcE03alVLLTFkbElrbFBUM0hjTkdxaHpkSHBTamlaSUpCdjdIY3BtLTU3VTJvV25vLUlhVHpUOQ?oc=5",
+      "tags": [
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "애큐온저축은행, 전 직원 82% 자금세탁방지 자격증 보유 뉴시스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "경기도, 불법사금융 피해자에 최대 200만원 연 1% 저리 대출",
+      "source": "한겨레",
+      "source_url": "https://www.hani.co.kr",
+      "source_domain": "www.hani.co.kr",
+      "date": "Mon, 26 Oct 2026 00:54:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1PZGdWS3JWWXBfaDcyWWROWk5RUElIZHZpUTZxOXFZSl9RblBiRXRtRHIzSU1ES19aSjZ4VVY1a0NacXQ1T2JEVEFUamJPV293MHpWUU5CWllPbEMzaVJWRXB4VQ?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "경기도, 불법사금융 피해자에 최대 200만원 연 1% 저리 대출 한겨레",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "보이스피싱 피해금 4억8000만원 상품권으로 바꾼 50대 징역 3년",
+      "source": "뉴스클레임",
+      "source_url": "https://www.newsclaim.co.kr",
+      "source_domain": "www.newsclaim.co.kr",
+      "date": "Mon, 26 Oct 2026 00:40:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5GYTVrQTBwQ1Q3TTUyb2kwX1c5a0dCZ3cwcThfUDBzeFEyWU9lYVMzUmFoVmhoamJZY25uaWVJUVhQYmJUV3RHLXp1MTVZUzBZWEw1d0tpYlJvWTkyY082R2ExZ3FfX1NBblc2dzIxR3LSAXRBVV95cUxOSkNuUFl3S3F4ZjNlNTdCWWZOV0tqbkxiUVcya0hOckdBTGFPd24yTGtxeE54Q3hOTzZXWU81VDZhMnRfTG9VNTJLemNUdTNpb3RlRy0xdk9UWURSaVpWakNXRER1VHRvbFFHbldZcFVDVUlBMA?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "보이스피싱 피해금 4억8000만원 상품권으로 바꾼 50대 징역 3년 뉴스클레임",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "NH농협은행, 영상통화로 보이스피싱 의심거래 차단",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
+      "date": "Mon, 26 Oct 2026 00:30:11 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8tUVBUYUNaRTE5LWJST3lrRTUxbldIcFFORV9tVVBSUVdSNnI5RmFxMmNKR3ZTb2U2T2JObW1qTjMtUDNzS1hpOV84NTdUSmM2VE9UcUhFRFBsTi1ZQ1kzZ9IBYEFVX3lxTE8tUVBUYUNaRTE5LWJST3lrRTUxbldIcFFORV9tVVBSUVdSNnI5RmFxMmNKR3ZTb2U2T2JObW1qTjMtUDNzS1hpOV84NTdUSmM2VE9UcUhFRFBsTi1ZQ1kzZw?oc=5",
+      "tags": [
+        "사기",
+        "FIU·규제"
+      ],
+      "description": "NH농협은행, 영상통화로 보이스피싱 의심거래 차단 연합뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "애큐온저축은행, 자금세탁방지 체계 고도화…업권 최초 'CGSS' 취득",
+      "source": "전자신문",
+      "source_url": "https://www.etnews.com",
+      "source_domain": "www.etnews.com",
+      "date": "Mon, 26 Oct 2026 00:22:11 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA2U2l2bm9rY002bVBnU21qWEFOaXoxaDdkcGV6Q3poamtkaG9xZTRLa0QzR00xVjJuLVFQZUZFNWJQcTV1RjBfVFhxVnBwZw?oc=5",
+      "tags": [
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "애큐온저축은행, 자금세탁방지 체계 고도화…업권 최초 'CGSS' 취득 전자신문",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "“고수익 알바라더니” 보이스피싱에 연루…청년·외국인 주의",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Mon, 26 Oct 2026 00:22:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9pRHA5cDFvSS1iaVFXT0FEQUVVNjZiRW1XdlJHbGh3cGZ3a3JBbGhDdjNuaHJuQU9xME1GX0c1eVFDaGxCTGtRcWxBMG5aQkppQjZOa0N1TzlRLXc?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "“고수익 알바라더니” 보이스피싱에 연루…청년·외국인 주의 KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "\"불법사금융 피해자에 연 1% 대출 지원\"…경기도, 최대 200만원 지원",
+      "source": "파이낸셜뉴스",
+      "source_url": "https://www.fnnews.com",
+      "source_domain": "www.fnnews.com",
+      "date": "Mon, 26 Oct 2026 00:21:21 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB3NzdyZlRDbG5QSXRLWFJxcVdUdHgwY0dUd2dlM0gxdURRdjVwU3NHSTZGNEw2a0RDOS1Xc3NtRFhxaG85cnk3NGVhMGpqcWFGMmlGdDBJaHE0dw?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "\"불법사금융 피해자에 연 1% 대출 지원\"…경기도, 최대 200만원 지원 파이낸셜뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "애큐온저축은행, 자금세탁방지 체계 강화…글로벌 제재 데이터 도입",
+      "source": "팍스경제TV",
+      "source_url": "http://www.paxetv.com",
+      "source_domain": "www.paxetv.com",
+      "date": "Mon, 26 Oct 2026 00:14:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9EQUttbDVSOTNtUDB3bkt5TzV2eHh0WU9Sdmppa2ZtUUc3Y3BhNGpua1FoNjdRNnZrRXN4X0NXbGdydVdrVGpwc3pCQkZmajJIeElGUGp6TjBrTDNkcV9LNXZJVF9pSU0?oc=5",
+      "tags": [
+        "FIU·규제",
+        "제재·테러자금",
+        "자금세탁"
+      ],
+      "description": "애큐온저축은행, 자금세탁방지 체계 강화…글로벌 제재 데이터 도입 팍스경제TV",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "NH농협은행, 영상통화로 의심거래 원천 차단…'FDS 추가인증' 도입",
+      "source": "전자신문",
+      "source_url": "https://www.etnews.com",
+      "source_domain": "www.etnews.com",
+      "date": "Mon, 26 Oct 2026 00:11:36 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA4QlZDLWllZGJCQ1BzQ0N6Z1I0RHdMOVlxUzBLX25ueHVaTGt2clE4TllzOWNvUVFnRE5ObjZQU2R4OFV3WFBrNDNkSlhOZw?oc=5",
+      "tags": [
+        "FIU·규제"
+      ],
+      "description": "NH농협은행, 영상통화로 의심거래 원천 차단…'FDS 추가인증' 도입 전자신문",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "경기도, 불법사금융 피해 저신용자에 최대 200만 원 지원",
+      "source": "서울경제",
+      "source_url": "https://m.sedaily.com",
+      "source_domain": "m.sedaily.com",
+      "date": "Mon, 26 Oct 2026 00:01:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9fUjhLV0JMRGkzcDZFb0tIRDZSQlBHV1l4RmZLUUY4RmFJcTU3NWs3YnlNa3l5ZE44SzBNT3VKN1laSElXYWxiM0ZUTXlHeEZhSE040gFTQVVfeXFMT19SOEtXQkxEaTNwNkVvS0hENlJCUEdXWXhGZktRRjhGYUlxNTc1azdieU1reXlkTjhLME1PdUo3WVpISVdhbGIzRlRNeUd4RmFITTg?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "경기도, 불법사금융 피해 저신용자에 최대 200만 원 지원 서울경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "이스라엘 중앙은행, 네타냐후 암호화폐 제재 회피 계획 거부",
+      "source": "Bitcoin News",
+      "source_url": "https://news.bitcoin.com",
+      "source_domain": "news.bitcoin.com",
+      "date": "Sun, 25 Oct 2026 23:51:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQmlZck1DVDlXckY3cTV4dkRrU1h1enVZc29qYmhHMVg0d2hkeVRueWpUTzRPU1NnZ3AtQ1pwaGtpY1h3SE5JV0xHdU91TXRYRE4yZDl0RVpESXhsdjVTSHg0U19RMXMxbHdMTjlIZW5LUmpyQ0NuSGUtN0Joc1Fsc2ZIbWZRQjJ0aDJkaEVicnQ0QWpYZVhEcldkNm5ON1NVcmw2eVBWUXpYV0FjcUkwVTNLNA?oc=5",
+      "tags": [
+        "가상자산",
+        "제재·테러자금"
+      ],
+      "description": "이스라엘 중앙은행, 네타냐후 암호화폐 제재 회피 계획 거부 Bitcoin News",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "애큐온저축은행, 자금세탁방지 국제자격 'CGSS' 취득…\"업계 최초\"",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Sun, 25 Oct 2026 23:44:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1vaS1GV2ZzR0stU0JmWkNWNUdXMk91TXpyMGVVdDdidzVnZDBRTVQtZENIS2N6WG5vcWRLQmpCOG1uMFlzUk9XUy1uMVdQZV9BdHNIN0JfOHpFbl9QcV85Tg?oc=5",
+      "tags": [
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "애큐온저축은행, 자금세탁방지 국제자격 'CGSS' 취득…\"업계 최초\" 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "알바인 줄 알고 보이스피싱 피해금 옮겨도 공범…달러 직거래 판매자도 연루",
+      "source": "라온신문",
+      "source_url": "https://www.raonnews.com",
+      "source_domain": "www.raonnews.com",
+      "date": "Sun, 25 Oct 2026 22:53:45 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ib085c0ZaM2Z3WGt3UjQ2UHhTcXZqbzZadWlWdXd1bmNPRUczY3dzNjNlYUhfdkVlY0NuR1lCMjhnaGdSb1VUSDJCYW82REhxNGlwbjhIbG12Rms0eksyZQ?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "알바인 줄 알고 보이스피싱 피해금 옮겨도 공범…달러 직거래 판매자도 연루 라온신문",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "보이스피싱",
@@ -18689,237 +18939,6 @@
         "사기"
       ],
       "description": "김한울 용인시의원 \"전세사기·보이스피싱 등 예방 적극행정 필요\" 뉴스1",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "'옵티머스 펀드 사기' 김재현, 범죄수익 은닉 항소심도 징역 8개월",
-      "source": "아시아경제",
-      "source_url": "https://www.asiae.co.kr",
-      "source_domain": "www.asiae.co.kr",
-      "date": "Fri, 18 Sep 2026 07:54:52 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5XU3VlUTV2c2tEUnpXQnE5NGhIMWgwMzNJYjRHejQ5Wm1BZ1dxWjNfVVVQcVF5b0lzcV9DOHl2TG12OElCQjFhY1VlXzdPQ1l1RVVPa3JxUm95N01nd3RDQg?oc=5",
-      "tags": [
-        "사기",
-        "자금세탁"
-      ],
-      "description": "'옵티머스 펀드 사기' 김재현, 범죄수익 은닉 항소심도 징역 8개월 아시아경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "옵티머스 사기 등 징역 43년 김재현, 범죄수익은닉 2심 8개월 추가",
-      "source": "v.daum.net",
-      "source_url": "https://v.daum.net",
-      "source_domain": "v.daum.net",
-      "date": "Fri, 18 Sep 2026 07:34:44 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBvTXdUY3ltdnZZbnYtdENWUUlVb213S04xQ1JhdE9IRkxZTEVhUXR1eGJMMzZBd2FKZ2REeHU1Z19fS1VPaHc?oc=5",
-      "tags": [
-        "사기",
-        "자금세탁"
-      ],
-      "description": "옵티머스 사기 등 징역 43년 김재현, 범죄수익은닉 2심 8개월 추가 v.daum.net",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "美재무부, ‘호르무즈 통항료 징수 도운’ 이란 코인 거래소 제재",
-      "source": "마켓인",
-      "source_url": "https://marketin.edaily.co.kr",
-      "source_domain": "marketin.edaily.co.kr",
-      "date": "Fri, 18 Sep 2026 07:07:03 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB0b1hJVmZoSjl3T05XdFo1T0FpaE1OOG80RzNjTUJaY1p0RnlkNW1SaWRLeGJ3elpYVTVVSDIxS2NZY1diajEyVTdJbi1GUHdJNDlybk9LR29DcDdiWmhEU1lrVEdjUkkxM0U1dGlaSXl0Sk0?oc=5",
-      "tags": [
-        "가상자산",
-        "제재·테러자금"
-      ],
-      "description": "美재무부, ‘호르무즈 통항료 징수 도운’ 이란 코인 거래소 제재 마켓인",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "부동산감독추진단, 위법 의심 광고 1만여건 적발…아파트 의심거래 624건",
-      "source": "뉴스1",
-      "source_url": "https://www.news1.kr",
-      "source_domain": "www.news1.kr",
-      "date": "Fri, 18 Sep 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4zLUVhM1I5OWpKa0tpOGNWak9zdDEwVTJIQUlTVGJwMkFPSjRaZG52dHo4cjJyTXVSMm1wWFNJVDJXVXZEOUVsTVllUHNkY3NxR25NNU9JbFFWeVXSAWBBVV95cUxQQ0h6blhmSkVmN0xndXZRUmtXeUJOWDlvRGpSZGl5bGtOLTJvdVZwbHlqWVVrTjlZc0pZbExYemtJZlJjN0JvSGtlZ2ZxRllYandzS0JvYUZRdzZFVnJhcnY?oc=5",
-      "tags": [
-        "FIU·규제"
-      ],
-      "description": "부동산감독추진단, 위법 의심 광고 1만여건 적발…아파트 의심거래 624건 뉴스1",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "2천만원 인출 시도 70대…은행원·경찰관, 보이스피싱 피해 막아",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Fri, 18 Sep 2026 06:44:50 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE94NkZSWHVnX1JDRi1wNW5icTk1ZFdzRzVXUzFzRGN5UF9jMm5UenJQbEJza21jNzBFUWVydUVnUDNuZWJDdmRVWEs1LVVXbmpPVUZKTDF2N3U0cjDSAWBBVV95cUxOdVFacU1TSVJURlNDVzBlM0lYWUNIZGtMcUFhcHJFd2dHVFZoUFd4VWtzc00wcld0VnpOU2xNTWYtTmRaaUdNMWpFQnRfbG1Pa0pRanhvd25DVUhZelEtemE?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "2천만원 인출 시도 70대…은행원·경찰관, 보이스피싱 피해 막아 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "'옵티머스 펀드사기' 김재현, 범죄수익 은닉 혐의 2심도 징역 8개월",
-      "source": "뉴시스",
-      "source_url": "https://nwww.newsis.com",
-      "source_domain": "nwww.newsis.com",
-      "date": "Fri, 18 Sep 2026 06:42:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1FVHBZMG94VkVPcm8xUkRsWTE5Qk80ZThBbGNiT3dobVMtLUVYN3R0RS1qVXFRVnpjb2tIVE9wVmtsRTdLSUVlaTdjQ3IzZFVzemRYdXNRQXN0dnZETXB0eFR3?oc=5",
-      "tags": [
-        "사기",
-        "자금세탁"
-      ],
-      "description": "'옵티머스 펀드사기' 김재현, 범죄수익 은닉 혐의 2심도 징역 8개월 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "인력·예산 늘렸는데... NH농협은행, 보이스피싱 피해 2배 [국회 방청석]",
-      "source": "매일경제",
-      "source_url": "https://m.mk.co.kr",
-      "source_domain": "m.mk.co.kr",
-      "date": "Fri, 18 Sep 2026 06:25:49 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFB4TUEyZU55ZENQejF2OXpoNmI1cDQyR1g0VHM1SjJncFdoV2dCdmxxcE1Tdzl0dTA5OXpISFdiSm1kenptVWc?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "인력·예산 늘렸는데... NH농협은행, 보이스피싱 피해 2배 [국회 방청석] 매일경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "금융정보분석원, 타지키스탄 FIU와 자금세탁방지 공조 확대",
-      "source": "Traders Union",
-      "source_url": "https://tradersunion.com",
-      "source_domain": "tradersunion.com",
-      "date": "Fri, 18 Sep 2026 06:23:10 GMT",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQmJBLUQ3aVo0Wnl2VjVEdU8zSGl0UkZ4TGRMbndFN0RoMjR0NWFvcjlaeEc4MGxwN3BYZl9vdzZ5bko2MDQ4ZTdENlZYbmh3S1FJV2FKOS1mZDRQQmhYLV9MM2VBcmRXRTVHWjFoWHM5dDZMMzVWb2FKMFZWUnZmQ1g2WUNzcHQwMDB3MXJYbWs1azdhZTA5cEg3Z2h1R3M?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "금융정보분석원, 타지키스탄 FIU와 자금세탁방지 공조 확대 Traders Union",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "“추석 온기 나누고 보이스피싱 막는다”… ABL생명, 성북서 송편 빚기·어르신 금융교육 전격 실시",
-      "source": "dailysmart.co.kr",
-      "source_url": "http://www.dailysmart.co.kr",
-      "source_domain": "www.dailysmart.co.kr",
-      "date": "Fri, 18 Sep 2026 06:20:54 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1jeWFyTEttdDJqX2gzdmNNUWt4RkY0SUFiQ1Fnc1IzaXJ0YWF4RTdMVzRNUzJlVlBTZWJybE9ZUVdkZlNSNzlpRUJXRE1WWWxlY1J4WlEzY3d5LXdOMVZNU3E5dEJNa1hyNFl6ZFlXcw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "“추석 온기 나누고 보이스피싱 막는다”… ABL생명, 성북서 송편 빚기·어르신 금융교육 전격 실시 dailysmart.co.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "농협 “대포통장 꼼짝마”… 올해 피해액 39% 줄었다",
-      "source": "매일경제",
-      "source_url": "https://m.mk.co.kr",
-      "source_domain": "m.mk.co.kr",
-      "date": "Fri, 18 Sep 2026 06:15:43 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5NcWVzb3ZHRGZPTk5qV1ZKY3RxVjJoTDZOeEZ6Y0xVdjRQaFB6cFNySG1fMDh6Q0pXR1hjVzA2Yy1iYmdoc1E?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "농협 “대포통장 꼼짝마”… 올해 피해액 39% 줄었다 매일경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "트래블룰",
-      "title": "[델리오 판결] ② 가상자산사업자 허위 신고...특금법 유죄 첫 인정",
-      "source": "디지털애셋",
-      "source_url": "https://www.digitalasset.works",
-      "source_domain": "www.digitalasset.works",
-      "date": "Fri, 18 Sep 2026 06:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE51djd0WHhIdGhhdTlZd2F3MzR3MGJNUmV0TVpiNjVXM1BSN2p1UlpvcjlRMXRYRVU4OVk3S1dNWndBRllBNWVCZ1JwU3BrbmpYQzVuM2VoSGpxSlBwM0JkZkZSbXdMNktqc1I2TUw0NGhlQQ?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "[델리오 판결] ② 가상자산사업자 허위 신고...특금법 유죄 첫 인정 디지털애셋",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱 대포통장으로 전락한 수협 계좌…올해 피해액만 176억",
-      "source": "news1.kr",
-      "source_url": "https://www.news1.kr",
-      "source_domain": "www.news1.kr",
-      "date": "Fri, 18 Sep 2026 05:44:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1TbTdKOVcyblh0TnlubkNZRFJxZ0dGbUpXQXlXZnQzVnUyOUEwLTVUbTZBWmNvWjNwWk92aFZ3cEMzR2kzS1hFNHhTbGl4V1ZnazlVVkh0ZmZjUdIBX0FVX3lxTE5NUVZ5ckZ6Yk5jeHNFNEQ2WFQ1RThPbmROR1hJTGNSckxva19jV1lKYVY4OEtfM0xUV2tWTnJyVHVLZ3lrcXhPWFA2c0hwUnRsU3NiMXNXeXJlWjdCN1hZ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱 대포통장으로 전락한 수협 계좌…올해 피해액만 176억 news1.kr",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "IOG, 카르다노 관련 유튜브 라이브 가상자산 사기 가능성 경고",
-      "source": "토큰포스트",
-      "source_url": "https://www.tokenpost.kr",
-      "source_domain": "www.tokenpost.kr",
-      "date": "Fri, 18 Sep 2026 04:34:45 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1JUzEyQ2FaWmZYbm1QT01nSzlRRl9pRDkweFJFMkpQR0pQanJxdk85bnF1V2wxdHh2LWY2ZjJMUldrSGhUS2M5TVBjYzd0YS1zb2VGVUtIV0Y?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "IOG, 카르다노 관련 유튜브 라이브 가상자산 사기 가능성 경고 토큰포스트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "공무원증·허위 공문까지 위조…50억원 편취한 보이스피싱 조직 적발",
-      "source": "mediainnews.com",
-      "source_url": "https://www.mediainnews.com",
-      "source_domain": "www.mediainnews.com",
-      "date": "Fri, 18 Sep 2026 03:11:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBDWUlkU1puU3BfX0lGaXgzSkJFOTU5QlYxMzVYUFE0NmNTTTVyV1VpUHhfbHREOGZkdktNVG92aDJBckc0WWdoWGtIUk1yMzFqV0ZyVTI5RWxOWGxhR0NneWJaMjB2Z1l4Nm1sdmtR?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "공무원증·허위 공문까지 위조…50억원 편취한 보이스피싱 조직 적발 mediainnews.com",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "외화계좌로 빠져나간 보이스피싱 피해금액 이제 반환 가능해진다 [H-EXCLUSIVE]",
-      "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
-      "date": "Fri, 18 Sep 2026 02:36:46 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAyZ0ZITGhtaHRSRjdnZE4xWUlGSXVpMld6M1NMMERqRVBPX0VCRXk0aGctNmFZNzFsM09hSVctNVBybWJFOGNwTkttNEFEQVhkalF5ajdR?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "외화계좌로 빠져나간 보이스피싱 피해금액 이제 반환 가능해진다 [H-EXCLUSIVE] 헤럴드경제",
       "collection_method": "google_news_24h"
     }
   ],
