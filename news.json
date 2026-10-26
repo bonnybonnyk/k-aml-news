@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-10-26T07:25:39.276656+00:00",
+  "updated_at": "2026-10-26T14:28:07.797756+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 9
+      "count": 10
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 5
+      "count": 4
     },
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 5
+      "count": 7
     },
     {
       "feed": "가상자산 AML",
@@ -35,12 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 17
+      "count": 18
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 6
+      "count": 7
     },
     {
       "feed": "투자사기",
@@ -55,7 +55,7 @@
     {
       "feed": "마약자금",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "불법도박",
@@ -85,7 +85,7 @@
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 13,
+      "count": 14,
       "window_days": 3
     },
     {
@@ -97,13 +97,13 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 5,
+      "count": 7,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 4,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -115,7 +115,7 @@
     {
       "feed": "실무:불법외환·관세",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -139,13 +139,13 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 2,
+      "count": 0,
       "window_days": 3
     },
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 9,
+      "count": 5,
       "window_days": 3
     },
     {
@@ -199,19 +199,19 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 7,
+      "count": 6,
       "window_days": 3
     },
     {
       "feed": "출처집중:asiae.co.kr",
       "ok": true,
-      "count": 3,
+      "count": 1,
       "window_days": 3
     },
     {
       "feed": "출처집중:edaily.co.kr",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -229,7 +229,7 @@
     {
       "feed": "출처집중:newspim.com",
       "ok": true,
-      "count": 2,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -242,45 +242,27 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 0,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "FIU:목록:p2",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
+      "error": "<urlopen error timed out>"
     },
     {
       "feed": "FIU:fallback",
@@ -427,6 +409,12 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
@@ -445,7 +433,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:불공정거래:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,25 +457,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:환치기:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -500,13 +482,77 @@
   "items": [
     {
       "region": "국내",
+      "query": "불법사금융",
+      "title": "배우 장동주, 400만원 불법사채 쓰더니…“불법 추심·협박받아” 고소장 제출",
+      "source": "헤럴드경제 미주판",
+      "source_url": "https://www.heraldk.com",
+      "source_domain": "www.heraldk.com",
+      "date": "Mon, 26 Oct 2026 11:32:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VeDFBR0ZtOGVMQ1lxcXpkZ2gtZkU3dVk3UVgxY0xPaVR5UmtQSjI2TmNVWVBhZGRXdXFSUmxsb3ZlMTdzOHRFMVZQVWFLQVAxT3JkLXZsSVRjYk02TEZwRg?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "배우 장동주, 400만원 불법사채 쓰더니…“불법 추심·협박받아” 고소장 제출 헤럴드경제 미주판",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "환치기·외환",
+      "title": "“외국환법 가상자산 시행령 방향 맞지만 디테일 수정 필요”",
+      "source": "이데일리",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Mon, 26 Oct 2026 10:01:08 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOTGNuWkowVUpYQVpROGFnb2stRkl5bUR3UGh4c3BJSjhXNktLZ3h6RGxKejFrWThxdk9tQlBrbk9xYjBNMDNoNGY0OUJwVl9OT3VLMFQwbDZLU2RrQTNQNXFYaG1TSnRoSFAwNk5yX0JwR1hmZ3c3NlJxZ1FlZnZqUQ?oc=5",
+      "tags": [
+        "가상자산",
+        "환치기·외환"
+      ],
+      "description": "“외국환법 가상자산 시행령 방향 맞지만 디테일 수정 필요” 이데일리",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "애큐온저축은행, 자금세탁방지 체계 고도화…국제제재 대응 강화",
+      "source": "뉴스핌",
+      "source_url": "https://www.newspim.com",
+      "source_domain": "www.newspim.com",
+      "date": "Mon, 26 Oct 2026 08:01:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB1OU9hRjA3cVVLcV9YM2ttZjdYTjc1ZjdXQWE3YV80dWV4elUxN0dRd1dmRVo2a1lRTU1lZ2F2TEtudFJaZE5zMkJtb2tqeDVNWUFjNGVPOTFacm5i?oc=5",
+      "tags": [
+        "FIU·규제",
+        "제재·테러자금",
+        "자금세탁"
+      ],
+      "description": "애큐온저축은행, 자금세탁방지 체계 고도화…국제제재 대응 강화 뉴스핌",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "\"표정·말투·답변으로 보이스피싱 차단\" 농협은행 'FDS 영상통화 추가인증' 도입",
+      "source": "https://www.catchnews.kr/",
+      "source_url": "https://www.catchnews.kr",
+      "source_domain": "www.catchnews.kr",
+      "date": "Mon, 26 Oct 2026 07:20:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5yNG5NenEtOEJoYzhzV1plQTFWYThlSkF0WkZFS2FzVlpGMWw4V0Q4bE5CNFN3ekpYM21TWkk2RUJCdTVsNkdTaXpiMkFxd2Z3ZTYySmxOSTNXRU41N1hGOU0wSlhRRm1CTUEw?oc=5",
+      "tags": [
+        "사기",
+        "FIU·규제"
+      ],
+      "description": "\"표정·말투·답변으로 보이스피싱 차단\" 농협은행 'FDS 영상통화 추가인증' 도입 https://www.catchnews.kr/",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "가상자산 AML",
       "title": "코인스위치, 10문항 사기 식별 퀴즈·사이트 검사 도구 공개",
       "source": "토큰포스트",
       "source_url": "https://www.tokenpost.kr",
       "source_domain": "www.tokenpost.kr",
       "date": "Mon, 26 Oct 2026 07:05:54 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1jemt3YmFKRVhtUkxuMEVrWDBXa1BMRFUydVcxejBsQnBjclpuWHVRcFJiUl9VTm9CV093LW1ZcERMTmg0aEkzUU9ydENqYm03QUNJR2xfUzdxb2ZRWk1KadIBZkFVX3lxTE9UOHhsNFlWOTdiZnlJNEIxeko0VEZVVjdweG5CQXBkeWRTR1pVQ19tRzB3Z3pTRDNPemtzNzBhQlV2RlptbkdRRzlPRnhlMS1MeTJnVG5BdnZtQ3RSRFZidzBxYjJkdw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1jemt3YmFKRVhtUkxuMEVrWDBXa1BMRFUydVcxejBsQnBjclpuWHVRcFJiUl9VTm9CV093LW1ZcERMTmg0aEkzUU9ydENqYm03QUNJR2xfUzdxb2ZRWk1KaQ?oc=5",
       "tags": [
         "가상자산",
         "사기"
@@ -568,8 +614,8 @@
       "source": "핀포인트뉴스",
       "source_url": "https://www.pinpointnews.co.kr",
       "source_domain": "www.pinpointnews.co.kr",
-      "date": "Mon, 26 Oct 2026 05:48:23 GMT",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5YeVM0U3BMMlQ5aWVpOWJCU2p6Y0VJRy0xa04tMVdJcmVZV1REWWFXbk94a3ZxbzFGbTI3OVZFQW45R3pQdmZFaE5ZQ2JEcjlRVU9PT1RxdWtyVXBSNGc2RUxmUVlDb3pUSHNnaWxkR1FHNlnSAXdBVV95cUxNV3doNXluaVBDemM1dERFdFlVVXVLMDA3QmNHanRKOGNVSXVjbmFsTExVQUM0MEVBd3hOR3RlclNDcE1sMVJ1QUtDQjNQNTNkaEhPT0o1QTlIemRXYmRFa1h3MEc5TGZGclIzd3o5dlFOZGc2cGd6bw?oc=5",
+      "date": "Mon, 26 Oct 2026 05:53:57 GMT",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1Xd2g1eW5pUEN6YzV0REV0WVVVdUswMDdCY0dqdEo4Y1VJdWNuYWxMTFVBQzQwRUF3eE5HdGVyU0NwTWwxUnVBS0NCM1A1M2RoSE9PSjVBOUh6ZFdiZEVrWHcwRzlMZkZyUjN3ejl2UU5kZzZwZ3pv0gF3QVVfeXFMTVd3aDV5bmlQQ3pjNXRERXRZVVV1SzAwN0JjR2p0SjhjVUl1Y25hbExMVUFDNDBFQXd4Tkd0ZXJTQ3BNbDFSdUFLQ0IzUDUzZGhIT09KNUE5SHpkV2JkRWtYdzBHOUxmRnJSM3d6OXZRTmRnNnBnem8?oc=5",
       "tags": [
         "사기"
       ],
@@ -580,15 +626,15 @@
       "region": "국내",
       "query": "불법도박",
       "title": "10년 해외 도피…2조6천억대 도박사이트 부총책 구속 송치",
-      "source": "연합뉴스 한민족센터",
-      "source_url": "https://www.koreancenter.or.kr",
-      "source_domain": "www.koreancenter.or.kr",
+      "source": "연합뉴스",
+      "source_url": "https://www.yna.co.kr",
+      "source_domain": "www.yna.co.kr",
       "date": "Mon, 26 Oct 2026 05:45:32 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xSFpRdDlYSlRFV2QtM3NYVU9kU3hucTU1andaMi1xeEhCNXdWMGNUZUpNRDVONVJIY29uZ1FqU2UyQnJoWldCblpPNnlxbGl6Q0hVZTNLVW9uUWVxU29FOXVjT2t4d1R1UzVxN3lGYzBudm5J?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE15ekF6ZkwzRDY2YW82NUxGUDJxajZQYjFVTzVGN2twbUdPOXpBVVE4ay1yaDJPNFdwMU1ERHhZWXNYWDNsMEdnamtUOGRhXzVoZzRpS2l4SUFMUFXSAWBBVV95cUxQWU9zeXpzWUZKZWozV0FwZnFvbjM3NUMtSXp2SnZnWWQwTHZRQjQxd3lmS0lnZHpRMlJhMTZTQmxtNEdvWUg1ZENlRkhMVUdTN2NDeWItZTJCUTYzbVdfd0E?oc=5",
       "tags": [
         "도박"
       ],
-      "description": "10년 해외 도피…2조6천억대 도박사이트 부총책 구속 송치 연합뉴스 한민족센터",
+      "description": "10년 해외 도피…2조6천억대 도박사이트 부총책 구속 송치 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1166,21 +1212,6 @@
     },
     {
       "region": "국내",
-      "query": "불법사금융",
-      "title": "배우 장동주, 400만원 불법사채 쓰더니…“불법 추심·협박받아” 고소장 제출",
-      "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
-      "date": "Sun, 25 Oct 2026 09:04:52 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tVXJ3R0liX0taVndPajhieDRhMXl5cTV5QVo0Rk9OTFd0RWpXT2tRV1k3TGpWNHNrQXozTzdqc2trcDZnaUIwWlhtbnBENmV5MjVnWGhn?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "배우 장동주, 400만원 불법사채 쓰더니…“불법 추심·협박받아” 고소장 제출 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "범죄수익",
       "title": "범죄수익 숨기려 위장이혼까지…추적 역량은 ‘뒷걸음’",
       "source": "서울경제",
@@ -1365,10 +1396,10 @@
       "query": "자금세탁",
       "title": "“대출실적 쌓는 줄 알고”… 보이스피싱 ‘상품권 돈세탁’ 50대, 징역 3년",
       "source": "세계일보",
-      "source_url": "https://m.segye.com",
-      "source_domain": "m.segye.com",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
       "date": "Sun, 25 Oct 2026 01:18:25 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1KR1BubVE4LWJaeDJRMjhfSXIwZVJJY1JDQ0N6amNlRWQyejQ2ald3UENwVHljM29UMkR3RHd4WDlTMFdFdk1PLXdMcEc5MEEwa2wwbNIBVEFVX3lxTE1KR1BubVE4LWJaeDJRMjhfSXIwZVJJY1JDQ0N6amNlRWQyejQ2ald3UENwVHljM29UMkR3RHd4WDlTMFdFdk1PLXdMcEc5MEEwa2wwbA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5UcTU5UDFmdjd0Qmg5eWk0My1MUEFlZEJXdFNROWU0Qm9qZThUUnpIV3NQQlAxUVNiUjZmTXhWVTMwbDZsR3hmTWh3ZU1rcEpBeGdBN0g2VkPSAVRBVV95cUxNSkdQbm1ROC1iWngyUTI4X0lyMGVSSWNSQ0NDempjZUVkMno0NmpXd1BDcFR5YzNvVDJEd0R3eFg5UzBXRXZNTy13THBHOTBBMGtsMGw?oc=5",
       "tags": [
         "사기",
         "자금세탁"
@@ -1400,7 +1431,7 @@
       "source_url": "https://www.donga.com",
       "source_domain": "www.donga.com",
       "date": "Sat, 24 Oct 2026 23:16:39 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9FTGVWaUctV05xYzBUQ21pb01sc3djYmpOY2FMa01kZzBTVGg1UzN3dmJuZ01RUUk2bU02dmJhbWlYLURCMFpUMWRwZ2dlRFFIX3NVTTJwNHJGZWh5UHIydFJrbVEtb2kxMlBGRk1KZlR2aU91QXfSAWZBVV95cUxNTTZGSTIxWldJd1d5b2dFU0poU093TXRKTF9hUlg4bTEzSEdHS2NZdFQ2V0p3NUxDTXNHa1NBWnpfYXRPWkVRTUpMMDBKNmJVVmNXQ1Z2U1U4MFoyU3I2Y0ZlRk1qNmc?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1NNkZJMjFaV0l3V3lvZ0VTSmhTT3dNdEpMX2FSWDhtMTNIR0dLY1l0VDZXSnc1TENNc0drU0Fael9hdE9aRVFNSkwwMEo2YlVWY1dDVnZTVTgwWjJTcjZjRmVGTWo2Z9IBZkFVX3lxTE1NNkZJMjFaV0l3V3lvZ0VTSmhTT3dNdEpMX2FSWDhtMTNIR0dLY1l0VDZXSnc1TENNc0drU0Fael9hdE9aRVFNSkwwMEo2YlVWY1dDVnZTVTgwWjJTcjZjRmVGTWo2Zw?oc=5",
       "tags": [
         "사기"
       ],
@@ -18894,54 +18925,6 @@
         "제재·테러자금"
       ],
       "description": "학생비자로 농장취업, 월급카드는 간부 손에…北 노동자 500명 제재 회피술 뉴스1",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "제재·테러자금",
-      "title": "미 재무부, 이란 제재 회피 네트워크 연계 비트뱅크 제재",
-      "source": "토큰포스트",
-      "source_url": "https://www.tokenpost.kr",
-      "source_domain": "www.tokenpost.kr",
-      "date": "Sat, 19 Sep 2026 18:17:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WNmpLaGNlcVVhN2RqYU12UXJTczNLQWM0eFFyTkE1bV9zanBUYnZ5Q2NCdjFHRVRkWUUyRDliTkkzdXVZRVU5VTdjenI5aURVR2cxQTZVbFo?oc=5",
-      "tags": [
-        "제재·테러자금"
-      ],
-      "description": "미 재무부, 이란 제재 회피 네트워크 연계 비트뱅크 제재 토큰포스트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\"",
-      "source": "코인리더스",
-      "source_url": "https://www.coinreaders.com",
-      "source_domain": "www.coinreaders.com",
-      "date": "Sat, 19 Sep 2026 12:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9LeDBWOVJIQ3prZ2VsMHQ5b3RqV29KVUJtM1dCbVk4UzY0WDFMUG5pbFJIcUhTQXNJU3RkSm1yemZBMzkwQWxsZHhR?oc=5",
-      "tags": [
-        "가상자산",
-        "제재·테러자금"
-      ],
-      "description": "미 재무부, 이란 가상자산 거래소 기습 제재...\"세탁 통로 전면 폐쇄\" 코인리더스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "자금횡령, 테더장, 이더리움자금세탁, 통장후기, 테더통장, 피싱돈세탁, 테더장, 대포장판매",
-      "source": "헬로디디",
-      "source_url": "https://www.hellodd.com",
-      "source_domain": "www.hellodd.com",
-      "date": "Sat, 19 Sep 2026 11:05:36 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1qNnk1OXU3empCc1hXRXdwMHc4bzFYbS1pcjh3VkVVZjNDZVZkR0tNUGJJWVViZ0x6RHFpVTktTlVDSlZPcHBWNEpfM2wyWVV4LWtCcUxKZ0VFVkU1NFE?oc=5",
-      "tags": [
-        "가상자산",
-        "횡령·배임",
-        "자금세탁"
-      ],
-      "description": "자금횡령, 테더장, 이더리움자금세탁, 통장후기, 테더통장, 피싱돈세탁, 테더장, 대포장판매 헬로디디",
       "collection_method": "google_news_24h"
     }
   ],
