@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T14:28:07.797756+00:00",
+  "updated_at": "2026-10-26T20:04:27.516471+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -10,7 +10,7 @@
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 4
+      "count": 5
     },
     {
       "feed": "FIU·STR",
@@ -80,7 +80,7 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
@@ -242,27 +242,45 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": false,
-      "count": 0,
-      "error": "<urlopen error timed out>"
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p2",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
+    },
+    {
+      "feed": "금융위/FIU:목록:p3",
+      "ok": true,
+      "count": 10,
+      "method": "direct_official_board"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "error": "HTTP Error 503: Service Unavailable"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 0,
+      "count": 29,
       "method": "body_relevance"
     },
     {
       "feed": "FIU:목록:p1",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "<urlopen error timed out>"
+      "method": "official_board"
+    },
+    {
+      "feed": "FIU:목록:p2",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
     },
     {
       "feed": "FIU:fallback",
@@ -397,7 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -409,13 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -439,19 +457,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
-      "ok": true,
-      "count": 0,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:시세조종:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,9 +469,21 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:범죄수익:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원",
       "ok": true,
-      "count": 16,
+      "count": 15,
       "method": "official_board"
     }
   ],
@@ -478,21 +496,52 @@
   "practical_backfill_version": "5.8.0",
   "practical_collection_mode": "3d_overlap_incremental",
   "count": 1200,
-  "official_count": 31,
+  "official_count": 29,
   "items": [
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "이스라엘 경제학자·기업인 109명, 암호화폐 제재 회피 구상 반대",
+      "source": "토큰포스트",
+      "source_url": "https://www.tokenpost.kr",
+      "source_domain": "www.tokenpost.kr",
+      "date": "Mon, 26 Oct 2026 15:59:38 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB2WktaM3JENUlONW5WcUJvVXpScmtCQ2NhejZKUnFTOEp3WFMyc2dSYUlYclNZdGVTYnVFUHV2Qjhoc0pfQ0pLN1dLZVNsTnhtaWFpNUwxZk_SAV5BVV95cUxPNlVYQ0JBUDQ0aHUxcmJMa1B4VC1IYzJ1MFZRUDZGeDZpT0trWnk0QXR6dVFOV2wtd2lsSjhDQjBJaXNEaUh0SWdHUDVFcUlzc2NYemxudHN5cklvVmJR?oc=5",
+      "tags": [
+        "가상자산",
+        "제재·테러자금"
+      ],
+      "description": "이스라엘 경제학자·기업인 109명, 암호화폐 제재 회피 구상 반대 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "범죄수익",
+      "title": "조주빈 징역 42년, 추징은 26만원…범죄수익 앞에서 멈춘 국가",
+      "source": "OBC 뉴스",
+      "source_url": "https://www.theonetv.kr",
+      "source_domain": "www.theonetv.kr",
+      "date": "Mon, 26 Oct 2026 13:02:41 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HWmZFdU5jSmlJSHB1X3lRaEtERTdQQWpoZ1ZFVDIydmN4dTFWYmoxSEZRcVBxVTdaZm1lVmhHSlBtUFB1Y1EwOHhlWEpCVVNGUm9qVnZVOUk2M3VrdUVpTTVUZ0hoM2tXRWc?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "조주빈 징역 42년, 추징은 26만원…범죄수익 앞에서 멈춘 국가 OBC 뉴스",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "불법사금융",
       "title": "배우 장동주, 400만원 불법사채 쓰더니…“불법 추심·협박받아” 고소장 제출",
-      "source": "헤럴드경제 미주판",
-      "source_url": "https://www.heraldk.com",
-      "source_domain": "www.heraldk.com",
-      "date": "Mon, 26 Oct 2026 11:32:50 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9VeDFBR0ZtOGVMQ1lxcXpkZ2gtZkU3dVk3UVgxY0xPaVR5UmtQSjI2TmNVWVBhZGRXdXFSUmxsb3ZlMTdzOHRFMVZQVWFLQVAxT3JkLXZsSVRjYk02TEZwRg?oc=5",
+      "source": "헤럴드경제",
+      "source_url": "https://biz.heraldcorp.com",
+      "source_domain": "biz.heraldcorp.com",
+      "date": "Mon, 26 Oct 2026 11:23:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tVXJ3R0liX0taVndPajhieDRhMXl5cTV5QVo0Rk9OTFd0RWpXT2tRV1k3TGpWNHNrQXozTzdqc2trcDZnaUIwWlhtbnBENmV5MjVnWGhn?oc=5",
       "tags": [
         "불법사금융"
       ],
-      "description": "배우 장동주, 400만원 불법사채 쓰더니…“불법 추심·협박받아” 고소장 제출 헤럴드경제 미주판",
+      "description": "배우 장동주, 400만원 불법사채 쓰더니…“불법 추심·협박받아” 고소장 제출 헤럴드경제",
       "collection_method": "google_news_24h"
     },
     {
@@ -704,15 +753,15 @@
       "region": "국내",
       "query": "보이스피싱",
       "title": "가짜 구속영장으로 31억 가로챈 보이스피싱 일당 검거",
-      "source": "news.sbs.co.kr",
+      "source": "SBS 뉴스",
       "source_url": "https://news.sbs.co.kr",
       "source_domain": "news.sbs.co.kr",
-      "date": "Mon, 26 Oct 2026 04:58:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tcUtIek9JOGgzQThQLWtZcllmNE95TGdkX0M0dGVPWVFuVTctMmpuOFc1TWZVTEdxNWZPRl9KZ19FdzFDTHBfOW8xV1RFUTBlc3RKWVlyZXJTMW10aWpmTGxVdmQtQQ?oc=5",
+      "date": "Mon, 26 Oct 2026 04:58:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE56bi1kU3QtQTJXakVxR3I2ZnA1dThOVWlKTDdVMEsyTGd5LWdyYmZZMzdBOGNmR2k2dk1SV1NydUNLODlLS2VQRVFGY3hjb3V2Q2FZajM3TGdQUm1yWVIzc1QwRGw5SE5pX3c?oc=5",
       "tags": [
         "사기"
       ],
-      "description": "가짜 구속영장으로 31억 가로챈 보이스피싱 일당 검거 news.sbs.co.kr",
+      "description": "가짜 구속영장으로 31억 가로챈 보이스피싱 일당 검거 SBS 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -18896,36 +18945,6 @@
       ],
       "description": "경찰, 불법 성인PC방 387건 적발…범죄수익 52억 몰수 supple.kr",
       "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "[단독]작년 은행 보이스피싱 피해 5870억원…보상보험 지급 9건 불과 - 머니투데이",
-      "source": "머니투데이",
-      "source_url": "https://www.mt.co.kr",
-      "source_domain": "www.mt.co.kr",
-      "date": "Sat, 19 Sep 2026 21:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1GSzZMZjBsRWhQeFFIdWVxMVk1aE9wckh6VXpGb1ZHZ0gyZDdMSHZQekNidmx6TlJzOUtoRzYzZm1xaExiS0VMM2NfTXpVVFZiVTNHNjIyY192RHJhY01ELXA1VHppaE9vSkJB0gFwQVVfeXFMTjYyOUxtenkyNzhjSlVwU21Cdlk5dGdUdTFJcUhwWVNnTlFEQXg4TVc0MTAtZXRfNmM2QVZBQkphVEJnOU9BNDN4TDhraDRuZjlJYkFTMG4xUlBRODFKeGJObmtUOUY3a1JGa1diaFEzYQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "[단독]작년 은행 보이스피싱 피해 5870억원…보상보험 지급 9건 불과 - 머니투데이 머니투데이",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "제재·테러자금",
-      "title": "학생비자로 농장취업, 월급카드는 간부 손에…北 노동자 500명 제재 회피술",
-      "source": "뉴스1",
-      "source_url": "https://www.news1.kr",
-      "source_domain": "www.news1.kr",
-      "date": "Sat, 19 Sep 2026 21:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE45RzluUmwtNFFUdmdsVUtPejlpa3hfbUZYSTVjVUJDNTR6czRnY1ZFSjY1TGpJUXR4eDFUZHpnQi04bk83LWFsZl9MZmtVblBlUmlFUjd2X3BRY0tYM1dFeGRzYTHSAWRBVV95cUxOOUc5blJsLTRRVHZnbFVLT3o5aWt4X21GWEk1Y1VCQzU0enM0Z2NWRUo2NUxqSVF0eHgxVGR6Z0ItOG5PNy1hbGZfTGZrVW5QZVJpRVI3dl9wUWNLWDNXRXhkc2Ex?oc=5",
-      "tags": [
-        "제재·테러자금"
-      ],
-      "description": "학생비자로 농장취업, 월급카드는 간부 손에…北 노동자 500명 제재 회피술 뉴스1",
-      "collection_method": "google_news_24h"
     }
   ],
   "official_items": [
@@ -19450,39 +19469,6 @@
         "자금세탁"
       ],
       "collection_method": "direct_fsc_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "보이스피싱",
-      "official_source": "금융감독원",
-      "official_sources": [
-        "금융감독원"
-      ],
-      "title": "여름 휴가철 국민 발길 닿는 곳마다... 보이스피싱 피해예방 홍보도 함께 갑니다",
-      "source": "금융감독원",
-      "date": "2026-07-29T00:00:00+09:00",
-      "link": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219834&menuNo=200218&searchCnd=1&searchWrd=%EB%B3%B4%EC%9D%B4%EC%8A%A4%ED%94%BC%EC%8B%B1&pageIndex=1",
-      "tags": [
-        "사기"
-      ],
-      "collection_method": "verified_fss_board"
-    },
-    {
-      "region": "공식자료",
-      "query": "DAXA",
-      "official_source": "DAXA",
-      "official_sources": [
-        "DAXA"
-      ],
-      "title": "DAXA, 통신사기피해환급법 시행 앞두고 전체 가상자산거래소 공동 수범 지원 ...",
-      "source": "DAXA",
-      "date": "2026-07-29T00:00:00+09:00",
-      "link": "https://www.kdaxa.org/support/press.php?boardid=news&mode=view&idx=86&sk=&sw=&offset=0&category=",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "collection_method": "verified_daxa_board"
     }
   ]
 }
