@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-31T15:03:13.051676+00:00",
+  "updated_at": "2026-10-31T19:26:58.771821+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 7
+      "count": 8
     },
     {
       "feed": "범죄수익",
@@ -20,7 +20,7 @@
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 5
+      "count": 9
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,7 +35,7 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "불법사금융",
@@ -80,36 +80,36 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 12,
+      "count": 14,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 3,
+      "count": 4,
       "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 27,
+      "count": 16,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 37,
+      "count": 28,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 1,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 8,
+      "count": 12,
       "window_days": 3
     },
     {
@@ -242,32 +242,20 @@
   "official_status": [
     {
       "feed": "금융위/FIU:목록:p1",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p2",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
-    },
-    {
-      "feed": "금융위/FIU:목록:p3",
-      "ok": true,
-      "count": 10,
-      "method": "direct_official_board"
+      "ok": false,
+      "count": 0,
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:RSS",
       "ok": false,
       "count": 0,
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "The read operation timed out"
     },
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 28,
+      "count": 0,
       "method": "body_relevance"
     },
     {
@@ -415,25 +403,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,13 +415,25 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -463,7 +445,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -472,6 +454,12 @@
       "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -500,13 +488,59 @@
   "items": [
     {
       "region": "국내",
+      "query": "가상자산 AML",
+      "title": "北, 8조원대 암호화폐 해킹 배후 지목… 불과 20분 걸린 가공할 능력",
+      "source": "조선일보",
+      "source_url": "https://www.chosun.com",
+      "source_domain": "www.chosun.com",
+      "date": "Sat, 31 Oct 2026 19:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOR3lnOHZoZFdoVV9fUEtEdGxWWW81RlkzNjVhZFJ2M3NFMmdHZGZDWG84WjY5M20xcklHS3BPWmRHblI0TGhKRGFyRkJVdzNWdnREaGR3RVN4em5xRDB3WlBZSDJCaHBudXhBLVc2a0xGU29OUmVaSmFNX1JLUDZXYVJYdWM?oc=5",
+      "tags": [
+        "가상자산"
+      ],
+      "description": "北, 8조원대 암호화폐 해킹 배후 지목… 불과 20분 걸린 가공할 능력 조선일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "축구선수 나잉골란, 자금세탁 혐의로 징역 2년 구형?",
+      "source": "판다랭크",
+      "source_url": "https://pandarank.net",
+      "source_domain": "pandarank.net",
+      "date": "Sat, 31 Oct 2026 15:13:14 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBGSnV4djhXeDRKajh0ZXBZbHpRdEUtR2k2b1hOWWN2UlMzTHYxSUQ3eUF5R3dFbHRaNF9HMDdhS3pQbUl3RDFZ?oc=5",
+      "tags": [
+        "자금세탁"
+      ],
+      "description": "축구선수 나잉골란, 자금세탁 혐의로 징역 2년 구형? 판다랭크",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "가상자산 보이스피싱 환급 자동 아니다…통신사기피해환급법 개정안 10월 시행 예정",
+      "source": "위키트리",
+      "source_url": "https://m.wikitree.co.kr",
+      "source_domain": "m.wikitree.co.kr",
+      "date": "Sat, 31 Oct 2026 15:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQT0hEc25nSG1wWVhKRGpUc1BtVFZSNW1SRU84R1BjTDlMcV9pSm43c083YW5IM2lnNzYxbUstSFdRRE00XzRPSWwzOVFMYTZBRzRVSGk3SllxWE9KT1dMVG5MWG1uUERyZTNoUEc1YVJoU25KZVFtVm54UUZ5OVFGT2lCaENOTEFkc3hITWRmWndaNm1HcDgzQU9ILWwwZmt5eHlickN3?oc=5",
+      "tags": [
+        "가상자산",
+        "사기"
+      ],
+      "description": "가상자산 보이스피싱 환급 자동 아니다…통신사기피해환급법 개정안 10월 시행 예정 위키트리",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "자금세탁",
       "title": "美 재무부, 해외 지시 의심 송금 80억 달러 포착…자금세탁·테러자금 수사 확대",
       "source": "파이낸스투데이",
-      "source_url": "https://www.fntoday.co.kr",
-      "source_domain": "www.fntoday.co.kr",
+      "source_url": "https://fntoday.co.kr",
+      "source_domain": "fntoday.co.kr",
       "date": "Sat, 31 Oct 2026 12:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBwSVBZTXhUWUpxaXl3Qk10aUFBM1h3WXQxT0tlRWVyeFV4ZkVJTDBEcmpBRkIzdkZ6VWpzblFaWFVpVUNkV21KcjlCbFhxWTU2UnNrNngxV29IQ3BmY0tMVnVrbWtYVl9DUVpFOQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE84UzFWLTdGWExObVhXWF9sOFRLVEpkQmd5M3VVbUZEUThoRzdEcEU4QzRTSThLMWFBeXBPRkZqeDlfUmZXZnVFdkpSYm5LYUVPZXlpb25NbFdEMnN3N2lSN3M1V2I0dk0?oc=5",
       "tags": [
         "제재·테러자금",
         "자금세탁"
@@ -522,7 +556,7 @@
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Sat, 31 Oct 2026 10:11:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fLWV6N1A1V3JzekxpY3k3U0oyblpjaDlaOWNYUG95bWtqcEtfd0toeGFhbXhBYm1rYjFPREZsdjY4M2dGQWQwczVPNndjMzhfMzctUEhXZ2pSOGRtdjgwdnVHTUpZcEVOSGZ3SlF30gFzQVVfeXFMTWpaN3VMWmppNlVDTXgxaG1kVEJmallBYU9tUUpaTEVET090VEl6WHladEQ3QVk2TUQ1Mzd4QXctY3oweGFsN3pCa2lseUVUcmRYS0MwQjRFUjBTb1NZX1hZUEFJbUZyUnNsYldVMktxa2hqMA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1qWjd1TFpqaTZVQ014MWhtZFRCZmpZQWFPbVFKWkxFRE9PdFRJelh5WnREN0FZNk1ENTM3eEF3LWN6MHhhbDd6QmtpbHlFVHJkWEtDMEI0RVIwU29TWV9YWVBBSW1GclJzbGJXVTJLcWtoajDSAXNBVV95cUxNalo3dUxaamk2VUNNeDFobWRUQmZqWUFhT21RSlpMRURPT3RUSXpYeVp0RDdBWTZNRDUzN3hBdy1jejB4YWw3ekJraWx5RVRyZFhLQzBCNEVSMFNvU1lfWFlQQUltRnJSc2xiV1UyS3FraGow?oc=5",
       "tags": [
         "가상자산",
         "제재·테러자금"
@@ -752,10 +786,10 @@
       "query": "FIU·STR",
       "title": "FIU, 테더맥스·슈퍼트러스트 접속차단 요청…이지스벤처스 등 3곳 수사의뢰",
       "source": "토요경제",
-      "source_url": "http://m.sateconomy.co.kr",
-      "source_domain": "m.sateconomy.co.kr",
+      "source_url": "https://sateconomy.co.kr",
+      "source_domain": "sateconomy.co.kr",
       "date": "Fri, 30 Oct 2026 10:57:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1PSUgtSnRwUEVxM3JXZUgyTHZzNWFqbnNHQkJLVWVZLUgzNWpuWDRCaVZjVnhISlpoSlVsbjBwN0FMbkVNRTNCajB1YzdRbEo5RlppSW95bW9OYUZ5NlFtS21zdW02ME5RNnRoOGVFc9IBb0FVX3lxTE1PSUgtSnRwUEVxM3JXZUgyTHZzNWFqbnNHQkJLVWVZLUgzNWpuWDRCaVZjVnhISlpoSlVsbjBwN0FMbkVNRTNCajB1YzdRbEo5RlppSW95bW9OYUZ5NlFtS21zdW02ME5RNnRoOGVFcw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9xdm83YXZSVDFWYUo5Si02Vy1tVGVnQ29TeFVRRUJsa1ZPQnpwd2xrMHFCR0JtUUljMjBRUFZKeFRuWjh4ekNVVDh4ajJ4d3pQQllTd0JDY3NiLUJUU3VsOdIBb0FVX3lxTE1PSUgtSnRwUEVxM3JXZUgyTHZzNWFqbnNHQkJLVWVZLUgzNWpuWDRCaVZjVnhISlpoSlVsbjBwN0FMbkVNRTNCajB1YzdRbEo5RlppSW95bW9OYUZ5NlFtS21zdW02ME5RNnRoOGVFcw?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -1166,6 +1200,22 @@
     },
     {
       "region": "국내",
+      "query": "FIU·STR",
+      "title": "FIU, 미신고 가상자산업자 2곳 국내 접속차단 요청",
+      "source": "코인리더스",
+      "source_url": "https://www.coinreaders.com",
+      "source_domain": "www.coinreaders.com",
+      "date": "Fri, 30 Oct 2026 08:00:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5MSzVpZ2tXM0pUdTcyNVhCTVdFMUkxTkJrRl9nUzViTFJpLThRN1JzUEtCZ29TM0FsQmsxS0Q4MGtVa3RpaE1xSFln?oc=5",
+      "tags": [
+        "가상자산",
+        "FIU·규제"
+      ],
+      "description": "FIU, 미신고 가상자산업자 2곳 국내 접속차단 요청 코인리더스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "트래블룰",
       "title": "미신고 가상자산업자 47곳…테더맥스·슈퍼트러스트 ＇접속 차단＇",
       "source": "한국경제TV",
@@ -1177,22 +1227,6 @@
         "가상자산"
       ],
       "description": "미신고 가상자산업자 47곳…테더맥스·슈퍼트러스트 ＇접속 차단＇ 한국경제TV",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "FIU, 미신고 가상자산업자 2곳 국내 접속차단 요청",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Fri, 30 Oct 2026 07:48:21 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IQlhUdjd4Z3VtWV9NUGIwSl9NMWxXUE9JNjBQdlZXN1R1YnU1MDNyMUJVV1ZWMWlqVUkwS2dzVnZkV2J0by1HcFhvTEQzVkp2amlBc1JIWWlkbWvSAWBBVV95cUxNcHBtMjVrUl84MXcxVzZUcU5sdVltMkxhX0NGRk9HdDFJS2Z5LTBwbWVXMTZjc29GMWc2WDJHOTBmM3hoRF8wVk43ekJSLVJRM2JaUUVtQm9WLWxPMURQNUw?oc=5",
-      "tags": [
-        "가상자산",
-        "FIU·규제"
-      ],
-      "description": "FIU, 미신고 가상자산업자 2곳 국내 접속차단 요청 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1311,7 +1345,7 @@
       "source_url": "https://www.mt.co.kr",
       "source_domain": "www.mt.co.kr",
       "date": "Fri, 30 Oct 2026 07:25:01 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5qaGZrekRReFAyc2JERTY5cmNNUXdYQ0lrYUNUb2JVLThmeHBzZHBOOUJzeGdDd0VrUEJTY0ZWQ19GX2NjTkhWdTRZSnAxcUpXbnE1dlFaVDB4ZGpMOXRGd3ZCaC15MVJa0gFuQVVfeXFMT0lmQ1JZWGJVZ05yN2c3RHJUbk8wd09hLU5YN1JMRWdhdm8zX3ZuQnRQUExFV2FkWXZNTVZtYktZOEhKRlE1SzVpdUd6YXR4YzBUaURRVWJFU3BfM21MUVpLMGFGbHlGRXo2OEgwR3c?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBSTE9NNDRjdFhiUTUwelktWEh2VXZFM2xvN3VwdlRHN1VCdDIxR3MyQkx1dVltRFV0dUlZa3N1RmxWRDFzaDQzdC1SMjhGNEJzdEZHRE1YcngzYnZYNjUtZEJNZFVYYTlpc2QwQkUxSHFORHhsYlZjV0Jwd9IBe0FVX3lxTFBSTE9NNDRjdFhiUTUwelktWEh2VXZFM2xvN3VwdlRHN1VCdDIxR3MyQkx1dVltRFV0dUlZa3N1RmxWRDFzaDQzdC1SMjhGNEJzdEZHRE1YcngzYnZYNjUtZEJNZFVYYTlpc2QwQkUxSHFORHhsYlZjV0Jwdw?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -1327,7 +1361,7 @@
       "source_url": "https://biz.newdaily.co.kr",
       "source_domain": "biz.newdaily.co.kr",
       "date": "Fri, 30 Oct 2026 07:21:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1xaU1NTzVyQXhJQ2JyWjg4WDdIYlJoV3BldHdpTVlEcmFIWFJ5RmJ4dXJXMGxCTWk0VWsyeWRLWVk0RFJWZUdsX3ZaS013TmVqVTJuUjJob3hoQ2lMN1JSdzBKcDVGclR1emROLXN3Sjd3cFBLSndwa2cwd9IBgAFBVV95cUxPQmg1TXhPRnk1b3pfVURQd09LNllna2R3T2luaFpQaXV1aEUyeVQ5Q2t4ZkdkaGNZLVFLTGJJbE80cklUZHNaVndUeUFTU2JPZGJPR0tZOENwYU5UbUxwZklmWlI2dDhwSWJqMkk0eW4xWm5qcFVvNFVYRlNUbV9YNg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQmg1TXhPRnk1b3pfVURQd09LNllna2R3T2luaFpQaXV1aEUyeVQ5Q2t4ZkdkaGNZLVFLTGJJbE80cklUZHNaVndUeUFTU2JPZGJPR0tZOENwYU5UbUxwZklmWlI2dDhwSWJqMkk0eW4xWm5qcFVvNFVYRlNUbV9YNtIBgAFBVV95cUxPQmg1TXhPRnk1b3pfVURQd09LNllna2R3T2luaFpQaXV1aEUyeVQ5Q2t4ZkdkaGNZLVFLTGJJbE80cklUZHNaVndUeUFTU2JPZGJPR0tZOENwYU5UbUxwZklmWlI2dDhwSWJqMkk0eW4xWm5qcFVvNFVYRlNUbV9YNg?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -1513,10 +1547,10 @@
       "query": "트래블룰",
       "title": "테더맥스·슈퍼트러스트 접속 막는다…금융당국, 미신고 영업 제동",
       "source": "데일리안",
-      "source_url": "https://m.dailian.co.kr",
-      "source_domain": "m.dailian.co.kr",
+      "source_url": "https://www.dailian.co.kr",
+      "source_domain": "www.dailian.co.kr",
       "date": "Fri, 30 Oct 2026 06:37:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA4OHl5UHJNUVZqZzkzUW5IODV1UHJHUzhpNnhKTFo1UW9tSlZGeFpDemN1Q1JQV05kTVpyZEIzUFFiVi1wNlp1dnExSGo4OGFrVW1j?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPbWwxdGE1Qjd2d0JhREUtZy11cnAtckhBdHh0SGo0bEhCMkhsaUltZnlfOWpfUHRXakpxR182T1hMeWV0RHlxTFVkQzBZOUxuZFVLYTJUdnp0c3oyT0JqS1F3TmFGeldRbkRObTBST1BaTy0wSTdHZW1vNHRWUnU1aXBwMEFOYUdUYmNnZWJNa2NJMzVpX0dRdEdVU01xbmNrMTFkWmdsX1BlLTRxTm1MUmZJUzk3MjAySlI2a05XTHhYWjZpdDZpZVYxQTFRU2RSWVVTS0g2dlV5NzdZd2Vab2NtMVZmSUFtY3RHSGFiQ2cyV0Noa25TRkUwSXY1anp5blpWU2dpTDlfQmZ0LUFtZU1EQlZLMGdUYnA0OVl2SjdhajJiX2tVX1pCZklqQndCVEhsWWNfRjA?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -1547,7 +1581,7 @@
       "source_url": "https://biz.sbs.co.kr",
       "source_domain": "biz.sbs.co.kr",
       "date": "Fri, 30 Oct 2026 06:29:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ZZ3BYN1dNWEVBZTZxNVVUNXhDMU81SWQyMWliQ0o1Z2FDWkFFU3cyS3FLWjloa2N0UW55RkFlNDhUcTFVWUc4TjhzNlZxYTFuck400gFYQVVfeXFMTmdZYTN3TXE0TTdqaDdiMVczUTB0TlVHNVJyLWRaQS1aRDdxMm5lZnd0WUV6NXg0SnRCSWZDOFVTMzc4SG9BYTNPZlBhWl9HSzJBSHFPNE8tUg?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5nWWEzd01xNE03amg3YjFXM1EwdE5VRzVSci1kWkEtWkQ3cTJuZWZ3dFlFejV4NEp0QklmQzhVUzM3OEhvQWEzT2ZQYVpfR0syQUhxTzRPLVLSAVhBVV95cUxOZ1lhM3dNcTRNN2poN2IxVzNRMHROVUc1UnItZFpBLVpEN3EybmVmd3RZRXo1eDRKdEJJZkM4VVMzNzhIb0FhM09mUGFaX0dLMkFIcU80Ty1S?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -1578,7 +1612,7 @@
       "source_url": "https://www.inews24.com",
       "source_domain": "www.inews24.com",
       "date": "Fri, 30 Oct 2026 06:27:32 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE53Sm1WN3hueVk3Vmd0amtoWXc0QW95SHJmLVNxUnJOTXd4em80M1BIYVVlVGY4RTVvc0hucTkwRTllQ091VXpKSA?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE12MFlGZWU5RWxYYjQxNndLcXoxR3F6OVhkbHQ3UTg1aEo3N3lPdEdaTS1fS05hOUJpa3A0Ukdyc1cyY2pXazRRT3Q0RXI?oc=5",
       "tags": [
         "가상자산",
         "FIU·규제"
@@ -2741,7 +2775,7 @@
       "source_url": "https://www.hankookilbo.com",
       "source_domain": "www.hankookilbo.com",
       "date": "Thu, 29 Oct 2026 06:06:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1udjRsNXdtS2ZFYmtqWWxhTXp0elp3WFg0OEpZLVJZd1BJQm9PdnNUZDdtT3luZXl1QUt0NUZDQUwyeDUzaURrV0xKV1BGWUlaRUN4Y0pNMFBJUklManRqU0Rkbmlrd0pQQnBRRjl30gFzQVVfeXFMTV9nR0dsTlNTRFBtM2pXcm9NWmdZUGU1dmJYWnJldU1qeFllSmxkSEJxaXN6TUlLMkJ4cmhPd1VjUmVnTkJDdC1DSVRmUVQyZHJySjRvY1RpQmptcmNrdHBRZ09nUG1PRFktekh1MVBuSk0zYw?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fZ0dHbE5TU0RQbTNqV3JvTVpnWVBlNXZiWFpyZXVNanhZZUpsZEhCcWlzek1JSzJCeHJoT3dVY1JlZ05CQ3QtQ0lUZlFUMmRycko0b2NUaUJqbXJja3RwUWdPZ1BtT0RZLXpIdTFQbkpNM2PSAXNBVV95cUxNX2dHR2xOU1NEUG0zaldyb01aZ1lQZTV2YlhacmV1TWp4WWVKbGRIQnFpc3pNSUsyQnhyaE93VWNSZWdOQkN0LUNJVGZRVDJkcnJKNG9jVGlCam1yY2t0cFFnT2dQbU9EWS16SHUxUG5KTTNj?oc=5",
       "tags": [
         "FIU·규제"
       ],
@@ -3595,10 +3629,10 @@
       "query": "보이스피싱",
       "title": "해외 거점 수사기관 사칭 보이스피싱 조직… 경찰, 관리책 등 15명 검거",
       "source": "세계일보",
-      "source_url": "https://m.segye.com",
-      "source_domain": "m.segye.com",
+      "source_url": "https://www.segye.com",
+      "source_domain": "www.segye.com",
       "date": "Thu, 29 Oct 2026 00:34:44 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE56NW9DQzh3blB1SFJMV055Y2JtbWZ6Qm1TY2F2SnExZlRCOTh1V2xocGxoSC0tUTljODJYcUdlR1VnMTJtaEo2ck1nSUxOTDdE0gFUQVVfeXFMTXFIUnZpMkxFSFFvOUFBcTBDMm80YWx0bzJndld1VGROdFhjaWFlb0w1NXA5dkM2Ui1iWVlJNWpiVEozVTVYVVJiYzNtVDdtazZZdW5n?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE44ZUU2TVRlX1p5MXhxUWVMRTFINC01WnBDd0FPVWs0d1NwNFp1WTBRUmZGemU0T3o2OXZIYnNLQnBQV1pNRzdxdEN0ZkhfMWhpWURmRFh5R03SAVRBVV95cUxNcUhSdmkyTEVIUW85QUFxMEMybzRhbHRvMmd2V3VUZE50WGNpYWVvTDU1cDl2QzZSLWJZWUk1amJUSjNVNVhVUmJjM21UN21rNll1bmc?oc=5",
       "tags": [
         "사기"
       ],
@@ -18927,52 +18961,6 @@
         "자금세탁"
       ],
       "description": "보이스피싱 합수단, 4년간 526명 구속 기소…360억 범죄수익 환수 한국경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소",
-      "source": "뉴시스",
-      "source_url": "https://mobile.newsis.com",
-      "source_domain": "mobile.newsis.com",
-      "date": "Thu, 01 Oct 2026 00:51:22 GMT",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5wVF91eTAwbC1kRmpRVGdjcW1uRXBQVjc5S3RkNy1HaHQ4VGJ2WEdTeGhrTUVWbVUzaEhIZVFsdHBKSWFNODVpUTVZZmhKTWNfdjJYeHdiLTBYcHZYV3luaEt4dFlMNGlWdG45V3JuUzFOMVpGcS0taNIBeEFVX3lxTE5wVF91eTAwbC1kRmpRVGdjcW1uRXBQVjc5S3RkNy1HaHQ4VGJ2WEdTeGhrTUVWbVUzaEhIZVFsdHBKSWFNODVpUTVZZmhKTWNfdjJYeHdiLTBYcHZYV3luaEt4dFlMNGlWdG45V3JuUzFOMVpGcS0taA?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "서울동부지검 보이스피싱 합수부, 4년간 1381명 입건·526명 구속기소 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\"",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Thu, 01 Oct 2026 00:50:35 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB4NmluamI4TkhjdUJfT2J1bUh1OEw4OUg2Sk12MTZnQnBEOUxaQlhSYzAtQ3hUanVfTndNRF9PdVVQV2JUbWpqTE5VY2ZOT3NLRnU3VXl1YmFvZVVfN2pZQ9IBYEFVX3lxTFB4NmluamI4TkhjdUJfT2J1bUh1OEw4OUg2Sk12MTZnQnBEOUxaQlhSYzAtQ3hUanVfTndNRF9PdVVQV2JUbWpqTE5VY2ZOT3NLRnU3VXl1YmFvZVVfN2pZQw?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "서울동부지검 보이스피싱 합수단 \"4년간 1천381명 입건 성과\" 연합뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "ESMA, 사기성 웹사이트 차단·가상자산 동결 권한 요구",
-      "source": "토큰포스트",
-      "source_url": "https://www.tokenpost.kr",
-      "source_domain": "www.tokenpost.kr",
-      "date": "Thu, 01 Oct 2026 00:48:38 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12MWFINGdSc2Jtc1dVbGJiaUZpamM5Nm5acHVNdjhNRDhETW53VzQyQ2dKcHVwT1BYaDlIak5mQk0xQlItSzliaHFoQ1ZRUFQ5VEU0U3M1MG4?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "ESMA, 사기성 웹사이트 차단·가상자산 동결 권한 요구 토큰포스트",
       "collection_method": "google_news_24h"
     }
   ],
