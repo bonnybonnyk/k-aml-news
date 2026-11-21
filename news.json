@@ -1,23 +1,21 @@
 {
-  "updated_at": "2026-11-21T09:31:07.345296+00:00",
+  "updated_at": "2026-11-21T17:06:19.196747+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 5
+      "count": 7
     },
     {
       "feed": "범죄수익",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "count": 0
     },
     {
       "feed": "FIU·STR",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "count": 3
     },
     {
       "feed": "가상자산 AML",
@@ -37,13 +35,12 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "불법사금융",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "count": 0
     },
     {
       "feed": "투자사기",
@@ -57,14 +54,13 @@
     },
     {
       "feed": "마약자금",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "count": 1
     },
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 2
+      "count": 0
     },
     {
       "feed": "탈세",
@@ -74,19 +70,17 @@
     {
       "feed": "횡령·배임",
       "ok": true,
-      "count": 6
+      "count": 4
     },
     {
       "feed": "차명계좌",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "count": 0
     },
     {
       "feed": "제재·테러자금",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
@@ -96,9 +90,9 @@
     },
     {
       "feed": "실무:정보공유·자금차단",
-      "ok": false,
-      "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "ok": true,
+      "count": 2,
+      "window_days": 3
     },
     {
       "feed": "실무:AML 제도변화",
@@ -109,13 +103,13 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 13,
+      "count": 12,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -151,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -168,9 +162,9 @@
     },
     {
       "feed": "실무:회귀검증·FIU정보공유",
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "error": "HTTP Error 429: Too Many Requests"
+      "window_days": 3
     },
     {
       "feed": "실무:회귀검증·상품권깡",
@@ -187,7 +181,7 @@
     {
       "feed": "실무:PG·결제대행 AML",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -273,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -421,19 +415,19 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
-      "ok": true,
-      "count": 4,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불법사금융:p1",
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,25 +439,13 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:외국환:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -475,15 +457,27 @@
       "method": "official_board"
     },
     {
+      "feed": "금융감독원:환치기:p1",
+      "ok": true,
+      "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -504,6 +498,37 @@
   "count": 1200,
   "official_count": 30,
   "items": [
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "브라질 중앙은행 \"법정화폐→스테이블코인 전환, 자금세탁 될 수 있다\"",
+      "source": "디지털투데이",
+      "source_url": "https://www.digitaltoday.co.kr",
+      "source_domain": "www.digitaltoday.co.kr",
+      "date": "Sat, 21 Nov 2026 11:50:36 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE11Vk1DMEYyc1hSbG5qeFBCQzdBZ3Y4VjRrbkEwVXdSVVEwUTVvMHRRN0JiRGQxLW1ISlowS2RVZ0M3bUt4SEF4VFhudERjaVVmWWxpTnRLOWt1bFRyNjdFMjFvdHphSUcwdTI2akpkbVFydkU?oc=5",
+      "tags": [
+        "가상자산",
+        "자금세탁"
+      ],
+      "description": "브라질 중앙은행 \"법정화폐→스테이블코인 전환, 자금세탁 될 수 있다\" 디지털투데이",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "‘비닐장갑 그놈’ 보이스피싱범 잡고 보니…피해 액수는?",
+      "source": "JTBC",
+      "source_url": "https://news.jtbc.co.kr",
+      "source_domain": "news.jtbc.co.kr",
+      "date": "Sat, 21 Nov 2026 08:00:36 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ZQXJqYnhFNVlXd3FyQjVoY2NKbFFFZXBxTEdMdXhlNTVaVW1ZZ3NpRERKNGdsNjZqNWRsOXZ4OWd3RjZ1MkhINDItZ0dUc2thVTh1Qg?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "‘비닐장갑 그놈’ 보이스피싱범 잡고 보니…피해 액수는? JTBC",
+      "collection_method": "google_news_24h"
+    },
     {
       "region": "국내",
       "query": "투자사기",
@@ -553,6 +578,21 @@
     },
     {
       "region": "국내",
+      "query": "횡령·배임",
+      "title": "李 \"대장동 5500억 공익환수가 배임죄라면, 100% 민간개발은?\"",
+      "source": "아시아경제",
+      "source_url": "https://www.asiae.co.kr",
+      "source_domain": "www.asiae.co.kr",
+      "date": "Sat, 21 Nov 2026 01:48:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNVRHbXVqRGZrbkN5dEpaUzktcVV0X1RKQmE3OGxydzM5U3hLRkw3ZkdNRjFKNXV4QVZwQzB3YW81WmZjSXBpYm1PT0tSbWx1bFdFRmZCRTZtQnZtZVV3Nm5EM05kOC01TFhfVTNMdXhNd2J6V0FZcWRhZGtramlmNW53?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "李 \"대장동 5500억 공익환수가 배임죄라면, 100% 민간개발은?\" 아시아경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
       "query": "트래블룰",
       "title": "새 트래블룰 시행 코앞인데…3가지 구멍 뚫렸다[기고]",
       "source": "이데일리",
@@ -595,6 +635,21 @@
         "자금세탁"
       ],
       "description": "일본, 가상자산 자금세탁 취약 요인 명시…거래소 감독 지속 토큰포스트",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "이 대통령 ‘대장동 인터뷰’ 공유하며 “5500억원 공익환수가 왜 배임인가”",
+      "source": "주간경향",
+      "source_url": "https://weekly.khan.co.kr",
+      "source_domain": "weekly.khan.co.kr",
+      "date": "Fri, 20 Nov 2026 23:21:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5DdEFiXzhWOFVJbmVleEhRQ1hEMDVZNGNMRXdTT2lmQlNUd2kza3gwTDZWMndNemswWHBBZTNqeDdSTG84MkR0NXZSSHdkNkE4a244NDFyV0FXcWdmOXc?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "이 대통령 ‘대장동 인터뷰’ 공유하며 “5500억원 공익환수가 왜 배임인가” 주간경향",
       "collection_method": "google_news_24h"
     },
     {
@@ -5122,21 +5177,6 @@
         "사기"
       ],
       "description": "용인시 \"어르신 보이스피싱 피해 보상해 드립니다\" 뉴시스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "‘비닐장갑 그놈’ 보이스피싱범 잡고 보니…피해 액수는?",
-      "source": "JTBC",
-      "source_url": "https://news.jtbc.co.kr",
-      "source_domain": "news.jtbc.co.kr",
-      "date": "Wed, 11 Nov 2026 19:04:52 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ZQXJqYnhFNVlXd3FyQjVoY2NKbFFFZXBxTEdMdXhlNTVaVW1ZZ3NpRERKNGdsNjZqNWRsOXZ4OWd3RjZ1MkhINDItZ0dUc2thVTh1Qg?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "‘비닐장갑 그놈’ 보이스피싱범 잡고 보니…피해 액수는? JTBC",
       "collection_method": "google_news_24h"
     },
     {
@@ -18909,52 +18949,6 @@
         "도박"
       ],
       "description": "제주경찰청, 불법 도박사이트 운영 일당 74명 검거 제주일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "5900억원 도박자금 세탁 혐의…대구경찰, 80명 검거",
-      "source": "경북일보",
-      "source_url": "https://www.kyongbuk.co.kr",
-      "source_domain": "www.kyongbuk.co.kr",
-      "date": "Tue, 27 Oct 2026 08:07:55 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBuQU0tN3k3bXYxLWxEY1VWMUN3ZVBDZS1rNUROTnJLNUhDMWpXbGUyU3FPOGZJRGpRN1dVQVljX0ZQc21VN2JBX2gxZzRReV9CODBNQW92ZUlXbnFaNWxfNmljSkp3Y1g0dFhCYWhtaw?oc=5",
-      "tags": [
-        "도박"
-      ],
-      "description": "5900억원 도박자금 세탁 혐의…대구경찰, 80명 검거 경북일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "산림조합중앙회, 자금세탁방지 역량 강화…금융 신뢰도 높인다",
-      "source": "나무신문",
-      "source_url": "https://www.imwood.co.kr",
-      "source_domain": "www.imwood.co.kr",
-      "date": "Tue, 27 Oct 2026 08:02:19 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBGaFhFRmsxS1dKSnhOa2hPbVZIMHZpdUcyUXZNXzhJOUp3WTc1NE5yU19jQUwydHNJYzREa3pDWExqX25Bb0R6UHVoSXZ4RWtpTFVqdU84THVTMTllYk54N01KcTR6SGNmTWc?oc=5",
-      "tags": [
-        "FIU·규제",
-        "자금세탁"
-      ],
-      "description": "산림조합중앙회, 자금세탁방지 역량 강화…금융 신뢰도 높인다 나무신문",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "트래블룰",
-      "title": "크립파인(CrypFine), 코인원 트래블룰 연동 완료…다층 보안·컴플라이언스 체계 강화",
-      "source": "한국공공정책신문",
-      "source_url": "http://knpp.co.kr",
-      "source_domain": "knpp.co.kr",
-      "date": "Tue, 27 Oct 2026 07:44:35 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9saVRBc254NWNWSTIyNTd0SXB3SE1qSmZ0NWFRY25EUEF6eTNMUm9YMjBxNG11TlZIa0xncUNlQVFYS1U?oc=5",
-      "tags": [
-        "가상자산"
-      ],
-      "description": "크립파인(CrypFine), 코인원 트래블룰 연동 완료…다층 보안·컴플라이언스 체계 강화 한국공공정책신문",
       "collection_method": "google_news_24h"
     }
   ],
