@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-22T17:57:29.961589+00:00",
+  "updated_at": "2026-11-22T23:27:03.888384+00:00",
   "retention_days": 90,
   "feed_status": [
     {
       "feed": "자금세탁",
       "ok": true,
-      "count": 2
+      "count": 1
     },
     {
       "feed": "범죄수익",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "FIU·STR",
@@ -60,7 +60,7 @@
     {
       "feed": "불법도박",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "탈세",
@@ -97,20 +97,20 @@
     {
       "feed": "실무:AML 제도변화",
       "ok": true,
-      "count": 5,
+      "count": 4,
       "window_days": 3
     },
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 7,
+      "count": 4,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
-      "ok": true,
-      "count": 1,
-      "window_days": 3
+      "ok": false,
+      "count": 0,
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "feed": "실무:불법외환·관세",
@@ -139,7 +139,7 @@
     {
       "feed": "실무:FIU·STR 정보공유",
       "ok": true,
-      "count": 4,
+      "count": 3,
       "window_days": 3
     },
     {
@@ -199,7 +199,7 @@
     {
       "feed": "실무:외화·상품권 우회",
       "ok": true,
-      "count": 0,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -267,7 +267,7 @@
     {
       "feed": "금융위/FIU:본문검증",
       "ok": true,
-      "count": 29,
+      "count": 30,
       "method": "body_relevance"
     },
     {
@@ -415,13 +415,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
+      "feed": "금융감독원:가상자산:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:자금세탁:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -433,7 +433,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:가상자산:p1",
+      "feed": "금융감독원:자금세탁:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -457,13 +457,13 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:환치기:p1",
+      "feed": "금융감독원:시세조종:p1",
       "ok": true,
-      "count": 0,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:범죄수익:p1",
+      "feed": "금융감독원:환치기:p1",
       "ok": true,
       "count": 0,
       "method": "official_board"
@@ -475,9 +475,9 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:시세조종:p1",
+      "feed": "금융감독원:범죄수익:p1",
       "ok": true,
-      "count": 10,
+      "count": 0,
       "method": "official_board"
     },
     {
@@ -500,21 +500,6 @@
   "items": [
     {
       "region": "국내",
-      "query": "보이스피싱",
-      "title": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다",
-      "source": "시사파일",
-      "source_url": "http://www.sisafile.co.kr",
-      "source_domain": "www.sisafile.co.kr",
-      "date": "Sun, 22 Nov 2026 11:32:43 GMT",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9uRWI4cHlLWHNyV000UUllWUUyYXV0bDBkSVNEd0NmV3U2Z2l6VVRIZ1pSbWp1S3QyUXluY28yNUNwOXd5YjI1ZFpuN2ZNeWZqUjBGV3ZtdEZJZGhfdVktVThZOWNNVmVPY1h2X0FnRlhRUdIBckFVX3lxTE9uRWI4cHlLWHNyV000UUllWUUyYXV0bDBkSVNEd0NmV3U2Z2l6VVRIZ1pSbWp1S3QyUXluY28yNUNwOXd5YjI1ZFpuN2ZNeWZqUjBGV3ZtdEZJZGhfdVktVThZOWNNVmVPY1h2X0FnRlhRUQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다 시사파일",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
       "query": "불법사금융",
       "title": "금감원, AI로 불법사금융 무효 확인서 심사",
       "source": "연합뉴스TV",
@@ -526,6 +511,21 @@
         "불법사금융"
       ],
       "description": "금감원, AI로 불법사금융 무효 확인서 심사 연합뉴스TV",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다",
+      "source": "타임뉴스",
+      "source_url": "https://www.timenews.co.kr",
+      "source_domain": "www.timenews.co.kr",
+      "date": "Sun, 22 Nov 2026 09:02:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE94UGR5S0h0Tk5Id0JqWGxkT2d1LWNBX0dfVmZMRTZwNlJrb29lLVVsNHM4aENRcDcxYld0ZTN2alA0ZmxnRkNRR0FkMERpY214eFlaYw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다 타임뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -571,6 +571,21 @@
         "사기"
       ],
       "description": "대구시, AI 모의전화로 어르신 보이스피싱 대응 훈련 경북매일",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "금감원, AI로 불법사금융 무효확인서 심사‥이자율 계산도 척척",
+      "source": "MBC 뉴스",
+      "source_url": "https://imnews.imbc.com",
+      "source_domain": "imnews.imbc.com",
+      "date": "Sun, 22 Nov 2026 05:56:34 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBTYmx3NmZKV2ZmaXJzMU9WcDhoR2JuY1RNeVpfQm9kM1o2dkltQ09ZbkhZU2xaVXFiNmZGbGs2SWNuT3ZVdVVqUVJBQ0E2dnJNTEVMdWZLS3l4anNfTXRURmZGOVNYVk9jRlQ5VldydGdaNTR10gF0QVVfeXFMTnIxSWVzeERMZjRUWVk5dzRyUTZTVUl1ZHFidm5XVURIV1N2azF0WGx1YWFqYTZfb0gtZFIyYlNVZEkxcFItMWg2ejBjOEIydDJEOFNwWmd5RVprb3l0VW8zR3NmUFQ3aUM0WklVaHFSYTdJdDU?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "금감원, AI로 불법사금융 무효확인서 심사‥이자율 계산도 척척 MBC 뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -632,21 +647,6 @@
         "불법사금융"
       ],
       "description": "금감원, 불법사금융 무효확인서 심사에 AI 도입 KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법사금융",
-      "title": "금감원, AI로 불법사금융 무효확인서 심사…이자율 계산도 척척",
-      "source": "연합뉴스",
-      "source_url": "https://www.yna.co.kr",
-      "source_domain": "www.yna.co.kr",
-      "date": "Sun, 22 Nov 2026 03:00:05 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBRQVlZZTE4UHcwOENFc1E1TmhCdmJBbmxaWTBLM2M2NDcyOGQ3bmkyMzh0OExPS1p6akZ1YWp5aGYzQkYzSlN5VFRBLTNwUmpkMFFmZ09HcFpTTmfSAWBBVV95cUxOSEtXTFZvb3JDU013S1FSel8tandocGg1bEZZLS16MVdWa0IxTGFyZTdrWXpGRVh4Z3FjWTVQOW9mYmdxR3lyelpYdUdKSVZ1VEg3Y0kzTU1LVlZfaGpVYjA?oc=5",
-      "tags": [
-        "불법사금융"
-      ],
-      "description": "금감원, AI로 불법사금융 무효확인서 심사…이자율 계산도 척척 연합뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1460,6 +1460,21 @@
         "FIU·규제"
       ],
       "description": "FIU, 가상자산사업자 28곳 부칙신고 마무리…대주주·재무건전성 '관건' 지디넷코리아",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "FIU·STR",
+      "title": "“물건 안 팔고 상품권만 현금화?” 영주시, 부정유통 일제점검",
+      "source": "코리아이글뉴스",
+      "source_url": "https://www.koreaeaglenews.com",
+      "source_domain": "www.koreaeaglenews.com",
+      "date": "Fri, 20 Nov 2026 01:45:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBFQXRXUTlrZjNXUWw3dlRIMlVrOEh2ZmxzY3Z0bkZPRklod1BfaEtaTWdycWJZNDVXSUJvdnZUZ0wxdnYzQ2RXMzBCSFNxZzk2VmNIcTFDVFp3bm0tMmpJWmRJX0ZQUTE5UVpLWFZ6aHpOSkU?oc=5",
+      "tags": [
+        "AML"
+      ],
+      "description": "“물건 안 팔고 상품권만 현금화?” 영주시, 부정유통 일제점검 코리아이글뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -18931,21 +18946,6 @@
         "도박"
       ],
       "description": "유명 ‘픽스터’로 회원 유치…4천 9백억 원대 불법 도박사이트 운영진 무더기 검거 KBS 뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "신상진 성남시장 “대장동 범죄수익 환수 때까지 끝까지 대응”",
-      "source": "비욘드포스트",
-      "source_url": "https://www.beyondpost.co.kr",
-      "source_domain": "www.beyondpost.co.kr",
-      "date": "Tue, 27 Oct 2026 22:12:20 GMT",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBKMnRuLTBkTElBVG03WDR3ZTNwbExGaFk5dHRWMTZUYkVpRDFLc0Q0Q1JndkF4Yzh2aXRRR1BndXFEYVV3LXRnQWxKTUNJU2VLa1RZeWVCTDdRRm1kaGozbUtvZGppZmVEOXczb0xOU2xaV2FEQlpiS2hGalg?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "신상진 성남시장 “대장동 범죄수익 환수 때까지 끝까지 대응” 비욘드포스트",
       "collection_method": "google_news_24h"
     }
   ],
