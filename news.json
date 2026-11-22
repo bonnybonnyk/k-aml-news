@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T02:29:24.180930+00:00",
+  "updated_at": "2026-11-22T10:10:46.058741+00:00",
   "retention_days": 90,
   "feed_status": [
     {
@@ -15,12 +15,12 @@
     {
       "feed": "FIU·STR",
       "ok": true,
-      "count": 1
+      "count": 2
     },
     {
       "feed": "가상자산 AML",
       "ok": true,
-      "count": 3
+      "count": 1
     },
     {
       "feed": "지갑·해외거래소",
@@ -35,17 +35,17 @@
     {
       "feed": "보이스피싱",
       "ok": true,
-      "count": 3
+      "count": 4
     },
     {
       "feed": "불법사금융",
       "ok": true,
-      "count": 0
+      "count": 6
     },
     {
       "feed": "투자사기",
       "ok": true,
-      "count": 1
+      "count": 0
     },
     {
       "feed": "환치기·외환",
@@ -80,18 +80,18 @@
     {
       "feed": "제재·테러자금",
       "ok": true,
-      "count": 0
+      "count": 1
     },
     {
       "feed": "실무:AML 운영·시스템",
       "ok": true,
-      "count": 5,
+      "count": 3,
       "window_days": 3
     },
     {
       "feed": "실무:정보공유·자금차단",
       "ok": true,
-      "count": 2,
+      "count": 1,
       "window_days": 3
     },
     {
@@ -103,14 +103,14 @@
     {
       "feed": "실무:가상자산 AML 실무",
       "ok": true,
-      "count": 11,
+      "count": 6,
       "window_days": 3
     },
     {
       "feed": "실무:PG·가상계좌",
-      "ok": true,
-      "count": 1,
-      "window_days": 3
+      "ok": false,
+      "count": 0,
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "feed": "실무:불법외환·관세",
@@ -121,7 +121,7 @@
     {
       "feed": "실무:신종수법·취약점",
       "ok": true,
-      "count": 3,
+      "count": 2,
       "window_days": 3
     },
     {
@@ -133,7 +133,7 @@
     {
       "feed": "실무:미신고 VASP·불법영업",
       "ok": true,
-      "count": 3,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -145,7 +145,7 @@
     {
       "feed": "실무:상품권·DEX 현금화",
       "ok": true,
-      "count": 1,
+      "count": 0,
       "window_days": 3
     },
     {
@@ -186,9 +186,9 @@
     },
     {
       "feed": "실무:해외결제 AML",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "window_days": 3
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "feed": "실무:계정도용·현금화",
@@ -198,9 +198,9 @@
     },
     {
       "feed": "실무:외화·상품권 우회",
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "window_days": 3
+      "error": "HTTP Error 429: Too Many Requests"
     },
     {
       "feed": "출처집중:asiae.co.kr",
@@ -415,25 +415,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:보이스피싱:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
       "feed": "금융감독원:가상자산:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:불법사금융:p1",
-      "ok": true,
-      "count": 10,
-      "method": "official_board"
-    },
-    {
-      "feed": "금융감독원:대포통장:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -445,15 +427,27 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:AML:p1",
+      "feed": "금융감독원:대포통장:p1",
       "ok": true,
-      "count": 4,
+      "count": 10,
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:불공정거래:p1",
+      "feed": "금융감독원:보이스피싱:p1",
       "ok": true,
       "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:불법사금융:p1",
+      "ok": true,
+      "count": 10,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:AML:p1",
+      "ok": true,
+      "count": 4,
       "method": "official_board"
     },
     {
@@ -463,7 +457,7 @@
       "method": "official_board"
     },
     {
-      "feed": "금융감독원:외국환:p1",
+      "feed": "금융감독원:불공정거래:p1",
       "ok": true,
       "count": 10,
       "method": "official_board"
@@ -478,6 +472,12 @@
       "feed": "금융감독원:범죄수익:p1",
       "ok": true,
       "count": 0,
+      "method": "official_board"
+    },
+    {
+      "feed": "금융감독원:외국환:p1",
+      "ok": true,
+      "count": 10,
       "method": "official_board"
     },
     {
@@ -501,6 +501,172 @@
     {
       "region": "국내",
       "query": "보이스피싱",
+      "title": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다",
+      "source": "타임뉴스",
+      "source_url": "https://www.timenews.co.kr",
+      "source_domain": "www.timenews.co.kr",
+      "date": "Sun, 22 Nov 2026 09:02:01 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE94UGR5S0h0Tk5Id0JqWGxkT2d1LWNBX0dfVmZMRTZwNlJrb29lLVVsNHM4aENRcDcxYld0ZTN2alA0ZmxnRkNRR0FkMERpY214eFlaYw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다 타임뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "금감원, AI로 불법사금융 무효 확인서 심사",
+      "source": "연합뉴스TV",
+      "source_url": "https://www.yonhapnewstv.co.kr",
+      "source_domain": "www.yonhapnewstv.co.kr",
+      "date": "Sun, 22 Nov 2026 09:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9jbWZzR2E5ZXA2V3BoUy1admphTXdReGVFTTZ3NTUzYl9QTzg2SmRGNHpuLVBpVE52UW9KbXB4eFJBLWZ6RWk3NEt1S1ZEaDhrOVZFeEtkYVFmNTJrckgzQUhSOEdYRXc?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "금감원, AI로 불법사금융 무효 확인서 심사 연합뉴스TV",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "횡령·배임",
+      "title": "법원, 명륜당 회장 횡령 의혹 중수청 추가 압수수색영장 기각",
+      "source": "아주경제",
+      "source_url": "https://www.ajunews.com",
+      "source_domain": "www.ajunews.com",
+      "date": "Sun, 22 Nov 2026 08:30:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80c2V3TklLNnk2RkUxR2ZxaDk5bVJHX3BMX0N0TEh0S1Y4bE0xaFB5YVViWFBLTjlSSDdCTG5ocTU0TURjdVdNck5CTFRHeVM0bnNibVdyMDdUUdIBWEFVX3lxTE1MQTFBeU91a0tiSUtfRXNNeUhLOHVkSjhoT2JKNUF2ZWtndGxsWEs5WVZMbXV3UDUyWk5XRUx6OWRPQklpVV9xVWFNYWJ3bXpBRzl3ZURDRVU?oc=5",
+      "tags": [
+        "횡령·배임"
+      ],
+      "description": "법원, 명륜당 회장 횡령 의혹 중수청 추가 압수수색영장 기각 아주경제",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "대구시, AI 모의전화로 어르신 보이스피싱 대응 훈련",
+      "source": "경북매일",
+      "source_url": "https://www.kbmaeil.com",
+      "source_domain": "www.kbmaeil.com",
+      "date": "Sun, 22 Nov 2026 06:59:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1POE1FSU9jVXg2Y1drcl9NVGozalBVbnZuX0V1U2tyd282ck1FelBUNlAzMDhLcVFaWV9IT29TUjM1N25mdzROZWxld1oybEJrMkprN0ttcDQzdw?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "대구시, AI 모의전화로 어르신 보이스피싱 대응 훈련 경북매일",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "금감원, AI로 불법사금융 무효확인서 심사‥이자율 계산도 척척",
+      "source": "MBC 뉴스",
+      "source_url": "https://imnews.imbc.com",
+      "source_domain": "imnews.imbc.com",
+      "date": "Sun, 22 Nov 2026 05:56:34 GMT",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBTYmx3NmZKV2ZmaXJzMU9WcDhoR2JuY1RNeVpfQm9kM1o2dkltQ09ZbkhZU2xaVXFiNmZGbGs2SWNuT3ZVdVVqUVJBQ0E2dnJNTEVMdWZLS3l4anNfTXRURmZGOVNYVk9jRlQ5VldydGdaNTR10gF0QVVfeXFMTnIxSWVzeERMZjRUWVk5dzRyUTZTVUl1ZHFidm5XVURIV1N2azF0WGx1YWFqYTZfb0gtZFIyYlNVZEkxcFItMWg2ejBjOEIydDJEOFNwWmd5RVprb3l0VW8zR3NmUFQ3aUM0WklVaHFSYTdJdDU?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "금감원, AI로 불법사금융 무효확인서 심사‥이자율 계산도 척척 MBC 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "자금세탁",
+      "title": "\"전문가 없이도 자금세탁방지\"…AI로 문턱 낮춘 '유스비'",
+      "source": "이데일리",
+      "source_url": "https://www.edaily.co.kr",
+      "source_domain": "www.edaily.co.kr",
+      "date": "Sun, 22 Nov 2026 05:35:52 GMT",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSlpLZEE4eGxxN29KMzA2QVgwdThZWmN1azhWeFIyNTI3Z1hjUElvYXJqeVpZZkpxV0EzU3JPaWQycm5EZlZUVHQ3N2wtbldRalFPdl9oRGpIZjlkcmxvRW1wTkNPQmR5U0xFdXVySU8yS0FPS0M0Yk5ta3NfVjk4Vg?oc=5",
+      "tags": [
+        "FIU·규제",
+        "자금세탁"
+      ],
+      "description": "\"전문가 없이도 자금세탁방지\"…AI로 문턱 낮춘 '유스비' 이데일리",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "금감원, 불법사금융 피해 심사에 AI 도입… 처리 속도 10배 빨라져",
+      "source": "Chosunbiz",
+      "source_url": "https://biz.chosun.com",
+      "source_domain": "biz.chosun.com",
+      "date": "Sun, 22 Nov 2026 03:04:38 GMT",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQN0ZYa2Y5V084NmFVV1ZRMDBuSGNqMVVMWmM5dzRFV0VFS2pqUUVWYlZ6eFp4UlVOZ180cjAwRWJTd0lTYWY3Wm01TUJZVFZ3bnhXRkw1bnByNHFYOUJYTU1XdFBiaEUwZlRrSDlpNnpvXzNwYlljbnZmNDlBS3ctTGd3aFpHeW1ydE1MTHJDS2d6UUJX0gGUAUFVX3lxTFA3RlhrZjlXTzg2YVVXVlEwMG5IY2oxVUxaYzl3NEVXRUVLampRRVZiVnp4WnhSVU5nXzRyMDBFYlN3SVNhZjdabTVNQllUVndueFdGTDVucHI0cVg5QlhNTVd0UGJoRTBmVGtIOWk2em9fM3BiWWNudmY0OUFLdy1MZ3doWkd5bXJ0TUxMckNLZ3pRQlc?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "금감원, 불법사금융 피해 심사에 AI 도입… 처리 속도 10배 빨라져 Chosunbiz",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "불법사금융 무효 여부 AI가 판별…무효 확인 10배 빨라진다",
+      "source": "한국일보",
+      "source_url": "https://www.hankookilbo.com",
+      "source_domain": "www.hankookilbo.com",
+      "date": "Sun, 22 Nov 2026 03:03:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE50YkxDdWx1VGFfTWRBZjJKdDBHVW5aVUJVWWFwQm5hdHp6ekZRaUNOWEw4NHp0eGZ5X3hmOUpYUGwtZWZEZUpyb3dXNVpWNDhOYnBQbzBwVmJ5TVNMNUpEdklVUjl4MVNSdzdqYlhjZkt6N0HSAXNBVV95cUxOdGJMQ3VsdVRhX01kQWYySnQwR1VuWlVCVVlhcEJuYXR6enpGUWlDTlhMODR6dHhmeV94ZjlKWFBsLWVmRGVKcm93VzVaVjQ4TmJwUG8wcFZieU1TTDVKRHZJVVI5eDFTUnc3amJYY2ZLejdB?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "불법사금융 무효 여부 AI가 판별…무효 확인 10배 빨라진다 한국일보",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "불법사금융",
+      "title": "금감원, 불법사금융 무효확인서 심사에 AI 도입",
+      "source": "KBS 뉴스",
+      "source_url": "https://news.kbs.co.kr",
+      "source_domain": "news.kbs.co.kr",
+      "date": "Sun, 22 Nov 2026 03:01:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE13QktMZXhmVmg5MzdrZnVva0hZNE9EMUxHdHl2X3NfVGs1azBydXllQTE0bVh5d3NKUm1RZ2J2WmVBZkhZUXBIanZSdnBQY1dmVWdsVk5OWlJpZzJlQUlyUzZnODgzZw?oc=5",
+      "tags": [
+        "불법사금융"
+      ],
+      "description": "금감원, 불법사금융 무효확인서 심사에 AI 도입 KBS 뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
+      "title": "대구광역시, AI 모의통화로 보이스피싱 체험...고령층 교육 운영",
+      "source": "국제뉴스",
+      "source_url": "https://www.gukjenews.com",
+      "source_domain": "www.gukjenews.com",
+      "date": "Sun, 22 Nov 2026 02:33:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9admV6cllzV0p6RGtqRjB3MkRtQm1IYjQ0dFJBY0JNVHlHdlJsS2YzNVFIWmxzaE5CODdXTjQ1RUkzc1VtMy1HdWtUeHd6UUxqeEhSWXdhUUhjUVBOU2NxcDBWX2JPU25TZWY4QlZ3?oc=5",
+      "tags": [
+        "사기"
+      ],
+      "description": "대구광역시, AI 모의통화로 보이스피싱 체험...고령층 교육 운영 국제뉴스",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "제재·테러자금",
+      "title": "김현정 의원, 초국가범죄 자금 동결하는 '테러자금금지법' 개정안 대표발의",
+      "source": "금융계",
+      "source_url": "https://www.fn1966.com",
+      "source_domain": "www.fn1966.com",
+      "date": "Sun, 22 Nov 2026 02:17:54 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBKbnVnSUZINFJ3NjdrS1pxamVjdEJYdnVQWExjOHNVT0YwUk0wZjlpSHFWV3NxRzYxcDhwSGxSTk1xazl6LVcwNGYzNWZOamYtQklMeTNHNkFBNXhuelZoWEZMSzJobmPSAWtBVV95cUxQb3lrQWdrRjItZ1htWXNnMjdDYUFlc0FxaTkzeVVsTDk4QlZPMTVrdXRTRkdZSHltVFVKRTRzZ25CbnptS0xpMjQxMFR6czNMZUVuTFh0WElXaEx3NjJtVFhOVUZnWktxeXNDTQ?oc=5",
+      "tags": [
+        "제재·테러자금"
+      ],
+      "description": "김현정 의원, 초국가범죄 자금 동결하는 '테러자금금지법' 개정안 대표발의 금융계",
+      "collection_method": "google_news_24h"
+    },
+    {
+      "region": "국내",
+      "query": "보이스피싱",
       "title": "대구광역시, AI 모의통화로 어르신 보이스피싱 대응력 높인다",
       "source": "더쎈뉴스",
       "source_url": "http://www.mhns.co.kr",
@@ -511,21 +677,6 @@
         "사기"
       ],
       "description": "대구광역시, AI 모의통화로 어르신 보이스피싱 대응력 높인다 더쎈뉴스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다",
-      "source": "서프라이즈뉴스",
-      "source_url": "https://www.surprisenews.kr",
-      "source_domain": "www.surprisenews.kr",
-      "date": "Sat, 21 Nov 2026 23:35:49 GMT",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5jaUlrUGFkZVZSTjBpcUllUXU1a3l2LWx2WlEwb2JKZ0ViWHMxUWZxcFlSLXZ5cGJXQ3BTa3VrMDY4ejNkWk9KRWt2WU01Qi03WXBrZy0xRXA5emd1UE9ReUYzenpleHBMWTlpbVpmTQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "대구시, AI 모의통화로 어르신 보이스피싱 대응력 높인다 서프라이즈뉴스",
       "collection_method": "google_news_24h"
     },
     {
@@ -1548,7 +1699,7 @@
       "source_url": "https://it.chosun.com",
       "source_domain": "it.chosun.com",
       "date": "Thu, 19 Nov 2026 21:10:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBPNHdNNWhxNWU2S21LOHRMZ0FIWGR5emdjSUNHX2tjZzVuc0x4RUk4Tjc1SnlqTHBtSmtJNV9aMHBSOHhBVjBxMjJvQVplQVRkTVg4YTc5a0RZOGZaN1N0azJyNFpFWVlQc3ZIODI0RGotbm9y0gF0QVVfeXFMUE80d001aHE1ZTZLbUs4dExnQUhYZHl6Z2NJQ0dfa2NnNW5zTHhFSThONzVKeWpMcG1Ka0k1X1owcFI4eEFWMHEyMm9BWmVBVGRNWDhhNzlrRFk4Zlo3U3RrMnI0WkVZWVBzdkg4MjREai1ub3I?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAzNGxSbDFkWHZGXzQ2M0pObThSQno2T3pXV2ZwX3dPTGVmNkRUcFNwaXVTTG9SNzhmck5TV1RTamFkZW9KMmNuWWJpXzE4S1lCQzlUbnhjdThFVGxidTZTaFZMR1lGNGhPYlhhLUN0WHPSAXRBVV95cUxQTzR3TTVocTVlNkttSzh0TGdBSFhkeXpnY0lDR19rY2c1bnNMeEVJOE43NUp5akxwbUprSTVfWjBwUjh4QVYwcTIyb0FaZUFUZE1YOGE3OWtEWThmWjdTdGsycjRaRVlZUHN2SDgyNERqLW5vcg?oc=5",
       "tags": [
         "가상자산"
       ],
@@ -18795,161 +18946,6 @@
         "가상자산"
       ],
       "description": "가상자산 범죄 호스팅 Virtualine 주 도메인 압수 토큰포스트",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "사기·돈세탁에 멈춘 법정…홍콩, 밤에도 재판 열까",
-      "source": "서울경제",
-      "source_url": "https://www.sedaily.com",
-      "source_domain": "www.sedaily.com",
-      "date": "Tue, 27 Oct 2026 21:39:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WZlA3aWtDSnhOUExoLU1PMmFQMTJWeWM3V1dLR3ZweGduZlotQUJHcEROQlg0WkdPbDVvbUt3dUdwYUFONHRucF9WWFNiN3l6Q0HSAVNBVV95cUxPWnNRMVE0UFVweXljeU5WQVVnYlFBdldSSlRDR0NxSkFGMXVTTDhkeFlkQllCOGNqdkxiMlJyeGN1OFNIdTM2UnlycXVlUFlWTENWdw?oc=5",
-      "tags": [
-        "사기",
-        "자금세탁"
-      ],
-      "description": "사기·돈세탁에 멈춘 법정…홍콩, 밤에도 재판 열까 서울경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "자금세탁",
-      "title": "자금세탁 수사받던 보우소나루, 대선 패배 직후 여권 제출 명령 어기고 미국行",
-      "source": "헤럴드경제",
-      "source_url": "https://biz.heraldcorp.com",
-      "source_domain": "biz.heraldcorp.com",
-      "date": "Tue, 27 Oct 2026 20:50:18 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1rbllYWnlmcWZ0UDc3YXZVUDlDbjhkMlJkTVpOeTJONGppNEM3bG1EWnppbHRuRktxQzN6X3lFaW5RZVdONkJsNjlFNWhKRnBoczVUaDFn?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "자금세탁 수사받던 보우소나루, 대선 패배 직후 여권 제출 명령 어기고 미국行 헤럴드경제",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "\"유출 차단 넘어 환급까지\" 코인원, 3년간 보이스피싱 피해액 75억 환급",
-      "source": "컨슈머타임스",
-      "source_url": "https://www.cstimes.com",
-      "source_domain": "www.cstimes.com",
-      "date": "Tue, 27 Oct 2026 20:45:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBVcHpqTnRQYk1rRUx2dkRGUmFhUnRRSFBZa2JaVGRYa3NET3ZlQnVSN3hKeDQybWJpQzgxTHpkMlFmVjc1Ti1qbmZFRlJfM3NtdGdOTUd1dWkwNmhvbWZnMkRiMUIzUXE1dFE?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "\"유출 차단 넘어 환급까지\" 코인원, 3년간 보이스피싱 피해액 75억 환급 컨슈머타임스",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "보이스피싱",
-      "title": "보이스피싱 피해 90%-청약 화면 터치 수 34% 줄여",
-      "source": "동아일보",
-      "source_url": "https://www.donga.com",
-      "source_domain": "www.donga.com",
-      "date": "Tue, 27 Oct 2026 19:30:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1PZXpUZTlvTnJpMkR5VXo2YlBTOHlzdEhMNE9ScThyY2pRZFdMRldTcHRwVDd3bXgtZ2V2VVVVZHVZRGlMaUpZM0Nfc2trbGp2bDNvcExNejFDcG51THJoejQxVm91UdIBZkFVX3lxTE1PZXpUZTlvTnJpMkR5VXo2YlBTOHlzdEhMNE9ScThyY2pRZFdMRldTcHRwVDd3bXgtZ2V2VVVVZHVZRGlMaUpZM0Nfc2trbGp2bDNvcExNejFDcG51THJoejQxVm91UQ?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "보이스피싱 피해 90%-청약 화면 터치 수 34% 줄여 동아일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "바이낸스, 유명 코인 사칭 ‘가짜 결제 사기’ 주의 당부",
-      "source": "스포츠경향",
-      "source_url": "https://sports.khan.co.kr",
-      "source_domain": "sports.khan.co.kr",
-      "date": "Tue, 27 Oct 2026 16:50:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9SNGMyNWRyclVVMnVCaDgwNEFLa2NrNXJlemVzWWZDSkk5Tmd6OFpyMVlwYVVHOVhNd0dnRjRadVFlNXBBX051QU01cjZiNUt1WFpqdjZaUXIyM0Y4TFHSAWNBVV95cUxOMXl4QVpzdmZJTjlSb1FLUkFES3dYU3lPVkZFcWJhM251LXdxa2FGTkRyWW9WcVh3NFpFVk1CUzNtU0xkS0Y2TDJmU2FGUWFhSjEtb1BMU0xMdHNka3ZESlg2SGc?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "바이낸스, 유명 코인 사칭 ‘가짜 결제 사기’ 주의 당부 스포츠경향",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "도박사이트 월급, 법원은 범죄수익 아니라 판단",
-      "source": "로톡",
-      "source_url": "https://www.lawtalk.co.kr",
-      "source_domain": "www.lawtalk.co.kr",
-      "date": "Tue, 27 Oct 2026 16:41:45 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9NcnFGanJoM2RBRnNRWjFDVmFJNVVVRTB5eUF1eVpCUWg2MmlZNGEyNkl3dzBHVzBPVTNPZVk1T1l3QkRoVTcwUnhYSmkwNkJBclVuenZn?oc=5",
-      "tags": [
-        "도박",
-        "자금세탁"
-      ],
-      "description": "도박사이트 월급, 법원은 범죄수익 아니라 판단 로톡",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "범죄수익",
-      "title": "보도방 운영 수익, 법원은 범죄수익으로 봤다",
-      "source": "로톡",
-      "source_url": "https://www.lawtalk.co.kr",
-      "source_domain": "www.lawtalk.co.kr",
-      "date": "Tue, 27 Oct 2026 16:14:21 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1YRU1sel9NQmZ6NUhpNlhyMnFSazJiWWY2X2tSUVJyN2gwbWRjOV9UU3VFRTBZTlBVUTFmRm1uUXFTZHg0aThGcmsxZFNYeTFNZ2JqV1RB?oc=5",
-      "tags": [
-        "자금세탁"
-      ],
-      "description": "보도방 운영 수익, 법원은 범죄수익으로 봤다 로톡",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "FIU·STR",
-      "title": "유명 PG사 사칭 10억 사기, 법원의 반전 판결",
-      "source": "로톡",
-      "source_url": "https://www.lawtalk.co.kr",
-      "source_domain": "www.lawtalk.co.kr",
-      "date": "Tue, 27 Oct 2026 16:08:02 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5oUGFEclM2cGE0ek85TXB2V2JUZnZwRUgzX3pBakx3ZU5GVmhJdlBrYTNEdnhPUjJxZDM4b3dZdEt1MFU2VG9vMVJaMW5BQm9VbGpDb3ln?oc=5",
-      "tags": [
-        "사기"
-      ],
-      "description": "유명 PG사 사칭 10억 사기, 법원의 반전 판결 로톡",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "불법도박",
-      "title": "‘보안 영재’의 몰락…불법 도박사이트 운영하고 개인정보 해킹",
-      "source": "중앙일보",
-      "source_url": "https://www.joongang.co.kr",
-      "source_domain": "www.joongang.co.kr",
-      "date": "Tue, 27 Oct 2026 13:55:24 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE92OTJEN1poQjI5cTZ6TnFiQ0hiQzdxSmIwTXRqUDFPLXhacDlvdjRyT2VYQWhaZmFsZlJIbkN2TDVjb2E1RlozNTZfaFMtTV9BeUR6b05n?oc=5",
-      "tags": [
-        "도박"
-      ],
-      "description": "‘보안 영재’의 몰락…불법 도박사이트 운영하고 개인정보 해킹 중앙일보",
-      "collection_method": "google_news_24h"
-    },
-    {
-      "region": "국내",
-      "query": "가상자산 AML",
-      "title": "태국 중앙은행, 가상자산 사업자 포함 사기 정보 공유 강조",
-      "source": "토큰포스트",
-      "source_url": "https://www.tokenpost.kr",
-      "source_domain": "www.tokenpost.kr",
-      "date": "Tue, 27 Oct 2026 13:21:02 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5VWGZsakp2ZGVjSVJDMXlSNDdrS3R6elhRdmxWWHNuTVJuOWRrVG5sczVEbWRpN3RCLTI4VTFNVmtMeW9FWWd3ZnlCSE16ZHRDalBOR3lB0gFbQVVfeXFMUEtuT2hxSTBoYURmMXY0NUxtNFBaNGlhOFFEejNiN2hQMFpkYUdaWDFYY21Sdm5FN0I3MnVodGZxYUxLYkNWdUNnOXdkVldCc1F0dFVWOWp0YTY4Yw?oc=5",
-      "tags": [
-        "가상자산",
-        "사기"
-      ],
-      "description": "태국 중앙은행, 가상자산 사업자 포함 사기 정보 공유 강조 토큰포스트",
       "collection_method": "google_news_24h"
     }
   ],
